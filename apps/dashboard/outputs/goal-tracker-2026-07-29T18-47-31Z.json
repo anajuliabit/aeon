@@ -1,0 +1,343 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-07-29"
+      },
+      "children": [
+        "summary-text",
+        "sep1",
+        "blocked-section",
+        "sep2",
+        "at-risk-section",
+        "sep3",
+        "done-section",
+        "sep4",
+        "sources"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "7 goals — 1 at risk, 0 needs attention, 0 on track, 5 blocked, 1 done (overall → flat; self-improve gate cleared, 5 BLOCKED persist)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-title",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3",
+        "blocked-item-4",
+        "blocked-item-5"
+      ]
+    },
+    "blocked-title": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-1-title",
+        "blocked-1-meta",
+        "blocked-1-action"
+      ]
+    },
+    "blocked-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step PR T+10 day-13",
+        "variant": "body"
+      }
+    },
+    "blocked-1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 387 activity/14d (flat vs prior 338)",
+        "variant": "caption"
+      }
+    },
+    "blocked-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator apply dangerouslyDisableSandbox pivot to .github/workflows/aeon.yml:479-495 before 2026-07-30 hand-off T-0.",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-2-title",
+        "blocked-2-meta",
+        "blocked-2-action"
+      ]
+    },
+    "blocked-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch DARK day-31",
+        "variant": "body"
+      }
+    },
+    "blocked-2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 381 activity/14d (flat vs prior 292)",
+        "variant": "caption"
+      }
+    },
+    "blocked-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: File memory/issues/ISS-027.md documenting 8-skill 6-28 21:00Z freeze signature.",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-3-title",
+        "blocked-3-meta",
+        "blocked-3-action"
+      ]
+    },
+    "blocked-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027/028 doc-gap d22",
+        "variant": "body"
+      }
+    },
+    "blocked-3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 235 activity/14d (flat vs prior 162)",
+        "variant": "caption"
+      }
+    },
+    "blocked-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Create memory/issues/ISS-027.md + ISS-028.md from action-converter 7-27 max-scored templates.",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-4-title",
+        "blocked-4-meta",
+        "blocked-4-action"
+      ]
+    },
+    "blocked-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #165 d10 past-gate CONFLICTING",
+        "variant": "body"
+      }
+    },
+    "blocked-4-meta": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 178 activity/14d (flat vs prior 138)",
+        "variant": "caption"
+      }
+    },
+    "blocked-4-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator rebase-or-batch-merge #165 in Sunday weekly-review window.",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-5-title",
+        "blocked-5-meta",
+        "blocked-5-action"
+      ]
+    },
+    "blocked-5-title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config day-52",
+        "variant": "body"
+      }
+    },
+    "blocked-5-meta": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 93 activity/14d (flat vs prior 88)",
+        "variant": "caption"
+      }
+    },
+    "blocked-5-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator add ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets, then populate memory/on-chain-watches.yml pools/positions.",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "at-risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "at-risk-title",
+        "at-risk-item-1"
+      ]
+    },
+    "at-risk-title": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h3"
+      }
+    },
+    "at-risk-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "at-risk-1-title",
+        "at-risk-1-meta",
+        "at-risk-1-action"
+      ]
+    },
+    "at-risk-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md 55d stale",
+        "variant": "body"
+      }
+    },
+    "at-risk-1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 126 activity/14d (flat vs prior 114; judgment override: nudges ≠ remediation)",
+        "variant": "caption"
+      }
+    },
+    "at-risk-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator refresh priorities.md current-focus section (last reviewed 2026-06-04).",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done-title",
+        "done-item-1"
+      ]
+    },
+    "done-title": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h3"
+      }
+    },
+    "done-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done-1-title",
+        "done-1-meta"
+      ]
+    },
+    "done-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "Self-improve queue-exit gate BREACHED 7-27",
+        "variant": "body"
+      }
+    },
+    "done-1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "completed 2026-07-28 (#168 + #169 both merged 22:36Z per morning-brief 7-29)",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok(empty), cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

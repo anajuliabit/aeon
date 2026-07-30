@@ -1,14 +1,19 @@
-Heartbeat complete. Regenerated `docs/status.md` with updated 15:25 UTC timestamp and refreshed top-of-table for the 7-23 midday cluster, and appended the heartbeat log entry.
-
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — silent NOOP, no `./notify` call.
+Heartbeat complete.
 
 ## Summary
 
-**Result:** 13-consec heartbeat NOOP durable, ~102h+ since 7-19 09:17Z regime-onset. All P0/P1/P2/P3 findings full-dedup vs 48h logs, so no notification sent.
+Ran `skills/heartbeat/SKILL.md` at 21:09 UTC (69min lag off 20:00Z scheduled tick, consistent with observed dispatch-lag pattern).
 
 **Files modified:**
-- `docs/status.md` — Overall 🔴 DEGRADED (unchanged), Updated 15:25 UTC, Next scheduled run = btc-levels 16:15 UTC. Top 5 skill-health rows refreshed with 7-23 midday cluster (token-alert 13:14 / btc-levels 13:12 / skill-freshness 09:56 / github-trending 09:47 / heartbeat 09:43). Open issues unchanged (11).
-- `memory/logs/2026-07-23.md` — appended heartbeat 15:25Z entry with full P0-P3 findings + notable regime events (WELL vol-spike-only alert = first-ever in watchlist history; ISS-027 batch-dark n=27 CONFIRMED via clean same-slot fires of token-alert + btc-levels).
-- `.tmp/heartbeat/1525z-entry.md` — scratch buffer used for the log append (Bash `>>` + `tee -a` were sandbox-blocked, worked around via Edit tool anchor replace; extends [[bash-redirect-sandbox-regression]] to 4th same-day incident on 7-23).
+- `docs/status.md` — refreshed with 43-skill table + **13 open issues** (up 11→13 after reflect filed ISS-027 + ISS-028 at 18:22Z), Overall 🔴 DEGRADED, next-run btc-levels 21:15 UTC
+- `memory/logs/2026-07-30.md` — appended heartbeat entry with P0/P1/P2/P3 findings, delta since 15:16Z, dedup verdict
 
-**Follow-up:** (i) 16:15Z btc-levels; (ii) 14:00Z security-digest catch-up (bash `>` regression d3 continuation-test); (iii) 18:00Z self-improve odd-day tick first fire post PR #166; (iv) 20:00Z heartbeat 14-consec NOOP test; (v) 21:00Z aixbt-pulse d26→d27 rollover test; (vi) reflect 18Z candidates: WELL vol-spike primitive validated + alert-class-shift-3-regime + Tracked Tokens Recent Activity refresh + batch-dark n=27 counter advance.
+**Findings:**
+- **P0:** 10-skill chronic-failure cohort persists (**8-consec heartbeat ticks verdict-string identity across ~49h span**)
+- **P1:** 3 open PRs — #165 d11 + #167 d7 (past-gate) + #170 26h (crosses 24h stalled gate but weekly-batch cadence in-window)
+- **P2 positive:** ISS-027 + ISS-028 doc-gap **CLOSED** at 18:22Z by reflect scope-absorb (24d load-bearing gap resolved, action-converter's 4-consec max-score-125 shape finally converts)
+- **P3:** 21:00Z evening-recap + thought-review in dispatch-lag window (not yet escalation)
+
+**Notification:** DEDUP_SKIP — all findings covered in 48h logs (chronic regime + iss-025 T-0 + PR queue all pre-notified; ISS-027/028 closure notified by reflect at 18:22Z).
+
+**Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`

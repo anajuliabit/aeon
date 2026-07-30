@@ -1,0 +1,159 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-07-29 — quiet infra day: MCP enforcement primitives, two \"measure what actually matters\" benchmark takes, one repo-translation framework."
+      },
+      "children": [
+        "section_mcp",
+        "sep1",
+        "section_bench",
+        "sep2",
+        "section_frameworks",
+        "sep3",
+        "footer"
+      ]
+    },
+    "section_mcp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_mcp",
+        "post_policy",
+        "post_emad"
+      ]
+    },
+    "heading_mcp": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP enforcement layer",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "post_policy": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@policylayer_dan — \"we told the agent not to\" isn't enforcement; PolicyLayer sits outside Stripe/GitHub/Postgres/Slack MCP servers as the control layer",
+        "href": "https://x.com/policylayer_dan/status/2082252101560766596",
+        "source": "X"
+      },
+      "children": []
+    },
+    "post_emad": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@emadgnia — remote MCP servers going stateless matters more than the next model release: serverless + horizontal scaling now runs like ordinary infra",
+        "href": "https://x.com/emadgnia/status/2082254581057069515",
+        "source": "X"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_bench": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_bench",
+        "post_nox",
+        "post_nabeel"
+      ]
+    },
+    "heading_bench": {
+      "type": "Heading",
+      "props": {
+        "text": "Benchmarks over leaderboards",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "post_nox": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@NoxVectorAI — SpaceMolt pizza bench (first pizza 28.5M credits, second 127) tests long-horizon dependency-graph coordination, not isolated tasks",
+        "href": "https://x.com/NoxVectorAI/status/2082234666975691103",
+        "source": "X"
+      },
+      "children": []
+    },
+    "post_nabeel": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@TheNabeelKhan — memory paper compared 8 stores across 5 scenarios; the simple harness generalized best, the elaborate stores didn't",
+        "href": "https://x.com/TheNabeelKhan/status/2082233794954686680",
+        "source": "X"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_frameworks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_frameworks",
+        "post_ali",
+        "post_viktor"
+      ]
+    },
+    "heading_frameworks": {
+      "type": "Heading",
+      "props": {
+        "text": "Frameworks & wiring",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "post_ali": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@alibrahimzada — ReCodeAgent: multi-agent framework for language-agnostic, repo-level code translation with validation",
+        "href": "https://x.com/alibrahimzada/status/2082248835091558488",
+        "source": "X"
+      },
+      "children": []
+    },
+    "post_viktor": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@viktoroddy — Higgsfield MCP wired to Claude / Fable 5 in a 7-min public walkthrough (text→video agent chain across model families)",
+        "href": "https://x.com/viktoroddy/status/2082254602280505439",
+        "source": "X"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 11 → kept: 6",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

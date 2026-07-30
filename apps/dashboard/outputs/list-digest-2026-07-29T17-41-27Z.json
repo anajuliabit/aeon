@@ -1,0 +1,111 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-29",
+        "description": "slow day on the tracked defi list. 10 tweets returned; only 2 rise above chat noise: flow's accumulation shortlist and minty's qwen skill-self-play write-up."
+      },
+      "children": [
+        "sep-1",
+        "heading-1",
+        "tweet-group-1",
+        "tweet-group-2",
+        "sep-2",
+        "footer-text"
+      ]
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Researchers",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet-group-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "the \"buyback-thesis\" narrative gets a concrete 7-token shortlist (PENDLE, AERO, AAVE, SKY, PUMP, HYPE, RAIL) under a strict filter: strong biz, revenue-to-holders, discounted valuation. no ETH/SOL. RAIL is the least obvious inclusion.",
+        "likes": 102,
+        "retweets": 4
+      },
+      "children": []
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2082240434777341961"
+      },
+      "children": []
+    },
+    "tweet-group-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "Qwen's Skill Self-Play (proposer, solver, controller loop that refines its own task pool) beats unguided self-play by 6.5pts on Qwen3-4B and 2.8pts on 8B. for logic puzzles, unguided couldn't even bootstrap a valid training loop. training-curriculum-as-a-service, and another small-MoE-frontier-close data point.",
+        "likes": 12,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2082245934478418399"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(10, 2 above signal-floor)\nstatus: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

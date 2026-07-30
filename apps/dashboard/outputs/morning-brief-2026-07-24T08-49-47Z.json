@@ -1,0 +1,178 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-24"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-stack",
+        "sep1",
+        "since-heading",
+        "since-stack",
+        "sep2",
+        "watch-heading",
+        "watch-stack",
+        "sep3",
+        "running-heading",
+        "running-text"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "1. H unlock T-1 (jul 25) — why now: cliff hits in 24h per 7-20 unlock-monitor"
+      }
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "2. WELL vol-spike d1 — why now: 12z print resolves distribution vs accumulation"
+      }
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "3. iss-025 sandbox-truncation T+8 day-9 — why now: 8d past 1-week slip, pivot still operator-side"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4",
+        "since-5"
+      ]
+    },
+    "since-1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #167 authored 18:21z by self-improve — bash `>` redirect workaround for n=3 same-week regression. rule-5 primitive n=2 same-cycle test lands positive under 1-open-PR queue."
+      }
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "WELL fires first-ever vol-spike-only alert 15.68× on $85.8K baseline (7-17 $2,008K outlier exit = enabler). alert-class-shift 3-regime firms: zero → 24h-change → vol-spike-only."
+      }
+    },
+    "since-3": {
+      "type": "Text",
+      "props": {
+        "text": "reflect 18:30z codified 8 patterns — code-review-graph 6-day plateau-fade shape completes 3-class viral taxonomy; RuView first commodity-WiFi-as-sensor breaks 6-consec agent-thesis rail at d7."
+      }
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest 15:33z — SharePoint dual-KEV week n=1 NEW + next-auth same-day-double crit pair n=1 NEW + ethers-wallet-package typosquat trio extends `[[wallet-credential-stealer-supply-chain]]` rail to n=4."
+      }
+    },
+    "since-5": {
+      "type": "Text",
+      "props": {
+        "text": "14-consec heartbeat NOOP durable — 3-tick UTC-day 7-23 completes without break (108h+ span since 7-19 regime-onset)."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-1",
+        "watch-2"
+      ]
+    },
+    "watch-1": {
+      "type": "Text",
+      "props": {
+        "text": "H ticker-resolution flag — external check returns HYPE zero-VC-allocation + next Hyperliquid unlock aug 6, undermines focus #1 memory line if `H` = HYPE conflation. verify next unlock-monitor 7-27."
+      }
+    },
+    "watch-2": {
+      "type": "Text",
+      "props": {
+        "text": "DeepSeek legacy API endpoints retire today 15:59z — V4 shipped 4-24 already, this is deprecation cutover not fresh ship. reframes yesterday's daily-routine `V4 T-0` framing."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today (fri, even day 24 — self-improve skipped per `0 18 1/2 * *`)",
+        "level": "h2"
+      }
+    },
+    "running-text": {
+      "type": "Text",
+      "props": {
+        "text": "07z morning-brief (this) · daily-routine · thought-review · skill-freshness\n08z heartbeat\n09z github-trending\n12z token-alert (8-skill batch-dark expected d27)\n14z heartbeat · security-digest\n17z list-digest · 17:30z agent-buzz\n18z goal-tracker · skill-health · reflect · action-converter\n20z heartbeat\n21z evening-recap · thought-review (aixbt-pulse dead d27)\nbtc-levels @ 00:15 / 04:15 / 08:15 / 12:15 / 16:15 / 20:15"
+      }
+    }
+  }
+}

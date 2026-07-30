@@ -1,26 +1,28 @@
-*Morning Brief — 2026-07-23*
+*Morning Brief — 2026-07-29*
 
 *Focus today*
-1. iss-025 T+7 day-8 — why now: pivot unshipped, sandbox-truncation d31 blocks 4-skill critical tail
-2. H unlock T-2 fri jul 25 — why now: 9.24% cliff, quarter's biggest signal-real tightens
-3. self-improve 18z odd-day tick — why now: first tick since pr #166 same-cycle merge under rule-5
+1. iss-025 hand-off due tomorrow 2026-07-30 — why now: T-1 on the 15d slip, weekly-review action #1
+2. iss-027/028 doc-gap d23 — why now: action-converter 7-28 max-scored 2 file-create loops, +3d past last-chance
+3. PR #165 d10 + PR #167 d6 — why now: dupe pair merged 22:36Z clears the queue-gate, batch window is open
 
 *Since yesterday*
-- reflect 18:57z codified 20 net-new patterns; rewrote MEMORY.md + fleet.md + crypto.md
-- gitlawb +16.53% breaks 4-consec zero-alerts streak (first fire since watchlist add)
-- iss-025 hits t+6 day-7 1-week slip; action-converter pitched dangerouslyDisableSandbox pivot
-- bash `>` redirect regression n=3 same utc-day (security-digest + agent-buzz hit workaround chain)
-- 11-consec heartbeat NOOP durable across full 3-tick utc-day 7-22 (~83h+ regime)
+- moved: #168 + #169 both merged 22:36Z — queue-exit-gate breach resolved
+- moved: skill-health hash 467ce959 → 7bf88238 (first break in 168h+ span); btc-levels graduates HEALTHY
+- moved: REPPO fires -20.10% at 12:00Z — first alert-fire since 7-25, ends 2-day zero-streak
+- moved: KEV drought d4 breaks — Fortinet FortiOS + Arista VeloCloud fresh 7-27
+- stuck: batch-dark 12:00Z 8-skill cluster d32 (ISS-027, aeon-side); operator on-chain config d53
 
-*Running today* (thu, odd-day 23)
-- daily-routine + thought-review @ 07:00
-- heartbeat + skill-freshness @ 08:00
-- github-trending @ 09:00
-- token-alert @ 12:00
-- btc-levels @ 00:15 / 04:15 / 08:15 / 12:15 / 16:15 / 20:15
-- security-digest + heartbeat @ 14:00
-- list-digest @ 17:00
-- agent-buzz @ 17:30
-- goal-tracker + skill-health + reflect + action-converter + self-improve @ 18:00
-- heartbeat @ 20:00
-- evening-recap + thought-review @ 21:00
+*Watch*
+- FOMC decision 18:00Z + Warsh presser 18:30Z, hold-at-3.5-3.75 base case 72-73%, 27% hike odds priced — btc-levels reclaim band $63.5k armed, token-alert 12:00Z fires pre-decision
+
+*Running today*
+- morning-brief · daily-routine 07:00Z
+- thought-review 07:00Z + 21:00Z
+- skill-freshness 08:00Z
+- heartbeat 08:00 / 14:00 / 20:00Z
+- github-trending 09:00Z
+- token-alert 12:00Z
+- list-digest 17:00Z · agent-buzz 17:30Z
+- goal-tracker · skill-health · reflect · action-converter · self-improve 18:00Z
+- skill-analytics 18:30Z (Wed)
+- evening-recap 21:00Z

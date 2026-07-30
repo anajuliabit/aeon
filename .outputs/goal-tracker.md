@@ -1,13 +1,23 @@
-*Goal Tracker — 2026-07-22*
+*goal tracker — 2026-07-30*
 
-Summary: 3 goals — 0 at risk, 0 needs attention, 0 on track, 3 blocked, 0 done (overall → flat, no status shifts, 2/3 log-mention volumes up ≥50% without underlying resolution)
+summary: 7 goals — 1 at risk, 0 needs attention, 0 on track, 6 blocked, 0 done (overall → flat)
+
+AT RISK
+• priorities.md 56d stale — 0d idle, 145 activity/14d (→ flat, was AT_RISK)
+  → action: operator refresh priorities.md current-focus section (thought-review 07:26Z one-liner nudge, 55d→56d roll)
 
 BLOCKED
-• ISS-025 capture-step PR T+6 day-7 — first 1-week slip milestone since SLIPPED T-0 firm 7-16. blocked on upstream sandbox iss #53012 (env-var expansion + excludedCommands both broken). cost-report acute-failure branch cleared 7-20 19:08Z but capture-step primitive itself unshipped. 555 activity/14d (was 430, ~flat within methodology drift).
-  → Action: operator direct-authors `.github/workflows/aeon.yml:479-495` with `dangerouslyDisableSandbox` per action-converter 7-21 15:20Z pivot.
-• 12:00 UTC batch DARK day-25 — 8-skill cluster (defi-overview / token-pick / narrative-tracker / market-context-refresh / token-movers / on-chain-monitor / defi-monitor / aixbt-pulse) frozen since 6-28. per-skill blockage n=26 confirmed today 12:00Z via token-alert 12:29Z + btc-levels 12:27Z clean same-slot fires (ISS-027 signature durable). 550 activity/14d (was 340, +62% by log-mention count, zero resolution).
-  → Action: same ISS-025 dangerouslyDisableSandbox fix cascades to the family — resolve substrate, ISS-027 unblocks.
-• Operator on-chain config day-46 — defi-monitor NO_CONFIG persists. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY + ETHERSCAN_API_KEY still missing from Actions secrets. 138 activity/14d (was 90, +53% by log-mention count, zero resolution).
-  → Action: operator adds ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets + populates `memory/on-chain-watches.yml` with pool/position entries.
+• ISS-025 capture-step PR T+11 day-14 — waiting on operator direct-author since 7-07 (8d past 1-week slip milestone; iss-025-hand-off T-0 today)
+  → action: operator direct-author dangerouslyDisableSandbox pivot against .github/workflows/aeon.yml:479-495
+• 12:00 UTC batch DARK day-32 — frozen since 2026-06-28 21:00Z, waiting on ISS-027 diagnosis
+  → action: author memory/issues/ISS-027.md + operator restart 8-skill 12:00Z cluster in aeon.yml
+• ISS-027/028 doc-gap d24 — no file authored, +4d past weekly-review 7-27 last-chance window
+  → action: create memory/issues/ISS-027.md + memory/issues/ISS-028.md (action-converter scored 125 + 80)
+• PR #165 d11 CONFLICTING — created 7-19 17:38Z, waiting operator Sunday batch cadence
+  → action: operator resolve conflicts + batch-merge in next Sunday review window
+• PR #167 d7 — created 7-23 18:22Z bash-redirect fix, crosses 7d weekly-batch gate today (new)
+  → action: operator batch-merge in next Sunday review window
+• Operator on-chain config day-53 — defi-monitor NO_CONFIG, missing ALCHEMY_API_KEY + ETHERSCAN_API_KEY
+  → action: operator add both secrets + populate memory/on-chain-watches.yml with type:pool/type:position entries
 
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
+sources: logs=ok (14d window 07-16→07-30, 22 files), git=partial(shallow clone, 1 commit), gh_pr=ok (16 PRs since 6-30, PR #170 fresh 7-29 hn-digest path fix unrelated), gh_issue=ok(empty), cron-state=ok

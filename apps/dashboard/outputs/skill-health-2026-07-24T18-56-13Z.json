@@ -1,0 +1,183 @@
+{
+  "root": "card_health",
+  "state": {},
+  "elements": {
+    "card_health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_date",
+        "alert_status",
+        "heading_degraded",
+        "table_degraded",
+        "text_more_degraded",
+        "heading_no_data",
+        "text_no_data",
+        "heading_health",
+        "stat_healthy",
+        "heading_notes",
+        "text_technical_notes",
+        "heading_issues",
+        "grid_issues"
+      ]
+    },
+    "text_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-24",
+        "variant": "muted"
+      }
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "HEALTH: DEGRADED (18 skills)",
+        "message": "Systemic issue: output_tokens=0 sandbox-truncation (day 32)"
+      }
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded Skills (Top 5 of 18)",
+        "level": "h3"
+      }
+    },
+    "table_degraded": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Downtime",
+          "Success Rate",
+          "Status"
+        ],
+        "rows": [
+          [
+            "narrative-tracker",
+            "26d down",
+            "sr 33%",
+            "WAIT-API"
+          ],
+          [
+            "market-context-refresh",
+            "26d down",
+            "sr 32%",
+            "WAIT-API"
+          ],
+          [
+            "aixbt-pulse",
+            "26d down",
+            "sr 47%",
+            "WAIT-API"
+          ],
+          [
+            "defi-monitor",
+            "26d down",
+            "sr 53%",
+            "WAIT-API"
+          ],
+          [
+            "vuln-scanner",
+            "6d down",
+            "sr 18%",
+            "WAIT-API → ISS-018"
+          ]
+        ]
+      }
+    },
+    "text_more_degraded": {
+      "type": "Text",
+      "props": {
+        "text": "+13 more — see memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "heading_no_data": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (3) – DISPATCH-SKILL",
+        "level": "h3"
+      }
+    },
+    "text_no_data": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard",
+        "variant": "body"
+      }
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Healthy Skills",
+        "level": "h3"
+      }
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "value": "9",
+        "label": "Healthy Skills"
+      }
+    },
+    "heading_notes": {
+      "type": "Heading",
+      "props": {
+        "text": "Technical Notes",
+        "level": "h3"
+      }
+    },
+    "text_technical_notes": {
+      "type": "Text",
+      "props": {
+        "text": "hash 467ce959 unchanged (4-consec, 96h+ hold) · 12z batch DARK d27 · aixbt-pulse dead-slot d27 · bash `>` redirect regression n=5 across 3 UTC-days",
+        "variant": "caption"
+      }
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      }
+    },
+    "grid_issues": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_resolved_issues"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "value": "11",
+        "label": "Open Issues"
+      }
+    },
+    "stat_resolved_issues": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "Resolved This Run"
+      }
+    }
+  }
+}

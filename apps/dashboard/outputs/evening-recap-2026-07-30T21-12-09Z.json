@@ -1,0 +1,354 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-30",
+        "description": "productive-but-incomplete — reflect closed a 24d doc-gap (ISS-027/028 filed), security pushed 3 criticals, and ISS-025 hand-off slipped its T-0 deadline to d15."
+      },
+      "children": [
+        "headlines_section",
+        "sep_1",
+        "notable_section",
+        "sep_2",
+        "decisions_section",
+        "sep_3",
+        "footer_text"
+      ]
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_heading",
+        "headline_1",
+        "headline_2",
+        "headline_3",
+        "headline_4",
+        "headline_5"
+      ]
+    },
+    "headlines_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline_1_text",
+        "headline_1_link"
+      ]
+    },
+    "headline_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — ISS-027.md + ISS-028.md filed, MEMORY.md rebuilt"
+      }
+    },
+    "headline_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/issues/ISS-027.md",
+        "href": "memory/issues/ISS-027.md"
+      }
+    },
+    "headline_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline_2_text",
+        "headline_2_link"
+      ]
+    },
+    "headline_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — Cisco FMC KEV + kube-logging RCE + flyto-core 6-CVE; 3 patch-today / 5 this-week"
+      }
+    },
+    "headline_2_link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/security-digest.md",
+        "href": ".tmp/security-digest.md"
+      }
+    },
+    "headline_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline_3_text",
+        "headline_3_link"
+      ]
+    },
+    "headline_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat 15:16Z — 07:00Z slot MISS confirmed (morning-brief + daily-routine + thought-review all dropped)"
+      }
+    },
+    "headline_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "headline_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline_4_text",
+        "headline_4_link"
+      ]
+    },
+    "headline_4_text": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — jcode top pick (Rust efficiency-first n=1) + VibeVoice (open-voice rail n=2); 4 picks shipped"
+      }
+    },
+    "headline_4_link": {
+      "type": "Link",
+      "props": {
+        "label": ".outputs/github-trending.md",
+        "href": ".outputs/github-trending.md"
+      }
+    },
+    "headline_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline_5_text",
+        "headline_5_link"
+      ]
+    },
+    "headline_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — Ruflo MCP CVE-2026-59726 (first-in-wild) + stateless spec + Copilot GA same-day"
+      }
+    },
+    "headline_5_link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/agent-buzz.md",
+        "href": ".tmp/agent-buzz.md"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable_btc",
+        "notable_token",
+        "notable_freshness",
+        "notable_health",
+        "notable_list"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "btc-levels ×5",
+        "value": "$64,218–$64,845",
+        "delta": "all levels clear"
+      }
+    },
+    "notable_token": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — 0/4 alerts, 37th clean CG day; REPPO 1.386× leads vol-intensity",
+        "variant": "body"
+      }
+    },
+    "notable_freshness": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness — FRESHNESS_NO_CHANGE, fingerprint 1ab8c658 stable 5d",
+        "variant": "body"
+      }
+    },
+    "notable_health": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-health",
+        "message": "DEGRADED(18) stable-hash 3rd-consec tick; daily-cadence notify sent",
+        "type": "warning"
+      }
+    },
+    "notable_list": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest — buyback rail: ETHFI 3.04× P/F + AERO merger mechanics; 1 list / 3 tweets",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_heading",
+        "decision_1",
+        "decision_2",
+        "decision_3",
+        "decision_4",
+        "decision_5"
+      ]
+    },
+    "decisions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision_1_text",
+        "decision_1_link"
+      ]
+    },
+    "decision_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #167 (bash-redirect fix, d7 past weekly-batch gate)"
+      }
+    },
+    "decision_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/167",
+        "href": "https://github.com/anajuliabit/aeon/pull/167"
+      }
+    },
+    "decision_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision_2_text",
+        "decision_2_link"
+      ]
+    },
+    "decision_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #165 (CONFLICTING, d11)"
+      }
+    },
+    "decision_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/165",
+        "href": "https://github.com/anajuliabit/aeon/pull/165"
+      }
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 hand-off slipped T-0: operator direct-author against aeon.yml:479-495 (now d15)"
+      }
+    },
+    "decision_4": {
+      "type": "Text",
+      "props": {
+        "text": "if 07:00Z slot misses 7-31, file new ISS (1-instance today — not yet ISS-worthy)"
+      }
+    },
+    "decision_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision_5_text",
+        "decision_5_link"
+      ]
+    },
+    "decision_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #170 just crossed 24h"
+      }
+    },
+    "decision_5_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/170",
+        "href": "https://github.com/anajuliabit/aeon/pull/170"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "+1 collapsed (heartbeat 09:04Z dedup-skip) · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

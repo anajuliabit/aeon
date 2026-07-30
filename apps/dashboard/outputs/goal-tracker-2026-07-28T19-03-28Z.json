@@ -1,0 +1,370 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-28",
+        "description": "6 goals — 1 at risk, 0 needs attention, 0 on track, 5 blocked, 0 done (flat vs 7-27 snapshot)"
+      },
+      "children": [
+        "summary-stats",
+        "sep-1",
+        "blocked-section",
+        "sep-2",
+        "at-risk-section",
+        "sep-3",
+        "notable-section",
+        "sep-4",
+        "sources-section"
+      ]
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-at-risk",
+        "stat-blocked",
+        "stat-on-track",
+        "stat-done"
+      ]
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "1"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "5"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "0"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3",
+        "blocked-item-4",
+        "blocked-item-5"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-1-title",
+        "item-1-status",
+        "item-1-action"
+      ]
+    },
+    "item-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step PR T+10 day-13",
+        "variant": "lead"
+      }
+    },
+    "item-1-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 338 activity/14d (flat, was BLOCKED)"
+      }
+    },
+    "item-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator direct-author dangerouslyDisableSandbox at .github/workflows/aeon.yml:479-495",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-2-title",
+        "item-2-status",
+        "item-2-action"
+      ]
+    },
+    "item-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch DARK day-30",
+        "variant": "lead"
+      }
+    },
+    "item-2-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 292 activity/14d (flat, was BLOCKED, ISS-027 signature durable)"
+      }
+    },
+    "item-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: File memory/issues/ISS-027.md so root-cause diagnosis has a home",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-3-title",
+        "item-3-status",
+        "item-3-action"
+      ]
+    },
+    "item-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027/028 doc-gap d21 escalation",
+        "variant": "lead"
+      }
+    },
+    "item-3-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 162 activity/14d (new, weekly-review 7-27 last-chance window passed without file creation)"
+      }
+    },
+    "item-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Author memory/issues/ISS-027.md + ISS-028.md (batch-dark + bash-redirect n=8+)",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-4-title",
+        "item-4-status",
+        "item-4-action"
+      ]
+    },
+    "item-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #165 crossed 7d gate d9",
+        "variant": "lead"
+      }
+    },
+    "item-4-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 138 activity/14d (new, queue at 4 open PRs breaches 3-PR gate)"
+      }
+    },
+    "item-4-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator merge/rebase/close #165 (CONFLICTING, no touch through weekly-review absorption)",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-5-title",
+        "item-5-status",
+        "item-5-action"
+      ]
+    },
+    "item-5-title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config day-51",
+        "variant": "lead"
+      }
+    },
+    "item-5-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 88 activity/14d (flat, was BLOCKED)"
+      }
+    },
+    "item-5-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Add ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets, expand memory/on-chain-watches.yml",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "at-risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "at-risk-heading",
+        "at-risk-item-1"
+      ]
+    },
+    "at-risk-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h2"
+      }
+    },
+    "at-risk-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "risk-1-title",
+        "risk-1-status",
+        "risk-1-action"
+      ]
+    },
+    "risk-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md 54d stale",
+        "variant": "lead"
+      }
+    },
+    "risk-1-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 114 activity/14d (flat AT_RISK, high mention count is thought-review nudges not refresh work)"
+      }
+    },
+    "risk-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Refresh priorities.md current-focus section (Reppo/Aeon lines read as work-slipped)",
+        "variant": "muted"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-heading",
+        "notable-text"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable shifts vs 7-27 snapshot",
+        "level": "h3"
+      }
+    },
+    "notable-text": {
+      "type": "Text",
+      "props": {
+        "text": "h-unlock cleared to Recently Cleared 7-26 (verdict locked spurious). 2 new goals surfaced by MEMORY.md line 6-7 (ISS-027/028 doc-gap + PR #165 gate-cross). Operator-owned unblock paths on 5 of 6 goals (only batch-dark is Aeon-side diagnosis)."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok(1 commit 30d), gh_pr=ok(4 open), gh_issue=ok(0 urgent), cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

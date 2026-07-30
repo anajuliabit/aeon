@@ -1,0 +1,187 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-29"
+      },
+      "children": [
+        "focus-section",
+        "sep1",
+        "since-section",
+        "sep2",
+        "watch-section",
+        "sep3",
+        "running-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "1. iss-025 hand-off due tomorrow 2026-07-30 — why now: T-1 on the 15d slip, weekly-review action #1",
+        "variant": "body"
+      }
+    },
+    "focus-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "2. iss-027/028 doc-gap d23 — why now: action-converter 7-28 max-scored 2 file-create loops, +3d past last-chance",
+        "variant": "body"
+      }
+    },
+    "focus-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "3. PR #165 d10 + PR #167 d6 — why now: dupe pair merged 22:36Z clears the queue-gate, batch window is open",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "moved: #168 + #169 both merged 22:36Z — queue-exit-gate breach resolved",
+        "variant": "body"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "moved: skill-health hash 467ce959 → 7bf88238 (first break in 168h+ span); btc-levels graduates HEALTHY",
+        "variant": "body"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "moved: REPPO fires -20.10% at 12:00Z — first alert-fire since 7-25, ends 2-day zero-streak",
+        "variant": "body"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "moved: KEV drought d4 breaks — Fortinet FortiOS + Arista VeloCloud fresh 7-27",
+        "variant": "body"
+      }
+    },
+    "since-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "stuck: batch-dark 12:00Z 8-skill cluster d32 (ISS-027, aeon-side); operator on-chain config d53",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-heading",
+        "watch-item"
+      ]
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-item": {
+      "type": "Text",
+      "props": {
+        "text": "FOMC decision 18:00Z + Warsh presser 18:30Z, hold-at-3.5-3.75 base case 72-73%, 27% hike odds priced — btc-levels reclaim band $63.5k armed, token-alert 12:00Z fires pre-decision",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-schedule"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-schedule": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief · daily-routine 07:00Z\nthought-review 07:00Z + 21:00Z\nskill-freshness 08:00Z\nheartbeat 08:00 / 14:00 / 20:00Z\ngithub-trending 09:00Z\ntoken-alert 12:00Z\nlist-digest 17:00Z · agent-buzz 17:30Z\ngoal-tracker · skill-health · reflect · action-converter · self-improve 18:00Z\nskill-analytics 18:30Z (Wed)\nevening-recap 21:00Z",
+        "variant": "body"
+      }
+    }
+  }
+}

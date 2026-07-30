@@ -1,0 +1,476 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-28",
+        "description": "Full ship day recap with key milestones and pending actions"
+      },
+      "children": [
+        "tldr-alert",
+        "sep-1",
+        "headlines-heading",
+        "headlines-stack",
+        "sep-2",
+        "notable-heading",
+        "notable-stack",
+        "sep-3",
+        "decisions-heading",
+        "decisions-stack",
+        "sep-4",
+        "footer-text"
+      ]
+    },
+    "tldr-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "TL;DR",
+        "message": "Full ship day — skill-health hash breaks its 7-day lock, REPPO fires, KEV drought ends; dupe PR gate breach and ISS-027/028 doc-gap need calls tomorrow."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headlines-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl1-badge",
+        "hl1-text",
+        "hl1-link"
+      ]
+    },
+    "hl1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "secondary"
+      }
+    },
+    "hl1-text": {
+      "type": "Text",
+      "props": {
+        "text": "hash 467ce959→7bf88238 first break in 168h+; btc-levels graduates HEALTHY"
+      }
+    },
+    "hl1-link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "headline-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl2-badge",
+        "hl2-text",
+        "hl2-link"
+      ]
+    },
+    "hl2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "secondary"
+      }
+    },
+    "hl2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fortinet+Arista KEV (4-day drought breaks); claude-code-base-action typosquat = new AI-tooling supply-chain sub-class"
+      }
+    },
+    "hl2-link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/security-digest.md",
+        "href": ".tmp/security-digest.md"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl3-badge",
+        "hl3-text",
+        "hl3-link"
+      ]
+    },
+    "hl3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "destructive"
+      }
+    },
+    "hl3-text": {
+      "type": "Text",
+      "props": {
+        "text": "REPPO -20.10% ALERT (drought-break head-fake d2 unwind); 35-consec clean CG day"
+      }
+    },
+    "hl3-link": {
+      "type": "Link",
+      "props": {
+        "label": ".pending-notify/token-alert.md",
+        "href": ".pending-notify/token-alert.md"
+      }
+    },
+    "headline-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl4-badge",
+        "hl4-text",
+        "hl4-link"
+      ]
+    },
+    "hl4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "secondary"
+      }
+    },
+    "hl4-text": {
+      "type": "Text",
+      "props": {
+        "text": "amnezia-vpn tops (anti-censorship primitive n=2 in 3d); skill-pack rail n=4; 5 picks"
+      }
+    },
+    "hl4-link": {
+      "type": "Link",
+      "props": {
+        "label": ".outputs/github-trending.md",
+        "href": ".outputs/github-trending.md"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl5-badge",
+        "hl5-text",
+        "hl5-link"
+      ]
+    },
+    "hl5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect",
+        "variant": "secondary"
+      }
+    },
+    "hl5-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY 69L→60L, 17 patterns absorbed, self-improve gate-breach goal added"
+      }
+    },
+    "hl5-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/logs/2026-07-28-reflect.md",
+        "href": "memory/logs/2026-07-28-reflect.md"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n1-badge",
+        "n1-text"
+      ]
+    },
+    "n1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "secondary"
+      }
+    },
+    "n1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Kimi K3 frontier-open-weights-cluster n=1; breadth 92pt flip in 2d (biggest in memory-window); 8/100 top-100 green"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2-badge",
+        "n2-text",
+        "n2-link"
+      ]
+    },
+    "n2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "secondary"
+      }
+    },
+    "n2-text": {
+      "type": "Text",
+      "props": {
+        "text": "FRESHNESS_NO_CHANGE; fingerprint unchanged 7-25→7-28, notify suppressed"
+      }
+    },
+    "n2-link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/skill-freshness-2026-07-28.md",
+        "href": "articles/skill-freshness-2026-07-28.md"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n3-badge",
+        "n3-text"
+      ]
+    },
+    "n3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "action-converter",
+        "variant": "secondary"
+      }
+    },
+    "n3-text": {
+      "type": "Text",
+      "props": {
+        "text": "iss-027-file + iss-028-file both max-score 125; 5 loops — pending author"
+      }
+    },
+    "notable-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4-badge",
+        "n4-text"
+      ]
+    },
+    "n4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "secondary"
+      }
+    },
+    "n4-text": {
+      "type": "Text",
+      "props": {
+        "text": "3 clusters (MCP maturation / on-chain agents / stack composition); 7 tweets kept"
+      }
+    },
+    "notable-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n5-badge",
+        "n5-text"
+      ]
+    },
+    "n5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "goal-tracker",
+        "variant": "secondary"
+      }
+    },
+    "n5-text": {
+      "type": "Text",
+      "props": {
+        "text": "6 goals: 1 at risk (ISS-025 T-2d to 7-30), 5 blocked; h-unlock cleared"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-text",
+        "d1-link"
+      ]
+    },
+    "d1-text": {
+      "type": "Text",
+      "props": {
+        "text": "close PR #169 — dupe of #168, clears gate breach"
+      }
+    },
+    "d1-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/169",
+        "href": "https://github.com/anajuliabit/aeon/pull/169"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-027 + ISS-028 — d22 past last-chance; action-converter max-scored both, nothing authored"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d3-text",
+        "d3-link"
+      ]
+    },
+    "d3-text": {
+      "type": "Text",
+      "props": {
+        "text": "triage PR #165 d9 CONFLICTING — operator batch call"
+      }
+    },
+    "d3-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/165",
+        "href": "https://github.com/anajuliabit/aeon/pull/165"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "reframe ISS-025 by 2026-07-30 per weekly-review action #1"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+8 routine runs collapsed (btc-levels ×5, heartbeat ×3) · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

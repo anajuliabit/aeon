@@ -1,0 +1,41 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-summary",
+        "alert-priorities"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h · 0 captures. nothing to surface.",
+        "variant": "body"
+      }
+    },
+    "alert-priorities": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md",
+        "message": "Last reviewed 56d ago — worth a refresh.",
+        "type": "info"
+      }
+    }
+  }
+}

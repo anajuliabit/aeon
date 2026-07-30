@@ -1,0 +1,265 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-25",
+        "description": "Board 100% recycled — every one of 17 candidates was featured or dropped in the last 2 days. Surfacing 2 d2 continuations with genuinely new reasons per skill spec."
+      },
+      "children": [
+        "heading_top_pick",
+        "storylink_block_buzz_top",
+        "text_block_buzz_desc",
+        "separator_1",
+        "heading_infra",
+        "stack_infra_item",
+        "separator_2",
+        "heading_web_apps",
+        "stack_web_apps_item",
+        "separator_3",
+        "text_sources"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h2"
+      }
+    },
+    "storylink_block_buzz_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "block/buzz",
+        "href": "https://github.com/block/buzz",
+        "source": "GitHub"
+      }
+    },
+    "text_block_buzz_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Biggest single-repo d2 gain in memory-window — Block's agent-as-equal-member workspace jumped 2,162→3,270 daily (+51%) on Buzz Desktop v0.4.25 shipping 7-24 23:04z.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h2"
+      }
+    },
+    "stack_infra_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "infra_item_buzz"
+      ]
+    },
+    "infra_item_buzz": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "infra_buzz_header",
+        "infra_buzz_stats",
+        "infra_buzz_release"
+      ]
+    },
+    "infra_buzz_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_block_buzz_infra",
+        "badge_lang_rust",
+        "badge_holdover_infra"
+      ]
+    },
+    "storylink_block_buzz_infra": {
+      "type": "StoryLink",
+      "props": {
+        "title": "block/buzz",
+        "href": "https://github.com/block/buzz",
+        "source": "GitHub"
+      }
+    },
+    "badge_lang_rust": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "secondary"
+      }
+    },
+    "badge_holdover_infra": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "outline"
+      }
+    },
+    "infra_buzz_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_buzz_today",
+        "stat_buzz_total"
+      ]
+    },
+    "stat_buzz_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "3.3k"
+      }
+    },
+    "stat_buzz_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "10.8k"
+      }
+    },
+    "infra_buzz_release": {
+      "type": "Text",
+      "props": {
+        "text": "Release v0.4.25 landed 7-24 23:04z; d2 daily +51% = viral-sustain not fade.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_web_apps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h2"
+      }
+    },
+    "stack_web_apps_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "web_apps_item_ego"
+      ]
+    },
+    "web_apps_item_ego": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "web_apps_ego_header",
+        "web_apps_ego_stats",
+        "web_apps_ego_growth"
+      ]
+    },
+    "web_apps_ego_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_citrolabs_ego",
+        "badge_lang_javascript",
+        "badge_holdover_web"
+      ]
+    },
+    "storylink_citrolabs_ego": {
+      "type": "StoryLink",
+      "props": {
+        "title": "citrolabs/ego-lite",
+        "href": "https://github.com/citrolabs/ego-lite",
+        "source": "GitHub"
+      }
+    },
+    "badge_lang_javascript": {
+      "type": "Badge",
+      "props": {
+        "text": "JavaScript",
+        "variant": "secondary"
+      }
+    },
+    "badge_holdover_web": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "outline"
+      }
+    },
+    "web_apps_ego_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_ego_today",
+        "stat_ego_total"
+      ]
+    },
+    "stat_ego_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "880",
+        "delta": "+256%",
+        "trend": "up"
+      }
+    },
+    "stat_ego_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "3.0k"
+      }
+    },
+    "web_apps_ego_growth": {
+      "type": "Text",
+      "props": {
+        "text": "d2 daily +256% (247→880) — first 'd2 exceeds d1' pattern in memory-window, late-viral-catch not catalyst-decay.",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 2/17 (8 dedup + 7 noise)",
+        "variant": "caption"
+      }
+    }
+  }
+}

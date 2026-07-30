@@ -1,0 +1,65 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 actions for 2026-07-26",
+        "description": "action-converter"
+      },
+      "children": [
+        "stack-actions"
+      ]
+    },
+    "stack-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Text",
+      "props": {
+        "text": "File ISS-027/028 docs",
+        "variant": "body"
+      }
+    },
+    "action-2": {
+      "type": "Text",
+      "props": {
+        "text": "merge-or-hold PR#165 before 17:38z gate",
+        "variant": "body"
+      }
+    },
+    "action-3": {
+      "type": "Text",
+      "props": {
+        "text": "hand-off ISS-025 to weekly-review",
+        "variant": "body"
+      }
+    },
+    "action-4": {
+      "type": "Text",
+      "props": {
+        "text": "patch github-issues SKILL.md commentsCount field",
+        "variant": "body"
+      }
+    },
+    "action-5": {
+      "type": "Text",
+      "props": {
+        "text": "re-run unlock-monitor Mon to confirm H false-positive",
+        "variant": "body"
+      }
+    }
+  }
+}

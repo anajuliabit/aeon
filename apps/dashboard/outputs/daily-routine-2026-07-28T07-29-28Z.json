@@ -1,0 +1,644 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-28",
+        "description": "Broad risk-off — 8/100 top-100 green, median top-50 -3.4%; losers dominate l1s/ai/defi/memes."
+      },
+      "children": [
+        "section_winners",
+        "sep1",
+        "section_losers",
+        "sep2",
+        "section_notable",
+        "sep3",
+        "section_tweets",
+        "sep4",
+        "section_paper",
+        "sep5",
+        "section_github",
+        "sep6",
+        "section_hn"
+      ]
+    },
+    "section_winners": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_winners",
+        "table_winners"
+      ]
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "24h%",
+          "7d%",
+          "Market Cap / Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "CARDS",
+            "+12.0%",
+            "-14.6%",
+            "$4M / #590",
+            "FADE"
+          ],
+          [
+            "ZAMA",
+            "+11.4%",
+            "+62%",
+            "$70M / #204",
+            ""
+          ],
+          [
+            "TAG",
+            "+9.2%",
+            "+22%",
+            "$7.8M / #203",
+            ""
+          ],
+          [
+            "KAITO",
+            "+7.5%",
+            "+30%",
+            "$81M / #127",
+            ""
+          ],
+          [
+            "Q",
+            "+5.8%",
+            "",
+            "$4.4M / #272",
+            ""
+          ],
+          [
+            "XEC",
+            "+5.0%",
+            "",
+            "$9.2M / #209",
+            ""
+          ],
+          [
+            "PUMP",
+            "+4.1%",
+            "",
+            "$156M / #74",
+            ""
+          ],
+          [
+            "FF",
+            "+1.9%",
+            "",
+            "$11M / #168",
+            ""
+          ],
+          [
+            "CRV",
+            "+1.6%",
+            "",
+            "$33M / #118",
+            ""
+          ],
+          [
+            "币安人生",
+            "+1.5%",
+            "",
+            "$15M / #88",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_losers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_losers",
+        "table_losers"
+      ]
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "24h%",
+          "Market Cap / Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "BEAT",
+            "-24.2%",
+            "$53M / #72",
+            ""
+          ],
+          [
+            "UB",
+            "-17.3%",
+            "$14M / #126",
+            ""
+          ],
+          [
+            "BANK",
+            "-13.8%",
+            "$237M / #197",
+            "CAPITULATION"
+          ],
+          [
+            "KAIA",
+            "-12.0%",
+            "$8.7M / #189",
+            ""
+          ],
+          [
+            "HOLO",
+            "-11.3%",
+            "$9.1M / #433",
+            ""
+          ],
+          [
+            "FET",
+            "-10.9%",
+            "$72M / #121",
+            ""
+          ],
+          [
+            "KITE",
+            "-10.5%",
+            "$20M / #145",
+            ""
+          ],
+          [
+            "NEAR",
+            "-9.8%",
+            "$164M / #39",
+            ""
+          ],
+          [
+            "SHIB",
+            "-9.1%",
+            "$187M / #33",
+            ""
+          ],
+          [
+            "PI",
+            "-9.0%",
+            "$12M / #76",
+            "TRENDING+DOWN"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_notable",
+        "alert_bank",
+        "text_coti",
+        "text_beat",
+        "text_hype"
+      ]
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "alert_bank": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "BANK: One-Day Round Trip",
+        "message": "Yesterday's +17% breakout → today's -13.8% capitulation on $237M vol."
+      }
+    },
+    "text_coti": {
+      "type": "Text",
+      "props": {
+        "text": "COTI +65% at #543 trending — PUMP-RISK, outside top-250."
+      }
+    },
+    "text_beat": {
+      "type": "Text",
+      "props": {
+        "text": "BEAT fully unwinds 7-26 d5 resurgence; UB breaks d6-sustain shape."
+      }
+    },
+    "text_hype": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE -7.7% + BTC -2.9% + PI -9.9% trending down — trending mirrors risk-off tape."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_tweets",
+        "heading_crypto",
+        "text_crypto",
+        "heading_ai",
+        "text_ai",
+        "heading_dev",
+        "text_dev"
+      ]
+    },
+    "heading_tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "text_crypto": {
+      "type": "Text",
+      "props": {
+        "text": "Saylor teases another \"color\" (btc treasury hint), BitMart winding down after 9y, eth/btc ratio flashes alt-season signal — but x activity at 12mo low despite tens-of-billions etf inflow. Institutions > retail."
+      }
+    },
+    "heading_ai": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "text_ai": {
+      "type": "Text",
+      "props": {
+        "text": "Kimi K3 lands 2.8T MoE / 1M ctx / $0.94/task open weights (also today's paper). Simon Willison publishes \"agentic engineering\" guide. Infrastructure AI ships agentic hub 1.0 for edge."
+      }
+    },
+    "heading_dev": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "text_dev": {
+      "type": "Text",
+      "props": {
+        "text": "Anaconda acquires Kilo (open-source model-agnostic AI coding assistant). Rust CLI proxy cuts LLM token consumption 60-90%."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_paper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_paper",
+        "paper_link",
+        "paper_desc"
+      ]
+    },
+    "heading_paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kimi K3: Open Frontier Intelligence",
+        "href": "https://arxiv.org/abs/2607.24653",
+        "source": "Kimi Team",
+        "score": "↑130"
+      }
+    },
+    "paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "2.8T MoE, 104B active, 1M context, delta attention + RL. Frontier-level open weights, extends [[small-MoE-frontier-close]] rail 3d after opus 5."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_github": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_github",
+        "text_github"
+      ]
+    },
+    "heading_github": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "text_github": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (4th consecutive clean day)"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_hn": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_hn",
+        "text_hn_intro",
+        "hn_item_1",
+        "hn_item_2",
+        "hn_item_3",
+        "hn_item_4",
+        "hn_item_5",
+        "hn_item_6",
+        "hn_item_7"
+      ]
+    },
+    "heading_hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "text_hn_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Open-weights day. 3/7 orbit anthropic + kimi k3 + book-shredding fallout."
+      }
+    },
+    "hn_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_1_link",
+        "hn_1_desc"
+      ]
+    },
+    "hn_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Anthropic on open-weights",
+        "href": "https://news.ycombinator.com/item?id=49076057",
+        "source": "HN",
+        "score": "782 pts / 1107 comments"
+      }
+    },
+    "hn_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Backs open weights, red lines on bio/cyber.",
+        "variant": "caption"
+      }
+    },
+    "hn_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_2_link",
+        "hn_2_desc"
+      ]
+    },
+    "hn_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kimi-K3 HF drop",
+        "href": "https://news.ycombinator.com/item?id=49065752",
+        "source": "HN",
+        "score": "1334 pts / 526 comments"
+      }
+    },
+    "hn_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "3T mxfp4, needs 16× b200 for real throughput.",
+        "variant": "caption"
+      }
+    },
+    "hn_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_3_link",
+        "hn_3_desc"
+      ]
+    },
+    "hn_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AI cos shredding rare books",
+        "href": "https://news.ycombinator.com/item?id=49068738",
+        "source": "HN",
+        "score": "763 pts / 479 comments"
+      }
+    },
+    "hn_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic destroyed last-copies under June fair-use.",
+        "variant": "caption"
+      }
+    },
+    "hn_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_4_link",
+        "hn_4_desc"
+      ]
+    },
+    "hn_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PGSimCity postgres viz",
+        "href": "https://news.ycombinator.com/item?id=49063754",
+        "source": "HN",
+        "score": "901 pts"
+      }
+    },
+    "hn_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Interactive teaching aid for WAL/vacuum/buffers.",
+        "variant": "caption"
+      }
+    },
+    "hn_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_5_link",
+        "hn_5_desc"
+      ]
+    },
+    "hn_5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Bun rust rewrite postmortem",
+        "href": "https://news.ycombinator.com/item?id=49067854",
+        "source": "HN",
+        "score": "464 pts / 367 comments"
+      }
+    },
+    "hn_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "4mo in, commits flat, no release.",
+        "variant": "caption"
+      }
+    },
+    "hn_item_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_6_link",
+        "hn_6_desc"
+      ]
+    },
+    "hn_6_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Google DMCA rejected",
+        "href": "https://news.ycombinator.com/item?id=49073513",
+        "source": "HN",
+        "score": "295 pts"
+      }
+    },
+    "hn_6_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Search-index isn't copyrightable, broad AI-training precedent.",
+        "variant": "caption"
+      }
+    },
+    "hn_item_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_7_link",
+        "hn_7_desc"
+      ]
+    },
+    "hn_7_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "French pyrocumulonimbus",
+        "href": "https://news.ycombinator.com/item?id=49060495",
+        "source": "HN",
+        "score": "451 pts"
+      }
+    },
+    "hn_7_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Gironde fire made its own storm.",
+        "variant": "caption"
+      }
+    }
+  }
+}

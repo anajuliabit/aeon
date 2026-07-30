@@ -1,0 +1,247 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-07-28"
+      },
+      "children": [
+        "status-alert",
+        "sep1",
+        "stats-grid",
+        "sep2",
+        "degraded-section",
+        "sep3",
+        "no-data-section",
+        "sep4",
+        "transitions-text",
+        "sep5",
+        "summary-stats"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🟡 DEGRADED (18D)",
+        "message": "Systemic: output_tokens=0, sandbox-truncation, day-35"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "healthy-stat",
+        "degraded-stat",
+        "no-data-stat"
+      ]
+    },
+    "healthy-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HEALTHY",
+        "value": "10"
+      }
+    },
+    "degraded-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEGRADED",
+        "value": "18"
+      }
+    },
+    "no-data-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "NO DATA",
+        "value": "3"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-items"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded Skills",
+        "level": "h2"
+      }
+    },
+    "degraded-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-item-1",
+        "deg-item-2",
+        "deg-item-3",
+        "deg-item-4",
+        "deg-item-5",
+        "deg-more"
+      ]
+    },
+    "deg-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report — 12% success → ISS-025"
+      }
+    },
+    "deg-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — 17% success"
+      }
+    },
+    "deg-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics — 18% success"
+      }
+    },
+    "deg-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — 21% success → ISS-018"
+      }
+    },
+    "deg-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill — 38% success → ISS-021"
+      }
+    },
+    "deg-more": {
+      "type": "Text",
+      "props": {
+        "text": "+13 more — see memory/issues/INDEX.md",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-items"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (3)",
+        "level": "h2"
+      }
+    },
+    "no-data-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-1",
+        "skill-2",
+        "skill-3",
+        "dispatch-note"
+      ]
+    },
+    "skill-1": {
+      "type": "Badge",
+      "props": {
+        "text": "autoresearch",
+        "variant": "outline"
+      }
+    },
+    "skill-2": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "outline"
+      }
+    },
+    "skill-3": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "outline"
+      }
+    },
+    "dispatch-note": {
+      "type": "Text",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "transitions-text": {
+      "type": "Text",
+      "props": {
+        "text": "Hash flip 467ce959 → 7bf88238 (first break in 168h+ span). defi-monitor + evening-recap + list-digest cross into DEGRADED; defi-overview + token-pick relax to WARNING; btc-levels graduates to HEALTHY."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "summary-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "open-issues",
+        "resolved-count"
+      ]
+    },
+    "open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "11"
+      }
+    },
+    "resolved-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}

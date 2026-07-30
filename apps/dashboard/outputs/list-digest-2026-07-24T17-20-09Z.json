@@ -1,0 +1,103 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-24",
+        "description": "day-old cache-lag repeats 7-22 → 7-24 — no 7-24 posts on tracked list; 10 items returned, only 2 above single-digit engagement."
+      },
+      "children": [
+        "heading_section",
+        "sep1",
+        "item1_stack",
+        "item2_stack",
+        "sep2",
+        "footer_text"
+      ]
+    },
+    "heading_section": {
+      "type": "Heading",
+      "props": {
+        "text": "AI / Grok-4.5 list",
+        "level": "h3"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "link-only post to an X-native article, no preview text — engagement asymmetric (148 likes, 15 rt) vs the rest of the list scraping 0-1; article content the only unknown",
+        "likes": 148,
+        "retweets": 15
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2080397292339704294"
+      }
+    },
+    "item2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "\"grok 4.5 as your co-founder in 4 images\" — reframes grok from tool to org-chart line, pitches on price+speed+SWE-bench vs opus 4.8 / fable 5; distinct from anthropic's assistant framing",
+        "likes": 43,
+        "retweets": 1
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2080420417609568278"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(10, 2-signal, 7-23 UTC only)\nstatus: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

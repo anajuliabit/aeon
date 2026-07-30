@@ -1,0 +1,114 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-23",
+        "description": "Low activity continues on the DeFi research list; signal is weak on sentiment-only posts."
+      },
+      "children": [
+        "heading-defi",
+        "tweet-stack-1",
+        "tweet-stack-2",
+        "separator-1",
+        "metadata-stack"
+      ]
+    },
+    "heading-defi": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research & Analysis",
+        "level": "h2"
+      }
+    },
+    "tweet-stack-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "@hooeem",
+        "text": "Social-system critique as meta-signal on network exhaustion and creator opportunity.",
+        "likes": 51,
+        "retweets": 0
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2080040755402363227"
+      }
+    },
+    "tweet-stack-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "Yield-layer narrative primed for -70% dip entry; founder conviction on infrastructure timing.",
+        "likes": 33,
+        "retweets": 8
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2080073511943520471"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-sources",
+        "text-status"
+      ]
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list=quiet",
+        "variant": "caption"
+      }
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_PARTIAL",
+        "variant": "caption"
+      }
+    }
+  }
+}

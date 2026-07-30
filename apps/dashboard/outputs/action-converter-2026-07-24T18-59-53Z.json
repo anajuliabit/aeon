@@ -1,0 +1,578 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-24"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep5",
+        "footer_section"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_heading",
+        "a1_desc",
+        "a1_why_label",
+        "a1_why",
+        "a1_done_label",
+        "a1_done_stack",
+        "a1_loop_label",
+        "a1_loop"
+      ]
+    },
+    "a1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. create memory/issues/ISS-027.md",
+        "level": "h3"
+      }
+    },
+    "a1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch-dark 8-skill cluster (d27) with YAML frontmatter + append INDEX.md row",
+        "variant": "body"
+      }
+    },
+    "a1_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a1_why": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md line 6 references ISS-027 as if it exists; 7-08 action-converter filing claim uncompleted d16",
+        "variant": "body"
+      }
+    },
+    "a1_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a1_done_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_done_text",
+        "a1_badges"
+      ]
+    },
+    "a1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "File exists with severity=critical, category=sandbox-limitation, 8 named affected_skills, INDEX.md row appended",
+        "variant": "body"
+      }
+    },
+    "a1_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_critical",
+        "a1_sandbox"
+      ]
+    },
+    "a1_critical": {
+      "type": "Badge",
+      "props": {
+        "text": "critical",
+        "variant": "destructive"
+      }
+    },
+    "a1_sandbox": {
+      "type": "Badge",
+      "props": {
+        "text": "sandbox-limitation",
+        "variant": "outline"
+      }
+    },
+    "a1_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "a1_loop": {
+      "type": "Text",
+      "props": {
+        "text": "iss-027-batch-dark-file-carry-d16",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_heading",
+        "a2_desc",
+        "a2_why_label",
+        "a2_why",
+        "a2_done_label",
+        "a2_done_stack",
+        "a2_loop_label",
+        "a2_loop"
+      ]
+    },
+    "a2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. author memory/issues/ISS-028.md",
+        "level": "h3"
+      }
+    },
+    "a2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Bash `>` / `>>` redirect sandbox regression (n=6 across 5 skills, 3 UTC-day span)",
+        "variant": "body"
+      }
+    },
+    "a2_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a2_why": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest 14:14Z says \"beyond noise-floor\"; n=6 durable across secdigest/agent-buzz/daily-routine/github-trending",
+        "variant": "body"
+      }
+    },
+    "a2_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a2_done_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_done_text",
+        "a2_badges"
+      ]
+    },
+    "a2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "File exists with severity=medium, category=sandbox-limitation, 6 named fires tracked, PR #167 workaround referenced",
+        "variant": "body"
+      }
+    },
+    "a2_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_medium",
+        "a2_sandbox"
+      ]
+    },
+    "a2_medium": {
+      "type": "Badge",
+      "props": {
+        "text": "medium",
+        "variant": "secondary"
+      }
+    },
+    "a2_sandbox": {
+      "type": "Badge",
+      "props": {
+        "text": "sandbox-limitation",
+        "variant": "outline"
+      }
+    },
+    "a2_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "a2_loop": {
+      "type": "Text",
+      "props": {
+        "text": "bash-redirect-regression-iss-028-file-carry",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_heading",
+        "a3_desc",
+        "a3_why_label",
+        "a3_why",
+        "a3_done_label",
+        "a3_done",
+        "a3_loop_label",
+        "a3_loop"
+      ]
+    },
+    "a3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. correct memory/MEMORY.md line 48 Kimi K3 drift",
+        "level": "h3"
+      }
+    },
+    "a3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "K3 shipped 7-16 per morning-brief 08:52Z WebSearch, not pending 7-27",
+        "variant": "body"
+      }
+    },
+    "a3_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a3_why": {
+      "type": "Text",
+      "props": {
+        "text": "3 skills today (morning-brief/daily-routine/heartbeat) all flagged same drift; calendar decisions read off stale line",
+        "variant": "body"
+      }
+    },
+    "a3_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a3_done": {
+      "type": "Text",
+      "props": {
+        "text": "Line 48 edited to drop \"Kimi K3 open-weights 7-27\" T-3 framing; DeepSeek V4 stable 7-24 stands standalone",
+        "variant": "body"
+      }
+    },
+    "a3_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "a3_loop": {
+      "type": "Text",
+      "props": {
+        "text": "memory-line-48-kimi-drift",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_heading",
+        "a4_desc",
+        "a4_why_label",
+        "a4_why",
+        "a4_done_label",
+        "a4_done",
+        "a4_loop_label",
+        "a4_loop"
+      ]
+    },
+    "a4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. verify LiteLLM not installed",
+        "level": "h3"
+      }
+    },
+    "a4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Via grep -rEn 'litellm|LiteLLM' scripts/ apps/ package.json",
+        "variant": "body"
+      }
+    },
+    "a4_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a4_why": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2026-59822 LiteLLM MCP auth-bypass patched today lands adjacent to Aeon's Virtuals/Claude OAuth orchestration",
+        "variant": "body"
+      }
+    },
+    "a4_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a4_done": {
+      "type": "Text",
+      "props": {
+        "text": "Grep count + result stamped in today's log Action Converter follow-up",
+        "variant": "body"
+      }
+    },
+    "a4_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "a4_loop": {
+      "type": "Text",
+      "props": {
+        "text": "litellm-install-verify-cve-2026-59822",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_heading",
+        "a5_desc",
+        "a5_why_label",
+        "a5_why",
+        "a5_done_label",
+        "a5_done",
+        "a5_loop_label",
+        "a5_loop"
+      ]
+    },
+    "a5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. patch skills/github-issues/SKILL.md step 2",
+        "level": "h3"
+      }
+    },
+    "a5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "`comments` → `commentsCount` field rename",
+        "variant": "body"
+      }
+    },
+    "a5_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a5_why": {
+      "type": "Text",
+      "props": {
+        "text": "GH API field renamed per MEMORY.md fleet-health line 19 + 7-23 log context; 2-day carry accumulating",
+        "variant": "body"
+      }
+    },
+    "a5_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a5_done": {
+      "type": "Text",
+      "props": {
+        "text": "SKILL.md diff shows commentsCount replacing comments in step 2 gh api snippet",
+        "variant": "body"
+      }
+    },
+    "a5_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "a5_loop": {
+      "type": "Text",
+      "props": {
+        "text": "github-issues-skill-md-field-rename-carry-d2",
+        "variant": "caption"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "footer_heading",
+        "footer_stats"
+      ]
+    },
+    "footer_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "footer_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_memory",
+        "stat_logs",
+        "stat_topics",
+        "stat_prs",
+        "stat_cron",
+        "stat_mode"
+      ]
+    },
+    "stat_memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "101"
+      }
+    },
+    "stat_logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "15"
+      }
+    },
+    "stat_topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "10"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "2"
+      }
+    },
+    "stat_cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Failing",
+        "value": "0"
+      }
+    },
+    "stat_mode": {
+      "type": "Stat",
+      "props": {
+        "label": "Mode",
+        "value": "OK"
+      }
+    }
+  }
+}

@@ -1,8 +1,29 @@
-Ran skills/search-skill/SKILL.md. Exit mode **SEARCH_SKILL_NO_GAP** — silent, log-only, no catalogs queried, no notify.
+Perfect. The skill has completed successfully.
+
+---
 
 ## Summary
 
-- **Result:** SEARCH_SKILL_NO_GAP (durability rail d22 → **d23**). All 4 gap-derivation sources dry — failing skills all trace to ISS-025/027 sandbox-truncation infra (not capability gaps), 0/11 open issues in target categories, no "Next Priorities" section in MEMORY.md, 0 recent log signals. Step-1 gate exit before any catalog fan-out per SKILL.md.
-- **Files modified:** `memory/logs/2026-07-20.md` (log entry + Summary block appended), `memory/MEMORY.md` line 65 (d22 → d23 durability counter).
-- **Notified:** no (silent per SKILL.md NO_GAP branch — correct behavior; prevents training operator to ignore this channel).
-- **Follow-up:** next mon-weekly tick 2026-07-27 14:00Z; d23 rail confirms external-skill axis is capability-saturated — forward motion is operator-side (ISS-025 PR, rule-5 codification, on-chain config unblock), not more installs.
+I've executed the **search-skill** defined in `skills/search-skill/SKILL.md` for 2026-07-27.
+
+### Findings
+
+**Exit Mode: SEARCH_SKILL_NO_GAP** — No external skill gap exists.
+
+**Derivation (Step 1):**
+All four gap-discovery sources yielded **zero capability words**:
+- **Failing skills** (lowest success rates): All failures have documented root causes — sandbox truncation (ISS-025, ISS-019–021), missing sandbox binaries (ISS-018), not missing external capabilities.
+- **Open issues**: Reppo voting logic bugs (internal) and sandbox limitations (infrastructure), not capability gaps.
+- **Priorities**: Infrastructure tasks (ISS-025, ISS-027) and operator-side setup (secrets), not external skill gaps.
+- **Recent logs**: No mentions of "no skill for," "can't do," "would help if," or missing capability.
+- **Authoritative signal**: MEMORY.md line 78 explicitly states: *"fleet capability-complete on external-skill axis. Failures = infra (ISS-025/027), not gaps."*
+
+**Per SKILL.md step 5 rule:**
+> If none of (a)–(d) yield a concrete capability word → exit mode SEARCH_SKILL_NO_GAP. Log and stop. Do NOT notify.
+
+**Actions taken:**
+✅ Appended log entry to `memory/logs/2026-07-27.md` with full derivation trace  
+✅ Silent exit (no notification sent per spec)  
+✅ No catalogs queried, no PRs created
+
+**Output:** `SEARCH_SKILL_NO_GAP`

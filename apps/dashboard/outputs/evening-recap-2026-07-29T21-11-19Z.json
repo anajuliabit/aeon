@@ -1,0 +1,344 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-29",
+        "description": "Steady ship day — PR #170 filed, skill-analytics fires first weekly slot, reflect absorbs 14 patterns; 3 operator calls open for tomorrow"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-section",
+        "sep1",
+        "notable-section",
+        "sep2",
+        "decisions-section",
+        "sep3",
+        "footer-section"
+      ]
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headlines-label",
+        "hl1",
+        "hl2",
+        "hl3"
+      ]
+    },
+    "headlines-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "hl1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hl1-badge",
+        "hl1-link"
+      ]
+    },
+    "hl1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve"
+      }
+    },
+    "hl1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "hn-digest path fix (skills/hn-digest → skills/hacker-news-digest, 1-line diff)",
+        "href": "https://github.com/anajuliabit/aeon/pull/170",
+        "source": "GitHub"
+      }
+    },
+    "hl2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hl2-badge",
+        "hl2-text"
+      ]
+    },
+    "hl2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-analytics"
+      }
+    },
+    "hl2-text": {
+      "type": "Text",
+      "props": {
+        "text": "first Wed 18:30 slot fire in window; 196 runs / 100% SR / 11 anomalies (all batch-dark ISS-027 cluster) · articles/skill-analytics-2026-07-29.md"
+      }
+    },
+    "hl3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hl3-badge",
+        "hl3-text"
+      ]
+    },
+    "hl3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect"
+      }
+    },
+    "hl3-text": {
+      "type": "Text",
+      "props": {
+        "text": "14 new/extended patterns absorbed, 17 d-counters advanced, 16 stale entries pruned · memory/logs/2026-07-29-reflect.md"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-label",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ]
+    },
+    "notable-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "n1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n1-badge",
+        "n1-text"
+      ]
+    },
+    "n1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine"
+      }
+    },
+    "n1-text": {
+      "type": "Text",
+      "props": {
+        "text": "token-movers + paper-pick + hn-digest + tweet-roundup + github-issues, notify sent"
+      }
+    },
+    "n2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n2-badge",
+        "n2-text"
+      ]
+    },
+    "n2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending"
+      }
+    },
+    "n2-text": {
+      "type": "Text",
+      "props": {
+        "text": "4-pick slate; skill-pack primitive rail n=4→n=5 (book-to-skill top pick)"
+      }
+    },
+    "n3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n3-badge",
+        "n3-text"
+      ]
+    },
+    "n3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest"
+      }
+    },
+    "n3-text": {
+      "type": "Text",
+      "props": {
+        "text": "2 today / 5 this-week; legit-defi-org-typosquat new sub-class (karpatkey pip)"
+      }
+    },
+    "n4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n4-badge",
+        "n4-text"
+      ]
+    },
+    "n4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reg-monitor"
+      }
+    },
+    "n4-text": {
+      "type": "Text",
+      "props": {
+        "text": "8 items shipped; MN prediction-market ban enjoined (federal-CEA-authority-reassert NEW)"
+      }
+    },
+    "n5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n5-badge",
+        "n5-text"
+      ]
+    },
+    "n5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz + list-digest"
+      }
+    },
+    "n5-text": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-enforcement-primitive-cluster NEW + training-curriculum-as-a-service NEW"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decisions-label",
+        "d1",
+        "d2",
+        "d3"
+      ]
+    },
+    "decisions-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "d1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 hand-off T-0 (2026-07-30) — operator direct-author aeon.yml:479-495",
+        "variant": "body"
+      }
+    },
+    "d2": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-027.md + ISS-028.md — action-converter max-scored 125 each, d23 still unfiled (4th consec shaping)",
+        "variant": "body"
+      }
+    },
+    "d3": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #165 d10 (CONFLICTING) + PR #167 d6 — batch-merge cadence window",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "collapsed-text",
+        "status-text"
+      ]
+    },
+    "collapsed-text": {
+      "type": "Text",
+      "props": {
+        "text": "+12 routine runs collapsed (btc-levels ×4, heartbeat ×2, token-alert, thought-review, skill-health, morning-brief, goal-tracker, action-converter)",
+        "variant": "caption"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

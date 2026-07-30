@@ -1,0 +1,88 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz"
+      },
+      "children": [
+        "subtitle",
+        "sep1",
+        "heading1",
+        "link1",
+        "sep2",
+        "heading2",
+        "link2",
+        "link3",
+        "sep3",
+        "footer"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-24 — quiet builder day — 3 concrete claims across cost-orchestration, schema plumbing, and memory scope; no launches, no drama.",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "Cost-orchestration receipts",
+        "level": "h3"
+      }
+    },
+    "link1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kimi with fable advisors beats pure fable on both task-completion rate AND cost per task",
+        "href": "https://x.com/dzhng/status/2080402165093507214",
+        "source": "@dzhng"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent-stack primitives",
+        "level": "h3"
+      }
+    },
+    "link2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "shipped a valibot mcp server so agents generate schemas from live docs, not stale training data",
+        "href": "https://x.com/FabianHiller/status/2080441275967213608",
+        "source": "@FabianHiller"
+      }
+    },
+    "link3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reframes vault-as-knowledge-base vs memory-as-execution-boundary: scoped-per-repo context, freshness on changed facts, provenance for tool trust",
+        "href": "https://x.com/Engraphis/status/2080442811631997016",
+        "source": "@Engraphis"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "source: xai-cache · candidates: 6 → kept: 3",
+        "variant": "caption"
+      }
+    }
+  }
+}

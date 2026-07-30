@@ -1,0 +1,427 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-freshness",
+        "description": "Dependency freshness audit — 2026-07-25"
+      },
+      "children": [
+        "alert-main",
+        "sep1",
+        "stat-overview",
+        "sep2",
+        "heading-worst",
+        "worst-items",
+        "sep3",
+        "heading-also",
+        "also-items",
+        "sep4",
+        "heading-actions",
+        "actions-stack",
+        "sep5",
+        "link-full"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "FRESHNESS_STALE",
+        "message": "7 of 11 deps flagged across 5 of 43 enabled consumers"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stat-overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-deps",
+        "stat-consumers"
+      ]
+    },
+    "stat-deps": {
+      "type": "Stat",
+      "props": {
+        "label": "Dependencies flagged",
+        "value": "7 / 11"
+      }
+    },
+    "stat-consumers": {
+      "type": "Stat",
+      "props": {
+        "label": "Consumers affected",
+        "value": "5 / 43"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-worst": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst cases",
+        "level": "h3"
+      }
+    },
+    "worst-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "worst-1",
+        "worst-2",
+        "worst-3"
+      ]
+    },
+    "worst-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "worst-1-title",
+        "worst-1-badges"
+      ]
+    },
+    "worst-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan ← articles/workflow-security-audit-2026-04-11.md",
+        "variant": "lead"
+      }
+    },
+    "worst-1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "worst-1-age",
+        "worst-1-type",
+        "worst-1-status",
+        "worst-1-reason"
+      ]
+    },
+    "worst-1-age": {
+      "type": "Badge",
+      "props": {
+        "text": "105d",
+        "variant": "secondary"
+      }
+    },
+    "worst-1-type": {
+      "type": "Badge",
+      "props": {
+        "text": "articles/weekly",
+        "variant": "secondary"
+      }
+    },
+    "worst-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "worst-1-reason": {
+      "type": "Badge",
+      "props": {
+        "text": "disabled producer",
+        "variant": "outline"
+      }
+    },
+    "worst-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "worst-2-title",
+        "worst-2-badges"
+      ]
+    },
+    "worst-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse ← memory/topics/aixbt-grounding.md",
+        "variant": "lead"
+      }
+    },
+    "worst-2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "worst-2-age",
+        "worst-2-type",
+        "worst-2-status",
+        "worst-2-reason"
+      ]
+    },
+    "worst-2-age": {
+      "type": "Badge",
+      "props": {
+        "text": "636h",
+        "variant": "secondary"
+      }
+    },
+    "worst-2-type": {
+      "type": "Badge",
+      "props": {
+        "text": "topics",
+        "variant": "secondary"
+      }
+    },
+    "worst-2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "worst-2-reason": {
+      "type": "Badge",
+      "props": {
+        "text": "dark d27",
+        "variant": "outline"
+      }
+    },
+    "worst-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "worst-3-title",
+        "worst-3-badges"
+      ]
+    },
+    "worst-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner ← .outputs/github-trending.md",
+        "variant": "lead"
+      }
+    },
+    "worst-3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "worst-3-age",
+        "worst-3-type",
+        "worst-3-status",
+        "worst-3-reason"
+      ]
+    },
+    "worst-3-age": {
+      "type": "Badge",
+      "props": {
+        "text": "24h",
+        "variant": "secondary"
+      }
+    },
+    "worst-3-type": {
+      "type": "Badge",
+      "props": {
+        "text": "outputs",
+        "variant": "secondary"
+      }
+    },
+    "worst-3-status": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "worst-3-reason": {
+      "type": "Badge",
+      "props": {
+        "text": "self-resolves after github-trending 09:00",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-also": {
+      "type": "Heading",
+      "props": {
+        "text": "Also flagged",
+        "level": "h3"
+      }
+    },
+    "also-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "also-1",
+        "also-2"
+      ]
+    },
+    "also-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "also-1-title",
+        "also-1-badges"
+      ]
+    },
+    "also-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse ← aixbt-clusters.md + aixbt-chains.md",
+        "variant": "lead"
+      }
+    },
+    "also-1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "also-1-age",
+        "also-1-status"
+      ]
+    },
+    "also-1-age": {
+      "type": "Badge",
+      "props": {
+        "text": "636h",
+        "variant": "secondary"
+      }
+    },
+    "also-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "also-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "also-2-title",
+        "also-2-badges"
+      ]
+    },
+    "also-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh + token-pick ← market-context.md",
+        "variant": "lead"
+      }
+    },
+    "also-2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "also-2-age",
+        "also-2-status"
+      ]
+    },
+    "also-2-age": {
+      "type": "Badge",
+      "props": {
+        "text": "9d / 216h",
+        "variant": "secondary"
+      }
+    },
+    "also-2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "WARN — 12:00 cluster dark",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Action items",
+        "level": "h3"
+      }
+    },
+    "actions-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3"
+      ]
+    },
+    "action-1": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse dead-slot d27 — check ISS files"
+      }
+    },
+    "action-2": {
+      "type": "Text",
+      "props": {
+        "text": "security-scan ref is static doc, add ignore marker to SKILL.md:19+132"
+      }
+    },
+    "action-3": {
+      "type": "Text",
+      "props": {
+        "text": "market-context clears on next cluster recovery"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link-full": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "articles/skill-freshness-2026-07-25.md",
+        "source": "skill-freshness"
+      }
+    }
+  }
+}

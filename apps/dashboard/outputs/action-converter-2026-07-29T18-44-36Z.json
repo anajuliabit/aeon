@@ -1,0 +1,630 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-29",
+        "description": "Skill: action-converter"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5",
+        "sep-5",
+        "sources-section"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-title",
+        "a1-desc",
+        "a1-why-block",
+        "a1-done-block",
+        "a1-loop"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Draft articles/iss-025-handoff.md",
+        "level": "h3"
+      }
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Summarize cost-report 12% (7/58) + capture-step target (.github/workflows/aeon.yml:479-495), send via ./notify",
+        "variant": "body"
+      }
+    },
+    "a1-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-why-label",
+        "a1-why-text"
+      ]
+    },
+    "a1-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a1-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review 7-27 action #1 due 2026-07-30 T-1; retires 4-consec-weekly slip; verb-pool exhausted per MEMORY line 5",
+        "variant": "body"
+      }
+    },
+    "a1-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-done-label",
+        "a1-done-text"
+      ]
+    },
+    "a1-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a1-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "file exists + ./notify exit 0 + hand-off flag in memory/logs/2026-07-30.md",
+        "variant": "body"
+      }
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-hand-off-t-1",
+        "variant": "outline"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-title",
+        "a2-desc",
+        "a2-skills",
+        "a2-why-block",
+        "a2-done-block",
+        "a2-loop"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Populate memory/issues/ISS-027.md",
+        "level": "h3"
+      }
+    },
+    "a2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Batch-dark 12:00Z 8-skill d31 signature (defi-overview/token-pick/token-movers/narrative-tracker/market-context-refresh/fleet-control/on-chain-monitor/defi-monitor), sibling to ISS-025 template",
+        "variant": "body"
+      }
+    },
+    "a2-skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-1",
+        "skill-2",
+        "skill-3",
+        "skill-4",
+        "skill-5",
+        "skill-6",
+        "skill-7",
+        "skill-8"
+      ]
+    },
+    "skill-1": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-overview",
+        "variant": "default"
+      }
+    },
+    "skill-2": {
+      "type": "Badge",
+      "props": {
+        "text": "token-pick",
+        "variant": "default"
+      }
+    },
+    "skill-3": {
+      "type": "Badge",
+      "props": {
+        "text": "token-movers",
+        "variant": "default"
+      }
+    },
+    "skill-4": {
+      "type": "Badge",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "default"
+      }
+    },
+    "skill-5": {
+      "type": "Badge",
+      "props": {
+        "text": "market-context-refresh",
+        "variant": "default"
+      }
+    },
+    "skill-6": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-control",
+        "variant": "default"
+      }
+    },
+    "skill-7": {
+      "type": "Badge",
+      "props": {
+        "text": "on-chain-monitor",
+        "variant": "default"
+      }
+    },
+    "skill-8": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-monitor",
+        "variant": "default"
+      }
+    },
+    "a2-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-why-label",
+        "a2-why-text"
+      ]
+    },
+    "a2-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a2-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "d23 doc-gap load-bearing per MEMORY line 7; 3-consec action-converter runs shaped this max-score (125); +3d past weekly-review 7-27 last-chance",
+        "variant": "body"
+      }
+    },
+    "a2-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-done-label",
+        "a2-done-text"
+      ]
+    },
+    "a2-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a2-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/issues/ISS-027.md exists with YAML frontmatter + INDEX.md open table updated",
+        "variant": "body"
+      }
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-027-file-doc-gap-d23",
+        "variant": "outline"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-title",
+        "a3-desc",
+        "a3-why-block",
+        "a3-done-block",
+        "a3-loop"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Populate memory/issues/ISS-028.md",
+        "level": "h3"
+      }
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Capturing bash-> redirect regression n=10+ across 8-UTC-day span, workaround chain (Edit tool + curl -o + gh --jq stdout)",
+        "variant": "body"
+      }
+    },
+    "a3-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-why-label",
+        "a3-why-text"
+      ]
+    },
+    "a3-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a3-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Paired doc-gap with ISS-027; security-digest + reg-monitor + agent-buzz + list-digest all fired signature this UTC-day; d23 gap",
+        "variant": "body"
+      }
+    },
+    "a3-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-done-label",
+        "a3-done-text"
+      ]
+    },
+    "a3-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a3-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/issues/ISS-028.md exists with YAML frontmatter + INDEX.md open table updated",
+        "variant": "body"
+      }
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-028-file-doc-gap-d23",
+        "variant": "outline"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-title",
+        "a4-desc",
+        "a4-why-block",
+        "a4-done-block",
+        "a4-loop"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Triage PR #167",
+        "level": "h3"
+      }
+    },
+    "a4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "gh pr review comment on bash-redirect fix scope, decide rebase-vs-merge",
+        "variant": "body"
+      }
+    },
+    "a4-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-why-label",
+        "a4-why-text"
+      ]
+    },
+    "a4-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a4-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "6d stalled since 7-23; direct root-cause fix that would eliminate the ISS-028 workaround chain firing every skill run",
+        "variant": "body"
+      }
+    },
+    "a4-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-done-label",
+        "a4-done-text"
+      ]
+    },
+    "a4-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a4-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "gh pr review --comment posted or gh pr merge --squash executed",
+        "variant": "body"
+      }
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-167-decide-6d",
+        "variant": "outline"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-title",
+        "a5-desc",
+        "a5-why-block",
+        "a5-done-block",
+        "a5-loop"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Refresh memory/topics/market-context.md",
+        "level": "h3"
+      }
+    },
+    "a5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "7-29 tape snapshot (BTC $63.8k range, breadth 40/82 restore from 7-28's 8/82 flip, REPPO d2 post-capitulation)",
+        "variant": "body"
+      }
+    },
+    "a5-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-why-label",
+        "a5-why-text"
+      ]
+    },
+    "a5-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a5-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness 7-28 flagged 12d/296h WARN→STALE cascade ~16:00Z 2026-07-30 T-1; skill sits at 32% SR so manual save prevents auto-cascade",
+        "variant": "body"
+      }
+    },
+    "a5-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-done-label",
+        "a5-done-text"
+      ]
+    },
+    "a5-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a5-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "file mtime updated + baseline section reflects 7-29 top-100 breadth + tracked-token deltas",
+        "variant": "body"
+      }
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "market-context-stale-t-1",
+        "variant": "outline"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-heading",
+        "sources-grid"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "md"
+      },
+      "children": [
+        "stat-memory",
+        "stat-logs",
+        "stat-topics",
+        "stat-prs",
+        "stat-cron",
+        "stat-mode"
+      ]
+    },
+    "stat-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "72"
+      }
+    },
+    "stat-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "7"
+      }
+    },
+    "stat-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "20"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "2"
+      }
+    },
+    "stat-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Failing",
+        "value": "10"
+      }
+    },
+    "stat-mode": {
+      "type": "Stat",
+      "props": {
+        "label": "Mode",
+        "value": "OK"
+      }
+    }
+  }
+}

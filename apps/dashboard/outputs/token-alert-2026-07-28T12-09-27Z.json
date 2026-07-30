@@ -1,0 +1,93 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-07-28"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_trigger",
+        "sep1",
+        "stats_group",
+        "sep2",
+        "heading_analysis",
+        "analysis_text"
+      ]
+    },
+    "alert_trigger": {
+      "type": "Alert",
+      "props": {
+        "title": "Price Alert Triggered",
+        "message": "|24h change| 20.10% ≥ 15% threshold",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_group": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_volume"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "REPPO Price",
+        "value": "$0.01731684",
+        "delta": "-20.10%",
+        "trend": "down"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$179,872",
+        "delta": "+2.08x baseline",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_analysis": {
+      "type": "Heading",
+      "props": {
+        "text": "Analysis",
+        "level": "h3"
+      }
+    },
+    "analysis_text": {
+      "type": "Text",
+      "props": {
+        "text": "7-26 drought-break head-fake fully unwinds d2 — +1.83% \"re-accumulation-attempt\" print reverses -20.10% with vol still under 3x gate. Log-to-log -9.01% ($0.01903098 → $0.01731684). Vol 2.08x baseline (mean $86,674) is highest ratio of today's rail but half the spike gate.",
+        "variant": "body"
+      }
+    }
+  }
+}

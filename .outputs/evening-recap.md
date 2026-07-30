@@ -1,25 +1,25 @@
-*Evening Recap — 2026-07-22*
-_TL;DR: heavy cron day — reflect ships 20 patterns, GITLAWB breaks 4-day silence, but ISS-025 hits 1-week slip and Bash `>` redirect regression lands n=3 same UTC-day_
+*Evening Recap — 2026-07-30*
+_TL;DR: productive-but-incomplete — reflect closed a 24d doc-gap (ISS-027/028 filed), security pushed 3 criticals, and ISS-025 hand-off slipped its T-0 deadline to d15._
 
 *Headlines:*
-- github-trending — 5 picks kept; ayghri/i-have-adhd 17.3× first coding-agent-skill-as-package; code-review-graph d5 plateau codified · `.outputs/github-trending.md`
-- reflect — 20 new patterns codified (breadth-swing, twin dead-cat, LLM containment); MEMORY.md + fleet.md refreshed · `memory/topics/fleet.md`
-- daily-routine — 63pt breadth compression d1 (87→24/100 top-100 green); HYPE −6.7% MAJOR breakdown; BTC ETF YTD first below $5B · SENT
-- token-alert — GITLAWB +16.53% fires 1/12; breaks 4-consec zero-alerts streak; counter-tape shape vs 7-21 broad-tape · SENT
-- security-digest — FortiSandbox no-vendor-patch KEV pair + DD-WRT 4yr-old CVE re-emerge + pip-mass-malware extends n=2 · `.security-digest-msg.md`
+- reflect — ISS-027.md + ISS-028.md filed, MEMORY.md rebuilt · memory/issues/ISS-027.md
+- security-digest — Cisco FMC KEV + kube-logging RCE + flyto-core 6-CVE; 3 patch-today / 5 this-week · .tmp/security-digest.md
+- heartbeat 15:16Z — 07:00Z slot MISS confirmed (morning-brief + daily-routine + thought-review all dropped) · docs/status.md
+- github-trending — jcode top pick (Rust efficiency-first n=1) + VibeVoice (open-voice rail n=2); 4 picks shipped · .outputs/github-trending.md
+- agent-buzz — Ruflo MCP CVE-2026-59726 (first-in-wild) + stateless spec + Copilot GA same-day · .tmp/agent-buzz.md
 
 *Notable:*
-- reg-monitor — Cboe binary-options Amendment 34-105936 effective 7-22; 1 act, 2 watch · operator-invoked Tue (off-Wed cadence)
-- skill-health — SKILL_HEALTH_PARTIAL: skill-runs sandbox-blocked; Bash `>` n=3 regressions UTC-day-22; hash 467ce959 stable
-- goal-tracker — ISS-025 T+6 day-7 (1-week slip milestone) tracked; 0 status transitions across 3 goals
-- action-converter — 5 loops filed: ISS-025 day-7 + H unlock T-3 + priorities 48d + on-chain config d46 + security-digest curl
-- morning-brief — SENT; 3 focus items: ISS-025, H unlock T-3, compression-crack test
+- btc-levels ×5 — spot $64,218–$64,845, all levels clear
+- token-alert — 0/4 alerts, 37th clean CG day; REPPO 1.386× leads vol-intensity
+- skill-freshness — FRESHNESS_NO_CHANGE, fingerprint `1ab8c658` stable 5d
+- skill-health — DEGRADED(18) stable-hash 3rd-consec tick; daily-cadence notify sent
+- list-digest — buyback rail: ETHFI 3.04× P/F + AERO merger mechanics; 1 list / 3 tweets
 
 *Decisions for tomorrow:*
-- ISS-025: operator direct-author `dangerouslyDisableSandbox` into `aeon.yml:479-495` — action-converter pivot live from 7-21, T+6 day-7 milestone crossed
-- ISS-027 unfiled: 12:00Z batch DARK d25 confirmed n=26 today — file in INDEX.md or assign wontfix
+- merge PR #167 (bash-redirect fix, d7 past weekly-batch gate) · https://github.com/anajuliabit/aeon/pull/167
+- merge PR #165 (CONFLICTING, d11) · https://github.com/anajuliabit/aeon/pull/165
+- ISS-025 hand-off slipped T-0: operator direct-author against aeon.yml:479-495 (now d15)
+- if 07:00Z slot misses 7-31, file new ISS (1-instance today — not yet ISS-worthy)
+- PR #170 just crossed 24h · https://github.com/anajuliabit/aeon/pull/170
 
-*Blockers:*
-- 12:00Z batch DARK d25 — 8-skill cluster frozen since 6-28; ISS-027 not formally filed in INDEX.md
-
-_+11 routine runs collapsed · sources: log=ok cron-state=ok_
+_+1 collapsed (heartbeat 09:04Z dedup-skip) · sources: log=ok cron-state=ok_

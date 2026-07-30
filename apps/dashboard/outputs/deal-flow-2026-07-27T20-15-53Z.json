@@ -1,0 +1,180 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Deal Flow — 2026-07-27"
+      },
+      "children": [
+        "overview-text",
+        "sep1",
+        "deals-stack",
+        "sep2",
+        "sources-text"
+      ]
+    },
+    "overview-text": {
+      "type": "Text",
+      "props": {
+        "text": "Capital diverging into robotics-as-infrastructure (physical-AI layer) at megaround scale — a16z $1.7B robotics, Enigma $70M UI-layer robotics validating lower-stack thesis. Crypto funding quiet on Tier 1 aggregator visibility (sources 404ing) but crypto-specific trackers pick up Axis Robotics $12M seed (hybrid AI/crypto infrastructure), Coinhako $300M Series B. Mid-summer indexing gap across traditional aggregators suggests deal flow continuing but reporting lag extends through late July.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deals-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "deal-1",
+        "deal-2",
+        "deal-3"
+      ]
+    },
+    "deal-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-1-heading",
+        "deal-1-stat",
+        "deal-1-investor",
+        "deal-1-why"
+      ]
+    },
+    "deal-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Travis Kalanick's Robotics Company",
+        "level": "h3"
+      }
+    },
+    "deal-1-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategic Round",
+        "value": "$1.7B"
+      }
+    },
+    "deal-1-investor": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Andreessen Horowitz (a16z) | Humanoid robots for logistics/manufacturing",
+        "variant": "body"
+      }
+    },
+    "deal-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "a16z capital at $1.7B validates physical-AI stack clustering (inference/training/identity layers); megaround scale confirms corporate-displaces-VC pattern extending into 2026.",
+        "variant": "caption"
+      }
+    },
+    "deal-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-2-heading",
+        "deal-2-stat",
+        "deal-2-investor",
+        "deal-2-why"
+      ]
+    },
+    "deal-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Enigma",
+        "level": "h3"
+      }
+    },
+    "deal-2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Series",
+        "value": "$70M"
+      }
+    },
+    "deal-2-investor": {
+      "type": "Text",
+      "props": {
+        "text": "Robot control interface (ease-of-use primitives) | Lead: n/d",
+        "variant": "body"
+      }
+    },
+    "deal-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Secondary-layer robotics ($70M vs $1.7B primary) extends physical-AI thesis downward; UI/UX-for-robots as standalone category distinct from compute incumbents.",
+        "variant": "caption"
+      }
+    },
+    "deal-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-3-heading",
+        "deal-3-stat",
+        "deal-3-investor",
+        "deal-3-why"
+      ]
+    },
+    "deal-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Axis Robotics",
+        "level": "h3"
+      }
+    },
+    "deal-3-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Seed",
+        "value": "$12M"
+      }
+    },
+    "deal-3-investor": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Hack VC | Co-leads: Nomad Capital, Pi Network, 10K Ventures | AI + decentralized infrastructure (crypto-native)",
+        "variant": "body"
+      }
+    },
+    "deal-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "First crypto-native robotics infrastructure play observed (hybrid AI-crypto); seed with distributed investor pool signals category confidence on-chain.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: techcrunch=ok | crunchbase=fail(404) | cryptorank=ok | crypto-fundraising=ok | websearch=fail(empty) | aifundingtracker=fail(June-only) | candidates=22 → kept=3",
+        "variant": "muted"
+      }
+    }
+  }
+}

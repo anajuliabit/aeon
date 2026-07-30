@@ -1,0 +1,292 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "title-heading",
+        "intro-text",
+        "sep1",
+        "mcp-heading",
+        "tweets-mcp-stack",
+        "sep2",
+        "bench-heading",
+        "tweets-bench-stack",
+        "sep3",
+        "frame-heading",
+        "tweets-frame-stack",
+        "sep4",
+        "footer-text"
+      ]
+    },
+    "title-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Buzz — 2026-07-29",
+        "level": "h1"
+      }
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet infra day: MCP enforcement primitives, two \"measure what actually matters\" benchmark takes, one repo-translation framework.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "mcp-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP enforcement layer",
+        "level": "h2"
+      }
+    },
+    "tweets-mcp-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet1",
+        "tweet2"
+      ]
+    },
+    "tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1-card",
+        "tweet1-link"
+      ]
+    },
+    "tweet1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Policy Layer Dan",
+        "handle": "@policylayer_dan",
+        "text": "\"we told the agent not to\" isn't enforcement; PolicyLayer sits outside Stripe/GitHub/Postgres/Slack MCP servers as the control layer"
+      }
+    },
+    "tweet1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet →",
+        "href": "https://x.com/policylayer_dan/status/2082252101560766596"
+      }
+    },
+    "tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2-card",
+        "tweet2-link"
+      ]
+    },
+    "tweet2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Emad Gnia",
+        "handle": "@emadgnia",
+        "text": "remote MCP servers going stateless matters more than the next model release: serverless + horizontal scaling now runs like ordinary infra"
+      }
+    },
+    "tweet2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet →",
+        "href": "https://x.com/emadgnia/status/2082254581057069515"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bench-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Benchmarks over leaderboards",
+        "level": "h2"
+      }
+    },
+    "tweets-bench-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet3",
+        "tweet4"
+      ]
+    },
+    "tweet3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3-card",
+        "tweet3-link"
+      ]
+    },
+    "tweet3-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Nox Vector AI",
+        "handle": "@NoxVectorAI",
+        "text": "SpaceMolt pizza bench (first pizza 28.5M credits, second 127) tests long-horizon dependency-graph coordination, not isolated tasks"
+      }
+    },
+    "tweet3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet →",
+        "href": "https://x.com/NoxVectorAI/status/2082234666975691103"
+      }
+    },
+    "tweet4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4-card",
+        "tweet4-link"
+      ]
+    },
+    "tweet4-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Nabeel Khan",
+        "handle": "@TheNabeelKhan",
+        "text": "memory paper compared 8 stores across 5 scenarios; the simple harness generalized best, the elaborate stores didn't"
+      }
+    },
+    "tweet4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet →",
+        "href": "https://x.com/TheNabeelKhan/status/2082233794954686680"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "frame-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Frameworks & wiring",
+        "level": "h2"
+      }
+    },
+    "tweets-frame-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet5",
+        "tweet6"
+      ]
+    },
+    "tweet5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5-card",
+        "tweet5-link"
+      ]
+    },
+    "tweet5-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Ali Brahimzada",
+        "handle": "@alibrahimzada",
+        "text": "ReCodeAgent: multi-agent framework for language-agnostic, repo-level code translation with validation"
+      }
+    },
+    "tweet5-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet →",
+        "href": "https://x.com/alibrahimzada/status/2082248835091558488"
+      }
+    },
+    "tweet6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet6-card",
+        "tweet6-link"
+      ]
+    },
+    "tweet6-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Viktor Oddy",
+        "handle": "@viktoroddy",
+        "text": "Higgsfield MCP wired to Claude / Fable 5 in a 7-min public walkthrough (text→video agent chain across model families)"
+      }
+    },
+    "tweet6-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet →",
+        "href": "https://x.com/viktoroddy/status/2082254602280505439"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 11 → kept: 6",
+        "variant": "muted"
+      }
+    }
+  }
+}

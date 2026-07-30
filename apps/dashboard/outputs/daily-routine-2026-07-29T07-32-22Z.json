@@ -1,0 +1,474 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "daily routine — 2026-07-29",
+        "description": "mixed tape — 40/82 top-100 green, top-50 median +0.4%; yesterday's 3 biggest losers (beat/ub/holo) all snap back to top-5 winners = second one-day-round-trip in memory-window."
+      },
+      "children": [
+        "winners_section",
+        "sep1",
+        "losers_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "tweets_section",
+        "sep4",
+        "paper_section",
+        "sep5",
+        "github_section",
+        "sep6",
+        "hn_section"
+      ]
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "24h",
+          "7d",
+          "Market Cap/Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "META",
+            "+66.8%",
+            "+81%",
+            "$6.5M/#187",
+            "BREAKOUT, TRENDING+UP, PUMP-RISK"
+          ],
+          [
+            "BTW",
+            "+32.4%",
+            "+62%",
+            "$20.6M/#152",
+            "BREAKOUT, PUMP-RISK"
+          ],
+          [
+            "UB",
+            "+22.2%",
+            "+33%",
+            "$17.7M/#117",
+            "BREAKOUT — 7-28 loser reverses"
+          ],
+          [
+            "BEAT",
+            "+20.4%",
+            "+37%",
+            "$45.2M/#62",
+            "BREAKOUT — 7-28 -24.2% reverses"
+          ],
+          [
+            "HOLO",
+            "+10.5%",
+            "",
+            "$10.4M/#408",
+            "MICROCAP — 7-28 loser reverses"
+          ],
+          [
+            "CARDS",
+            "+7.8%",
+            "",
+            "$2M/#557",
+            "MICROCAP"
+          ],
+          [
+            "DCR",
+            "+6.7%",
+            "",
+            "$3.7M/#155",
+            ""
+          ],
+          [
+            "H",
+            "+6.6%",
+            "",
+            "$3.4M/#207",
+            ""
+          ],
+          [
+            "JUP",
+            "+6.4%",
+            "",
+            "$23.6M/#88",
+            ""
+          ],
+          [
+            "LIT",
+            "+6.1%",
+            "",
+            "$41.7M/#92",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "24h",
+          "Market Cap/Rank"
+        ],
+        "rows": [
+          [
+            "XEC",
+            "-12.6%",
+            "$12.1M/#228"
+          ],
+          [
+            "Q",
+            "-9.4%",
+            "$4.2M/#283"
+          ],
+          [
+            "DEXE",
+            "-8.5%",
+            "$142.8M/#208"
+          ],
+          [
+            "ZRO",
+            "-8.5%",
+            "$31.1M/#132"
+          ],
+          [
+            "PUMP",
+            "-7.1%",
+            "$81.3M/#79"
+          ],
+          [
+            "NIGHT",
+            "-7.0%",
+            "$14.1M/#127"
+          ],
+          [
+            "B",
+            "-6.3%",
+            "$5.8M/#177"
+          ],
+          [
+            "BTSE",
+            "-6.0%",
+            "$7.1M/#214"
+          ],
+          [
+            "LDO",
+            "-5.6%",
+            "$30.5M/#121"
+          ],
+          [
+            "TAG",
+            "-5.6%",
+            "$3.8m/#209"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable1",
+        "notable2",
+        "notable3"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable1": {
+      "type": "Text",
+      "props": {
+        "text": "META: +66.8% at rank 187, 24h vol $6.5M > mcap $155M — trending endpoint confirms. BREAKOUT but PUMP-RISK gate (>150 rank + >30% 24h) triggers same fire."
+      }
+    },
+    "notable2": {
+      "type": "Text",
+      "props": {
+        "text": "BEAT/UB/HOLO one-day-round-trip = n=2 sub-class extends 7-28 BANK pattern (yesterday's -20% cluster → today's +10-22%)."
+      }
+    },
+    "notable3": {
+      "type": "Text",
+      "props": {
+        "text": "DEXE -8.5%/7d -40% + NIGHT -7%/7d -24% + B -6.3%/7d -29% — three of ten losers already in deep 7d downtrend."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_heading",
+        "tweets_note",
+        "tweets_crypto",
+        "tweets_ai",
+        "tweets_dev"
+      ]
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "tweets_note": {
+      "type": "Text",
+      "props": {
+        "text": "XAI x_search skipped — no api key confirmed; websearch fallback used",
+        "variant": "muted"
+      }
+    },
+    "tweets_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_crypto_heading",
+        "tweets_crypto_text"
+      ]
+    },
+    "tweets_crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "tweets_crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "btc $63,818 +1.04%, eth $1,916 +2.38%, total mcap $2.28T reversing yesterday's -1.6% to +0.4%. fear index 29 (cautious). BTC/ETH tweet volume at 12-month low despite tens of billions in ETF inflow — institutions > retail rail persists."
+      }
+    },
+    "tweets_ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_ai_heading",
+        "tweets_ai_text"
+      ]
+    },
+    "tweets_ai_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "tweets_ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "anthropic × physical intelligence rumor still churning (techcrunch 7-21). openai daybreak cybersec vs anthropic glasswing = new head-to-head. both filed confidential IPO (anthropic 6-1, openai 6-8). GPT-5.6 sol/terra/luna GA'd 7-9; grok 4.5 public 7-8."
+      }
+    },
+    "tweets_dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_dev_heading",
+        "tweets_dev_text"
+      ]
+    },
+    "tweets_dev_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "tweets_dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "musk announced full X codebase open-source pending security review 7-15. xAI published grok build coding agent (rust + terminal ui) under apache-2.0 same day."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_card"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper_card": {
+      "type": "StoryLink",
+      "props": {
+        "title": "JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents — canvas-native multi-agent primitive · extends [[embodied-agent-runtime]] rail n=2 — creative agents get a runtime with canvas as first-class surface (7-28 airi minecraft/factorio was n=1).",
+        "href": "https://arxiv.org/abs/2607.23588",
+        "source": "arXiv",
+        "score": "↑112"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "github_section": {
+      "type": "Alert",
+      "props": {
+        "title": "GitHub Issues",
+        "message": "GITHUB_ISSUES_OK — 5th consec clean day (anajuliabit scope)",
+        "type": "success"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn1",
+        "hn2",
+        "hn3",
+        "hn4",
+        "hn5"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "codex security — 473pts/145c. openai ships codex-security repo (github.com/openai/codex-security).",
+        "href": "https://news.ycombinator.com/item?id=49089755",
+        "source": "HN",
+        "score": "473pts"
+      }
+    },
+    "hn2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "substack writers need a website — 505pts/247c. distribution monoculture pushback.",
+        "href": "https://news.ycombinator.com/item?id=49086788",
+        "source": "HN",
+        "score": "505pts"
+      }
+    },
+    "hn3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kimi k3 architecture notes — 389pts/69c. raschka deep-dive on yesterday's 3T mxfp4 drop.",
+        "href": "https://news.ycombinator.com/item?id=49085698",
+        "source": "HN",
+        "score": "389pts"
+      }
+    },
+    "hn4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "hubble — 98pts/28c. notetaking app built agent-first (hubble.md).",
+        "href": "https://news.ycombinator.com/item?id=49091730",
+        "source": "HN",
+        "score": "98pts"
+      }
+    },
+    "hn5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "HNewhere userscript — 272pts/66c. one-tab HN thread + article view.",
+        "href": "https://news.ycombinator.com/item?id=49090607",
+        "source": "HN",
+        "score": "272pts"
+      }
+    }
+  }
+}

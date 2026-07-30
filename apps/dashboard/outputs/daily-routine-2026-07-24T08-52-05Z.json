@@ -1,0 +1,552 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-24"
+      },
+      "children": [
+        "heading_market",
+        "sep1",
+        "stack_market",
+        "sep2",
+        "heading_winners",
+        "table_winners",
+        "sep3",
+        "heading_losers",
+        "table_losers",
+        "text_dexe_note",
+        "sep4",
+        "heading_tweets",
+        "stack_tweets",
+        "sep5",
+        "heading_paper",
+        "storylink_arex",
+        "sep6",
+        "heading_github",
+        "text_github",
+        "sep7",
+        "heading_hn",
+        "stack_hn"
+      ]
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Overview",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_market_status",
+        "progress_filter",
+        "stat_btc",
+        "stat_eth",
+        "stat_sol",
+        "stat_bnb",
+        "stat_hype",
+        "text_market_notes"
+      ]
+    },
+    "text_market_status": {
+      "type": "Text",
+      "props": {
+        "text": "tilted red — 20/100 top-100 green, top-50 median -0.7%",
+        "variant": "lead"
+      }
+    },
+    "progress_filter": {
+      "type": "Progress",
+      "props": {
+        "value": 186,
+        "max": 250,
+        "label": "Filter kept"
+      }
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$65,396",
+        "delta": "-0.4%",
+        "trend": "down"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,890",
+        "delta": "-1.5%",
+        "trend": "down"
+      }
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$75.84",
+        "delta": "-1.9%",
+        "trend": "down"
+      }
+    },
+    "stat_bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$568",
+        "delta": "-0.2%",
+        "trend": "down"
+      }
+    },
+    "stat_hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$58.95",
+        "delta": "-0.7%",
+        "trend": "down"
+      }
+    },
+    "text_market_notes": {
+      "type": "Text",
+      "props": {
+        "text": "BTC holds $65.9k reclaim (d4). HYPE 7d -0.8%.",
+        "variant": "caption"
+      }
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "24h",
+          "7d",
+          "Volume",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "BEAT (Audiera)",
+            "+28.3%",
+            "+35.7%",
+            "$21M",
+            "#63",
+            ""
+          ],
+          [
+            "2",
+            "BANK (Lorenzo)",
+            "+12.0%",
+            "+329.6%",
+            "$171M",
+            "#224",
+            "BREAKOUT-continuation"
+          ],
+          [
+            "3",
+            "US (Talus)",
+            "+10.9%",
+            "+17.1%",
+            "$7.6M",
+            "#202",
+            ""
+          ],
+          [
+            "4",
+            "BTW (Bitway)",
+            "+5.2%",
+            "+19.2%",
+            "$7.3M",
+            "#188",
+            ""
+          ],
+          [
+            "5",
+            "INJ",
+            "+5.1%",
+            "+10.5%",
+            "$72M",
+            "#97",
+            ""
+          ],
+          [
+            "6",
+            "VSN",
+            "+4.9%",
+            "+16.9%",
+            "$3.4M",
+            "#199",
+            ""
+          ],
+          [
+            "7",
+            "1INCH",
+            "+4.3%",
+            "+19.7%",
+            "$13M",
+            "#229",
+            ""
+          ],
+          [
+            "8",
+            "KAITO",
+            "+4.2%",
+            "+16.9%",
+            "$73M",
+            "#146",
+            ""
+          ],
+          [
+            "9",
+            "FIGR_HELOC",
+            "+3.7%",
+            "+1.9%",
+            "$171M",
+            "#9",
+            "MAJOR"
+          ],
+          [
+            "10",
+            "币安人生",
+            "+2.4%",
+            "-9.3%",
+            "$34M",
+            "#87",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "24h",
+          "7d",
+          "Volume",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "STX (Stacks)",
+            "-12.4%",
+            "-10.8%",
+            "$24M",
+            "#137",
+            ""
+          ],
+          [
+            "2",
+            "B (BUILDon)",
+            "-12.1%",
+            "+62.3%",
+            "",
+            "",
+            "d6 unwind extends — 3-day slide -32% off peak after 3-day sustain"
+          ],
+          [
+            "3",
+            "VELVET",
+            "-11.7%",
+            "-13.2%",
+            "$23M",
+            "#168",
+            ""
+          ],
+          [
+            "4",
+            "PI",
+            "-9.2%",
+            "+6.5%",
+            "$15M",
+            "#70",
+            ""
+          ],
+          [
+            "5",
+            "UB",
+            "-9.0%",
+            "+32.8%",
+            "",
+            "",
+            "d4 unwind — one-day-breakout exception-set holds at n=4 max, unwinds day-4 same as BUILDon"
+          ],
+          [
+            "6",
+            "SKY",
+            "-7.9%",
+            "-4.6%",
+            "$19M",
+            "#56",
+            ""
+          ],
+          [
+            "7",
+            "WLFI",
+            "-6.8%",
+            "-0.7%",
+            "$115M",
+            "#44",
+            ""
+          ],
+          [
+            "8",
+            "KITE",
+            "-6.4%",
+            "-8.9%",
+            "$144M",
+            "#139",
+            ""
+          ],
+          [
+            "9",
+            "EIGEN",
+            "-6.2%",
+            "-5.3%",
+            "$21M",
+            "#185",
+            ""
+          ],
+          [
+            "10",
+            "LIT",
+            "-5.4%",
+            "-1.9%",
+            "$28M",
+            "#98",
+            ""
+          ]
+        ]
+      }
+    },
+    "text_dexe_note": {
+      "type": "Text",
+      "props": {
+        "text": "DEXE -38.7% / 7d -93.9% excluded d3 as continued redenom-outlier — matches 7-22 + 7-23 filter, no news corroborates.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h3_crypto",
+        "text_crypto",
+        "h3_ai",
+        "text_ai",
+        "h3_dev",
+        "text_dev"
+      ]
+    },
+    "h3_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "text_crypto": {
+      "type": "Text",
+      "props": {
+        "text": "Market -1.3% to $2.3T, DeFi +9.8%, Fear&Greed 28 = deepening caution. Argentina drafting bill for funds to hold BTC + use crypto as loan collateral. BNY Mellon tokenized US Treasuries late-2026 for 24/7 settlement.",
+        "variant": "body"
+      }
+    },
+    "h3_ai": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "text_ai": {
+      "type": "Text",
+      "props": {
+        "text": "Kimi K3 (2.8T MoE / 1M-ctx / native vision) shipped 7-16 already, not 7-27 — small-MoE-frontier-close rail hits earlier. Gemini 3.6 Flash + 3.5 Flash Lite shipped 7-21.",
+        "variant": "body"
+      }
+    },
+    "h3_dev": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "text_dev": {
+      "type": "Text",
+      "props": {
+        "text": "OpenCode 160K+ stars / 7.5M MAU = top-of-market open coding-agent, context for western-open-weights-counterpunch rail.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "storylink_arex": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
+        "href": "https://arxiv.org/abs/2607.21461",
+        "source": "arXiv",
+        "score": "49↑"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_github": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "text_github": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues 24h (repo: anajuliabit).",
+        "variant": "body"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "stack_hn": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn1",
+        "hn2",
+        "hn3",
+        "hn4"
+      ]
+    },
+    "hn1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Founders urge US govt not to shut off Chinese open-weight AI",
+        "href": "https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992",
+        "source": "Politico",
+        "score": "912 pts"
+      }
+    },
+    "hn2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OpenAI's accidental attack against Hugging Face",
+        "href": "https://simonwillison.net/2026/Jul/22/openai-cyberattack/",
+        "source": "Simon Willison",
+        "score": "507 pts"
+      }
+    },
+    "hn3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Echo — Fable-level results at 1/3 cost using open-weight models",
+        "href": "https://news.ycombinator.com/item?id=49026810",
+        "source": "Hacker News",
+        "score": "374 pts"
+      }
+    },
+    "hn4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Why Software Factories Fail: harness engineering is not enough",
+        "href": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md",
+        "source": "GitHub / humanlayer",
+        "score": "304 pts"
+      }
+    }
+  }
+}

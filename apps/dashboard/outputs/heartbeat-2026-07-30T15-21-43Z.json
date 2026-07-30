@@ -1,0 +1,156 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat: Scheduler"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "section_affected",
+        "sep2",
+        "section_recovery",
+        "sep3",
+        "status_badge"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "07:00Z tick missed on 7-30",
+        "message": "morning-brief + daily-routine + thought-review all stale at 7-29 last-success (8h+ past scheduled). 09:04Z heartbeat flagged pending, confirmed dropped this tick."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_affected": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_affected",
+        "stack_skills"
+      ]
+    },
+    "heading_affected": {
+      "type": "Heading",
+      "props": {
+        "text": "Affected Skills",
+        "level": "h3"
+      }
+    },
+    "stack_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_morning_brief",
+        "badge_daily_routine",
+        "badge_thought_review"
+      ]
+    },
+    "badge_morning_brief": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief",
+        "variant": "outline"
+      }
+    },
+    "badge_daily_routine": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "outline"
+      }
+    },
+    "badge_thought_review": {
+      "type": "Badge",
+      "props": {
+        "text": "thought-review",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_recovery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_recovery",
+        "text_recovery",
+        "table_recovery"
+      ]
+    },
+    "heading_recovery": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery Status",
+        "level": "h3"
+      }
+    },
+    "text_recovery": {
+      "type": "Text",
+      "props": {
+        "text": "Later slots recovering with 40-60min lag",
+        "variant": "body"
+      }
+    },
+    "table_recovery": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Scheduled",
+          "Fired",
+          "Lag"
+        ],
+        "rows": [
+          [
+            "btc-levels",
+            "08:15Z",
+            "09:15Z",
+            "1h 0m"
+          ],
+          [
+            "token-alert",
+            "12:00Z",
+            "12:56Z",
+            "56m"
+          ],
+          [
+            "heartbeat",
+            "14:00Z",
+            "15:16Z",
+            "1h 16m"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Fleet dispatch degraded, not down",
+        "variant": "secondary"
+      }
+    }
+  }
+}

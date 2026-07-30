@@ -1,0 +1,278 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Unlock Monitor — week of July 28, 2026"
+      },
+      "children": [
+        "alert_headline",
+        "sep1",
+        "stack_content",
+        "sep2",
+        "section_supply",
+        "sep3",
+        "section_sources"
+      ]
+    },
+    "alert_headline": {
+      "type": "Alert",
+      "props": {
+        "title": "This week's headline",
+        "message": "FTX creditor distribution lands Wed Jul 31, $900M court-ordered liquidation under legal timeline—no strategic discretion, immediate forced selling.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_forced",
+        "sep_forced_strain",
+        "section_strain",
+        "sep_strain_trivial",
+        "section_trivial"
+      ]
+    },
+    "section_forced": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_forced",
+        "item_ftx"
+      ]
+    },
+    "heading_forced": {
+      "type": "Heading",
+      "props": {
+        "text": "FORCED",
+        "level": "h3"
+      }
+    },
+    "item_ftx": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ftx_title",
+        "ftx_details"
+      ]
+    },
+    "ftx_title": {
+      "type": "Heading",
+      "props": {
+        "text": "FTX",
+        "level": "h4"
+      }
+    },
+    "ftx_details": {
+      "type": "Text",
+      "props": {
+        "text": "Wed Jul 31 — $900M creditor batch distribution, court-ordered with legal timeline constraints",
+        "variant": "body"
+      }
+    },
+    "sep_forced_strain": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_strain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_strain",
+        "item_hopr"
+      ]
+    },
+    "heading_strain": {
+      "type": "Heading",
+      "props": {
+        "text": "STRAIN (1.0×–2.4× daily vol)",
+        "level": "h3"
+      }
+    },
+    "item_hopr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hopr_title",
+        "hopr_details"
+      ]
+    },
+    "hopr_title": {
+      "type": "Heading",
+      "props": {
+        "text": "HOPR",
+        "level": "h4"
+      }
+    },
+    "hopr_details": {
+      "type": "Text",
+      "props": {
+        "text": "Sun Jul 27 — 10M tokens (~$134K) · 1.94× vol · cliff",
+        "variant": "body"
+      }
+    },
+    "sep_strain_trivial": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_trivial": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_trivial",
+        "item_ygg",
+        "item_ron"
+      ]
+    },
+    "heading_trivial": {
+      "type": "Heading",
+      "props": {
+        "text": "TRIVIAL (< 0.3× daily vol)",
+        "level": "h3"
+      }
+    },
+    "item_ygg": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ygg_title",
+        "ygg_details"
+      ]
+    },
+    "ygg_title": {
+      "type": "Heading",
+      "props": {
+        "text": "YGG",
+        "level": "h4"
+      }
+    },
+    "ygg_details": {
+      "type": "Text",
+      "props": {
+        "text": "Sun Jul 27 — 9.81M tokens (~$179K) · ecosystem",
+        "variant": "body"
+      }
+    },
+    "item_ron": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ron_title",
+        "ron_details"
+      ]
+    },
+    "ron_title": {
+      "type": "Heading",
+      "props": {
+        "text": "RON",
+        "level": "h4"
+      }
+    },
+    "ron_details": {
+      "type": "Text",
+      "props": {
+        "text": "Sun Jul 27 — 21.14M tokens · linear vesting",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_supply": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_supply",
+        "supply_text"
+      ]
+    },
+    "heading_supply": {
+      "type": "Heading",
+      "props": {
+        "text": "Supply read",
+        "level": "h3"
+      }
+    },
+    "supply_text": {
+      "type": "Text",
+      "props": {
+        "text": "Week is supply-quiet at detail level—HOPR/YGG/RON below absorption noise (<0.5× vol each). FTX $900M forced distribution Wed is the headline watch (legal liquidation mechanism, not vesting cliff), likely absorbed into volatile cefi trading. Market in broad recovery (100/100 breadth 7-26), unlikely derailed by supply. No cliff-weakness patterns detected.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_sources",
+        "sources_text"
+      ]
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "tokenomist=partial, defillama=fail(403), cryptorank=ok, dropstab=no_data, coingecko=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

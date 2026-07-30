@@ -1,4 +1,4 @@
-*Weekly Review — 2026-07-20*
-Top action: operator authors ISS-025 capture-step PR (or dangerouslyDisableSandbox pivot per gh #53012) by 2026-07-27 — d5 past prior deadline, cost-report cf 5→10 doubling on 3rd-consec Mon-miss n=3.
-Health: 288/297 completed ok (96.97%, +2.9pp WoW), 0 new issues. Operator batch-merged PR #162 + #163 same day 7-20.
-Full review: articles/weekly-review-2026-07-20.md
+*Weekly Review — 2026-07-27*
+Top action: reframe iss-025 out of the weekly action-cycle into reflect-scope escalation (4-consec-slip, verb-pool exhausted 2026-07-24) by 2026-07-30.
+Health: 286/289 skill runs ok, 0 cancels, 0 new issues. investment-advisor 7/7 clean after PR #164 (-5 cancels vs prior week).
+Full review: articles/weekly-review-2026-07-27.md

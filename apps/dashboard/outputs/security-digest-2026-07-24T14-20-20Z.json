@@ -1,0 +1,712 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-24"
+      },
+      "children": [
+        "verdict",
+        "sep1",
+        "patch-today-section",
+        "sep2",
+        "patch-week-section",
+        "sep3",
+        "monitor-section"
+      ]
+    },
+    "verdict": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 3 npm-malware to check-and-purge, 5 to schedule this week, 3 to monitor. Sources: KEV, GH Advisory, EPSS",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch-today-title",
+        "patch-today-alert",
+        "malware-1",
+        "malware-2",
+        "malware-3"
+      ]
+    },
+    "patch-today-title": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch-today-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "npm-malware wave",
+        "message": "45 typosquats/attack-packages published in 24h — largest single-day batch this quarter",
+        "type": "warning"
+      }
+    },
+    "malware-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "malware-1-link",
+        "malware-1-info",
+        "malware-1-desc",
+        "malware-1-action"
+      ]
+    },
+    "malware-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-f246-8cf4-26v7 — fs-extra-core (npm)",
+        "href": "https://github.com/advisories/GHSA-f246-8cf4-26v7"
+      }
+    },
+    "malware-1-info": {
+      "type": "Text",
+      "props": {
+        "text": "type=malware · typosquat of `fs-extra` (~30M weekly downloads)",
+        "variant": "body"
+      }
+    },
+    "malware-1-desc": {
+      "type": "Badge",
+      "props": {
+        "text": "Highest-blast-radius typosquat in wave",
+        "variant": "destructive"
+      }
+    },
+    "malware-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ purge fs-extra-core from lockfiles today; rotate creds for any env that installed it.",
+        "variant": "body"
+      }
+    },
+    "malware-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "malware-2-link",
+        "malware-2-info",
+        "malware-2-desc",
+        "malware-2-action"
+      ]
+    },
+    "malware-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-p53q-mf26-4h26 — vue-demi-fix (npm)",
+        "href": "https://github.com/advisories/GHSA-p53q-mf26-4h26"
+      }
+    },
+    "malware-2-info": {
+      "type": "Text",
+      "props": {
+        "text": "type=malware · typosquat of `vue-demi`",
+        "variant": "body"
+      }
+    },
+    "malware-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Vue ecosystem targeted.",
+        "variant": "caption"
+      }
+    },
+    "malware-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ purge vue-demi-fix from lockfiles; audit Vue projects.",
+        "variant": "body"
+      }
+    },
+    "malware-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "malware-3-link",
+        "malware-3-info",
+        "malware-3-desc",
+        "malware-3-action"
+      ]
+    },
+    "malware-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-f99h-9jhg-jrxw — fastify-bundler (npm)",
+        "href": "https://github.com/advisories/GHSA-f99h-9jhg-jrxw"
+      }
+    },
+    "malware-3-info": {
+      "type": "Text",
+      "props": {
+        "text": "type=malware · Fastify-adjacent typosquat",
+        "variant": "body"
+      }
+    },
+    "malware-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fastify-adjacent typosquat.",
+        "variant": "caption"
+      }
+    },
+    "malware-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ purge fastify-bundler; audit Fastify projects.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch-week-title",
+        "cve-1",
+        "cve-2",
+        "cve-3",
+        "cve-4",
+        "cve-5"
+      ]
+    },
+    "patch-week-title": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "cve-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-1-header",
+        "cve-1-desc",
+        "cve-1-context",
+        "cve-1-action"
+      ]
+    },
+    "cve-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-1-link",
+        "cve-1-pkg",
+        "cve-1-cvss",
+        "cve-1-epss"
+      ]
+    },
+    "cve-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-59822",
+        "href": "https://github.com/advisories/GHSA-7488-6r32-c95q"
+      }
+    },
+    "cve-1-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "litellm (pip)",
+        "variant": "secondary"
+      }
+    },
+    "cve-1-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "8.8"
+      }
+    },
+    "cve-1-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.002"
+      }
+    },
+    "cve-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "MCP auth bypass via OAuth2 passthrough fallback.",
+        "variant": "body"
+      }
+    },
+    "cve-1-context": {
+      "type": "Text",
+      "props": {
+        "text": "AI-framework attack-surface signal n=2 — extends Langflow RCE KEV (7-21) rail.",
+        "variant": "caption"
+      }
+    },
+    "cve-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade litellm to ≥1.84.0.",
+        "variant": "body"
+      }
+    },
+    "cve-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-2-header",
+        "cve-2-desc",
+        "cve-2-action"
+      ]
+    },
+    "cve-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-2-link",
+        "cve-2-pkg",
+        "cve-2-cvss"
+      ]
+    },
+    "cve-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-64645",
+        "href": "https://github.com/advisories/GHSA-p9j2-gv94-2wf4"
+      }
+    },
+    "cve-2-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "next (npm)",
+        "variant": "secondary"
+      }
+    },
+    "cve-2-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "8.3"
+      }
+    },
+    "cve-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "SSRF in rewrites via attacker-controlled destination hostname.",
+        "variant": "body"
+      }
+    },
+    "cve-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade next to ≥15.5.21 or ≥16.2.11.",
+        "variant": "body"
+      }
+    },
+    "cve-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-3-header",
+        "cve-3-desc",
+        "cve-3-action"
+      ]
+    },
+    "cve-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-3-link",
+        "cve-3-pkg",
+        "cve-3-cvss"
+      ]
+    },
+    "cve-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-55685",
+        "href": "https://github.com/advisories/GHSA-chx6-hx7r-mcp5"
+      }
+    },
+    "cve-3-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "react-router (npm)",
+        "variant": "secondary"
+      }
+    },
+    "cve-3-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "8.7"
+      }
+    },
+    "cve-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauthenticated DoS via inefficient route matching.",
+        "variant": "body"
+      }
+    },
+    "cve-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade react-router to ≥7.18.0.",
+        "variant": "body"
+      }
+    },
+    "cve-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-4-header",
+        "cve-4-desc",
+        "cve-4-action"
+      ]
+    },
+    "cve-4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-4-link",
+        "cve-4-pkg",
+        "cve-4-cvss"
+      ]
+    },
+    "cve-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-64649",
+        "href": "https://github.com/advisories/GHSA-89xv-2m56-2m9x"
+      }
+    },
+    "cve-4-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "next (npm)",
+        "variant": "secondary"
+      }
+    },
+    "cve-4-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "8.3"
+      }
+    },
+    "cve-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "SSRF in Server Actions on custom servers.",
+        "variant": "body"
+      }
+    },
+    "cve-4-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade next to ≥15.5.21 or ≥16.2.11.",
+        "variant": "body"
+      }
+    },
+    "cve-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-5-header",
+        "cve-5-desc",
+        "cve-5-action"
+      ]
+    },
+    "cve-5-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-5-link",
+        "cve-5-pkg",
+        "cve-5-cvss"
+      ]
+    },
+    "cve-5-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-54673",
+        "href": "https://github.com/advisories/GHSA-p2f4-r6v6-j797"
+      }
+    },
+    "cve-5-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "builder-util-runtime / electron-updater (npm)",
+        "variant": "secondary"
+      }
+    },
+    "cve-5-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "8.2"
+      }
+    },
+    "cve-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-origin redirect leaks `PRIVATE-TOKEN` + mixed-case `Authorization` headers.",
+        "variant": "body"
+      }
+    },
+    "cve-5-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade builder-util-runtime to ≥9.7.0.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "monitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "monitor-title",
+        "monitor-1",
+        "monitor-2",
+        "monitor-3"
+      ]
+    },
+    "monitor-title": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-1-link",
+        "monitor-1-badge",
+        "monitor-1-desc",
+        "monitor-1-detail",
+        "monitor-1-action"
+      ]
+    },
+    "monitor-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "n8n 24-CVE mass-disclose",
+        "href": "https://github.com/advisories?query=n8n"
+      }
+    },
+    "monitor-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "npm · single-project-mass-disclose",
+        "variant": "destructive"
+      }
+    },
+    "monitor-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Extends n=2 → n=3 (post-Pillow 7-20 / Gitea 7-21)",
+        "variant": "body"
+      }
+    },
+    "monitor-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Auth bypass, prototype pollution, credential leak, sandbox escape, Git-node RCE across 24 advisories in ~2h window.",
+        "variant": "caption"
+      }
+    },
+    "monitor-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ if running n8n, upgrade to ≥1.123.67 / ≥2.32.1 / ≥2.31.5.",
+        "variant": "body"
+      }
+    },
+    "monitor-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-2-header",
+        "monitor-2-desc",
+        "monitor-2-action"
+      ]
+    },
+    "monitor-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-2-link",
+        "monitor-2-pkg",
+        "monitor-2-cvss"
+      ]
+    },
+    "monitor-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-4w2j-m93h-cj5j",
+        "href": "https://github.com/advisories/GHSA-4w2j-m93h-cj5j"
+      }
+    },
+    "monitor-2-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "quinn-proto (rust/crates.io)",
+        "variant": "secondary"
+      }
+    },
+    "monitor-2-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.5"
+      }
+    },
+    "monitor-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Remote memory exhaustion via unbounded out-of-order stream reassembly.",
+        "variant": "body"
+      }
+    },
+    "monitor-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade quinn-proto to ≥0.11.15.",
+        "variant": "body"
+      }
+    },
+    "monitor-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-3-header",
+        "monitor-3-desc",
+        "monitor-3-action"
+      ]
+    },
+    "monitor-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-3-link",
+        "monitor-3-pkg",
+        "monitor-3-cvss"
+      ]
+    },
+    "monitor-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-59935 + CVE-2026-59936",
+        "href": "https://github.com/advisories/GHSA-g867-7843-wf8q"
+      }
+    },
+    "monitor-3-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "pypdf (pip)",
+        "variant": "secondary"
+      }
+    },
+    "monitor-3-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "8.7"
+      }
+    },
+    "monitor-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Infinite loop on malformed inline images (ASCII85/ASCIIHex).",
+        "variant": "body"
+      }
+    },
+    "monitor-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade pypdf to ≥6.14.2 if processing untrusted PDFs.",
+        "variant": "body"
+      }
+    }
+  }
+}

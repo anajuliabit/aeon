@@ -1,0 +1,471 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-07-30"
+      },
+      "children": [
+        "header-section",
+        "sep-1",
+        "patch-today-section",
+        "sep-2",
+        "patch-week-section"
+      ]
+    },
+    "header-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict-text"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 1 actively exploited, 5 to schedule, 0 to monitor · Sources: KEV, GH Advisory, EPSS",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "today-heading",
+        "today-items"
+      ]
+    },
+    "today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "today-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "cve-20316",
+        "malware-batch",
+        "ghsa-logging"
+      ]
+    },
+    "cve-20316": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-20316-link",
+        "cve-20316-meta",
+        "cve-20316-desc",
+        "cve-20316-action"
+      ]
+    },
+    "cve-20316-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-20316 — Cisco Secure FMC",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-20316"
+      }
+    },
+    "cve-20316-meta": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-07-29 · EPSS 0.008 · CISA due 2026-08-01",
+        "variant": "caption"
+      }
+    },
+    "cve-20316-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Hardcoded password lets unauth remote attacker log in via low-priv account, read sensitive data. Exploited per CISA."
+      }
+    },
+    "cve-20316-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Patch Cisco Secure Firewall Management Center per vendor advisory today."
+      }
+    },
+    "malware-batch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "malware-title",
+        "malware-packages",
+        "malware-desc",
+        "malware-action"
+      ]
+    },
+    "malware-title": {
+      "type": "Heading",
+      "props": {
+        "text": "npm+pip malware batch",
+        "level": "h3"
+      }
+    },
+    "malware-packages": {
+      "type": "Text",
+      "props": {
+        "text": "@ai-agent-node/* 3-pack · @ai-plus/de-agent 2-pack · @zannstore/baileys 17-version · litespeed-cache · polymarket-risk-manager · poly-kelly · phabricator-client (pip)",
+        "variant": "caption"
+      }
+    },
+    "malware-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Cred-stealer / typosquat / real-plugin-impersonation classes; @zannstore/baileys advises full-host-compromise on install."
+      }
+    },
+    "malware-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Rotate creds if any installed; audit npm+pip installs since 2026-07-29."
+      }
+    },
+    "ghsa-logging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "logging-link",
+        "logging-meta",
+        "logging-desc",
+        "logging-action"
+      ]
+    },
+    "logging-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-mjqf-28ph-426h — kube-logging/logging-operator (Go)",
+        "href": "https://github.com/advisories/GHSA-mjqf-28ph-426h"
+      }
+    },
+    "logging-meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.9 · EPSS 0.004 · public writeup",
+        "variant": "caption"
+      }
+    },
+    "logging-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fluentd config injection RCE via unescaped Flow CRD `record_transformer.records`."
+      }
+    },
+    "logging-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade logging-operator to ≥ 0.0.0-20260608145523 today."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "week-heading",
+        "week-items"
+      ]
+    },
+    "week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "week-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "prebid-item",
+        "flyto-item",
+        "agentcore-item",
+        "proot-item",
+        "wings-item"
+      ]
+    },
+    "prebid-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "prebid-link",
+        "prebid-meta",
+        "prebid-desc",
+        "prebid-action"
+      ]
+    },
+    "prebid-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-4p3g-4hcj-wpvx — prebid-server (Go)",
+        "href": "https://github.com/advisories/GHSA-4p3g-4hcj-wpvx"
+      }
+    },
+    "prebid-meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 10.0 · EPSS 0.004",
+        "variant": "caption"
+      }
+    },
+    "prebid-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Bidder-adapter SSRF exposes host env / internal endpoints via unvalidated URL interpolation."
+      }
+    },
+    "prebid-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Schedule upgrade: prebid-server → ≥ 4.4.0."
+      }
+    },
+    "flyto-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "flyto-links",
+        "flyto-meta",
+        "flyto-desc",
+        "flyto-action"
+      ]
+    },
+    "flyto-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "flyto-link-1",
+        "flyto-plus-1",
+        "flyto-text-more"
+      ]
+    },
+    "flyto-link-1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-2956-977x-2w3r",
+        "href": "https://github.com/advisories/GHSA-2956-977x-2w3r"
+      }
+    },
+    "flyto-plus-1": {
+      "type": "Text",
+      "props": {
+        "text": "+",
+        "variant": "body"
+      }
+    },
+    "flyto-text-more": {
+      "type": "Text",
+      "props": {
+        "text": "5 more — flyto-core (pip) 6-CVE mass-disclose",
+        "variant": "body"
+      }
+    },
+    "flyto-meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 8.5–10.0",
+        "variant": "caption"
+      }
+    },
+    "flyto-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Arbitrary file write + unauth SSRF with internal-key exfil + LLM/API-key leak + env-var readout — all one patch."
+      }
+    },
+    "flyto-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Schedule upgrade: flyto-core → ≥ 2.26.7."
+      }
+    },
+    "agentcore-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "agentcore-link",
+        "agentcore-meta",
+        "agentcore-desc",
+        "agentcore-action"
+      ]
+    },
+    "agentcore-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-m4x6-gwgp-4pm7 — @aws/agentcore (npm)",
+        "href": "https://github.com/advisories/GHSA-m4x6-gwgp-4pm7"
+      }
+    },
+    "agentcore-meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.0 · EPSS 0.003",
+        "variant": "caption"
+      }
+    },
+    "agentcore-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Bedrock AgentCore CLI code injection via triple-quote escape in `collaborationInstruction`."
+      }
+    },
+    "agentcore-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Schedule upgrade: @aws/agentcore → ≥ 0.14.2."
+      }
+    },
+    "proot-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "proot-links",
+        "proot-meta",
+        "proot-desc",
+        "proot-action"
+      ]
+    },
+    "proot-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "proot-link-1",
+        "proot-plus",
+        "proot-link-2"
+      ]
+    },
+    "proot-link-1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-9xq3-3fqg-4vg7",
+        "href": "https://github.com/advisories/GHSA-9xq3-3fqg-4vg7"
+      }
+    },
+    "proot-plus": {
+      "type": "Text",
+      "props": {
+        "text": "+",
+        "variant": "body"
+      }
+    },
+    "proot-link-2": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-7h3g-4w2f-fj2f",
+        "href": "https://github.com/advisories/GHSA-7h3g-4w2f-fj2f"
+      }
+    },
+    "proot-meta": {
+      "type": "Text",
+      "props": {
+        "text": "proot-distro (pip) 2-CVE · CVSS 8.2/8.2",
+        "variant": "caption"
+      }
+    },
+    "proot-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Symlink escape (host file write) + container isolation bypass via crafted tar/restore archives."
+      }
+    },
+    "proot-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Schedule upgrade: proot-distro → ≥ 5.1.6."
+      }
+    },
+    "wings-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "wings-link",
+        "wings-meta",
+        "wings-desc",
+        "wings-action"
+      ]
+    },
+    "wings-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-8r6w-3qq5-4p4r — pterodactyl/wings (Go)",
+        "href": "https://github.com/advisories/GHSA-8r6w-3qq5-4p4r"
+      }
+    },
+    "wings-meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 8.1 · EPSS 0.004",
+        "variant": "caption"
+      }
+    },
+    "wings-desc": {
+      "type": "Text",
+      "props": {
+        "text": "JWT scoping bypass lets subuser upload files without explicit `file.create` grant."
+      }
+    },
+    "wings-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Schedule upgrade: pterodactyl/wings → ≥ 1.12.2."
+      }
+    }
+  }
+}

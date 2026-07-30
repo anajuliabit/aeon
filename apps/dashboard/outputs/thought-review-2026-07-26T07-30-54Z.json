@@ -1,0 +1,64 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Thought Review"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_period",
+        "stat_captures",
+        "text_status",
+        "sep_1",
+        "alert_refresh"
+      ]
+    },
+    "heading_period": {
+      "type": "Heading",
+      "props": {
+        "text": "Last 24h",
+        "level": "h3"
+      }
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_refresh": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md needs refresh",
+        "message": "Last reviewed 52 days ago — worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}

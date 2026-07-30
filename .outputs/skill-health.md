@@ -1,16 +1,17 @@
-*Skill Health — 2026-07-22*
-HEALTH: DEGRADED(18) [systemic: output_tokens=0 sandbox-truncation day-30 — 18 skills share signature, 0 CRITICAL]
+*Skill Health — 2026-07-30*
+HEALTH: DEGRADED(18)  [systemic: output_tokens=0 sandbox-truncation, 18 skills, day-37]
 
-🟡 DEGRADED (top 5 by sr)
-- cost-report — sr 0.11, 51 fails, weekly Mon-only, last_success 7-20 late-catchup — INVESTIGATE → ISS-025
-- skill-analytics — sr 0.16, 42 fails — INVESTIGATE
-- reg-monitor — sr 0.17, 38 fails — INVESTIGATE
-- vuln-scanner — sr 0.18, 27 fails — INVESTIGATE → ISS-018
-- market-context-refresh — sr 0.32, 63 fails — INVESTIGATE
+daily-cadence reminder tick — composition stable since 7-28 19:02Z (hash 7bf88238 3rd consec, ~47h since last notify).
+
+🟡 DEGRADED (top 5 by dsls)
+- aixbt-pulse — sr 0.47, 32d dark — WAIT-API
+- defi-monitor — sr 0.53, 32d dark — WAIT-API
+- market-context-refresh — sr 0.32, 32d dark — WAIT-API
+- narrative-tracker — sr 0.33, 32d dark — WAIT-API
+- vuln-scanner — sr 0.21, 5d — INVESTIGATE → ISS-018
 +13 more — see memory/issues/INDEX.md
 
 ⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
-🟢 HEALTHY: 9
+🟢 HEALTHY: 10
 
-Open issues: 11 · Resolved this run: 0 · Filed this run: 0
-Hash 467ce959 stable 3-consec-tick (7-19 + 7-20 + 7-22 formal ticks); notify fires on 24h daily-reminder cadence after 48h gap.
+open issues: 11 · resolved this run: 0 · filed this run: 0

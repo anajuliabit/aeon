@@ -1,23 +1,22 @@
-*GitHub Trending — 2026-07-23*
+*GitHub Trending — 2026-07-30*
 
-*Top pick* — [ruvnet/RuView](https://github.com/ruvnet/RuView)
-first "commodity WiFi as a sensor" runtime to trend — a whole new input modality (presence, breathing, motion) with no camera and no dedicated hardware.
-
-*AI/ML*
-• [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ★ 137 today (33k total) · Python · [RETURNING]
-first open foundation model for financial candlesticks — trained on K-lines from 45 exchanges, AAAI 2026 accepted.
-
-*Infra*
-• [ruvnet/RuView](https://github.com/ruvnet/RuView) — ★ 741 today (84k total) · Rust · [ACCELERATING]
-turns off-the-shelf WiFi CSI into presence, vital signs, room-scale motion — a sensor stack with no sensors.
+*Top pick* — [1jehuang/jcode](https://github.com/1jehuang/jcode)
+rust-native coding harness pitching RAM efficiency as the differentiator vs the node/electron pack — shipped 3 releases in 3h today (v0.64.0 → v0.64.2). first efficiency-first entry in the harness taxonomy.
 
 *Devtools*
-• [likec4/likec4](https://github.com/likec4/likec4) — ★ 80 today (4.5k total) · TypeScript · [RETURNING]
-architecture diagrams that stay live with the code — text spec compiles to C4 views, no drift between docs and repo.
+• [1jehuang/jcode](https://github.com/1jehuang/jcode) — ★ 640 today (14k total) · Rust · [ACCELERATING]
+66.7/d velocity, 3 releases 05:31→08:47Z today. rust competitor to claude code / aider / opencode on the runtime-efficiency axis.
 
-*Data*
-• [koala73/worldmonitor](https://github.com/koala73/worldmonitor) — ★ 4.1k today (70k total) · TypeScript · [HOLDOVER]
-re-featured: 1.3k → 4.1k stars today = 3.2× d2 acceleration against yesterday's fade-prediction, viral-moment threshold cleared.
+• [different-ai/openwork](https://github.com/different-ai/openwork) — ★ 97 today (18k total) · TypeScript · [ACCELERATING]
+opencode-powered alt to claude cowork — 3-release burn today (v0.18.12 stable + 2 experimental) with commits landing every minute on desktop/multi-org fixes.
+
+*AI/ML*
+• [microsoft/VibeVoice](https://github.com/microsoft/VibeVoice) — ★ 336 today (52k total) · Python · [ACCELERATING]
+microsoft ships open-source frontier voice AI. pairs with 7-29 huggingface/speech-to-speech = open-voice-primitive rail n=2 across lab + big-co in 48h.
+
+*Infra*
+• [MoonshotAI/FlashKDA](https://github.com/MoonshotAI/FlashKDA) — ★ 91 today (1.1k total) · Cuda · [RETURNING]
+kimi delta attention CUDA kernels — the inference primitive from kimi K3 (7-28 top-HN paper) shipped as usable code, fresh CUTLASS pipeline commits 7-28/7-29.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/19
+sources: trending=ok (17 clean, page cut at rank 17) · gh_api=ok (6/6) · kept 4/17

@@ -1,0 +1,332 @@
+{
+  "root": "card_health",
+  "state": {},
+  "elements": {
+    "card_health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-27"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health_status",
+        "systemic_alert",
+        "degraded_section",
+        "warning_section",
+        "healthy_section",
+        "nodata_section",
+        "summary_section"
+      ]
+    },
+    "health_status": {
+      "type": "Badge",
+      "props": {
+        "text": "DEGRADED (18D)",
+        "variant": "destructive"
+      }
+    },
+    "systemic_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 SYSTEMIC",
+        "message": "18 skills failing on output_tokens=0 sandbox-truncation (day 34)"
+      }
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_header",
+        "degraded_list"
+      ]
+    },
+    "degraded_header": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED — 5 of 18 (+13 more, see memory/issues/)",
+        "level": "h3"
+      }
+    },
+    "degraded_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg_item_1",
+        "deg_item_2",
+        "deg_item_3",
+        "deg_item_4",
+        "deg_item_5"
+      ]
+    },
+    "deg_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg_1_name",
+        "deg_1_progress",
+        "deg_1_link"
+      ]
+    },
+    "deg_1_name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "body"
+      }
+    },
+    "deg_1_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 12,
+        "max": 100,
+        "label": "12%"
+      }
+    },
+    "deg_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-025",
+        "href": "#ISS-025"
+      }
+    },
+    "deg_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg_2_name",
+        "deg_2_progress"
+      ]
+    },
+    "deg_2_name": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "body"
+      }
+    },
+    "deg_2_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 17,
+        "max": 100,
+        "label": "17%"
+      }
+    },
+    "deg_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg_3_name",
+        "deg_3_progress"
+      ]
+    },
+    "deg_3_name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "body"
+      }
+    },
+    "deg_3_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 18,
+        "max": 100,
+        "label": "18%"
+      }
+    },
+    "deg_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg_4_name",
+        "deg_4_progress",
+        "deg_4_link"
+      ]
+    },
+    "deg_4_name": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "body"
+      }
+    },
+    "deg_4_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 21,
+        "max": 100,
+        "label": "21%"
+      }
+    },
+    "deg_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-018",
+        "href": "#ISS-018"
+      }
+    },
+    "deg_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg_5_name",
+        "deg_5_progress",
+        "deg_5_link"
+      ]
+    },
+    "deg_5_name": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill",
+        "variant": "body"
+      }
+    },
+    "deg_5_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 38,
+        "max": 100,
+        "label": "38%"
+      }
+    },
+    "deg_5_link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-021",
+        "href": "#ISS-021"
+      }
+    },
+    "warning_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "warning_heading",
+        "warning_text"
+      ]
+    },
+    "warning_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ WARNING",
+        "level": "h3"
+      }
+    },
+    "warning_text": {
+      "type": "Text",
+      "props": {
+        "text": "13 skills (success rate 0.6–0.8)",
+        "variant": "body"
+      }
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy_heading",
+        "healthy_text"
+      ]
+    },
+    "healthy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy_text": {
+      "type": "Text",
+      "props": {
+        "text": "18 skills",
+        "variant": "body"
+      }
+    },
+    "nodata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nodata_heading",
+        "nodata_text"
+      ]
+    },
+    "nodata_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔵 NO_DATA",
+        "level": "h3"
+      }
+    },
+    "nodata_text": {
+      "type": "Text",
+      "props": {
+        "text": "3 skills",
+        "variant": "body"
+      }
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "open_issues_stat",
+        "resolved_stat"
+      ]
+    },
+    "open_issues_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "11"
+      }
+    },
+    "resolved_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}

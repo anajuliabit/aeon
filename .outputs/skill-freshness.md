@@ -1,27 +1,21 @@
-Done. Here's what happened:
-
 ## Summary
 
-**Skill**: `skill-freshness` | **Status**: `FRESHNESS_NO_CHANGE` | **No notification sent**
+Skill-freshness executed for 2026-07-30. Results:
 
-**Execution:**
-- Parsed `aeon.yml`: 43 enabled skills (of ~115 total)
-- `chains: {}` → 0 explicit consume edges
-- Grepped enabled SKILL.md files for extractable file references (specific paths matching the 4 regex classes)
-- Found 8 implicit dependencies across 4 consumers
+**Verdict:** 🔴 FRESHNESS_STALE — no change, no notification.
 
-**Dependency audit (all OK):**
-| Consumer | File | Class | Age | Verdict |
-|---|---|---|---|---|
-| skill-security-scan | `memory/state/security-scan.json` | state | ~10m | ✅ OK |
-| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | articles/weekly | ~10m | ✅ OK |
-| skill-security-scan | `articles/security-scan-2026-07-20.md` | articles/weekly | ~10m | ✅ OK |
-| vuln-scanner | `.outputs/github-trending.md` | outputs | ~10m | ✅ OK |
-| aixbt-pulse | `memory/topics/aixbt-grounding.md` | topics | ~10m | ✅ OK |
-| aixbt-pulse | `memory/topics/aixbt-clusters.md` | topics | ~10m | ✅ OK |
-| aixbt-pulse | `memory/topics/aixbt-chains.md` | topics | ~10m | ✅ OK |
-| market-context-refresh | `memory/topics/market-context.md` | topics | ~10m | ✅ OK |
+43 enabled skills audited, 11 tracked dependencies, 7 flagged:
 
-**Dedup**: fingerprint `da39a3ee` (sha1 of empty flagged set) matches yesterday's run (2026-07-22T08:56:01Z, within 7-day window) → `FRESHNESS_NO_CHANGE`, notification suppressed.
+| Consumer | Dependency | Severity | Age |
+|---|---|---|---|
+| aixbt-pulse | `aixbt-grounding/clusters/chains.md` | STALE | ~32d (frozen Jun 28) |
+| skill-security-scan | `workflow-security-audit-2026-04-11.md` | STALE | 110d (disabled producer) |
+| vuln-scanner | `.outputs/github-trending.md` | STALE | ~23h (structural: github-trending fires after this skill) |
+| market-context-refresh | `market-context.md` | WARN | ~14d / 332h |
+| token-pick | `market-context.md` | WARN | ~14d / 332h |
 
-**Files written**: `articles/skill-freshness-2026-07-23.md`, `memory/topics/skill-freshness-state.json`, `memory/logs/2026-07-23.md` (log entry prepended).
+**Fingerprint unchanged** (`1ab8c658b960f260ad98797bf06b841d9b1410ef`) since 2026-07-25 — 5th consecutive match → `FRESHNESS_NO_CHANGE`, notification suppressed.
+
+**Key escalation:** `market-context.md` crosses the STALE threshold (~336h) around 13:00 UTC today. Tomorrow's run will see two new STALE items, changing the fingerprint and triggering the first notification since July 24.
+
+Files written: `articles/skill-freshness-2026-07-30.md`, `memory/topics/skill-freshness-state.json` (updated `last_run_at`), `memory/logs/2026-07-30.md`.

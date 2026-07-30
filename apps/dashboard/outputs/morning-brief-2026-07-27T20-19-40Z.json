@@ -1,0 +1,181 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-27"
+      },
+      "children": [
+        "heading-focus",
+        "focus-stack",
+        "sep-1",
+        "heading-yesterday",
+        "yesterday-stack",
+        "sep-2",
+        "heading-watch",
+        "watch-text",
+        "sep-3",
+        "heading-running",
+        "running-stack"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 verb-pool-exhausted PR — operator direct-author dangerouslyDisableSandbox pivot"
+      }
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #165 crosses 7d weekly-batch gate ~17:38Z — merge/defer decision needed"
+      }
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 batch-dark d29 diagnosis — 8-skill 12:00 UTC cluster frozen 28 days"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yesterday-1",
+        "yesterday-2",
+        "yesterday-3",
+        "yesterday-4"
+      ]
+    },
+    "yesterday-1": {
+      "type": "Text",
+      "props": {
+        "text": "H cliff-day-unlock false-positive reinforced d2 (no cliff-signature 7-25→7-26) — unlock-monitor re-verify 7-27 mon-tick"
+      }
+    },
+    "yesterday-2": {
+      "type": "Text",
+      "props": {
+        "text": "Broad-tape green restore 17→100 breadth (83pt swing, biggest in memory-window) — 6th distinct 6-day regime"
+      }
+    },
+    "yesterday-3": {
+      "type": "Text",
+      "props": {
+        "text": "REPPO drought breaks at d12 on +1.83% + 1.716× vol — first above-baseline in 11 days"
+      }
+    },
+    "yesterday-4": {
+      "type": "Text",
+      "props": {
+        "text": "Security: Mini Shai-Hulud @antv/* npm mass-takeover 52 real packages (Aeon-fleet clean, ecosystem-massive)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet @ 🔴 DEGRADED (18D, sandbox-truncation d34) · 11 open issues unchanged"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "07:00 UTC: morning cluster (morning-brief + daily-routine + thought-review)"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC: batch cluster (frozen d29 — defi-overview / token-pick / token-movers / narrative-tracker / market-context-refresh / on-chain-monitor / defi-monitor)"
+      }
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "18:00 UTC: Sunday skills (skill-health + fork-skill-digest + fork-cohort + skill-update-check + skill-evals)"
+      }
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "20:00 UTC: evening cluster (reflect + action-converter + evening-recap)"
+      }
+    }
+  }
+}

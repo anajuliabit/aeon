@@ -1,0 +1,594 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-24"
+      },
+      "children": [
+        "tldr",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "decisions-section",
+        "sep3",
+        "blockers-section",
+        "sep4",
+        "footer"
+      ]
+    },
+    "tldr": {
+      "type": "Text",
+      "props": {
+        "text": "Heavy cron day — reflect codifies 10+ patterns + action-converter shapes 2 ISS filings, but bash-redirect regression hits n=6+ and ISS-027 filing carry stalls at d16 with no files created.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "headlines-title",
+        "token-alert-card",
+        "reflect-card",
+        "security-card",
+        "action-converter-card",
+        "github-card"
+      ]
+    },
+    "headlines-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "token-alert-card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "token-alert-title",
+        "token-alert-stats",
+        "token-alert-details-text",
+        "token-alert-link"
+      ]
+    },
+    "token-alert-title": {
+      "type": "Heading",
+      "props": {
+        "text": "token-alert — WELL vol-spike d2 fires",
+        "level": "h3"
+      }
+    },
+    "token-alert-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-vol-6x",
+        "stat-volume-2m",
+        "stat-fade-1p3",
+        "stat-participation-53"
+      ]
+    },
+    "stat-vol-6x": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol-spike (first-ever back-to-back)",
+        "value": "6.11×",
+        "trend": "up"
+      }
+    },
+    "stat-volume-2m": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$2.054M"
+      }
+    },
+    "stat-fade-1p3": {
+      "type": "Stat",
+      "props": {
+        "label": "Fade",
+        "value": "-1.33%",
+        "trend": "down"
+      }
+    },
+    "stat-participation-53": {
+      "type": "Stat",
+      "props": {
+        "label": "Participation",
+        "value": "+53%",
+        "trend": "up"
+      }
+    },
+    "token-alert-details-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fade shallows on high participation = accumulation-look d2",
+        "variant": "body"
+      }
+    },
+    "token-alert-link": {
+      "type": "Link",
+      "props": {
+        "label": "View message",
+        "href": ".tmp/token-alert/msg.md"
+      }
+    },
+    "reflect-card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflect-title",
+        "reflect-kimi-fix",
+        "reflect-patterns-label",
+        "reflect-patterns-grid",
+        "reflect-link"
+      ]
+    },
+    "reflect-title": {
+      "type": "Heading",
+      "props": {
+        "text": "reflect",
+        "level": "h3"
+      }
+    },
+    "reflect-kimi-fix": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md rewritten: Kimi K3 date corrected (7-16 not 7-27)",
+        "variant": "body"
+      }
+    },
+    "reflect-patterns-label": {
+      "type": "Text",
+      "props": {
+        "text": "10+ patterns codified:",
+        "variant": "caption"
+      }
+    },
+    "reflect-patterns-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pattern-ub",
+        "pattern-build",
+        "pattern-beat",
+        "pattern-nostr"
+      ]
+    },
+    "pattern-ub": {
+      "type": "Badge",
+      "props": {
+        "text": "UB d4 fires",
+        "variant": "secondary"
+      }
+    },
+    "pattern-build": {
+      "type": "Badge",
+      "props": {
+        "text": "BUILDon -32%",
+        "variant": "secondary"
+      }
+    },
+    "pattern-beat": {
+      "type": "Badge",
+      "props": {
+        "text": "BEAT accelerating-sustain",
+        "variant": "secondary"
+      }
+    },
+    "pattern-nostr": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-as-equal-member Nostr workspace NEW",
+        "variant": "secondary"
+      }
+    },
+    "reflect-link": {
+      "type": "Link",
+      "props": {
+        "label": "View MEMORY.md",
+        "href": "memory/MEMORY.md"
+      }
+    },
+    "security-card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "security-title",
+        "npm-malware-alert",
+        "litellm-cve-alert",
+        "n8n-alert",
+        "security-link"
+      ]
+    },
+    "security-title": {
+      "type": "Heading",
+      "props": {
+        "text": "security-digest",
+        "level": "h3"
+      }
+    },
+    "npm-malware-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "npm malware 45-batch d1",
+        "message": "fs-extra-core ~30M DL typosquat highest-blast-radius",
+        "type": "warning"
+      }
+    },
+    "litellm-cve-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "LiteLLM CVE-2026-59822",
+        "message": "MCP auth-bypass (AI-framework-attack-surface n=2)",
+        "type": "error"
+      }
+    },
+    "n8n-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "n8n 24-CVE mass-disclose",
+        "message": "n=3 critical security issues",
+        "type": "error"
+      }
+    },
+    "security-link": {
+      "type": "Link",
+      "props": {
+        "label": "View security digest",
+        "href": ".tmp/secdigest/msg.md"
+      }
+    },
+    "action-converter-card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-title",
+        "action-issues-badges",
+        "action-tasks-label",
+        "action-tasks-badges",
+        "action-link"
+      ]
+    },
+    "action-title": {
+      "type": "Heading",
+      "props": {
+        "text": "action-converter",
+        "level": "h3"
+      }
+    },
+    "action-issues-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action-iss-027",
+        "action-iss-028"
+      ]
+    },
+    "action-iss-027": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-027 (batch-dark d16 carry)",
+        "variant": "outline"
+      }
+    },
+    "action-iss-028": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-028 (bash-redirect n=6+)",
+        "variant": "outline"
+      }
+    },
+    "action-tasks-label": {
+      "type": "Text",
+      "props": {
+        "text": "Tasks shaped:",
+        "variant": "caption"
+      }
+    },
+    "action-tasks-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "task-kimi",
+        "task-litellm",
+        "task-github-rename"
+      ]
+    },
+    "task-kimi": {
+      "type": "Badge",
+      "props": {
+        "text": "Kimi drift",
+        "variant": "secondary"
+      }
+    },
+    "task-litellm": {
+      "type": "Badge",
+      "props": {
+        "text": "LiteLLM CVE verify",
+        "variant": "secondary"
+      }
+    },
+    "task-github-rename": {
+      "type": "Badge",
+      "props": {
+        "text": "github-issues field-rename",
+        "variant": "secondary"
+      }
+    },
+    "action-link": {
+      "type": "Link",
+      "props": {
+        "label": "View action converter output",
+        "href": ".tmp/action-converter/msg.md"
+      }
+    },
+    "github-card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-title",
+        "github-items-stack",
+        "github-link"
+      ]
+    },
+    "github-title": {
+      "type": "Heading",
+      "props": {
+        "text": "github-trending",
+        "level": "h3"
+      }
+    },
+    "github-items-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "github-item-1",
+        "github-item-2",
+        "github-item-3",
+        "github-item-4"
+      ]
+    },
+    "github-item-1": {
+      "type": "Badge",
+      "props": {
+        "text": "block/buzz ACCELERATING (agent-as-equal-member)",
+        "variant": "secondary"
+      }
+    },
+    "github-item-2": {
+      "type": "Badge",
+      "props": {
+        "text": "mattpocock/skills ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "github-item-3": {
+      "type": "Badge",
+      "props": {
+        "text": "harper RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "github-item-4": {
+      "type": "Badge",
+      "props": {
+        "text": "ego-lite RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "github-link": {
+      "type": "Link",
+      "props": {
+        "label": "View full trending",
+        "href": ".outputs/github-trending.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "decisions-title",
+        "decision-h-unlock",
+        "decision-file-iss",
+        "decision-pr-167"
+      ]
+    },
+    "decisions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-h-unlock": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-h-unlock-title",
+        "decision-h-unlock-stat",
+        "decision-h-unlock-details"
+      ]
+    },
+    "decision-h-unlock-title": {
+      "type": "Heading",
+      "props": {
+        "text": "H unlock T-0 (7-25): cliff day",
+        "level": "h4"
+      }
+    },
+    "decision-h-unlock-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply investor+early-contributors",
+        "value": "9.24%"
+      }
+    },
+    "decision-h-unlock-details": {
+      "type": "Text",
+      "props": {
+        "text": "Ticker-resolution watch (HYPE vs H, verify unlock-monitor 7-27)",
+        "variant": "body"
+      }
+    },
+    "decision-file-iss": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-file-iss-title",
+        "decision-file-iss-text"
+      ]
+    },
+    "decision-file-iss-title": {
+      "type": "Heading",
+      "props": {
+        "text": "File ISS-027 + ISS-028",
+        "level": "h4"
+      }
+    },
+    "decision-file-iss-text": {
+      "type": "Text",
+      "props": {
+        "text": "batch-dark d27 + bash-redirect n=6+: action-converter shaped both today, neither file exists yet",
+        "variant": "body"
+      }
+    },
+    "decision-pr-167": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-pr-title",
+        "decision-pr-text",
+        "decision-pr-link"
+      ]
+    },
+    "decision-pr-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Merge PR #167 or carry",
+        "level": "h4"
+      }
+    },
+    "decision-pr-text": {
+      "type": "Text",
+      "props": {
+        "text": "Bash-redirect workaround fix (~27h old), supports ISS-028 filing",
+        "variant": "body"
+      }
+    },
+    "decision-pr-link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #167",
+        "href": "https://github.com/anajuliabit/aeon/pull/167"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-title",
+        "blocker-iss-025",
+        "blocker-iss-027-carry"
+      ]
+    },
+    "blockers-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-iss-025": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-025 — cost-report CRITICAL",
+        "message": "Sandbox-truncation T+8 day-9, dangerouslyDisableSandbox pivot operator-side pending · 3 days past 1-week slip",
+        "type": "error"
+      }
+    },
+    "blocker-iss-027-carry": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-027 filing carry d16",
+        "message": "MEMORY.md line 6 references ISS-027 as existing but file never created",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+6 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

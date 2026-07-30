@@ -41,3 +41,11 @@ https://www.federalregister.gov/documents/2026/07/15/2026-14201
 https://www.federalregister.gov/documents/2026/07/20/2026-14589
 https://www.federalregister.gov/documents/2026/07/17/2026-14509
 https://www.federalregister.gov/documents/2026/07/21/2026-14710
+https://www.coindesk.com/policy/2026/07/27/kalshi-polymarket-win-pause-against-minnesota-s-prediction-market-ban
+https://www.cftc.gov/PressRoom/PressReleases/9273-26
+https://www.federalregister.gov/documents/2026/07/24/2026-14977
+https://www.cftc.gov/PressRoom/PressReleases/9272-26
+https://en.cryptonomist.ch/2026/07/29/mica-crypto-regulations-esma/
+https://www.federalregister.gov/documents/2026/07/28/2026-15216
+https://www.federalregister.gov/documents/2026/07/27/2026-15088
+https://www.federalregister.gov/documents/2026/07/24/2026-14979

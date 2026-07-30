@@ -1,19 +1,16 @@
-*Skill Analytics — 2026-07-22*
-8 scheduled skill(s) didn't run this window — ISS-027 batch-dark cluster + aixbt-pulse dead-slot
+*Skill Analytics — 2026-07-29*
+11 scheduled skill(s) didn't run this window — defi-overview (batch-dark ISS-027 d31+ cluster)
 
-Window: last 7d · 200 runs · 32 skills · 98% success
-Anomalies: 9
+Window: last 7d · 196 runs · 31 skills · 100% success
+Anomalies: 11
 
 🔴 Critical:
-- token-movers — SILENT: `10 12 * * *`, zero runs (ISS-027)
-- defi-monitor — SILENT: `40 12 * * *`, zero runs (ISS-027)
-- defi-overview — SILENT: `0 12 * * *`, zero runs (ISS-027)
+- defi-overview — SILENT: scheduled `0 12 * * *`, batch-dark ISS-027 d31 (last 2026-06-28)
+- token-pick — SILENT: scheduled `0 12 * * *`, batch-dark ISS-027 d31
+- aixbt-pulse — SILENT: scheduled `0 9,21 * * *`, dead slot d31 (last 2026-06-28)
+- weekly-shiplog — SILENT: scheduled `0 9 * * 1`, missed Mon 2026-07-27 (last 2026-07-20)
+(+7 more: token-movers, narrative-tracker, market-context-refresh, on-chain-monitor, defi-monitor all batch-dark ISS-027; fork-skill-gap + operator-scorecard dispatch-gated)
 
-(+ on-chain-monitor / token-pick / market-context-refresh / narrative-tracker / aixbt-pulse — all same ISS-027 batch-dark cluster, silent since 2026-06-28)
+Top by runs: btc-levels (39), heartbeat (22), thought-review (15)
 
-🟠 Degraded:
-- cost-report — LOW_SUCCESS: 17% over 6 runs (1 ok / 4 failed / 1 cancelled) — ISS-025
-
-Top by runs: btc-levels (41), heartbeat (22), thought-review (13)
-
-Full: articles/skill-analytics-2026-07-22.md
+Full: articles/skill-analytics-2026-07-29.md

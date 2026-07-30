@@ -1,5 +1,21 @@
 [
   {
+    "repo": "block/buzz",
+    "scanned_at": "2026-07-25T16:00:00Z",
+    "findings": 0,
+    "channel": "clean-audit-partial-scan",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "osv-api": "ok-partial",
+      "slither": "n/a",
+      "cargo-audit": "fail"
+    },
+    "article": "articles/vuln-scan-2026-07-25.md",
+    "notes": "block/buzz 11,354-star Rust workspace (Nostr agent-workspace, NIP-42/98 auth, Tauri desktop, Flutter mobile). SECURITY.md email buzz@block.xyz + PVR endpoint accessible. OSV-partial cargo scan of ~110 top-signal crates surfaced 3 dep-CVE candidates all triaged to DROP: (a) quick-xml 0.38.4 RUSTSEC-2026-0194+0195 via rust-s3/aws-creds — already ignored in deny.toml:12-21 with 'trusted-input XML only' reasoning; (b) quick-xml 0.39.4 same 2 advisories via mesh-llm→iroh→netdev→plist — same deny.toml entry, unreachable from untrusted input (plist parses local macOS system interface metadata only); (c) opentelemetry_sdk 0.31.0 GHSA-w9wp-h8wv-79jx W3C Baggage unbounded-alloc (MODERATE, CVSS A:L) via mesh-llm-host-runtime git-pin — not in deny.toml but narrow attack surface (buzz-relay uses workspace-declared opentelemetry 0.32 for HTTP baggage; 0.31 lives inside mesh-llm internal LLM-inference tracing, not attacker-header path) and unshippable-as-PR (mesh-llm@v0.73.1 git-pin; hand-editing Cargo.lock breaks tag pin same anti-pattern as tirth8205 uv.lock case). Hand-audit spot check of highest-attack-surface crates: buzz-workflow SSRF check (executor.rs:735-815) is textbook-correct (to_socket_addrs → is_private_ip → reqwest .resolve pin + .no_proxy + Policy::none, response size capped 1MB) with comprehensive is_private_ip (buzz-core/network.rs:46-95: IPv4 private/loopback/link-local/broadcast/CGNAT/benchmarking + IPv6 ULA/link-local/multicast/documentation + IPv4-mapped-v6 recursive + NAT64 well-known + local-use + SIIT-translated + Teredo + 6to4, every case tested); NIP-42 (nip42.rs) challenge 32-byte CSPRNG hex + Schnorr verify + relay-URL normalize + ±60s window; NIP-98 (nip98.rs) kind 27235 + Schnorr + ±60s + no-loopback-aliasing (deliberate multi-tenant host-binding preservation, documented in-line) + method case-insensitive + SHA-256 payload-tag binding to body. Zero PVR filed, zero public PR opened, zero .pending-disclosure/ draft written. Fleet-wide ISS-018 sandbox family day-33 (pip install + curl|sh + generic binary download all denied) — partial-scan verdict, not clean-audit. Selected from .outputs/github-trending.md 2026-07-25 top pick (d2 +51% off release-catalyst v0.4.25); ego-lite HOLDOVER not chosen (no SECURITY.md)."
+  },
+  {
     "repo": "superloglabs/superlog",
     "scanned_at": "2026-06-13T17:00:00Z",
     "findings": 0,

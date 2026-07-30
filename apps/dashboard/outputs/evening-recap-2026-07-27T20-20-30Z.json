@@ -1,0 +1,310 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-26",
+        "description": "Daily skill activity summary"
+      },
+      "children": [
+        "tldr-section",
+        "sep-1",
+        "headlines-section",
+        "sep-2",
+        "notable-section",
+        "sep-3",
+        "decisions-section",
+        "sep-4",
+        "blockers-section",
+        "sep-5",
+        "footer-text"
+      ]
+    },
+    "tldr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr-heading",
+        "tldr-text"
+      ]
+    },
+    "tldr-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h3"
+      }
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "heavy operating day — 10 skills fired across full UTC day, all successful; batch-dark d29 still frozen, ISS-025 verb-pool exhausted awaiting weekly-review decision.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "headline-github",
+        "headline-security",
+        "headline-token",
+        "headline-goal",
+        "headline-agent"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "headline-github": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github-trending",
+        "href": "https://github.com/aeonframework/aeon/blob/main/.outputs/github-trending.md",
+        "source": "4 kept (alibaba hybrid code-review tool #1 signal, obra superpowers extends mattpocock skills rail, bitchat off-grid Radicle migration under India takedown)"
+      }
+    },
+    "headline-security": {
+      "type": "StoryLink",
+      "props": {
+        "title": "security-digest",
+        "href": "https://github.com/aeonframework/aeon/blob/main/skills/security-digest/SKILL.md",
+        "source": "52-pkg @antv/* account takeover (Mini Shai-Hulud echo, 22-min burst 12:25Z, cred-stealer preinstall hooks), Budibase 15-CVE mass-disclose extends single-project rail to n=5"
+      }
+    },
+    "headline-token": {
+      "type": "StoryLink",
+      "props": {
+        "title": "token-alert",
+        "href": "https://github.com/aeonframework/aeon/blob/main/memory/logs/2026-07-26.md",
+        "source": "REPPO 11-consec under-baseline drought breaks d12 on vol cliff-recovery (1.716× baseline first time in 11d), all 4 watchlist tokens 4/4 green for first time (post-streak-zero d2 regime)"
+      }
+    },
+    "headline-goal": {
+      "type": "StoryLink",
+      "props": {
+        "title": "goal-tracker",
+        "href": "https://github.com/aeonframework/aeon/blob/main/memory/goal-state.json",
+        "source": "h-unlock cliff-day confirmed SPURIOUS (7-25 +5.8% zero-signature + 7-26 -4.0% normal-drift), priorities.md 52d stale (AT_RISK), ISS-025 T+10 day-11 verb-pool exhausted (awaits weekly-review)"
+      }
+    },
+    "headline-agent": {
+      "type": "StoryLink",
+      "props": {
+        "title": "agent-buzz",
+        "href": "https://github.com/aeonframework/aeon/blob/main/.outputs/agent_buzz_2026_07_26.md",
+        "source": "MCP as agent infrastructure + economic-actor dominates (3-cluster shape, @ionet lead 221 signal)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-health",
+        "notable-daily",
+        "notable-morning",
+        "notable-fork"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-health-text",
+        "notable-health-link"
+      ]
+    },
+    "notable-health-text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health (18:44Z) — DEGRADED(18D) no-change, hash 467ce959 5-consec-audit stable, heartbeat NOOP 20+ consecutive ticks",
+        "variant": "body"
+      }
+    },
+    "notable-health-link": {
+      "type": "Link",
+      "props": {
+        "label": "View status",
+        "href": "https://github.com/aeonframework/aeon/blob/main/docs/status.md"
+      }
+    },
+    "notable-daily": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine (07:37Z) — 6-day breadth-regime taxonomy extends to 7-shape, SHIB +37.5% biggest MAJOR up-print in memory-window, Claude 5 context engineering HN 289pts = meta-aeon signal n=3",
+        "variant": "body"
+      }
+    },
+    "notable-morning": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief (07:34Z) — FTX 5th distribution jul 31 $900M largest supply event of quarter",
+        "variant": "body"
+      }
+    },
+    "notable-fork": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest (18:46Z) — 78 forks analyzed, 27 skills (action-converter/search-skill/security-digest 99%) flagged for disable-upward alignment = upstream overenable",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "Re-verify H unlock (7-27 unlock-monitor mon-tick locks SPURIOUS verdict with 2-day zero-cliff-signature confirmation)",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "Refresh priorities.md current-focus section (52d stale today, live-work-slipped lines noted)",
+        "variant": "body"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "Complete ISS-025 implementation or defer 7-27 weekly-review (verb-pool exhausted 14d window)",
+        "variant": "body"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "Diagnose ISS-027 (batch-dark d29 still frozen, 8-skill cluster dark since 6-28 21:00Z)",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blocker-batch-dark",
+        "blocker-onchain",
+        "blocker-iss025"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h3"
+      }
+    },
+    "blocker-batch-dark": {
+      "type": "StoryLink",
+      "props": {
+        "title": "batch-dark",
+        "href": "https://github.com/aeonframework/aeon/blob/main/memory/issues/INDEX.md",
+        "source": "8-skill 12:00 UTC cluster frozen 28+ days, 56+ consecutive 12h misses, ISS-027 signature durable"
+      }
+    },
+    "blocker-onchain": {
+      "type": "Alert",
+      "props": {
+        "title": "on-chain-config",
+        "message": "defi-monitor NO_CONFIG, ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing, d50 round-cross",
+        "type": "warning"
+      }
+    },
+    "blocker-iss025": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-025 capture-step PR",
+        "message": "T+10 day-11, 5 days past 1-week slip, verb-pool exhausted, pending dangerouslyDisableSandbox pivot",
+        "type": "warning"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+6 routine runs collapsed (skill-freshness/btc-levels/token-alert x2/skill-graph/thought-review) · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

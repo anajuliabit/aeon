@@ -1,0 +1,207 @@
+{
+  "root": "analytics-card",
+  "state": {},
+  "elements": {
+    "analytics-card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics — 2026-07-29"
+      },
+      "children": [
+        "summary-stack",
+        "separator-1",
+        "anomalies-alert",
+        "separator-2",
+        "critical-section",
+        "separator-3",
+        "top-section",
+        "separator-4",
+        "report-link"
+      ]
+    },
+    "summary-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-window",
+        "stat-runs",
+        "stat-skills",
+        "stat-success"
+      ]
+    },
+    "stat-window": {
+      "type": "Stat",
+      "props": {
+        "label": "Window",
+        "value": "last 7d"
+      }
+    },
+    "stat-runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "196"
+      }
+    },
+    "stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "31"
+      }
+    },
+    "stat-success": {
+      "type": "Stat",
+      "props": {
+        "label": "Success rate",
+        "value": "100%"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "anomalies-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Anomalies",
+        "message": "11 scheduled skill(s) didn't run this window"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "critical-heading",
+        "critical-defi",
+        "critical-token",
+        "critical-aixbt",
+        "critical-weekly",
+        "critical-more"
+      ]
+    },
+    "critical-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Critical",
+        "level": "h3"
+      }
+    },
+    "critical-defi": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "defi-overview",
+        "message": "SILENT: scheduled `0 12 * * *`, batch-dark ISS-027 d31 (last 2026-06-28)"
+      }
+    },
+    "critical-token": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "token-pick",
+        "message": "SILENT: scheduled `0 12 * * *`, batch-dark ISS-027 d31"
+      }
+    },
+    "critical-aixbt": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "aixbt-pulse",
+        "message": "SILENT: scheduled `0 9,21 * * *`, dead slot d31 (last 2026-06-28)"
+      }
+    },
+    "critical-weekly": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "weekly-shiplog",
+        "message": "SILENT: scheduled `0 9 * * 1`, missed Mon 2026-07-27 (last 2026-07-20)"
+      }
+    },
+    "critical-more": {
+      "type": "Text",
+      "props": {
+        "text": "(+7 more: token-movers, narrative-tracker, market-context-refresh, on-chain-monitor, defi-monitor all batch-dark ISS-027; fork-skill-gap + operator-scorecard dispatch-gated)",
+        "variant": "caption"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top-heading",
+        "top-stats-grid"
+      ]
+    },
+    "top-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by runs",
+        "level": "h3"
+      }
+    },
+    "top-stats-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "top-btc",
+        "top-heartbeat",
+        "top-thought"
+      ]
+    },
+    "top-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "btc-levels",
+        "value": "39"
+      }
+    },
+    "top-heartbeat": {
+      "type": "Stat",
+      "props": {
+        "label": "heartbeat",
+        "value": "22"
+      }
+    },
+    "top-thought": {
+      "type": "Stat",
+      "props": {
+        "label": "thought-review",
+        "value": "15"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "report-link": {
+      "type": "Link",
+      "props": {
+        "label": "Full report",
+        "href": "articles/skill-analytics-2026-07-29.md"
+      }
+    }
+  }
+}

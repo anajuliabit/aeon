@@ -1,0 +1,320 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-25 (sat)"
+      },
+      "children": [
+        "section-focus",
+        "sep1",
+        "section-since",
+        "sep2",
+        "section-running",
+        "sep3",
+        "section-rollovers"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-1": {
+      "type": "Alert",
+      "props": {
+        "title": "h unlock T-0 = SPURIOUS",
+        "message": "websearch confirms next HYPE unlock aug 6 not today; yesterday's ticker-flag lands",
+        "type": "warning"
+      }
+    },
+    "focus-2": {
+      "type": "Alert",
+      "props": {
+        "title": "WELL vol-spike d3 12z test",
+        "message": "unprecedented n=3 back-to-back streak in watchlist history",
+        "type": "info"
+      }
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "iss-027/028 filing carry d17 — action-converter shaped 2 file-creates yesterday; tests op response",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-since",
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4",
+        "since-5"
+      ]
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-1": {
+      "type": "Text",
+      "props": {
+        "text": "reflect rewrote MEMORY 101L→80L, codified 10+ patterns (breadth 4-shape, UB d4 fires on 7-23 prediction cap n=4, BEAT accelerating-3-day, WELL back-to-back, agent-as-equal-member Nostr, agent-shared browser)",
+        "variant": "body"
+      }
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter shaped 5 actions incl. 2 iss-file closes (iss-025 verb-pool exhausted → weekly-review hand-off)",
+        "variant": "body"
+      }
+    },
+    "since-3": {
+      "type": "Alert",
+      "props": {
+        "title": "bash-`>` regression",
+        "message": "hit reflect itself mid-run = n=7+ across 3 UTC-day span, workaround durability confirmed live",
+        "type": "warning"
+      }
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "16-consec heartbeat NOOP durable at 106h+ span (7-19 09:17z regime-onset, third full 3-tick UTC-day cycle intact)",
+        "variant": "body"
+      }
+    },
+    "since-5": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve SKIPPED yesterday even-day-24 per `0 18 1/2 * *`, FIRES today odd-day-25",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-running",
+        "running-subtitle",
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4",
+        "running-5",
+        "running-6"
+      ]
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "sat 2026-07-25, ODD day 25",
+        "variant": "caption"
+      }
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "07z morning-brief (this) + daily-routine + thought-review + skill-freshness",
+        "variant": "body"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "08z heartbeat · 09z github-trending · 12z token-alert (batch-dark d28 expected)",
+        "variant": "body"
+      }
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "14z heartbeat + security-digest · 17z list-digest + 17:30z agent-buzz",
+        "variant": "body"
+      }
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "18z goal-tracker + skill-health + reflect + action-converter + self-improve (odd-day-25 fires)",
+        "variant": "body"
+      }
+    },
+    "running-5": {
+      "type": "Text",
+      "props": {
+        "text": "20z heartbeat · 20:30z skill-analytics · 21z evening-recap + thought-review + aixbt-pulse (dead d28)",
+        "variant": "body"
+      }
+    },
+    "running-6": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels every 4h at :15",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-rollovers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-rollovers",
+        "rollovers-grid"
+      ]
+    },
+    "heading-rollovers": {
+      "type": "Heading",
+      "props": {
+        "text": "UTC-day rollovers",
+        "level": "h2"
+      }
+    },
+    "rollovers-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rollovers-1",
+        "rollovers-2",
+        "rollovers-3",
+        "rollovers-4",
+        "rollovers-5",
+        "rollovers-6",
+        "rollovers-7",
+        "rollovers-8",
+        "rollovers-9",
+        "rollovers-10"
+      ]
+    },
+    "rollovers-1": {
+      "type": "Text",
+      "props": {
+        "text": "sandbox-truncation d32→d33",
+        "variant": "body"
+      }
+    },
+    "rollovers-2": {
+      "type": "Text",
+      "props": {
+        "text": "batch-dark d27→d28",
+        "variant": "body"
+      }
+    },
+    "rollovers-3": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse dead d27→d28",
+        "variant": "body"
+      }
+    },
+    "rollovers-4": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain d48→d49",
+        "variant": "body"
+      }
+    },
+    "rollovers-5": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md 50d→51d",
+        "variant": "body"
+      }
+    },
+    "rollovers-6": {
+      "type": "Text",
+      "props": {
+        "text": "zero-captures d60→d61",
+        "variant": "body"
+      }
+    },
+    "rollovers-7": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025 T+9 day-10",
+        "variant": "body"
+      }
+    },
+    "rollovers-8": {
+      "type": "Text",
+      "props": {
+        "text": "CoinGecko clean d32→d33",
+        "variant": "body"
+      }
+    },
+    "rollovers-9": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill NO_GAP d27→d28 (T-2 to mon reset)",
+        "variant": "body"
+      }
+    },
+    "rollovers-10": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat NOOP tests 17-consec",
+        "variant": "body"
+      }
+    }
+  }
+}

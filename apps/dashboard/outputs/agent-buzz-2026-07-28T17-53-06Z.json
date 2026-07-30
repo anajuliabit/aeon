@@ -1,0 +1,190 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-28",
+        "description": "MCP spec maturation (stateless drop, tailored-server debate) plus two on-chain agent launches; Stanford framing pushed back on long-context-as-panacea."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2",
+        "sep2",
+        "section3",
+        "sep3",
+        "footer"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "story1",
+        "story2",
+        "story3"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP protocol maturation",
+        "level": "h3"
+      }
+    },
+    "story1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@MikelEcheve",
+        "href": "https://x.com/MikelEcheve/status/2081772712091861221",
+        "source": "X",
+        "score": "MCP July 28 spec drops session state; parallel handshakes and faster reconnects follow from stateless core"
+      }
+    },
+    "story2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@AgenticAIFdn",
+        "href": "https://x.com/AgenticAIFdn/status/2081726447232712814",
+        "source": "X",
+        "score": "FastMCP surfaces query results without stuffing raw payload into LLM context — retrieval-shaped tool response"
+      }
+    },
+    "story3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@Jordy_vD_",
+        "href": "https://x.com/Jordy_vD_/status/2081819236758925637",
+        "source": "X",
+        "score": "APIs built for humans degrade agent behavior; MCP servers designed for agents beat auto-converted adapters"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "story4",
+        "story5"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain autonomous agents",
+        "level": "h3"
+      }
+    },
+    "story4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@SkaleNetwork",
+        "href": "https://x.com/SkaleNetwork/status/2081864759511531943",
+        "source": "X",
+        "score": "Autonomous commerce needs privacy-preserving on-chain infra; public-by-default breaks agent payments handling sensitive data"
+      }
+    },
+    "story5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@MrYacineweb3",
+        "href": "https://x.com/MrYacineweb3/status/2081881905721397723",
+        "source": "X",
+        "score": "Ritualnet ships Solidity precompiles + RitualWallet so agents run as protocol primitives, not app-layer scripts"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading3",
+        "story6",
+        "story7"
+      ]
+    },
+    "heading3": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent stack composition",
+        "level": "h3"
+      }
+    },
+    "story6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@javaeeeee1",
+        "href": "https://x.com/javaeeeee1/status/2081681961685315769",
+        "source": "X",
+        "score": "2026 stack thesis: MCP servers, CLI tools, and agent skills solve different integration pieces — not competitors"
+      }
+    },
+    "story7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@kepochnik",
+        "href": "https://x.com/kepochnik/status/2081687685635228010",
+        "source": "X",
+        "score": "Stanford CS230 argues 1M-token windows don't eliminate retrieval, memory, tools, evals — long context is not the ceiling"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_src",
+        "badge_info"
+      ]
+    },
+    "badge_src": {
+      "type": "Badge",
+      "props": {
+        "text": "src: xai",
+        "variant": "outline"
+      }
+    },
+    "badge_info": {
+      "type": "Badge",
+      "props": {
+        "text": "candidates: 25 → kept: 7",
+        "variant": "outline"
+      }
+    }
+  }
+}

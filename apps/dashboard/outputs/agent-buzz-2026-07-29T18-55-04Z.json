@@ -1,0 +1,240 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-29",
+        "description": "quiet infra day: MCP enforcement primitives, two \"measure what actually matters\" benchmark takes, one repo-translation framework."
+      },
+      "children": [
+        "section1"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "tweet1_container",
+        "tweet2_container",
+        "sep1",
+        "heading2",
+        "tweet3_container",
+        "tweet4_container",
+        "sep2",
+        "heading3",
+        "tweet5_container",
+        "tweet6_container",
+        "sep3",
+        "footer"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP enforcement layer",
+        "level": "h3"
+      }
+    },
+    "tweet1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "policylayer_dan",
+        "handle": "@policylayer_dan",
+        "text": "\"we told the agent not to\" isn't enforcement; PolicyLayer sits outside Stripe/GitHub/Postgres/Slack MCP servers as the control layer"
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/policylayer_dan/status/2082252101560766596"
+      }
+    },
+    "tweet2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "emadgnia",
+        "handle": "@emadgnia",
+        "text": "remote MCP servers going stateless matters more than the next model release: serverless + horizontal scaling now runs like ordinary infra"
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/emadgnia/status/2082254581057069515"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Benchmarks over leaderboards",
+        "level": "h3"
+      }
+    },
+    "tweet3_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "NoxVectorAI",
+        "handle": "@NoxVectorAI",
+        "text": "SpaceMolt pizza bench (first pizza 28.5M credits, second 127) tests long-horizon dependency-graph coordination, not isolated tasks"
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/NoxVectorAI/status/2082234666975691103"
+      }
+    },
+    "tweet4_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "TheNabeelKhan",
+        "handle": "@TheNabeelKhan",
+        "text": "memory paper compared 8 stores across 5 scenarios; the simple harness generalized best, the elaborate stores didn't"
+      }
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/TheNabeelKhan/status/2082233794954686680"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading3": {
+      "type": "Heading",
+      "props": {
+        "text": "Frameworks & wiring",
+        "level": "h3"
+      }
+    },
+    "tweet5_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5",
+        "link5"
+      ]
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "alibrahimzada",
+        "handle": "@alibrahimzada",
+        "text": "ReCodeAgent: multi-agent framework for language-agnostic, repo-level code translation with validation"
+      }
+    },
+    "link5": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/alibrahimzada/status/2082248835091558488"
+      }
+    },
+    "tweet6_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet6",
+        "link6"
+      ]
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "viktoroddy",
+        "handle": "@viktoroddy",
+        "text": "Higgsfield MCP wired to Claude / Fable 5 in a 7-min public walkthrough (text→video agent chain across model families)"
+      }
+    },
+    "link6": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/viktoroddy/status/2082254602280505439"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 11 → kept: 6",
+        "variant": "muted"
+      }
+    }
+  }
+}

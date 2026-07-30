@@ -1,17 +1,30 @@
-## Summary
+*Security Digest — 2026-07-30*
+Verdict: 1 actively exploited, 5 to schedule, 0 to monitor. _Sources: KEV, GH Advisory, EPSS_
 
-Ran the security-digest skill for 2026-07-23. Pulled CISA KEV (9 entries added in the 7-day window), GH Advisory Database (9 critical / 98 high / 100+ malware in 48h), and EPSS enrichment. Deduplicated against last 2 days of logs (13 CVEs + 25 GHSAs already covered).
+*PATCH TODAY*
+- [CVE-2026-20316](https://nvd.nist.gov/vuln/detail/CVE-2026-20316) — Cisco Secure FMC · KEV added 2026-07-29 · EPSS 0.008 · CISA due 2026-08-01
+  hardcoded password lets unauth remote attacker log in via low-priv account, read sensitive data. exploited per CISA.
+  → patch Cisco Secure Firewall Management Center per vendor advisory today.
+- npm+pip malware batch — @ai-agent-node/* 3-pack + @ai-plus/de-agent 2-pack + @zannstore/baileys 17-version + litespeed-cache + polymarket-risk-manager + poly-kelly + phabricator-client (pip)
+  cred-stealer / typosquat / real-plugin-impersonation classes; @zannstore/baileys advises full-host-compromise on install.
+  → rotate creds if any installed; audit npm+pip installs since 2026-07-29.
+- [GHSA-mjqf-28ph-426h](https://github.com/advisories/GHSA-mjqf-28ph-426h) — kube-logging/logging-operator (Go) · CVSS 9.9 · EPSS 0.004 · public writeup
+  Fluentd config injection RCE via unescaped Flow CRD `record_transformer.records`.
+  → upgrade logging-operator to ≥ 0.0.0-20260608145523 today.
 
-**Ranked 3/5/3 tiers:**
-
-- **PATCH TODAY** — 2 fresh KEV adds (SharePoint deserialization RCE CVE-2026-50522 EPSS 0.21 + Check Point SmartConsole auth bypass CVE-2026-16232, both CISA-due 2026-07-25) + npm `ethers-wallet-package` malware trio (wallet-stealer typosquat, all 3 published today 01:01Z).
-- **PATCH THIS WEEK** — 2 fresh next-auth criticals published today (fail-open + homoglyph @ bypass, 15min apart), postcss arbitrary file read (fix 8.5.12), svgo removeScripts XSS 8.2, JupyterLab XSS pair.
-- **MONITOR** — pyasn1 3-CVE DoS cluster (fix 0.6.4, transitive under `cryptography`), immutable.js List trie DoS, malware feed volume (100+/48h, 61 pip + 38 npm + 1 composer).
-
-**Notable pattern surface:** SharePoint dual-KEV week (CVE-2026-50522 6 days after CVE-2026-58644, same product), npm-auth-primitive same-day-double (2 next-auth crits within 15min), ethers-wallet trio extends `[[wallet-credential-stealer-supply-chain]]` rail from n=1 (injective 6-27) to n=4.
-
-**Delivery:** Digest is 3120 chars (under 4000 cap), queued at `.pending-notify/1784820704.md` for post-run delivery — bash `>` redirect regression continued today (n=3 same-week), `./notify` script exec blocked, so wrote the pending file directly and let the post-run step ship it.
-
-**Files:** `.pending-notify/1784820704.md` (digest), `memory/logs/2026-07-23.md` (log entry appended with tier counts, IDs, source status, notable patterns, and full skill summary). Log line: `SECURITY_DIGEST_OK`.
-
-**Follow-up:** SharePoint dual-KEV suggests ongoing ToolShell-class exploit chain worth naming; next-auth `[[same-day-double-critical]]` is a fresh pattern candidate; T-2 Friday 7-25 = both KEV due dates + H unlock cliff = triple-signal day.
+*PATCH THIS WEEK*
+- [GHSA-4p3g-4hcj-wpvx](https://github.com/advisories/GHSA-4p3g-4hcj-wpvx) — prebid-server (Go) · CVSS 10.0 · EPSS 0.004
+  bidder-adapter SSRF exposes host env / internal endpoints via unvalidated URL interpolation.
+  → schedule upgrade: prebid-server → ≥ 4.4.0.
+- [GHSA-2956-977x-2w3r](https://github.com/advisories/GHSA-2956-977x-2w3r) + 5 more — flyto-core (pip) 6-CVE mass-disclose · CVSS 8.5–10.0
+  arbitrary file write + unauth SSRF with internal-key exfil + LLM/API-key leak + env-var readout — all one patch.
+  → schedule upgrade: flyto-core → ≥ 2.26.7.
+- [GHSA-m4x6-gwgp-4pm7](https://github.com/advisories/GHSA-m4x6-gwgp-4pm7) — @aws/agentcore (npm) · CVSS 9.0 · EPSS 0.003
+  Bedrock AgentCore CLI code injection via triple-quote escape in `collaborationInstruction`.
+  → schedule upgrade: @aws/agentcore → ≥ 0.14.2.
+- [GHSA-9xq3-3fqg-4vg7](https://github.com/advisories/GHSA-9xq3-3fqg-4vg7) + [GHSA-7h3g-4w2f-fj2f](https://github.com/advisories/GHSA-7h3g-4w2f-fj2f) — proot-distro (pip) 2-CVE · CVSS 8.2/8.2
+  symlink escape (host file write) + container isolation bypass via crafted tar/restore archives.
+  → schedule upgrade: proot-distro → ≥ 5.1.6.
+- [GHSA-8r6w-3qq5-4p4r](https://github.com/advisories/GHSA-8r6w-3qq5-4p4r) — pterodactyl/wings (Go) · CVSS 8.1 · EPSS 0.004
+  JWT scoping bypass lets subuser upload files without explicit `file.create` grant.
+  → schedule upgrade: pterodactyl/wings → ≥ 1.12.2.

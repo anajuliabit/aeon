@@ -1,0 +1,90 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-23",
+        "description": "MCP deepens agent integrations; autonomous ops layers proliferate — supplier-risk and email/wallet identity surface as agent use cases."
+      },
+      "children": [
+        "heading1",
+        "link1",
+        "link2",
+        "separator1",
+        "heading2",
+        "link3",
+        "link4",
+        "footer"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP as agent-dev tool",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@ducnguyen67201 — MCP transports are safe; execution intent requires live guardrails — argument safety must evaluate tool payloads in production.",
+        "href": "https://x.com/ducnguyen67201/status/2080080043460669607",
+        "source": "X"
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@remcomulder — NCrunch exposes IDE test engine as MCP server — agents can write code with live feedback, headless or IDE-native.",
+        "href": "https://x.com/remcomulder/status/2080079028380471474",
+        "source": "X"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent autonomy ops layer",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "link3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@Web3steph_ — Mermailapp gives agents autonomous email identity, wallet, inbox ops — moves agents from observers to autonomous actors in email.",
+        "href": "https://x.com/Web3steph_/status/2080079851709485132",
+        "source": "X"
+      },
+      "children": []
+    },
+    "link4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@polsia — Procurenode automates supplier risk + CBAM tariff monitoring 24/7 — agents handle tariff cycles faster than quarterly human reviews.",
+        "href": "https://x.com/polsia/status/2080079690887487513",
+        "source": "X"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 5 → kept: 4",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
