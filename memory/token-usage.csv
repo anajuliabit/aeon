@@ -900,4 +900,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-29,evening-recap,claude-sonnet-4-6,8,8406,417998,68139
 2026-07-30,skill-freshness,claude-sonnet-4-6,30,39727,2107599,90154
 2026-07-30,token-alert,claude-opus-4-7,23,11249,1115245,49184
-2026-07-30,heartbeat,claude-opus-4-7,13948,23954,1150986,130936
+2026-07-30,security-digest,claude-opus-4-7,51,30896,3647689,98202
