@@ -1,0 +1,253 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "mcp-heavy day. 2026-07-28 stateless spec drops, ruflo mcp bridge becomes CVE-2026-59726, copilot's mcp surface hits GA."
+      },
+      "children": [
+        "section-1-heading",
+        "section-1-stack",
+        "sep-1",
+        "section-2-heading",
+        "section-2-stack",
+        "sep-2",
+        "section-3-heading",
+        "section-3-stack",
+        "meta"
+      ]
+    },
+    "section-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP 2026-07-28 goes stateless",
+        "level": "h3"
+      }
+    },
+    "section-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "post-1a-group",
+        "post-1b-group"
+      ]
+    },
+    "post-1a-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-1a-tweet",
+        "post-1a-link"
+      ]
+    },
+    "post-1a-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "sthnavy",
+        "handle": "sthnavy",
+        "text": "spec ships stateless: no init handshake, self-contained calls; discovery, inputs, long-task, cache, auth all rebuilt."
+      }
+    },
+    "post-1a-link": {
+      "type": "Link",
+      "props": {
+        "label": "Read on X",
+        "href": "https://x.com/sthnavy/status/2082611680480239695"
+      }
+    },
+    "post-1b-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-1b-tweet",
+        "post-1b-link"
+      ]
+    },
+    "post-1b-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "fujikawa",
+        "handle": "fujikawa",
+        "text": "same spec across harness implementations produces 30x cost variance; runaway and security fixes bundled."
+      }
+    },
+    "post-1b-link": {
+      "type": "Link",
+      "props": {
+        "label": "Read on X",
+        "href": "https://x.com/fujikawa/status/2082617070953673217"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Ruflo MCP zero-auth (CVE-2026-59726)",
+        "level": "h3"
+      }
+    },
+    "section-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "post-2a-group",
+        "post-2b-group"
+      ]
+    },
+    "post-2a-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-2a-tweet",
+        "post-2a-link"
+      ]
+    },
+    "post-2a-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AlexanderChopra",
+        "handle": "AlexanderChopra",
+        "text": "ruflo mcp bridge shipped with no auth: unauthenticated terminal_execute plus poisoned agent memory store."
+      }
+    },
+    "post-2a-link": {
+      "type": "Link",
+      "props": {
+        "label": "Read on X",
+        "href": "https://x.com/AlexanderChopra/status/2082611102282899457"
+      }
+    },
+    "post-2b-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-2b-tweet",
+        "post-2b-link"
+      ]
+    },
+    "post-2b-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ZeroDayDevApp",
+        "handle": "ZeroDayDevApp",
+        "text": "any network caller can inject commands and poison agent memory; no auth on the exposed mcp."
+      }
+    },
+    "post-2b-link": {
+      "type": "Link",
+      "props": {
+        "label": "Read on X",
+        "href": "https://x.com/ZeroDayDevApp/status/2082609834763890860"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP surface expands",
+        "level": "h3"
+      }
+    },
+    "section-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "post-3a-group",
+        "post-3b-group"
+      ]
+    },
+    "post-3a-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-3a-tweet",
+        "post-3a-link"
+      ]
+    },
+    "post-3a-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "akira6592",
+        "handle": "akira6592",
+        "text": "github copilot code review, agent skills, and mcp now generally available on the platform."
+      }
+    },
+    "post-3a-link": {
+      "type": "Link",
+      "props": {
+        "label": "Read on X",
+        "href": "https://x.com/akira6592/status/2082609996983107911"
+      }
+    },
+    "post-3b-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-3b-tweet",
+        "post-3b-link"
+      ]
+    },
+    "post-3b-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DanKornas",
+        "handle": "DanKornas",
+        "text": "mcp-remote-macos-use ships: mcp server letting agents drive a local or remote mac (screen capture, keyboard, pointer, app actions)."
+      }
+    },
+    "post-3b-link": {
+      "type": "Link",
+      "props": {
+        "label": "Read on X",
+        "href": "https://x.com/DanKornas/status/2082607331066454408"
+      }
+    },
+    "meta": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai-cache · candidates: 12 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

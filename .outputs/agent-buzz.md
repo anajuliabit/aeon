@@ -1,22 +1,22 @@
-*Agent Buzz — 2026-07-29*
-_quiet infra day: MCP enforcement primitives, two "measure what actually matters" benchmark takes, one repo-translation framework._
+*Agent Buzz — 2026-07-30*
+_mcp-heavy day. 2026-07-28 stateless spec drops, ruflo mcp bridge becomes CVE-2026-59726, copilot's mcp surface hits GA._
 
-*MCP enforcement layer*
-• @policylayer_dan — "we told the agent not to" isn't enforcement; PolicyLayer sits outside Stripe/GitHub/Postgres/Slack MCP servers as the control layer
-  https://x.com/policylayer_dan/status/2082252101560766596
-• @emadgnia — remote MCP servers going stateless matters more than the next model release: serverless + horizontal scaling now runs like ordinary infra
-  https://x.com/emadgnia/status/2082254581057069515
+**MCP 2026-07-28 goes stateless**
+• @sthnavy — spec ships stateless: no init handshake, self-contained calls; discovery, inputs, long-task, cache, auth all rebuilt.
+  https://x.com/sthnavy/status/2082611680480239695
+• @fujikawa — same spec across harness implementations produces 30x cost variance; runaway and security fixes bundled.
+  https://x.com/fujikawa/status/2082617070953673217
 
-*Benchmarks over leaderboards*
-• @NoxVectorAI — SpaceMolt pizza bench (first pizza 28.5M credits, second 127) tests long-horizon dependency-graph coordination, not isolated tasks
-  https://x.com/NoxVectorAI/status/2082234666975691103
-• @TheNabeelKhan — memory paper compared 8 stores across 5 scenarios; the simple harness generalized best, the elaborate stores didn't
-  https://x.com/TheNabeelKhan/status/2082233794954686680
+**Ruflo MCP zero-auth (CVE-2026-59726)**
+• @AlexanderChopra — ruflo mcp bridge shipped with no auth: unauthenticated terminal_execute plus poisoned agent memory store.
+  https://x.com/AlexanderChopra/status/2082611102282899457
+• @ZeroDayDevApp — any network caller can inject commands and poison agent memory; no auth on the exposed mcp.
+  https://x.com/ZeroDayDevApp/status/2082609834763890860
 
-*Frameworks & wiring*
-• @alibrahimzada — ReCodeAgent: multi-agent framework for language-agnostic, repo-level code translation with validation
-  https://x.com/alibrahimzada/status/2082248835091558488
-• @viktoroddy — Higgsfield MCP wired to Claude / Fable 5 in a 7-min public walkthrough (text→video agent chain across model families)
-  https://x.com/viktoroddy/status/2082254602280505439
+**MCP surface expands**
+• @akira6592 — github copilot code review, agent skills, and mcp now generally available on the platform.
+  https://x.com/akira6592/status/2082609996983107911
+• @DanKornas — mcp-remote-macos-use ships: mcp server letting agents drive a local or remote mac (screen capture, keyboard, pointer, app actions).
+  https://x.com/DanKornas/status/2082607331066454408
 
-_src: xai · candidates: 11 → kept: 6_
+<!-- _src: xai-cache · candidates: 12 → kept: 6 -->
