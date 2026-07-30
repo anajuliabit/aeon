@@ -1,11 +1,12 @@
-*List Digest — 2026-07-29*
+*List Digest — 2026-07-30*
 
-slow day on the tracked defi list. 10 tweets returned; only 2 rise above chat noise: flow's accumulation shortlist and minty's qwen skill-self-play write-up.
+Solo list, one thesis: buyback/revenue rail — ETHFI @ 3x P/F + AERO merger both fit "biz up, price down, catalyst pending".
 
-*DeFi Researchers*
-- x.com/Flowslikeosmo — the "buyback-thesis" narrative gets a concrete 7-token shortlist (PENDLE, AERO, AAVE, SKY, PUMP, HYPE, RAIL) under a strict filter: strong biz, revenue-to-holders, discounted valuation. no ETH/SOL. RAIL is the least obvious inclusion. (♥102, ↻4) — [View](https://x.com/Flowslikeosmo/status/2082240434777341961)
-- x.com/DeFiMinty — Qwen's Skill Self-Play (proposer, solver, controller loop that refines its own task pool) beats unguided self-play by 6.5pts on Qwen3-4B and 2.8pts on 8B. for logic puzzles, unguided couldn't even bootstrap a valid training loop. training-curriculum-as-a-service, and another small-MoE-frontier-close data point. (♥12, ↻1) — [View](https://x.com/DeFiMinty/status/2082245934478418399)
+*DeFi analysts list*
+- x.com/Flowslikeosmo — ETHFI reprice call: $227M/yr fees, $52M rev, $407M mcap = 3.04x P/F vs Kelp/Renzo/Puffer avg ~5.6x → ~$1.30 fair; TVL still 91% restaking-anchored but Liquid/Cash the actual fee engine (♥21, ↻4) — [View](https://x.com/Flowslikeosmo/status/2082592010591236396)
+- x.com/Louround_ — AERO thread (Q2/Q3 2026 merger): explicit "same series as ETHFI/EIGEN" framing; $12B/mo DEX vol on $300M TVL (Slipstream doing multi-x-per-$ of classic pools), 100% of $121M/yr fees → veAERO, 200M AERO (~10% supply) already max-locked by PGF buyback (♥4-7, ↻0) — [View](https://x.com/Louround_/status/2082590990280646662)
+- x.com/Louround_ — AERO merger mechanics: 94.5/5.5% split by 52wk trailing rev (Aerodrome $260M vs Velodrome $15M), OP-superchain-native interop + Hyperlane/Superlane for ETH mainnet; kills weekly gauge voting for "ve(3,3) × prediction markets" predictive allocation (♥2, ↻0) — [View](https://x.com/Louround_/status/2082590456916111761)
 
 ---
-sources: list1=ok(10, 2 above signal-floor)
+sources: 1642770456720683008=ok(9)
 status: LIST_DIGEST_OK

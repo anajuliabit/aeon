@@ -902,3 +902,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-30,token-alert,claude-opus-4-7,23,11249,1115245,49184
 2026-07-30,security-digest,claude-opus-4-7,51,30896,3647689,98202
 2026-07-30,btc-levels,claude-sonnet-4-6,10,5250,377070,42913
+2026-07-30,list-digest,claude-opus-4-7,37,16225,2169562,54418

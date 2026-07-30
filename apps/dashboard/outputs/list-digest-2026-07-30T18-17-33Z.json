@@ -1,0 +1,111 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-07-30"
+      },
+      "children": [
+        "heading-thesis",
+        "sep1",
+        "group-posts",
+        "sep2",
+        "status"
+      ]
+    },
+    "heading-thesis": {
+      "type": "Heading",
+      "props": {
+        "text": "Solo list, one thesis: buyback/revenue rail — ETHFI @ 3x P/F + AERO merger both fit 'biz up, price down, catalyst pending'",
+        "level": "h3"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-analysts": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi analysts list",
+        "level": "h4"
+      }
+    },
+    "group-posts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-analysts",
+        "post1",
+        "post2",
+        "post3"
+      ]
+    },
+    "post1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ETHFI reprice call: $227M/yr fees, $52M rev, $407M mcap = 3.04x P/F vs Kelp/Renzo/Puffer avg ~5.6x → ~$1.30 fair; TVL still 91% restaking-anchored but Liquid/Cash the actual fee engine",
+        "href": "https://x.com/Flowslikeosmo/status/2082592010591236396",
+        "source": "x.com/Flowslikeosmo",
+        "score": "♥21, ↻4"
+      }
+    },
+    "post2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AERO thread (Q2/Q3 2026 merger): explicit 'same series as ETHFI/EIGEN' framing; $12B/mo DEX vol on $300M TVL (Slipstream doing multi-x-per-$ of classic pools), 100% of $121M/yr fees → veAERO, 200M AERO (~10% supply) already max-locked by PGF buyback",
+        "href": "https://x.com/Louround_/status/2082590990280646662",
+        "source": "x.com/Louround_",
+        "score": "♥4-7, ↻0"
+      }
+    },
+    "post3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AERO merger mechanics: 94.5/5.5% split by 52wk trailing rev (Aerodrome $260M vs Velodrome $15M), OP-superchain-native interop + Hyperlane/Superlane for ETH mainnet; kills weekly gauge voting for 've(3,3) × prediction markets' predictive allocation",
+        "href": "https://x.com/Louround_/status/2082590456916111761",
+        "source": "x.com/Louround_",
+        "score": "♥2, ↻0"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status-text",
+        "sources-text"
+      ]
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(9)",
+        "variant": "caption"
+      }
+    }
+  }
+}
