@@ -1,0 +1,461 @@
+{
+  "root": "card_github_trending",
+  "state": {},
+  "elements": {
+    "card_github_trending": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-30"
+      },
+      "children": [
+        "section_top_pick",
+        "separator_1",
+        "section_devtools",
+        "separator_2",
+        "section_aiml",
+        "separator_3",
+        "section_infra",
+        "separator_4",
+        "footer_status"
+      ]
+    },
+    "section_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_pick",
+        "link_jcode_top_pick"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "link_jcode_top_pick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "1jehuang/jcode",
+        "href": "https://github.com/1jehuang/jcode",
+        "score": "rust-native coding harness pitching RAM efficiency as the differentiator vs the node/electron pack — shipped 3 releases in 3h today (v0.64.0 → v0.64.2). first efficiency-first entry in the harness taxonomy."
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "devtools_list"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtool_1",
+        "devtool_2"
+      ]
+    },
+    "devtool_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtool_1_header",
+        "devtool_1_stats",
+        "devtool_1_desc"
+      ]
+    },
+    "devtool_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_jcode_devtools",
+        "badge_rust",
+        "badge_accelerating_1"
+      ]
+    },
+    "link_jcode_devtools": {
+      "type": "Link",
+      "props": {
+        "label": "1jehuang/jcode",
+        "href": "https://github.com/1jehuang/jcode"
+      }
+    },
+    "badge_rust": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "secondary"
+      }
+    },
+    "badge_accelerating_1": {
+      "type": "Badge",
+      "props": {
+        "text": "[ACCELERATING]",
+        "variant": "default"
+      }
+    },
+    "devtool_1_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars_today_1",
+        "stat_stars_total_1",
+        "stat_velocity_1"
+      ]
+    },
+    "stat_stars_today_1": {
+      "type": "Stat",
+      "props": {
+        "label": "★ today",
+        "value": "640"
+      }
+    },
+    "stat_stars_total_1": {
+      "type": "Stat",
+      "props": {
+        "label": "★ total",
+        "value": "14k"
+      }
+    },
+    "stat_velocity_1": {
+      "type": "Stat",
+      "props": {
+        "label": "velocity",
+        "value": "66.7/d"
+      }
+    },
+    "devtool_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "3 releases 05:31→08:47Z today. rust competitor to claude code / aider / opencode on the runtime-efficiency axis.",
+        "variant": "body"
+      }
+    },
+    "devtool_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtool_2_header",
+        "devtool_2_stats",
+        "devtool_2_desc"
+      ]
+    },
+    "devtool_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_openwork",
+        "badge_typescript",
+        "badge_accelerating_2"
+      ]
+    },
+    "link_openwork": {
+      "type": "Link",
+      "props": {
+        "label": "different-ai/openwork",
+        "href": "https://github.com/different-ai/openwork"
+      }
+    },
+    "badge_typescript": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "badge_accelerating_2": {
+      "type": "Badge",
+      "props": {
+        "text": "[ACCELERATING]",
+        "variant": "default"
+      }
+    },
+    "devtool_2_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars_today_2",
+        "stat_stars_total_2"
+      ]
+    },
+    "stat_stars_today_2": {
+      "type": "Stat",
+      "props": {
+        "label": "★ today",
+        "value": "97"
+      }
+    },
+    "stat_stars_total_2": {
+      "type": "Stat",
+      "props": {
+        "label": "★ total",
+        "value": "18k"
+      }
+    },
+    "devtool_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "opencode-powered alt to claude cowork — 3-release burn today (v0.18.12 stable + 2 experimental) with commits landing every minute on desktop/multi-org fixes.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_aiml",
+        "aiml_item"
+      ]
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml_header",
+        "aiml_stats",
+        "aiml_desc"
+      ]
+    },
+    "aiml_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_vibevoice",
+        "badge_python",
+        "badge_accelerating_3"
+      ]
+    },
+    "link_vibevoice": {
+      "type": "Link",
+      "props": {
+        "label": "microsoft/VibeVoice",
+        "href": "https://github.com/microsoft/VibeVoice"
+      }
+    },
+    "badge_python": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge_accelerating_3": {
+      "type": "Badge",
+      "props": {
+        "text": "[ACCELERATING]",
+        "variant": "default"
+      }
+    },
+    "aiml_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars_today_3",
+        "stat_stars_total_3"
+      ]
+    },
+    "stat_stars_today_3": {
+      "type": "Stat",
+      "props": {
+        "label": "★ today",
+        "value": "336"
+      }
+    },
+    "stat_stars_total_3": {
+      "type": "Stat",
+      "props": {
+        "label": "★ total",
+        "value": "52k"
+      }
+    },
+    "aiml_desc": {
+      "type": "Text",
+      "props": {
+        "text": "microsoft ships open-source frontier voice AI. pairs with 7-29 huggingface/speech-to-speech = open-voice-primitive rail n=2 across lab + big-co in 48h.",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_infra",
+        "infra_item"
+      ]
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "infra_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "infra_header",
+        "infra_stats",
+        "infra_desc"
+      ]
+    },
+    "infra_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_flashkda",
+        "badge_cuda",
+        "badge_returning"
+      ]
+    },
+    "link_flashkda": {
+      "type": "Link",
+      "props": {
+        "label": "MoonshotAI/FlashKDA",
+        "href": "https://github.com/MoonshotAI/FlashKDA"
+      }
+    },
+    "badge_cuda": {
+      "type": "Badge",
+      "props": {
+        "text": "Cuda",
+        "variant": "secondary"
+      }
+    },
+    "badge_returning": {
+      "type": "Badge",
+      "props": {
+        "text": "[RETURNING]",
+        "variant": "outline"
+      }
+    },
+    "infra_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars_today_4",
+        "stat_stars_total_4"
+      ]
+    },
+    "stat_stars_today_4": {
+      "type": "Stat",
+      "props": {
+        "label": "★ today",
+        "value": "91"
+      }
+    },
+    "stat_stars_total_4": {
+      "type": "Stat",
+      "props": {
+        "label": "★ total",
+        "value": "1.1k"
+      }
+    },
+    "infra_desc": {
+      "type": "Text",
+      "props": {
+        "text": "kimi delta attention CUDA kernels — the inference primitive from kimi K3 (7-28 top-HN paper) shipped as usable code, fresh CUTLASS pipeline commits 7-28/7-29.",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_status": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok (17 clean, page cut at rank 17) · gh_api=ok (6/6) · kept 4/17",
+        "variant": "caption"
+      }
+    }
+  }
+}

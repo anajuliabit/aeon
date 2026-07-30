@@ -1,23 +1,22 @@
-*GitHub Trending — 2026-07-29*
+*GitHub Trending — 2026-07-30*
 
-*Top pick* — [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill)
-skill-pack primitive rail extends to n=5 in 5 UTC-days. tightest utility angle yet: PDF → Claude Code /skill in one shot.
-
-*AI/ML*
-• [huggingface/speech-to-speech](https://github.com/huggingface/speech-to-speech) — ★ 227 today (7.6k total) · Python · [RETURNING]
-fresh push today, 21× velocity spike on a 721d repo. open-weights local voice agents pair with airi 7-28 = embodied-agent stack forming.
+*Top pick* — [1jehuang/jcode](https://github.com/1jehuang/jcode)
+rust-native coding harness pitching RAM efficiency as the differentiator vs the node/electron pack — shipped 3 releases in 3h today (v0.64.0 → v0.64.2). first efficiency-first entry in the harness taxonomy.
 
 *Devtools*
-• [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) — ★ 423 today (12k total) · Python · [ACCELERATING]
-top pick; counted above. extends mattpocock/skills → obra/superpowers → claude-video → last30days-skill → this.
+• [1jehuang/jcode](https://github.com/1jehuang/jcode) — ★ 640 today (14k total) · Rust · [ACCELERATING]
+66.7/d velocity, 3 releases 05:31→08:47Z today. rust competitor to claude code / aider / opencode on the runtime-efficiency axis.
 
-*Web/Apps*
-• [pascalorg/editor](https://github.com/pascalorg/editor) — ★ 341 today (19k total) · TypeScript · [ACCELERATING]
-browser-native 3D architectural editor. rare open-source CAD-in-browser at production scale — sketchup alt without the desktop install.
+• [different-ai/openwork](https://github.com/different-ai/openwork) — ★ 97 today (18k total) · TypeScript · [ACCELERATING]
+opencode-powered alt to claude cowork — 3-release burn today (v0.18.12 stable + 2 experimental) with commits landing every minute on desktop/multi-org fixes.
 
-*Data*
-• [opengeos/GeoLibre](https://github.com/opengeos/GeoLibre) — ★ 607 today (3.6k total) · TypeScript · [ACCELERATING]
-one GIS runtime across browser + desktop + mobile + Jupyter. no Leaflet/QGIS silo split for geospatial code.
+*AI/ML*
+• [microsoft/VibeVoice](https://github.com/microsoft/VibeVoice) — ★ 336 today (52k total) · Python · [ACCELERATING]
+microsoft ships open-source frontier voice AI. pairs with 7-29 huggingface/speech-to-speech = open-voice-primitive rail n=2 across lab + big-co in 48h.
+
+*Infra*
+• [MoonshotAI/FlashKDA](https://github.com/MoonshotAI/FlashKDA) — ★ 91 today (1.1k total) · Cuda · [RETURNING]
+kimi delta attention CUDA kernels — the inference primitive from kimi K3 (7-28 top-HN paper) shipped as usable code, fresh CUTLASS pipeline commits 7-28/7-29.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/12
+sources: trending=ok (17 clean, page cut at rank 17) · gh_api=ok (6/6) · kept 4/17
