@@ -5,6 +5,35 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-07-31)
+
+- **skill-health hash 7bf88238 stable through 7-30 18:15Z formal tick** (3-consec formal-tick hash identity, no fresh formal tick 7-31): **0 CRITICAL** · 18 DEGRADED · 13 WARNING · 10 HEALTHY · 3 NO_DATA. **13 open issues** post-ISS-027/028 filing 7-30. Sandbox-truncation family **day-39** (T+14 day-16, ISS-025 hand-off T+1 SLIPPED). cost-report weakest sr=0.12 (7/58) durable.
+- **9-consec DEGRADED heartbeat verdict-string identity across ~65h span** (7-27 20:12Z → 7-31 14:44Z). 10-skill chronic-failure sub-50% cohort persists: cost-report 12% · reg-monitor 19% · skill-analytics 19% · vuln-scanner 21% · market-context-refresh 32% · narrative-tracker 33% · search-skill 38% · security-digest 42% · aixbt-pulse 47% · skill-health 49%. Composition identity unchanged.
+- **PR queue clears 3→1 overnight** — #167 (bash-redirect fix, 7d past-gate) + #170 (hn-digest self-improve, 21h) both merged 7-30 23:37Z within 20-sec window. #165 sole survivor at d12 (docs skill-graph, CONFLICTING, 7-19 17:38Z; still under CLAUDE.md ~14d past-touch threshold in operator batch-merge cadence window).
+- **07:00Z scheduler slot RECOVERS d1 7-31** — morning-brief 07:36Z + daily-routine 07:41Z + thought-review 07:36Z all fired at +33-41min dispatch-lag. 1-instance MISS confirmed as one-day anomaly, not durable regime. Discharges 7-30 15:16Z heartbeat's ISS-file escalation gate.
+- **Dispatch-lag 40-76min pattern durable d2 7-31** — morning cluster 07:33-07:41Z (~+33-41min), token-alert 12:23Z (+23min), github-trending 09:xx (~+40min), security-digest 14:44Z (~+44min), heartbeat 14:44Z (~+44min). Not a one-day anomaly — 2-consec-UTC-day GHA runner queue depth or webhook processing delay.
+- **Bash `>` redirect regression workaround-chain n=12+ durable 9-UTC-day span** — 7-22 → 7-31. PR #167 merged 7-30 23:37Z; 7-31 fires (heartbeat + security-digest + morning-brief + daily-routine + github-trending + token-alert) all held clean via Write-tool workaround belt-and-braces (no `>` attempted post-merge yet). **Workaround retirement candidate 8-01** — try `>` redirect next fire to confirm regression fix landed OR keep as durable pattern.
+- **12:00 UTC batch DARK day-34** — ISS-027 signature durable through 7-31 12:00Z token-alert clean same-slot fire (n=34 CONFIRMED). aixbt-pulse dead-slot d34 (65+ consec missed 12h cycles).
+- **ISS-025 hand-off T+1 day-16 SLIPPED** — 7-30 deadline passed without operator direct-author against `.github/workflows/aeon.yml:479-495`. Cost-report weakest 12% durable. Reflect 8-03 (weekly-batch window) next natural catch.
+
+## Positive events 7-30 → 7-31
+
+- **07:00Z scheduler slot RECOVERS d1 7-31** — morning-brief + daily-routine + thought-review all fired 07:33-07:41Z at +33-41min dispatch-lag vs 7-30's whole-slot MISS. 1-instance anomaly confirmed. First evidence 07:00Z scheduler-drop was one-day event, not durable regime; ISS-file escalation gate discharges.
+- **PR queue clears 3→1 overnight 7-30 23:37Z** — #167 (bash-redirect fix, 7d past-gate self-improve 7-23 18:21Z) + #170 (hn-digest path fix, 21h self-improve 7-29 18:41Z) merged within 20-sec window. First self-improve merge-batch since 7-28 dupe-pair (#168+#169) close. #165 sole survivor at d12 CONFLICTING.
+- **CoinGecko clean-day streak extends to d38** — 7-31 12:00Z token-alert clean same-slot fire under ISS-027 batch-dark signature, CG API independence holds.
+- **github-issues 6-consec clean day 7-26 → 7-31** — `GITHUB_ISSUES_OK` streak durable via daily-routine sub-agent.
+- **ISS-028 kill-test underway 7-31** — PR #167 merged 7-30 23:37Z; all 7-31 fires (n=6 skills) held clean via Write-tool workaround. Belt-and-braces preserved; workaround-chain rail extends n=11→n=12+. 8-01 slot: try `>` redirect to confirm regression fix.
+- **[[rust-native-efficiency-first-harness]] rail NEW n=2 in 48h 7-31** — agavra/tuicr (code-review TUI, 19.4× baseline) pairs with 7-30 1jehuang/jcode (coding harness). Sub-taxonomy expands: coding-harness → code-review-harness.
+- **[[star-anomaly-rail]] extends n=6 → n=7 durable 7-31** — affaan-m/ECC 7th trending appearance (1,219/d normalized velocity, most durable rail in memory-window). 5-consec-UTC-day drop 7-27→7-31.
+- **Sub-25 trending page fetch pattern n=3 → n=4 durable 7-31** — 4-consec WebFetch cut short of ~25 expected (14-17 range). WebFetch hard-cap hypothesis firms; ISS-file candidate if 8-01 confirms 5-consec.
+- **[[embodied-agent-runtime-primitive]] rail n=2 → n=3 7-31** — Gemini Robotics 2 whole-body drop (HN 539pts) joins airi + speech-to-speech + VibeVoice sibling voice-primitive rail. Big-lab whole-body tier upgrade; 3-consec-UTC-day embodied/voice-runtime cadence.
+- **[[eth-lib-typosquat-campaign]] NEW sub-class 7-31** — 7 ethers.js typosquats + fs-extra + socket.io = 3-cluster mass-typosquat batch published 22:49-22:51Z 7-30. Direct Aeon-audience relevance. Sub-class under [[mass-parallel-real-package-account-takeover]] parent.
+- **KEV quiet-cadence 7-31** — 0 fresh KEV entries surface after dedup gate (all 3 fresh-week network-perimeter vendors already covered by 7-27/7-29 fires).
+- **First fully-synchronized red day in memory-window 7-31** — 4-of-4 tracked tokens negative 24h. Participation-lift extinguishes fully on d3.
+- **Fleet-relevance agent-thesis extends 14 → 15-consec-day 7-31** — Memory Decoder paper + Gemini Robotics 2 + Anthropic cybersec-evals HN all direct-fleet-relevant. Rail durability continues 7-17 → 7-31.
+- **Aeon-fleet meta-signal fresh 7-31** — Opus 5 half-price-Fable-5 confirmation d7 post 7-24 ship + Claude Code computer-use gain (previous CVE-2026-55607 auto-patch memory pointer).
+- **Thinnest github-trending slate in memory-window 7-31** — 2 picks (vs 4-5 baseline) with 12/14 drop rate. Quality-over-quantity gate held on genuinely quiet day; first Devtools-only bucket-split.
+
 ## Current health snapshot (2026-07-30)
 
 - **skill-health hash 7bf88238 (fresh 7-28 19:02Z NOTIFY, hash 3-consec formal-tick identity)**: **0 CRITICAL** · 18 DEGRADED · 13 WARNING · 10 HEALTHY · 3 NO_DATA. 11 open issues. Sandbox-truncation family **day-38** (T+13 day-15). Composition unchanged since 7-28 flip. cost-report weakest sr=0.12 (7/58) durable.

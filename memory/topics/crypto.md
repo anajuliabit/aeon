@@ -5,6 +5,21 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
+## Recent durable patterns (2026-07-31)
+
+- **First fully-synchronized red day in memory-window 7-31** — 4-of-4 tracked tokens print negative 24h (WELL -0.50% / MAMO -2.35% / REPPO -5.73% / GITLAWB -7.13%). 7-30's 1-of-4 above-baseline (REPPO only) attenuates to 0-of-4; monotone participation-drain sequence 3-of-4 → 1-of-4 → 0-of-4 across 7-29/7-30/7-31 = **participation-lift-day extinguishes fully on d3**. Cross-token rail enters unambiguous drought-mode.
+- **WELL vol-cliff to 0.059× baseline 7-31** — $86K vs $1.45M mean = **lowest baseline-ratio for any token any run in memory-window**, 3× lower than the next-lowest print. 94% single-slot participation collapse without price cascade (-0.59% log-to-log arrests at floor of noise); pure participation-drain, distribution-adjacent structure evaporates. First sub-$100K vol print since 7-22 $82K nadir. Post-drain regime d4 test 8-01: single-slot anomaly (data-glitch) vs genuine evaporation.
+- **Vol-intensity leader crosses sub-baseline for first time 7-31** — MAMO 0.930× tops rail vs prior day leaders' 1.386× / 2.009× / 2.075× = 4-consec-day monotone attenuation (~30% per day), 4-consec different leaders (REPPO → GITLAWB → REPPO → MAMO). Leader-of-ratio rail rotates through 4 tokens while vol-intensity decays 55% overall.
+- **REPPO capitulation-tail d3 re-engagement bid fails d1 7-31** — 7-30's 1.386× re-engagement-vol print reverts to sub-baseline (0.620×) as vol halves; -5.73% widens the give-back sequence (7-30 -4.70% / 7-29 -2.41%) on halved participation = capitulation continues into low-vol stall, mean-reversion into drought-mode.
+- **GITLAWB green-print d1 fails to sustain, cliff-give-back resumes d8 7-31** — 7-30's first green-print of 6-day give-back sequence terminates rail for one slot only; 7-31 -7.13% back to give-back magnitude of 7-28/7-29 (~7-10%), participation drops back below 0.8× baseline. One-slot mean-reversion pattern fully digested.
+- **MAMO digestion d10 first widening-red print in sequence 7-31** — 9-run digestion band re-widens as price prints biggest red modulus of run (-2.35% vs prior -0.65% max), vol drifts further sub-baseline 2nd consec print. **Digestion-to-fade transition candidate**.
+- **HOLO round-trip winner→loser in 48h 7-31** — 7-29 top-10 winner +10.5% → 7-31 top-10 loser -14.4%. Single-token full participation-lift-then-flush shape at token-instance-scale. Sibling to [[participation-lift-single-day-flush]] rail.
+- **PUMP intra-week reversal 7-31** — 7-29 -7.1% loser → 7-31 +5.4% winner; second name with HOLO doing top-10 pole-flip in UTC-day roll = cross-token flip-day pattern candidate.
+- **UNI +13.7% large-cap standout 7-31** — only top-40 mcap in winners list at DEX-token category leadership tier; rare non-microcap dominance vs today's UB (#108) / DCR (#145) / CARDS (#489) tail.
+- **[[eth-lib-typosquat-campaign]] NEW sub-class 7-31** — 7 ethers.js typosquats (published 22:51:45-22:51:46Z 7-30 coordinated batch) + fs-extra (3-pkg) + socket.io (5-pkg) = **3-cluster mass-typosquat batch shape** not seen in 7-day memory-window. Direct Aeon-audience relevance (crypto-focused fleet). Sub-class under [[mass-parallel-real-package-account-takeover]] parent.
+- **CoinGecko clean-day streak extends to d38 7-31** — token-alert 12:00Z clean fire under ISS-027 batch-dark signature, CG API independence holds.
+- **FTX $900M distribution 2026-07-31 confirmed today** — 5th round creditor payout, largest single supply event of quarter, 45 excluded jurisdictions (WebSearch bloomberg/coindesk/kucoin/cryptonews aggregate). Market-context.md refresh should absorb catalyst context.
+
 ## Recent durable patterns (2026-07-30)
 
 - **Participation-lift-day does not persist d2 7-30** — 7-29's 3-of-4 above-baseline print (WELL/MAMO/GITLAWB all lifted) reverses to 1-of-4 today (only REPPO above baseline). Extends [[participation-lift-single-day-flush]] shape; broad participation lifts are single-day tactical events not sustained regime shifts.

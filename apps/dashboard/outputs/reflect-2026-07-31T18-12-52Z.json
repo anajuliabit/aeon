@@ -1,0 +1,268 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidated — 2026-07-31"
+      },
+      "children": [
+        "status_section",
+        "separator1",
+        "pr_section",
+        "separator2",
+        "issues_section",
+        "separator3",
+        "metrics_section",
+        "separator4",
+        "watchlist_alert"
+      ]
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_text",
+        "slot_recovery"
+      ]
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "🧠 Memory consolidated at 07:00Z",
+        "variant": "lead"
+      }
+    },
+    "slot_recovery": {
+      "type": "Stat",
+      "props": {
+        "label": "Slot recovery",
+        "value": "d1",
+        "delta": "1-day anomaly, not durable"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_header",
+        "pr_queue_status",
+        "pr_merged_167",
+        "pr_merged_170",
+        "pr_conflicting_165"
+      ]
+    },
+    "pr_header": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Queue",
+        "level": "h3"
+      }
+    },
+    "pr_queue_status": {
+      "type": "Text",
+      "props": {
+        "text": "Queue clears 3→1 overnight (merged 7-30 23:37Z within 20-sec window)",
+        "variant": "caption"
+      }
+    },
+    "pr_merged_167": {
+      "type": "Badge",
+      "props": {
+        "text": "#167 bash-redirect fix — MERGED",
+        "variant": "secondary"
+      }
+    },
+    "pr_merged_170": {
+      "type": "Badge",
+      "props": {
+        "text": "#170 hn-digest — MERGED",
+        "variant": "secondary"
+      }
+    },
+    "pr_conflicting_165": {
+      "type": "Badge",
+      "props": {
+        "text": "#165 sole survivor at d12 — CONFLICTING",
+        "variant": "outline"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues_header",
+        "issue_028_stack",
+        "issue_025_stack"
+      ]
+    },
+    "issues_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues Tracking",
+        "level": "h3"
+      }
+    },
+    "issue_028_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iss028_badge",
+        "iss028_status",
+        "iss028_detail"
+      ]
+    },
+    "iss028_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-028 kill-test — UNDERWAY",
+        "variant": "default"
+      }
+    },
+    "iss028_status": {
+      "type": "Text",
+      "props": {
+        "text": "8-01 tries bare > redirect",
+        "variant": "caption"
+      }
+    },
+    "iss028_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Confirm regression fix landed",
+        "variant": "muted"
+      }
+    },
+    "issue_025_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iss025_badge",
+        "iss025_detail"
+      ]
+    },
+    "iss025_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025 hand-off — SLIPPED",
+        "variant": "destructive"
+      }
+    },
+    "iss025_detail": {
+      "type": "Text",
+      "props": {
+        "text": "t+1 slipped past 7-30 deadline, day-16 elapsed",
+        "variant": "caption"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_header",
+        "metric_cg",
+        "metric_rust_stack",
+        "metric_star"
+      ]
+    },
+    "metrics_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics & Streaks",
+        "level": "h3"
+      }
+    },
+    "metric_cg": {
+      "type": "Stat",
+      "props": {
+        "label": "CG clean-day streak",
+        "value": "d38"
+      }
+    },
+    "metric_rust_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rust_stat",
+        "rust_detail"
+      ]
+    },
+    "rust_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Rust-native harness rail",
+        "value": "n=2",
+        "delta": "in 48h"
+      }
+    },
+    "rust_detail": {
+      "type": "Text",
+      "props": {
+        "text": "tuicr + jcode",
+        "variant": "caption"
+      }
+    },
+    "metric_star": {
+      "type": "Stat",
+      "props": {
+        "label": "Star-anomaly rail",
+        "value": "n=7",
+        "delta": "durable via ecc 5-consec-day"
+      }
+    },
+    "separator4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watchlist_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Watchlist Status",
+        "message": "First fully-synchronized red day on watchlist — 4-of-4 tokens negative 24h, participation-lift extinguishes fully on d3",
+        "type": "warning"
+      }
+    }
+  }
+}
