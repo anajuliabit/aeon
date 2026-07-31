@@ -1,16 +1,12 @@
 ## Summary
 
-**btc-levels run — 2026-07-30 ~21:07 UTC**
+**btc-levels run — 2026-07-31T01:09Z**
 
-- **Spot:** $64,730.96
-- **Daily close (2026-07-29):** $63,916.60
-
-**Level evaluation:**
-| Level | Status |
-|---|---|
-| Spot ≤ $45,000 (leverage-review) | Clear — $64,730 well above |
-| Close < $60,500 (downtrend signal) | Clear — $63,916 above threshold |
-| Reclaim $63,500 | Already alerted (flag true) |
-| Reclaim $65,900 | Not reached — $64,730 still below |
-
-No alerts fired. No notification sent. State and log committed.
+- **Spot**: $64,927 | **Daily close (2026-07-29)**: $64,722
+- **No alerts fired** — all levels clear:
+  - Leverage-review ($45k): spot well above, `inLeverageReviewBand` stays false
+  - Breakdown ($60,500 daily close): $64,722 comfortably above threshold
+  - Reclaim $63,500: already alerted in a prior cycle (`reclaim63500Alerted=true`)
+  - Reclaim $65,900: spot $64,927 hasn't crossed — watching
+- No `./notify` sent (quiet run is the norm)
+- State and log committed (chore commit, `aae98ac`)
