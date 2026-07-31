@@ -1,25 +1,22 @@
-*Evening Recap — 2026-07-30*
-_TL;DR: productive-but-incomplete — reflect closed a 24d doc-gap (ISS-027/028 filed), security pushed 3 criticals, and ISS-025 hand-off slipped its T-0 deadline to d15._
+*Evening Recap — 2026-07-31*
+_TL;DR: PR #171 filed and typosquat campaign surfaced, but ISS-028 kill-test negative — regression outlasts the supposed fix_
 
 *Headlines:*
-- reflect — ISS-027.md + ISS-028.md filed, MEMORY.md rebuilt · memory/issues/ISS-027.md
-- security-digest — Cisco FMC KEV + kube-logging RCE + flyto-core 6-CVE; 3 patch-today / 5 this-week · .tmp/security-digest.md
-- heartbeat 15:16Z — 07:00Z slot MISS confirmed (morning-brief + daily-routine + thought-review all dropped) · docs/status.md
-- github-trending — jcode top pick (Rust efficiency-first n=1) + VibeVoice (open-voice rail n=2); 4 picks shipped · .outputs/github-trending.md
-- agent-buzz — Ruflo MCP CVE-2026-59726 (first-in-wild) + stateless spec + Copilot GA same-day · .tmp/agent-buzz.md
+- self-improve — PR #171 (github-trending sub-25 cap fix, self-authored) · https://github.com/anajuliabit/aeon/pull/171
 
 *Notable:*
-- btc-levels ×5 — spot $64,218–$64,845, all levels clear
-- token-alert — 0/4 alerts, 37th clean CG day; REPPO 1.386× leads vol-intensity
-- skill-freshness — FRESHNESS_NO_CHANGE, fingerprint `1ab8c658` stable 5d
-- skill-health — DEGRADED(18) stable-hash 3rd-consec tick; daily-cadence notify sent
-- list-digest — buyback rail: ETHFI 3.04× P/F + AERO merger mechanics; 1 list / 3 tweets
+- security-digest — 3-cluster coordinated typosquat batch (ethers.js ×7, fs-extra ×3, socket.io ×5; synchronized 22:49-22:51Z 7-30) · 3/4/1 tiers sent
+- ISS-028 kill-test NEGATIVE — PR #167 fix doesn't cover `>>` append; workaround chain n=13 durable (10-UTC-day span 7-22→7-31)
+- token-alert — first fully-synchronized red day in memory-window (4-of-4 negative); WELL vol-cliff to 0.059× baseline (lowest-ever baseline-ratio)
+- reflect — MEMORY.md 71L→60L; 11 patterns integrated (rust-harness n=2, star-anomaly n=7, embodied-runtime n=3, [[eth-lib-typosquat-campaign]] NEW)
+- daily-routine — Memory Decoder paper (6.9B params beats 12B on 17 benchmarks); fleet-relevance agent-thesis d15
 
 *Decisions for tomorrow:*
-- merge PR #167 (bash-redirect fix, d7 past weekly-batch gate) · https://github.com/anajuliabit/aeon/pull/167
-- merge PR #165 (CONFLICTING, d11) · https://github.com/anajuliabit/aeon/pull/165
-- ISS-025 hand-off slipped T-0: operator direct-author against aeon.yml:479-495 (now d15)
-- if 07:00Z slot misses 7-31, file new ISS (1-instance today — not yet ISS-worthy)
-- PR #170 just crossed 24h · https://github.com/anajuliabit/aeon/pull/170
+- author ISS-025 capture-step fix against aeon.yml:479-495 (d16 past T-0; cost-report stays at 12% SR without it)
+- investigate ISS-028 scope — PR #167 may only fix `>` fresh writes, not `>>` append; split or reopen root-cause
+- review PR #165 (d12 CONFLICTING) at 8-03 weekly-batch window · https://github.com/anajuliabit/aeon/pull/165
 
-_+1 collapsed (heartbeat 09:04Z dedup-skip) · sources: log=ok cron-state=ok_
+*Blockers:*
+- ISS-028 — bash `>>` append blocked post-fix, n=13 workaround active
+
+_+9 routine runs collapsed (btc-levels ×5, heartbeat ×2, skill-health ×1, thought-review ×1) · sources: log=ok cron-state=ok_

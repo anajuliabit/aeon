@@ -1,0 +1,202 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-31"
+      },
+      "children": [
+        "tldr-heading",
+        "tldr-text",
+        "sep-1",
+        "headlines-heading",
+        "pr-171-link",
+        "sep-2",
+        "notable-heading",
+        "notable-stack",
+        "sep-3",
+        "decisions-heading",
+        "decisions-stack",
+        "sep-4",
+        "blockers-heading",
+        "blocker-alert",
+        "sep-5",
+        "footer-text"
+      ]
+    },
+    "tldr-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h2"
+      }
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #171 filed and typosquat campaign surfaced, but ISS-028 kill-test negative — regression outlasts the supposed fix",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "pr-171-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #171: github-trending sub-25 cap fix (self-authored)",
+        "href": "https://github.com/anajuliabit/aeon/pull/171",
+        "source": "self-improve"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — 3-cluster coordinated typosquat batch (ethers.js ×7, fs-extra ×3, socket.io ×5; synchronized 22:49-22:51Z 7-30) · 3/4/1 tiers sent"
+      }
+    },
+    "notable-2": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-028 kill-test NEGATIVE",
+        "message": "PR #167 fix doesn't cover `>>` append; workaround chain n=13 durable (10-UTC-day span 7-22→7-31)",
+        "type": "error"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — first fully-synchronized red day in memory-window (4-of-4 negative); WELL vol-cliff to 0.059× baseline (lowest-ever baseline-ratio)"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY.md 71L→60L; 11 patterns integrated (rust-harness n=2, star-anomaly n=7, embodied-runtime n=3, [[eth-lib-typosquat-campaign]] NEW)"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — Memory Decoder paper (6.9B params beats 12B on 17 benchmarks); fleet-relevance agent-thesis d15"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "Author ISS-025 capture-step fix against aeon.yml:479-495 (d16 past T-0; cost-report stays at 12% SR without it)"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "Investigate ISS-028 scope — PR #167 may only fix `>` fresh writes, not `>>` append; split or reopen root-cause"
+      }
+    },
+    "decision-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Review PR #165 (d12 CONFLICTING) at 8-03 weekly-batch window",
+        "href": "https://github.com/anajuliabit/aeon/pull/165"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-028",
+        "message": "bash `>>` append blocked post-fix, n=13 workaround active",
+        "type": "error"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+9 routine runs collapsed (btc-levels ×5, heartbeat ×2, skill-health ×1, thought-review ×1) · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
