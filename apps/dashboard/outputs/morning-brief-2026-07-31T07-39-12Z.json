@@ -1,0 +1,279 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "morning brief"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "text_date",
+        "separator_1",
+        "section_focus",
+        "separator_2",
+        "section_yesterday",
+        "separator_3",
+        "section_watch",
+        "separator_4",
+        "section_running"
+      ]
+    },
+    "text_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-31",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "focus today",
+        "level": "h3"
+      }
+    },
+    "focus_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "iss-028 kill-test — why now: pr #167 merged 23:37z, first live fires today"
+      }
+    },
+    "focus_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025 hand-off d16 slipped past t-0 — why now: weekly-review action #1, cost-report 12% sr weakest"
+      }
+    },
+    "focus_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "market-context.md refresh — why now: 14d stale crosses today, 09:15z fingerprint-flip due"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_yesterday",
+        "yesterday_shipped",
+        "yesterday_filed",
+        "yesterday_stuck",
+        "yesterday_recovered"
+      ]
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "since yesterday",
+        "level": "h3"
+      }
+    },
+    "yesterday_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_shipped",
+        "text_shipped"
+      ]
+    },
+    "badge_shipped": {
+      "type": "Badge",
+      "props": {
+        "text": "shipped",
+        "variant": "secondary"
+      }
+    },
+    "text_shipped": {
+      "type": "Text",
+      "props": {
+        "text": "pr #167 (bash-redirect) + #170 (hn-digest path) merged 23:37z, queue 3→1"
+      }
+    },
+    "yesterday_filed": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_filed",
+        "text_filed"
+      ]
+    },
+    "badge_filed": {
+      "type": "Badge",
+      "props": {
+        "text": "filed",
+        "variant": "secondary"
+      }
+    },
+    "text_filed": {
+      "type": "Text",
+      "props": {
+        "text": "iss-027 + iss-028 landed via reflect 18:22z, 24d doc-gap closed (index 11→13 open)"
+      }
+    },
+    "yesterday_stuck": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_stuck",
+        "text_stuck"
+      ]
+    },
+    "badge_stuck": {
+      "type": "Badge",
+      "props": {
+        "text": "stuck",
+        "variant": "destructive"
+      }
+    },
+    "text_stuck": {
+      "type": "Text",
+      "props": {
+        "text": "pr #165 d12 conflicting, sole past-gate survivor"
+      }
+    },
+    "yesterday_recovered": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_recovered",
+        "text_recovered"
+      ]
+    },
+    "badge_recovered": {
+      "type": "Badge",
+      "props": {
+        "text": "recovered",
+        "variant": "secondary"
+      }
+    },
+    "text_recovered": {
+      "type": "Text",
+      "props": {
+        "text": "07:00z slot fires today (1-instance miss, not repeated)"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_watch": {
+      "type": "Alert",
+      "props": {
+        "title": "watch",
+        "message": "ftx $900m creditor distribution today — largest single supply event of quarter; watch btc-levels + token-alert for regime break vs steady prints",
+        "type": "warning"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_running",
+        "running_item_1",
+        "running_item_2",
+        "running_item_3",
+        "running_item_4",
+        "running_item_5"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "running today",
+        "level": "h3"
+      }
+    },
+    "running_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00z (fingerprint-flip expected)"
+      }
+    },
+    "running_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00z"
+      }
+    },
+    "running_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00z (iss-028 kill-test slot)"
+      }
+    },
+    "running_item_4": {
+      "type": "Text",
+      "props": {
+        "text": "reflect + action-converter + goal-tracker + skill-health @ 18:00z"
+      }
+    },
+    "running_item_5": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review @ 21:00z"
+      }
+    }
+  }
+}
