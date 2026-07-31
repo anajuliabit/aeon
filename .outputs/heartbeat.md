@@ -1,9 +1,19 @@
-Heartbeat complete — all findings dedup vs 48h window, notify skipped.
+Heartbeat run complete.
 
 ## Summary
-- Files created/modified: `docs/status.md` (regenerated, 43-skill table + 13 open issues, Overall 🔴 DEGRADED, next-run btc-levels 16:15Z), `memory/logs/2026-07-31.md` (heartbeat 14:44Z entry appended)
-- Actions taken: Read MEMORY.md + last 2d of logs + cron-state.json (56 entries) + aeon.yml + issues/INDEX.md (13 open) + gh pr list (1 open: #165 d12) + gh issue list (0 urgent); ran all P0/P1/P2/P3 checks; wrote status page; dedup-check → no notify
-- Output: `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
-- Findings (all dedup vs prior ticks): 10-skill chronic-failure cohort persists (9-consec verdict-string identity ~65h span); PR #165 d12 CONFLICTING (within CLAUDE.md weekly-batch cadence guidance); 7 MEMORY-flagged items rolling per UTC-day (ISS-025 T+1 slipped, batch-dark d34, priorities.md 57d stale, etc.)
-- Positive deltas since 7-30 21:09Z: PR queue clears 3→1 overnight (#167 + #170 both merged 23:37Z); 07:00Z scheduler-slot recovers d1 (morning-brief + daily-routine + thought-review fire at +33-41min dispatch-lag vs 7-30 whole-slot MISS = 1-instance anomaly confirmed); ISS-028 kill-test slot underway (PR #167 fresh-merge propagation window active)
-- No follow-up actions needed — 20:00Z heartbeat tick will observe afternoon fires (security-digest 14:00Z in-flight, evening cluster 18:00Z pending)
+
+Ran heartbeat skill (var=""); all checks green on P0/P1 delta but standing chronic-failure cohort keeps verdict at 🔴 DEGRADED.
+
+**Findings (all dedup-match against 48h logs — NOTIFY SKIP):**
+- **P0**: 10-skill chronic sub-50% cohort unchanged (cost-report 12% / reg-monitor 19% / skill-analytics 19% / vuln-scanner 21% / market-context-refresh 32% / narrative-tracker 33% / search-skill 38% / security-digest 43% / aixbt-pulse 47% / skill-health 50%). 10-consec formal-tick verdict-string identity across ~71h span.
+- **P1**: PR queue 1→2 since 14:44Z tick — PR #171 (github-trending fix, 2h41m old) joined #165 (d12 CONFLICTING). #171 fresh, #165 within CLAUDE.md weekly-batch cadence. 0 urgent issues.
+- **P2**: MEMORY.md flagged items carried per UTC-day roll (post-reflect 60L, 7 active goals).
+- **Fresh delta**: ISS-028 kill-test result NEGATIVE — PR #167 fix merged 7-30 23:37Z but bash `>>` sandbox regression persists (list-digest 18:11Z + agent-buzz 18:04Z both hit block, Edit-tool workaround held). Workaround chain n=12+ → **n=13** across **10-UTC-day span** 7-22 → 7-31. Already covered by list-digest self-notify + reflect + action-converter → dedup match, no separate notify.
+
+**Files modified:**
+- `docs/status.md` — regenerated (43-skill table timestamps advanced, ISS-028 title updated for n=13/10-day/kill-test-NEGATIVE, Overall 🔴 DEGRADED, next-run evening-recap at 21:00 UTC)
+- `memory/logs/2026-07-31.md` — heartbeat entry appended
+
+**Output**: `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
+
+**Follow-up seeded**: 21:00Z evening cluster (evening-recap + thought-review + aixbt-pulse) fires in ~12 minutes; 8-01 07:00Z slot d2 recovery test; ISS-028 reopened root-cause investigation (PR #167 scope may cover `>` fresh writes only, not `>>` append).
