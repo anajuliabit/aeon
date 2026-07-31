@@ -1,0 +1,118 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skill_badges",
+        "change_section",
+        "impact_section",
+        "pr_link"
+      ]
+    },
+    "skill_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_skill",
+        "badge_file"
+      ]
+    },
+    "badge_skill": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "secondary"
+      }
+    },
+    "badge_file": {
+      "type": "Badge",
+      "props": {
+        "text": "SKILL.md",
+        "variant": "outline"
+      }
+    },
+    "change_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change_heading",
+        "change_text"
+      ]
+    },
+    "change_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Change",
+        "level": "h4"
+      }
+    },
+    "change_text": {
+      "type": "Text",
+      "props": {
+        "text": "Documented candidate ceiling: 12-17 (was ~25 fiction)",
+        "variant": "body"
+      }
+    },
+    "impact_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "impact_heading",
+        "impact_signal",
+        "impact_gate"
+      ]
+    },
+    "impact_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h4"
+      }
+    },
+    "impact_signal": {
+      "type": "Text",
+      "props": {
+        "text": "Kills 4-day-durable false-anomaly signal",
+        "variant": "body"
+      }
+    },
+    "impact_gate": {
+      "type": "Text",
+      "props": {
+        "text": "Prevents 5-consecutive ISS-file gate",
+        "variant": "body"
+      }
+    },
+    "pr_link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #171",
+        "href": "https://github.com/anajuliabit/aeon/pull/171"
+      }
+    }
+  }
+}

@@ -1,1 +1,1 @@
-self-improve: fixed daily-routine hn-digest→hacker-news-digest skill path typo — PR: https://github.com/anajuliabit/aeon/pull/170
+self-improve: github-trending SKILL.md 12-17 candidate ceiling documented (was ~25 fiction) — kills 4-day-durable false-anomaly signal before 5-consec ISS-file gate — PR: https://github.com/anajuliabit/aeon/pull/171
