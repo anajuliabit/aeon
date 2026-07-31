@@ -1,0 +1,206 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-31"
+      },
+      "children": [
+        "top-pick-section",
+        "sep1",
+        "devtools-section",
+        "sep2",
+        "sources-text"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-heading",
+        "tuicr-link",
+        "tuicr-desc"
+      ]
+    },
+    "top-pick-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "tuicr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "agavra/tuicr",
+        "href": "https://github.com/agavra/tuicr"
+      }
+    },
+    "tuicr-desc": {
+      "type": "Text",
+      "props": {
+        "text": "first tui code-review harness to hit trending in the memory-window — small rust binary, vim keybindings, terminal-native diff instead of another electron ide plugin.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "devtools-heading",
+        "repo1-stack",
+        "repo2-stack"
+      ]
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "repo1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1-link",
+        "repo1-meta-row",
+        "repo1-desc"
+      ]
+    },
+    "repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "agavra/tuicr",
+        "href": "https://github.com/agavra/tuicr"
+      }
+    },
+    "repo1-meta-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1-stat",
+        "repo1-lang-badge",
+        "repo1-status-badge"
+      ]
+    },
+    "repo1-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "190 today (2k total)",
+        "label": "★"
+      }
+    },
+    "repo1-lang-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust"
+      }
+    },
+    "repo1-status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "repo1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "19× baseline spike on 204d-old repo. extends the rust-native-efficiency-first harness sub-class started 7-30 with jcode — code review this time, coding harness last time.",
+        "variant": "caption"
+      }
+    },
+    "repo2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2-link",
+        "repo2-meta-row",
+        "repo2-desc"
+      ]
+    },
+    "repo2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ChromeDevTools/chrome-devtools-mcp",
+        "href": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+      }
+    },
+    "repo2-meta-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2-stat",
+        "repo2-lang-badge",
+        "repo2-status-badge"
+      ]
+    },
+    "repo2-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "80 today (48k total)",
+        "label": "★"
+      }
+    },
+    "repo2-lang-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "repo2-status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "repo2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "google's official chrome devtools mcp server. coding agents (claude code, cursor, codex) can step-debug live pages instead of guessing at browser state.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 2/14 · quiet day",
+        "variant": "muted"
+      }
+    }
+  }
+}
