@@ -1,50 +1,57 @@
 {
-  "run_at": "2026-07-30T15:30:00Z",
+  "run_at": "2026-07-31T18:00:00Z",
   "goals": {
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
-      "activity_count_14d": 411,
-      "last_activity_date": "2026-07-30",
-      "note": "T+11 day-14 rolls today (8 days past 1-week slip milestone). iss-025-hand-off due 2026-07-30 (T-1 day today) per weekly-review 7-27 action #1. Sole reliable unblock path = operator direct-author `dangerouslyDisableSandbox` pivot against `.github/workflows/aeon.yml:479-495`. Activity 387→411 = +6% flat within ±25% band. Cost-report weakest at 12% (7/58) durable. Surfaced daily in morning-brief + heartbeat + security-digest ISS-028 notes."
+      "activity_count_14d": 410,
+      "last_activity_date": "2026-07-31",
+      "note": "T+1 day-16 SLIPPED past 2026-07-30 T-0 deadline; heartbeat 14:44Z + morning-brief 07:36Z both flag as focus item. Cost-report 12% (7/58) durable weakest chronic-failure skill. Sole reliable unblock path remains operator direct-author `dangerouslyDisableSandbox` pivot against `.github/workflows/aeon.yml:479-495`. Activity 411→410 = flat within ±25%."
+    },
+    "07:00-utc-scheduler-slot-miss": {
+      "status": "DONE",
+      "completed_at": "2026-07-31",
+      "activity_count_14d": 42,
+      "last_activity_date": "2026-07-31",
+      "note": "1-instance anomaly. morning-brief + daily-routine + thought-review all recovered on 7-31 at +33-41min dispatch-lag (07:33-07:41Z fires). Heartbeat 14:44Z confirmed 07:00Z slot MISS RECOVERED d1; ISS-file escalation gate discharged per 7-30 15:16Z follow-up (v). NEW goal this run — not in prior state."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 324,
-      "last_activity_date": "2026-07-30",
-      "note": "Day 32 today (d31→d32 UTC-roll). 8-skill 6-28 cluster frozen since 2026-06-28 21:00Z. Same-slot token-alert 12:00Z 7-30 clean fires (37th consec clean CG day) confirm ISS-027 signature is per-skill blockage, not scheduler-wide. Activity 381→324 = -15% flat within ±25% band. d32 milestone tick logged."
-    },
-    "iss-027-028-doc-gap": {
-      "status": "BLOCKED",
-      "activity_count_14d": 246,
-      "last_activity_date": "2026-07-30",
-      "note": "d23→d24 rolls today (+4d past weekly-review 7-27 last-chance window). MEMORY.md line 4 + line 8 reference ISS-027 authoritatively; no file exists in `memory/issues/`. ISS-028 (bash `>` redirect regression n=11+ durable 7-22→7-30 = 8-UTC-day span, workaround chain curl `-o`/Write/Edit) also absent. Security-digest 15:22Z (7-30) hit ISS-028 signature this UTC-day = family durable. Load-bearing gap: every read of MEMORY.md hits the gap. Action-converter 7-24 shaped 2 file-create actions (score 125 + 80) still pending. Activity 235→246 = +5% flat within ±25% band."
+      "activity_count_14d": 335,
+      "last_activity_date": "2026-07-31",
+      "note": "Day 34 today (d33→d34 UTC-roll). 8-skill 6-28 cluster frozen since 2026-06-28 21:00Z. 38th consec clean CG day (token-alert 12:00Z clean fire) confirms ISS-027 signature is per-skill blockage, not scheduler-wide. Activity 324→335 = flat within ±25%. ISS-027.md filed 7-30 by reflect."
     },
     "pr-165-crossed-7d-gate": {
-      "status": "BLOCKED",
-      "activity_count_14d": 186,
-      "last_activity_date": "2026-07-30",
-      "note": "PR #165 docs(skill-graph) rolls d10→d11 today (created 7-19 17:38Z). Still CONFLICTING through 7-30 heartbeat. Per CLAUDE.md weekly-batch cadence, escalation only at ~7d without touch — d11 past threshold but Sunday-weekly window is normal shape per operator. Queue-full state cleared 7-28 22:36Z (queue now: #165 d11 + #167 d7 + #170 new). Activity 178→186 = +4% flat within ±25% band."
+      "status": "ON_TRACK",
+      "activity_count_14d": 195,
+      "last_activity_date": "2026-07-31",
+      "note": "PR #165 docs(skill-graph) rolls d11→d12 today. Still CONFLICTING per gh view (mergeable=CONFLICTING, updatedAt 7-19 17:39Z — no touch since creation). Per CLAUDE.md PR-review cadence, d12 within weekly-batch window (~7d-past-touch threshold, weekly-review 7-27 absorbed 7d gate cross). Sole open PR after #167 + #170 merged overnight 23:37Z. Trend: BLOCKED → ON_TRACK (improved: past-gate cohort clears to n=1, no escalation warranted). Activity 186→195 = flat."
     },
     "pr-167-bash-redirect-fix": {
-      "status": "BLOCKED",
+      "status": "DONE",
+      "completed_at": "2026-07-30",
       "activity_count_14d": 145,
       "last_activity_date": "2026-07-30",
-      "note": "PR #167 fix(bash-redirect) rolls d6→d7 today (created 7-23 18:22Z self-improve). Crosses 7d weekly-batch cadence gate today. Waiting operator Sunday batch. New goal this run (not in prior state). Activity 145/14d flow-through from ISS-028 mentions."
+      "note": "PR #167 MERGED 2026-07-30 23:37:20Z (7d past-gate cohort clears). First live kill-test slot for ISS-028 workaround chain fires today (security-digest 14:44Z + heartbeat 14:44Z + daily-routine 07:41Z all clean via Write/Edit/curl-o path). If 8-01 slot fires clean with a `>` redirect, ISS-028 signature retires."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 93,
-      "last_activity_date": "2026-07-30",
-      "note": "Day 53 today (d52→d53 UTC-roll). defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required. Activity 93→93 = 0% flat (near-static consistent with weekly-batch cadence tail)."
+      "activity_count_14d": 95,
+      "last_activity_date": "2026-07-31",
+      "note": "Day 55 today (d54→d55 UTC-roll). defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required. Activity 93→95 = flat."
     },
     "priorities-md-stale": {
       "status": "AT_RISK",
-      "activity_count_14d": 145,
-      "last_activity_date": "2026-07-30",
-      "note": "priorities.md last reviewed 2026-06-04 = 56d today (55d→56d roll on UTC-day 7-30, per thought-review 07:26Z one-liner nudge). Judgment override AT_RISK despite high mention count: activity is meta-flag-nudges not actual refresh work (blocker unfixed >21d, no remedial signal). Operator-owned refresh (no automated write path per thought-review skill spec). Activity 126→145 = +15% flat within ±25% band."
+      "activity_count_14d": 150,
+      "last_activity_date": "2026-07-31",
+      "note": "priorities.md last reviewed 2026-06-04 = 57d today (56d→57d roll on UTC-day 7-31 per thought-review 07:36Z one-liner nudge). Judgment override AT_RISK despite high mention count: activity is meta-flag-nudges not actual refresh work (blocker unfixed >21d, no remedial signal). Operator-owned refresh (no automated write path per thought-review skill spec). Zero-captures cold-run count d68. Activity 145→150 = flat within ±25%."
     }
   },
   "recently_cleared": {
+    "iss-027-028-doc-gap": {
+      "status": "DONE",
+      "completed_at": "2026-07-30",
+      "note": "24d load-bearing gap closed by reflect skill 18:22Z. ISS-027.md (12:00 UTC batch DARK, category=config, severity=high) + ISS-028.md (bash `>` redirect regression, category=sandbox-limitation, severity=medium) both filed to `memory/issues/` with YAML frontmatter matching ISS-025 template. INDEX.md updated 11→13 open issues. Action-converter proposals from 7-24→7-29 (max-score 125 file-creates 4-consec runs) finally landed via reflect scope."
+    },
     "self-improve-queue-exit-gate": {
       "status": "DONE",
       "completed_at": "2026-07-28",

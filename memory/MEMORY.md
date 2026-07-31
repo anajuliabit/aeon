@@ -3,15 +3,17 @@
 
 ## Current Goals
 - **ISS-025 capture-step PR hand-off T-0 DEADLINE TODAY 2026-07-30** — operator direct-author against `.github/workflows/aeon.yml:479-495`. Weekly-review 7-27 action #1 target; T+12 day-15. Cost-report weakest at 12% (7/58) durable. Reflect 7-30 evening captures shipped-on-target vs slipped d16 outcome.
-- **07:00 UTC scheduler slot MISS NEW 7-30** — morning-brief + daily-routine + thought-review all dropped today (heartbeat 15:16Z confirmed 8h+ past schedule, no in-flight recovery). Later slots recover with 40-76min dispatch-lag. First whole-slot MISS in memory-window; ISS-file candidate if 7-31 07:00Z misses too.
+- ~~07:00 UTC scheduler slot MISS NEW 7-30~~ — **RECOVERED 2026-07-31 by goal-tracker** (see [Recently Cleared](#recently-cleared)). 1-instance anomaly, ISS-file escalation gate discharged.
 - **12:00 UTC batch DARK day-33** — 8-skill 6-28 cluster (defi-overview / token-pick / token-movers / narrative-tracker / market-context-refresh / fleet-control / on-chain-monitor / defi-monitor) frozen since 6-28 21:00Z. ISS-027 signature durable through 7-30 12:00Z clean same-slot token-alert fire.
 - ~~ISS-027/028 doc-gap~~ — **CLOSED 2026-07-30 by reflect skill** (see [Recently Cleared](#recently-cleared)). ISS-027 (12:00 UTC batch DARK d33) + ISS-028 (bash `>` redirect n=11+ 8-UTC-day span) both filed to `memory/issues/`; INDEX.md updated. 11→13 open issues.
 - **PR #165 d11 past-gate CONFLICTING** — created 7-19 17:38Z, weekly-review 7-27 absorbed 7d gate cross; still CONFLICTING through 7-30 heartbeat = 11d open. Operator batch-merge cadence window.
-- **PR #167 d7 crosses weekly-batch gate 7-30** — bash-redirect fix (7-23 18:21Z self-improve); joins #165 in past-gate cohort (n=2). PR queue 3 open (#170 21h + #167 7d + #165 11d).
+- ~~PR #167 d7 crosses weekly-batch gate 7-30~~ — **MERGED 2026-07-30 23:37:20Z** (see [Recently Cleared](#recently-cleared)). Past-gate cohort cleared to n=1 (#165 sole survivor).
 - **Operator on-chain config day-54** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
 - **priorities.md 56d stale** — last reviewed 2026-06-04. Thought-review flagged in every daily notify. Operator-owned refresh candidate.
 
 ## Recently Cleared
+- **PR #167 bash-redirect fix MERGED 2026-07-30 23:37:20Z** — 7d past-gate cohort clears to n=1. First live kill-test slot for the workaround chain (curl `-o` / Write / Edit / gh --jq) fires today; if 8-01 security-digest slot fires clean with a `>` redirect, the ISS-028 signature retires as durable pattern.
+- **07:00 UTC scheduler slot MISS RECOVERED 2026-07-31 by goal-tracker** — morning-brief 07:33Z + daily-routine 07:41Z + thought-review 07:36Z all fired at +33-41min dispatch-lag on 7-31. Whole-slot MISS confirmed as 1-instance 7-30 anomaly, not durable regime. ISS-file escalation gate discharged per heartbeat 7-30 15:16Z follow-up (v).
 - **ISS-027/028 doc-gap CLOSED 2026-07-30 by reflect skill** — 24d load-bearing gap closed. ISS-027.md (12:00 UTC batch DARK, 8-skill cluster frozen since 6-28 21:00Z, category=config, severity=high) + ISS-028.md (bash `>` redirect regression, workaround chain held on n=11+ fires across 8-UTC-day span 7-22→7-30, category=sandbox-limitation, severity=medium) both filed to `memory/issues/` with YAML frontmatter matching ISS-025 template; INDEX.md updated 11→13 open issues. Action-converter proposals from 7-24→7-29 (max-score 125 file-creates 4-consec runs) finally landed via reflect scope.
 - **07:00Z slot MISS confirmed 7-30 15:16Z** — pending/delayed flag from 09:04Z heartbeat escalated to dropped-tick with notify SENT. Morning-brief + daily-routine + thought-review all 8h+ past schedule.
 - **skill-freshness 09:15Z FRESHNESS_NO_CHANGE** — fingerprint `1ab8c658` stable 5d since 7-25 (7 items flagged: 5 STALE + 2 WARN). Watch: market-context.md crosses STALE threshold ~13:00Z 7-30, fingerprint change + notify expected 7-31.
