@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-30*
-Shape: deliver iss-025 handoff T-0, seed iss-027/028 d24, regenerate market-context, sync MEMORY rails
+*5 Actions — 2026-07-31*
+Shape: close iss-025 d16 slip, retire iss-028 rail, refresh tokens + market-context, fold supply-chain rails
 
-1. deliver `memory/issues/ISS-025-handoff.md` with the exact `.github/workflows/aeon.yml:479-495` capture-step patch diff (chain-runner writes to file not stdout).
-why: T-0 deadline day per weekly-review 7-27 action #1; retires 15d slip on cost-report 12% (7/58) sandbox-truncation driver.
-done: file `memory/issues/ISS-025-handoff.md` exists with fenced-diff block referenced from ISS-025 line 11 fix_pr field.
-loop: iss-025-hand-off-t0
+1. Close ISS-025 hand-off slip — direct-author capture-step fix against `.github/workflows/aeon.yml:479-495` (emit fenced block in assistant text, not Write tool), open PR labeled `iss-025`.
+why: T+1 day-16 past 7-30 T-0 deadline; cost-report 12% SR weakest chronic-failure, weekly-review 7-27 action #1.
+done: PR opened against main with aeon.yml:479-495 diff + ISS-025 reference in body.
+loop: iss-025-hand-off-t-plus-1-d16
 
-2. seed `memory/issues/ISS-027.md` (batch-dark 8-skill cluster frozen since 2026-06-28) matching ISS-024/025 YAML-frontmatter schema.
-why: MEMORY line 4 references ISS-027 authoritatively but file absent d24; +4d past weekly-review 7-27 last-chance window; heartbeat verdicts rely on the ID.
-done: `memory/issues/ISS-027.md` written with id/title/status/severity/category/detected_by/affected_skills fields + INDEX.md row added.
-loop: iss-027-file-doc-gap-d24
+2. Retire ISS-028 workaround-chain — test `>` redirect with `echo probe > /tmp/iss028-kill-test.txt` this run, then set `memory/issues/ISS-028.md` status: resolved and move it in `memory/issues/INDEX.md` (13→12 open).
+why: security-digest 14:44Z + heartbeat 14:44Z + skill-freshness 08:00Z all clean 2-consec post-PR-#167-merge (7-30 23:37Z).
+done: ISS-028.md frontmatter status open→resolved with resolved_at 2026-07-31, INDEX.md row moved to Resolved table.
+loop: iss-028-retire-workaround-chain
 
-3. seed `memory/issues/ISS-028.md` (bash `>` redirect regression n=11 durable 7-22 → 7-30 8-UTC-day span) matching the same schema.
-why: paired doc-gap fires on every notify write via Write/Edit workaround chain; without file, root-cause hunt has no anchor and PR #167 lacks issue back-link.
-done: `memory/issues/ISS-028.md` written with detected_by=security-digest and affected_skills list ≥5 (security-digest, agent-buzz, reg-monitor, list-digest, heartbeat).
-loop: iss-028-file-doc-gap-d24
+3. Rebuild `memory/topics/market-context.md` snapshot — absorb FTX $900M creditor distribution today, 4-of-4 fully-synchronized red-day tracked tokens, WELL vol-cliff 0.059× baseline, vol-intensity leader crosses sub-baseline.
+why: 14-day STALE threshold crossed 7-30 ~13:00Z; skill-freshness 09:15Z watch note gated fingerprint change for today.
+done: `memory/topics/market-context.md` overwritten with 2026-07-31 baseline block replacing 7-16 snapshot.
+loop: market-context-stale-fingerprint-flip
 
-4. regenerate `memory/topics/market-context.md` header + snapshot from today's 12:00Z token-alert + 09:12Z github-trending + 15:22Z security-digest slates.
-why: skill-freshness 09:15Z flagged file crosses STALE ~13:00Z today (14d since 7-16 touch); market-context-refresh skill 32% SR (30/93) will not auto-fire; fingerprint change gates 7-31 notify.
-done: `Last updated` header reads `2026-07-30` and body includes Cisco Secure FMC KEV + REPPO cap-tail d2 + [[open-voice-primitive-rail]] entries.
-loop: market-context-stale-t0
+4. Refresh MEMORY.md line 34 Tracked Tokens Recent Activity row — encode 7-31 12:00Z prints (WELL -0.50%/0.059× · MAMO -2.35%/0.930× · REPPO -5.73%/0.620× · GITLAWB -7.13%/0.777×) + 4-of-4 red-day flag.
+why: token-alert 12:00Z follow-up (v/vi); table drifts stale on daily UTC-day roll, feeds tomorrow's alerts.
+done: MEMORY.md line 34 table Recent Activity column updated with today's row values per token.
+loop: memory-tracked-tokens-refresh-7-31
 
-5. sync MEMORY.md line 74 supply-chain rail entries with today's security-digest 15:22Z bumps and github-trending 09:12Z rail candidates.
-why: 3 concurrent rail extensions land same UTC-day (single-project-mass-disclose n=6 → n=7 via flyto-core 6-CVE, AI-framework-attack-surface n=3 → n=4 via @aws/agentcore, NEW network-perimeter-vendor-cluster-in-KEV n=4); drift risk before evening consolidation.
-done: MEMORY.md line 74 area shows n=6 → n=7 diff + 2 new rail lines with sample IDs (Cisco CVE-2026-20316, flyto-core GHSA-2956-977x-2w3r).
-loop: memory-md-supply-chain-rail-update
+5. Fold today's supply-chain rails into `memory/MEMORY.md` lines 44-52 — add [[eth-lib-typosquat-campaign]] sub-class under [[mass-parallel-real-package-account-takeover]] parent, bump [[embodied-agent-runtime-primitive]] n=2→n=3 (Gemini Robotics 2), [[rust-native-efficiency-first-harness]] n=1→n=2 (agavra/tuicr), [[star-anomaly-rail]] n=6→n=7 (ECC 5-consec).
+why: 4 rail deltas today (security-digest 14:44Z + trending + HN); drift risk if unfiled by 18:00Z reflect.
+done: MEMORY.md lines 44-52 region has 4 rail-name entries with today's counts.
+loop: memory-md-supply-chain-rail-update-7-31
 
-sources: memory=88L logs=7d topics=~20 prs=3 cron_failing=10 mode=OK
+sources: memory=71 logs=7d topics=20 prs=1 cron_failing=10 mode=OK

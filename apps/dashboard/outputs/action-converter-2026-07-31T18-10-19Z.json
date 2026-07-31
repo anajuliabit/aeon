@@ -1,0 +1,661 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-31"
+      },
+      "children": [
+        "shape-section",
+        "sep-1",
+        "actions-container",
+        "sep-2",
+        "sources-text"
+      ]
+    },
+    "shape-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shape-label",
+        "shape-content"
+      ]
+    },
+    "shape-label": {
+      "type": "Text",
+      "props": {
+        "text": "Shape:",
+        "variant": "muted"
+      }
+    },
+    "shape-content": {
+      "type": "Text",
+      "props": {
+        "text": "close iss-025 d16 slip, retire iss-028 rail, refresh tokens + market-context, fold supply-chain rails"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "actions-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-title",
+        "a1-task-group",
+        "a1-status-group",
+        "a1-why-group",
+        "a1-loop-group"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Close ISS-025 hand-off slip",
+        "level": "h3"
+      }
+    },
+    "a1-task-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a1-task-label",
+        "a1-task-text"
+      ]
+    },
+    "a1-task-label": {
+      "type": "Text",
+      "props": {
+        "text": "Task:",
+        "variant": "muted"
+      }
+    },
+    "a1-task-text": {
+      "type": "Text",
+      "props": {
+        "text": "Direct-author capture-step fix against .github/workflows/aeon.yml:479-495 (emit fenced block in assistant text, not Write tool), open PR labeled iss-025"
+      }
+    },
+    "a1-status-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a1-status-label",
+        "a1-status-text"
+      ]
+    },
+    "a1-status-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "muted"
+      }
+    },
+    "a1-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened against main with aeon.yml:479-495 diff + ISS-025 reference in body"
+      }
+    },
+    "a1-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a1-why-label",
+        "a1-why-text"
+      ]
+    },
+    "a1-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a1-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "T+1 day-16 past 7-30 T-0 deadline; cost-report 12% SR weakest chronic-failure, weekly-review 7-27 action #1"
+      }
+    },
+    "a1-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a1-loop-label",
+        "a1-loop-badge"
+      ]
+    },
+    "a1-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a1-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-hand-off-t-plus-1-d16",
+        "variant": "outline"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-title",
+        "a2-task-group",
+        "a2-status-group",
+        "a2-why-group",
+        "a2-loop-group"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Retire ISS-028 workaround-chain",
+        "level": "h3"
+      }
+    },
+    "a2-task-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a2-task-label",
+        "a2-task-text"
+      ]
+    },
+    "a2-task-label": {
+      "type": "Text",
+      "props": {
+        "text": "Task:",
+        "variant": "muted"
+      }
+    },
+    "a2-task-text": {
+      "type": "Text",
+      "props": {
+        "text": "Test > redirect with echo probe > /tmp/iss028-kill-test.txt this run, then set memory/issues/ISS-028.md status: resolved and move it in memory/issues/INDEX.md (13→12 open)"
+      }
+    },
+    "a2-status-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a2-status-label",
+        "a2-status-text"
+      ]
+    },
+    "a2-status-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "muted"
+      }
+    },
+    "a2-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-028.md frontmatter status open→resolved with resolved_at 2026-07-31, INDEX.md row moved to Resolved table"
+      }
+    },
+    "a2-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a2-why-label",
+        "a2-why-text"
+      ]
+    },
+    "a2-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a2-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest 14:44Z + heartbeat 14:44Z + skill-freshness 08:00Z all clean 2-consec post-PR-#167-merge (7-30 23:37Z)"
+      }
+    },
+    "a2-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a2-loop-label",
+        "a2-loop-badge"
+      ]
+    },
+    "a2-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a2-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-028-retire-workaround-chain",
+        "variant": "outline"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-title",
+        "a3-task-group",
+        "a3-status-group",
+        "a3-why-group",
+        "a3-loop-group"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Rebuild market-context.md snapshot",
+        "level": "h3"
+      }
+    },
+    "a3-task-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a3-task-label",
+        "a3-task-text"
+      ]
+    },
+    "a3-task-label": {
+      "type": "Text",
+      "props": {
+        "text": "Task:",
+        "variant": "muted"
+      }
+    },
+    "a3-task-text": {
+      "type": "Text",
+      "props": {
+        "text": "Absorb FTX $900M creditor distribution today, 4-of-4 fully-synchronized red-day tracked tokens, WELL vol-cliff 0.059× baseline, vol-intensity leader crosses sub-baseline"
+      }
+    },
+    "a3-status-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a3-status-label",
+        "a3-status-text"
+      ]
+    },
+    "a3-status-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "muted"
+      }
+    },
+    "a3-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/topics/market-context.md overwritten with 2026-07-31 baseline block replacing 7-16 snapshot"
+      }
+    },
+    "a3-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a3-why-label",
+        "a3-why-text"
+      ]
+    },
+    "a3-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a3-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "14-day STALE threshold crossed 7-30 ~13:00Z; skill-freshness 09:15Z watch note gated fingerprint change for today"
+      }
+    },
+    "a3-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a3-loop-label",
+        "a3-loop-badge"
+      ]
+    },
+    "a3-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a3-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "market-context-stale-fingerprint-flip",
+        "variant": "outline"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-title",
+        "a4-task-group",
+        "a4-status-group",
+        "a4-why-group",
+        "a4-loop-group"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Refresh MEMORY.md tracked tokens",
+        "level": "h3"
+      }
+    },
+    "a4-task-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a4-task-label",
+        "a4-task-text"
+      ]
+    },
+    "a4-task-label": {
+      "type": "Text",
+      "props": {
+        "text": "Task:",
+        "variant": "muted"
+      }
+    },
+    "a4-task-text": {
+      "type": "Text",
+      "props": {
+        "text": "Refresh MEMORY.md line 34 Tracked Tokens Recent Activity row — encode 7-31 12:00Z prints (WELL -0.50%/0.059× · MAMO -2.35%/0.930× · REPPO -5.73%/0.620× · GITLAWB -7.13%/0.777×) + 4-of-4 red-day flag"
+      }
+    },
+    "a4-status-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a4-status-label",
+        "a4-status-text"
+      ]
+    },
+    "a4-status-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "muted"
+      }
+    },
+    "a4-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md line 34 table Recent Activity column updated with today's row values per token"
+      }
+    },
+    "a4-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a4-why-label",
+        "a4-why-text"
+      ]
+    },
+    "a4-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a4-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert 12:00Z follow-up (v/vi); table drifts stale on daily UTC-day roll, feeds tomorrow's alerts"
+      }
+    },
+    "a4-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a4-loop-label",
+        "a4-loop-badge"
+      ]
+    },
+    "a4-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a4-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-tracked-tokens-refresh-7-31",
+        "variant": "outline"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-title",
+        "a5-task-group",
+        "a5-status-group",
+        "a5-why-group",
+        "a5-loop-group"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Fold supply-chain rails",
+        "level": "h3"
+      }
+    },
+    "a5-task-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a5-task-label",
+        "a5-task-text"
+      ]
+    },
+    "a5-task-label": {
+      "type": "Text",
+      "props": {
+        "text": "Task:",
+        "variant": "muted"
+      }
+    },
+    "a5-task-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fold today's supply-chain rails into memory/MEMORY.md lines 44-52 — add [[eth-lib-typosquat-campaign]] sub-class under [[mass-parallel-real-package-account-takeover]] parent, bump [[embodied-agent-runtime-primitive]] n=2→n=3 (Gemini Robotics 2), [[rust-native-efficiency-first-harness]] n=1→n=2 (agavra/tuicr), [[star-anomaly-rail]] n=6→n=7 (ECC 5-consec)"
+      }
+    },
+    "a5-status-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a5-status-label",
+        "a5-status-text"
+      ]
+    },
+    "a5-status-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "muted"
+      }
+    },
+    "a5-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md lines 44-52 region has 4 rail-name entries with today's counts"
+      }
+    },
+    "a5-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a5-why-label",
+        "a5-why-text"
+      ]
+    },
+    "a5-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a5-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "4 rail deltas today (security-digest 14:44Z + trending + HN); drift risk if unfiled by 18:00Z reflect"
+      }
+    },
+    "a5-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a5-loop-label",
+        "a5-loop-badge"
+      ]
+    },
+    "a5-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a5-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-md-supply-chain-rail-update-7-31",
+        "variant": "outline"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=71 logs=7d topics=20 prs=1 cron_failing=10 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
