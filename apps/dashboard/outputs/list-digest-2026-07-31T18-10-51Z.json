@@ -1,0 +1,136 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-31"
+      },
+      "children": [
+        "summary_text",
+        "separator1",
+        "section_heading",
+        "tweets_section",
+        "separator2",
+        "status_section"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "one-voice day: @Louround_ single-handedly carries with a $2.4M CODEC robotics-launchpad thread; hooeem's GPT-voice video the only real cross-current.",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto Traders/Researchers (list 1642770...)",
+        "level": "h2"
+      }
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "link1",
+        "tweet2",
+        "link2",
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround_",
+        "handle": "@Louround_",
+        "text": "4th episode in altcoin series: pitches $CODEC as $2.4M FDV robotics-launchpad infra (browser sim + Foundry hardware-accelerator w/ @peaq + Pumpfun launchpad). Down 96% from ATH, team still shipping a year post-launch. The bet: micro-cap wedge into a crypto x robotics narrative that doesn't have a headline coin yet.",
+        "likes": 35,
+        "retweets": 9
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2082944325495955819"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "@hooeem",
+        "text": "video pitching a GPT-voice + AirPods \"morning routine\" as more valuable than his 9 prior 1M-impression articles. Signal: voice-first agent-consumption pattern getting influencer push; the wrapper (AirPods-as-runtime) is the product, not the model.",
+        "likes": 50,
+        "retweets": 6
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2082942110290911261"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "@cyrilXBT",
+        "text": "dismissive one-liner \"lmaoo won't fall for this one\" — no attached quote/context surfaced; low-signal but the only non-Louround/hooeem voice speaking in the window.",
+        "likes": 8
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2082976252290281810"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_text",
+        "status_badge"
+      ]
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(3-unique-voices, thread-heavy)",
+        "variant": "caption"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "success"
+      }
+    }
+  }
+}

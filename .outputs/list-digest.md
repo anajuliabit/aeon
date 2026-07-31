@@ -1,12 +1,12 @@
-*List Digest — 2026-07-30*
+*List Digest — 2026-07-31*
 
-Solo list, one thesis: buyback/revenue rail — ETHFI @ 3x P/F + AERO merger both fit "biz up, price down, catalyst pending".
+one-voice day: @Louround_ single-handedly carries with a $2.4M CODEC robotics-launchpad thread; hooeem's GPT-voice video the only real cross-current.
 
-*DeFi analysts list*
-- x.com/Flowslikeosmo — ETHFI reprice call: $227M/yr fees, $52M rev, $407M mcap = 3.04x P/F vs Kelp/Renzo/Puffer avg ~5.6x → ~$1.30 fair; TVL still 91% restaking-anchored but Liquid/Cash the actual fee engine (♥21, ↻4) — [View](https://x.com/Flowslikeosmo/status/2082592010591236396)
-- x.com/Louround_ — AERO thread (Q2/Q3 2026 merger): explicit "same series as ETHFI/EIGEN" framing; $12B/mo DEX vol on $300M TVL (Slipstream doing multi-x-per-$ of classic pools), 100% of $121M/yr fees → veAERO, 200M AERO (~10% supply) already max-locked by PGF buyback (♥4-7, ↻0) — [View](https://x.com/Louround_/status/2082590990280646662)
-- x.com/Louround_ — AERO merger mechanics: 94.5/5.5% split by 52wk trailing rev (Aerodrome $260M vs Velodrome $15M), OP-superchain-native interop + Hyperlane/Superlane for ETH mainnet; kills weekly gauge voting for "ve(3,3) × prediction markets" predictive allocation (♥2, ↻0) — [View](https://x.com/Louround_/status/2082590456916111761)
+*Crypto Traders/Researchers (list 1642770...)*
+- x.com/Louround_ — 4th episode in altcoin series: pitches $CODEC as $2.4M FDV robotics-launchpad infra (browser sim + Foundry hardware-accelerator w/ @peaq + Pumpfun launchpad). Down 96% from ATH, team still shipping a year post-launch. The bet: micro-cap wedge into a crypto x robotics narrative that doesn't have a headline coin yet. (♥ 35, ↻ 9) — [View](https://x.com/Louround_/status/2082944325495955819)
+- x.com/hooeem — video pitching a GPT-voice + AirPods "morning routine" as more valuable than his 9 prior 1M-impression articles. Signal: voice-first agent-consumption pattern getting influencer push; the wrapper (AirPods-as-runtime) is the product, not the model. (♥ 50, ↻ 6, 12.5k views) — [View](https://x.com/hooeem/status/2082942110290911261)
+- x.com/cyrilXBT — dismissive one-liner "lmaoo won't fall for this one" — no attached quote/context surfaced; low-signal but the only non-Louround/hooeem voice speaking in the window. (♥ 8) — [View](https://x.com/cyrilXBT/status/2082976252290281810)
 
 ---
-sources: 1642770456720683008=ok(9)
+sources: 1642770456720683008=ok(3-unique-voices, thread-heavy)
 status: LIST_DIGEST_OK
