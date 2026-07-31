@@ -1,0 +1,121 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-31",
+        "description": "MCP moves from concept to concrete adoption numbers; the research side is paper-heavy — filesystem memory, incident-response benchmark, side-agents mining century-old math."
+      },
+      "children": [
+        "section1",
+        "separator1",
+        "section2"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "item1",
+        "item2",
+        "item3"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP-as-plumbing goes concrete",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@deeepakbagada — Rewrote 14 custom REST adapters into MCP servers; team spends 80% less time on glue code.",
+        "href": "https://x.com/deeepakbagada/status/2082871286989238416",
+        "source": "deeepakbagada"
+      },
+      "children": []
+    },
+    "item2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@LearnWithBrij — Frames MCP as standardized plumbing between models and tools; pushback against calling it a framework or reasoning engine.",
+        "href": "https://x.com/LearnWithBrij/status/2082900227942715874",
+        "source": "LearnWithBrij"
+      },
+      "children": []
+    },
+    "item3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@AgenticAIFdn — MCP Resources carry metadata (versions, dependencies, authorship); argues graph-aware agents beat flat RAG lookup.",
+        "href": "https://x.com/AgenticAIFdn/status/2082813642462949852",
+        "source": "AgenticAIFdn"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "item4",
+        "item5",
+        "item6"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent research: papers, not products",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@nickcammarata — Runs a background agent chasing progressively bolder research ideas, currently mining century-old geometry papers for reusable results.",
+        "href": "https://x.com/nickcammarata/status/2082974946297565436",
+        "source": "nickcammarata"
+      },
+      "children": []
+    },
+    "item5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@HEI — Filesystem-Based Memory for LLM Agents (arXiv:2607.26637): organization, evolution, sustainability as memory-system design axes.",
+        "href": "https://x.com/HEI/status/2082978854008770932",
+        "source": "HEI"
+      },
+      "children": []
+    },
+    "item6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@AINativeF — SecRespond benchmark: LLM agents struggle to detect and respond to silent post-compromise intrusions.",
+        "href": "https://x.com/AINativeF/status/2082978694214369534",
+        "source": "AINativeF"
+      },
+      "children": []
+    }
+  }
+}

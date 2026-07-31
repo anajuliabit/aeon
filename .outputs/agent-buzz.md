@@ -1,22 +1,20 @@
-*Agent Buzz — 2026-07-30*
-_mcp-heavy day. 2026-07-28 stateless spec drops, ruflo mcp bridge becomes CVE-2026-59726, copilot's mcp surface hits GA._
+*Agent Buzz — 2026-07-31*
+_MCP moves from concept to concrete adoption numbers; the research side is paper-heavy — filesystem memory, incident-response benchmark, side-agents mining century-old math._
 
-**MCP 2026-07-28 goes stateless**
-• @sthnavy — spec ships stateless: no init handshake, self-contained calls; discovery, inputs, long-task, cache, auth all rebuilt.
-  https://x.com/sthnavy/status/2082611680480239695
-• @fujikawa — same spec across harness implementations produces 30x cost variance; runaway and security fixes bundled.
-  https://x.com/fujikawa/status/2082617070953673217
+**MCP-as-plumbing goes concrete**
+• @deeepakbagada — rewrote 14 custom REST adapters into MCP servers; team spends 80% less time on glue code.
+  https://x.com/deeepakbagada/status/2082871286989238416
+• @LearnWithBrij — frames MCP as standardized plumbing between models and tools; pushback against calling it a framework or reasoning engine.
+  https://x.com/LearnWithBrij/status/2082900227942715874
+• @AgenticAIFdn — MCP Resources carry metadata (versions, dependencies, authorship); argues graph-aware agents beat flat RAG lookup.
+  https://x.com/AgenticAIFdn/status/2082813642462949852
 
-**Ruflo MCP zero-auth (CVE-2026-59726)**
-• @AlexanderChopra — ruflo mcp bridge shipped with no auth: unauthenticated terminal_execute plus poisoned agent memory store.
-  https://x.com/AlexanderChopra/status/2082611102282899457
-• @ZeroDayDevApp — any network caller can inject commands and poison agent memory; no auth on the exposed mcp.
-  https://x.com/ZeroDayDevApp/status/2082609834763890860
+**Agent research: papers, not products**
+• @nickcammarata — runs a background agent chasing progressively bolder research ideas, currently mining century-old geometry papers for reusable results.
+  https://x.com/nickcammarata/status/2082974946297565436
+• @HEI — Filesystem-Based Memory for LLM Agents (arXiv:2607.26637): organization, evolution, sustainability as memory-system design axes.
+  https://x.com/HEI/status/2082978854008770932
+• @AINativeF — SecRespond benchmark: LLM agents struggle to detect and respond to silent post-compromise intrusions.
+  https://x.com/AINativeF/status/2082978694214369534
 
-**MCP surface expands**
-• @akira6592 — github copilot code review, agent skills, and mcp now generally available on the platform.
-  https://x.com/akira6592/status/2082609996983107911
-• @DanKornas — mcp-remote-macos-use ships: mcp server letting agents drive a local or remote mac (screen capture, keyboard, pointer, app actions).
-  https://x.com/DanKornas/status/2082607331066454408
-
-<!-- _src: xai-cache · candidates: 12 → kept: 6 -->
+<!-- _src: xai(cache) · candidates: 13 → kept: 6_ -->
