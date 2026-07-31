@@ -1,0 +1,612 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-31",
+        "description": "Verdict: 3 supply-chain campaigns to purge, 4 to schedule, 1 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "section-patch-today",
+        "sep1",
+        "section-patch-week",
+        "sep2",
+        "section-monitor",
+        "sep3",
+        "kev-note"
+      ]
+    },
+    "section-patch-today": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-patch-today",
+        "advisory-1",
+        "advisory-2",
+        "advisory-3"
+      ]
+    },
+    "heading-patch-today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "advisory-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv1-title",
+        "adv1-type",
+        "adv1-packages",
+        "adv1-desc",
+        "adv1-action"
+      ]
+    },
+    "adv1-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ethers.js typosquat cluster (7 npm pkgs)",
+        "href": "https://github.com/advisories/GHSA-q64r-f9q5-x6m3",
+        "source": "GitHub Advisory"
+      }
+    },
+    "adv1-type": {
+      "type": "Badge",
+      "props": {
+        "text": "malware · crypto-dev-targeted",
+        "variant": "destructive"
+      }
+    },
+    "adv1-packages": {
+      "type": "Text",
+      "props": {
+        "text": "ethers.json, ethers.jsonn, ethe.json, eth.json, ethersss, ethers-io-ethers, ethe.",
+        "variant": "caption"
+      }
+    },
+    "adv1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Credential stealers impersonating ethers.js.",
+        "variant": "body"
+      }
+    },
+    "adv1-action": {
+      "type": "Text",
+      "props": {
+        "text": "npm rm any of these, audit lockfiles, rotate any wallet/RPC keys touched by dev machines.",
+        "variant": "body"
+      }
+    },
+    "advisory-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv2-title",
+        "adv2-type",
+        "adv2-packages",
+        "adv2-desc",
+        "adv2-action"
+      ]
+    },
+    "adv2-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fs-extra typosquat cluster (3 npm pkgs)",
+        "href": "https://github.com/advisories/GHSA-cg95-x585-4q9p",
+        "source": "GitHub Advisory"
+      }
+    },
+    "adv2-type": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "adv2-packages": {
+      "type": "Text",
+      "props": {
+        "text": "fs-extra-master, node-fs-extra-master, fsextrra.",
+        "variant": "caption"
+      }
+    },
+    "adv2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Impersonating one of the top-40M-weekly-downloads npm utilities.",
+        "variant": "body"
+      }
+    },
+    "adv2-action": {
+      "type": "Text",
+      "props": {
+        "text": "npm rm and audit CI/build images; rotate any secrets present during install.",
+        "variant": "body"
+      }
+    },
+    "advisory-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv3-title",
+        "adv3-type",
+        "adv3-packages",
+        "adv3-desc",
+        "adv3-action"
+      ]
+    },
+    "adv3-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "socket.io typosquat cluster (5 npm pkgs)",
+        "href": "https://github.com/advisories/GHSA-9gmr-4p5m-j5vr",
+        "source": "GitHub Advisory"
+      }
+    },
+    "adv3-type": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "adv3-packages": {
+      "type": "Text",
+      "props": {
+        "text": "socketi, soccketio, socktio, scketio, socktio.",
+        "variant": "caption"
+      }
+    },
+    "adv3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Broad-impact utility impersonation.",
+        "variant": "body"
+      }
+    },
+    "adv3-action": {
+      "type": "Text",
+      "props": {
+        "text": "npm rm and grep package.json across the org.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-patch-week": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-patch-week",
+        "advisory-4",
+        "advisory-5",
+        "advisory-6",
+        "advisory-7"
+      ]
+    },
+    "heading-patch-week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "advisory-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv4-title",
+        "adv4-badges",
+        "adv4-desc",
+        "adv4-action"
+      ]
+    },
+    "adv4-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-hf3j-86p7-mfw8",
+        "href": "https://github.com/advisories/GHSA-hf3j-86p7-mfw8",
+        "source": "GitHub Advisory"
+      }
+    },
+    "adv4-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv4-pkg",
+        "adv4-sev",
+        "adv4-epss"
+      ]
+    },
+    "adv4-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "@aws-amplify/codegen-ui-react (npm)",
+        "variant": "outline"
+      }
+    },
+    "adv4-sev": {
+      "type": "Badge",
+      "props": {
+        "text": "critical",
+        "variant": "destructive"
+      }
+    },
+    "adv4-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.009",
+        "variant": "secondary"
+      }
+    },
+    "adv4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Auth'd user runs arbitrary JS during Amplify Studio component build.",
+        "variant": "body"
+      }
+    },
+    "adv4-action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade to ≥2.20.4.",
+        "variant": "body"
+      }
+    },
+    "advisory-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv5-title",
+        "adv5-badges",
+        "adv5-desc",
+        "adv5-action"
+      ]
+    },
+    "adv5-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-jq8w-8q2f-ffm9",
+        "href": "https://github.com/advisories/GHSA-jq8w-8q2f-ffm9",
+        "source": "GitHub Advisory"
+      }
+    },
+    "adv5-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv5-pkg",
+        "adv5-cve",
+        "adv5-sev",
+        "adv5-epss"
+      ]
+    },
+    "adv5-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "zitadel (Go)",
+        "variant": "outline"
+      }
+    },
+    "adv5-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-54693",
+        "variant": "outline"
+      }
+    },
+    "adv5-sev": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "adv5-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.003",
+        "variant": "secondary"
+      }
+    },
+    "adv5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Users self-verify email/phone via API.",
+        "variant": "body"
+      }
+    },
+    "adv5-action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade to ≥4.15.1 (v4 line) / ≥3.4.11 (v3).",
+        "variant": "body"
+      }
+    },
+    "advisory-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv6-title",
+        "adv6-badges",
+        "adv6-desc",
+        "adv6-action"
+      ]
+    },
+    "adv6-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-cg4g-m8jx-vjv2",
+        "href": "https://github.com/advisories/GHSA-cg4g-m8jx-vjv2",
+        "source": "GitHub Advisory"
+      }
+    },
+    "adv6-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv6-pkg",
+        "adv6-cve",
+        "adv6-sev",
+        "adv6-epss"
+      ]
+    },
+    "adv6-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "dssrf (npm)",
+        "variant": "outline"
+      }
+    },
+    "adv6-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-54722",
+        "variant": "outline"
+      }
+    },
+    "adv6-sev": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "adv6-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.003",
+        "variant": "secondary"
+      }
+    },
+    "adv6-desc": {
+      "type": "Text",
+      "props": {
+        "text": "SSRF bypass via remove_at_symbol_in_string.",
+        "variant": "body"
+      }
+    },
+    "adv6-action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade to >1.0.3.",
+        "variant": "body"
+      }
+    },
+    "advisory-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv7-title",
+        "adv7-badges",
+        "adv7-desc",
+        "adv7-action"
+      ]
+    },
+    "adv7-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-xpxj-f2fm-rqch",
+        "href": "https://github.com/advisories/GHSA-xpxj-f2fm-rqch",
+        "source": "GitHub Advisory"
+      }
+    },
+    "adv7-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv7-pkg",
+        "adv7-cve",
+        "adv7-cvss",
+        "adv7-epss"
+      ]
+    },
+    "adv7-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "OliveTin (Go)",
+        "variant": "outline"
+      }
+    },
+    "adv7-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-67437",
+        "variant": "outline"
+      }
+    },
+    "adv7-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5",
+        "variant": "destructive"
+      }
+    },
+    "adv7-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.004",
+        "variant": "secondary"
+      }
+    },
+    "adv7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth'd DoS via OAuth2 state map growth.",
+        "variant": "body"
+      }
+    },
+    "adv7-action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade past commit ec114e95d297 (2026-07-08 tip).",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-monitor",
+        "advisory-8"
+      ]
+    },
+    "heading-monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "advisory-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv8-title",
+        "adv8-badges",
+        "adv8-desc",
+        "adv8-action"
+      ]
+    },
+    "adv8-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-xvg2-cgv6-6h7v",
+        "href": "https://github.com/advisories/GHSA-xvg2-cgv6-6h7v",
+        "source": "GitHub Advisory"
+      }
+    },
+    "adv8-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv8-pkg",
+        "adv8-sev"
+      ]
+    },
+    "adv8-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "netfoil (Go)",
+        "variant": "outline"
+      }
+    },
+    "adv8-sev": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "adv8-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Incorrect block responses → localhost traffic.",
+        "variant": "body"
+      }
+    },
+    "adv8-action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade to ≥0.4.0 when adopted; not in Aeon deps today.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "kev-note": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added this week: 3 (Cisco FMC, Fortinet FortiOS, Arista VeloCloud) — all covered in 7-29/7-30 digests, dedup'd.",
+        "variant": "caption"
+      }
+    }
+  }
+}

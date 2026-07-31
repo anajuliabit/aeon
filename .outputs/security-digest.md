@@ -1,30 +1,29 @@
-*Security Digest — 2026-07-30*
-Verdict: 1 actively exploited, 5 to schedule, 0 to monitor. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-07-31*
+Verdict: 3 supply-chain campaigns to purge, 4 to schedule, 1 to monitor. _Sources: KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- [CVE-2026-20316](https://nvd.nist.gov/vuln/detail/CVE-2026-20316) — Cisco Secure FMC · KEV added 2026-07-29 · EPSS 0.008 · CISA due 2026-08-01
-  hardcoded password lets unauth remote attacker log in via low-priv account, read sensitive data. exploited per CISA.
-  → patch Cisco Secure Firewall Management Center per vendor advisory today.
-- npm+pip malware batch — @ai-agent-node/* 3-pack + @ai-plus/de-agent 2-pack + @zannstore/baileys 17-version + litespeed-cache + polymarket-risk-manager + poly-kelly + phabricator-client (pip)
-  cred-stealer / typosquat / real-plugin-impersonation classes; @zannstore/baileys advises full-host-compromise on install.
-  → rotate creds if any installed; audit npm+pip installs since 2026-07-29.
-- [GHSA-mjqf-28ph-426h](https://github.com/advisories/GHSA-mjqf-28ph-426h) — kube-logging/logging-operator (Go) · CVSS 9.9 · EPSS 0.004 · public writeup
-  Fluentd config injection RCE via unescaped Flow CRD `record_transformer.records`.
-  → upgrade logging-operator to ≥ 0.0.0-20260608145523 today.
+- [ethers.js typosquat cluster (7 npm pkgs)](https://github.com/advisories/GHSA-q64r-f9q5-x6m3) — malware · crypto-dev-targeted
+  ethers.json, ethers.jsonn, ethe.json, eth.json, ethersss, ethers-io-ethers, ethe. Credential stealers impersonating ethers.js.
+  → `npm rm` any of these, audit lockfiles, rotate any wallet/RPC keys touched by dev machines.
+- [fs-extra typosquat cluster (3 npm pkgs)](https://github.com/advisories/GHSA-cg95-x585-4q9p) — malware
+  fs-extra-master, node-fs-extra-master, fsextrra. Impersonating one of the top-40M-weekly-downloads npm utilities.
+  → `npm rm` and audit CI/build images; rotate any secrets present during install.
+- [socket.io typosquat cluster (5 npm pkgs)](https://github.com/advisories/GHSA-9gmr-4p5m-j5vr) — malware
+  socketi, soccketio, socktio, scketio, socktio. Broad-impact utility impersonation.
+  → `npm rm` and grep `package.json` across the org.
 
 *PATCH THIS WEEK*
-- [GHSA-4p3g-4hcj-wpvx](https://github.com/advisories/GHSA-4p3g-4hcj-wpvx) — prebid-server (Go) · CVSS 10.0 · EPSS 0.004
-  bidder-adapter SSRF exposes host env / internal endpoints via unvalidated URL interpolation.
-  → schedule upgrade: prebid-server → ≥ 4.4.0.
-- [GHSA-2956-977x-2w3r](https://github.com/advisories/GHSA-2956-977x-2w3r) + 5 more — flyto-core (pip) 6-CVE mass-disclose · CVSS 8.5–10.0
-  arbitrary file write + unauth SSRF with internal-key exfil + LLM/API-key leak + env-var readout — all one patch.
-  → schedule upgrade: flyto-core → ≥ 2.26.7.
-- [GHSA-m4x6-gwgp-4pm7](https://github.com/advisories/GHSA-m4x6-gwgp-4pm7) — @aws/agentcore (npm) · CVSS 9.0 · EPSS 0.003
-  Bedrock AgentCore CLI code injection via triple-quote escape in `collaborationInstruction`.
-  → schedule upgrade: @aws/agentcore → ≥ 0.14.2.
-- [GHSA-9xq3-3fqg-4vg7](https://github.com/advisories/GHSA-9xq3-3fqg-4vg7) + [GHSA-7h3g-4w2f-fj2f](https://github.com/advisories/GHSA-7h3g-4w2f-fj2f) — proot-distro (pip) 2-CVE · CVSS 8.2/8.2
-  symlink escape (host file write) + container isolation bypass via crafted tar/restore archives.
-  → schedule upgrade: proot-distro → ≥ 5.1.6.
-- [GHSA-8r6w-3qq5-4p4r](https://github.com/advisories/GHSA-8r6w-3qq5-4p4r) — pterodactyl/wings (Go) · CVSS 8.1 · EPSS 0.004
-  JWT scoping bypass lets subuser upload files without explicit `file.create` grant.
-  → schedule upgrade: pterodactyl/wings → ≥ 1.12.2.
+- [GHSA-hf3j-86p7-mfw8](https://github.com/advisories/GHSA-hf3j-86p7-mfw8) — @aws-amplify/codegen-ui-react (npm) · critical · EPSS 0.009 · no CVSS
+  Auth'd user runs arbitrary JS during Amplify Studio component build. → upgrade to ≥2.20.4.
+- [GHSA-jq8w-8q2f-ffm9](https://github.com/advisories/GHSA-jq8w-8q2f-ffm9) — zitadel (Go) · CVE-2026-54693 · high · EPSS 0.003
+  Users self-verify email/phone via API. → upgrade to ≥4.15.1 (v4 line) / ≥3.4.11 (v3).
+- [GHSA-cg4g-m8jx-vjv2](https://github.com/advisories/GHSA-cg4g-m8jx-vjv2) — dssrf (npm) · CVE-2026-54722 · high · EPSS 0.003
+  SSRF bypass via `remove_at_symbol_in_string`. → upgrade to >1.0.3.
+- [GHSA-xpxj-f2fm-rqch](https://github.com/advisories/GHSA-xpxj-f2fm-rqch) — OliveTin (Go) · CVE-2026-67437 · CVSS 7.5 · EPSS 0.004
+  Unauth'd DoS via OAuth2 state map growth. → upgrade past commit ec114e95d297 (2026-07-08 tip).
+
+*MONITOR*
+- [GHSA-xvg2-cgv6-6h7v](https://github.com/advisories/GHSA-xvg2-cgv6-6h7v) — netfoil (Go) · high · no CVE
+  Incorrect block responses → localhost traffic. → upgrade to ≥0.4.0 when adopted; not in Aeon deps today.
+
+_KEV added this week: 3 (Cisco FMC, Fortinet FortiOS, Arista VeloCloud) — all covered in 7-29/7-30 digests, dedup'd._
