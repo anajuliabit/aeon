@@ -1,0 +1,573 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-31"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-winners",
+        "table-winners",
+        "sep-1",
+        "heading-losers",
+        "table-losers",
+        "sep-2",
+        "heading-pulse",
+        "grid-pulse",
+        "text-pulse-summary",
+        "sep-3",
+        "heading-tweets",
+        "text-tweets-note",
+        "heading-crypto",
+        "text-crypto",
+        "heading-ai",
+        "text-ai",
+        "heading-dev",
+        "text-dev",
+        "sep-4",
+        "heading-paper",
+        "storylink-paper",
+        "text-paper-desc",
+        "sep-5",
+        "heading-github",
+        "text-github",
+        "sep-6",
+        "heading-hn",
+        "stack-hn-items"
+      ]
+    },
+    "heading-winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "table-winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change",
+          "Note"
+        ],
+        "rows": [
+          [
+            "UB",
+            "$0.161",
+            "+16.1%",
+            "7d +38% BREAKOUT"
+          ],
+          [
+            "DCR",
+            "$13.46",
+            "+15.8%",
+            ""
+          ],
+          [
+            "CARDS",
+            "$0.158",
+            "+15.7%",
+            ""
+          ],
+          [
+            "UNI",
+            "$4.39",
+            "+13.7%",
+            "large-cap standout"
+          ],
+          [
+            "CFX",
+            "$0.0442",
+            "+5.6%",
+            ""
+          ],
+          [
+            "PUMP",
+            "$0.00200",
+            "+5.4%",
+            "flipped from -7.1% yesterday"
+          ],
+          [
+            "VET",
+            "$0.00476",
+            "+5.3%",
+            ""
+          ],
+          [
+            "CAKE",
+            "$1.45",
+            "+5.2%",
+            ""
+          ],
+          [
+            "FIL",
+            "$0.714",
+            "+4.9%",
+            ""
+          ],
+          [
+            "ENA",
+            "$0.0815",
+            "+4.3%",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "table-losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change",
+          "Note"
+        ],
+        "rows": [
+          [
+            "HOLO",
+            "$0.0676",
+            "-14.4%",
+            "flipped from +10.5% yesterday"
+          ],
+          [
+            "US",
+            "$0.0484",
+            "-9.0%",
+            ""
+          ],
+          [
+            "M",
+            "$1.018",
+            "-8.5%",
+            ""
+          ],
+          [
+            "VSN",
+            "$0.0370",
+            "-7.0%",
+            ""
+          ],
+          [
+            "KAITO",
+            "$1.15",
+            "-5.8%",
+            "FADE"
+          ],
+          [
+            "ZBCN",
+            "$0.00176",
+            "-5.3%",
+            ""
+          ],
+          [
+            "ZAMA",
+            "$0.0548",
+            "-5.3%",
+            ""
+          ],
+          [
+            "ZRO",
+            "$0.720",
+            "-4.9%",
+            ""
+          ],
+          [
+            "DEXE",
+            "$2.46",
+            "-4.0%",
+            "FADE"
+          ],
+          [
+            "RAIN",
+            "$0.01306",
+            "-3.8%",
+            "only major-cap loser (#13)"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-pulse": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Pulse",
+        "level": "h2"
+      }
+    },
+    "grid-pulse": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-fear-greed"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$65,023",
+        "delta": "+2.09%",
+        "trend": "up"
+      }
+    },
+    "stat-fear-greed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear/Greed Index",
+        "value": "25",
+        "trend": "neutral"
+      }
+    },
+    "text-pulse-summary": {
+      "type": "Text",
+      "props": {
+        "text": "58/100 top alts green, top-50 median +0.4%"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "text-tweets-note": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch fallback — XAI sandbox-blocked, no prefetch",
+        "variant": "caption"
+      }
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "text-crypto": {
+      "type": "Text",
+      "props": {
+        "text": "GRVT +62% / BANK -57% swings dominate d1 rotation; BitMart winds down 9-year exchange; Fed leaves rates unchanged, DeFi mcap +2.6% to $62.7B on the drift."
+      }
+    },
+    "heading-ai": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "text-ai": {
+      "type": "Text",
+      "props": {
+        "text": "Opus 5 hits intelligence 61 at ~half Fable 5 cost, Auto Mode drives browser prompt-injection to 0/129; llama.cpp gains MCP tool-protocol support = local agentic loop; NVIDIA NOOA object-oriented agent framework drops."
+      }
+    },
+    "heading-dev": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "text-dev": {
+      "type": "Text",
+      "props": {
+        "text": "CISA ships \"Open Source Software: Security Principles and Practices\" federal guidance 7-30; SpaceX $60B Cursor acquisition reshapes IDE market; Claude Code gains computer use."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "storylink-paper": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory",
+        "href": "https://arxiv.org/abs/2607.27919",
+        "source": "arXiv · Zhu/Li/Yang/Su",
+        "score": "29"
+      }
+    },
+    "text-paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "6.9B memory + Pythia-410M beats Pythia-12B on 17 benchmarks with 39% fewer params. memory as its own scaling axis."
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-github": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "text-github": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (6th consec clean day for user:anajuliabit)"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "stack-hn-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-item-1",
+        "hn-item-2",
+        "hn-item-3",
+        "hn-item-4",
+        "hn-item-5"
+      ]
+    },
+    "hn-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-1-link",
+        "hn-1-desc",
+        "hn-1-discuss"
+      ]
+    },
+    "hn-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Stacked PRs live on GitHub",
+        "href": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
+        "source": "GitHub Blog",
+        "score": "606"
+      }
+    },
+    "hn-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "native stacked-PR public preview",
+        "variant": "caption"
+      }
+    },
+    "hn-1-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49112232"
+      }
+    },
+    "hn-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-2-link",
+        "hn-2-desc",
+        "hn-2-discuss"
+      ]
+    },
+    "hn-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TV streaming stick preloaded malware",
+        "href": "https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/",
+        "source": "Krebs on Security",
+        "score": "684"
+      }
+    },
+    "hn-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "hardware-side supply-chain compromise",
+        "variant": "caption"
+      }
+    },
+    "hn-2-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49112744"
+      }
+    },
+    "hn-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-3-link",
+        "hn-3-desc",
+        "hn-3-discuss"
+      ]
+    },
+    "hn-3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GPT-5.6 price-perf frontier",
+        "href": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+        "source": "OpenAI",
+        "score": "557"
+      }
+    },
+    "hn-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Reprices, extends Opus 5 / GPT-5.6 cost-lever competition",
+        "variant": "caption"
+      }
+    },
+    "hn-3-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49112867"
+      }
+    },
+    "hn-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-4-link",
+        "hn-4-desc",
+        "hn-4-discuss"
+      ]
+    },
+    "hn-4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Gemini Robotics 2 whole-body",
+        "href": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+        "source": "DeepMind",
+        "score": "539"
+      }
+    },
+    "hn-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "big-lab embodied AI drop extends embodied-agent-runtime rail to n=3",
+        "variant": "caption"
+      }
+    },
+    "hn-4-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49111237"
+      }
+    },
+    "hn-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-5-link",
+        "hn-5-desc",
+        "hn-5-discuss"
+      ]
+    },
+    "hn-5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Anthropic cybersecurity-eval incidents",
+        "href": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+        "source": "Anthropic",
+        "score": "168"
+      }
+    },
+    "hn-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "post-mortems 3 real-world cyber incidents seen in evals",
+        "variant": "caption"
+      }
+    },
+    "hn-5-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49116922"
+      }
+    }
+  }
+}
