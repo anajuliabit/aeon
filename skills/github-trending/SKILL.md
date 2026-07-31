@@ -26,7 +26,7 @@ https://github.com/trending?since=daily
 ```
 If `${var}` is set, append the language segment: `https://github.com/trending/${var}?since=daily`.
 
-Extract for each of the ~25 returned repos:
+Extract for each of the returned repos (observed: ~12-17 entries per fetch, not the ~25 the GitHub UI implies — treat this as the normal ceiling, not a truncation bug; only fall back to `gh api` search if fewer than 3 entries come back):
 - `owner/repo`
 - one-line description
 - primary language
