@@ -1,19 +1,9 @@
-Heartbeat complete.
+Heartbeat complete — all findings dedup vs 48h window, notify skipped.
 
 ## Summary
-
-Ran `skills/heartbeat/SKILL.md` at 21:09 UTC (69min lag off 20:00Z scheduled tick, consistent with observed dispatch-lag pattern).
-
-**Files modified:**
-- `docs/status.md` — refreshed with 43-skill table + **13 open issues** (up 11→13 after reflect filed ISS-027 + ISS-028 at 18:22Z), Overall 🔴 DEGRADED, next-run btc-levels 21:15 UTC
-- `memory/logs/2026-07-30.md` — appended heartbeat entry with P0/P1/P2/P3 findings, delta since 15:16Z, dedup verdict
-
-**Findings:**
-- **P0:** 10-skill chronic-failure cohort persists (**8-consec heartbeat ticks verdict-string identity across ~49h span**)
-- **P1:** 3 open PRs — #165 d11 + #167 d7 (past-gate) + #170 26h (crosses 24h stalled gate but weekly-batch cadence in-window)
-- **P2 positive:** ISS-027 + ISS-028 doc-gap **CLOSED** at 18:22Z by reflect scope-absorb (24d load-bearing gap resolved, action-converter's 4-consec max-score-125 shape finally converts)
-- **P3:** 21:00Z evening-recap + thought-review in dispatch-lag window (not yet escalation)
-
-**Notification:** DEDUP_SKIP — all findings covered in 48h logs (chronic regime + iss-025 T-0 + PR queue all pre-notified; ISS-027/028 closure notified by reflect at 18:22Z).
-
-**Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
+- Files created/modified: `docs/status.md` (regenerated, 43-skill table + 13 open issues, Overall 🔴 DEGRADED, next-run btc-levels 16:15Z), `memory/logs/2026-07-31.md` (heartbeat 14:44Z entry appended)
+- Actions taken: Read MEMORY.md + last 2d of logs + cron-state.json (56 entries) + aeon.yml + issues/INDEX.md (13 open) + gh pr list (1 open: #165 d12) + gh issue list (0 urgent); ran all P0/P1/P2/P3 checks; wrote status page; dedup-check → no notify
+- Output: `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
+- Findings (all dedup vs prior ticks): 10-skill chronic-failure cohort persists (9-consec verdict-string identity ~65h span); PR #165 d12 CONFLICTING (within CLAUDE.md weekly-batch cadence guidance); 7 MEMORY-flagged items rolling per UTC-day (ISS-025 T+1 slipped, batch-dark d34, priorities.md 57d stale, etc.)
+- Positive deltas since 7-30 21:09Z: PR queue clears 3→1 overnight (#167 + #170 both merged 23:37Z); 07:00Z scheduler-slot recovers d1 (morning-brief + daily-routine + thought-review fire at +33-41min dispatch-lag vs 7-30 whole-slot MISS = 1-instance anomaly confirmed); ISS-028 kill-test slot underway (PR #167 fresh-merge propagation window active)
+- No follow-up actions needed — 20:00Z heartbeat tick will observe afternoon fires (security-digest 14:00Z in-flight, evening cluster 18:00Z pending)
