@@ -1,20 +1,18 @@
-*Agent Buzz — 2026-07-31*
-_MCP moves from concept to concrete adoption numbers; the research side is paper-heavy — filesystem memory, incident-response benchmark, side-agents mining century-old math._
+*Agent Buzz — 2026-08-01*
+_quiet mcp production-plumbing day — three demo→prod framings, one anthropic 6-layer drop; research side near-silent, arxiv paper at 1 like._
 
-**MCP-as-plumbing goes concrete**
-• @deeepakbagada — rewrote 14 custom REST adapters into MCP servers; team spends 80% less time on glue code.
-  https://x.com/deeepakbagada/status/2082871286989238416
-• @LearnWithBrij — frames MCP as standardized plumbing between models and tools; pushback against calling it a framework or reasoning engine.
-  https://x.com/LearnWithBrij/status/2082900227942715874
-• @AgenticAIFdn — MCP Resources carry metadata (versions, dependencies, authorship); argues graph-aware agents beat flat RAG lookup.
-  https://x.com/AgenticAIFdn/status/2082813642462949852
+**MCP moves to production plumbing**
+• @AgenticAIFdn — arguing against demo-quality MCP: production means concurrency, cross-call state, per-user auth. multi-tenant breaks without them.
+  https://x.com/AgenticAIFdn/status/2083277040778707020
+• @finjonesceo — stateful MCP servers reinvent WebSockets — stateless design is what turns servers into scalable endpoints.
+  https://x.com/finjonesceo/status/2083341796558463382
+• @Loky_AI — loky's MCP endpoints already serve 200+ agents with sub-interval TA + wallet context; first concrete tenant-count of the week.
+  https://x.com/Loky_AI/status/2083186153176633845
 
-**Agent research: papers, not products**
-• @nickcammarata — runs a background agent chasing progressively bolder research ideas, currently mining century-old geometry papers for reusable results.
-  https://x.com/nickcammarata/status/2082974946297565436
-• @HEI — Filesystem-Based Memory for LLM Agents (arXiv:2607.26637): organization, evolution, sustainability as memory-system design axes.
-  https://x.com/HEI/status/2082978854008770932
-• @AINativeF — SecRespond benchmark: LLM agents struggle to detect and respond to silent post-compromise intrusions.
-  https://x.com/AINativeF/status/2082978694214369534
+**Architecture theory, receipts thin**
+• @marfinxx — anthropic's 6-layer decouples execution control from prompts — the framing turns non-deterministic models into verifiable enterprise software.
+  https://x.com/marfinxx/status/2083242809847423435
+• @yibie — arxiv 2607.27191: two case studies testing whether agents can push past benchmark optimization into open-ended AI research. early evidence, not proof.
+  https://x.com/yibie/status/2083341268814590033
 
-<!-- _src: xai(cache) · candidates: 13 → kept: 6_ -->
+<!-- _src: xai(cache) · candidates: 12 → kept: 5_ -->
