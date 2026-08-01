@@ -1,0 +1,290 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "morning brief — 2026-08-01"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_focus",
+        "sep1",
+        "section_yesterday",
+        "sep2",
+        "section_running"
+      ]
+    },
+    "section_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "stack_focus_items"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus Today",
+        "level": "h2"
+      }
+    },
+    "stack_focus_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_1_title",
+        "focus_1_detail"
+      ]
+    },
+    "focus_1_title": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_1_text",
+        "badge_failed"
+      ]
+    },
+    "focus_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "iss-028 kill-test",
+        "variant": "lead"
+      }
+    },
+    "badge_failed": {
+      "type": "Badge",
+      "props": {
+        "text": "FAILED",
+        "variant": "destructive"
+      }
+    },
+    "focus_1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "d1 — why now: >> regression persists post-pr-#167, security-digest 14z re-probes",
+        "variant": "caption"
+      }
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_2_title",
+        "focus_2_detail"
+      ]
+    },
+    "focus_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025 cost-report",
+        "variant": "lead"
+      }
+    },
+    "focus_2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "T+2 d17 — why now: chronic operator-block persists, weekly-review 8-03 next natural catch",
+        "variant": "caption"
+      }
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_3_stat",
+        "focus_3_detail"
+      ]
+    },
+    "focus_3_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "PR Queue",
+        "value": "2"
+      }
+    },
+    "focus_3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "background: #165 d13 conflicting sole past-gate + #171 fresh 15h, batch-merge cadence",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_yesterday",
+        "stack_yesterday_items"
+      ]
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since Yesterday",
+        "level": "h2"
+      }
+    },
+    "stack_yesterday_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday_shipped",
+        "yesterday_filed",
+        "yesterday_moved",
+        "yesterday_stuck"
+      ]
+    },
+    "yesterday_shipped": {
+      "type": "Text",
+      "props": {
+        "text": "shipped: skill-health noop d4 (hash 7bf88238 stable); evening-recap clean 21:57z",
+        "variant": "body"
+      }
+    },
+    "yesterday_filed": {
+      "type": "Text",
+      "props": {
+        "text": "filed: iss-028 regression persists — agent-buzz 18z + list-digest 17z both hit workaround post-#167 merge",
+        "variant": "body"
+      }
+    },
+    "yesterday_moved": {
+      "type": "Text",
+      "props": {
+        "text": "moved: 4-of-4 tokens red 24h (first fully-red day in memory-window); WELL vol-cliff to 0.059× baseline (94% single-slot participation collapse)",
+        "variant": "body"
+      }
+    },
+    "yesterday_stuck": {
+      "type": "Text",
+      "props": {
+        "text": "stuck: pr #165 d13 conflicting sole past-gate survivor; pr #171 15h fresh self-improve open for review",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_running",
+        "stack_running_items"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running Today",
+        "level": "h2"
+      }
+    },
+    "stack_running_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running_1",
+        "running_2",
+        "running_3",
+        "running_4",
+        "running_5"
+      ]
+    },
+    "running_1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00z (7-31 tick unclear from cron-state)",
+        "variant": "body"
+      }
+    },
+    "running_2": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00z (iss-028 kill-test slot #2)",
+        "variant": "body"
+      }
+    },
+    "running_3": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner @ 16:00z (weekly sat, sr=0.21 chronic)",
+        "variant": "body"
+      }
+    },
+    "running_4": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health @ 18:00z (crosses 24h notify gate on hash 7bf88238)",
+        "variant": "body"
+      }
+    },
+    "running_5": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review @ 21:00z",
+        "variant": "body"
+      }
+    }
+  }
+}
