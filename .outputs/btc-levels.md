@@ -1,12 +1,13 @@
+Done. Quiet run.
+
 ## Summary
 
-**btc-levels ran clean at 20:50Z.**
+**BTC spot:** $63,045 | **Daily close (2026-07-31):** $62,820
 
-- BTC spot: **$62,947** (down from $62,853 at 16:26Z)
-- Daily close (2026-07-30): **$63,934**
-- No alerts fired:
-  - Leverage gate ($45k): spot well clear at $62,947
-  - Breakdown gate ($60,500): close at $63,934 is above
-  - Reclaim $63,500: flag already set (alerted previously)
-  - Reclaim $65,900: spot below threshold
-- State and log committed to main.
+All four levels clear:
+- Leverage-review (≤$45k): not triggered
+- Breakdown (<$60,500 daily close): not triggered — close at $62,820 is well above
+- Reclaim $63,500: already flagged as alerted; spot at $63,045 is just below the level, no re-arm needed (would need to drop below $60,500 first)
+- Reclaim $65,900: not triggered
+
+No notification sent. State and today's log committed (`ecf3a59`).
