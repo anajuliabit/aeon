@@ -1,45 +1,44 @@
-*Token Movers — 2026-07-28*
+*Token Movers — 2026-08-01*
 
-_broad risk-off — 8/100 top coins green, median top-50 -3.4%; losers dominate across l1s, ai, defi, memecoins. filter kept 178/250._
+_broad red — ~60% of top-100 negative and majors (BTC/ETH/XRP/HYPE) all -1.6 to -6.4%; meme rotation (BEAT/M/PUMP/SHIB/PEPE) lifts the winners list against the tape._
 
 *Top Winners (24h)*
-1. CARDS (Collector Crypt) — $0.1269  +12.0% / 7d -14.6% / 1h +0.2%  •  $4.0M / #590  [FADE]
-2. ZAMA (Zama) — $0.0644  +11.4% / 7d +62.4% / 1h -1.2%  •  $70M / #204
-3. TAG (TAGGER) — $0.001319  +9.2% / 7d +22.2% / 1h -2.1%  •  $7.8M / #203
-4. KAITO (KAITO) — $1.220  +7.5% / 7d +30.4% / 1h -1.2%  •  $81M / #127
-5. Q (Quack AI) — $0.02250  +5.8% / 7d +13.9% / 1h -1.3%  •  $4.4M / #272
-6. XEC (eCash) — $0.000007  +5.0% / 7d -3.4% / 1h +1.4%  •  $9.2M / #209
-7. PUMP (Pump.fun) — $0.002088  +4.1% / 7d +2.3% / 1h +3.2%  •  $156M / #74
-8. FF (Falcon Finance) — $0.0636  +1.9% / 7d +5.3% / 1h -0.2%  •  $11M / #168
-9. CRV (Curve DAO) — $0.2130  +1.6% / 7d -1.3% / 1h +0.0%  •  $33M / #118
-10. 币安人生 (BinanceLife) — $0.6399  +1.5% / 7d +0.4% / 1h -0.8%  •  $15M / #88
+1. BEAT (Audiera) — $4.57  +17.7% / 7d +35.4% / 1h +3.0%  •  $21M / #52  [BREAKOUT]
+2. US (Talus) — $0.0452  +10.8% / 7d +14.7% / 1h +3.1%  •  $8.6M / #204
+3. M (MemeCore) — $1.09  +10.3% / 7d -9.2% / 1h -0.4%  •  $10M / #50
+4. PUMP (Pump.fun) — $0.002185  +9.5% / 7d +22.1% / 1h +0.9%  •  $106M / #74  [TRENDING+UP]
+5. PI (Pi Network) — $0.0864  +5.6% / 7d +3.4% / 1h +0.4%  •  $8.2M / #67
+6. SHIB (Shiba Inu) — $0.00000487  +3.3% / 7d +16.1% / 1h +0.4%  •  $150M / #31
+7. XMR (Monero) — $364.46  +3.1% / 7d -0.5% / 1h -0.2%  •  $98M / #16  [MAJOR]
+8. JST (JUST) — $0.1042  +1.8% / 7d +1.8% / 1h +0.1%  •  $26M / #75
+9. HBAR (Hedera) — $0.0699  +1.8% / 7d -0.5% / 1h 0.0%  •  $43M / #29
+10. ADA (Cardano) — $0.1728  +1.6% / 7d +5.7% / 1h +0.8%  •  $294M / #18
 
 *Top Losers (24h)*
-1. BEAT (Audiera) — $2.770  -24.2% / 7d +14.4% / 1h -10.9%  •  $53M / #72
-2. UB (Unibase) — $0.1206  -17.3% / 7d +19.6% / 1h +2.7%  •  $14M / #126
-3. BANK (Lorenzo Protocol) — $0.3485  -13.8% / 7d +40.6% / 1h +0.1%  •  $237M / #197  [CAPITULATION]
-4. KAIA (Kaia) — $0.02614  -12.0% / 7d -20.2% / 1h +0.2%  •  $8.7M / #189
-5. HOLO (Holoworld) — $0.0645  -11.3% / 7d +1.9% / 1h +0.3%  •  $9.1M / #433
-6. FET (Artificial Superintelligence Alliance) — $0.1429  -10.9% / 7d -9.3% / 1h +0.7%  •  $72M / #121
-7. KITE (Kite) — $0.0953  -10.5% / 7d -14.9% / 1h +0.9%  •  $20M / #145
-8. NEAR (NEAR Protocol) — $1.670  -9.8% / 7d -18.0% / 1h +0.9%  •  $164M / #39
-9. SHIB (Shiba Inu) — $0.000005  -9.1% / 7d +8.7% / 1h +0.0%  •  $187M / #33
-10. PI (Pi Network) — $0.0741  -9.0% / 7d -18.0% / 1h -1.5%  •  $12M / #76  [TRENDING+DOWN]
+1. UNI (Uniswap) — $4.12  -8.5% / 7d +11.5% / 1h -0.4%  •  $309M / #37  [TRENDING+DOWN]
+2. AAVE (Aave) — $91.12  -7.7% / 7d 0.0% / 1h +0.1%  •  $295M / #53
+3. LIT (Lighter) — $2.05  -7.7% / 7d +2.6% / 1h -0.1%  •  $32M / #98
+4. HYPE (Hyperliquid) — $52.30  -6.4% / 7d -9.3% / 1h 0.0%  •  $350M / #10  [MAJOR]
+5. ONDO (Ondo) — $0.386  -4.0% / 7d +2.3% / 1h -0.2%  •  $103M / #42
+6. RAIN (Rain) — $0.01271  -3.0% / 7d -9.5% / 1h 0.0%  •  $21M / #14  [MAJOR]
+7. SKY (Sky) — $0.0561  -2.8% / 7d -2.9% / 1h -0.6%  •  $8.1M / #55
+8. LINK (Chainlink) — $8.13  -2.4% / 7d -2.1% / 1h -0.6%  •  $187M / #19  [MAJOR]
+9. FIGR_HELOC (Figure Heloc) — $1.014  -2.4% / 7d -0.3% / 1h 0.0%  •  $81M / #9  [MAJOR]
+10. KAS (Kaspa) — $0.02714  -2.0% / 7d -1.2% / 1h 0.0%  •  $4.2M / #79
 
 *Trending*
-1. CSPR (Casper Network) — #665, $0.001650, 24h +6.3%  [TRENDING+UP]
-2. COTI (COTI) — #543, $0.01221, 24h +65.2%  [TRENDING+UP, PUMP-RISK]
-3. AEON (AEON) — #880, $0.0909, 24h +0.0%
-4. LIT (Lighter) — #94, $2.206, 24h -2.1%
-5. HYPE (Hyperliquid) — #10, $55.39, 24h -7.7%  [MAJOR, TRENDING+DOWN]
-6. BTC (Bitcoin) — #1, $63,515, 24h -2.9%  [MAJOR]
-7. PI (Pi Network) — #76, $0.0740, 24h -9.9%  [TRENDING+DOWN]
+1. ENA (Ethena) — #77, $0.0811, 24h -1.4%
+2. GRVT (GRVT Token) — #571, $0.296, 24h +19.5%
+3. UNI (Uniswap) — #37, $4.12, 24h -8.5%  [TRENDING+DOWN]
+4. PENGU (Pudgy Penguins) — #112, $0.00598, 24h -1.6%
+5. PUMP (Pump.fun) — #74, $0.00219, 24h +9.5%  [TRENDING+UP]
+6. PEPE (Pepe) — #59, $0.0000028, 24h +2.0%
+7. COTI (COTI) — #458, $0.01478, 24h +2.5%
 
 *Notable*
-• BANK: -13.8% on $237M volume, 1.6× market cap — one-day round-trip after 7-27 breakout (+17%, 7d +348%). yesterday's winner, today's CAPITULATION.
-• COTI: trending + +65% at rank #543 — PUMP-RISK, outside top-250 mcap tier, verify before extrapolating.
-• BEAT: -24.2% erases 7-26 d5 resurgence (+19.4%) — pattern-tail "3-day-sustain + d4-unwind + d5-resurge" fully unwinds at d6.
-• UB: -17.3% breaks d6-sustain shape logged 7-26 — first fracture in the "3-day-sustain + d4-unwind + d5-reversal + d6-sustain" sub-class.
-• HYPE + BTC + PI all trending on the down side — trending endpoint mirrors the risk-off tape.
+- BEAT: +17.7% on 7d +35% — BREAKOUT sustained, picks up where 7-31 UB flame-out left off
+- UNI pole-flip: 7-31 +13.7% large-cap winner → 8-01 -8.5% top loser, extends HOLO / PUMP flip-day pattern to third consecutive UTC-day
+- PUMP: +9.5% follow-through after 7-31 flip (+5.4%), $106M vol leads winners list
+- HYPE: MAJOR -6.4% on 7d -9.3%, only top-10 mcap dropping harder than BTC / ETH
 
-_source: coingecko markets + trending (both clean, 35+d cg streak)._
+_source: coingecko markets + trending (both clean via WebFetch, curl blocked in sandbox)._

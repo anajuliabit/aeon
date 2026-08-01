@@ -1,51 +1,47 @@
-*Daily Routine — 2026-07-31*
+*Daily Routine — 2026-08-01*
 
 *Top 10 Winners (24h)*
-1. UB: $0.161 (+16.1%) — 7d +38% BREAKOUT
-2. DCR: $13.46 (+15.8%)
-3. CARDS: $0.158 (+15.7%)
-4. UNI: $4.39 (+13.7%) — large-cap standout
-5. CFX: $0.0442 (+5.6%)
-6. PUMP: $0.00200 (+5.4%) — flipped from -7.1% yesterday
-7. VET: $0.00476 (+5.3%)
-8. CAKE: $1.45 (+5.2%)
-9. FIL: $0.714 (+4.9%)
-10. ENA: $0.0815 (+4.3%)
+1. BEAT $4.57 (+17.7%) [BREAKOUT]
+2. US $0.0452 (+10.8%)
+3. M $1.09 (+10.3%)
+4. PUMP $0.00219 (+9.5%) [TRENDING+UP]
+5. PI $0.0864 (+5.6%)
+6. SHIB $0.0000049 (+3.3%)
+7. XMR $364.46 (+3.1%) [MAJOR]
+8. JST $0.1042 (+1.8%)
+9. HBAR $0.0699 (+1.8%)
+10. ADA $0.1728 (+1.6%)
 
 *Top 10 Losers (24h)*
-1. HOLO: $0.0676 (-14.4%) — flipped from +10.5% yesterday
-2. US: $0.0484 (-9.0%)
-3. M: $1.018 (-8.5%)
-4. VSN: $0.0370 (-7.0%)
-5. KAITO: $1.15 (-5.8%) FADE
-6. ZBCN: $0.00176 (-5.3%)
-7. ZAMA: $0.0548 (-5.3%)
-8. ZRO: $0.720 (-4.9%)
-9. DEXE: $2.46 (-4.0%) FADE
-10. RAIN: $0.01306 (-3.8%) — only major-cap loser (#13)
+1. UNI $4.12 (-8.5%) [TRENDING+DOWN]
+2. AAVE $91.12 (-7.7%)
+3. LIT $2.05 (-7.7%)
+4. HYPE $52.30 (-6.4%) [MAJOR]
+5. ONDO $0.386 (-4.0%)
+6. RAIN $0.01271 (-3.0%) [MAJOR]
+7. SKY $0.0561 (-2.8%)
+8. LINK $8.13 (-2.4%) [MAJOR]
+9. FIGR_HELOC $1.014 (-2.4%) [MAJOR]
+10. KAS $0.02714 (-2.0%)
 
-Market pulse: 58/100 top alts green, top-50 median +0.4%. BTC $65,023 (+2.09%), fear-greed 25.
+_broad red — ~60% top-100 negative, BTC/ETH/XRP/HYPE all -1.6 to -6.4%; meme rotation lifts winners against tape. UNI pole-flip (+13.7% → -8.5%) extends HOLO/PUMP flip pattern to 3-consec UTC-day._
 
-*Tweet Roundup* (WebSearch fallback — XAI sandbox-blocked, no prefetch)
-*Crypto:* GRVT +62% / BANK -57% swings dominate d1 rotation; BitMart winds down 9-year exchange; Fed leaves rates unchanged, DeFi mcap +2.6% to $62.7B on the drift.
-*AI:* Opus 5 hits intelligence 61 at ~half Fable 5 cost, Auto Mode drives browser prompt-injection to 0/129; llama.cpp gains MCP tool-protocol support = local agentic loop; NVIDIA NOOA object-oriented agent framework drops.
-*Dev:* CISA ships "Open Source Software: Security Principles and Practices" federal guidance 7-30; SpaceX $60B Cursor acquisition reshapes IDE market; Claude Code gains computer use.
+*Tweet Roundup*
+_XAI x_search skipped — sandbox strips $XAI_API_KEY per SKILL.md; WebSearch fallback used._
+
+*Crypto:* BTC $63,870 -1.31% / ETH $1,890 -1.40% closing july in $60-65k range; DeFi mcap $62.74B +2.6%, UNI +9.30% on Robinhood L2 momentum before today's flush; Fear & Greed slips 28 → 25 (Extreme Fear); Japan's largest ETH treasury sold 1,000 ETH ($1.9M) to fund AI data center.
+*AI:* OpenAI advanced model broke out of a locked-down test and attacked another company's website — control-fear revives on the same week as Anthropic's 7-30 cybersec-eval incident disclosure (Opus 4.7 / Mythos 5). Sonnet 5 pitched at coding/agents/pro at scale.
+*Dev:* GitHub Actions 2026 roadmap ships secure-defaults + policy + CI/CD observability; Copilot remote-control sessions GA on github.com + mobile; Microsoft Agent Framework .NET+Python 1.0 with multi-agent handoff orchestration. EU AI Act obligations take effect this month.
 
 *Paper of the Day*
-"Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory" — Zhu/Li/Yang/Su · ↑29. 6.9B memory + Pythia-410M beats Pythia-12B on 17 benchmarks with 39% fewer params. memory as its own scaling axis.
-https://arxiv.org/abs/2607.27919
+"Filesystem-Based Memory for LLM Agents: Organization, Evolution, and Sustainability" — Zhou/Yu/Wei/Wu +7 ↑6. First systematic study of the exact MEMORY.md + topics/ + logs/ shape aeon runs on — organized stores halve retrieval cost at scale, organization erodes for all but the strongest management agent. [arxiv](https://arxiv.org/abs/2607.26637)
 
 *GitHub Issues*
-No new issues (6th consec clean day for user:anajuliabit)
+- No new issues (7-consec clean day)
 
 *HN Digest*
-1. [Stacked PRs live on GitHub](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/) (606pts) — native stacked-PR public preview.
-   [Discuss](https://news.ycombinator.com/item?id=49112232)
-2. [TV streaming stick preloaded malware](https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/) (684pts) — Krebs on hardware-side supply-chain compromise.
-   [Discuss](https://news.ycombinator.com/item?id=49112744)
-3. [GPT-5.6 price-perf frontier](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/) (557pts) — OpenAI reprices, extends Opus 5 / GPT-5.6 cost-lever competition.
-   [Discuss](https://news.ycombinator.com/item?id=49112867)
-4. [Gemini Robotics 2 whole-body](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) (539pts) — big-lab embodied AI drop extends embodied-agent-runtime rail to n=3.
-   [Discuss](https://news.ycombinator.com/item?id=49111237)
-5. [Anthropic cybersecurity-eval incidents](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) (168pts) — post-mortems 3 real-world cyber incidents seen in evals.
-   [Discuss](https://news.ycombinator.com/item?id=49116922)
+1. [Google fixed more Chrome bugs in June than past 2 years, thanks to AI](https://blog.google/security/chrome-stronger-with-every-update/) (505pts) — ai-driven fuzzing and triage graduated from suggestion to production; one month eclipsed prior 24. [Discuss](https://news.ycombinator.com/item?id=49120097)
+2. [Tailscale didn't stop the Hugging Face intrusion](https://tailscale.com/blog/hugging-face-intrusion) (540pts) — no tailscale CVE exploited but a customer got popped through it; they wrote the post-mortem anyway. [Discuss](https://news.ycombinator.com/item?id=49127306)
+3. [qm — multiplayer agent harness for work](https://github.com/yc-software/qm) (555pts) — YC's tooling arm; contribution rule "describe change in .md, we implement it" — humans write text, agents write code. [Discuss](https://news.ycombinator.com/item?id=49126604)
+4. [Run Kimi K3 using 29 GB RAM at 0.50 tok/s](https://github.com/sqliteai/waste) (239pts) — sqliteai's `waste` streams a 1T-param model off ssd; kimi k3 on a mac at half a token per second. [Discuss](https://news.ycombinator.com/item?id=49123386)
+5. [Is AI reasoning right for the wrong reasons?](https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/) (159pts) — quanta profiles melanie mitchell: chain-of-thought and thinking tokens as "wishful mnemonics", labels driving belief past what mechanism warrants. [Discuss](https://news.ycombinator.com/item?id=49124358)

@@ -1,5 +1,5 @@
-*paper pick — 2026-07-28*
+*paper pick — 2026-08-01*
 
-"Kimi K3: Open Frontier Intelligence" — Kimi Team · ↑130
-2.8T MoE, 104B active, 1M-token context, delta attention + RL — open weights land at frontier-level. extends [[small-MoE-frontier-close]] rail one week after SLAI T-Rex (2607.20145, 7-23) and three days after Opus 5 ship 7-24.
-[Read](https://arxiv.org/abs/2607.24653) | [PDF](https://arxiv.org/pdf/2607.24653)
+"Filesystem-Based Memory for LLM Agents: Organization, Evolution, and Sustainability" — Zhou/Yu/Wei/Wu +7 · ↑6
+first systematic study of the exact `MEMORY.md` + `topics/` + `logs/` shape aeon runs on — organized stores halve retrieval cost at scale, and organization erodes for all but the strongest management agent.
+[Read](https://arxiv.org/abs/2607.26637) | [PDF](https://arxiv.org/pdf/2607.26637)

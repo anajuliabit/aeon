@@ -1,38 +1,34 @@
-*HN Digest — 2026-07-28*
+*HN Digest — 2026-08-01*
 
-_open-weights day. 3 of 7 orbit anthropic's position, kimi-k3's 3T drop, and anthropic's book-shredding fallout. bun-in-rust postmortem, google's dmca loss, and a fire-cloud in france close it._
+_ai cuts both ways today — 500-bug chrome sweep on one side, quanta critique of thinking-token theater on the other; tailscale eats a hugging face post-mortem it didn't have to._
 
-1. **[AI & agents]** [Our position on open-weights models](https://www.anthropic.com/news/position-open-weights-models) — 782 pts · 1107 comments
-   Why it matters: anthropic backs open weights in principle, pushes compute/export limits on frontier training. bio and cyber flagged as red lines.
-   HN take: "leveling the playing field empowers ordinary people more than governments already at the frontier. general intelligence is dual-use" — _txrx0000_
-   [Discussion](https://news.ycombinator.com/item?id=49076057)
+1. **[Security & policy]** [Google fixed more Chrome bugs in June than over the past two years, thanks to AI](https://blog.google/security/chrome-stronger-with-every-update/) — 505 pts · 519 comments
+   Why it matters: ai-driven fuzzing and triage graduated from suggestion to production — one month of chrome fixes eclipsed the prior 24.
+   HN take: "adversarial testing, checking developer assumptions, refactor suggestions... critiques reserved for blindly generating code are too easily conflated with the rest." — _mw888_
+   [Discussion](https://news.ycombinator.com/item?id=49120097)
 
-2. **[AI & agents]** [Kimi-K3 on HuggingFace](https://huggingface.co/moonshotai/Kimi-K3) — 1334 pts · 526 comments
-   Why it matters: moonshot ships 3T-param mxfp4-native open weights plus tech report. largest open drop to date, sized to force a real $/MTok anchor.
-   HN take: "~1.5TB of VRAM, at the limit of 8xb200s. realistically 16x for context/throughput. finally a real $/MTok anchor for a 3T model" — _NitpickLawyer_
-   [Discussion](https://news.ycombinator.com/item?id=49065752)
+2. **[Security & policy]** [Tailscale didn't stop the Hugging Face intrusion](https://tailscale.com/blog/hugging-face-intrusion) — 540 pts · 201 comments
+   Why it matters: no tailscale cve was exploited, but a customer got popped through it. they wrote the post-mortem anyway.
+   HN take: "they could have just stayed quiet and i dont think anyone would have bat an eye." — _john_strinlai_
+   [Discussion](https://news.ycombinator.com/item?id=49127306)
 
-3. **[AI & culture]** [AI companies are shredding rare books](https://twitter.com/HedgieMarkets/status/2081534588485296565) — 763 pts · 479 comments
-   Why it matters: anthropic destroyed physical rare books to digitize for training, backed by a june fair-use ruling. some titles were last-copies.
-   HN take: "you can reprint a bestseller. you can't replace the last three copies of an 18th-century botanical text once someone shreds them for training data" — _est31_
-   [Discussion](https://news.ycombinator.com/item?id=49068738)
+3. **[AI & agents]** [qm – Multiplayer agent harness for work](https://github.com/yc-software/qm) — 555 pts · 113 comments
+   Why it matters: yc's tooling arm ships an agent harness whose contribution rule is "describe the change in .md, we'll implement it" — humans write text, agents write code.
+   HN take: "sqlite has a conceptually similar contribution process — motivated by keeping copyrighted code out. asking that 'random people' don't send code is not a novel, post-ai idea." — _jez_
+   [Discussion](https://news.ycombinator.com/item?id=49126604)
 
-4. **[Infra & devtools]** [PGSimCity — How PostgreSQL Works](https://nikolays.github.io/PGSimCity/) — 901 pts · 88 comments
-   Why it matters: interactive simcity-style viz of postgres internals. wal, autovacuum, buffer cache, workers. teaching aid, not a debugger.
-   HN take: "why is a new process a square through a tube to a building where a pinball switch glows red? it gets lost in the sauce" — _graypegg_
-   [Discussion](https://news.ycombinator.com/item?id=49063754)
+4. **[AI & agents]** [Run Kimi K3 using 29 GB of RAM at 0.50 tok/s](https://github.com/sqliteai/waste) — 239 pts · 96 comments
+   Why it matters: sqliteai's `waste` streams a 1t-param model off ssd; kimi k3 on a mac at half a token per second. accessibility over throughput.
+   HN take: "this Mac uses 30-50W, so 40-60 tok/Wh, vs maybe 80k for a modern GPU cluster. So that's about 1000-2000x more power for the SSD streaming." — _herf_
+   [Discussion](https://news.ycombinator.com/item?id=49123386)
 
-5. **[Infra & devtools]** [How is the Bun rewrite in Rust going?](https://lockwood.dev/ai/2026/07/27/how-is-the-bun-rewrite-in-rust-going.html) — 464 pts · 367 comments
-   Why it matters: 4 months post-rewrite, commits flatlined and no user-facing release shipped. postmortem questions the token spend.
-   HN take: "someone fixed the zig original with sub-second builds by modernizing the codebase. the issues that justified the rewrite were self-inflicted" — _bendmorris_
-   [Discussion](https://news.ycombinator.com/item?id=49067854)
+5. **[AI & agents]** [Is AI reasoning right for the wrong reasons?](https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/) — 159 pts · 182 comments
+   Why it matters: quanta profiles melanie mitchell's argument that chain-of-thought and thinking tokens are "wishful mnemonics" — the labels drive belief more than the mechanism warrants.
+   HN take: "sensible legislation might require commercial AI providers discourage anthropomorphisation by avoiding personal pronouns from chatbot interfaces. GOOD: 'this computer system can start the refund process.'" — _ForHackernews_
+   [Discussion](https://news.ycombinator.com/item?id=49124358)
 
-6. **[Security & policy]** [Judge rejects Google's DMCA claim against scrapers](https://www.techdirt.com/2026/07/27/judge-rejects-googles-attempt-to-dmca-its-way-out-of-being-scraped/) — 295 pts · 118 comments
-   Why it matters: court dismisses google v serpapi. search-index data isn't copyrightable, dmca doesn't reach scraping. wide read for ai training pipelines.
-   HN take: "suit was filed because openai was using serpapi. alphabet is an anthropic investor. amended complaint due aug 10" — _1vuio0pswjnm7_
-   [Discussion](https://news.ycombinator.com/item?id=49073513)
+6. **[Misc]** [Elevators](https://john.fun/elevators) — 1244 pts · 297 comments
+   Why it matters: interactive walkthrough of modern elevator dispatch — group control, destination dispatch, regen braking, the physics that make naive queueing math wrong.
+   HN take: "going down empty is typically more energy-consuming — counterweighted. if brakes fail the cab won't crash down, it will go up, possibly dragging you into the fire. many firefighters died because of that." — _cyberax_
+   [Discussion](https://news.ycombinator.com/item?id=49124218)
 
-7. **[Science & culture]** [French firefighters face 'pyrocumulonimbus' for first time](https://www.france24.com/en/live-news/20260726-french-firefighters-face-pyrocumulonimbus-for-first-time) — 451 pts · 358 comments
-   Why it matters: gironde wildfire made its own thunderstorm with self-igniting downwind lightning. 8-10 fire-storm episodes this season vs 2 in 2017's pedrogão.
-   HN take: "biggest wildfire in spain: 2026. norway: 2026. germany: 2025. uk: 2025. almost every european country broke records in the same window" — _pvaldes_
-   [Discussion](https://news.ycombinator.com/item?id=49060495)
