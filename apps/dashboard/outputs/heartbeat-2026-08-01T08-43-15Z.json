@@ -1,0 +1,286 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat 08:37Z",
+        "description": "System health monitoring — 8-01"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_critical",
+        "sep1",
+        "section_slot_miss",
+        "sep2",
+        "section_freshness",
+        "sep3",
+        "section_pr_queue",
+        "sep4",
+        "section_chronic"
+      ]
+    },
+    "alert_critical": {
+      "type": "Alert",
+      "props": {
+        "title": "CRITICAL STATUS",
+        "message": "Multiple system failures detected — heartbeat 8-01 08:37Z",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_slot_miss": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_slot",
+        "text_slot_desc",
+        "badges_missed",
+        "text_slot_lastdispatch",
+        "text_slot_analysis"
+      ]
+    },
+    "heading_slot": {
+      "type": "Heading",
+      "props": {
+        "text": "07:00Z Slot MISS",
+        "level": "h3"
+      }
+    },
+    "text_slot_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Missed dispatch on:",
+        "variant": "body"
+      }
+    },
+    "badges_missed": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_morning",
+        "badge_daily",
+        "badge_thought"
+      ]
+    },
+    "badge_morning": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief",
+        "variant": "destructive"
+      }
+    },
+    "badge_daily": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "destructive"
+      }
+    },
+    "badge_thought": {
+      "type": "Badge",
+      "props": {
+        "text": "thought-review",
+        "variant": "destructive"
+      }
+    },
+    "text_slot_lastdispatch": {
+      "type": "Text",
+      "props": {
+        "text": "Last dispatch: 2026-07-31T07:33:42Z (all three)",
+        "variant": "caption"
+      }
+    },
+    "text_slot_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "2nd MISS instance in 3 days (after 7-30 MISS + 7-31 recovery) — ISS-file escalation gate re-arms",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_freshness": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_fresh",
+        "stat_stale",
+        "text_fresh_ticks",
+        "text_fresh_cron"
+      ]
+    },
+    "heading_fresh": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Freshness",
+        "level": "h3"
+      }
+    },
+    "stat_stale": {
+      "type": "Stat",
+      "props": {
+        "label": "Staleness",
+        "value": "~47h",
+        "delta": "2 ticks missed",
+        "trend": "down"
+      }
+    },
+    "text_fresh_ticks": {
+      "type": "Text",
+      "props": {
+        "text": "Missed daily ticks: 7-31 + 8-01 08:00Z | Status: just under 48h P3 gate",
+        "variant": "body"
+      }
+    },
+    "text_fresh_cron": {
+      "type": "Text",
+      "props": {
+        "text": "Cron last dispatch: 2026-07-30T09:03:06Z",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_pr_queue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_prs",
+        "text_pr_count",
+        "table_prs"
+      ]
+    },
+    "heading_prs": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Queue",
+        "level": "h3"
+      }
+    },
+    "text_pr_count": {
+      "type": "Text",
+      "props": {
+        "text": "2 open pull requests",
+        "variant": "body"
+      }
+    },
+    "table_prs": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "PR",
+          "Status",
+          "Age",
+          "Note"
+        ],
+        "rows": [
+          [
+            "#165",
+            "CONFLICTING",
+            "d13",
+            "Weekly-batch cadence, under 14d touch gate"
+          ],
+          [
+            "#171",
+            "Fresh",
+            "14h",
+            "Self-improve github-trending fix, under 24h gate"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_chronic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_chronic",
+        "stat_cohort",
+        "text_chronic_count",
+        "text_chronic_cost",
+        "text_chronic_issues",
+        "text_chronic_prtest"
+      ]
+    },
+    "heading_chronic": {
+      "type": "Heading",
+      "props": {
+        "text": "Chronic Sub-50% Cohort",
+        "level": "h3"
+      }
+    },
+    "stat_cohort": {
+      "type": "Stat",
+      "props": {
+        "label": "Duration",
+        "value": "day-40",
+        "delta": "durable",
+        "trend": "down"
+      }
+    },
+    "text_chronic_count": {
+      "type": "Text",
+      "props": {
+        "text": "10 skills unchanged from 2026-07-31 20:48Z tick",
+        "variant": "body"
+      }
+    },
+    "text_chronic_cost": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report: 12% weakest performer",
+        "variant": "body"
+      }
+    },
+    "text_chronic_issues": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 T+2 d17 SLIPPED | ISS-028 workaround-chain n=13+ across 10-UTC-day span",
+        "variant": "caption"
+      }
+    },
+    "text_chronic_prtest": {
+      "type": "Text",
+      "props": {
+        "text": "PR #167 kill-test NEGATIVE on 7-31",
+        "variant": "muted"
+      }
+    }
+  }
+}
