@@ -1,25 +1,22 @@
-*Goal Tracker — 2026-07-31*
+*Goal Tracker — 2026-08-01*
 
-Summary: 8 goals — 1 at risk, 0 needs attention, 1 on track, 3 blocked, 3 done (overall ↑ improving — 3 done incl. 2 fresh clears)
+Summary: 5 goals — 1 at risk, 0 needs attention, 1 on track, 3 blocked, 0 done (overall → flat)
 
 AT RISK
-• priorities.md 57d stale — 0d idle, ~150 activity/14d (flat, AT_RISK carry d3+)
-  → Action: operator refresh vault/priorities.md (nudged daily since 7-15 window, thought-review 07:36Z printed d68 zero-captures)
+• priorities.md — 58d since last review (was 2026-06-04); activity is meta-nudges, not refresh work (→ flat)
+  → Action: operator edit vault/priorities.md — 58d overdue, unblocks daily thought-review nudge
 
 BLOCKED
-• ISS-025 capture-step PR hand-off — waiting on operator direct-author against aeon.yml:479-495 since T-0 2026-07-30 slipped (T+1 d16)
-  → Action: operator direct-author capture-step PR w/ dangerouslyDisableSandbox (cost-report SR 12% durable, sole unblock path)
-• 12:00 UTC batch DARK — waiting on ISS-027 root-cause fix since 2026-06-28 21:00Z (d34, 8-skill cluster frozen)
-  → Action: investigate per-skill dispatch blockage (same-slot token-alert fires clean = not scheduler-wide; ISS-027.md filed)
-• Operator on-chain config — waiting on operator to add memory/on-chain-watches.yml + ALCHEMY/ETHERSCAN secrets since 2026-06-08 (d55)
-  → Action: operator adds ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets + type:pool/position entries to on-chain-watches.yml
+• ISS-025 capture-step PR hand-off — T+2 d17 slipped past 7-30 T-0; cost-report sr=0.12 weakest chronic-failure durable (→ flat)
+  → Action: operator direct-author capture-step pivot against .github/workflows/aeon.yml:479-495
+• 12:00 UTC batch DARK — d35, 8-skill cluster frozen since 6-28 21:00Z; ISS-027 signature durable (→ flat)
+  → Action: investigate aeon.yml 12:00Z cron for 8-skill batch — trace post-6-28 dispatch regression
+• Operator on-chain config — d56, defi-monitor NO_CONFIG; ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing, on-chain-watches.yml wallet-only (→ flat)
+  → Action: operator set alchemy+etherscan secrets, populate memory/on-chain-watches.yml pool/position entries
 
 ON TRACK
-• PR #165 skill-graph shared_state 21→27 — 0d idle, ~195 activity/14d (↑ improving, BLOCKED→ON TRACK; d12 CONFLICTING but within weekly-batch cadence per CLAUDE.md)
+• PR #165 d13 past-gate CONFLICTING — sole survivor after 7-30 batch-merge; weekly-review 8-03 window 2d out (→ flat)
 
-DONE
-• PR #167 bash-redirect fix — merged 2026-07-30 23:37:20Z (7d past-gate cohort cleared, workaround-chain retirement candidate)
-• 07:00 UTC scheduler slot MISS 7-30 — recovered 2026-07-31 (morning-brief + daily-routine + thought-review all fired at +33-41min dispatch-lag, 1-instance anomaly)
-• ISS-027/028 doc-gap — closed 2026-07-30 by reflect skill (24d load-bearing gap resolved, INDEX 11→13 open)
+Note: 07:00 UTC scheduler slot MISS reopened 8-01 (2-of-3-day pattern 7-30 MISS / 7-31 recovery / 8-01 MISS per heartbeat 08:37Z P3). Prior tracker cleared it 7-31; not re-added here per skill's read-only-on-goals constraint. Reopen candidate for operator or reflect 8-01 evening.
 
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
+Sources: logs=ok, git=shallow, gh_pr=ok, gh_issue=ok, cron-state=ok
