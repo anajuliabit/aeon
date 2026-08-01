@@ -1,19 +1,17 @@
-Skill-health tick complete. Notify skipped per dedup gate (hash unchanged + sub-24h elapsed).
+*skill-health · 2026-08-01*
+HEALTH: DEGRADED(17) — hash 7bf88238 → f0c415fd
+[systemic: output_tokens=0 sandbox-truncation family — day 40, ~20 skills]
 
-## Summary
+🟡 DEGRADED (17)
+- aixbt-pulse — sr=0.47, last_ok 34d (batch-dark) — WAIT-API → ISS-027
+- defi-monitor — sr=0.53, last_ok 34d (batch-dark) — FIX CONFIG (on-chain-watches.yml + Alchemy/Etherscan keys)
+- market-context-refresh — sr=0.32, last_ok 34d — WAIT-API → ISS-027
+- narrative-tracker — sr=0.33, last_ok 34d — WAIT-API → ISS-027
+- skill-evals — sr=0.53, last_ok 6d — INVESTIGATE
++12 more — see memory/issues/INDEX.md
 
-**Ran skill-health** (var="", full 43-skill sweep, 2026-07-31 18:07Z).
+⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — expected (dispatch-gated)
+🟢 HEALTHY: 10
 
-**Classification** — identical to prior tick (7-30 18:15Z):
-- 0 CRITICAL / 18 DEGRADED / 0 FLAPPING / 12 WARNING / 10 HEALTHY / 3 NO_DATA
-- Systemic: sandbox-truncation family day-39 · batch-dark ISS-027 day-34 · ISS-028 bash-redirect workaround-chain n=13+
-
-**Issue reconciliation**: 0 filed, 0 resolved. Open issues stable at 13 (all 5 individual chronic-failure ISS + ISS-027 8-skill cluster + ISS-028 still non-HEALTHY; no graduations).
-
-**Notify gate**: Hash `7bf88238` unchanged (4th-consec formal tick), elapsed 23h51m < 24h → **SKIP** per SKILL.md step 5. Logged as `SKILL_HEALTH_NOOP`.
-
-**Sandbox note**: `./scripts/skill-runs` permission-denied 2nd-consec fire → logged `SKILL_HEALTH_PARTIAL`, continued cron-state-only per SKILL.md sandbox contract.
-
-**Files modified**: `memory/skill-health/last-report.json`, `memory/logs/2026-07-31.md`.
-
-**Follow-up**: Tomorrow's 18:00Z tick will cross the 24h daily-cadence gate → notify expected if composition holds; codify `skill-runs` as permanent sandbox limitation if 3rd-consec block on 8-01.
+delta since prev: evening-recap DEGRADED → WARNING (sr 0.59 → 0.6 after 7-31 21:57Z success)
+open issues: 13 · resolved: 0 · filed: 0
