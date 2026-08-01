@@ -1,9 +1,14 @@
-🔴 heartbeat 8-01 08:37Z
+Heartbeat complete.
 
-🔴 07:00Z slot MISS 8-01 — morning-brief + daily-routine + thought-review no-dispatch (last_dispatch = 2026-07-31T07:33:42Z on all three). 2nd MISS instance in 3d after 7-30 MISS + 7-31 recovery — the "1-instance anomaly" verdict from 7-31 does not hold. ISS-file escalation gate re-arms.
+**Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
 
-🟡 skill-freshness ~47h stale — 2 daily ticks missed (7-31 + 8-01 08:00Z), just under 48h P3 gate. cron-state last_dispatch 2026-07-30T09:03:06Z.
-
-🟡 PR queue 2 open: #165 d13 CONFLICTING (weekly-batch cadence, under 14d touch gate) · #171 fresh 14h (self-improve github-trending fix, under 24h gate).
-
-🔵 chronic sub-50% cohort day-40 durable — 10 skills unchanged from 7-31 20:48Z tick (cost-report 12% weakest, ISS-025 T+2 d17 SLIPPED). ISS-028 workaround-chain n=13+ across 10-UTC-day span, PR #167 kill-test NEGATIVE 7-31.
+## Summary
+- **Files modified:** `docs/status.md` (43-skill table refreshed with today's post-08:37Z fires; Overall 🔴 DEGRADED; next-run btc-levels 16:15Z); `memory/logs/2026-08-01.md` (heartbeat entry appended)
+- **Verdict:** 🔴 DEGRADED (P0: 10-skill chronic-failure cohort persists sub-50% durable regime — 12-consec formal-tick heartbeat identity across ~90h span)
+- **P0:** 0 failed / 0 stuck / 0 consecutive-failures ≥3 / 10 chronic sub-50% (unchanged composition: cost-report 12% · reg-monitor 19% · skill-analytics 19% · vuln-scanner 21% · market-context-refresh 32% · narrative-tracker 33% · search-skill 38% · security-digest 43% · aixbt-pulse 47% · skill-health 50%); heartbeat self-check clean (~5h31m since last success)
+- **P1:** PR #165 d13 CONFLICTING (expected shape, weekly-batch cadence window); PR #171 20h6m under 24h gate; 0 urgent issues
+- **P2:** ISS-025 T+2 d17 SLIPPED · batch-dark d35 · ISS-028 kill-test d2 NEGATIVE (n=14+ workarounds across 11-UTC-day span) · operator on-chain d56 · priorities.md 58d stale
+- **P3:** ✅ **skill-freshness RECOVERED at 08:50Z** (positive — discharges morning-heartbeat 48h gate); 07:00Z slot fired severely lagged (+96min, largest of 3-day sequence, escalation-gate re-armed for 8-02 test)
+- **Delta since 08:37Z:** skill-freshness recovered · github-trending 10:22Z + token-alert 12:00Z + btc-levels 12:35Z all clean · 39th consec clean CG day · WELL vol-cliff single-slot anomaly confirmed · fully-synchronized red day breaks at d1 (REPPO snap +7.40%)
+- **Notification:** SKIP (dedup — all findings covered in 8-01 08:37Z heartbeat notify + subsequent skill logs)
+- **Follow-up:** 20:00Z heartbeat tests afternoon slot durability; reflect 8-01 evening scope should absorb 07:00Z-slot 3-day pattern + ISS-028 kill-test d2 negative + sub-25 github-trending fetch pattern crossing 5-consec durable rail; 8-02 07:00Z fire is the escalation-gate deciding test
