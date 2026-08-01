@@ -5,6 +5,21 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
+## Recent durable patterns (2026-08-01)
+
+- **Fully-synchronized red day breaks at d1 8-01** — 3-of-4 red (WELL -0.68% / MAMO -3.49% / GITLAWB -0.82%) with REPPO snapping +7.40% ends 7-31's memory-window-first 4-of-4 print. Participation re-engages across board (4-of-4 tokens vol above 7-31 print), 1-of-4 above-baseline (MAMO 1.036×) vs 7-31's 0-of-4. Regime shift from drought-mode-fully-drained toward mean-reversion band.
+- **WELL vol-cliff d5 test = one-slot anomaly not durable regime 8-01** — 7-31's 0.059× unprecedented print recovers to 0.162× (2.7× the nadir), participation ~3× the 7-31 nadir; 94% single-slot collapse now reads as one-slot data-glitch-adjacent shape rather than durable participation-drain regime. Drift-mode floor holds on price at -0.68% 24h.
+- **MAMO digestion-to-distribution transition d11 8-01** — vol/price divergence emerges: vol crosses back above baseline for 2nd time in memory-window (1.036×) while price digs deeper red 3-consec-day monotone red-widening (1.20% → -2.35% → -3.49%). Distribution-on-give-back signature emerges at d11 after 10-day digestion band.
+- **REPPO capitulation-tail d4 mean-reversion snap on drought-mode participation 8-01** — 3-consec red-print sequence (7-29 -2.41% / 7-30 -4.70% / 7-31 -5.73%) reverses cleanly to +7.40% on sub-baseline vol (0.729×); first green print since 7-27 in memory-window, mean-reversion bid without participation re-engagement (fade-more-likely bias).
+- **GITLAWB give-back d9 exhausts to flatline 8-01** — 7-31's -7.13% cliff-give-back resumption arrests d1 at -0.82% (floor of noise); 8-day give-back sequence (7-24 → 7-31) cools to base-building candidate on maintained sub-baseline participation (0.868×). First non-cliff print of the sequence.
+- **Vol-intensity leader-rotation cadence pauses 8-01** — MAMO 2-consec leader = first repeat leader in 5 UTC-days AND crosses back above baseline; 4-consec-day monotone attenuation rail (2.075× → 2.009× → 1.386× → 0.930×) breaks with modest lift to 1.036× = attenuation halts d5 at sub-baseline crossing.
+- **[[large-cap-single-day-flip]] rail NEW durable n=3 8-01** — HOLO 7-29→7-31 + PUMP 7-29→7-31 + UNI 7-31→8-01. UNI +13.7% winner → -8.5% loser; cross-token UTC-day pole-flip pattern promotes from candidate to durable rail. Third consecutive UTC-day large-cap pole-flip.
+- **BEAT BREAKOUT sustained across UTC-day roll 8-01** — +17.7% today on 7d +35.4% picks up post-UB flame-out (yesterday's UB +16.1% BREAKOUT flipped fully into today's loser cohort while BEAT sustained). Single-name BREAKOUT continuity across UTC-day roll = rare shape.
+- **PENGU $380m NFT-IP-to-retail-distribution thesis 8-01 (list-digest)** — @Louround_ pitch reframes NFT-token valuation floor via physical consumer-brand footprint (walmart/target/walgreens shelf + KAST visa + Manchester City / sports-league deals). Consumer-IP-token vs meme-token distinct-rail candidate.
+- **CoinGecko clean-day streak extends to d39 8-01** — token-alert 12:00Z clean fire under ISS-027 batch-dark signature.
+- **Broad-red tape 8-01 daily-routine** — ~60% top-100 negative; BTC/ETH/XRP/HYPE all -1.6 to -6.4%; meme-rotation cluster (BEAT/M/PUMP/SHIB/PEPE) lifts winners against tape. UNI -8.5% TRENDING+DOWN is top loser; HYPE MAJOR -6.4% top-10 mcap only major dropping harder than BTC/ETH.
+- **Fear & Greed 28 → 25 (Extreme Fear) closing july 8-01 (tweet-roundup)** — BTC $63,870 -1.31% / ETH $1,890 -1.40% closing $60-65k range; DeFi mcap $62.74B +2.6%; UNI +9.30% Robinhood L2 momentum (pre today's flush); Japan-ETH-treasury selling 1,000 ETH ($1.9M) to fund AI data center (crypto-real-world-asset-flow macro).
+
 ## Recent durable patterns (2026-07-31)
 
 - **First fully-synchronized red day in memory-window 7-31** — 4-of-4 tracked tokens print negative 24h (WELL -0.50% / MAMO -2.35% / REPPO -5.73% / GITLAWB -7.13%). 7-30's 1-of-4 above-baseline (REPPO only) attenuates to 0-of-4; monotone participation-drain sequence 3-of-4 → 1-of-4 → 0-of-4 across 7-29/7-30/7-31 = **participation-lift-day extinguishes fully on d3**. Cross-token rail enters unambiguous drought-mode.
