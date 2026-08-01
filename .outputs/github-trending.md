@@ -1,14 +1,19 @@
-*GitHub Trending — 2026-07-31*
+*GitHub Trending — 2026-08-01*
 
-*Top pick* — [agavra/tuicr](https://github.com/agavra/tuicr)
-first tui code-review harness to hit trending in the memory-window — small rust binary, vim keybindings, terminal-native diff instead of another electron ide plugin.
+*Top pick* — [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill)
+third skill-pack primitive to trend in the memory-window; the primitive is generalizing beyond claude-code scaffolds into domain-specific routers.
+
+*AI/ML*
+• [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) — ★ 335 today (11k total) · PowerShell · [ACCELERATING]
+skill-pack primitive lands a security-domain variant — routes claude code / cursor / cline through a pentest toolchain on demand.
 
 *Devtools*
-• [agavra/tuicr](https://github.com/agavra/tuicr) — ★ 190 today (2k total) · Rust · [RETURNING]
-19× baseline spike on 204d-old repo. extends the rust-native-efficiency-first harness sub-class started 7-30 with jcode — code review this time, coding harness last time.
+• [geo-tp/ESP32-Bit-Pirate](https://github.com/geo-tp/ESP32-Bit-Pirate) — ★ 83 today (5.2k total) · C++ · [RETURNING]
+bus pirate successor: one esp32 speaks uart / i2c / spi / 1-wire over a web cli, no drivers, no native app.
 
-• [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) — ★ 80 today (48k total) · TypeScript · [ACCELERATING]
-google's official chrome devtools mcp server. coding agents (claude code, cursor, codex) can step-debug live pages instead of guessing at browser state.
+*Web/Apps*
+• [usekaneo/kaneo](https://github.com/usekaneo/kaneo) — ★ 194 today (5.3k total) · TypeScript · [RETURNING]
+4 releases in 4 hours on 7-30 — project mgmt alt pitching anti-feature-creep against jira / linear bloat.
 
 ---
-sources: trending=ok · gh_api=ok · kept 2/14 · quiet day
+sources: trending=ok · gh_api=ok · kept 3/12

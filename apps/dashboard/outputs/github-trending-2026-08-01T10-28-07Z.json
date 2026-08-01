@@ -1,0 +1,362 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-08-01"
+      },
+      "children": [
+        "section-toppick",
+        "sep-1",
+        "section-aiml",
+        "sep-2",
+        "section-devtools",
+        "sep-3",
+        "section-webapps",
+        "sep-4",
+        "footer"
+      ]
+    },
+    "section-toppick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-toppick",
+        "repo-toppick"
+      ]
+    },
+    "heading-toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo-toppick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-toppick",
+        "text-toppick-desc"
+      ]
+    },
+    "link-toppick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "zhaoxuya520/reverse-skill",
+        "href": "https://github.com/zhaoxuya520/reverse-skill",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "text-toppick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "third skill-pack primitive to trend in the memory-window; the primitive is generalizing beyond claude-code scaffolds into domain-specific routers.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-aiml",
+        "repo-aiml-1"
+      ]
+    },
+    "heading-aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo-aiml-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-aiml-1",
+        "meta-aiml-1",
+        "text-aiml-1-desc"
+      ]
+    },
+    "link-aiml-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "zhaoxuya520/reverse-skill",
+        "href": "https://github.com/zhaoxuya520/reverse-skill",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "meta-aiml-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-aiml-1-stars",
+        "badge-aiml-1-lang",
+        "badge-aiml-1-trend"
+      ]
+    },
+    "stat-aiml-1-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "335",
+        "delta": "+335 (11k total)"
+      },
+      "children": []
+    },
+    "badge-aiml-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "PowerShell",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-aiml-1-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-aiml-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "skill-pack primitive lands a security-domain variant — routes claude code / cursor / cline through a pentest toolchain on demand.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-devtools",
+        "repo-devtools-1"
+      ]
+    },
+    "heading-devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo-devtools-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-devtools-1",
+        "meta-devtools-1",
+        "text-devtools-1-desc"
+      ]
+    },
+    "link-devtools-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "geo-tp/ESP32-Bit-Pirate",
+        "href": "https://github.com/geo-tp/ESP32-Bit-Pirate",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "meta-devtools-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-devtools-1-stars",
+        "badge-devtools-1-lang",
+        "badge-devtools-1-trend"
+      ]
+    },
+    "stat-devtools-1-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "83",
+        "delta": "+83 (5.2k total)"
+      },
+      "children": []
+    },
+    "badge-devtools-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "C++",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-devtools-1-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-devtools-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "bus pirate successor: one esp32 speaks uart / i2c / spi / 1-wire over a web cli, no drivers, no native app.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-webapps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-webapps",
+        "repo-webapps-1"
+      ]
+    },
+    "heading-webapps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo-webapps-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-webapps-1",
+        "meta-webapps-1",
+        "text-webapps-1-desc"
+      ]
+    },
+    "link-webapps-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "usekaneo/kaneo",
+        "href": "https://github.com/usekaneo/kaneo",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "meta-webapps-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-webapps-1-stars",
+        "badge-webapps-1-lang",
+        "badge-webapps-1-trend"
+      ]
+    },
+    "stat-webapps-1-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "194",
+        "delta": "+194 (5.3k total)"
+      },
+      "children": []
+    },
+    "badge-webapps-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-webapps-1-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-webapps-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "4 releases in 4 hours on 7-30 — project mgmt alt pitching anti-feature-creep against jira / linear bloat.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/12",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
