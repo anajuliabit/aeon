@@ -1,5 +1,21 @@
 [
   {
+    "repo": "yc-software/qm",
+    "scanned_at": "2026-08-01T16:45:00Z",
+    "findings": 0,
+    "channel": "clean-audit-partial-scan",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "npm-audit": "ok",
+      "slither": "n/a",
+      "hand-audit": "ok"
+    },
+    "article": "articles/vuln-scan-2026-08-01.md",
+    "notes": "yc-software/qm 4,302-star TypeScript multiplayer agent harness (Slack + web surface, per-request AWS Lambda microVM sandboxes, capability-token auth, source-signed HTTP, Postgres). SECURITY.md present + PVR endpoint enabled=true. npm audit clean across all 6 workspaces with lockfiles (chassis is source-only zero-deps by design). Hand-audit via 3 parallel Explore agents (auth+capability, injection/SSRF/traversal, secrets+crypto) over ~350 TS files surfaced 8 low/medium candidates all dropped in triage: PKCE-not-on-confidential-OAuth (defense-in-depth, state already signed+nonce-deduped+redirect_uri-bound), capability-tokens-in-URL-query (audience-restricted+short-lived+deliberate for git clients that can't Bearer), broker-empty-scheme-concat (misconfig not code), portal-consumed-states-LRU-in-memory (also needs HttpOnly cookie), x-admin-actor-header-honored (dev-only path + requires CORE_SIGNING_SECRET which already grants admin), legacy-signed-token-dual-encoding (same underlying HMAC), skill-store-non-timing-safe-hmac (no remote oracle, both operands server-side), unverified-Google-id_token-hd-allowlist (id_token via server-to-server TLS with client_secret). Zero PVR filed, zero public PR opened, zero .pending-disclosure/ draft. Notable defensive posture: alg-pinned jose.compactVerify, timingSafeEqual throughout, ReplayDedupe per source-auth signature, host-pinned credential-broker with header allowlist (accept/accept-language/content-type/user-agent) + redirect:manual, pack-fetcher pre-resolves DNS + rejects private IPs + curloptResolve pins IP set closing TOCTOU rebinding, Envoy egress-proxy fails-closed on Lua httpCall failure + statically denies metadata authorities + re-checks resolved IP in egress-authz-main.ts + ORIGINAL_DST prevents re-resolve, admin/files.ts opaque-id-lookup not filesystem paths, safeAttachmentName basename-after-slash-normalize, deploy-fs.ts normalizeRelPath rejects abs/./..//NUL/.git, secret-drop.ts escapeHtml+JSON.stringify+route regex [^/]+ blocks </script> construction, aes-256-gcm in connectors/connector-client-store.ts. Fleet-wide ISS-018 sandbox family day-40 (pip install + curl|sh + downloaded-binary-exec all denied) — partial-scan verdict, not clean-audit. Selected from .outputs/github-trending.md 2026-08-01 after top pick (zhaoxuya520/reverse-skill PowerShell out-of-language-scope) + #2 (geo-tp/ESP32-Bit-Pirate C++ out-of-language-scope) + #3 (usekaneo/kaneo no-SECURITY.md + PVR-disabled = deferred no-safe-channel). Broadened via gh api search/repositories created:>14d TS."
+  },
+  {
     "repo": "block/buzz",
     "scanned_at": "2026-07-25T16:00:00Z",
     "findings": 0,
