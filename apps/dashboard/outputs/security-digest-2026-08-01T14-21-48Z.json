@@ -1,0 +1,399 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-01",
+        "description": "Verdict: nothing actively exploited today, 1 to patch, 3 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "sep_intro",
+        "patch_today_heading",
+        "patch_today_summary",
+        "patch_today_clusters",
+        "patch_today_action",
+        "sep1",
+        "patch_week_heading",
+        "patch_week_cve",
+        "sep2",
+        "monitor_heading",
+        "monitor_items"
+      ]
+    },
+    "sep_intro": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch_today_summary": {
+      "type": "Text",
+      "props": {
+        "text": "~60 npm + ~20 pip malware advisories in 48h. Notable clusters:"
+      }
+    },
+    "patch_today_clusters": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cluster_0xlr",
+        "cluster_fintech",
+        "cluster_nvidia",
+        "cluster_mcp",
+        "cluster_ethers"
+      ]
+    },
+    "cluster_0xlr": {
+      "type": "Text",
+      "props": {
+        "text": "@0xlr/* 10-pack saas-auth dep-confusion (clerk-auth / stripe-checkout / supabase-db / sentry-web / prisma-client-js / vercel-analytics)",
+        "variant": "body"
+      }
+    },
+    "cluster_fintech": {
+      "type": "Text",
+      "props": {
+        "text": "fintech corporate-scope 20-pack (@spending-behavior-ui/*, @finance-ui/*, @cr-invested-ui-components/*, @mplay-*)",
+        "variant": "body"
+      }
+    },
+    "cluster_nvidia": {
+      "type": "Text",
+      "props": {
+        "text": "nvidia AI-tooling squats (trtllm-subdir-test + nvtorch-oot-nightly + test-dev-* 8-pack)",
+        "variant": "body"
+      }
+    },
+    "cluster_mcp": {
+      "type": "Text",
+      "props": {
+        "text": "mcp-server typosquat 12+ (refbase-mcp / chaos-mcp / gtm-mcp-auth / sap-mcp-facilitator / pm-claude-skills-mcp / kip-mcp-http)",
+        "variant": "body"
+      }
+    },
+    "cluster_ethers": {
+      "type": "Text",
+      "props": {
+        "text": "ethers/solana wallet-targets (@ethers-sdk/ethers + @ethers-sdk/wallet + @solana-sdk/web3.js + eth-bridge + kelly-stake)",
+        "variant": "body"
+      }
+    },
+    "patch_today_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "audit npm/pip installs against these names; rotate any credentials on dev hosts that touched them."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "patch_week_cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve_2026_52855_link",
+        "cve_2026_52855_meta",
+        "cve_2026_52855_desc",
+        "cve_2026_52855_action"
+      ]
+    },
+    "cve_2026_52855_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-52855 — github.com/pterodactyl/wings (Go)",
+        "href": "https://github.com/advisories/GHSA-pfvc-3p5h-x7h6",
+        "source": "GitHub Advisory"
+      }
+    },
+    "cve_2026_52855_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve_2026_52855_score",
+        "cve_2026_52855_poc",
+        "cve_2026_52855_epss"
+      ]
+    },
+    "cve_2026_52855_score": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.9",
+        "variant": "destructive"
+      }
+    },
+    "cve_2026_52855_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no public PoC",
+        "variant": "outline"
+      }
+    },
+    "cve_2026_52855_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "no EPSS",
+        "variant": "outline"
+      }
+    },
+    "cve_2026_52855_desc": {
+      "type": "Text",
+      "props": {
+        "text": "wings exposes node config secrets via egg configuration-file templating. 2nd wings CVE in 3d (7-30 shipped CVE-2026-54593 fix 1.12.2)."
+      }
+    },
+    "cve_2026_52855_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "upgrade wings to ≥1.12.3"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "monitor_nltk",
+        "monitor_thumbor",
+        "monitor_vaults"
+      ]
+    },
+    "monitor_nltk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_nltk_link",
+        "monitor_nltk_meta",
+        "monitor_nltk_desc",
+        "monitor_nltk_action"
+      ]
+    },
+    "monitor_nltk_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-qvv7-cg9c-w4x3 — nltk (pip)",
+        "href": "https://github.com/advisories/GHSA-qvv7-cg9c-w4x3",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor_nltk_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_nltk_cves",
+        "monitor_nltk_score",
+        "monitor_nltk_fix"
+      ]
+    },
+    "monitor_nltk_cves": {
+      "type": "Badge",
+      "props": {
+        "text": "4-CVE mass-disclose",
+        "variant": "secondary"
+      }
+    },
+    "monitor_nltk_score": {
+      "type": "Badge",
+      "props": {
+        "text": "max CVSS 8.6",
+        "variant": "destructive"
+      }
+    },
+    "monitor_nltk_fix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "outline"
+      }
+    },
+    "monitor_nltk_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DNS-rebinding SSRF bypass defeats ENFORCE mode + 3 path-traversals in FramenetCorpusReader/NKJPCorpusReader/ReviewsCorpusReader."
+      }
+    },
+    "monitor_nltk_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "track for nltk >3.9.4; pin and restrict outbound DNS until patched"
+      }
+    },
+    "monitor_thumbor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_thumbor_link",
+        "monitor_thumbor_meta",
+        "monitor_thumbor_desc",
+        "monitor_thumbor_action"
+      ]
+    },
+    "monitor_thumbor_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-mw3h-qjxj-6xg9 — thumbor (pip)",
+        "href": "https://github.com/advisories/GHSA-mw3h-qjxj-6xg9",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor_thumbor_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_thumbor_cves",
+        "monitor_thumbor_score",
+        "monitor_thumbor_fix"
+      ]
+    },
+    "monitor_thumbor_cves": {
+      "type": "Badge",
+      "props": {
+        "text": "6-CVE mass-disclose",
+        "variant": "secondary"
+      }
+    },
+    "monitor_thumbor_score": {
+      "type": "Badge",
+      "props": {
+        "text": "max CVSS 8.2",
+        "variant": "destructive"
+      }
+    },
+    "monitor_thumbor_fix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "outline"
+      }
+    },
+    "monitor_thumbor_desc": {
+      "type": "Text",
+      "props": {
+        "text": "HMAC bypass via multi-replace + ALLOWED_SOURCES regex bypass + 4 DoS in convolution/proportion filters."
+      }
+    },
+    "monitor_thumbor_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "track for thumbor >7.7.7; do not expose thumbor endpoints publicly"
+      }
+    },
+    "monitor_vaults": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_vaults_link",
+        "monitor_vaults_meta",
+        "monitor_vaults_desc",
+        "monitor_vaults_action"
+      ]
+    },
+    "monitor_vaults_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-r2v3-8gwf-7ghm — bank-vaults/vault-secrets-webhook (Go)",
+        "href": "https://github.com/advisories/GHSA-r2v3-8gwf-7ghm",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor_vaults_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_vaults_score",
+        "monitor_vaults_fix"
+      ]
+    },
+    "monitor_vaults_score": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.6",
+        "variant": "destructive"
+      }
+    },
+    "monitor_vaults_fix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "outline"
+      }
+    },
+    "monitor_vaults_desc": {
+      "type": "Text",
+      "props": {
+        "text": "vault-addr annotation SSRF + cluster-wide SA token theft via TokenRequest API."
+      }
+    },
+    "monitor_vaults_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "track for ≥1.22.3; restrict webhook egress and audit RBAC for TokenRequest scope"
+      }
+    }
+  }
+}

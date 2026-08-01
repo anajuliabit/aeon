@@ -1,29 +1,18 @@
-*Security Digest — 2026-07-31*
-Verdict: 3 supply-chain campaigns to purge, 4 to schedule, 1 to monitor. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-08-01*
+Verdict: nothing actively exploited today, 1 to patch, 3 to monitor. _Sources: KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- [ethers.js typosquat cluster (7 npm pkgs)](https://github.com/advisories/GHSA-q64r-f9q5-x6m3) — malware · crypto-dev-targeted
-  ethers.json, ethers.jsonn, ethe.json, eth.json, ethersss, ethers-io-ethers, ethe. Credential stealers impersonating ethers.js.
-  → `npm rm` any of these, audit lockfiles, rotate any wallet/RPC keys touched by dev machines.
-- [fs-extra typosquat cluster (3 npm pkgs)](https://github.com/advisories/GHSA-cg95-x585-4q9p) — malware
-  fs-extra-master, node-fs-extra-master, fsextrra. Impersonating one of the top-40M-weekly-downloads npm utilities.
-  → `npm rm` and audit CI/build images; rotate any secrets present during install.
-- [socket.io typosquat cluster (5 npm pkgs)](https://github.com/advisories/GHSA-9gmr-4p5m-j5vr) — malware
-  socketi, soccketio, socktio, scketio, socktio. Broad-impact utility impersonation.
-  → `npm rm` and grep `package.json` across the org.
+- ~60 npm + ~20 pip malware advisories in 48h. Notable clusters: **@0xlr/* 10-pack saas-auth dep-confusion** (clerk-auth / stripe-checkout / supabase-db / sentry-web / prisma-client-js / vercel-analytics), **fintech corporate-scope 20-pack** (@spending-behavior-ui/*, @finance-ui/*, @cr-invested-ui-components/*, @mplay-*), **nvidia AI-tooling squats** (trtllm-subdir-test + nvtorch-oot-nightly + test-dev-* 8-pack), **mcp-server typosquat 12+** (refbase-mcp / chaos-mcp / gtm-mcp-auth / sap-mcp-facilitator / pm-claude-skills-mcp / kip-mcp-http), **ethers/solana wallet-targets** (@ethers-sdk/ethers + @ethers-sdk/wallet + @solana-sdk/web3.js + eth-bridge + kelly-stake).
+  → audit npm/pip installs against these names; rotate any credentials on dev hosts that touched them.
 
 *PATCH THIS WEEK*
-- [GHSA-hf3j-86p7-mfw8](https://github.com/advisories/GHSA-hf3j-86p7-mfw8) — @aws-amplify/codegen-ui-react (npm) · critical · EPSS 0.009 · no CVSS
-  Auth'd user runs arbitrary JS during Amplify Studio component build. → upgrade to ≥2.20.4.
-- [GHSA-jq8w-8q2f-ffm9](https://github.com/advisories/GHSA-jq8w-8q2f-ffm9) — zitadel (Go) · CVE-2026-54693 · high · EPSS 0.003
-  Users self-verify email/phone via API. → upgrade to ≥4.15.1 (v4 line) / ≥3.4.11 (v3).
-- [GHSA-cg4g-m8jx-vjv2](https://github.com/advisories/GHSA-cg4g-m8jx-vjv2) — dssrf (npm) · CVE-2026-54722 · high · EPSS 0.003
-  SSRF bypass via `remove_at_symbol_in_string`. → upgrade to >1.0.3.
-- [GHSA-xpxj-f2fm-rqch](https://github.com/advisories/GHSA-xpxj-f2fm-rqch) — OliveTin (Go) · CVE-2026-67437 · CVSS 7.5 · EPSS 0.004
-  Unauth'd DoS via OAuth2 state map growth. → upgrade past commit ec114e95d297 (2026-07-08 tip).
+- [CVE-2026-52855](https://github.com/advisories/GHSA-pfvc-3p5h-x7h6) — github.com/pterodactyl/wings (Go) · CVSS 9.9 · no public PoC · no EPSS
+  wings exposes node config secrets via egg configuration-file templating. 2nd wings CVE in 3d (7-30 shipped CVE-2026-54593 fix 1.12.2). → upgrade wings to ≥1.12.3.
 
 *MONITOR*
-- [GHSA-xvg2-cgv6-6h7v](https://github.com/advisories/GHSA-xvg2-cgv6-6h7v) — netfoil (Go) · high · no CVE
-  Incorrect block responses → localhost traffic. → upgrade to ≥0.4.0 when adopted; not in Aeon deps today.
-
-_KEV added this week: 3 (Cisco FMC, Fortinet FortiOS, Arista VeloCloud) — all covered in 7-29/7-30 digests, dedup'd._
+- [GHSA-qvv7-cg9c-w4x3](https://github.com/advisories/GHSA-qvv7-cg9c-w4x3) — nltk (pip) 4-CVE mass-disclose · max CVSS 8.6 · no fix yet
+  DNS-rebinding SSRF bypass defeats ENFORCE mode + 3 path-traversals in FramenetCorpusReader/NKJPCorpusReader/ReviewsCorpusReader. → track for nltk >3.9.4; pin and restrict outbound DNS until patched.
+- [GHSA-mw3h-qjxj-6xg9](https://github.com/advisories/GHSA-mw3h-qjxj-6xg9) — thumbor (pip) 6-CVE mass-disclose · max CVSS 8.2 · no fix yet
+  HMAC bypass via multi-replace + ALLOWED_SOURCES regex bypass + 4 DoS in convolution/proportion filters. → track for thumbor >7.7.7; do not expose thumbor endpoints publicly.
+- [GHSA-r2v3-8gwf-7ghm](https://github.com/advisories/GHSA-r2v3-8gwf-7ghm) — bank-vaults/vault-secrets-webhook (Go) · CVSS 9.6 · no fix yet
+  vault-addr annotation SSRF + cluster-wide SA token theft via TokenRequest API. → track for ≥1.22.3; restrict webhook egress and audit RBAC for TokenRequest scope.
