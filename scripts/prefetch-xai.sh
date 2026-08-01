@@ -136,6 +136,15 @@ case "$SKILL" in
     fi
     ;;
 
+  daily-routine)
+    # Pre-fetch tweet-roundup for daily-routine's three default topics
+    # (crypto / AI / dev). Single combined call so the skill can read one
+    # cache file instead of three; sub-topic tags in the response let the
+    # skill split them back into three bullet groups.
+    xai_search "daily-routine.json" \
+      "Search X for the latest popular tweets from ${YESTERDAY} to ${TODAY} across THREE separate topics. Return 3-5 tweets per topic (about 10-15 total). TOPIC 1 = crypto (bitcoin, ethereum, DeFi, on-chain flows, exchanges). TOPIC 2 = AI (LLMs, AI agents, model releases, infra). TOPIC 3 = dev (programming, open source, developer tools, GitHub, CI/CD). For EACH tweet return: (a) topic tag — one of crypto/AI/dev, (b) @handle, (c) one-line summary of what they actually said (not a paraphrase of the tweet's topic), (d) direct permalink (https://x.com/username/status/ID), (e) engagement descriptor (viral / high / moderate). Skip low-engagement noise and pure engagement-farming threads. Prefer builders, founders, researchers, and traders over commentators."
+    ;;
+
   narrative-tracker)
     xai_search "narratives.json" \
       "Search X for the dominant crypto and tech narratives being discussed from ${THREE_DAYS_AGO} to ${TODAY}. What themes are builders, VCs, and influential accounts pushing? What narratives are gaining momentum vs losing steam? Look for: new meta-narratives, narrative shifts, contrarian takes gaining traction, and consensus views being challenged. Return 10-15 distinct narrative threads with representative tweets (include @handle and link)." \

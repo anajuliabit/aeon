@@ -21,32 +21,18 @@ Read the last 2 days of memory/logs/ to avoid repeating items.
 
 ## Tweet Roundup
 
-Search X for the latest chatter across topics relevant to your interests. Use the X.AI API if `XAI_API_KEY` is set:
+Covers three default topics: **crypto**, **AI**, **dev**.
 
-```bash
-FROM_DATE=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
-TO_DATE=$(date -u +%Y-%m-%d)
+**Primary source — XAI pre-fetched cache.** The workflow pre-fetches Grok x_search results for all three topics into `.xai-cache/daily-routine.json` (single combined call, each tweet tagged with topic=crypto|AI|dev). Read it. If the file exists and contains usable results, split tweets by topic tag and use that as the source. Note in the log line: "XAI cache HIT (.xai-cache/daily-routine.json, N tweets)".
 
-# Customize these topics to your interests
-for TOPIC in "crypto OR bitcoin OR ethereum OR DeFi" "artificial intelligence OR AI agents OR LLM" "programming OR open source OR developer tools"; do
-  curl -s -X POST "https://api.x.ai/v1/responses" \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $XAI_API_KEY" \
-    -d '{
-      "model": "grok-4-1-fast",
-      "input": [{"role": "user", "content": "Search X for the latest popular tweets about: '"$TOPIC"' from '"$FROM_DATE"' to '"$TO_DATE"'. Return the 3-5 most interesting or viral tweets. For each: @handle, a one-line summary of what they said, and the direct link (https://x.com/username/status/ID). Skip low-engagement noise."}],
-      "tools": [{"type": "x_search", "from_date": "'"$FROM_DATE"'", "to_date": "'"$TO_DATE"'"}]
-    }'
-done
-```
+**Fallback — WebSearch.** If any of these apply, skip XAI entirely and use `WebSearch` per topic instead:
+- `.xai-cache/daily-routine.json` is missing or empty (prefetch didn't run, or `XAI_API_KEY` unset), OR
+- the cached response contains an error (HTTP 429, 401/403, quota-exhausted / credit-out), OR
+- `memory/MEMORY.md` flags XAI as quota-exhausted or otherwise unavailable — trust the memory signal.
 
-Fall back to **WebSearch** for each topic when any of these apply — do not retry the XAI curl:
-- `XAI_API_KEY` is not set, OR
-- the sandbox strips `$XAI_API_KEY` from the curl header (per `CLAUDE.md` sandbox note — no prefetch case exists for daily-routine), OR
-- the API returns an error (HTTP 429, 401/403, quota-exhausted / credit-out), OR
-- `memory/MEMORY.md` flags XAI as quota-exhausted or otherwise unavailable — trust the memory signal, skip the curl attempt entirely.
+Do NOT attempt a direct `curl` to `api.x.ai` from inside the skill — the sandbox strips `$XAI_API_KEY` from bash env, so every direct call fails. Cache-or-WebSearch is the only working path.
 
-Note at the top of the tweet-roundup log line: "XAI x_search skipped — <reason>; WebSearch fallback used" so downstream skills can see the source path.
+Note at the top of the tweet-roundup log line which source path fired: `XAI cache HIT` or `WebSearch fallback used — <reason>`.
 
 For each topic, write 2-3 bullet points capturing the gist. Include links.
 
