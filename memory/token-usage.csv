@@ -918,3 +918,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-01,github-trending,claude-opus-4-7,44,27093,2474353,92401
 2026-08-01,token-alert,claude-opus-4-7,17,14022,751539,61461
 2026-08-01,security-digest,claude-opus-4-7,33,33124,2366439,118351
+2026-08-01,btc-levels,claude-sonnet-4-6,9,5862,371658,52555
