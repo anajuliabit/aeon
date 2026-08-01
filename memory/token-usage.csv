@@ -919,3 +919,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-01,token-alert,claude-opus-4-7,17,14022,751539,61461
 2026-08-01,security-digest,claude-opus-4-7,33,33124,2366439,118351
 2026-08-01,vuln-scanner,claude-opus-4-7,27,18048,2779317,53600
+2026-08-01,list-digest,claude-opus-4-7,28,11483,1891925,71919

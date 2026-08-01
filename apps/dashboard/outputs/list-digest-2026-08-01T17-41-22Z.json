@@ -1,0 +1,99 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-01"
+      },
+      "children": [
+        "intro_text",
+        "separator1",
+        "list_heading",
+        "tweet1",
+        "tweet1_link",
+        "tweet2",
+        "tweet2_link",
+        "separator2",
+        "status_text"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet day — 2 tweets clear the signal bar, both on structural distribution: NFT-IP-to-retail floor + revenue-buy-back launchpad.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "list_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "crypto research list",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround_",
+        "handle": "Louround_",
+        "text": "$PENGU thesis leans on physical distribution as valuation floor: ~$380m mcap at -91% from ATH, pudgy sitting in 10,000+ walmart/target/walgreens + KAST visa card + manchester city/NHL/nascar deals. brand kept building while token was left for dead",
+        "likes": 32,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2083314509717156263"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "@frontierhood on robinhood chain: participation → points → ownership, platform revenue buys back launched tokens (chain TVL +12.6% wk). launchpad flywheel routing value back to users instead of team/treasury — watch whether the buy-back actually consumes real revenue at scale",
+        "likes": 15,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2083327351195410698"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=quiet(2) • status: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

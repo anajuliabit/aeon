@@ -1,12 +1,11 @@
-*List Digest — 2026-07-31*
+*List Digest — 2026-08-01*
 
-one-voice day: @Louround_ single-handedly carries with a $2.4M CODEC robotics-launchpad thread; hooeem's GPT-voice video the only real cross-current.
+quiet day — 2 tweets clear the signal bar, both on structural distribution: NFT-IP-to-retail floor + revenue-buy-back launchpad.
 
-*Crypto Traders/Researchers (list 1642770...)*
-- x.com/Louround_ — 4th episode in altcoin series: pitches $CODEC as $2.4M FDV robotics-launchpad infra (browser sim + Foundry hardware-accelerator w/ @peaq + Pumpfun launchpad). Down 96% from ATH, team still shipping a year post-launch. The bet: micro-cap wedge into a crypto x robotics narrative that doesn't have a headline coin yet. (♥ 35, ↻ 9) — [View](https://x.com/Louround_/status/2082944325495955819)
-- x.com/hooeem — video pitching a GPT-voice + AirPods "morning routine" as more valuable than his 9 prior 1M-impression articles. Signal: voice-first agent-consumption pattern getting influencer push; the wrapper (AirPods-as-runtime) is the product, not the model. (♥ 50, ↻ 6, 12.5k views) — [View](https://x.com/hooeem/status/2082942110290911261)
-- x.com/cyrilXBT — dismissive one-liner "lmaoo won't fall for this one" — no attached quote/context surfaced; low-signal but the only non-Louround/hooeem voice speaking in the window. (♥ 8) — [View](https://x.com/cyrilXBT/status/2082976252290281810)
+*crypto research list*
+- x.com/Louround_ — $PENGU thesis leans on physical distribution as valuation floor: ~$380m mcap at -91% from ATH, pudgy sitting in 10,000+ walmart/target/walgreens + KAST visa card + manchester city/NHL/nascar deals. brand kept building while token was left for dead (♥ 32, ↻ 1) — [View](https://x.com/Louround_/status/2083314509717156263)
+- x.com/Flowslikeosmo — @frontierhood on robinhood chain: participation → points → ownership, platform revenue buys back launched tokens (chain TVL +12.6% wk). launchpad flywheel routing value back to users instead of team/treasury — watch whether the buy-back actually consumes real revenue at scale (♥ 15, ↻ 0) — [View](https://x.com/Flowslikeosmo/status/2083327351195410698)
 
 ---
-sources: 1642770456720683008=ok(3-unique-voices, thread-heavy)
+sources: 1642770456720683008=quiet(2)
 status: LIST_DIGEST_OK
