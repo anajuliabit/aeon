@@ -1,0 +1,256 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-01",
+        "description": "3 artifacts shipped, ISS-028 scope confirmed wider than PR #167 fix — 4 decisions land on the 8-03 weekly-review window"
+      },
+      "children": [
+        "section_tldr",
+        "sep1",
+        "section_headlines",
+        "sep2",
+        "section_notable",
+        "sep3",
+        "section_decisions",
+        "sep4",
+        "section_stats"
+      ]
+    },
+    "section_tldr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_tldr"
+      ]
+    },
+    "heading_tldr": {
+      "type": "Text",
+      "props": {
+        "text": "3 artifacts shipped, ISS-028 scope confirmed wider than PR #167 fix — 4 decisions land on the 8-03 weekly-review window",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_headlines",
+        "headline_1",
+        "headline_2",
+        "headline_3"
+      ]
+    },
+    "heading_headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "headline_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — PR #172 opened; wired missing XAI prefetch case for daily-routine tweet-roundup (was chronically WebSearch-fallback)",
+        "href": "https://github.com/anajuliabit/aeon/pull/172",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "headline_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vuln-scanner — clean audit yc-software/qm, 8 candidates / 0 confirmed",
+        "href": "articles/vuln-scan-2026-08-01.md",
+        "source": "Article"
+      },
+      "children": []
+    },
+    "headline_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness — first fingerprint change since 7-25; 7 flagged (5 STALE + 2 WARN), market-context.md crossed 2× stale threshold",
+        "href": "articles/skill-freshness-2026-08-01.md",
+        "source": "Article"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_notable",
+        "notable_1",
+        "notable_2",
+        "notable_3"
+      ]
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "notable_1": {
+      "type": "Alert",
+      "props": {
+        "title": "security-digest — 318-entry malware batch (largest in memory-window)",
+        "message": "pterodactyl/wings 2nd critical in 3d (CVE-2026-52855 9.9 fix 1.12.3); NLTK + Thumbor same-day double mass-disclose; MCP CVE rail n=2 (Dynatrace unauth MCP)",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "notable_2": {
+      "type": "Alert",
+      "props": {
+        "title": "heartbeat ×3 / skill-health — DEGRADED 13-consec ticks",
+        "message": "hash flip 7bf88238 → f0c415fd (evening-recap DEGRADED→WARNING); 07:00Z slot +96min dispatch lag = 3rd-consec-day degraded pattern",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "notable_3": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-028 kill-test d2 NEGATIVE",
+        "message": "bash `>` still blocked at 4 call-sites post-PR-#167 merge; fix scope was narrow (heartbeat/security-digest only, not daily-routine sub-agent / github-trending / list-digest paths)",
+        "type": "error"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_decisions",
+        "decision_1",
+        "decision_2",
+        "decision_3",
+        "decision_4"
+      ]
+    },
+    "heading_decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "decision_1": {
+      "type": "Text",
+      "props": {
+        "text": "ci-skills-json FAILURE on both #171 + #172 — shared root cause; decide inspect-and-fix vs accept-and-batch for 8-03 merge",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision_2": {
+      "type": "Text",
+      "props": {
+        "text": "decide PR #165 (d13 CONFLICTING, crosses 14d touch threshold 8-02 — CLAUDE.md escalation window opens)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 operator direct-author `.github/workflows/aeon.yml:479-495` — T+2 d17 slipped, last catch at 8-03 weekly-review before T+3 d19 milestone",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision_4": {
+      "type": "Text",
+      "props": {
+        "text": "8-02 07:00Z slot is escalation-gate deciding test — MISS or severe lag again → ISS-file candidate",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_routine_runs",
+        "badge_log_status",
+        "badge_cron_status"
+      ]
+    },
+    "stat_routine_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Routine runs collapsed",
+        "value": "14"
+      },
+      "children": []
+    },
+    "badge_log_status": {
+      "type": "Badge",
+      "props": {
+        "text": "log=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_cron_status": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "default"
+      },
+      "children": []
+    }
+  }
+}

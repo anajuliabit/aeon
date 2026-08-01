@@ -1,22 +1,20 @@
-*Evening Recap — 2026-07-31*
-_TL;DR: PR #171 filed and typosquat campaign surfaced, but ISS-028 kill-test negative — regression outlasts the supposed fix_
+*Evening Recap — 2026-08-01*
+_TL;DR: 3 artifacts shipped, ISS-028 scope confirmed wider than PR #167 fix — 4 decisions land on the 8-03 weekly-review window_
 
 *Headlines:*
-- self-improve — PR #171 (github-trending sub-25 cap fix, self-authored) · https://github.com/anajuliabit/aeon/pull/171
+- self-improve — PR #172 opened; wired missing XAI prefetch case for daily-routine tweet-roundup (was chronically WebSearch-fallback) · https://github.com/anajuliabit/aeon/pull/172
+- vuln-scanner — clean audit yc-software/qm, 8 candidates / 0 confirmed · articles/vuln-scan-2026-08-01.md
+- skill-freshness — first fingerprint change since 7-25; 7 flagged (5 STALE + 2 WARN), market-context.md crossed 2× stale threshold · articles/skill-freshness-2026-08-01.md
 
 *Notable:*
-- security-digest — 3-cluster coordinated typosquat batch (ethers.js ×7, fs-extra ×3, socket.io ×5; synchronized 22:49-22:51Z 7-30) · 3/4/1 tiers sent
-- ISS-028 kill-test NEGATIVE — PR #167 fix doesn't cover `>>` append; workaround chain n=13 durable (10-UTC-day span 7-22→7-31)
-- token-alert — first fully-synchronized red day in memory-window (4-of-4 negative); WELL vol-cliff to 0.059× baseline (lowest-ever baseline-ratio)
-- reflect — MEMORY.md 71L→60L; 11 patterns integrated (rust-harness n=2, star-anomaly n=7, embodied-runtime n=3, [[eth-lib-typosquat-campaign]] NEW)
-- daily-routine — Memory Decoder paper (6.9B params beats 12B on 17 benchmarks); fleet-relevance agent-thesis d15
+- security-digest — 318-entry malware batch (largest in memory-window); pterodactyl/wings 2nd critical in 3d (CVE-2026-52855 9.9 fix 1.12.3); NLTK + Thumbor same-day double mass-disclose; MCP CVE rail n=2 (Dynatrace unauth MCP)
+- heartbeat ×3 / skill-health — DEGRADED 13-consec ticks; hash flip 7bf88238 → f0c415fd (evening-recap DEGRADED→WARNING); 07:00Z slot +96min dispatch lag = 3rd-consec-day degraded pattern
+- ISS-028 kill-test d2 NEGATIVE — bash `>` still blocked at 4 call-sites post-PR-#167 merge; fix scope was narrow (heartbeat/security-digest only, not daily-routine sub-agent / github-trending / list-digest paths)
 
 *Decisions for tomorrow:*
-- author ISS-025 capture-step fix against aeon.yml:479-495 (d16 past T-0; cost-report stays at 12% SR without it)
-- investigate ISS-028 scope — PR #167 may only fix `>` fresh writes, not `>>` append; split or reopen root-cause
-- review PR #165 (d12 CONFLICTING) at 8-03 weekly-batch window · https://github.com/anajuliabit/aeon/pull/165
+- ci-skills-json FAILURE on both #171 + #172 — shared root cause; decide inspect-and-fix vs accept-and-batch for 8-03 merge
+- decide PR #165 (d13 CONFLICTING, crosses 14d touch threshold 8-02 — CLAUDE.md escalation window opens)
+- ISS-025 operator direct-author `.github/workflows/aeon.yml:479-495` — T+2 d17 slipped, last catch at 8-03 weekly-review before T+3 d19 milestone
+- 8-02 07:00Z slot is escalation-gate deciding test — MISS or severe lag again → ISS-file candidate
 
-*Blockers:*
-- ISS-028 — bash `>>` append blocked post-fix, n=13 workaround active
-
-_+9 routine runs collapsed (btc-levels ×5, heartbeat ×2, skill-health ×1, thought-review ×1) · sources: log=ok cron-state=ok_
+_+14 routine runs collapsed · sources: log=ok cron-state=ok_
