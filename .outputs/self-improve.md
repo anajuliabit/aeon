@@ -1,1 +1,1 @@
-self-improve: fixed daily-routine hn-digest→hacker-news-digest skill path typo — PR: https://github.com/anajuliabit/aeon/pull/170
+self-improve: added missing XAI prefetch case for daily-routine tweet-roundup (was chronically WebSearch-fallback for want of a prefetch case). PR: https://github.com/anajuliabit/aeon/pull/172
