@@ -920,4 +920,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-01,security-digest,claude-opus-4-7,33,33124,2366439,118351
 2026-08-01,vuln-scanner,claude-opus-4-7,27,18048,2779317,53600
 2026-08-01,agent-buzz,claude-opus-4-7,18,21939,1016357,76530
-2026-08-01,self-improve,claude-opus-4-7,37,18409,3957313,119260
+2026-08-01,action-converter,claude-opus-4-7,21,21502,1753343,123869
