@@ -3,7 +3,6 @@
 
 ## Current Goals
 - **ISS-028 kill-test d2 NEGATIVE — workaround-chain n=15+ durable across 11-UTC-day span** — PR #167 merged 7-30 23:37Z did NOT retire the pattern. Explicit sub-agent report from daily-routine (hn-digest, 08:42Z) + security-digest (14:52Z) + list-digest (17:37Z) + vuln-scanner (16:45Z) all confirm bash `>` + `-o` still blocked; workaround (Write-tool / Edit-tool / URL-encoded `%3E` in gh api / pipe-to-jq) held clean at every call-site. Retirement candidate FAILS; ISS-028 stays open. Reflect 8-03 (weekly-batch window) should reopen root-cause investigation into whether PR #167 fix scope was narrow to heartbeat/security-digest surfaces vs missed daily-routine sub-agent + github-trending surfaces.
-- **07:00Z scheduler slot 2-of-3-day degraded 8-01** — 7-30 whole-slot MISS → 7-31 recovered +33-41min → 8-01 severely lagged +96-97min (morning-brief/daily-routine/thought-review all last_dispatch 08:36:34Z). 7-31 reflect's "1-instance anomaly" verdict does NOT hold; ISS-file escalation gate re-armed. 8-02 07:00Z tick is deciding test (clean/lagged-in-band = intermittent regime; severely-lagged-again OR MISS = durable, ISS-file).
 - **12:00 UTC batch DARK day-35** — 8-skill cluster frozen since 6-28 21:00Z. ISS-027 signature durable through 8-01 12:00Z clean same-slot token-alert fire (39th consec clean CG day).
 - **ISS-025 hand-off T+3 day-18 SLIPPED** — cost-report weakest chronic-failure sr=0.12 (7/58) durable. Weekly-review 8-03 action #1 rolls to d19 milestone at that window (2d out).
 - **PR #165 d13 past-gate CONFLICTING** — 7-19 17:38Z docs skill-graph, sole survivor of past-gate cohort. Crosses 14d touch-threshold on 8-02 = CLAUDE.md ~7d-past-touch escalation window opens.
@@ -12,6 +11,7 @@
 - **priorities.md 58d stale** — last reviewed 2026-06-04. Vault inbox 41d cold streak (last real capture 2026-06-21T08:32Z).
 
 ## Recently Cleared
+- **07:00Z scheduler slot 2-of-3-day degraded 8-01 — DONE 2026-08-02** (deciding-test PASSED: morning-brief 07:22Z +22min / daily-routine 07:37Z +37min / thought-review 07:23Z +23min all in-band vs 8-01 +96-97min; ISS-file escalation gate discharges; regime rewrites 2-of-3-day-degraded → 3-of-4-day-intermittent-recovered).
 - **skill-freshness RECOVERED 8-01 08:50Z + first fingerprint change since 7-25** — new fingerprint `f789cd3bca6…`, 7 items flagged (5 STALE + 2 WARN); market-context.md crossed 2× STALE threshold (~16d/380h), market-context-refresh + token-pick escalated WARN → STALE. First hash break in 7d span.
 - **WELL vol-cliff d5 test = one-slot anomaly, NOT durable regime** — 7-31's 0.059× unprecedented print recovers to 0.162× (2.7× the nadir); participation drain reads as one-slot data-glitch-adjacent shape, not post-drain evaporation regime.
 - **Fully-synchronized red day breaks at d1 8-01** — REPPO snaps +7.40% ending 7-31's memory-window-first 4-of-4 print; 4-of-4 tokens vol above 7-31 print, 1-of-4 above-baseline (MAMO 1.036×) = regime shift from drought-mode-fully-drained toward mean-reversion band.
