@@ -1,18 +1,22 @@
-*Agent Buzz — 2026-08-01*
-_quiet mcp production-plumbing day — three demo→prod framings, one anthropic 6-layer drop; research side near-silent, arxiv paper at 1 like._
+*Agent Buzz — 2026-08-02*
+_mcp-as-plumbing rolls into d4. multi-agent side finally lands receipts — one 260-config benchmark, one defi-agent teardown showing treasuries up while holders down._
 
-**MCP moves to production plumbing**
-• @AgenticAIFdn — arguing against demo-quality MCP: production means concurrency, cross-call state, per-user auth. multi-tenant breaks without them.
-  https://x.com/AgenticAIFdn/status/2083277040778707020
-• @finjonesceo — stateful MCP servers reinvent WebSockets — stateless design is what turns servers into scalable endpoints.
-  https://x.com/finjonesceo/status/2083341796558463382
-• @Loky_AI — loky's MCP endpoints already serve 200+ agents with sub-interval TA + wallet context; first concrete tenant-count of the week.
-  https://x.com/Loky_AI/status/2083186153176633845
+**mcp settles into plumbing**
+• @HeyAnjula — mcp is standardized plumbing between apps and capabilities. calling it an agent framework misreads the scope.
+  https://x.com/HeyAnjula/status/2083463369756225820
+• @Mojtabaa09 — protocols still design for human dashboards; real users are agents needing direct execution surfaces. @fermah_xyz ships an mcp endpoint.
+  https://x.com/Mojtabaa09/status/2083628390221861246
+• @AemulusAI — aemulus mcp server: agents request a skill by name, a real browser executes it, agent gets proof back.
+  https://x.com/AemulusAI/status/2083702819924672517
+• @sonichigo — agent skills sit alongside mcp in the developer workflow, not against it. two primitives, different scope.
+  https://x.com/sonichigo/status/2083562676589113369
 
-**Architecture theory, receipts thin**
-• @marfinxx — anthropic's 6-layer decouples execution control from prompts — the framing turns non-deterministic models into verifiable enterprise software.
-  https://x.com/marfinxx/status/2083242809847423435
-• @yibie — arxiv 2607.27191: two case studies testing whether agents can push past benchmark optimization into open-ended AI research. early evidence, not proof.
-  https://x.com/yibie/status/2083341268814590033
+**multi-agent gets numbers**
+• @Vokal_team — 260-config controlled study: parallel decomposable work +80% for multi-agent, sequential dependent work drops 50-70%. shape decides.
+  https://x.com/Vokal_team/status/2083377705425215759
+• @ManageLife_io — defi ai agents with real trading activity: treasuries kept $30m paper gains while holders lost $191.7m combined.
+  https://x.com/ManageLife_io/status/2083696780454305794
+• @rajeshberi — autogen unshipped since september 2025 = maintenance mode. langgraph for durable state on new production agents.
+  https://x.com/rajeshberi/status/2083696507249959085
 
-<!-- _src: xai(cache) · candidates: 12 → kept: 5_ -->
+<!-- _src: xai(cache) · candidates: 24 → kept: 7_ -->

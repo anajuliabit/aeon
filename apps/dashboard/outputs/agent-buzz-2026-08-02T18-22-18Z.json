@@ -1,0 +1,269 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-08-02"
+      },
+      "children": [
+        "intro",
+        "section-mcp",
+        "sep-1",
+        "section-multiagent",
+        "sep-2",
+        "footer"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "mcp-as-plumbing rolls into d4. multi-agent side finally lands receipts — one 260-config benchmark, one defi-agent teardown showing treasuries up while holders down.",
+        "variant": "lead"
+      }
+    },
+    "section-mcp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-mcp",
+        "tweet-group-1",
+        "tweet-group-2",
+        "tweet-group-3",
+        "tweet-group-4"
+      ]
+    },
+    "heading-mcp": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp settles into plumbing",
+        "level": "h2"
+      }
+    },
+    "tweet-group-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Anjula",
+        "handle": "@HeyAnjula",
+        "text": "mcp is standardized plumbing between apps and capabilities. calling it an agent framework misreads the scope."
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/HeyAnjula/status/2083463369756225820"
+      }
+    },
+    "tweet-group-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Mojtabaa09",
+        "handle": "@Mojtabaa09",
+        "text": "protocols still design for human dashboards; real users are agents needing direct execution surfaces. @fermah_xyz ships an mcp endpoint."
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Mojtabaa09/status/2083628390221861246"
+      }
+    },
+    "tweet-group-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AemulusAI",
+        "handle": "@AemulusAI",
+        "text": "aemulus mcp server: agents request a skill by name, a real browser executes it, agent gets proof back."
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/AemulusAI/status/2083702819924672517"
+      }
+    },
+    "tweet-group-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4",
+        "link-4"
+      ]
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "sonichigo",
+        "handle": "@sonichigo",
+        "text": "agent skills sit alongside mcp in the developer workflow, not against it. two primitives, different scope."
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/sonichigo/status/2083562676589113369"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-multiagent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-multiagent",
+        "tweet-group-5",
+        "tweet-group-6",
+        "tweet-group-7"
+      ]
+    },
+    "heading-multiagent": {
+      "type": "Heading",
+      "props": {
+        "text": "multi-agent gets numbers",
+        "level": "h2"
+      }
+    },
+    "tweet-group-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-5",
+        "link-5"
+      ]
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Vokal_team",
+        "handle": "@Vokal_team",
+        "text": "260-config controlled study: parallel decomposable work +80% for multi-agent, sequential dependent work drops 50-70%. shape decides."
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Vokal_team/status/2083377705425215759"
+      }
+    },
+    "tweet-group-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-6",
+        "link-6"
+      ]
+    },
+    "tweet-6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ManageLife_io",
+        "handle": "@ManageLife_io",
+        "text": "defi ai agents with real trading activity: treasuries kept $30m paper gains while holders lost $191.7m combined."
+      }
+    },
+    "link-6": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/ManageLife_io/status/2083696780454305794"
+      }
+    },
+    "tweet-group-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-7",
+        "link-7"
+      ]
+    },
+    "tweet-7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "rajeshberi",
+        "handle": "@rajeshberi",
+        "text": "autogen unshipped since september 2025 = maintenance mode. langgraph for durable state on new production agents."
+      }
+    },
+    "link-7": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/rajeshberi/status/2083696507249959085"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "Source: xai (cached) · Candidates: 24 → Kept: 7",
+        "variant": "caption"
+      }
+    }
+  }
+}
