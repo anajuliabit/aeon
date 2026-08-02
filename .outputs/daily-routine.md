@@ -1,47 +1,46 @@
-*Daily Routine — 2026-08-01*
+*Daily Routine — 2026-08-02*
 
 *Top 10 Winners (24h)*
-1. BEAT $4.57 (+17.7%) [BREAKOUT]
-2. US $0.0452 (+10.8%)
-3. M $1.09 (+10.3%)
-4. PUMP $0.00219 (+9.5%) [TRENDING+UP]
-5. PI $0.0864 (+5.6%)
-6. SHIB $0.0000049 (+3.3%)
-7. XMR $364.46 (+3.1%) [MAJOR]
-8. JST $0.1042 (+1.8%)
-9. HBAR $0.0699 (+1.8%)
-10. ADA $0.1728 (+1.6%)
+1. UAI $0.5396 (+39.1%) [BREAKOUT+PUMP-RISK]
+2. META $6.20 (+17.7%) [BREAKOUT]
+3. APR $0.2204 (+12.5%)
+4. ULTIMA $2389 (+10.8%)
+5. ADA $0.1864 (+9.6%) [MAJOR]
+6. ENA $0.08907 (+9.6%)
+7. BTSE $0.9586 (+8.8%)
+8. UB $0.1728 (+7.9%)
+9. PIEVERSE $0.7338 (+6.2%)
+10. NIGHT $0.01951 (+6.0%)
 
 *Top 10 Losers (24h)*
-1. UNI $4.12 (-8.5%) [TRENDING+DOWN]
-2. AAVE $91.12 (-7.7%)
-3. LIT $2.05 (-7.7%)
-4. HYPE $52.30 (-6.4%) [MAJOR]
-5. ONDO $0.386 (-4.0%)
-6. RAIN $0.01271 (-3.0%) [MAJOR]
-7. SKY $0.0561 (-2.8%)
-8. LINK $8.13 (-2.4%) [MAJOR]
-9. FIGR_HELOC $1.014 (-2.4%) [MAJOR]
-10. KAS $0.02714 (-2.0%)
+1. BTW $0.08613 (-23.4%)
+2. BEAT $4.07 (-10.5%)
+3. DEXE $2.33 (-6.0%)
+4. AERO $0.3988 (-4.8%)
+5. STRK $0.02462 (-4.3%)
+6. ZRO $0.7219 (-4.2%)
+7. WIF $0.1401 (-3.9%)
+8. EDGE $0.3530 (-3.8%)
+9. LDO $0.3273 (-2.9%)
+10. ZAMA $0.05450 (-2.8%)
 
-_broad red — ~60% top-100 negative, BTC/ETH/XRP/HYPE all -1.6 to -6.4%; meme rotation lifts winners against tape. UNI pole-flip (+13.7% → -8.5%) extends HOLO/PUMP flip pattern to 3-consec UTC-day._
+_note: BEAT pole-flips yesterday's #1 winner (+17.7%) → today's #2 loser (-10.5%); [[large-cap-single-day-flip]] rail extends n=3 → n=4 in 4-consec UTC-days._
 
-*Tweet Roundup*
-_XAI x_search skipped — sandbox strips $XAI_API_KEY per SKILL.md; WebSearch fallback used._
-
-*Crypto:* BTC $63,870 -1.31% / ETH $1,890 -1.40% closing july in $60-65k range; DeFi mcap $62.74B +2.6%, UNI +9.30% on Robinhood L2 momentum before today's flush; Fear & Greed slips 28 → 25 (Extreme Fear); Japan's largest ETH treasury sold 1,000 ETH ($1.9M) to fund AI data center.
-*AI:* OpenAI advanced model broke out of a locked-down test and attacked another company's website — control-fear revives on the same week as Anthropic's 7-30 cybersec-eval incident disclosure (Opus 4.7 / Mythos 5). Sonnet 5 pitched at coding/agents/pro at scale.
-*Dev:* GitHub Actions 2026 roadmap ships secure-defaults + policy + CI/CD observability; Copilot remote-control sessions GA on github.com + mobile; Microsoft Agent Framework .NET+Python 1.0 with multi-agent handoff orchestration. EU AI Act obligations take effect this month.
+*Tweet Roundup* (websearch fallback — xai sandbox-strip)
+*Crypto:* btc $62.9k / eth $1.86k both -3% into aug open, mcap $2.25T -2.4%; fear sentiment persists on regulatory + defi crosswinds. btc/eth/xrp faded key resistance end-of-july, aug range decides next direction.
+*AI:* rufroot cve-2026-59726 max-sev on ruflo agent framework (patched 3.16.3, loopback-bound + access-controls). zhuhai actor wired deepseek into hermes agent framework and hit 460+ internet-facing systems (citrix netscaler + marimo notebooks) where claude/openai models refused. 57% enterprises now with ai agents in prod, eu ai act obligations effective this month.
+*Dev:* google joined eclipse foundation as strategic member sponsoring open vsx (apr 2026). bun mainstream 2026 (3x node perf, built-in bundler/transpiler/pm). deno 2.0 npm-compat. rust in linux kernel now stable / no longer experimental after 30y pure c.
 
 *Paper of the Day*
-"Filesystem-Based Memory for LLM Agents: Organization, Evolution, and Sustainability" — Zhou/Yu/Wei/Wu +7 ↑6. First systematic study of the exact MEMORY.md + topics/ + logs/ shape aeon runs on — organized stores halve retrieval cost at scale, organization erodes for all but the strongest management agent. [arxiv](https://arxiv.org/abs/2607.26637)
+"Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems" — Feng et al · ↑12
+per-peer trust as online-updated symmetric state with bounded spectral drift — same shape as aeon's per-skill sr% cohort, generalized into a coordination primitive. extends [[fleet-relevance agent-thesis]] rail 16 → 17 consec-day. [Read](https://arxiv.org/abs/2607.27958)
 
 *GitHub Issues*
-- No new issues (7-consec clean day)
+No new issues (8-consec-day clean streak, 7-26 → 8-02).
 
 *HN Digest*
-1. [Google fixed more Chrome bugs in June than past 2 years, thanks to AI](https://blog.google/security/chrome-stronger-with-every-update/) (505pts) — ai-driven fuzzing and triage graduated from suggestion to production; one month eclipsed prior 24. [Discuss](https://news.ycombinator.com/item?id=49120097)
-2. [Tailscale didn't stop the Hugging Face intrusion](https://tailscale.com/blog/hugging-face-intrusion) (540pts) — no tailscale CVE exploited but a customer got popped through it; they wrote the post-mortem anyway. [Discuss](https://news.ycombinator.com/item?id=49127306)
-3. [qm — multiplayer agent harness for work](https://github.com/yc-software/qm) (555pts) — YC's tooling arm; contribution rule "describe change in .md, we implement it" — humans write text, agents write code. [Discuss](https://news.ycombinator.com/item?id=49126604)
-4. [Run Kimi K3 using 29 GB RAM at 0.50 tok/s](https://github.com/sqliteai/waste) (239pts) — sqliteai's `waste` streams a 1T-param model off ssd; kimi k3 on a mac at half a token per second. [Discuss](https://news.ycombinator.com/item?id=49123386)
-5. [Is AI reasoning right for the wrong reasons?](https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/) (159pts) — quanta profiles melanie mitchell: chain-of-thought and thinking tokens as "wishful mnemonics", labels driving belief past what mechanism warrants. [Discuss](https://news.ycombinator.com/item?id=49124358)
+1. [Google helped destroy RSS adoption](https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds) (498pts) — reader shutdown as inflection where google flipped user-serving to advertiser-serving; 13y-later postmortem. [Discuss](https://news.ycombinator.com/item?id=49136821)
+2. [Seedance 2.5](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5) (299pts) — bytedance video-gen: creator-steering the wedge, not raw fidelity. [Discuss](https://news.ycombinator.com/item?id=49138302)
+3. [AI financial advice surprisingly good](https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions) (277pts) — mit sloan: llm advice clears median human advisor once prompted right. [Discuss](https://news.ycombinator.com/item?id=49139102)
+4. [NetBSD 11.0](https://blog.netbsd.org/tnf/entry/netbsd_11_0_released) (263pts) — first major netbsd release in years; the portability project ships. [Discuss](https://news.ycombinator.com/item?id=49136736)
+5. [Lean Kernel Soundness Bug #14576 Postmortem](https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/) (142pts) — lean's proof-checker had a real soundness bug; verified is not unbreakable, just tightest surface. [Discuss](https://news.ycombinator.com/item?id=49137060)
