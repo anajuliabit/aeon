@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-01*
-Shape: wire ISS-025 fix, annotate ISS-028 scope-narrowness, compact MEMORY, audit PR #171, distill memory-paper
+*5 Actions — 2026-08-02*
+Shape: patch ISS-025 d19, file ci-skills-json shared-cause issue, refresh MEMORY rails, update ISS-028, map Σ-Mem
 
-1. Wire ISS-025 hand-off PR against `.github/workflows/aeon.yml:479-495` capture-step overwrite (emit fenced block in assistant text, not Write tool).
-why: T+2 day-17 SLIPPED past 7-30 deadline; cost-report sr=0.12 (7/58) weakest chronic-failure durable, weekly-review 8-03 rolls d19.
-done: branch pushed + `gh pr create` for aeon.yml capture-step fix.
-loop: wire-iss-025-t-plus-2-d17
+1. patch memory/issues/ISS-025.md with "## T+4 d19 SLIPPED 2026-08-02" addendum block naming cost-report weekly Monday 07:00Z tick, sr=0.12 (7/58) weakest chronic-failure durable, and weekly-review 8-03 T-1 escalation ask against .github/workflows/aeon.yml operator hand-off
+why: T+4 d19 past 7-30 deadline, cost-report 12% is weakest chronic-failure durable, weekly-review 8-03 T-1 rolls to d20
+done: ISS-025.md contains a fresh "## T+4 d19 SLIPPED 2026-08-02" section
+loop: patch-iss-025-t-plus-4-d19
 
-2. Annotate `memory/issues/ISS-028.md` with PR #167 fix-scope narrowness — heartbeat/security-digest surfaces resolved, daily-routine hn-digest + github-trending + list-digest + agent-buzz still block.
-why: kill-test d2 NEGATIVE confirmed today at 3 call-sites; workaround-chain n=15+ across 11-UTC-day span 7-22→8-01.
-done: ISS-028.md gets Post-fix-investigation section listing 4 unresolved call-sites + n=15 count.
-loop: annotate-iss-028-scope-narrowness
+2. file memory/issues/ISS-029.md for ci-skills-json stale-regen shared root cause — self-improve edits SKILL.md but skips ./generate-skills-json; PR #171 + PR #172 both fail same check 3-consec-day per heartbeat 15:10Z
+why: ci-skills-json FAILURE now 3-consec-day on both self-improve PRs, formal-pattern threshold crossed, blocks weekly-batch 8-03
+done: ISS-029.md exists with root-cause + repro + fix path; INDEX.md gets row
+loop: pr-ci-shared-root-cause-file-issue
 
-3. Compact `memory/MEMORY.md` — dedupe duplicate "## Recently Cleared" header (lines 14 + 31), refresh Tracked Tokens Recent Activity for 8-01 12:00Z prints, fold 3 fresh rails ([[skill-pack-primitive-rail]] n=5→n=6 via reverse-skill, [[large-cap-single-day-flip]] NEW n=3 HOLO/PUMP/UNI, [[MCP-spec-maturity-vs-ecosystem-security]] n=2 Ruflo+Dynatrace).
-why: two "Recently Cleared" sections is a hygiene bug; 3 rail deltas + 4 token prints drift-risk pre-reflect 18:00Z.
-done: MEMORY.md single Recently Cleared block + Tracked Tokens table 8-01 data + 3 rail lines under Recurring patterns.
-loop: compact-memory-md-hygiene
+3. refresh memory/MEMORY.md — advance ISS-028 workaround-chain n=15+ → n=18+ / 11-day → 12-day span; [[fleet-relevance agent-thesis]] 16 → 17-consec-day (Σ-Mem + TencentDB); [[louround-single-thesis-cadence]] candidate → durable n=3 (PUMP joins CODEC + PENGU); [[large-cap-single-day-flip]] n=3 → n=4 (BEAT joins); [[MCP-spec-maturity-vs-ecosystem-security]] n=2 → n=3 (RufRoot 8-02); sub-25 fetch rail promote 5-consec → 6-consec permanent-shape
+why: 6 rail deltas + 2 counter advances from 8-02 fires; pre-empts reflect 18:00Z + morning-brief 8-03 accuracy
+done: MEMORY.md diff lands the 6 rail counter updates
+loop: refresh-memory-md-rails
 
-4. Audit `gh pr diff 171` (self-improve github-trending 12-17 candidate cap fix, 23h open) and post inline notes if the fix hardcodes vs derives the cap from 5-consec fetch pattern.
-why: sub-25 fetch pattern crossed 5-consec durable rail 8-01 (7-28→8-01 range 12-17); operator batch-merge cadence 8-03 = 2d out.
-done: `gh pr review 171` comment posted OR approval left with rationale in body.
-loop: audit-pr-171-diff
+4. update memory/issues/ISS-028.md — advance title n=11+/8-day → n=18+/12-UTC-day, append "## d4 kill-test 2026-08-02 NEGATIVE" block naming list-digest 17:00Z bash `>>` seen-file append block + skill-graph 15:15Z 5-blocked-form fingerprint recompute + daily-routine hn-digest sub-agent 07:37Z probe
+why: 4-consec kill-test NEGATIVE, workaround-chain crosses 12-UTC-day durability, PR #167 propagation still not landed at sub-agent surfaces
+done: ISS-028.md title + fresh d4 block reference 3 named call-sites from today
+loop: update-iss-028-kill-test-d4
 
-5. Distill the Filesystem-Memory paper (arXiv 2607.26637, today's paper-pick) into `memory/topics/memory-architecture.md` as 5 bullets covering the MEMORY.md-index-plus-topics-plus-logs shape Aeon runs.
-why: paper studies our exact architecture; two load-bearing findings (organized stores halve retrieval cost; organization erodes for all but strongest agent) map onto reflect skill drift.
-done: new file `memory/topics/memory-architecture.md` with 5 bullets + arxiv citation.
-loop: category:learn
+5. map arXiv 2607.27958 (Σ-Mem) into new memory/topics/agent-memory-primitives.md — 5-bullet distill of online-updated symmetric per-peer reliability state + Weyl-bounded spectral drift + parallel to Aeon per-skill sr% cohort + link to Filesystem-Memory 2607.26637 sibling + Recently Cleared paper-pick entry
+why: extends [[fleet-relevance agent-thesis]] 17-consec-day + 3-consec memory-primitive paper streak (Memory Decoder → Filesystem-Memory → Σ-Mem)
+done: memory/topics/agent-memory-primitives.md written with 5 bullets + arxiv IDs
+loop: map-sigma-mem-paper-topics
 
-sources: memory=82L logs=8d topics=~20 prs=2 cron_failing=10 mode=OK
+sources: memory=69L logs=8d topics=20 prs=3 cron_failing=10 mode=OK
