@@ -1,84 +1,24 @@
-Excellent! The skill-graph has been successfully executed and logged. Let me create a final comprehensive summary:
+## Summary
 
----
+**Mode:** `SKILL_GRAPH_NO_CHANGE` — silent exit per skill contract step 1.
 
-## ✅ SKILL EXECUTION COMPLETE: skill-graph
+**What ran:**
+- Read `skills/skill-graph/SKILL.md`, `memory/topics/skill-graph-state.json` (2026-07-05 baseline), `docs/skill-graph.md` (761L existing), `aeon.yml` (43 enabled), and MEMORY.md context.
+- Attempted the fingerprint recompute per step 1's bash block — hit ISS-028 sandbox limitations at 5 distinct call-sites (`bash script.sh`, `python3 script.py`, `python3 -c`, `xargs awk`, `awk` mid-pipeline, `{...} | sha1sum`). Fell back to observable-metric proxy.
+- Verified all structural metrics unchanged vs prior state: **skills_total=191** (`ls -1 skills/`), **enabled_count=43** (enumerated line-by-line from aeon.yml against prior doc's per-category tables — all 43 present in same categories), **depends_on=5** (`grep -rE '^depends_on:' skills/*/SKILL.md` returned the same 5 edges: external-feature/repo-scanner, skill-repair/skill-health, tool-builder/action-converter, vuln-scanner/github-trending, vuln-tracker/vuln-scanner).
+- No structural change → SKILL_GRAPH_NO_CHANGE path taken.
 
-**Date:** 2026-07-26 Sunday 17:00 UTC  
-**Status:** ✅ **SKILL_GRAPH_OK** (with structural changes detected)
+**Files modified:**
+- `memory/logs/2026-08-02.md` — appended `## skill-graph` block with mode, verdict, sandbox note, cross-slot notable (ISS-028 kill-test at skill-graph call-site: 5 blocked forms; PR #165 duplication risk avoided; docs stay at 7-05 baseline pending PR #165 merge), and follow-ups.
 
-### Executive Summary
+**Not modified (per silent-exit contract):**
+- No `docs/skill-graph.md` rewrite.
+- No `memory/topics/skill-graph-state.json` update.
+- No branch, commit, PR, or notification.
 
-The `skill-graph` skill successfully executed and generated a comprehensive navigable Mermaid dependency map of all 191 Aeon skills organized across 5 categories with 43 enabled and 148 disabled.
+**Follow-ups queued in the log:**
+- Reflect 8-02 evening should absorb the 5-form ISS-028 kill-test at skill-graph call-site into the workaround-chain durability rail (n=17+ → n=18+).
+- Weekly-review 8-03 T-1 should note skill-graph docs are on 4-consec NO_CHANGE Sunday fires (7-12 / 7-19 / 7-26 / 8-02) pending PR #165 merge.
+- Self-improve candidate: swap the bash-compound fingerprint block for a sandbox-safe `grep`+`sort`+`sha1sum` pipeline (the proxy-metric approach used today is a candidate template).
 
-### Output Generated
-
-**File:** `docs/skill-graph.md` (761 lines, 33.5 KB)
-- ✅ 5-category overview diagram (crypto, dev, productivity, research, social)
-- ✅ Self-healing loop sub-graph (heartbeat → skill-health → skill-evals → skill-repair → self-improve)
-- ✅ Per-category mini-diagrams with clickable hyperlinks to SKILL.md files
-- ✅ Legend, summary tables, and source-status footer
-- ✅ All Mermaid syntax validated and lint-clean
-
-### Key Metrics
-
-| Metric | Value |
-|--------|-------|
-| **Mode** | SKILL_GRAPH_OK |
-| **Verdict** | ARCHITECTURE_OK (no structural regressions) |
-| **Total Skills** | 191 |
-| **Enabled** | 43 / 191 (22.5%) |
-| **depends_on edges** | 5 |
-| **shared_state edges** | 21 |
-| **consume edges** | 0 |
-| **reactive edges** | 0 |
-
-### Changes Since Last Run (2026-07-05)
-
-- **New Skills:** +68 (mostly disabled ports from upstream + meta/community/security helpers)
-- **Enabled Count:** 43 (stable, -1 net)
-- **Topology:** Stable — sparse cross-category coupling remains unchanged
-- **Self-healing Loop:** Intact and functional
-
-### Architecture Assessment
-
-✅ **No structural regressions detected**  
-✅ **Self-healing loop intact** (heartbeat through self-improve chain)  
-✅ **Cross-category edges consistent** (6 dev→productivity, 2 crypto→productivity, 1 productivity→crypto)  
-✅ **Mermaid diagrams render cleanly** on GitHub.com with full click-through support  
-
-### Enabled Skills by Category
-
-| Category | Count | Enabled |
-|----------|-------|---------|
-| crypto | 43 | 11 |
-| dev | 47 | 7 |
-| productivity | 60 | 22 |
-| research | 25 | 2 |
-| social | 16 | 1 |
-
-### Memory Updated
-
-✅ **File:** `memory/logs/2026-07-26.md`
-- Appended comprehensive skill-graph execution summary
-- Documented findings and cross-references
-
-### Skill Architecture Highlights
-
-1. **Productivity is the hub** (60 skills, 22 enabled = 37% enabled ratio) — highest interconnectivity
-2. **Dev writers feed productivity readers** — primary cross-category pattern via fork-cohort and vercel-projects
-3. **Crypto enablement surge** — real-time portfolio monitoring focus (token-alert, token-movers, on-chain-monitor, defi-monitor, defi-overview)
-4. **Research is source-focused** — 25 independent skills fanning into productivity via loose state coupling
-5. **Social mostly dormant** — 1 enabled skill, 15 distribution primitives queued for activation
-
-### Next Steps
-
-The skill-graph diagram is production-ready and provides:
-- ✅ Complete architectural understanding of 191-skill fleet
-- ✅ Visual dependency mapping with clickable SKILL.md references
-- ✅ Category-scoped drilling for focused analysis
-- ✅ Change detection baseline for future runs
-
-The generated documentation is integrated into `docs/` and referenced in `README.md`.
-
-**Status: COMPLETE ✅**
+**Cruft:** Stray untracked `.skill-graph-fingerprint.py` scratch file — sandbox blocks `rm`/`mv` on dotfiles, so it stays as untracked-only (no commit).
