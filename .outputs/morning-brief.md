@@ -1,19 +1,24 @@
-*morning brief — 2026-08-01*
+*Morning Brief — 2026-08-02*
 
-*focus today*
-1. iss-028 kill-test FAILED d1 — why now: `>>` regression persists post-pr-#167, security-digest 14z re-probes
-2. iss-025 cost-report T+2 d17 — why now: chronic operator-block persists, weekly-review 8-03 next natural catch
-3. pr queue at 2 — background: #165 d13 conflicting sole past-gate + #171 fresh 15h, batch-merge cadence
+*Focus today*
+1. 07:00Z slot d4 RECOVERED — this fire +22min in-band vs 8-01's +97min; ISS-file gate discharges
+2. PR #165 crosses 14d touch-threshold today — CLAUDE.md ~7d-past-touch window opens; queue at 3 (#165/#171/#172) T-1 to 8-03 batch-merge
+3. ISS-025 T+4 day-19 rolls today — cost-report sr=0.12 chronic-failure durable; weekly-review 8-03 action #1 lands tomorrow
 
-*since yesterday*
-- shipped: skill-health noop d4 (hash 7bf88238 stable); evening-recap clean 21:57z
-- filed: iss-028 regression persists — agent-buzz 18z + list-digest 17z both hit workaround post-#167 merge
-- moved: 4-of-4 tokens red 24h (first fully-red day in memory-window); WELL vol-cliff to 0.059× baseline (94% single-slot participation collapse)
-- stuck: pr #165 d13 conflicting sole past-gate survivor; pr #171 15h fresh self-improve open for review
+*Since yesterday*
+- ISS-028 kill-test d2 NEGATIVE — workaround-chain n=15+ across 11-UTC-day span; PR #167 fix scope too narrow (sub-agent + URL-encoded + append surfaces untouched)
+- Filesystem-Memory paper (arXiv 2607.26637) picks Aeon architecture — highest-load-bearing paper-pick match, [[fleet-relevance agent-thesis]] rail 16-consec-day
+- [[large-cap-single-day-flip]] promotes durable n=3 — UNI 7-31 +13.7% winner → 8-01 -8.5% loser joins HOLO + PUMP flip pattern
+- skill-freshness fingerprint change first since 7-25 — market-context.md + token-pick escalated WARN → STALE
+- vuln-scanner clean audit yc-software/qm — 8 candidates all-dropped, defensive posture worth internalizing (algorithm-pinned JWT + PKCE + fail-closed Lua egress-authz)
 
-*running today*
-- skill-freshness @ 08:00z (7-31 tick unclear from cron-state)
-- security-digest @ 14:00z (iss-028 kill-test slot #2)
-- vuln-scanner @ 16:00z (weekly sat, sr=0.21 chronic)
-- skill-health @ 18:00z (crosses 24h notify gate on hash 7bf88238)
-- evening-recap + thought-review @ 21:00z
+*Running today*
+- daily-routine + thought-review @ 07:00Z
+- skill-freshness @ 08:00Z
+- github-trending @ 09:00Z
+- token-alert cluster @ 12:00Z (CG streak d40 test)
+- security-digest + narrative-tracker @ 14:00Z
+- list-digest + skill-graph @ 17:00Z (Sun-only)
+- reflect + skill-health @ 18:00Z
+- fork-cohort + skill-update-check @ 19:00Z (Sun-only)
+- evening-recap @ 21:00Z · skill-evals @ 22:00Z (Sun-only)

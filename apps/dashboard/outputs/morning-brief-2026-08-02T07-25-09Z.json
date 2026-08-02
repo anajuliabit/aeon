@@ -1,0 +1,263 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-02"
+      },
+      "children": [
+        "focus-section",
+        "sep1",
+        "since-section",
+        "sep2",
+        "running-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-list"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "focus-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-item1",
+        "focus-item2",
+        "focus-item3"
+      ]
+    },
+    "focus-item1": {
+      "type": "Text",
+      "props": {
+        "text": "07:00Z slot d4 RECOVERED — this fire +22min in-band vs 8-01's +97min; ISS-file gate discharges"
+      },
+      "children": []
+    },
+    "focus-item2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #165 crosses 14d touch-threshold today — CLAUDE.md ~7d-past-touch window opens; queue at 3 (#165/#171/#172) T-1 to 8-03 batch-merge"
+      },
+      "children": []
+    },
+    "focus-item3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 T+4 day-19 rolls today — cost-report sr=0.12 chronic-failure durable; weekly-review 8-03 action #1 lands tomorrow"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-list"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "since-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-item1",
+        "since-item2",
+        "since-item3",
+        "since-item4",
+        "since-item5"
+      ]
+    },
+    "since-item1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-028 kill-test d2 NEGATIVE — workaround-chain n=15+ across 11-UTC-day span; PR #167 fix scope too narrow (sub-agent + URL-encoded + append surfaces untouched)"
+      },
+      "children": []
+    },
+    "since-item2": {
+      "type": "Text",
+      "props": {
+        "text": "Filesystem-Memory paper (arXiv 2607.26637) picks Aeon architecture — highest-load-bearing paper-pick match, [[fleet-relevance agent-thesis]] rail 16-consec-day"
+      },
+      "children": []
+    },
+    "since-item3": {
+      "type": "Text",
+      "props": {
+        "text": "[[large-cap-single-day-flip]] promotes durable n=3 — UNI 7-31 +13.7% winner → 8-01 -8.5% loser joins HOLO + PUMP flip pattern"
+      },
+      "children": []
+    },
+    "since-item4": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-freshness",
+        "message": "Fingerprint change first since 7-25 — market-context.md + token-pick escalated WARN → STALE",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "since-item5": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner clean audit yc-software/qm — 8 candidates all-dropped, defensive posture worth internalizing (algorithm-pinned JWT + PKCE + fail-closed Lua egress-authz)"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-list"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "running-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-item1",
+        "running-item2",
+        "running-item3",
+        "running-item4",
+        "running-item5",
+        "running-item6",
+        "running-item7",
+        "running-item8",
+        "running-item9",
+        "running-item10"
+      ]
+    },
+    "running-item1": {
+      "type": "Text",
+      "props": {
+        "text": "07:00Z — daily-routine + thought-review"
+      },
+      "children": []
+    },
+    "running-item2": {
+      "type": "Text",
+      "props": {
+        "text": "08:00Z — skill-freshness"
+      },
+      "children": []
+    },
+    "running-item3": {
+      "type": "Text",
+      "props": {
+        "text": "09:00Z — github-trending"
+      },
+      "children": []
+    },
+    "running-item4": {
+      "type": "Text",
+      "props": {
+        "text": "12:00Z — token-alert cluster (CG streak d40 test)"
+      },
+      "children": []
+    },
+    "running-item5": {
+      "type": "Text",
+      "props": {
+        "text": "14:00Z — security-digest + narrative-tracker"
+      },
+      "children": []
+    },
+    "running-item6": {
+      "type": "Text",
+      "props": {
+        "text": "17:00Z — list-digest + skill-graph (Sun-only)"
+      },
+      "children": []
+    },
+    "running-item7": {
+      "type": "Text",
+      "props": {
+        "text": "18:00Z — reflect + skill-health"
+      },
+      "children": []
+    },
+    "running-item8": {
+      "type": "Text",
+      "props": {
+        "text": "19:00Z — fork-cohort + skill-update-check (Sun-only)"
+      },
+      "children": []
+    },
+    "running-item9": {
+      "type": "Text",
+      "props": {
+        "text": "21:00Z — evening-recap"
+      },
+      "children": []
+    },
+    "running-item10": {
+      "type": "Text",
+      "props": {
+        "text": "22:00Z — skill-evals (Sun-only)"
+      },
+      "children": []
+    }
+  }
+}
