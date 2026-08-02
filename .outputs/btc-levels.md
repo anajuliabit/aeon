@@ -1,13 +1,17 @@
 ## Summary
 
-**btc-levels run complete — no alerts fired.**
+**btc-levels run 5 — 2026-08-02T17:18Z**
 
-- **Spot:** $63,054.95 (~13:56 UTC)
+- **Spot:** $63,141.09 (+$86 vs run 4 at 13:56Z)
 - **Previous daily close (2026-08-01):** $62,772.58
-- **All levels clear:**
-  - Spot well above $45k leverage-review trigger
-  - Close $62,772 above $60,500 breakdown threshold
-  - Spot $63,054 below $63,500 reclaim level (flag already armed from prior crossing)
-  - Spot below $65,900 reclaim level
+- **Alerts:** none
 
-No notification sent. State and log committed.
+Level check:
+| Level | Threshold | Result |
+|---|---|---|
+| Leverage-review trigger | spot ≤ $45,000 | Clear ($63,141 >> $45k) |
+| Breakdown | daily close < $60,500 | Clear ($62,772 > $60,500) |
+| Reclaim $63,500 | spot ≥ $63,500 (flag already true) | Below threshold — no re-alert, no re-arm |
+| Reclaim $65,900 | spot ≥ $65,900 | Clear ($63,141 < $65,900) |
+
+No notification sent (quiet run). State and log committed.
