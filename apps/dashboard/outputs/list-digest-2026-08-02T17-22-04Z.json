@@ -1,0 +1,124 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-02"
+      },
+      "children": [
+        "summary_text",
+        "separator_1",
+        "research_heading",
+        "tweets_stack",
+        "separator_2",
+        "metadata"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet-ish day on the defi research list — 9 tweets total, 4 carry signal: DAO-transparency warning, a platform-evolution receipts drop, trump-media's paid-shill api, and a louround PUMP essay extending his single-thesis-per-day rail to n=3.",
+        "variant": "lead"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "research_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research (list 1642770…683008)",
+        "level": "h2"
+      }
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "DAO shutdowns quietly kill the on-chain marketing-spend audit trail. the polkadot KOL-payment leak only surfaced because the DAO forum forced disclosure; teams reclaim treasury, receipts vanish, regulation is the only lever left",
+        "likes": 68,
+        "retweets": 22
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "receipts pattern: every standout crypto biz started single-product then platformized. ondo (t-bills→tokenized stocks→perps), morpho (aave-optimizer→blue→coinbase btc loans→midnight fixed-rate), sky (DAI→sUSDS $4.62B), ether.fi (staking→cash payments driving user growth). tomorrow's compounders are today's single-product apps",
+        "likes": 27,
+        "retweets": 1
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "trump media rolled a paid-amplifier api (\"truth API\"). first us-president-adjacent explicit paid-influence stack, on-chain-adjacent to the shill-layer thesis and a fresh datapoint for anyone modeling attention-market primitives",
+        "likes": 45,
+        "retweets": 5
+      }
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround_",
+        "handle": "Louround_",
+        "text": "3-tweet PUMP essay (pumpamentals → risks → conclusion): argues pumpfun is 2nd-most cash-generative consumer app in crypto after hyperliquid, buyback+revenue thesis with team-alignment concerns and a valuation floor. extends [[louround-single-thesis-cadence]] rail candidate to n=3 across 3-consec UTC-days (CODEC 7-31 → PENGU 8-01 → PUMP 8-02)",
+        "likes": 3,
+        "retweets": 1
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_text",
+        "status_text"
+      ]
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(9)",
+        "variant": "caption"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
