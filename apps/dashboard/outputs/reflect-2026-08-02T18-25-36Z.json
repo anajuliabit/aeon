@@ -1,0 +1,317 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect — Memory Consolidation",
+        "description": "2026-08-02"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_iss028",
+        "sep1",
+        "section_recovery",
+        "sep2",
+        "section_ci_failure",
+        "sep3",
+        "section_heartbeat",
+        "sep4",
+        "section_rails",
+        "sep5",
+        "section_security"
+      ]
+    },
+    "section_iss028": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_iss028",
+        "grid_iss028"
+      ]
+    },
+    "heading_iss028": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-028: Kill-Test Results",
+        "level": "h3"
+      }
+    },
+    "grid_iss028": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_iss028_verdict",
+        "stat_iss028_scale"
+      ]
+    },
+    "stat_iss028_verdict": {
+      "type": "Stat",
+      "props": {
+        "label": "Kill-test (d3+d4) result",
+        "value": "NEGATIVE",
+        "trend": "down"
+      }
+    },
+    "stat_iss028_scale": {
+      "type": "Stat",
+      "props": {
+        "label": "Test scale & span",
+        "value": "n=18+",
+        "delta": "12-UTC-day"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_recovery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_recovery",
+        "grid_recovery"
+      ]
+    },
+    "heading_recovery": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery Status",
+        "level": "h3"
+      }
+    },
+    "grid_recovery": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "badge_d4_recovered",
+        "badge_iss_file_gate"
+      ]
+    },
+    "badge_d4_recovered": {
+      "type": "Badge",
+      "props": {
+        "text": "07:00Z slot d4 RECOVERED",
+        "variant": "secondary"
+      }
+    },
+    "badge_iss_file_gate": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-file gate discharges",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_ci_failure": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_ci_failure",
+        "alert_ci_failure"
+      ]
+    },
+    "heading_ci_failure": {
+      "type": "Heading",
+      "props": {
+        "text": "CI Skills Status",
+        "level": "h3"
+      }
+    },
+    "alert_ci_failure": {
+      "type": "Alert",
+      "props": {
+        "title": "ci-skills-json: 3 Consecutive Days Failure",
+        "message": "Formal pattern detected across self-improve PRs #171 and #172",
+        "type": "error"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_heartbeat": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_heartbeat",
+        "stat_heartbeat_consecutive",
+        "text_heartbeat_record"
+      ]
+    },
+    "heading_heartbeat": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat Degradation",
+        "level": "h3"
+      }
+    },
+    "stat_heartbeat_consecutive": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive DEGRADED verdicts",
+        "value": "15",
+        "trend": "down"
+      }
+    },
+    "text_heartbeat_record": {
+      "type": "Text",
+      "props": {
+        "text": "Memory-window record: ~119 hours",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_rails": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_rails",
+        "rail_large_cap_section",
+        "text_sigma_mem",
+        "rail_louround_section"
+      ]
+    },
+    "heading_rails": {
+      "type": "Heading",
+      "props": {
+        "text": "Investment Rails Status",
+        "level": "h3"
+      }
+    },
+    "rail_large_cap_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_rail_large_cap_label",
+        "stat_rail_large_cap"
+      ]
+    },
+    "text_rail_large_cap_label": {
+      "type": "Text",
+      "props": {
+        "text": "large-cap-single-day-flip",
+        "variant": "lead"
+      }
+    },
+    "stat_rail_large_cap": {
+      "type": "Stat",
+      "props": {
+        "label": "Active candidates",
+        "value": "n=4",
+        "delta": "BEAT joins"
+      }
+    },
+    "text_sigma_mem": {
+      "type": "Text",
+      "props": {
+        "text": "Σ-Mem paper picks per-skill sr% cohort infrastructure directly",
+        "variant": "body"
+      }
+    },
+    "rail_louround_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_rail_louround_label",
+        "stat_rail_louround"
+      ]
+    },
+    "text_rail_louround_label": {
+      "type": "Text",
+      "props": {
+        "text": "louround-single-thesis-cadence",
+        "variant": "lead"
+      }
+    },
+    "stat_rail_louround": {
+      "type": "Stat",
+      "props": {
+        "label": "Promoted candidate → durable",
+        "value": "n=3"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_security",
+        "text_security_status"
+      ]
+    },
+    "heading_security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security Digest",
+        "level": "h3"
+      }
+    },
+    "text_security_status": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet-cadence: d2 + 159× malware collapse",
+        "variant": "body"
+      }
+    }
+  }
+}

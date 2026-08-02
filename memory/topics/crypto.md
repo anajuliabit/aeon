@@ -5,6 +5,22 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
+## Recent durable patterns (2026-08-02)
+
+- **Tape shifts broad-red → mixed-to-green 8-02** — 8-01's "~60% top-100 negative broad-red" resolves to 8-02's "mixed-to-green with major indices flat-to-positive"; participation re-engages further after 7-31's fully-synchronized red day. 2-of-4 tracked-token green (MAMO +1.67% / REPPO +4.50%) breaks fully-red print.
+- **WELL vol-cliff d6 full-recovery to 0.890× baseline 8-02** — 7-31 0.059× nadir → 8-01 0.162× partial → 8-02 0.890× arc **definitively confirms one-slot data-glitch reading**; 3-day arc rules OUT durable participation-drain regime. Drift-mode floor holds on price at -0.58% at noise-floor while vol normalizes (~5× d1 lift without price impulse).
+- **MAMO digestion band re-anchors d12 8-02** — 3-consec monotone red-widening (1.20% → -2.35% → -3.49%) reverses to +1.67% on sub-baseline vol; **distribution-on-give-back signature aborts at d11 test**, digestion re-anchors. Vol 0.941× (3rd sub-baseline print in memory-window).
+- **REPPO price-without-participation gap widens 8-02** — 2-consec green print (+7.40% / +4.50%) on vol halving 0.729× → 0.377× (fresh drought-mode low, 2nd-lowest window vol behind 7-31's $79K nadir). Mean-reversion running on empty book; sustainability watch d3 will resolve.
+- **GITLAWB 2-consec noise-floor flatline sustains base-building 8-02** — 7-31 -7.13% cliff-give-back arrested 8-01 -0.82% + 8-02 -0.89% = **9-day give-back sequence (7-24 → 8-01) confirmed cooled to base-building** on sustained sub-baseline participation (0.868× → 0.669×).
+- **[[large-cap-single-day-flip]] rail extends n=3 → n=4 8-02** — BEAT (7-31 #1 winner +17.7% BREAKOUT → 8-01 sustained BREAKOUT → 8-02 #2 loser -10.5%) joins HOLO/PUMP/UNI. **4 pole-flips in 4 UTC-days.** BEAT 3-day arc (winner → sustained → reversal) adds new sub-pattern under parent rail.
+- **UAI +39.1% BREAKOUT+PUMP-RISK 8-02** — rank 217 microcap dominates the top-movers list; sustainability watch d1 tomorrow.
+- **META +17.7% BREAKOUT on $68M vol / 7d +45.7% sustained 8-02** — sustained BREAKOUT structure without meme-rotation attribution.
+- **CATE +123% trending microcap pump warning 8-02** — surfaced in trending list, sub-liquid.
+- **CoinGecko clean-day streak extends to d40 8-02** — 40 consec clean CG days post-ISS-023 = longest infrastructure durability streak in memory-window.
+- **[[louround-single-thesis-cadence]] rail promoted candidate → durable n=3 8-02** — CODEC 7-31 ($2.4M FDV robotics-launchpad) + PENGU 8-01 ($380m NFT-IP-to-retail brand-thesis) + PUMP 8-02 (pumpfun revenue+buyback thesis) = 3-consec-UTC-day single-voice dominance on defi-research list.
+- **[[launchpad-primitive]] rail n=3 candidate 8-02** — CODEC 7-31 + frontierhood/robinhood-chain 8-01 + Virtuals $200M agent trading volume on Robinhood Chain 8-02 (fleet-observation sidecar via morning-brief WebSearch).
+- **BTC market context 8-02** — spot ranges $62,949 → $63,475 across btc-levels ×5 runs, daily close 8-01 $62,772.58, no threshold crosses (spot above $45k, close above $60,500 breakdown, spot below $63,500 reclaim, below $65,900 reclaim). Tape end-of-July fade at resistance across btc/eth/xrp; august range decides direction.
+
 ## Recent durable patterns (2026-08-01)
 
 - **Fully-synchronized red day breaks at d1 8-01** — 3-of-4 red (WELL -0.68% / MAMO -3.49% / GITLAWB -0.82%) with REPPO snapping +7.40% ends 7-31's memory-window-first 4-of-4 print. Participation re-engages across board (4-of-4 tokens vol above 7-31 print), 1-of-4 above-baseline (MAMO 1.036×) vs 7-31's 0-of-4. Regime shift from drought-mode-fully-drained toward mean-reversion band.
