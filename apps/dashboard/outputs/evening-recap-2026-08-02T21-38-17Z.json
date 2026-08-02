@@ -1,0 +1,485 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-02",
+        "description": "productive sunday — fork-cohort + reflect shipped, sunday cluster all-clean, but ci-skills-json 3-consec failure blocks both self-improve PRs from tomorrow's batch"
+      },
+      "children": [
+        "headline-section",
+        "separator-1",
+        "notable-section",
+        "separator-2",
+        "decisions-section",
+        "separator-3",
+        "blockers-section",
+        "separator-4",
+        "footer-text"
+      ]
+    },
+    "headline-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-heading",
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headline-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-title",
+        "h1-content"
+      ]
+    },
+    "h1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "fork-cohort",
+        "level": "h3"
+      }
+    },
+    "h1-content": {
+      "type": "Text",
+      "props": {
+        "text": "articles/fork-cohort-2026-08-02.md shipped; 211 forks, 24 POWER; Da6hkin WENT_STALE, aganoob NEW→POWER · articles/fork-cohort-2026-08-02.md"
+      }
+    },
+    "headline-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-title",
+        "h2-content"
+      ]
+    },
+    "h2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "reflect",
+        "level": "h3"
+      }
+    },
+    "h2-content": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md 69L→75L, 14 patterns integrated; fleet.md + crypto.md refreshed · memory/logs/2026-08-02-reflect.md"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-title",
+        "h3-content"
+      ]
+    },
+    "h3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "github-trending",
+        "level": "h3"
+      }
+    },
+    "h3-content": {
+      "type": "Text",
+      "props": {
+        "text": "5 picks, 4 buckets (widest window); iv-org/invidious 58× peak-spike; TencentDB first hyperscaler agent-memory primitive · .outputs/github-trending.md"
+      }
+    },
+    "headline-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-title",
+        "h4-content"
+      ]
+    },
+    "h4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "daily-routine",
+        "level": "h3"
+      }
+    },
+    "h4-content": {
+      "type": "Text",
+      "props": {
+        "text": "4 sub-skills clean; tape mixed-to-green; Σ-Mem paper extends [[fleet-relevance]] 17-consec · .tmp/daily-routine/msg.md"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-title",
+        "h5-content"
+      ]
+    },
+    "h5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "goal-tracker",
+        "level": "h3"
+      }
+    },
+    "h5-content": {
+      "type": "Text",
+      "props": {
+        "text": "07:00Z slot cleared DONE; PR #165 flips ON_TRACK→NEEDS_ATTENTION at d14 · memory/goal-state.json"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n1-title",
+        "n1-content"
+      ]
+    },
+    "n1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-buzz",
+        "level": "h3"
+      }
+    },
+    "n1-content": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-plumbing rail durable 4-consec; fleet-relevance 17→18-consec (DeFi-agent economic-outcome axis NEW)"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2-title",
+        "n2-content"
+      ]
+    },
+    "n2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "security-digest",
+        "level": "h3"
+      }
+    },
+    "n2-content": {
+      "type": "Text",
+      "props": {
+        "text": "quiet-cadence d2 (0 fresh KEV); first Termux-execution infostealer in window (wacve-utils)"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n3-title",
+        "n3-content"
+      ]
+    },
+    "n3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "fork-skill-digest",
+        "level": "h3"
+      }
+    },
+    "n3-content": {
+      "type": "Text",
+      "props": {
+        "text": "40/49 forks (82%) disable action-converter; 14 new fork-only skills (fleet build phase active)"
+      }
+    },
+    "notable-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4-title",
+        "n4-content"
+      ]
+    },
+    "n4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "action-converter",
+        "level": "h3"
+      }
+    },
+    "n4-content": {
+      "type": "Text",
+      "props": {
+        "text": "5 actions avg 4.4/5; pr-ci-shared-root-cause ISS-029 candidate; ./generate-skills-json gap confirmed"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-title",
+        "d1-content",
+        "d1-links"
+      ]
+    },
+    "d1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "run ./generate-skills-json + commit on #171 + #172",
+        "level": "h3"
+      }
+    },
+    "d1-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-text",
+        "d1-run-link"
+      ]
+    },
+    "d1-text": {
+      "type": "Text",
+      "props": {
+        "text": "blocks weekly-batch 8-03; root cause confirmed via"
+      }
+    },
+    "d1-run-link": {
+      "type": "Link",
+      "props": {
+        "label": "gh run 30713133283",
+        "href": "https://github.com/anajuliabit/aeon/actions/runs/30713133283"
+      }
+    },
+    "d1-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-link1",
+        "d1-link2"
+      ]
+    },
+    "d1-link1": {
+      "type": "Link",
+      "props": {
+        "label": "PR #171",
+        "href": "https://github.com/anajuliabit/aeon/pull/171"
+      }
+    },
+    "d1-link2": {
+      "type": "Link",
+      "props": {
+        "label": "PR #172",
+        "href": "https://github.com/anajuliabit/aeon/pull/172"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2-title",
+        "d2-content"
+      ]
+    },
+    "d2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "merge PR #165",
+        "level": "h3"
+      }
+    },
+    "d2-content": {
+      "type": "Text",
+      "props": {
+        "text": "d14 CONFLICTING, CLAUDE.md ~7d-past-touch escalation window open"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d3-title",
+        "d3-content"
+      ]
+    },
+    "d3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "weekly-review 8-03: reopen ISS-028",
+        "level": "h3"
+      }
+    },
+    "d3-content": {
+      "type": "Text",
+      "props": {
+        "text": "PR #167 missed sub-agent surfaces; 4-consec NEGATIVE, n=18+ 12-UTC-day"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blocker-1",
+        "blocker-2"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-027",
+        "message": "12:00Z 8-skill batch DARK d36 (operator-gated)",
+        "type": "error"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-025",
+        "message": "cost-report 12% sr, d20 milestone (weekly-review 8-03 action #1)",
+        "type": "warning"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+16 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

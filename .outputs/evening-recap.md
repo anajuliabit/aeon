@@ -1,20 +1,26 @@
-*Evening Recap — 2026-08-01*
-_TL;DR: 3 artifacts shipped, ISS-028 scope confirmed wider than PR #167 fix — 4 decisions land on the 8-03 weekly-review window_
+*Evening Recap — 2026-08-02*
+_TL;DR: productive sunday — fork-cohort + reflect shipped, sunday cluster all-clean, but ci-skills-json 3-consec failure blocks both self-improve PRs from tomorrow's batch_
 
 *Headlines:*
-- self-improve — PR #172 opened; wired missing XAI prefetch case for daily-routine tweet-roundup (was chronically WebSearch-fallback) · https://github.com/anajuliabit/aeon/pull/172
-- vuln-scanner — clean audit yc-software/qm, 8 candidates / 0 confirmed · articles/vuln-scan-2026-08-01.md
-- skill-freshness — first fingerprint change since 7-25; 7 flagged (5 STALE + 2 WARN), market-context.md crossed 2× stale threshold · articles/skill-freshness-2026-08-01.md
+- fork-cohort — articles/fork-cohort-2026-08-02.md shipped; 211 forks, 24 POWER; Da6hkin WENT_STALE, aganoob NEW→POWER · articles/fork-cohort-2026-08-02.md
+- reflect — MEMORY.md 69L→75L, 14 patterns integrated; fleet.md + crypto.md refreshed · memory/logs/2026-08-02-reflect.md
+- github-trending — 5 picks, 4 buckets (widest window); iv-org/invidious 58× peak-spike; TencentDB first hyperscaler agent-memory primitive · .outputs/github-trending.md
+- daily-routine — 4 sub-skills clean; tape mixed-to-green; Σ-Mem paper extends [[fleet-relevance]] 17-consec · .tmp/daily-routine/msg.md
+- goal-tracker — 07:00Z slot cleared DONE; PR #165 flips ON_TRACK→NEEDS_ATTENTION at d14 · memory/goal-state.json
 
 *Notable:*
-- security-digest — 318-entry malware batch (largest in memory-window); pterodactyl/wings 2nd critical in 3d (CVE-2026-52855 9.9 fix 1.12.3); NLTK + Thumbor same-day double mass-disclose; MCP CVE rail n=2 (Dynatrace unauth MCP)
-- heartbeat ×3 / skill-health — DEGRADED 13-consec ticks; hash flip 7bf88238 → f0c415fd (evening-recap DEGRADED→WARNING); 07:00Z slot +96min dispatch lag = 3rd-consec-day degraded pattern
-- ISS-028 kill-test d2 NEGATIVE — bash `>` still blocked at 4 call-sites post-PR-#167 merge; fix scope was narrow (heartbeat/security-digest only, not daily-routine sub-agent / github-trending / list-digest paths)
+- agent-buzz — MCP-plumbing rail durable 4-consec; fleet-relevance 17→18-consec (DeFi-agent economic-outcome axis NEW)
+- security-digest — quiet-cadence d2 (0 fresh KEV); first Termux-execution infostealer in window (wacve-utils)
+- fork-skill-digest — 40/49 forks (82%) disable action-converter; 14 new fork-only skills (fleet build phase active)
+- action-converter — 5 actions avg 4.4/5; pr-ci-shared-root-cause ISS-029 candidate; ./generate-skills-json gap confirmed
 
 *Decisions for tomorrow:*
-- ci-skills-json FAILURE on both #171 + #172 — shared root cause; decide inspect-and-fix vs accept-and-batch for 8-03 merge
-- decide PR #165 (d13 CONFLICTING, crosses 14d touch threshold 8-02 — CLAUDE.md escalation window opens)
-- ISS-025 operator direct-author `.github/workflows/aeon.yml:479-495` — T+2 d17 slipped, last catch at 8-03 weekly-review before T+3 d19 milestone
-- 8-02 07:00Z slot is escalation-gate deciding test — MISS or severe lag again → ISS-file candidate
+- run ./generate-skills-json + commit on #171 + #172 — blocks weekly-batch 8-03; root cause confirmed via gh run 30713133283 · https://github.com/anajuliabit/aeon/pull/171 https://github.com/anajuliabit/aeon/pull/172
+- merge PR #165 — d14 CONFLICTING, CLAUDE.md ~7d-past-touch escalation window open · https://github.com/anajuliabit/aeon/pull/165
+- weekly-review 8-03: reopen ISS-028 (PR #167 missed sub-agent surfaces; 4-consec NEGATIVE, n=18+ 12-UTC-day)
 
-_+14 routine runs collapsed · sources: log=ok cron-state=ok_
+*Blockers:*
+- ISS-027 — 12:00Z 8-skill batch DARK d36 (operator-gated)
+- ISS-025 — cost-report 12% sr, d20 milestone (weekly-review 8-03 action #1)
+
+_+16 routine runs collapsed · sources: log=ok cron-state=ok_
