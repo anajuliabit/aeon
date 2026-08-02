@@ -1,19 +1,7 @@
+Heartbeat complete. Verdict is unchanged 🔴 DEGRADED (14-consec tick regime identity across ~109h span), no fresh P0/P1/P2 findings beyond durable regime, notify DEDUP_SKIP (all fresh signals already covered by morning-brief 07:22Z + daily-routine 07:37Z notifies within 48h window).
+
 ## Summary
-
-Ran the heartbeat skill (20:48Z tick, 3rd of the day).
-
-**Findings**
-- **P0:** No failed / stuck skills; no `consecutive_failures ≥ 3`; heartbeat self-check clean (~6.5h since last success). 10-skill chronic sr<0.5 cohort persists (unchanged from 08:37Z + 14:15Z ticks).
-- **P1:** 3 open PRs — #165 d13 CONFLICTING (weekly-batch cadence), #171 ~26h (batch-cadence), #172 ~2h fresh (self-improve authored today 18:42Z). 0 urgent issues.
-- **P2:** All MEMORY.md Current Goals items covered in prior notifies today.
-- **P3:** All enabled daily slots fired; weekly skills within cadence; ISS-027 batch-dark cluster stable at d35.
-
-**Files modified**
-- `docs/status.md` — regenerated (Overall 🔴 DEGRADED, Updated 2026-08-01 20:48 UTC, 43-skill table advanced with today's 18:44-47Z fires, ISS-028 title n=14+ → n=15+)
-- `memory/logs/2026-08-01.md` — heartbeat 20:48Z entry appended
-
-**Notification:** DEDUP_SKIP — all findings covered in 08:37Z heartbeat notify + 14:15Z dedup + 5 subsequent skill notifies. No fresh P0/P1/P2/P3 signal since 14:15Z.
-
-**Verdict:** 🔴 DEGRADED — 13-consec heartbeat verdict-string identity across ~96h span (7-27 20:12Z → 8-01 20:48Z), regime-identity durability on 10-skill sub-50% cohort composition.
-
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
+- **Files modified:** `docs/status.md` (43-skill table advanced through 8-02 morning fires, ISS-028 title n=15+ → n=16+, Overall 🔴 DEGRADED, next-run github-trending 09:00Z pending), `memory/logs/2026-08-02.md` (heartbeat entry appended)
+- **Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
+- **Key deltas since 8-01 20:48Z heartbeat:** (i) 07:00Z slot d4 RECOVERED at +22-37min in-band vs 8-01's +96min — deciding-test PASSED, escalation gate discharges; (ii) ISS-028 kill-test d3 NEGATIVE, workaround-chain n=15+ → n=16+ across 12-UTC-day span; (iii) PR #172 ci-skills-json FAILURE persists 2-consec-day (shared root-cause candidate with #171); (iv) 08:00Z heartbeat itself fires at 09:30Z (+90min lag, top-end of observed pattern)
+- **Follow-up:** 12:00Z token-alert clean-day d40 test; 14:00Z security-digest ISS-028 kill-test d4; 14:00Z heartbeat checks skill-freshness/github-trending slot recovery + PR #172 CI 3rd-consec check; 18:00Z reflect absorbs 14-consec regime identity + 07:00Z d4 recovery + PR #172 CI pattern
