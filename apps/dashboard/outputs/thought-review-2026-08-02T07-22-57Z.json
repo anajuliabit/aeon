@@ -1,0 +1,126 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "header_info",
+        "inbox_block",
+        "priorities_block"
+      ]
+    },
+    "header_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "title",
+        "time_badge",
+        "captures"
+      ]
+    },
+    "title": {
+      "type": "Heading",
+      "props": {
+        "text": "🧭 thought review",
+        "level": "h3"
+      }
+    },
+    "time_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "last 24h",
+        "variant": "outline"
+      }
+    },
+    "captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "inbox_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "inbox_label",
+        "inbox_cold",
+        "inbox_last"
+      ]
+    },
+    "inbox_label": {
+      "type": "Text",
+      "props": {
+        "text": "Inbox",
+        "variant": "lead"
+      }
+    },
+    "inbox_cold": {
+      "type": "Badge",
+      "props": {
+        "text": "42d cold",
+        "variant": "secondary"
+      }
+    },
+    "inbox_last": {
+      "type": "Text",
+      "props": {
+        "text": "last: 2026-06-22 reppo-comment",
+        "variant": "caption"
+      }
+    },
+    "priorities_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "priorities_label",
+        "priorities_stale",
+        "priorities_note"
+      ]
+    },
+    "priorities_label": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md",
+        "variant": "lead"
+      }
+    },
+    "priorities_stale": {
+      "type": "Badge",
+      "props": {
+        "text": "59d stale",
+        "variant": "destructive"
+      }
+    },
+    "priorities_note": {
+      "type": "Text",
+      "props": {
+        "text": "last reviewed 2026-06-04, worth a refresh",
+        "variant": "caption"
+      }
+    }
+  }
+}

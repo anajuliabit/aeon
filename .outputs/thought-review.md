@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures. nothing to surface. priorities.md last reviewed 58d ago — worth a refresh.
+🧭 thought review · last 24h · 0 captures. inbox 42d cold (last: 2026-06-22 reppo-comment). priorities.md 59d stale — last reviewed 2026-06-04, worth a refresh.
