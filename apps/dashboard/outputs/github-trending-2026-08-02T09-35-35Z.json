@@ -1,0 +1,443 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-08-02"
+      },
+      "children": [
+        "heading_top_pick",
+        "sep1",
+        "storylink_top_pick",
+        "text_top_pick_desc",
+        "sep2",
+        "heading_ai_ml",
+        "stack_ai_ml",
+        "sep3",
+        "heading_devtools",
+        "stack_devtools",
+        "sep4",
+        "heading_infra",
+        "stack_infra",
+        "sep5",
+        "heading_web_apps",
+        "stack_web_apps",
+        "sep6",
+        "text_sources"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "storylink_top_pick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "iv-org/invidious",
+        "href": "https://github.com/iv-org/invidious"
+      }
+    },
+    "text_top_pick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Biggest ratio-spike in today's slate — a decade-old privacy tool re-engaging at 58× baseline daily volume, active push today, likely fresh anti-adblock cycle."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_ai_ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      }
+    },
+    "stack_ai_ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "entry_reverse_skill",
+        "entry_speech_to_speech"
+      ]
+    },
+    "entry_reverse_skill": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_reverse_skill",
+        "stack_reverse_skill_meta",
+        "text_reverse_skill_desc"
+      ]
+    },
+    "storylink_reverse_skill": {
+      "type": "StoryLink",
+      "props": {
+        "title": "zhaoxuya520/reverse-skill",
+        "href": "https://github.com/zhaoxuya520/reverse-skill"
+      }
+    },
+    "stack_reverse_skill_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_reverse_skill_stars",
+        "badge_reverse_skill_lang",
+        "badge_reverse_skill_status"
+      ]
+    },
+    "stat_reverse_skill_stars": {
+      "type": "Stat",
+      "props": {
+        "value": "1.3k (12k total)",
+        "label": "Stars today"
+      }
+    },
+    "badge_reverse_skill_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "PowerShell"
+      }
+    },
+    "badge_reverse_skill_status": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "outline"
+      }
+    },
+    "text_reverse_skill_desc": {
+      "type": "Text",
+      "props": {
+        "text": "4× yesterday's fire (335 → 1,320) — viral extension of the security-domain skill-pack router first flagged 8-01.",
+        "variant": "body"
+      }
+    },
+    "entry_speech_to_speech": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_speech_to_speech",
+        "stack_speech_meta",
+        "text_speech_desc"
+      ]
+    },
+    "storylink_speech_to_speech": {
+      "type": "StoryLink",
+      "props": {
+        "title": "huggingface/speech-to-speech",
+        "href": "https://github.com/huggingface/speech-to-speech"
+      }
+    },
+    "stack_speech_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_speech_stars",
+        "badge_speech_lang",
+        "badge_speech_status"
+      ]
+    },
+    "stat_speech_stars": {
+      "type": "Stat",
+      "props": {
+        "value": "442 (10k total)",
+        "label": "Stars today"
+      }
+    },
+    "badge_speech_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "badge_speech_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      }
+    },
+    "text_speech_desc": {
+      "type": "Text",
+      "props": {
+        "text": "31× baseline daily volume 4 days after last trending appearance — voice-agent primitive back on the burn.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      }
+    },
+    "stack_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "entry_copilot_sdk"
+      ]
+    },
+    "entry_copilot_sdk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_copilot_sdk",
+        "stack_copilot_meta",
+        "text_copilot_desc"
+      ]
+    },
+    "storylink_copilot_sdk": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github/copilot-sdk",
+        "href": "https://github.com/github/copilot-sdk"
+      }
+    },
+    "stack_copilot_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_copilot_stars",
+        "badge_copilot_lang",
+        "badge_copilot_status"
+      ]
+    },
+    "stat_copilot_stars": {
+      "type": "Stat",
+      "props": {
+        "value": "142 (10k total)",
+        "label": "Stars today"
+      }
+    },
+    "badge_copilot_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Java"
+      }
+    },
+    "badge_copilot_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "text_copilot_desc": {
+      "type": "Text",
+      "props": {
+        "text": "20× yesterday's fire (7 → 142) after a fresh push today — github's official copilot agent multi-platform SDK crosses the velocity gate.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h2"
+      }
+    },
+    "stack_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "entry_tencentdb"
+      ]
+    },
+    "entry_tencentdb": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_tencentdb",
+        "stack_tencentdb_meta",
+        "text_tencentdb_desc"
+      ]
+    },
+    "storylink_tencentdb": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TencentCloud/TencentDB-Agent-Memory",
+        "href": "https://github.com/TencentCloud/TencentDB-Agent-Memory"
+      }
+    },
+    "stack_tencentdb_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_tencentdb_stars",
+        "badge_tencentdb_lang",
+        "badge_tencentdb_status"
+      ]
+    },
+    "stat_tencentdb_stars": {
+      "type": "Stat",
+      "props": {
+        "value": "227 (10k total)",
+        "label": "Stars today"
+      }
+    },
+    "badge_tencentdb_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "badge_tencentdb_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "text_tencentdb_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Tencent-cloud team-level memory hub with chat/skill/llm-wiki/code-graph slots — first hyperscaler agent-memory primitive to trend.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_web_apps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h2"
+      }
+    },
+    "stack_web_apps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "entry_invidious_web"
+      ]
+    },
+    "entry_invidious_web": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_invidious_web",
+        "stack_invidious_meta",
+        "text_invidious_desc"
+      ]
+    },
+    "storylink_invidious_web": {
+      "type": "StoryLink",
+      "props": {
+        "title": "iv-org/invidious",
+        "href": "https://github.com/iv-org/invidious"
+      }
+    },
+    "stack_invidious_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_invidious_stars",
+        "badge_invidious_lang",
+        "badge_invidious_status"
+      ]
+    },
+    "stat_invidious_stars": {
+      "type": "Stat",
+      "props": {
+        "value": "435 (22k total)",
+        "label": "Stars today"
+      }
+    },
+    "badge_invidious_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Crystal"
+      }
+    },
+    "badge_invidious_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      }
+    },
+    "text_invidious_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Active push today after 10d release lull — mature privacy frontend re-viral without an obvious release catalyst.",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 5/15",
+        "variant": "caption"
+      }
+    }
+  }
+}
