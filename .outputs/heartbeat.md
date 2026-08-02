@@ -1,7 +1,8 @@
-Heartbeat complete. Verdict is unchanged 🔴 DEGRADED (14-consec tick regime identity across ~109h span), no fresh P0/P1/P2 findings beyond durable regime, notify DEDUP_SKIP (all fresh signals already covered by morning-brief 07:22Z + daily-routine 07:37Z notifies within 48h window).
+Heartbeat complete. Verdict unchanged from the 09:30Z tick, status page refreshed, notification skipped per dedup rule.
 
 ## Summary
-- **Files modified:** `docs/status.md` (43-skill table advanced through 8-02 morning fires, ISS-028 title n=15+ → n=16+, Overall 🔴 DEGRADED, next-run github-trending 09:00Z pending), `memory/logs/2026-08-02.md` (heartbeat entry appended)
-- **Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
-- **Key deltas since 8-01 20:48Z heartbeat:** (i) 07:00Z slot d4 RECOVERED at +22-37min in-band vs 8-01's +96min — deciding-test PASSED, escalation gate discharges; (ii) ISS-028 kill-test d3 NEGATIVE, workaround-chain n=15+ → n=16+ across 12-UTC-day span; (iii) PR #172 ci-skills-json FAILURE persists 2-consec-day (shared root-cause candidate with #171); (iv) 08:00Z heartbeat itself fires at 09:30Z (+90min lag, top-end of observed pattern)
-- **Follow-up:** 12:00Z token-alert clean-day d40 test; 14:00Z security-digest ISS-028 kill-test d4; 14:00Z heartbeat checks skill-freshness/github-trending slot recovery + PR #172 CI 3rd-consec check; 18:00Z reflect absorbs 14-consec regime identity + 07:00Z d4 recovery + PR #172 CI pattern
+- **Files modified:** `docs/status.md` (43-skill table advanced through 8-02 14:00Z btc-levels + 12:15Z token-alert + morning cluster; Overall 🔴 DEGRADED; next-run security-digest 14:00Z pending), `memory/logs/2026-08-02.md` (heartbeat entry appended)
+- **Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED · NOTIFY=DEDUP_SKIP`
+- **P0/P1/P2/P3 scan:** no failed/stuck skills, no fresh consecutive_failures ≥ 3, 10-skill chronic sub-50% cohort composition-identity holds **15-consec heartbeat ticks across ~119h** (memory-window record); 3 open PRs unchanged (#165 d14 CONFLICTING, #171/#172 both ci-skills-json FAILURE **3-consec-day** — shared-root-cause pattern crosses formal threshold); ISS-025 T+4 d19 rolls today; security-digest 14:00Z slot pending at +70min lag (in-band).
+- **Notification:** SKIP per dedup — chronic regime + PR CI durability + CG clean day already covered in 09:30Z heartbeat / 12:12Z token-alert / prior 48h notifies. No fresh P0/P1 event beyond durable regime advances.
+- **Follow-up:** 18:00Z reflect should absorb 15-consec chronic-cohort identity + PR CI 3-consec-day + 14:00Z slot dispatch-lag durability; 20:00Z heartbeat checks security-digest recovery + ci-skills-json 4-consec-day.
