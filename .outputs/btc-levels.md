@@ -1,14 +1,10 @@
 ## Summary
 
-**btc-levels run — 2026-08-02, no alerts fired.**
-
-| Metric | Value |
-|---|---|
-| Spot | $62,949.66 |
-| Daily close (2026-08-01) | $62,772.58 |
-| Leverage-review trigger (≤$45k) | Clear |
-| Breakdown (close < $60,500) | Clear |
-| Reclaim $63,500 flag | Already set true; spot $62,949 < $63,500, no re-arm |
-| Reclaim $65,900 | Clear |
-
-No notification sent (quiet run, as expected). State and today's log committed to `main`.
+- **Fetched** BTC price from CoinGecko: spot $63,475.22, Aug 1 daily close $62,772.58.
+- **Evaluated** all four levels — no alerts fired:
+  - Spot ($63,475) well above $45,000 leverage-review trigger
+  - Close ($62,772) above $60,500 breakdown threshold
+  - Spot ($63,475) just below $63,500 reclaim level — $24.78 shy, flag already `true` from prior cycle
+  - Spot below $65,900 reclaim level
+- **No notification sent** (quiet run).
+- **Persisted** updated state (spot $63,475.22) and log entry; committed both.
