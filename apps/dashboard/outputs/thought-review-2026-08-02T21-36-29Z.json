@@ -1,0 +1,110 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "stat-captures",
+        "sep-1",
+        "grid-items",
+        "sep-2",
+        "text-rec"
+      ]
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (last 24h)",
+        "value": "0"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "grid-items": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "vault-stack",
+        "priorities-stack"
+      ]
+    },
+    "vault-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-vault",
+        "stat-vault"
+      ]
+    },
+    "badge-vault": {
+      "type": "Badge",
+      "props": {
+        "text": "vault/inbox",
+        "variant": "secondary"
+      }
+    },
+    "stat-vault": {
+      "type": "Stat",
+      "props": {
+        "label": "Cold streak",
+        "value": "42d"
+      }
+    },
+    "priorities-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-priorities",
+        "stat-priorities",
+        "text-priorities-date"
+      ]
+    },
+    "badge-priorities": {
+      "type": "Badge",
+      "props": {
+        "text": "priorities.md",
+        "variant": "secondary"
+      }
+    },
+    "stat-priorities": {
+      "type": "Stat",
+      "props": {
+        "label": "Stale",
+        "value": "59d"
+      }
+    },
+    "text-priorities-date": {
+      "type": "Text",
+      "props": {
+        "text": "Last reviewed 2026-06-04",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-rec": {
+      "type": "Text",
+      "props": {
+        "text": "worth a refresh next reflect",
+        "variant": "lead"
+      }
+    }
+  }
+}
