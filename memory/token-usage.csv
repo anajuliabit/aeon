@@ -933,3 +933,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-02,skill-graph,claude-opus-4-7,96,33442,8778315,152241
 2026-08-02,action-converter,claude-opus-4-7,62,29249,7204917,150381
 2026-08-02,fork-skill-digest,claude-sonnet-4-6,47,85758,4370189,144055
+2026-08-02,btc-levels,claude-sonnet-4-6,14,5969,493311,51256
