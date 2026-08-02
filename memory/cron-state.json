@@ -299,8 +299,8 @@
     "last_error": "f2f746c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-update-check": {
-    "last_dispatch": "2026-07-26T19:50:43Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-02T19:38:31Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-26T19:52:39Z",
     "total_runs": 9,
     "total_successes": 9,
@@ -586,8 +586,8 @@
     "last_error": "f830df7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "fork-skill-digest": {
-    "last_dispatch": "2026-07-26T18:35:57Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-02T19:38:31Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-26T18:46:11Z",
     "total_runs": 8,
     "total_successes": 6,
@@ -597,8 +597,8 @@
     "last_failed": "2026-07-12T19:04:19Z"
   },
   "fork-cohort": {
-    "last_dispatch": "2026-07-26T19:50:43Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-02T19:38:31Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-26T19:55:26Z",
     "total_runs": 6,
     "total_successes": 6,
