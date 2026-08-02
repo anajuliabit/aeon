@@ -1,0 +1,234 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-02"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-verdict",
+        "section-patch",
+        "section-kev"
+      ]
+    },
+    "section-verdict": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-verdict"
+      ]
+    },
+    "text-verdict": {
+      "type": "Text",
+      "props": {
+        "text": "2 malware to purge, nothing else fresh. quiet-cadence returns d2. Sources: KEV, GH Advisory, EPSS",
+        "variant": "lead"
+      }
+    },
+    "section-patch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-patch",
+        "malware-item-1",
+        "malware-item-2"
+      ]
+    },
+    "heading-patch": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "malware-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story-1",
+        "badge-stack-1",
+        "text-desc-1",
+        "text-action-1"
+      ]
+    },
+    "story-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-6wp2-7xxw-m8c6 — wacve-utils (pip)",
+        "href": "https://github.com/advisories/GHSA-6wp2-7xxw-m8c6",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-stack-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-malware-1",
+        "badge-date-1"
+      ]
+    },
+    "badge-malware-1": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "badge-date-1": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-08-02 12:30Z",
+        "variant": "outline"
+      }
+    },
+    "text-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "Encrypted infostealer targeting Linux/Termux. Exfiltrates files, browser data, and SMS to Telegram.",
+        "variant": "body"
+      }
+    },
+    "text-action-1": {
+      "type": "Text",
+      "props": {
+        "text": "→ block wacve-utils in pypi mirror; rotate any credentials on hosts that resolved it.",
+        "variant": "muted"
+      }
+    },
+    "malware-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story-2",
+        "badge-stack-2",
+        "text-desc-2",
+        "text-action-2"
+      ]
+    },
+    "story-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-4g95-5h46-4643 — pp-react-worldready (npm)",
+        "href": "https://github.com/advisories/GHSA-4g95-5h46-4643",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-stack-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-malware-2",
+        "badge-date-2"
+      ]
+    },
+    "badge-malware-2": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "badge-date-2": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-08-01 15:30Z",
+        "variant": "outline"
+      }
+    },
+    "text-desc-2": {
+      "type": "Text",
+      "props": {
+        "text": "OpenSSF Package Analysis flag — calls known-malicious domain.",
+        "variant": "body"
+      }
+    },
+    "text-action-2": {
+      "type": "Text",
+      "props": {
+        "text": "→ block pp-react-worldready in npm mirror; audit lockfiles for the string.",
+        "variant": "muted"
+      }
+    },
+    "section-kev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-kev",
+        "kev-details"
+      ]
+    },
+    "heading-kev": {
+      "type": "Heading",
+      "props": {
+        "text": "KEV Summary",
+        "level": "h2"
+      }
+    },
+    "kev-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kev-fresh",
+        "kev-reviewed",
+        "kev-fleet"
+      ]
+    },
+    "kev-fresh": {
+      "type": "Text",
+      "props": {
+        "text": "Fresh net-new: 0 CVEs (3 this week all covered 7-27→7-31)",
+        "variant": "body"
+      }
+    },
+    "kev-reviewed": {
+      "type": "Text",
+      "props": {
+        "text": "Reviewed: 0 fresh CVEs. Shipped in 48h: 4 critical + 24 high (8-01 14:52Z)",
+        "variant": "body"
+      }
+    },
+    "kev-fleet": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon-fleet clean vs both malware IDs",
+        "variant": "body"
+      }
+    }
+  }
+}
