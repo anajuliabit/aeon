@@ -1,13 +1,11 @@
-*List Digest — 2026-08-02*
+*List Digest — 2026-08-03*
 
-quiet-ish day on the defi research list — 9 tweets total, 4 carry signal: DAO-transparency warning, a platform-evolution receipts drop, trump-media's paid-shill api, and a louround PUMP essay extending his single-thesis-per-day rail to n=3.
+louround takes the whole feed for the 4th consec UTC-day — this one's the $IO thesis (down 98% from ATH, only DePIN with real ARR).
 
-*DeFi Research (list 1642770…683008)*
-- x.com/DefiIgnas — DAO shutdowns quietly kill the on-chain marketing-spend audit trail. the polkadot KOL-payment leak only surfaced because the DAO forum forced disclosure; teams reclaim treasury, receipts vanish, regulation is the only lever left (♥ 68 · 💬 22) — [View](https://x.com/DefiIgnas/status/2083648581223797106)
-- x.com/Flowslikeosmo — receipts pattern: every standout crypto biz started single-product then platformized. ondo (t-bills→tokenized stocks→perps), morpho (aave-optimizer→blue→coinbase btc loans→midnight fixed-rate), sky (DAI→sUSDS $4.62B), ether.fi (staking→cash payments driving user growth). tomorrow's compounders are today's single-product apps (♥ 27 · ↻ 1) — [View](https://x.com/Flowslikeosmo/status/2083674172916736444)
-- x.com/Flowslikeosmo — trump media rolled a paid-amplifier api ("truth API"). first us-president-adjacent explicit paid-influence stack, on-chain-adjacent to the shill-layer thesis and a fresh datapoint for anyone modeling attention-market primitives (♥ 45 · 💬 5) — [View](https://x.com/Flowslikeosmo/status/2083627049650979107)
-- x.com/Louround_ — 3-tweet PUMP essay (pumpamentals → risks → conclusion): argues pumpfun is 2nd-most cash-generative consumer app in crypto after hyperliquid, buyback+revenue thesis with team-alignment concerns and a valuation floor. extends [[louround-single-thesis-cadence]] rail candidate to n=3 across 3-consec UTC-days (CODEC 7-31 → PENGU 8-01 → PUMP 8-02) (♥ 3 · 💬 1) — [View](https://x.com/Louround_/status/2083623662377431103)
+*DePIN/crypto research list*
+- x.com/Louround_ — 7th installment: $IO at $50m mc / 5x MC/ARR while akash sits at 53x and render at 350x; IDE burn mechanism live 50 days and already above target; second enterprise deal apparently in advanced stages = the catalyst to watch (♥ 29, ↻ 3) — [View](https://x.com/Louround_/status/2084006972622622964)
+- x.com/Louround_ — thread receipts: monthly net earnings $250k mar → $1m may (4×); $8m of ARR concentrated in a single enterprise = the risk; IDE untested against a 50%+ drawdown yet (♥ 2) — [View](https://x.com/Louround_/status/2084007065434182033)
 
 ---
-sources: 1642770456720683008=ok(9)
+sources: list=ok(10) — grok returned zero 8-03 posts, backfill from 8-02 = 8-tweet @Louround_ IO thread + 2 low-signal replies
 status: LIST_DIGEST_OK
