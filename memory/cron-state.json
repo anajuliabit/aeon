@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-08-03T08:17:37Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T20:41:49Z",
     "total_runs": 279,
     "total_successes": 196,
@@ -74,14 +74,14 @@
     "success_rate": 1
   },
   "agent-buzz": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T18:23:33Z",
     "total_runs": 97,
     "total_successes": 65,
     "total_failures": 32,
     "consecutive_failures": 1,
     "success_rate": 0.67,
-    "last_dispatch": "2026-08-02T18:15:24Z",
+    "last_dispatch": "2026-08-03T20:13:30Z",
     "last_failed": "2026-08-03T18:27:37Z",
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
   },
@@ -155,8 +155,8 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-08-03T11:49:46Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T09:36:44Z",
     "total_runs": 94,
     "total_successes": 62,
@@ -201,8 +201,8 @@
     "success_rate": 1
   },
   "search-skill": {
-    "last_dispatch": "2026-07-27T14:55:48Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-27T14:57:16Z",
     "total_runs": 121,
     "total_successes": 45,
@@ -214,8 +214,8 @@
     "last_error": "//api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requi"
   },
   "goal-tracker": {
-    "last_dispatch": "2026-08-02T18:15:24Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T18:24:50Z",
     "total_runs": 130,
     "total_successes": 68,
@@ -226,8 +226,8 @@
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
   },
   "skill-health": {
-    "last_dispatch": "2026-08-02T18:15:24Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T18:21:23Z",
     "total_runs": 136,
     "total_successes": 68,
@@ -238,8 +238,8 @@
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
   },
   "reflect": {
-    "last_dispatch": "2026-08-02T18:15:24Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T18:26:21Z",
     "total_runs": 126,
     "total_successes": 68,
@@ -250,8 +250,8 @@
     "last_error": "//api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requi"
   },
   "action-converter": {
-    "last_dispatch": "2026-08-02T18:15:24Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T18:27:59Z",
     "total_runs": 132,
     "total_successes": 69,
@@ -275,8 +275,8 @@
     "last_quality_score": 4
   },
   "self-improve": {
-    "last_dispatch": "2026-08-01T18:37:55Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-01T18:44:36Z",
     "total_runs": 70,
     "total_successes": 35,
@@ -309,8 +309,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-08-03T11:49:46Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-27T08:47:25Z",
     "total_runs": 64,
     "total_successes": 7,
@@ -321,8 +321,8 @@
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
   },
   "skill-security-scan": {
-    "last_dispatch": "2026-07-27T17:00:42Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-27T17:05:58Z",
     "total_runs": 11,
     "total_successes": 9,
@@ -333,8 +333,8 @@
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
   },
   "weekly-review": {
-    "last_dispatch": "2026-07-27T20:09:42Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-27T20:29:36Z",
     "total_runs": 10,
     "total_successes": 10,
@@ -419,14 +419,14 @@
     "last_quality_score": 4
   },
   "daily-routine": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T07:37:56Z",
     "total_runs": 84,
     "total_successes": 59,
     "total_failures": 25,
     "consecutive_failures": 6,
     "success_rate": 0.7,
-    "last_dispatch": "2026-08-03T11:49:46Z",
+    "last_dispatch": "2026-08-03T20:13:30Z",
     "last_failed": "2026-08-03T18:26:55Z",
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
   },
@@ -449,8 +449,8 @@
     "success_rate": 1
   },
   "security-digest": {
-    "last_dispatch": "2026-08-02T15:08:44Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T15:15:41Z",
     "total_runs": 126,
     "total_successes": 53,
@@ -462,8 +462,8 @@
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
   },
   "deal-flow": {
-    "last_dispatch": "2026-07-27T14:55:48Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-27T15:02:33Z",
     "total_runs": 9,
     "total_successes": 6,
@@ -554,8 +554,8 @@
     "last_error": "f7d7e6f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "list-digest": {
-    "last_dispatch": "2026-08-02T17:17:36Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T17:23:05Z",
     "total_runs": 94,
     "total_successes": 54,
@@ -578,8 +578,8 @@
     "last_error": "5fab1f1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "thought-review": {
-    "last_dispatch": "2026-08-03T11:49:46Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-02T21:37:16Z",
     "total_runs": 155,
     "total_successes": 102,
@@ -611,8 +611,8 @@
     "success_rate": 1
   },
   "unlock-monitor": {
-    "last_dispatch": "2026-08-03T11:49:46Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-27T12:03:05Z",
     "total_runs": 13,
     "total_successes": 7,
@@ -627,8 +627,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-08-03T11:49:46Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-03T20:13:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-03T04:50:49Z",
     "total_runs": 346,
     "total_successes": 280,
