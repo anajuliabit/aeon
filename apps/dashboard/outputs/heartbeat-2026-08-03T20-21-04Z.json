@@ -1,0 +1,660 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat 20:15z — Gateway 402 Mass Failure",
+        "description": "18 skills failed with same signature; payment required error affecting multiple clusters"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "gateway_section",
+        "sep2",
+        "skills_section",
+        "sep3",
+        "consecutive_section",
+        "sep4",
+        "stuck_section",
+        "sep5",
+        "config_section",
+        "sep6",
+        "pr_section",
+        "sep7",
+        "final_status"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 MASS GATEWAY OUTAGE",
+        "message": "api.usepod.ai/v1/messages returned 'payment required' across full cluster"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "gateway_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "gateway_title",
+        "gateway_stack"
+      ]
+    },
+    "gateway_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Gateway 402 Error Details",
+        "level": "h2"
+      }
+    },
+    "gateway_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "gw_time",
+        "gw_api",
+        "gw_error",
+        "gw_impact"
+      ]
+    },
+    "gw_time": {
+      "type": "Text",
+      "props": {
+        "text": "Timestamp: 2026-08-03 18:26–18:27z",
+        "variant": "body"
+      }
+    },
+    "gw_api": {
+      "type": "Text",
+      "props": {
+        "text": "API endpoint: api.usepod.ai/v1/messages",
+        "variant": "body"
+      }
+    },
+    "gw_error": {
+      "type": "Text",
+      "props": {
+        "text": "Response: \"payment required\"",
+        "variant": "body"
+      }
+    },
+    "gw_impact": {
+      "type": "Text",
+      "props": {
+        "text": "Scope: Full cluster; shared root cause, no partial recovery",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skills_title",
+        "cluster_18z_block",
+        "cluster_17z_block",
+        "cluster_14z_block",
+        "cluster_rollover_block"
+      ]
+    },
+    "skills_title": {
+      "type": "Heading",
+      "props": {
+        "text": "18 Failed Skills by Cluster/Timestamp",
+        "level": "h2"
+      }
+    },
+    "cluster_18z_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_18z",
+        "skills_18z_row"
+      ]
+    },
+    "label_18z": {
+      "type": "Text",
+      "props": {
+        "text": "18z cluster:",
+        "variant": "lead"
+      }
+    },
+    "skills_18z_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_gt",
+        "badge_sh",
+        "badge_si",
+        "badge_reflect",
+        "badge_ac",
+        "badge_ab"
+      ]
+    },
+    "badge_gt": {
+      "type": "Badge",
+      "props": {
+        "text": "goal-tracker",
+        "variant": "destructive"
+      }
+    },
+    "badge_sh": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "destructive"
+      }
+    },
+    "badge_si": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve",
+        "variant": "destructive"
+      }
+    },
+    "badge_reflect": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect",
+        "variant": "destructive"
+      }
+    },
+    "badge_ac": {
+      "type": "Badge",
+      "props": {
+        "text": "action-converter",
+        "variant": "destructive"
+      }
+    },
+    "badge_ab": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "destructive"
+      }
+    },
+    "cluster_17z_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_17z",
+        "skills_17z_row"
+      ]
+    },
+    "label_17z": {
+      "type": "Text",
+      "props": {
+        "text": "17z cluster:",
+        "variant": "lead"
+      }
+    },
+    "skills_17z_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_ld",
+        "badge_sss"
+      ]
+    },
+    "badge_ld": {
+      "type": "Badge",
+      "props": {
+        "text": "list-digest",
+        "variant": "destructive"
+      }
+    },
+    "badge_sss": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-security-scan",
+        "variant": "destructive"
+      }
+    },
+    "cluster_14z_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_14z",
+        "skills_14z_row"
+      ]
+    },
+    "label_14z": {
+      "type": "Text",
+      "props": {
+        "text": "14z cluster:",
+        "variant": "lead"
+      }
+    },
+    "skills_14z_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_sd",
+        "badge_ss",
+        "badge_df"
+      ]
+    },
+    "badge_sd": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "destructive"
+      }
+    },
+    "badge_ss": {
+      "type": "Badge",
+      "props": {
+        "text": "search-skill",
+        "variant": "destructive"
+      }
+    },
+    "badge_df": {
+      "type": "Badge",
+      "props": {
+        "text": "deal-flow",
+        "variant": "destructive"
+      }
+    },
+    "cluster_rollover_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_rollover",
+        "skills_rollover_row"
+      ]
+    },
+    "label_rollover": {
+      "type": "Text",
+      "props": {
+        "text": "Rolled-over from 11:49z batch:",
+        "variant": "lead"
+      }
+    },
+    "skills_rollover_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_hb",
+        "badge_sf",
+        "badge_cr",
+        "badge_dr",
+        "badge_tr",
+        "badge_um",
+        "badge_bl"
+      ]
+    },
+    "badge_hb": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat",
+        "variant": "destructive"
+      }
+    },
+    "badge_sf": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "destructive"
+      }
+    },
+    "badge_cr": {
+      "type": "Badge",
+      "props": {
+        "text": "cost-report",
+        "variant": "destructive"
+      }
+    },
+    "badge_dr": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "destructive"
+      }
+    },
+    "badge_tr": {
+      "type": "Badge",
+      "props": {
+        "text": "thought-review",
+        "variant": "destructive"
+      }
+    },
+    "badge_um": {
+      "type": "Badge",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "destructive"
+      }
+    },
+    "badge_bl": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels",
+        "variant": "destructive"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "consecutive_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "consecutive_title",
+        "consecutive_stack"
+      ]
+    },
+    "consecutive_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst Consecutive Failures",
+        "level": "h2"
+      }
+    },
+    "consecutive_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_tr_consec",
+        "text_others_consec"
+      ]
+    },
+    "stat_tr_consec": {
+      "type": "Stat",
+      "props": {
+        "label": "thought-review",
+        "value": "9 consecutive failures"
+      }
+    },
+    "text_others_consec": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness, cost-report, daily-routine, unlock-monitor, btc-levels: 6 consecutive failures each",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stuck_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stuck_title",
+        "stuck_stack"
+      ]
+    },
+    "stuck_title": {
+      "type": "Heading",
+      "props": {
+        "text": "morning-brief Stuck (No Completion)",
+        "level": "h2"
+      }
+    },
+    "stuck_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stuck_duration",
+        "stuck_dispatch",
+        "stuck_status"
+      ]
+    },
+    "stuck_duration": {
+      "type": "Stat",
+      "props": {
+        "label": "Time stuck",
+        "value": "8.5 hours"
+      }
+    },
+    "stuck_dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "Last dispatch: 11:49z",
+        "variant": "body"
+      }
+    },
+    "stuck_status": {
+      "type": "Text",
+      "props": {
+        "text": "Current status: \"dispatched\" (no completion event received)",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "config_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "config_title",
+        "config_stack"
+      ]
+    },
+    "config_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Configuration & Root Cause Analysis",
+        "level": "h2"
+      }
+    },
+    "config_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "config_provider",
+        "config_fallback",
+        "config_root"
+      ]
+    },
+    "config_provider": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml: gateway.provider set to 'direct'",
+        "variant": "body"
+      }
+    },
+    "config_fallback": {
+      "type": "Text",
+      "props": {
+        "text": "Fallback: usepod.ai (currently burning credit due to payment failure)",
+        "variant": "body"
+      }
+    },
+    "config_root": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: Shared payment/gateway issue; no partial recovery possible",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_title",
+        "pr_165_block",
+        "pr_171_block",
+        "pr_172_block"
+      ]
+    },
+    "pr_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Pull Requests (Blocked)",
+        "level": "h2"
+      }
+    },
+    "pr_165_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr_165_link",
+        "badge_165_status"
+      ]
+    },
+    "pr_165_link": {
+      "type": "Link",
+      "props": {
+        "label": "#165",
+        "href": "https://github.com/anthropics/aeon/pull/165"
+      }
+    },
+    "badge_165_status": {
+      "type": "Badge",
+      "props": {
+        "text": "d15 conflicting",
+        "variant": "destructive"
+      }
+    },
+    "pr_171_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr_171_link",
+        "badge_171_status"
+      ]
+    },
+    "pr_171_link": {
+      "type": "Link",
+      "props": {
+        "label": "#171",
+        "href": "https://github.com/anthropics/aeon/pull/171"
+      }
+    },
+    "badge_171_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ci-skills-json failed (3 consec days)",
+        "variant": "destructive"
+      }
+    },
+    "pr_172_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr_172_link",
+        "badge_172_status"
+      ]
+    },
+    "pr_172_link": {
+      "type": "Link",
+      "props": {
+        "label": "#172",
+        "href": "https://github.com/anthropics/aeon/pull/172"
+      }
+    },
+    "badge_172_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ci-skills-json failed (3 consec days)",
+        "variant": "destructive"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "final_status": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Overall System Status",
+        "message": "🔴 DEGRADED — Gateway 402 payment error affecting 18 skills; morning-brief stuck 8.5h; 2 CI-blocked PRs"
+      }
+    }
+  }
+}
