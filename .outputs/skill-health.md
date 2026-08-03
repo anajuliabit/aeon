@@ -1,19 +1,26 @@
-## Summary
+*skill-health — 2026-08-03*
+HEALTH: CRITICAL(11)
+[SYSTEMIC: api.usepod.ai 402 payment_required — 19-skill same-second cluster @ 18:26-27Z → ISS-029]
 
-Ran skill-health per `skills/skill-health/SKILL.md`. **NOOP (dedup-skip)** — hash unchanged since prev tick and 24h daily-reminder gate not yet crossed.
+🔴 CRITICAL (11) — all share ISS-029 gateway-402 signature
+- cost-report — 6 fails, 7d down — FIX CONFIG (usepod credits) → ISS-029/025
+- unlock-monitor — 6 fails, 7d down — FIX CONFIG → ISS-029
+- thought-review — 9 fails, ~22h down — FIX CONFIG → ISS-029
+- search-skill — 4 fails, 7d down — FIX CONFIG → ISS-029/021
+- daily-routine — 6 fails, ~37h down — FIX CONFIG → ISS-029
++6 more (skill-freshness, btc-levels, deal-flow, security-digest, self-improve, heartbeat) — see memory/issues/ISS-029.md
 
-**Classification (43 enabled skills)**: 0 CRITICAL / 17 DEGRADED / 0 FLAPPING / 13 WARNING / 10 HEALTHY / 3 NO_DATA — every bucket composition-identical to prev report. Hash `f0c415fd` durable 5th-consec formal tick (~120h span since 7-28 19:02Z; longest same-hash streak in skill-health memory).
+🟡 DEGRADED (8)
+- skill-analytics — sr=0.19 (10/52) — INVESTIGATE
+- reg-monitor — sr=0.19 (9/47) — INVESTIGATE
+- vuln-scanner — sr=0.23 — INVESTIGATE → ISS-018
+- market-context-refresh — sr=0.32 — WAIT-API → ISS-027
+- narrative-tracker — sr=0.33 — WAIT-API → ISS-027
++3 more (aixbt-pulse, defi-monitor, skill-evals) — see memory/issues/INDEX.md
 
-**Fresh 8-02 fires all matched prior bucket** (morning-brief/daily-routine/thought-review/skill-freshness/github-trending/heartbeat/token-alert/btc-levels/security-digest/list-digest/skill-graph/evening-recap 21:44Z 8-01). Zero cross-bucket transitions.
+⚪ NO DATA (3): autoresearch (workflow_dispatch), fork-skill-gap (Sun 21:00Z next 8-09), operator-scorecard (Mon 10:30Z next 8-04) — scheduler-gated, not dispatched today
+🟢 HEALTHY: 6
 
-**Open issues**: 13 (unchanged). Filed: 0. Resolved: 0. No HEALTHY graduation for any open-issue affected skill (ISS-018/019/020/021/025/027/028 all still failing pattern; ISS-028 kill-test d3-d4 NEGATIVE dispersed across 4 sub-agent surfaces today — daily-routine hn-digest + security-digest + list-digest + skill-graph — workaround-chain n=17+ → n=18+ across 12-UTC-day span).
+Open issues: 14 · Filed this run: 1 (ISS-029) · Resolved: 0
 
-**Time gate**: 23h44m elapsed since prev notify 2026-08-01T18:39:18Z — 16min short of 24h daily-reminder gate. Hash unchanged + under 24h → skip notify per step 5. Next tick 2026-08-03 ~18:00Z will cross the gate and fire the daily reminder even if composition stays identical.
-
-**Sandbox**: `./scripts/skill-runs` fallback blocked (SKILL_HEALTH_PARTIAL logged per spec Sandbox note); classification proceeded on cron-state + skill-health/*.json + INDEX.md alone.
-
-**Files modified**:
-- `memory/skill-health/last-report.json` — last_run_at advanced to 2026-08-02T18:23:00Z, hash + last_notified_at preserved, systemic-detail refreshed
-- `memory/logs/2026-08-02.md` — appended `### skill-health — 18:23 UTC` section + `## Summary (skill-health 18:23Z)` block
-
-**Follow-up**: next skill-health tick 2026-08-03 ~18:00Z will cross the 24h daily-reminder gate → notify fires regardless of composition; weekly-review 8-03 T-1 should absorb 5-consec hash-durability as fleet-composition-stability signal.
+action: verify USEPOD_TOKEN funded at usepod.ai OR flip aeon.yml gateway.provider direct→bankr/virtuals until direct rate-limit cools. skill-health's next tick 2026-08-04 18:00Z will itself fail if gateway stays broken.

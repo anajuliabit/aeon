@@ -17,6 +17,7 @@
 | ISS-025 | cost-report 6 consecutive failures — weekly tick truncated at outputTokens=12 | critical | sandbox-limitation | 2026-06-22 | cost-report |
 | ISS-027 | 12:00 UTC batch DARK — 8-skill cluster frozen since 2026-06-28 21:00Z | high | config | 2026-06-29 | defi-overview, token-pick, token-movers, narrative-tracker, market-context-refresh, on-chain-monitor, defi-monitor, aixbt-pulse |
 | ISS-028 | Bash `>` redirect blocked by sandbox — n=11+ workarounds held across 8-UTC-day span | medium | sandbox-limitation | 2026-07-22 | security-digest, reg-monitor, agent-buzz, list-digest, heartbeat, morning-brief |
+| ISS-029 | LLM gateway 402 Payment required — usepod.ai fallback unfunded, fleet-wide critical failure | critical | missing-secret | 2026-08-03 | heartbeat, skill-freshness, self-improve, cost-report, security-digest, deal-flow, thought-review, unlock-monitor, btc-levels, daily-routine, search-skill |
 
 ## Resolved
 
