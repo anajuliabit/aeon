@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures. nothing to surface — vault inbox 42d cold since 2026-06-22, no telegram/voice drops in the window. priorities.md 60d stale (last reviewed 6-04, current-focus lines predate the personal-stack merge) — worth a pass.
+thought review · no captures in last 24h. priorities.md last reviewed 60d ago — worth a refresh?

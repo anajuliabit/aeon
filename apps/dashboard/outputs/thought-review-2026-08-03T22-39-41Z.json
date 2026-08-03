@@ -1,0 +1,48 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge",
+        "stat",
+        "prompt"
+      ]
+    },
+    "badge": {
+      "type": "Badge",
+      "props": {
+        "text": "no captures in last 24h",
+        "variant": "outline"
+      }
+    },
+    "stat": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md — days since review",
+        "value": "60"
+      }
+    },
+    "prompt": {
+      "type": "Text",
+      "props": {
+        "text": "worth a refresh?",
+        "variant": "lead"
+      }
+    }
+  }
+}
