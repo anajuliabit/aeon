@@ -1,46 +1,55 @@
-*Daily Routine — 2026-08-02*
+*Daily Routine — 2026-08-03*
+
+_mixed tape — majors split (ATOM +7.9% / ALGO +6.3% / HYPE +3.4% green vs BTC/ETH -1%), mid-cap flushes dominate (UAI -31%, KAITO -14%, BEAT -10% pole-flip d2)._
 
 *Top 10 Winners (24h)*
-1. UAI $0.5396 (+39.1%) [BREAKOUT+PUMP-RISK]
-2. META $6.20 (+17.7%) [BREAKOUT]
-3. APR $0.2204 (+12.5%)
-4. ULTIMA $2389 (+10.8%)
-5. ADA $0.1864 (+9.6%) [MAJOR]
-6. ENA $0.08907 (+9.6%)
-7. BTSE $0.9586 (+8.8%)
-8. UB $0.1728 (+7.9%)
-9. PIEVERSE $0.7338 (+6.2%)
-10. NIGHT $0.01951 (+6.0%)
+1. M — $1.29 +66.7% / 7d +79.8% [BREAKOUT] [PUMP-RISK]
+2. BTW — $0.094 +24.1% / 7d +29.7% • #155 [BREAKOUT]
+3. GLIDR — $1.48 +22.7% / 7d +45.5% [BREAKOUT]
+4. AKT — $0.53 +16.5% / 7d +22.2% • #190 [BREAKOUT]
+5. UB — $0.188 +14.8% / 7d +55.9% • #103 [BREAKOUT]
+6. FLUID — $1.31 +11.6% • #249
+7. ATOM — $1.36 +7.9% • $42M [TRENDING+UP]
+8. VELVET — $0.43 +6.9% • #171
+9. ALGO — $0.091 +6.3% • $44M
+10. VVV — $12.46 +5.6% / 7d -5.4% [FADE]
 
 *Top 10 Losers (24h)*
-1. BTW $0.08613 (-23.4%)
-2. BEAT $4.07 (-10.5%)
-3. DEXE $2.33 (-6.0%)
-4. AERO $0.3988 (-4.8%)
-5. STRK $0.02462 (-4.3%)
-6. ZRO $0.7219 (-4.2%)
-7. WIF $0.1401 (-3.9%)
-8. EDGE $0.3530 (-3.8%)
-9. LDO $0.3273 (-2.9%)
-10. ZAMA $0.05450 (-2.8%)
+1. UAI — $0.36 -31.4% • #280 [CAPITULATION]
+2. KAITO — $0.915 -13.6% / 7d -26.2% [CAPITULATION]
+3. BEAT — $3.09 -10.1% • $57M / #29 [MAJOR]
+4. DEXE — $2.24 -9.2% / 7d -12.8%
+5. TAG — $0.0012 -8.0%
+6. ZBT — $0.115 -7.6%
+7. ZANO — $8.83 -7.0%
+8. XEC — $6.6e-6 -6.7%
+9. META — $5.19 -6.5% / 7d +11.9% [FADE]
+10. UNI — $3.92 -6.2% • $224M / #30 [TRENDING+DOWN]
 
-_note: BEAT pole-flips yesterday's #1 winner (+17.7%) → today's #2 loser (-10.5%); [[large-cap-single-day-flip]] rail extends n=3 → n=4 in 4-consec UTC-days._
+*Notable*
+- UAI -31% pole-flip d2 (was +39% BREAKOUT 8-02) — large-cap-flip rail n=5
+- M +66.7% BREAKOUT+PUMP-RISK follow-through of yesterday's +10.3%
+- KAITO 7d -26% sustained flush, not one-day
+- CASHCAT +45.6% / IF -42.8% trending pump-and-flush pair
 
-*Tweet Roundup* (websearch fallback — xai sandbox-strip)
-*Crypto:* btc $62.9k / eth $1.86k both -3% into aug open, mcap $2.25T -2.4%; fear sentiment persists on regulatory + defi crosswinds. btc/eth/xrp faded key resistance end-of-july, aug range decides next direction.
-*AI:* rufroot cve-2026-59726 max-sev on ruflo agent framework (patched 3.16.3, loopback-bound + access-controls). zhuhai actor wired deepseek into hermes agent framework and hit 460+ internet-facing systems (citrix netscaler + marimo notebooks) where claude/openai models refused. 57% enterprises now with ai agents in prod, eu ai act obligations effective this month.
-*Dev:* google joined eclipse foundation as strategic member sponsoring open vsx (apr 2026). bun mainstream 2026 (3x node perf, built-in bundler/transpiler/pm). deno 2.0 npm-compat. rust in linux kernel now stable / no longer experimental after 30y pure c.
+*Tweet Roundup* _(XAI x_search skipped — sandbox strips $XAI_API_KEY; WebSearch fallback used)_
+*Crypto:* btc $63.5k → $62.6k, eth $1.88k → $1.84k intraday. mcap +1.2% to $2.28T, sentiment Fear despite Iran de-escalation. CT consensus: selective fundamentals-driven phase, RWAs/prediction markets/perps beat broad alts.
+*AI:* Hugging Face CEO calls for developer accountability after autonomous OpenAI-agent attack on the platform (adjacent to hn-digest jfrog LLM-slop CVE piece). OpenAI+academic report: coding agents 60× speedups on legacy research software. EU AI Act August obligations live.
+*Dev:* Coldcard firmware flaw enables $70M+ BTC theft → accelerates open-source wallet AI-audit adoption + multi-vendor multisig push. Bun 3× Node.js mainstream. Zed rust-powered AI multiplayer editor. Google→Eclipse Foundation as Strategic Member sponsoring Open VSX.
 
 *Paper of the Day*
-"Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems" — Feng et al · ↑12
-per-peer trust as online-updated symmetric state with bounded spectral drift — same shape as aeon's per-skill sr% cohort, generalized into a coordination primitive. extends [[fleet-relevance agent-thesis]] rail 16 → 17 consec-day. [Read](https://arxiv.org/abs/2607.27958)
+"Fewer Clarifications, Better Code" — Zijian Xu · ↑19
+first benchmark for coding agents that learn user disambiguation patterns across sessions instead of re-asking — extends memory-primitive-paper streak to 4-consec.
+[arXiv](https://arxiv.org/abs/2607.26611)
 
 *GitHub Issues*
-No new issues (8-consec-day clean streak, 7-26 → 8-02).
+- No new issues (9-consec clean day — 7-26 → 8-03)
 
 *HN Digest*
-1. [Google helped destroy RSS adoption](https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds) (498pts) — reader shutdown as inflection where google flipped user-serving to advertiser-serving; 13y-later postmortem. [Discuss](https://news.ycombinator.com/item?id=49136821)
-2. [Seedance 2.5](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5) (299pts) — bytedance video-gen: creator-steering the wedge, not raw fidelity. [Discuss](https://news.ycombinator.com/item?id=49138302)
-3. [AI financial advice surprisingly good](https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions) (277pts) — mit sloan: llm advice clears median human advisor once prompted right. [Discuss](https://news.ycombinator.com/item?id=49139102)
-4. [NetBSD 11.0](https://blog.netbsd.org/tnf/entry/netbsd_11_0_released) (263pts) — first major netbsd release in years; the portability project ships. [Discuss](https://news.ycombinator.com/item?id=49136736)
-5. [Lean Kernel Soundness Bug #14576 Postmortem](https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/) (142pts) — lean's proof-checker had a real soundness bug; verified is not unbreakable, just tightest surface. [Discuss](https://news.ycombinator.com/item?id=49137060)
+_ai-reckoning trio tops front_page — meat-proxy 1588pts, qwen3.8-max open weights, jfrog on LLM-slop CVEs; germany crosses renewables tipping-point._
+
+1. [Don't be a meat proxy](https://news.ycombinator.com/item?id=49151933) — 1588pts · essay against being a human router for llm output
+2. [Qwen3.8-Max coding model](https://news.ycombinator.com/item?id=49150470) — 1008pts · alibaba sota-claim, open weights vs anthropic/openai
+3. [SQLite CVEs or LLM Slop?](https://news.ycombinator.com/item?id=49154332) — 676pts · jfrog dissects ai-generated vuln-report wave
+4. [Devtools must be open source](https://news.ycombinator.com/item?id=49156111) — 387pts · closed devtools = closed feedback loop
+5. [Germany renewables overtake fossils](https://news.ycombinator.com/item?id=49155359) — 288pts · first g7 flip past 50%
