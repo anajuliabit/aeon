@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures. vault/inbox 42d cold streak, priorities.md 59d stale (last reviewed 2026-06-04) — worth a refresh next reflect.
+🧭 thought review · last 24h · 0 captures. nothing to surface — vault inbox 42d cold since 2026-06-22, no telegram/voice drops in the window. priorities.md 60d stale (last reviewed 6-04, current-focus lines predate the personal-stack merge) — worth a pass.
