@@ -1,0 +1,394 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "goal-tracker — 2026-08-03",
+        "description": "7 goals — 1 at risk, 2 needs attention, 4 blocked, 0 on track, 0 done"
+      },
+      "children": [
+        "summary_section",
+        "sep1",
+        "at_risk_section",
+        "sep2",
+        "needs_attention_section",
+        "sep3",
+        "blocked_section",
+        "sep4",
+        "sources_section"
+      ]
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_heading",
+        "summary_stat"
+      ]
+    },
+    "summary_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary_stat": {
+      "type": "Text",
+      "props": {
+        "text": "0 status shifts vs 8-02; today opens PR #165 7d-past-touch escalation window + rolls ISS-025 T+5 day-20 slip.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "at_risk_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "at_risk_heading",
+        "at_risk_item1"
+      ]
+    },
+    "at_risk_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h2"
+      }
+    },
+    "at_risk_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "at_risk_item1_title",
+        "at_risk_item1_desc",
+        "at_risk_item1_action"
+      ]
+    },
+    "at_risk_item1_title": {
+      "type": "Text",
+      "props": {
+        "text": "• priorities.md 60d stale",
+        "variant": "lead"
+      }
+    },
+    "at_risk_item1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 176 mentions/14d (flat; mentions are meta-flag nudges, no refresh work)",
+        "variant": "body"
+      }
+    },
+    "at_risk_item1_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "operator refresh priorities.md; audit vault inbox 43d cold streak",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "needs_attention_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "needs_attention_heading",
+        "needs_attention_item1",
+        "needs_attention_item2"
+      ]
+    },
+    "needs_attention_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEEDS ATTENTION",
+        "level": "h2"
+      }
+    },
+    "needs_attention_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "needs_attention_item1_title",
+        "needs_attention_item1_desc",
+        "needs_attention_item1_action"
+      ]
+    },
+    "needs_attention_item1_title": {
+      "type": "Text",
+      "props": {
+        "text": "• PR #165 docs(skill-graph) d15 CONFLICTING",
+        "variant": "lead"
+      }
+    },
+    "needs_attention_item1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 280 mentions/14d (↑ activity, status flat; 7d-past-touch escalation window OPEN today)",
+        "variant": "body"
+      }
+    },
+    "needs_attention_item1_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "rebase PR #165 onto main; ship in 8-03 weekly-batch merge window",
+        "type": "info"
+      }
+    },
+    "needs_attention_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "needs_attention_item2_title",
+        "needs_attention_item2_desc",
+        "needs_attention_item2_action"
+      ]
+    },
+    "needs_attention_item2_title": {
+      "type": "Text",
+      "props": {
+        "text": "• PR #171 fresh self-improve ~64h",
+        "variant": "lead"
+      }
+    },
+    "needs_attention_item2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 271 mentions/14d (↑ activity, status flat; ci-skills-json FAILURE 3-consec shared with #172)",
+        "variant": "body"
+      }
+    },
+    "needs_attention_item2_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "investigate ci-skills-json shared failure across PRs #171 + #172",
+        "type": "info"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_heading",
+        "blocked_item1",
+        "blocked_item2",
+        "blocked_item3",
+        "blocked_item4"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "blocked_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_item1_title",
+        "blocked_item1_desc",
+        "blocked_item1_action"
+      ]
+    },
+    "blocked_item1_title": {
+      "type": "Text",
+      "props": {
+        "text": "• ISS-025 cost-report hand-off T+5 day-20 SLIPPED",
+        "variant": "lead"
+      }
+    },
+    "blocked_item1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 494 mentions/14d (flat; sr=0.12 durable weakest chronic-failure, 15-consec heartbeat DEGRADED)",
+        "variant": "body"
+      }
+    },
+    "blocked_item1_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "operator direct-author dangerouslyDisableSandbox pivot at .github/workflows/aeon.yml:479-495",
+        "type": "error"
+      }
+    },
+    "blocked_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_item2_title",
+        "blocked_item2_desc",
+        "blocked_item2_action"
+      ]
+    },
+    "blocked_item2_title": {
+      "type": "Text",
+      "props": {
+        "text": "• 12:00 UTC batch DARK day-37",
+        "variant": "lead"
+      }
+    },
+    "blocked_item2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 418 mentions/14d (↑ activity, status flat; 8-skill cluster frozen since 6-28, 41st consec clean CG day)",
+        "variant": "body"
+      }
+    },
+    "blocked_item2_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "trigger manual 12:00Z batch to force ISS-027 signature capture",
+        "type": "error"
+      }
+    },
+    "blocked_item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_item3_title",
+        "blocked_item3_desc",
+        "blocked_item3_action"
+      ]
+    },
+    "blocked_item3_title": {
+      "type": "Text",
+      "props": {
+        "text": "• ISS-028 kill-test workaround-chain",
+        "variant": "lead"
+      }
+    },
+    "blocked_item3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 351 mentions/14d (↑ activity, status flat; kill-test d5 NEGATIVE, workaround-chain n=18+ durable 12-UTC-day span)",
+        "variant": "body"
+      }
+    },
+    "blocked_item3_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "reopen PR #167 scope at weekly-review 8-03; patch sub-agent + skill-graph surfaces",
+        "type": "error"
+      }
+    },
+    "blocked_item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_item4_title",
+        "blocked_item4_desc",
+        "blocked_item4_action"
+      ]
+    },
+    "blocked_item4_title": {
+      "type": "Text",
+      "props": {
+        "text": "• operator on-chain config day-58",
+        "variant": "lead"
+      }
+    },
+    "blocked_item4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 153 mentions/14d (↑ activity, status flat; defi-monitor NO_CONFIG, keys missing)",
+        "variant": "body"
+      }
+    },
+    "blocked_item4_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "operator populate memory/on-chain-watches.yml + add ALCHEMY_API_KEY + ETHERSCAN_API_KEY",
+        "type": "error"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok(empty), cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
