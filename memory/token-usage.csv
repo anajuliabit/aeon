@@ -938,4 +938,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-02,skill-evals,claude-sonnet-4-6,12,18371,965794,119885
 2026-08-03,btc-levels,claude-sonnet-4-6,0,2913,0,0
 2026-08-03,btc-levels,claude-sonnet-4-6,0,1793,0,0
-2026-08-03,skill-freshness,claude-sonnet-4-6,10,20481,535135,64892
+2026-08-03,action-converter,claude-opus-4-7,8691,21189,1748561,114840
