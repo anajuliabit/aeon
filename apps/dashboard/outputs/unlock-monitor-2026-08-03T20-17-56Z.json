@@ -1,0 +1,139 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "unlock monitor — week of 2026-08-03"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-thesis",
+        "sep-1",
+        "heading-crisis",
+        "alert-prove",
+        "text-prove-context",
+        "sep-2",
+        "heading-trivial",
+        "table-trivial",
+        "sep-3",
+        "text-supply-read",
+        "sep-4",
+        "text-sources"
+      ]
+    },
+    "text-thesis": {
+      "type": "Text",
+      "props": {
+        "text": "$PROVE is the whole story this week. wed aug 5, $34.7M cliff — larger than the token's own $32.8M market cap. 8.6× daily volume, into a +15.9% 30d tape. fade the pump.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "heading-crisis": {
+      "type": "Heading",
+      "props": {
+        "text": "CRISIS (>2.4× daily vol)",
+        "level": "h2"
+      }
+    },
+    "alert-prove": {
+      "type": "Alert",
+      "props": {
+        "title": "$PROVE — Wed Aug 5",
+        "message": "312.5M tokens (~21% supply, $34.7M) · cliff · team · 8.6× vol · 30d +15.9% → FADE THE PUMP",
+        "type": "error"
+      }
+    },
+    "text-prove-context": {
+      "type": "Text",
+      "props": {
+        "text": "Unlock $ exceeds mcap. Weakness usually starts ~30d before, vol peaks on date, recovery window 10-14d out."
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "heading-trivial": {
+      "type": "Heading",
+      "props": {
+        "text": "TRIVIAL — big headline, small strain",
+        "level": "h2"
+      }
+    },
+    "table-trivial": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Date",
+          "Amount",
+          "Supply",
+          "Vol Mult.",
+          "30d",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "$HYPE",
+            "Thu Aug 6",
+            "433K tokens ($22.74M)",
+            "0.11%",
+            "0.07×",
+            "+21.8%",
+            "Structurally modest, $306M daily book swallows it"
+          ],
+          [
+            "$ENA",
+            "Wed Aug 5",
+            "171.88M tokens ($15.5M)",
+            "team+investors",
+            "0.11×",
+            "+14.0%",
+            "Hayes reportedly accumulating, $142M daily book"
+          ],
+          [
+            "$STO",
+            "Mon Aug 3",
+            "20.82M tokens ($760K)",
+            "2.1% total supply",
+            "0.24×",
+            "+23.4%",
+            "Absorbable"
+          ]
+        ]
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "text-supply-read": {
+      "type": "Text",
+      "props": {
+        "text": "Supply read: PROVE is the only real event this week — a cliff larger than the market cap it's landing in, into a green 30d tape. That's a fade-pump setup by the book. HYPE and ENA sound big but sit on books that eat them. Rest of the week is calendar noise on the absorption axis."
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: tokenomist=ok, defillama=fail, cryptorank=ok, dropstab=fail, coingecko=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
