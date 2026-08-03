@@ -1,43 +1,18 @@
+`SECURITY_SCAN_NOCHANGE`
+
 ## Summary
 
-I have successfully executed the **skill-security-scan** for 2026-07-27. Here's what was completed:
+Ran the skill in inline-Grep fallback mode (scan.sh sandbox-blocked — 10th consecutive scan; expected per SKILL.md step 4).
 
-### Security Scan Results
+**Result:** Byte-for-byte identical finding set to 2026-07-27. All 4 canonical `.github/workflows/aeon.yml` HIGH findings persist at L86/L94/L96/L812 (`:812` held for 7th consecutive scan, no line drift). 0 new HIGH, 0 resolved HIGH. Obfuscation sweep clean in scope.
 
-**Exit Status:** `SECURITY_SCAN_NOCHANGE` — The codebase maintains a stable security posture with zero new HIGH-severity findings.
+**Files written:**
+- `articles/security-scan-2026-08-03.md` — report with delta, per-file table, obfuscation sweep, and remediation
+- `memory/state/security-scan.json` — updated snapshot for next-run delta
+- `memory/logs/2026-08-03.md` — appended `### skill-security-scan` section
 
-**Scope:** Full corpus (232 files)
-- 191 SKILL.md files
-- 9 GitHub Actions workflows (all `${{ }}` patterns manually audited)
-- 31 repo + advisor scripts (21 + 10)
-- 2 companion scripts
+**Issues:** none filed (no NEW HIGH), none closed (no RESOLVED HIGH). INDEX.md untouched.
 
-**Findings Breakdown:**
-- **HIGH:** 4 (all persistent, workflow_dispatch-gated, low real risk)
-  - `.github/workflows/aeon.yml` lines 86, 94, 96, 812
-  - Line 812 stable for 6th consecutive scan (no line drift)
-  - All derived from `inputs.skill` → `steps.skill.outputs.name` → `steps.work.outputs.label` chain
-  - Fix blocked by self-improve rule 5 → operator direct-author only
-  
-- **MEDIUM:** 15 (code-fence downgrades, env: indirection applied)
-- **LOW:** 4 (documentation, trusted-source contexts)
+**Notification:** skipped per SKILL.md step 14 (no NEW HIGH, no RESOLVED HIGH — silence is correct when nothing has changed).
 
-**Delta Analysis:**
-- NEW HIGH: **0**
-- RESOLVED HIGH: **0**
-- PERSISTENT HIGH: **4** (identical to 2026-07-20)
-
-**Verification:**
-✅ Manual GitHub Actions injection audit (all `${{ }}` expressions in workflows)
-✅ Obfuscation sweep clean (zero-width Unicode, bidi, base64-to-shell, SSRF hosts)
-✅ Code-fence downgrades applied (~80 curl-with-secret matches in SKILL.md)
-✅ Baseline suppressions applied
-✅ ISS-017 env: indirection fix held
-✅ 2026-04-11 messages.yml remediation held across all sites
-
-**Files Modified:**
-- `articles/security-scan-2026-07-27.md` — Detailed security report
-- `memory/state/security-scan.json` — Updated state + fingerprints
-- `memory/logs/2026-07-27.md` — Logged scan execution
-
-**Notification:** SKIPPED (per SKILL.md step 14 — no NEW HIGH findings means operator not notified; report available at `articles/security-scan-2026-07-27.md` for on-demand review)
+**Follow-up:** canonical-4 aeon.yml fix remains blocked from self-improve authoring by rule 5 (no `.github/workflows/` edits from self-improve tick); needs operator direct-author PR applying the `env:` indirection template used for chain-runner ISS-017 / messages.yml 2026-04-11 incident.
