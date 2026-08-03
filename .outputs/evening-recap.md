@@ -1,26 +1,26 @@
-*Evening Recap — 2026-08-02*
-_TL;DR: productive sunday — fork-cohort + reflect shipped, sunday cluster all-clean, but ci-skills-json 3-consec failure blocks both self-improve PRs from tomorrow's batch_
+*Evening Recap — 2026-08-03*
+_TL;DR: 18-skill usepod.ai 402 cascade at 18:27Z — ISS-029 filed, 20Z batch recovered, PR #173 ships the ci-skills-json fix_
 
 *Headlines:*
-- fork-cohort — articles/fork-cohort-2026-08-02.md shipped; 211 forks, 24 POWER; Da6hkin WENT_STALE, aganoob NEW→POWER · articles/fork-cohort-2026-08-02.md
-- reflect — MEMORY.md 69L→75L, 14 patterns integrated; fleet.md + crypto.md refreshed · memory/logs/2026-08-02-reflect.md
-- github-trending — 5 picks, 4 buckets (widest window); iv-org/invidious 58× peak-spike; TencentDB first hyperscaler agent-memory primitive · .outputs/github-trending.md
-- daily-routine — 4 sub-skills clean; tape mixed-to-green; Σ-Mem paper extends [[fleet-relevance]] 17-consec · .tmp/daily-routine/msg.md
-- goal-tracker — 07:00Z slot cleared DONE; PR #165 flips ON_TRACK→NEEDS_ATTENTION at d14 · memory/goal-state.json
+- reflect + skill-health — ISS-029 filed: usepod.ai 402 hit 18 skills 18:26-27Z; memory consolidated · `memory/issues/ISS-029.md`
+- weekly-review — article shipped; 313 runs, 80.2% SR (-18.8pp WoW), 4 PRs merged (#167-170) · `articles/weekly-review-2026-08-03.md`
+- self-improve — PR #173 opened: fix ci-skills-json regen gap (unblocks #171 + #172) · https://github.com/anajuliabit/aeon/pull/173
+- skill-security-scan — security article shipped; 0 delta vs 7-27, canonical-4 HIGH stable d7 · `articles/security-scan-2026-08-03.md`
+- skill-freshness — freshness article shipped; FRESHNESS_NO_CHANGE (re-emits 8-08) · `articles/skill-freshness-2026-08-03.md`
 
 *Notable:*
-- agent-buzz — MCP-plumbing rail durable 4-consec; fleet-relevance 17→18-consec (DeFi-agent economic-outcome axis NEW)
-- security-digest — quiet-cadence d2 (0 fresh KEV); first Termux-execution infostealer in window (wacve-utils)
-- fork-skill-digest — 40/49 forks (82%) disable action-converter; 14 new fork-only skills (fleet build phase active)
-- action-converter — 5 actions avg 4.4/5; pr-ci-shared-root-cause ISS-029 candidate; ./generate-skills-json gap confirmed
+- security-digest — N-central KEV fresh (CISA due 8-06); 26-malware batch; quiet-cadence d2 breaks
+- deal-flow — 8 deals; Etched $300M @$10.3B leads; Sequoia 3-of-6 top slot
+- unlock-monitor — $PROVE 8.6× vol fade-pump signal; UNLOCK_MONITOR_DEGRADED (2 sources failed)
+- daily-routine — CAPA paper extends fleet-relevance rail d18; UAI -31.4% pole-flip d2 = [[large-cap-single-day-flip]] n=5
 
 *Decisions for tomorrow:*
-- run ./generate-skills-json + commit on #171 + #172 — blocks weekly-batch 8-03; root cause confirmed via gh run 30713133283 · https://github.com/anajuliabit/aeon/pull/171 https://github.com/anajuliabit/aeon/pull/172
-- merge PR #165 — d14 CONFLICTING, CLAUDE.md ~7d-past-touch escalation window open · https://github.com/anajuliabit/aeon/pull/165
-- weekly-review 8-03: reopen ISS-028 (PR #167 missed sub-agent surfaces; 4-consec NEGATIVE, n=18+ 12-UTC-day)
+- ISS-029 operator-gated: fund usepod.ai or flip aeon.yml gateway.provider direct→bankr/virtuals
+- merge #173 (ci-skills-json fix) → then #171 + #172 unblock; PR queue now at 4 = exit-gate active
+- rebase #165 d15 CONFLICTING before Sunday-batch window
 
 *Blockers:*
-- ISS-027 — 12:00Z 8-skill batch DARK d36 (operator-gated)
-- ISS-025 — cost-report 12% sr, d20 milestone (weekly-review 8-03 action #1)
+- cost-report — api_error sdk_opt_in_required; consec=7, sr=11% (ISS-025)
+- morning-brief — stuck 8.5h; failure event didn't update last_status=dispatched
 
-_+16 routine runs collapsed · sources: log=ok cron-state=ok_
+_+4 routine runs collapsed · sources: log=ok cron-state=ok_

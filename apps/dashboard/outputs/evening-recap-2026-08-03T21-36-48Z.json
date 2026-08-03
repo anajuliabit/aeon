@@ -1,0 +1,459 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-03",
+        "description": "TL;DR: 18-skill usepod.ai 402 cascade at 18:27Z — ISS-029 filed, 20Z batch recovered, PR #173 ships the ci-skills-json fix"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_heading",
+        "sep_1",
+        "headlines_stack",
+        "sep_2",
+        "notable_heading",
+        "sep_3",
+        "notable_stack",
+        "sep_4",
+        "decisions_heading",
+        "sep_5",
+        "decisions_stack",
+        "sep_6",
+        "blockers_heading",
+        "sep_7",
+        "blockers_stack",
+        "sep_8",
+        "routine_text"
+      ]
+    },
+    "headlines_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline_1",
+        "headline_2",
+        "headline_3",
+        "headline_4",
+        "headline_5"
+      ]
+    },
+    "headline_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1_badge",
+        "h1_text",
+        "h1_link"
+      ]
+    },
+    "h1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect + skill-health"
+      }
+    },
+    "h1_text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-029 filed: usepod.ai 402 hit 18 skills 18:26-27Z; memory consolidated"
+      }
+    },
+    "h1_link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/issues/ISS-029.md",
+        "href": "memory/issues/ISS-029.md"
+      }
+    },
+    "headline_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2_badge",
+        "h2_text",
+        "h2_link"
+      ]
+    },
+    "h2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "weekly-review"
+      }
+    },
+    "h2_text": {
+      "type": "Text",
+      "props": {
+        "text": "article shipped; 313 runs, 80.2% SR (-18.8pp WoW), 4 PRs merged (#167-170)"
+      }
+    },
+    "h2_link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/weekly-review-2026-08-03.md",
+        "href": "articles/weekly-review-2026-08-03.md"
+      }
+    },
+    "headline_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3_badge",
+        "h3_text",
+        "h3_link"
+      ]
+    },
+    "h3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve"
+      }
+    },
+    "h3_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #173 opened: fix ci-skills-json regen gap (unblocks #171 + #172)"
+      }
+    },
+    "h3_link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #173",
+        "href": "https://github.com/anajuliabit/aeon/pull/173"
+      }
+    },
+    "headline_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4_badge",
+        "h4_text",
+        "h4_link"
+      ]
+    },
+    "h4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-security-scan"
+      }
+    },
+    "h4_text": {
+      "type": "Text",
+      "props": {
+        "text": "security article shipped; 0 delta vs 7-27, canonical-4 HIGH stable d7"
+      }
+    },
+    "h4_link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/security-scan-2026-08-03.md",
+        "href": "articles/security-scan-2026-08-03.md"
+      }
+    },
+    "headline_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5_badge",
+        "h5_text",
+        "h5_link"
+      ]
+    },
+    "h5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness"
+      }
+    },
+    "h5_text": {
+      "type": "Text",
+      "props": {
+        "text": "freshness article shipped; FRESHNESS_NO_CHANGE (re-emits 8-08)"
+      }
+    },
+    "h5_link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/skill-freshness-2026-08-03.md",
+        "href": "articles/skill-freshness-2026-08-03.md"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4"
+      ]
+    },
+    "notable_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n1_badge",
+        "n1_text"
+      ]
+    },
+    "n1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest"
+      }
+    },
+    "n1_text": {
+      "type": "Text",
+      "props": {
+        "text": "N-central KEV fresh (CISA due 8-06); 26-malware batch; quiet-cadence d2 breaks"
+      }
+    },
+    "notable_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2_badge",
+        "n2_text"
+      ]
+    },
+    "n2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "deal-flow"
+      }
+    },
+    "n2_text": {
+      "type": "Text",
+      "props": {
+        "text": "8 deals; Etched $300M @$10.3B leads; Sequoia 3-of-6 top slot"
+      }
+    },
+    "notable_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n3_badge",
+        "n3_text"
+      ]
+    },
+    "n3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "unlock-monitor"
+      }
+    },
+    "n3_text": {
+      "type": "Text",
+      "props": {
+        "text": "$PROVE 8.6× vol fade-pump signal; UNLOCK_MONITOR_DEGRADED (2 sources failed)"
+      }
+    },
+    "notable_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4_badge",
+        "n4_text"
+      ]
+    },
+    "n4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine"
+      }
+    },
+    "n4_text": {
+      "type": "Text",
+      "props": {
+        "text": "CAPA paper extends fleet-relevance rail d18; UAI -31.4% pole-flip d2 = [[large-cap-single-day-flip]] n=5"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision_1",
+        "decision_2",
+        "decision_3"
+      ]
+    },
+    "decision_1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-029 operator-gated: fund usepod.ai or flip aeon.yml gateway.provider direct→bankr/virtuals",
+        "variant": "body"
+      }
+    },
+    "decision_2": {
+      "type": "Text",
+      "props": {
+        "text": "merge #173 (ci-skills-json fix) → then #171 + #172 unblock; PR queue now at 4 = exit-gate active",
+        "variant": "body"
+      }
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "rebase #165 d15 CONFLICTING before Sunday-batch window",
+        "variant": "body"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocker_1",
+        "blocker_2"
+      ]
+    },
+    "blocker_1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "api_error sdk_opt_in_required; consec=7, sr=11% (ISS-025)",
+        "type": "error"
+      }
+    },
+    "blocker_2": {
+      "type": "Alert",
+      "props": {
+        "title": "morning-brief",
+        "message": "stuck 8.5h; failure event didn't update last_status=dispatched",
+        "type": "error"
+      }
+    },
+    "sep_8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "routine_text": {
+      "type": "Text",
+      "props": {
+        "text": "+4 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
