@@ -1,19 +1,17 @@
 ## Summary
 
-**btc-levels** ran clean. No notifications sent.
+**btc-levels run — 2026-08-04T04:32Z**
 
-**Data fetched (CoinGecko, 2026-08-04 01:11 UTC):**
-- Spot: $63,404.52
-- 2026-08-03 daily close: $63,465.20
+| | |
+|---|---|
+| Spot | $63,777.87 |
+| Daily close (2026-08-03) | $63,465.20 |
+| Alerts fired | none |
 
 **Level checks:**
-| Level | Threshold | Result |
-|-------|-----------|--------|
-| Leverage review | spot ≤ $45,000 | clear — spot $18,404 above |
-| Breakdown | close < $60,500 | clear — close $63,465 above |
-| Reclaim $63,500 | spot ≥ $63,500 | miss — spot $95.48 below; flag already set true |
-| Reclaim $65,900 | spot ≥ $65,900 | clear — spot below |
+- **Leverage-review (≤$45k):** clear — spot $63.8k, no action
+- **Breakdown (<$60.5k close):** clear — close $63.5k is well above threshold
+- **Reclaim $63.5k:** already alerted in a prior run (flag set); no re-alert
+- **Reclaim $65.9k:** not reached yet — watching
 
-BTC is holding just under the $63,500 first stabilization level. The reclaim flag stays armed from a prior cycle; re-arm (reset to false) only triggers on a full round-trip below $60,500.
-
-**Files updated:** `memory/btc-levels-state.json`, `memory/logs/2026-08-04.md` — committed to `main`.
+No notification sent (quiet run). State and log committed.
