@@ -1,26 +1,24 @@
-*Evening Recap — 2026-08-03*
-_TL;DR: 18-skill usepod.ai 402 cascade at 18:27Z — ISS-029 filed, 20Z batch recovered, PR #173 ships the ci-skills-json fix_
+*Evening Recap — 2026-08-04*
+_TL;DR: fleet sealed post-ISS-029, ISS-030 formally filed — only cost-report is dark, and it needs a config fix, not a transient._
 
 *Headlines:*
-- reflect + skill-health — ISS-029 filed: usepod.ai 402 hit 18 skills 18:26-27Z; memory consolidated · `memory/issues/ISS-029.md`
-- weekly-review — article shipped; 313 runs, 80.2% SR (-18.8pp WoW), 4 PRs merged (#167-170) · `articles/weekly-review-2026-08-03.md`
-- self-improve — PR #173 opened: fix ci-skills-json regen gap (unblocks #171 + #172) · https://github.com/anajuliabit/aeon/pull/173
-- skill-security-scan — security article shipped; 0 delta vs 7-27, canonical-4 HIGH stable d7 · `articles/security-scan-2026-08-03.md`
-- skill-freshness — freshness article shipped; FRESHNESS_NO_CHANGE (re-emits 8-08) · `articles/skill-freshness-2026-08-03.md`
+- skill-health — ISS-029 resolved (20/20 clean dispatches post-20:14Z); ISS-030 filed for cost-report `sdk_opt_in_required`, consec=19 sr=0.09, blind since 7-27 · `memory/issues/ISS-030.md`
+- security-digest — 136-pkg malware batch (#2 memory-window); keyv/cacheable ecosystem-core hit (first top-100-npm attack); Flowise RCE+SSRF double-CVE w/ PoC; sequelize CVSS 9.8+PoC · `.tmp/security-digest/msg.md`
+- reflect — MEMORY.md 62L→84L, 5 new rails absorbed, ISS-029/030 absorbed · `memory/logs/2026-08-04-reflect.md`
+- github-trending — airllm 45× ratio spike (#2 memory-window); [[deepseek-primitive-cluster]] n=2 debut (antirez/ds4 + Reasonix same slate) · `.tmp/github-trending/msg.md`
 
 *Notable:*
-- security-digest — N-central KEV fresh (CISA due 8-06); 26-malware batch; quiet-cadence d2 breaks
-- deal-flow — 8 deals; Etched $300M @$10.3B leads; Sequoia 3-of-6 top slot
-- unlock-monitor — $PROVE 8.6× vol fade-pump signal; UNLOCK_MONITOR_DEGRADED (2 sources failed)
-- daily-routine — CAPA paper extends fleet-relevance rail d18; UAI -31.4% pole-flip d2 = [[large-cap-single-day-flip]] n=5
+- token-alert — 0/4 alerts; GITLAWB +9.62% 24h sub-threshold; WELL vol-cliff regime rewrites; CG clean-day d41
+- agent-buzz — first fire since 8-02 (ISS-029 gap); MCP-shipping-cluster 3-of-5; [[fleet-relevance agent-thesis]] → 20-consec-day
+- morning-brief — ISS-029 continuity test PASSED; cost-report distinct-signature isolated 07:24Z
 
 *Decisions for tomorrow:*
-- ISS-029 operator-gated: fund usepod.ai or flip aeon.yml gateway.provider direct→bankr/virtuals
-- merge #173 (ci-skills-json fix) → then #171 + #172 unblock; PR queue now at 4 = exit-gate active
-- rebase #165 d15 CONFLICTING before Sunday-batch window
+- trigger CI on PR #173 or merge — one lift unblocks #171/#172 at 8-10 Sunday-batch
+- fix ISS-030: drop `model: claude-sonnet-4-6` on cost-report (aeon.yml:276) or swap Haiku — 8d blind
+- confirm ISS-029 RESOLVED with operator (billing status; INDEX.md still shows open)
+- rebase PR #165 d16 CONFLICTING — d21 hard-escalation at T-5
 
 *Blockers:*
-- cost-report — api_error sdk_opt_in_required; consec=7, sr=11% (ISS-025)
-- morning-brief — stuck 8.5h; failure event didn't update last_status=dispatched
+- cost-report — sdk_opt_in_required, consec=19, sr=0.09, last success 7-27 · ISS-030
 
-_+4 routine runs collapsed · sources: log=ok cron-state=ok_
+_+8 routine runs collapsed (btc-levels ×4, heartbeat ×2, goal-tracker, action-converter) · sources: log=ok cron-state=ok_

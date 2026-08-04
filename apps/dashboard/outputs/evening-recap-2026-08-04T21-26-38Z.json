@@ -1,0 +1,446 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-04",
+        "description": "Fleet status update and priority actions"
+      },
+      "children": [
+        "tldr",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "blockers_section",
+        "sep5",
+        "routine_note"
+      ]
+    },
+    "tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: fleet sealed post-ISS-029, ISS-030 formally filed — only cost-report is dark, and it needs a config fix, not a transient.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_title",
+        "headline1",
+        "headline2",
+        "headline3",
+        "headline4"
+      ]
+    },
+    "headlines_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "headline1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1_badge",
+        "h1_text",
+        "h1_link"
+      ]
+    },
+    "h1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "h1_text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-029 resolved (20/20 clean dispatches post-20:14Z); ISS-030 filed for cost-report sdk_opt_in_required, consec=19 sr=0.09, blind since 7-27",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h1_link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/issues/ISS-030.md",
+        "href": "memory/issues/ISS-030.md"
+      },
+      "children": []
+    },
+    "headline2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2_badge",
+        "h2_text",
+        "h2_link"
+      ]
+    },
+    "h2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "h2_text": {
+      "type": "Text",
+      "props": {
+        "text": "136-pkg malware batch (#2 memory-window); keyv/cacheable ecosystem-core hit (first top-100-npm attack); Flowise RCE+SSRF double-CVE w/ PoC; sequelize CVSS 9.8+PoC",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h2_link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/security-digest/msg.md",
+        "href": ".tmp/security-digest/msg.md"
+      },
+      "children": []
+    },
+    "headline3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3_badge",
+        "h3_text",
+        "h3_link"
+      ]
+    },
+    "h3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "h3_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md 62L→84L, 5 new rails absorbed, ISS-029/030 absorbed",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h3_link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/logs/2026-08-04-reflect.md",
+        "href": "memory/logs/2026-08-04-reflect.md"
+      },
+      "children": []
+    },
+    "headline4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4_badge",
+        "h4_text",
+        "h4_link"
+      ]
+    },
+    "h4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "h4_text": {
+      "type": "Text",
+      "props": {
+        "text": "airllm 45× ratio spike (#2 memory-window); [[deepseek-primitive-cluster]] n=2 debut (antirez/ds4 + Reasonix same slate)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h4_link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/github-trending/msg.md",
+        "href": ".tmp/github-trending/msg.md"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_title",
+        "notable1",
+        "notable2",
+        "notable3"
+      ]
+    },
+    "notable_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "notable1": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — 0/4 alerts; GITLAWB +9.62% 24h sub-threshold; WELL vol-cliff regime rewrites; CG clean-day d41",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable2": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — first fire since 8-02 (ISS-029 gap); MCP-shipping-cluster 3-of-5; [[fleet-relevance agent-thesis]] → 20-consec-day",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable3": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief — ISS-029 continuity test PASSED; cost-report distinct-signature isolated 07:24Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_title",
+        "decision1",
+        "decision2",
+        "decision3",
+        "decision4"
+      ]
+    },
+    "decisions_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "decision1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1_badge",
+        "d1_text"
+      ]
+    },
+    "d1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #173",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "d1_text": {
+      "type": "Text",
+      "props": {
+        "text": "trigger CI on PR #173 or merge — one lift unblocks #171/#172 at 8-10 Sunday-batch",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2_badge",
+        "d2_text"
+      ]
+    },
+    "d2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-030",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "d2_text": {
+      "type": "Text",
+      "props": {
+        "text": "fix ISS-030: drop model: claude-sonnet-4-6 on cost-report (aeon.yml:276) or swap Haiku — 8d blind",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d3_badge",
+        "d3_text"
+      ]
+    },
+    "d3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-029",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d3_text": {
+      "type": "Text",
+      "props": {
+        "text": "confirm ISS-029 RESOLVED with operator (billing status; INDEX.md still shows open)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d4_badge",
+        "d4_text"
+      ]
+    },
+    "d4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #165",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "d4_text": {
+      "type": "Text",
+      "props": {
+        "text": "rebase PR #165 d16 CONFLICTING — d21 hard-escalation at T-5",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "blockers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers_title",
+        "blocker1"
+      ]
+    },
+    "blockers_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "blocker1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "sdk_opt_in_required, consec=19, sr=0.09, last success 7-27 · ISS-030",
+        "type": "error"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "routine_note": {
+      "type": "Text",
+      "props": {
+        "text": "+8 routine runs collapsed (btc-levels ×4, heartbeat ×2, goal-tracker, action-converter) · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
