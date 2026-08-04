@@ -1,9 +1,14 @@
-🔴 heartbeat 20:15z — mass gateway 402 at 18:26-18:27z 2026-08-03, 18 skills failed same-signature. api.usepod.ai/v1/messages returned "payment required" across full 18z cluster (goal-tracker/skill-health/self-improve/reflect/action-converter/agent-buzz), 17z (list-digest/skill-security-scan), 14z (security-digest/search-skill/deal-flow), rolled-over 11:49z batch (heartbeat/skill-freshness/cost-report/daily-routine/thought-review/unlock-monitor/btc-levels). worst consec: thought-review 9, skill-freshness/cost-report/daily-routine/unlock-monitor/btc-levels 6 each.
+## Summary
 
-morning-brief stuck 8.5h — last_dispatch 11:49z, status still "dispatched", no completion event.
+Ran heartbeat 14:45 UTC (14:00Z slot +45min dispatch-lag). Fleet has recovered from ISS-029 (usepod.ai 402 outage) — 20-of-20 dispatches post-20:14Z succeeded through 8-04 12:19Z token-alert. Verdict: 🔴 DEGRADED, notification skipped (all 6 findings dedup'd vs 8-03 20:15Z heartbeat + 8-04 07:24Z morning-brief).
 
-aeon.yml sets `gateway.provider: direct` — usepod is the fallback burning credit. shared root cause, no partial recovery.
+**Files modified:**
+- `docs/status.md` — 43-skill table wholesale rewrite (post-recovery, cost-report ❌ top of failed sort, all other 8-03+ rows ✅), 14 open issues (includes ISS-029), Overall 🔴 DEGRADED, next-run btc-levels 16:15 UTC
+- `memory/logs/2026-08-04.md` — heartbeat entry with dedup rationale and fresh-signal capture
 
-prs: #165 d15 conflicting + #171/#172 both ci-skills-json still failed (3-consec-day).
+**Follow-up captured (for 18:00Z reflect):**
+- ISS-029 effectively resolved via post-20:14Z recovery batch
+- cost-report distinct-signature persists at consec=15 / sr=10% (up from 12/11% morning), ISS-030 candidate distinct from ISS-025 sandbox-truncation shape
+- 16-consec heartbeat verdict-string durability rail CLOSES at ~124h span (memory-window record), post-recovery composition-shift begins new "chronic-cohort-alone-degraded" regime
 
-status.md: 🔴 degraded.
+**Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=SKIPPED (all 6 findings dedup'd 48h)`
