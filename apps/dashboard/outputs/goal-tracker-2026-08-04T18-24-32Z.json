@@ -1,0 +1,235 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-04"
+      },
+      "children": [
+        "summary-heading",
+        "summary-stats",
+        "overall-badge",
+        "sep0",
+        "blocked-section",
+        "sep1",
+        "on-track-section",
+        "sep2",
+        "sources-section"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-risk",
+        "stat-attention",
+        "stat-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "8"
+      }
+    },
+    "stat-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "2"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "6"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "overall-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Overall: flat",
+        "variant": "outline"
+      }
+    },
+    "sep0": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3",
+        "blocked-item-4",
+        "blocked-item-5",
+        "blocked-item-6"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "PR queue at 3 through 8-03 morning — waiting on operator weekly-batch (next 8-09 Sun) + ci-skills-json shared FAILURE since 2026-07-19 (#165 d16 CONFLICTING, #171 ~4d, #172 ~3d, +#173 fresh 8-03 20:17Z). Action: merge PR #173 to clear ci-skills-json check on #171/#172 for 8-09 Sunday batch"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "ISS-025 hand-off T+5 day-21 SLIPPED — waiting on operator direct-author dangerouslyDisableSandbox pivot at aeon.yml:479-495 since 2026-06-22 (cost-report sr slipped 11% → 10%, 7/73). Action: ask operator to author dangerouslyDisableSandbox pivot at aeon.yml:479-495"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Operator on-chain config day-59 — waiting on ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets + on-chain-watches.yml pool/position entries since 2026-06-07. Action: ask operator to add ALCHEMY_API_KEY + ETHERSCAN_API_KEY to GitHub Actions secrets"
+      }
+    },
+    "blocked-item-4": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "ISS-028 kill-test workaround-chain n=22+ durable — waiting on PR #167 fix-scope extension to sub-agent/list-digest/skill-graph/append/URL-encoded call-sites since 2026-07-30 merge. Action: author follow-up PR extending PR #167 bash-redirect fix to remaining call-sites"
+      }
+    },
+    "blocked-item-5": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "12:00 UTC batch DARK day-38 — waiting on ISS-027 root-cause fix since 2026-06-28 21:00Z (post-ISS-029 recovery did NOT thaw this cluster — separate cause). Action: investigate why 12:00Z 8-skill cluster stayed frozen post ISS-029 recovery"
+      }
+    },
+    "blocked-item-6": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "priorities.md 61d stale — waiting on operator refresh (no automated write path per thought-review spec) since 2026-06-04. Action: ask operator to refresh vault/priorities.md at next weekly-review"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item-1",
+        "on-track-item-2"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "on-track-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "P0 ISS-029 fleet-wide usepod.ai 402 Payment Required 8-03 — 0d idle, ~120 activity/14d (new — 20-of-20 post-20:14Z dispatches recovered, INDEX status still open pending formal close)",
+        "variant": "body"
+      }
+    },
+    "on-track-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "ci-skills-json FAILURE 3-consec-day formal-pattern — 0d idle, ~80 activity/14d (new — PR #173 targets root cause, awaits 8-09 Sunday batch)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok(empty), cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

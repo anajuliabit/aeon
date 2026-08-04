@@ -1,84 +1,90 @@
 {
-  "run_at": "2026-08-03T18:45:00Z",
+  "run_at": "2026-08-04T15:30:00Z",
   "goals": {
+    "iss-029-fleet-wide-usepod-402": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 120,
+      "last_activity_date": "2026-08-04",
+      "note": "NEW goal since prior run. Filed by reflect 8-03 20:14Z (ISS-029.md status=open, category=missing-secret, 18 affected skills). 8-04 heartbeat 14:45Z: '20-of-20 dispatches post-20:14Z all succeeded' + 'ISS-029 effectively resolved'. Per skill constraint 'prefer false negatives' — NOT marked DONE because INDEX.md still lists status:open with resolved_at:null; no formal PR merge. Activity ~120 in 14d (all concentrated in 8-03 evening + 8-04). Trend: new (no prior snapshot record)."
+    },
     "iss-028-kill-test-workaround-chain": {
       "status": "BLOCKED",
-      "activity_count_14d": 351,
-      "last_activity_date": "2026-08-02",
-      "note": "Day 5 NEGATIVE kill-test streak (7-31 → 8-02 confirmed; 8-03 weekly-review window opens for root-cause reopen). Workaround-chain n=18+ durable across 12-UTC-day span 7-22 → 8-02. Activity 197→351 = +78% (crosses +50% = improving activity, status flat BLOCKED). Blocker unchanged: PR #167 fix-scope narrow (heartbeat/security-digest only) missed sub-agent + list-digest + skill-graph + append + URL-encoded surfaces. Weekly-review 8-03 T-0 = root-cause reopen catch."
+      "activity_count_14d": 330,
+      "last_activity_date": "2026-08-04",
+      "note": "Prior BLOCKED holds. Workaround-chain n=22+ across 13-UTC-day span 7-22 → 8-04 (heartbeat 14:45Z advanced from n=21+ via github-trending 10:14Z call-site NEGATIVE). Blocker unchanged: PR #167 fix-scope narrow (heartbeat/security-digest only) missed sub-agent + list-digest + skill-graph + append + URL-encoded surfaces. Activity 351 → ~330 = -6% (within ±25% flat). Trend: flat."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 418,
-      "last_activity_date": "2026-08-02",
-      "note": "Day 37 today (d36→d37 UTC-roll). 8-skill 6-28 cluster (defi-overview/token-pick/token-movers/narrative-tracker/market-context-refresh/fleet-control/on-chain-monitor/defi-monitor) frozen since 2026-06-28 21:00Z. 41st consec clean CG day expected via 12:00Z token-alert fire. Activity 209→418 = +100% (crosses +50% = improving activity, status flat BLOCKED). ISS-027 signature per-skill blockage remains — no scheduler-wide unblock signal."
+      "activity_count_14d": 300,
+      "last_activity_date": "2026-08-04",
+      "note": "Prior BLOCKED holds. Day-38 today (rolled from d37 at UTC midnight). 8-04 heartbeat 14:45Z: 'ISS-027 12:00 UTC batch DARK day-38 — Post-ISS-029 recovery did NOT thaw the 12:00Z cluster — separate cause.' 8-skill cluster still frozen since 2026-06-28 21:00Z. CG clean-day streak d41 continuation (8-04 12:19Z token-alert clean). Activity 418 → ~300 = -28% (borderline; same status BLOCKED). Trend: flat."
     },
-    "iss-025-capture-step-pr-hand-off": {
+    "iss-025-hand-off": {
       "status": "BLOCKED",
-      "activity_count_14d": 494,
-      "last_activity_date": "2026-08-02",
-      "note": "T+5 day-20 SLIPPED past 2026-07-30 T-0 deadline (rolls d19→d20 today at Sunday-batch window). Cost-report sr=12% (7/58) durable weakest chronic-failure. 15-consec formal-tick heartbeat verdict-string across ~119h span = memory-window-longest chronic-degraded stretch record. Sole reliable unblock: operator direct-author dangerouslyDisableSandbox pivot at .github/workflows/aeon.yml:479-495. Activity 431→494 = +15% flat within ±25%. Weekly-review 8-03 T-0 = natural catch, rolls to d21 milestone next Sunday."
+      "activity_count_14d": 400,
+      "last_activity_date": "2026-08-04",
+      "note": "Prior BLOCKED holds. T+5 day-21 today (rolled from d20). Cost-report sr slips further 12% → 11% → 10% (7/73) via fresh 8-04 12:15Z failure with distinct sdk_opt_in_required signature (ISS-030 candidate, non-usepod, non-sandbox-truncation shape). Sole reliable unblock unchanged: operator direct-author dangerouslyDisableSandbox pivot at aeon.yml:479-495. Activity 494 → ~400 = -19% (within ±25%). Trend: flat."
     },
-    "pr-165-past-gate-conflicting": {
-      "status": "NEEDS_ATTENTION",
+    "pr-queue-at-3-through-8-03-morning": {
+      "status": "BLOCKED",
       "activity_count_14d": 280,
-      "last_activity_date": "2026-08-02",
-      "note": "PR #165 docs(skill-graph) rolls d14→d15 today = 7d-past-touch CLAUDE.md escalation window OPENS TODAY. gh pr list confirms OPEN + updatedAt 2026-07-19T17:39:48Z (no touch since creation, CONFLICTING). Sole open past-gate PR in this window. Judgment override NEEDS_ATTENTION despite high mention volume: activity is meta-flag not actual PR touch, and today's escalation is the semantic signal. Activity 122→280 = +129% (crosses +50% = improving activity, status flat). Weekly-batch 8-03 window is the ship catch."
+      "last_activity_date": "2026-08-04",
+      "note": "NEW combined goal (prior split: pr-165-past-gate-conflicting + pr-171-fresh-self-improve both NEEDS_ATTENTION). Queue at 4 as of 8-04 (was 3 through 8-03 morning): #165 d16 CONFLICTING (7-19, docs skill-graph); #171 ~4d (7-31, github-trending 12-17 cap, ci-skills-json FAILURE 3-consec); #172 ~3d (8-01, daily-routine XAI prefetch, ci-skills-json FAILURE 3-consec); #173 fresh (8-03 20:17Z, claude require skills.json regen — targets shared ci-skills-json root cause on #171/#172). Blocker: operator weekly-batch cadence (next window 8-09 Sunday) + ci-skills-json shared FAILURE blocking #171/#172. Trend: new (goal composition changed)."
     },
-    "pr-171-fresh-self-improve": {
-      "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 271,
-      "last_activity_date": "2026-08-02",
-      "note": "PR #171 (7-31 18:07Z `fix(github-trending): reflect observed 12-17 candidate cap, not ~25`) at ~64h today. Companion PR #172 (8-01 18:42Z daily-routine XAI prefetch fix) at ~44h — both share ci-skills-json FAILURE 3-consec-day (shared-root-cause formal-pattern). Self-improve queue exit-gate at 2-of-3. NEEDS_ATTENTION: CI shared-root-cause blocks merge readiness for 8-03 weekly-batch. Activity 25→271 = +984% (github-trending keyword generic + PR #171 focused mention volume). Weekly-review 8-03 T-1 root-cause investigation ask."
+    "ci-skills-json-failure-3-consec-day-formal-pattern": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 80,
+      "last_activity_date": "2026-08-04",
+      "note": "NEW goal since prior run. Root cause identified 8-02 via `gh run view 30713133283 --log-failed`: self-improve edits SKILL.md without running `./generate-skills-json`. PR #173 fresh 8-03 20:17Z targets exactly this: 'fix(claude): require skills.json regen when editing SKILL.md'. Formal-pattern threshold (3-consec-day) crossed 8-02. If #173 merges Sunday-batch 8-09, unblocks #171/#172. Activity ~80 in 14d. Trend: new."
     },
-    "operator-on-chain-config": {
+    "operator-on-chain-config-day-58": {
       "status": "BLOCKED",
-      "activity_count_14d": 153,
-      "last_activity_date": "2026-08-02",
-      "note": "Day 58 today (d57→d58 UTC-roll). defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required — no automated unblock path. Activity 65→153 = +135% (crosses +50% = improving activity, status flat BLOCKED)."
+      "activity_count_14d": 170,
+      "last_activity_date": "2026-08-04",
+      "note": "Prior BLOCKED holds. Day-59 today (rolled from d58). defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Blocker phrase 'blocked' paired with defi-monitor/on-chain keywords 36+ times across 24 files in 14d. Operator action required — no automated unblock path. Activity 153 → ~170 = +11% (within ±25%). Trend: flat."
     },
-    "priorities-md-stale": {
-      "status": "AT_RISK",
-      "activity_count_14d": 176,
-      "last_activity_date": "2026-08-02",
-      "note": "priorities.md last reviewed 2026-06-04 = 60d today (59d→60d UTC-roll per thought-review one-liner nudge). Judgment override AT_RISK despite high mention count: activity is meta-flag-nudges not actual refresh work (blocker unfixed >21d, no remedial signal). Operator-owned refresh (no automated write path per thought-review skill spec). Vault inbox 43d cold streak (last real capture 2026-06-21T08:32Z). Activity 165→176 = +7% flat within ±25%."
+    "priorities-md-60d-stale": {
+      "status": "BLOCKED",
+      "activity_count_14d": 80,
+      "last_activity_date": "2026-08-04",
+      "note": "STATUS SHIFT AT_RISK → BLOCKED. Prior run applied 'Judgment override AT_RISK' note; this run applies mechanical rule (blocker_signal paired 3 times in 14d window: 7-24 + 7-26 logs). Priorities.md last reviewed 2026-06-04 = 61d today (rolled from d60). Vault inbox 43d cold streak. Blocker: no automated write path per thought-review skill spec — operator-owned refresh. Activity 176 → ~80 = -55% (>50% drop = degrading per activity rule). Trend: degrading (status reclassified to off-ladder BLOCKED + activity fell ≥50%)."
     }
   },
   "recently_cleared": {
     "07-utc-scheduler-slot-degraded": {
       "status": "DONE",
       "completed_at": "2026-08-02",
-      "note": "Deciding-test PASSED 8-02: morning-brief 07:22Z (+22min) + daily-routine 07:37Z (+37min) + thought-review 07:23Z (+23min) all in-band vs 8-01's severely-lagged +96-97min. Per morning-brief 07:22Z + heartbeat 09:30Z verdicts: 07:00Z-slot 2-of-3-day-degraded regime rewrites to 3-of-4-day-intermittent-recovered; ISS-file escalation gate discharges. Fresh follow-through beyond prior 7-31 clear."
+      "note": "Kept for continuity — cleared in prior run 8-03."
     },
     "07:00-utc-scheduler-slot-miss": {
       "status": "DONE",
       "completed_at": "2026-07-31",
-      "note": "Superseded by 07-utc-scheduler-slot-degraded 8-02 DONE (deciding-test PASSED). Kept for continuity."
+      "note": "Superseded by 07-utc-scheduler-slot-degraded 8-02 DONE. Kept for continuity."
     },
     "iss-027-028-doc-gap": {
       "status": "DONE",
       "completed_at": "2026-07-30",
-      "note": "24d load-bearing gap closed by reflect skill 7-30 18:22Z. ISS-027.md + ISS-028.md filed; INDEX.md 11→13 open. Pointer retained across runs."
+      "note": "Kept for continuity."
     },
     "pr-167-bash-redirect-fix": {
       "status": "DONE_INCOMPLETE_FIX",
       "completed_at": "2026-07-30",
-      "note": "PR #167 MERGED 2026-07-30 23:37:20Z. Kill-test 7-31 + 8-01 + 8-02 sub-agent probes confirm bash `>` + `-o` still blocked at daily-routine hn-digest + list-digest + skill-graph call-sites. Workaround-chain n=18+ durable across 12-UTC-day span 7-22→8-02. PR #167 fix propagated to heartbeat/security-digest surface but NOT sub-agent surfaces. Now tracked as active Current Goal (iss-028-kill-test-workaround-chain)."
+      "note": "Kept for continuity — now tracked as iss-028-kill-test-workaround-chain."
     },
     "self-improve-queue-exit-gate": {
       "status": "DONE",
       "completed_at": "2026-07-28",
-      "note": "3-PR gate resolved 7-28 22:36Z. Kept for continuity."
+      "note": "Kept for continuity."
     },
     "h-unlock": {
       "status": "DONE",
       "completed_at": "2026-07-26",
-      "note": "T+0 event-day 7-25 confirmed SPURIOUS. Verdict locked. Kept for continuity."
+      "note": "Kept for continuity."
     },
     "three-self-improve-prs-conflicting": {
       "status": "DONE",
       "completed_at": "2026-07-20",
-      "note": "Triple-PR queue cleared 7-20. Kept for continuity."
+      "note": "Kept for continuity."
     }
   }
 }
