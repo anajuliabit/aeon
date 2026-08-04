@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-03*
-Shape: file usepod P0, graft regen-step, rebase PR#165, raise ISS-025 d20, advance ISS-028 d5
+*5 Actions — 2026-08-04*
+Shape: open ISS-030 P0, verify PR#173 ci, debug cost-report SDK, close ISS-029, log deepseek n=2
 
-1. file `memory/issues/ISS-030.md` for fleet-wide usepod.ai HTTP-402 outage — 11+ skills consec_failures≥3 at 18:27Z burst (thought-review=9, skill-freshness/cost-report/unlock-monitor/btc-levels/daily-routine=6, security-digest=5, search-skill=4, deal-flow/self-improve/heartbeat=3), signature `Payment required. Retry with X-PAYMENT or PAYMENT-SIGNATURE header`
-why: fresh dominant P0 today, no ISS-file exists, operator-gated billing/proxy path unclear until surfaced
-done: `memory/issues/ISS-030.md` written with YAML frontmatter (severity=critical, category=missing-secret), `INDEX.md` open-table advances 13 → 14
-loop: file-iss-030-usepod-402-outage
+1. Open memory/issues/ISS-030.md for cost-report `sdk_opt_in_required` signature (severity=critical, category=config); add row to INDEX.md.
+why: fleet-worst chronic sr=0.10 (7/73) consec=15, distinct non-usepod/non-sandbox signature isolated 8-04 12:15Z, no ISS-file yet.
+done: ISS-030.md exists with YAML frontmatter + INDEX.md Open table gains row.
+loop: iss-030-cost-report-sdk-opt-in
 
-2. graft `./generate-skills-json` regen step into `skills/self-improve/SKILL.md` commit process — closes ci-skills-json 3-consec-day formal-pattern on PR #171 + #172
-why: root cause `skills.json stale` identified 8-02 via `gh run view 30713133283 --log-failed`; systemic fix unblocks Sunday-batch merge window opening today
-done: `skills/self-improve/SKILL.md` diff committed to a fix branch, PR opened against main, `gh pr checks` on #171/#172 rerun once merged
-loop: fix-ci-skills-json-shared-root-cause
+2. Run `gh pr checks 173` and `gh pr view 173 --json mergeable`; if ci-skills-json green, annotate #173 body ready for 8-09 Sunday-batch merge.
+why: PR #173 targets shared ci-skills-json root cause on #171+#172 — merging unblocks 3-PR queue via one lift.
+done: `gh pr checks 173` output logged; if passing, ready-for-batch comment added.
+loop: verify-pr-173-ci-status
 
-3. rebase PR #165 `docs(skill-graph): shared_state 21→27` against main to resolve `docs/skill-graph.md` merge conflict
-why: d15 CONFLICTING sole survivor past-gate cohort, CLAUDE.md ~7d-past-touch escalation window open, Sunday-batch weekly-review 8-03 sole shot before d16 rolls
-done: `gh pr view 165` shows MERGEABLE and green on required checks
-loop: rebase-pr-165-conflict-d15
+3. Grep for cost-report skill invocation in .github/workflows/ + skills/cost-report/SKILL.md; wire Claude Code SDK opt-in flag/env to clear `fast_mode_disabled_reason: sdk_opt_in_required`.
+why: identifies root fix for fleet-worst chronic-failure — 8-04 12:15Z fresh signature exposed the config gap distinct from ISS-025 truncation shape.
+done: aeon.yml or cost-report SKILL.md diff written, or PR opened with the config change.
+loop: debug-cost-report-sdk-config
 
-4. raise ISS-025 T+5 day-20 addendum block in `memory/issues/ISS-025.md` — cost-report weakest chronic-failure sr=11% (7/64) durable, 20d slip past 7-30 deadline
-why: hand-off milestone rolls today Sunday-batch, weekly-review 8-03 action #1, operator-author still needed against `.github/workflows/aeon.yml:479-495`
-done: `memory/issues/ISS-025.md` appended with `## T+5 d20 update — 2026-08-03` block naming sr regression + weekly-batch escalation
-loop: raise-iss-025-t-plus-5-d20
+4. Move ISS-029 from Open to Resolved in memory/issues/INDEX.md; set resolved_at=2026-08-04 in ISS-029.md, fix_pr="operator usepod payment restored".
+why: 20-of-20 dispatches post-8-03 20:14Z clean through 8-04 12:17Z btc-levels — recovery confirmed durable.
+done: INDEX.md row moved to Resolved table + ISS-029.md frontmatter updated.
+loop: close-iss-029-recovery
 
-5. advance ISS-028 kill-test d5 block in `memory/issues/ISS-028.md` — 8-02 kill-test d3+d4 NEGATIVE at 3 sub-agent + call-site probes, workaround-chain n=18+ durable 12-UTC-day span 7-22 → 8-02, 4-consec-day formal-pattern
-why: reflect 8-03 (Sunday-batch) reopens root-cause investigation into PR #167 fix-scope narrowness; pre-populated evidence block feeds that
-done: `memory/issues/ISS-028.md` appended with `## Kill-test d5 — 2026-08-03` block naming today's blocked call-sites (skill-graph 5-blocked-form fingerprint recompute / list-digest `>>` append / daily-routine hn-digest sub-agent)
-loop: advance-iss-028-kill-test-d5
+5. Append `[[deepseek-primitive-cluster]] rail candidate n=2 8-04` to memory/MEMORY.md recurring-patterns — antirez/ds4 (Redis creator DeepSeek local inference C) + esengine/DeepSeek-Reasonix (DeepSeek-native coding agent Go).
+why: first same-slate 2-DeepSeek-primitive appearance in memory-window github-trending 8-04 10:14Z; watch for n=3 tomorrow.
+done: MEMORY.md gains one line under recurring-patterns block.
+loop: promote-deepseek-cluster-rail
 
-sources: memory=75L logs=8d topics=~20 prs=3 cron_failing=11+consec-3 mode=OK
+sources: memory=82 logs=8 topics=20 prs=4 cron_failing=1 mode=OK
