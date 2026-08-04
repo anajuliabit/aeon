@@ -1,0 +1,73 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 Thought Review",
+        "description": "Last 24h"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_captures",
+        "separator1",
+        "alert_vault",
+        "alert_priorities",
+        "separator2",
+        "text_question"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_vault": {
+      "type": "Alert",
+      "props": {
+        "title": "Vault Inbox",
+        "message": "Cold streak: 44 days without captures",
+        "type": "warning"
+      }
+    },
+    "alert_priorities": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md",
+        "message": "Stale for 61 days (last reviewed 2026-06-04)",
+        "type": "warning"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_question": {
+      "type": "Text",
+      "props": {
+        "text": "Worth a refresh?",
+        "variant": "lead"
+      }
+    }
+  }
+}
