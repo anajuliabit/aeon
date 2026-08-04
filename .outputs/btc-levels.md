@@ -1,17 +1,16 @@
 ## Summary
 
-**btc-levels run — 2026-08-04T04:32Z**
+**btc-levels run — 2026-08-04T12:16Z**
 
-| | |
-|---|---|
-| Spot | $63,777.87 |
-| Daily close (2026-08-03) | $63,465.20 |
-| Alerts fired | none |
+- **Spot:** $63,783.85
+- **Previous daily close (2026-08-03):** $63,465.20
 
-**Level checks:**
-- **Leverage-review (≤$45k):** clear — spot $63.8k, no action
-- **Breakdown (<$60.5k close):** clear — close $63.5k is well above threshold
-- **Reclaim $63.5k:** already alerted in a prior run (flag set); no re-alert
-- **Reclaim $65.9k:** not reached yet — watching
+**Level evaluation:**
+| Level | Threshold | Result |
+|---|---|---|
+| Leverage-review | spot ≤ $45,000 | Clear — spot $63.8k |
+| Breakdown | close < $60,500 | Clear — close $63.5k |
+| Reclaim $63,500 | spot ≥ $63,500 + flag=false | Already flagged — no new alert |
+| Reclaim $65,900 | spot ≥ $65,900 + flag=false | Not reached |
 
-No notification sent (quiet run). State and log committed.
+**No alerts fired — quiet run.** No notification sent. State and log committed (`bd53d1a`).
