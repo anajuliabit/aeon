@@ -1,0 +1,179 @@
+{
+  "root": "card-reflect",
+  "state": {},
+  "elements": {
+    "card-reflect": {
+      "type": "Card",
+      "props": {
+        "title": "reflect",
+        "description": "Memory consolidation 2026-08-04"
+      },
+      "children": [
+        "heading-main",
+        "sep-1",
+        "issue-029-section",
+        "sep-2",
+        "issue-030-section",
+        "sep-3",
+        "heartbeat-section",
+        "sep-4",
+        "open-issues-stat"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory Consolidated",
+        "level": "h2"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue-029-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-029",
+        "text-029-title",
+        "text-029-details"
+      ]
+    },
+    "badge-029": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-029",
+        "variant": "secondary"
+      }
+    },
+    "text-029-title": {
+      "type": "Text",
+      "props": {
+        "text": "Effectively recovered",
+        "variant": "body"
+      }
+    },
+    "text-029-details": {
+      "type": "Text",
+      "props": {
+        "text": "20-of-20 dispatches clean post-20:14Z, no fresh 402s",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue-030-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-030",
+        "text-030-title",
+        "text-030-desc",
+        "stack-030-metrics"
+      ]
+    },
+    "badge-030": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-030",
+        "variant": "outline"
+      }
+    },
+    "text-030-title": {
+      "type": "Text",
+      "props": {
+        "text": "Filed for cost-report distinct sdk_opt_in_required signature",
+        "variant": "body"
+      }
+    },
+    "text-030-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Sole survivor",
+        "variant": "caption"
+      }
+    },
+    "stack-030-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-consec",
+        "stat-sr"
+      ]
+    },
+    "stat-consec": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive",
+        "value": "17"
+      }
+    },
+    "stat-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "0.09"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heartbeat-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-hb-title",
+        "text-hb-details"
+      ]
+    },
+    "text-hb-title": {
+      "type": "Text",
+      "props": {
+        "text": "16-consecutive heartbeat verdict-string rail",
+        "variant": "body"
+      }
+    },
+    "text-hb-details": {
+      "type": "Text",
+      "props": {
+        "text": "Closes at ~124 hours span",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "open-issues-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    }
+  }
+}

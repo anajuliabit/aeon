@@ -17,13 +17,13 @@
 | ISS-025 | cost-report 6 consecutive failures — weekly tick truncated at outputTokens=12 | critical | sandbox-limitation | 2026-06-22 | cost-report |
 | ISS-027 | 12:00 UTC batch DARK — 8-skill cluster frozen since 2026-06-28 21:00Z | high | config | 2026-06-29 | defi-overview, token-pick, token-movers, narrative-tracker, market-context-refresh, on-chain-monitor, defi-monitor, aixbt-pulse |
 | ISS-028 | Bash `>` redirect blocked by sandbox — n=20+ workarounds held across 12-UTC-day span, kill-test d4 NEGATIVE post PR #167 merge | medium | sandbox-limitation | 2026-07-22 | security-digest, reg-monitor, agent-buzz, list-digest, heartbeat, morning-brief, daily-routine, skill-graph, thought-review, goal-tracker, reflect |
-| ISS-030 | cost-report SDK opt-in mismatch — Claude Code SDK fast-mode disabled, api_error terminal | critical | config | 2026-08-04 | cost-report |
+| ISS-029 | usepod.ai LLM proxy 402 Payment Required — fleet-wide dispatch failure 8-03 (effectively recovered post-20:14Z, no fresh 402s 8-04) | critical | missing-secret | 2026-08-03 | heartbeat, morning-brief, skill-freshness, daily-routine, thought-review, agent-buzz, list-digest, security-digest, deal-flow, unlock-monitor, cost-report, goal-tracker, skill-health, reflect, action-converter, self-improve, skill-security-scan, btc-levels |
+| ISS-030 | cost-report SDK opt-in mismatch — post-ISS-029 distinct-signature (sdk_opt_in_required), consec=17 sr=0.09 | high | api-change | 2026-08-04 | cost-report |
 
 ## Resolved
 
 | ID | Title | Severity | Fix PR | Resolved |
 |----|-------|----------|--------|----------|
-| ISS-029 | usepod.ai LLM proxy 402 Payment Required — fleet-wide dispatch failure 8-03 | critical | gateway self-healed 2026-08-03T20:14Z (~2h window) | 2026-08-04 |
 | ISS-001 | agent-buzz has no prefetch case — X.AI x_search unreachable in sandbox | high | https://github.com/anajuliabit/aeon/pull/3 | 2026-05-21 |
 | ISS-002 | reppo-swarm chain dormant — tradinggymai datanet_id is still a placeholder | high | https://github.com/anajuliabit/aeon/pull/4 | 2026-05-22 |
 | ISS-003 | reppo postprocess dry-run fails with code UNKNOWN — intents never reach the chain | high | https://github.com/anajuliabit/aeon/pull/8 | 2026-05-23 |
