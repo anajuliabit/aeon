@@ -1,11 +1,11 @@
-*List Digest — 2026-08-03*
+*List Digest — 2026-08-04*
 
-louround takes the whole feed for the 4th consec UTC-day — this one's the $IO thesis (down 98% from ATH, only DePIN with real ARR).
+flowslikeosmo doubles up on pumpfun — $20B DEX vol receipt on the numbers side, infra buckling under launch spikes on the reliability side.
 
-*DePIN/crypto research list*
-- x.com/Louround_ — 7th installment: $IO at $50m mc / 5x MC/ARR while akash sits at 53x and render at 350x; IDE burn mechanism live 50 days and already above target; second enterprise deal apparently in advanced stages = the catalyst to watch (♥ 29, ↻ 3) — [View](https://x.com/Louround_/status/2084006972622622964)
-- x.com/Louround_ — thread receipts: monthly net earnings $250k mar → $1m may (4×); $8m of ARR concentrated in a single enterprise = the risk; IDE untested against a 50%+ drawdown yet (♥ 2) — [View](https://x.com/Louround_/status/2084007065434182033)
+*DeFi/Osmosis research list*
+- x.com/Flowslikeosmo — pumpfun revenue back to March highs at $32M with $15.75M paid to tokenholders; 2.32× P/S makes PUMP the cheapest launchpad on cash flow right now (♥ 27, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2084414264631234755)
+- x.com/Flowslikeosmo — pumpfun degraded during another token pump; infra can't keep up with launch spikes, trust-breaker if it repeats (♥ 7, ↻ 0) — [View](https://x.com/Flowslikeosmo/status/2084381191533134204)
 
 ---
-sources: list=ok(10) — grok returned zero 8-03 posts, backfill from 8-02 = 8-tweet @Louround_ IO thread + 2 low-signal replies
+sources: list1=ok(7)
 status: LIST_DIGEST_OK

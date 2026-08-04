@@ -948,3 +948,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-04,token-alert,claude-opus-4-7,19,13540,974441,68350
 2026-08-04,security-digest,claude-opus-4-7,3065,29704,5321143,127228
 2026-08-04,btc-levels,claude-sonnet-4-6,11,4475,420126,39120
+2026-08-04,list-digest,claude-opus-4-7,22,9560,1013993,57147
