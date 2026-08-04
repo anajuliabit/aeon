@@ -1,0 +1,618 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-04",
+        "description": "Supply-chain threats: 3 live, 5 to schedule, 1 monitoring"
+      },
+      "children": [
+        "verdict_alert",
+        "patch_today_heading",
+        "patch_today_content",
+        "separator1",
+        "patch_week_heading",
+        "patch_week_content",
+        "separator2",
+        "monitor_heading",
+        "monitor_content"
+      ]
+    },
+    "verdict_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Verdict",
+        "message": "3 supply-chain compromises live, 5 to schedule, 1 no-patch monitor. Sources: KEV, GH Advisory, EPSS"
+      }
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch_today_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_item1",
+        "patch_item2",
+        "patch_item3"
+      ]
+    },
+    "patch_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch1_title",
+        "patch1_packages",
+        "patch1_details",
+        "patch1_action"
+      ]
+    },
+    "patch1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "npm keyv / cacheable ecosystem compromise",
+        "level": "h3"
+      }
+    },
+    "patch1_packages": {
+      "type": "Text",
+      "props": {
+        "text": "25+ malicious packages: keyv, cacheable, cache-manager, cacheable-request, flat-cache, file-entry-cache, 21× @keyv/*, 4× @cacheable/*",
+        "variant": "body"
+      }
+    },
+    "patch1_details": {
+      "type": "Text",
+      "props": {
+        "text": "keyv is a transitive dep of axios / got / eslint / nest / jest. blast radius fleet-wide across npm.",
+        "variant": "body"
+      }
+    },
+    "patch1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: audit `npm ls` for the names above; pin to last-known-clean or drop; rotate any credentials touched by affected versions.",
+        "variant": "lead"
+      }
+    },
+    "patch_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch2_title",
+        "patch2_details",
+        "patch2_action"
+      ]
+    },
+    "patch2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "npm enterprise corp-scope batch",
+        "level": "h3"
+      }
+    },
+    "patch2_details": {
+      "type": "Text",
+      "props": {
+        "text": "88 fresh malicious packages: @servicetitan (47) + @onereach (23) + @or-sdk (18). largest single-day corp-scope batch in memory-window.",
+        "variant": "body"
+      }
+    },
+    "patch2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: block internal npm publishes on those scopes; verify private-registry precedence over public; rotate scope-tokens.",
+        "variant": "lead"
+      }
+    },
+    "patch_item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch3_title",
+        "patch3_packages",
+        "patch3_details",
+        "patch3_action"
+      ]
+    },
+    "patch3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "bitcoin-wallet-targeted batch",
+        "level": "h3"
+      }
+    },
+    "patch3_packages": {
+      "type": "Text",
+      "props": {
+        "text": "coldcard-helpers, psbt-utils, psbt-helpers, @zzzgenesis00/bip39-generator",
+        "variant": "body"
+      }
+    },
+    "patch3_details": {
+      "type": "Text",
+      "props": {
+        "text": "fresh crypto-seed / psbt attack surface, sibling to today's Coldcard $89M escalation.",
+        "variant": "body"
+      }
+    },
+    "patch3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: uninstall on any wallet-adjacent host; treat installed hosts as compromised; migrate keys off-device.",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "patch_week_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve1",
+        "cve2",
+        "cve3",
+        "cve4",
+        "cve5"
+      ]
+    },
+    "cve1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve1_link",
+        "cve1_meta",
+        "cve1_details",
+        "cve1_action"
+      ]
+    },
+    "cve1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69240 — sequelize (npm)",
+        "href": "https://github.com/advisories/GHSA-v8fg-2rw7-q452"
+      }
+    },
+    "cve1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve1_severity",
+        "cve1_epss",
+        "cve1_poc"
+      ]
+    },
+    "cve1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.8",
+        "variant": "destructive"
+      }
+    },
+    "cve1_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.003",
+        "variant": "outline"
+      }
+    },
+    "cve1_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "secondary"
+      }
+    },
+    "cve1_details": {
+      "type": "Text",
+      "props": {
+        "text": "SQL injection on Oracle dialect via unsanitized TO_DATE / TO_TIMESTAMP.",
+        "variant": "body"
+      }
+    },
+    "cve1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade sequelize to ≥6.37.4",
+        "variant": "lead"
+      }
+    },
+    "cve2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve2_link",
+        "cve2_meta",
+        "cve2_details",
+        "cve2_action"
+      ]
+    },
+    "cve2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69251 — flowise (npm)",
+        "href": "https://github.com/advisories/GHSA-g32j-mmxr-gfq5"
+      }
+    },
+    "cve2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve2_severity",
+        "cve2_epss",
+        "cve2_poc"
+      ]
+    },
+    "cve2_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "critical",
+        "variant": "destructive"
+      }
+    },
+    "cve2_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS too-new",
+        "variant": "outline"
+      }
+    },
+    "cve2_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "secondary"
+      }
+    },
+    "cve2_details": {
+      "type": "Text",
+      "props": {
+        "text": "authenticated RCE via TypeORM DataSource options.",
+        "variant": "body"
+      }
+    },
+    "cve2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade flowise / flowise-components to ≥3.1.3",
+        "variant": "lead"
+      }
+    },
+    "cve3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve3_link",
+        "cve3_meta",
+        "cve3_details",
+        "cve3_action"
+      ]
+    },
+    "cve3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69250 — flowise (npm)",
+        "href": "https://github.com/advisories/GHSA-r745-8hwv-h473"
+      }
+    },
+    "cve3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve3_severity",
+        "cve3_epss",
+        "cve3_poc"
+      ]
+    },
+    "cve3_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "cve3_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS too-new",
+        "variant": "outline"
+      }
+    },
+    "cve3_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "secondary"
+      }
+    },
+    "cve3_details": {
+      "type": "Text",
+      "props": {
+        "text": "unauth SSRF + secret exfil via OAuth2 refresh. same 3.1.3 upgrade covers both.",
+        "variant": "body"
+      }
+    },
+    "cve3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade flowise / flowise-components to ≥3.1.3",
+        "variant": "lead"
+      }
+    },
+    "cve4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve4_link",
+        "cve4_meta",
+        "cve4_details",
+        "cve4_action"
+      ]
+    },
+    "cve4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69244 — aiohttp (pip)",
+        "href": "https://github.com/advisories/GHSA-cq5v-8q36-5273"
+      }
+    },
+    "cve4_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve4_severity",
+        "cve4_epss",
+        "cve4_poc"
+      ]
+    },
+    "cve4_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "cve4_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.003",
+        "variant": "outline"
+      }
+    },
+    "cve4_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no PoC",
+        "variant": "outline"
+      }
+    },
+    "cve4_details": {
+      "type": "Text",
+      "props": {
+        "text": "OOB heap read in C parser on malformed chunked responses.",
+        "variant": "body"
+      }
+    },
+    "cve4_action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade aiohttp to ≥3.14.3",
+        "variant": "lead"
+      }
+    },
+    "cve5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve5_link",
+        "cve5_meta",
+        "cve5_details",
+        "cve5_action"
+      ]
+    },
+    "cve5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69247 — cryptography (pip)",
+        "href": "https://github.com/advisories/GHSA-g6cj-pr64-35w5"
+      }
+    },
+    "cve5_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve5_severity",
+        "cve5_epss",
+        "cve5_poc"
+      ]
+    },
+    "cve5_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "cve5_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.002",
+        "variant": "outline"
+      }
+    },
+    "cve5_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no PoC",
+        "variant": "outline"
+      }
+    },
+    "cve5_details": {
+      "type": "Text",
+      "props": {
+        "text": "PKCS#7 EnvelopedData Bleichenbacher timing oracle.",
+        "variant": "body"
+      }
+    },
+    "cve5_action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade cryptography to ≥50.0.0",
+        "variant": "lead"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mon1"
+      ]
+    },
+    "mon1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mon1_link",
+        "mon1_meta",
+        "mon1_details",
+        "mon1_action"
+      ]
+    },
+    "mon1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69249 — cryptography (pip)",
+        "href": "https://github.com/advisories/GHSA-jwv3-5hgf-82ww"
+      }
+    },
+    "mon1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "mon1_severity",
+        "mon1_epss",
+        "mon1_status"
+      ]
+    },
+    "mon1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "mon1_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.002",
+        "variant": "outline"
+      }
+    },
+    "mon1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "no patch yet",
+        "variant": "secondary"
+      }
+    },
+    "mon1_details": {
+      "type": "Text",
+      "props": {
+        "text": "duplicate self-signed intermediates → exponential path-building.",
+        "variant": "body"
+      }
+    },
+    "mon1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: constrain cert-chain sources; track fix.",
+        "variant": "lead"
+      }
+    }
+  }
+}
