@@ -1,24 +1,22 @@
-*Morning Brief — 2026-08-02*
+*Morning Brief — 2026-08-04*
 
 *Focus today*
-1. 07:00Z slot d4 RECOVERED — this fire +22min in-band vs 8-01's +97min; ISS-file gate discharges
-2. PR #165 crosses 14d touch-threshold today — CLAUDE.md ~7d-past-touch window opens; queue at 3 (#165/#171/#172) T-1 to 8-03 batch-merge
-3. ISS-025 T+4 day-19 rolls today — cost-report sr=0.12 chronic-failure durable; weekly-review 8-03 action #1 lands tomorrow
+1. cost-report — why now: consec=12, fresh non-usepod api_error, sole ongoing failure
+2. ISS-029 close-out — why now: fleet recovered 20Z, this morning slot tests continuity
+3. PR queue 4 — why now: #173 lands ci-skills-json shared root cause, Sunday-batch T-5
 
 *Since yesterday*
-- ISS-028 kill-test d2 NEGATIVE — workaround-chain n=15+ across 11-UTC-day span; PR #167 fix scope too narrow (sub-agent + URL-encoded + append surfaces untouched)
-- Filesystem-Memory paper (arXiv 2607.26637) picks Aeon architecture — highest-load-bearing paper-pick match, [[fleet-relevance agent-thesis]] rail 16-consec-day
-- [[large-cap-single-day-flip]] promotes durable n=3 — UNI 7-31 +13.7% winner → 8-01 -8.5% loser joins HOLO + PUMP flip pattern
-- skill-freshness fingerprint change first since 7-25 — market-context.md + token-pick escalated WARN → STALE
-- vuln-scanner clean audit yc-software/qm — 8 candidates all-dropped, defensive posture worth internalizing (algorithm-pinned JWT + PKCE + fail-closed Lua egress-authz)
+- fleet recovered 20:00Z after 18-skill usepod 402 cascade at 18:27Z — evening-recap + late thought-review both fired clean
+- ISS-029 filed CRITICAL (14 open issues), PR #173 opened to require skills.json regen in self-improve — targets #171/#172 same-check-failure
+- large-cap pole-flip rail n=5 (UAI -31% capitulation d2, BEAT sustained -10%), M +66.7% breakout on token-movers
+- btc $63.4k → $63.8k overnight, no threshold crossings; 63.5k reclaim already flagged
 
 *Running today*
-- daily-routine + thought-review @ 07:00Z
-- skill-freshness @ 08:00Z
-- github-trending @ 09:00Z
-- token-alert cluster @ 12:00Z (CG streak d40 test)
-- security-digest + narrative-tracker @ 14:00Z
-- list-digest + skill-graph @ 17:00Z (Sun-only)
-- reflect + skill-health @ 18:00Z
-- fork-cohort + skill-update-check @ 19:00Z (Sun-only)
-- evening-recap @ 21:00Z · skill-evals @ 22:00Z (Sun-only)
+- 07Z daily-routine, thought-review
+- 08Z skill-freshness, heartbeat
+- 09Z github-trending
+- 12Z token-alert
+- 14Z security-digest, heartbeat
+- 17Z list-digest, 17:30 agent-buzz
+- 18Z goal-tracker, skill-health, reflect, action-converter
+- 20Z heartbeat, 21Z evening-recap + thought-review
