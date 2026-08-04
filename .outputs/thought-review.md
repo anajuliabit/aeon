@@ -1,1 +1,1 @@
-thought review · no captures in last 24h. priorities.md last reviewed 60d ago — worth a refresh?
+🧭 thought review · last 24h · 0 captures, all quiet. vault inbox cold d43, priorities.md 61d stale — worth a refresh?

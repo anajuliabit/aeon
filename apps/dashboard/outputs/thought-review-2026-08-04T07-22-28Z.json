@@ -1,0 +1,49 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-captures",
+        "alert-stale",
+        "text-question"
+      ]
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (last 24h)",
+        "value": "0"
+      }
+    },
+    "alert-stale": {
+      "type": "Alert",
+      "props": {
+        "title": "All quiet — but data is stale",
+        "message": "vault inbox cold 43 days · priorities.md 61 days stale",
+        "type": "warning"
+      }
+    },
+    "text-question": {
+      "type": "Text",
+      "props": {
+        "text": "Worth a refresh?",
+        "variant": "lead"
+      }
+    }
+  }
+}
