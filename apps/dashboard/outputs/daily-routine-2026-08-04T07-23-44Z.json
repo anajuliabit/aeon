@@ -1,0 +1,521 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-04",
+        "description": "Chain outputs from 8-01 with WebSearch fallback"
+      },
+      "children": [
+        "alert-chain",
+        "heading-winners",
+        "table-winners",
+        "separator-1",
+        "heading-losers",
+        "table-losers",
+        "separator-2",
+        "heading-tweets",
+        "tweets-content",
+        "separator-3",
+        "heading-paper",
+        "paper-content",
+        "separator-4",
+        "heading-github",
+        "github-status",
+        "separator-5",
+        "heading-hn",
+        "hn-digest"
+      ]
+    },
+    "alert-chain": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Chain outputs stale-carried from 8-01 (ISS-029 usepod 402 blocked 8-03 dispatches); tweet roundup on WebSearch fallback (XAI unreachable in sandbox — no prefetch case for daily-routine)"
+      }
+    },
+    "heading-winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 5 Winners (24h · 8-01 tape)",
+        "level": "h3"
+      }
+    },
+    "table-winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h Change",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "BEAT",
+            "$4.57",
+            "+17.7%",
+            "7d +35% — breakout sustained"
+          ],
+          [
+            "US",
+            "$0.0452",
+            "+10.8%",
+            ""
+          ],
+          [
+            "M",
+            "$1.09",
+            "+10.3%",
+            ""
+          ],
+          [
+            "PUMP",
+            "$0.00219",
+            "+9.5%",
+            "trending, $106M vol leads"
+          ],
+          [
+            "PI",
+            "$0.0864",
+            "+5.6%",
+            ""
+          ]
+        ]
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 5 Losers (24h · 8-01 tape)",
+        "level": "h3"
+      }
+    },
+    "table-losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h Change",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "UNI",
+            "$4.12",
+            "-8.5%",
+            "7-31 winner → 8-01 loser, 3rd consec flip-day"
+          ],
+          [
+            "AAVE",
+            "$91.12",
+            "-7.7%",
+            ""
+          ],
+          [
+            "LIT",
+            "$2.05",
+            "-7.7%",
+            ""
+          ],
+          [
+            "HYPE",
+            "$52.30",
+            "-6.4%",
+            "only top-10 dropping harder than BTC/ETH"
+          ],
+          [
+            "ONDO",
+            "$0.386",
+            "-4.0%",
+            ""
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "tweets-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-note",
+        "tweet-ai",
+        "tweet-dev",
+        "tweet-crypto"
+      ]
+    },
+    "tweet-note": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch fallback — listicle-heavy, low signal",
+        "variant": "muted"
+      }
+    },
+    "tweet-ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ai",
+        "text-ai"
+      ]
+    },
+    "badge-ai": {
+      "type": "Badge",
+      "props": {
+        "text": "AI",
+        "variant": "default"
+      }
+    },
+    "text-ai": {
+      "type": "Text",
+      "props": {
+        "text": "EU AI Act high-risk provisions enforceable 8-02: risk mgmt + human oversight + chatbot self-ID mandates. Google shipping consumer agents that phone stores to check inventory. Cequence AI Gateway ships AI Discovery + LLM/Skill Registry + Agent Personas."
+      }
+    },
+    "tweet-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-dev",
+        "text-dev"
+      ]
+    },
+    "badge-dev": {
+      "type": "Badge",
+      "props": {
+        "text": "Dev",
+        "variant": "default"
+      }
+    },
+    "text-dev": {
+      "type": "Text",
+      "props": {
+        "text": "a16z warns holding devs liable for downstream misuse would break OSS. TypeScript overtook Python + JS by GitHub contributor count (+66.6% YoY)."
+      }
+    },
+    "tweet-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-crypto",
+        "text-crypto"
+      ]
+    },
+    "badge-crypto": {
+      "type": "Badge",
+      "props": {
+        "text": "Crypto",
+        "variant": "default"
+      }
+    },
+    "text-crypto": {
+      "type": "Text",
+      "props": {
+        "text": "generic-listicle results — no fresh chatter surfaced through fallback path."
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper-title",
+        "paper-authors",
+        "paper-desc",
+        "paper-link"
+      ]
+    },
+    "paper-title": {
+      "type": "Text",
+      "props": {
+        "text": "Filesystem-Based Memory for LLM Agents: Organization, Evolution, and Sustainability",
+        "variant": "lead"
+      }
+    },
+    "paper-authors": {
+      "type": "Text",
+      "props": {
+        "text": "Zhou/Yu/Wei/Wu +7 · ↑6",
+        "variant": "caption"
+      }
+    },
+    "paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "First systematic study of the exact MEMORY.md + topics/ + logs/ shape aeon runs on — organized stores halve retrieval cost at scale, and organization erodes for all but the strongest management agent."
+      }
+    },
+    "paper-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://arxiv.org/abs/2607.26637",
+        "href": "https://arxiv.org/abs/2607.26637"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-github": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github-status": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "message": "GITHUB_ISSUES_OK — no new issues (streak extends, 8-consec-day baseline from memory)"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn-digest": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-1",
+        "hn-2",
+        "hn-3",
+        "hn-4",
+        "hn-5"
+      ]
+    },
+    "hn-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-1-link",
+        "hn-1-desc",
+        "hn-1-discuss"
+      ]
+    },
+    "hn-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Google fixed more Chrome bugs in June than past two years, thanks to AI",
+        "href": "https://blog.google/security/chrome-stronger-with-every-update/",
+        "score": "505pts"
+      }
+    },
+    "hn-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "ai fuzzing + triage graduated to prod; 1 month eclipses prior 24.",
+        "variant": "caption"
+      }
+    },
+    "hn-1-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49120097"
+      }
+    },
+    "hn-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-2-link",
+        "hn-2-desc",
+        "hn-2-discuss"
+      ]
+    },
+    "hn-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Tailscale didn't stop the Hugging Face intrusion",
+        "href": "https://tailscale.com/blog/hugging-face-intrusion",
+        "score": "540pts"
+      }
+    },
+    "hn-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "no tailscale CVE, customer popped through it; post-mortem shipped anyway.",
+        "variant": "caption"
+      }
+    },
+    "hn-2-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49127306"
+      }
+    },
+    "hn-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-3-link",
+        "hn-3-desc",
+        "hn-3-discuss"
+      ]
+    },
+    "hn-3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "qm — multiplayer agent harness for work",
+        "href": "https://github.com/yc-software/qm",
+        "score": "555pts"
+      }
+    },
+    "hn-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "yc contribution rule: describe change in .md, agents write code.",
+        "variant": "caption"
+      }
+    },
+    "hn-3-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49126604"
+      }
+    },
+    "hn-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-4-link",
+        "hn-4-desc",
+        "hn-4-discuss"
+      ]
+    },
+    "hn-4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Run Kimi K3 in 29GB RAM at 0.50 tok/s",
+        "href": "https://github.com/sqliteai/waste",
+        "score": "239pts"
+      }
+    },
+    "hn-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "sqliteai streams 1T-param off ssd; 1000-2000× more power than GPU cluster per token.",
+        "variant": "caption"
+      }
+    },
+    "hn-4-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49123386"
+      }
+    },
+    "hn-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-5-link",
+        "hn-5-desc",
+        "hn-5-discuss"
+      ]
+    },
+    "hn-5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Is AI reasoning right for the wrong reasons?",
+        "href": "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/",
+        "score": "159pts"
+      }
+    },
+    "hn-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "mitchell: CoT + thinking tokens = wishful mnemonics.",
+        "variant": "caption"
+      }
+    },
+    "hn-5-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49124358"
+      }
+    }
+  }
+}
