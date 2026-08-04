@@ -1,0 +1,422 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Cost Report — 2026-08-04"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-summary",
+        "sep-1",
+        "section-top3",
+        "sep-2",
+        "section-actions",
+        "sep-3",
+        "section-anomalies",
+        "sep-4",
+        "section-projection",
+        "sep-5",
+        "link-full"
+      ]
+    },
+    "section-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-summary",
+        "stack-summary-stats"
+      ]
+    },
+    "heading-summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "stack-summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-spent",
+        "stat-runs",
+        "stat-wow",
+        "stat-anomalies",
+        "stat-monthly"
+      ]
+    },
+    "stat-spent": {
+      "type": "Stat",
+      "props": {
+        "label": "Total spent",
+        "value": "$350.02"
+      }
+    },
+    "stat-runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "73"
+      }
+    },
+    "stat-wow": {
+      "type": "Stat",
+      "props": {
+        "label": "WoW change",
+        "value": "+6.6%",
+        "trend": "up"
+      }
+    },
+    "stat-anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "1"
+      }
+    },
+    "stat-monthly": {
+      "type": "Stat",
+      "props": {
+        "label": "Monthly projection",
+        "value": "$1,500.00"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-top3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-top3",
+        "stack-top3-items"
+      ]
+    },
+    "heading-top3": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 by cost",
+        "level": "h3"
+      }
+    },
+    "stack-top3-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top3-item-1",
+        "top3-item-2",
+        "top3-item-3"
+      ]
+    },
+    "top3-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "top3-name-1",
+        "top3-cost-1",
+        "top3-runs-1"
+      ]
+    },
+    "top3-name-1": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "body"
+      }
+    },
+    "top3-cost-1": {
+      "type": "Text",
+      "props": {
+        "text": "$70.45",
+        "variant": "lead"
+      }
+    },
+    "top3-runs-1": {
+      "type": "Text",
+      "props": {
+        "text": "(7 runs)",
+        "variant": "caption"
+      }
+    },
+    "top3-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "top3-name-2",
+        "top3-cost-2",
+        "top3-runs-2"
+      ]
+    },
+    "top3-name-2": {
+      "type": "Text",
+      "props": {
+        "text": "reflect",
+        "variant": "body"
+      }
+    },
+    "top3-cost-2": {
+      "type": "Text",
+      "props": {
+        "text": "$52.78",
+        "variant": "lead"
+      }
+    },
+    "top3-runs-2": {
+      "type": "Text",
+      "props": {
+        "text": "(5 runs)",
+        "variant": "caption"
+      }
+    },
+    "top3-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "top3-name-3",
+        "top3-cost-3",
+        "top3-runs-3"
+      ]
+    },
+    "top3-name-3": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine",
+        "variant": "body"
+      }
+    },
+    "top3-cost-3": {
+      "type": "Text",
+      "props": {
+        "text": "$46.07",
+        "variant": "lead"
+      }
+    },
+    "top3-runs-3": {
+      "type": "Text",
+      "props": {
+        "text": "(7 runs)",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-actions",
+        "stack-actions-items"
+      ]
+    },
+    "heading-actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions this week",
+        "level": "h3"
+      }
+    },
+    "stack-actions-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-item-1",
+        "action-item-2",
+        "action-item-3"
+      ]
+    },
+    "action-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-name",
+        "action-1-detail"
+      ]
+    },
+    "action-1-name": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter",
+        "variant": "lead"
+      }
+    },
+    "action-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "context flush before next run; 8/02 ran 3x over baseline (~$8/occurrence)",
+        "variant": "body"
+      }
+    },
+    "action-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-name",
+        "action-2-detail"
+      ]
+    },
+    "action-2-name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-graph",
+        "variant": "lead"
+      }
+    },
+    "action-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "scope to changed-only nodes or switch to Sonnet (~$14-30/wk savings)",
+        "variant": "body"
+      }
+    },
+    "action-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-name",
+        "action-3-detail"
+      ]
+    },
+    "action-3-name": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "lead"
+      }
+    },
+    "action-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "add max_tokens budget guard; variance is 6x ($6-$42/run)",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-anomalies": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-anomalies",
+        "anomaly-alert"
+      ]
+    },
+    "heading-anomalies": {
+      "type": "Heading",
+      "props": {
+        "text": "Anomalies",
+        "level": "h3"
+      }
+    },
+    "anomaly-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "token-alert (7/28)",
+        "message": "$4.65 vs mu+2sigma=$4.56 — elevated cache_read",
+        "type": "warning"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-projection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-projection",
+        "stat-projection",
+        "text-projection-note"
+      ]
+    },
+    "heading-projection": {
+      "type": "Heading",
+      "props": {
+        "text": "30-day projection",
+        "level": "h3"
+      }
+    },
+    "stat-projection": {
+      "type": "Stat",
+      "props": {
+        "value": "$1,500.00"
+      }
+    },
+    "text-projection-note": {
+      "type": "Text",
+      "props": {
+        "text": "Burn-rate watch active",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link-full": {
+      "type": "Link",
+      "props": {
+        "label": "Full report",
+        "href": "articles/cost-report-2026-08-04.md"
+      }
+    }
+  }
+}
