@@ -1,26 +1,18 @@
-*skill-health — 2026-08-03*
-HEALTH: CRITICAL(11)
-[SYSTEMIC: api.usepod.ai 402 payment_required — 19-skill same-second cluster @ 18:26-27Z → ISS-029]
+*skill-health — 2026-08-04*
+HEALTH: CRITICAL(1) — 1 critical / 17 degraded / 14 warning / 8 healthy / 3 no-data (43 enabled)
 
-🔴 CRITICAL (11) — all share ISS-029 gateway-402 signature
-- cost-report — 6 fails, 7d down — FIX CONFIG (usepod credits) → ISS-029/025
-- unlock-monitor — 6 fails, 7d down — FIX CONFIG → ISS-029
-- thought-review — 9 fails, ~22h down — FIX CONFIG → ISS-029
-- search-skill — 4 fails, 7d down — FIX CONFIG → ISS-029/021
-- daily-routine — 6 fails, ~37h down — FIX CONFIG → ISS-029
-+6 more (skill-freshness, btc-levels, deal-flow, security-digest, self-improve, heartbeat) — see memory/issues/ISS-029.md
+🔴 CRITICAL (1)
+- cost-report — 17 fails, 8d down · sdk_opt_in_required (distinct from ISS-025 truncation + ISS-029 usepod 402) · FIX CONFIG → ISS-030 filed
 
-🟡 DEGRADED (8)
-- skill-analytics — sr=0.19 (10/52) — INVESTIGATE
-- reg-monitor — sr=0.19 (9/47) — INVESTIGATE
-- vuln-scanner — sr=0.23 — INVESTIGATE → ISS-018
-- market-context-refresh — sr=0.32 — WAIT-API → ISS-027
-- narrative-tracker — sr=0.33 — WAIT-API → ISS-027
-+3 more (aixbt-pulse, defi-monitor, skill-evals) — see memory/issues/INDEX.md
+🟡 DEGRADED (17, sr<60%)
+- reg-monitor 19% · skill-analytics 19% · vuln-scanner 23% · market-context-refresh 32% · narrative-tracker 33% · search-skill 38% · security-digest 43% · aixbt-pulse 47%
+- +9 more (skill-health 50, self-improve 51, action-converter 53, defi-monitor 53, goal-tracker 53, reflect 54, skill-evals 56, unlock-monitor 57, list-digest 58) — see memory/issues/INDEX.md
 
-⚪ NO DATA (3): autoresearch (workflow_dispatch), fork-skill-gap (Sun 21:00Z next 8-09), operator-scorecard (Mon 10:30Z next 8-04) — scheduler-gated, not dispatched today
-🟢 HEALTHY: 6
+⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard → DISPATCH-SKILL
+🟢 HEALTHY: 8
 
-Open issues: 14 · Filed this run: 1 (ISS-029) · Resolved: 0
+Δ prev tick (8-03 20:16Z): CRITICAL 11→1 (fleet recovered), DEGRADED 8→17 (formerly-critical settled at historic low-sr), WARNING 15→14, HEALTHY 6→8.
 
-action: verify USEPOD_TOKEN funded at usepod.ai OR flip aeon.yml gateway.provider direct→bankr/virtuals until direct rate-limit cools. skill-health's next tick 2026-08-04 18:00Z will itself fail if gateway stays broken.
+ISS-029 RESOLVED — usepod gateway self-healed ~2h window (18:27Z→20:14Z 8-03), 17-of-18 skills booked clean successes since. cost-report split off to ISS-030 under distinct sdk_opt_in_required signature.
+
+Open issues: 14 · Resolved this run: 1 (ISS-029) · Filed this run: 1 (ISS-030)

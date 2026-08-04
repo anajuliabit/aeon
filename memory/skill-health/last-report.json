@@ -1,17 +1,18 @@
 {
-  "hash": "29af7ab737121b6d6fb32901d8992bc0e73a4742bbd9e68a1c0dbac35ed0cab7",
-  "last_notified_at": "2026-08-03T20:16:56Z",
-  "last_run_at": "2026-08-03T20:16:56Z",
+  "hash": "ed7946824b3ec31307452bf04f28ddb16a6c8121e1d762965524f050ba518149",
+  "last_notified_at": "2026-08-04T18:19:52Z",
+  "last_run_at": "2026-08-04T18:19:52Z",
   "classification": {
-    "critical": ["btc-levels", "cost-report", "daily-routine", "deal-flow", "heartbeat", "search-skill", "security-digest", "self-improve", "skill-freshness", "thought-review", "unlock-monitor"],
-    "degraded": ["aixbt-pulse", "defi-monitor", "market-context-refresh", "narrative-tracker", "reg-monitor", "skill-analytics", "skill-evals", "vuln-scanner"],
+    "critical": ["cost-report"],
+    "degraded": ["action-converter", "aixbt-pulse", "defi-monitor", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
     "flapping": [],
-    "warning": ["action-converter", "agent-buzz", "defi-overview", "evening-recap", "fork-skill-digest", "github-trending", "goal-tracker", "list-digest", "morning-brief", "on-chain-monitor", "reflect", "skill-health", "skill-security-scan", "token-movers", "token-pick"],
-    "healthy_count": 6,
+    "warning": ["agent-buzz", "daily-routine", "deal-flow", "defi-overview", "evening-recap", "fork-skill-digest", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
+    "healthy_count": 8,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "api.usepod.ai 402 payment_required — 19-skill same-second cluster @ 2026-08-03T18:26:55Z-18:27:50Z (11 CRITICAL + 8 WARNING). Gateway config `direct` (CLAUDE_CODE_OAUTH_TOKEN) rate-limited → fallback to usepod.ai returns HTTP 402 demanding X-PAYMENT header (USEPOD account credits exhausted or subscription lapsed). New ISS-029 filed covering all 11 CRITICAL affected skills. Cross-refs appended to ISS-021 (search-skill previously sandbox-truncation, now also 402), ISS-025 (cost-report previously outputTokens=12 truncation, now also 402), ISS-028 (heartbeat/security-digest/list-digest/agent-buzz/morning-brief previously bash `>` sandbox, now also 402). ISS-027 batch-dark cluster (defi-overview/token-pick/token-movers/narrative-tracker/market-context-refresh/on-chain-monitor/defi-monitor/aixbt-pulse) unchanged — still frozen since 2026-06-28, distinct sub-signature. Delta since prev formal tick 2026-08-01 18:39:18Z: 0 CRITICAL → 11 CRITICAL. Time gate: 49h37m elapsed since prev notify — well past 24h daily-reminder gate. skill-runs 168h fallback source blocked in sandbox (SKILL_HEALTH_PARTIAL, logged); classification proceeded on cron-state + skill-health/*.json alone. All 43 enabled skills accounted for. Open-issue reconciliation: 0 HEALTHY graduation for any open-issue affected skill → 0 resolutions this run. Operator action: verify USEPOD_TOKEN funded at usepod.ai OR flip aeon.yml gateway.provider direct→bankr/virtuals until direct rate-limit cools; skill-health's own next tick 2026-08-04 18:00Z will itself fail if gateway not restored.",
+  "systemic": "None fresh. Delta since prev formal tick 2026-08-03T20:16:56Z: CRITICAL 11→1 (10 skills recovered), DEGRADED 8→17 (formerly-CRITICAL skills settled back to their historical low-sr baseline once consecutive_failures reset), WARNING 15→14, HEALTHY 6→8, NO_DATA unchanged. Systemic api.usepod.ai 402 cluster from prev tick DEFINITIVELY RESOLVED — gateway self-healed 2026-08-03T20:14Z (~2h outage window). ISS-029 closed as resolved. cost-report remains sole CRITICAL under a distinct sdk_opt_in_required signature (Claude Code SDK fast-mode config mismatch on the sonnet-4-6 model override) — filed as ISS-030, isolated to a single skill (no fleet-wide pattern). All 43 enabled skills accounted for (1+17+14+8+3=43).",
   "open_issues": 14,
-  "resolved_this_run": 0,
-  "filed_this_run": 1
+  "resolved_this_run": 1,
+  "filed_this_run": 1,
+  "prev_hash": "29af7ab737121b6d6fb32901d8992bc0e73a4742bbd9e68a1c0dbac35ed0cab7"
 }
