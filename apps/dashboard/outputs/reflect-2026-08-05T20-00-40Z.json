@@ -1,0 +1,262 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidation — 2026-08-05"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_iss029",
+        "section_cost",
+        "section_iss030",
+        "sep1",
+        "section_chronic",
+        "section_subrail",
+        "section_iss028",
+        "section_candidates",
+        "sep2",
+        "section_memory"
+      ]
+    },
+    "section_iss029": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss029",
+        "detail_iss029_resolved",
+        "detail_iss029_usepod",
+        "detail_iss029_index"
+      ]
+    },
+    "badge_iss029": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-029 RESOLVED by skill-health 8-04",
+        "variant": "default"
+      }
+    },
+    "detail_iss029_resolved": {
+      "type": "Text",
+      "props": {
+        "text": "usepod self-healed 8-03 20:14Z, 44h+ clean",
+        "variant": "caption"
+      }
+    },
+    "detail_iss029_index": {
+      "type": "Text",
+      "props": {
+        "text": "INDEX.md reconciled (15→14 open)",
+        "variant": "caption"
+      }
+    },
+    "detail_iss029_usepod": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "caption"
+      }
+    },
+    "section_cost": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_cost_title",
+        "text_cost_recovery",
+        "text_cost_consec",
+        "text_cost_config"
+      ]
+    },
+    "text_cost_title": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report: Same-day organic recovery 8-04 21:48Z",
+        "variant": "lead"
+      }
+    },
+    "text_cost_recovery": {
+      "type": "Text",
+      "props": {
+        "text": "Consecutive failures: 18→0",
+        "variant": "caption"
+      }
+    },
+    "text_cost_consec": {
+      "type": "Text",
+      "props": {
+        "text": "No config change",
+        "variant": "caption"
+      }
+    },
+    "text_cost_config": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "caption"
+      }
+    },
+    "section_iss030": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss030"
+      ]
+    },
+    "badge_iss030": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-030 open pending 8-10 (deciding-test)",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_chronic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_chronic"
+      ]
+    },
+    "text_chronic": {
+      "type": "Text",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime crosses first 24h gate",
+        "variant": "body"
+      }
+    },
+    "section_subrail": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_subrail",
+        "stat_subrail"
+      ]
+    },
+    "text_subrail": {
+      "type": "Text",
+      "props": {
+        "text": "New sub-rail: [[morning-08Z-slot-dark]]",
+        "variant": "body"
+      }
+    },
+    "stat_subrail": {
+      "type": "Stat",
+      "props": {
+        "label": "Instances",
+        "value": "2"
+      }
+    },
+    "section_iss028": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_iss028_title",
+        "text_iss028_chain",
+        "text_iss028_callsites"
+      ]
+    },
+    "text_iss028_title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-028 workaround-chain",
+        "variant": "lead"
+      }
+    },
+    "text_iss028_chain": {
+      "type": "Text",
+      "props": {
+        "text": "Instances: 26+",
+        "variant": "caption"
+      }
+    },
+    "text_iss028_callsites": {
+      "type": "Text",
+      "props": {
+        "text": "10 call-sites single UTC-day (memory-window-first)",
+        "variant": "caption"
+      }
+    },
+    "section_candidates": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_candidates",
+        "stat_candidates"
+      ]
+    },
+    "text_candidates": {
+      "type": "Text",
+      "props": {
+        "text": "New sub-rail candidates filed",
+        "variant": "body"
+      }
+    },
+    "stat_candidates": {
+      "type": "Stat",
+      "props": {
+        "value": "6"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_memory"
+      ]
+    },
+    "stat_memory": {
+      "type": "Stat",
+      "props": {
+        "label": "MEMORY.md",
+        "value": "101L",
+        "delta": "+17L from 84L"
+      }
+    }
+  }
+}

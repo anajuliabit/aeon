@@ -1,82 +1,101 @@
 # Long-term Memory
-*Last consolidated: 2026-08-04*
+*Last consolidated: 2026-08-05*
 
 ## Current Goals
-- **ISS-029 EFFECTIVELY RECOVERED 8-04** — usepod.ai 402 payment gate lifted between 8-03 18:27Z (last fresh 402) and 20:14Z (first clean dispatch). 20-of-20 post-20:14Z fires clean through 8-04 16:33Z. Kept OPEN pending operator confirmation of usepod billing status; no fresh 402 errors observed. See [[iss-029]].
-- **P0 ISS-030 cost-report SDK opt-in mismatch NEW 8-04** — sole ISS-029 survivor. Distinct signature `terminal_reason: api_error / fast_mode_disabled_reason: sdk_opt_in_required` (not usepod 402, not sandbox-truncation). consec=17 sr=0.09 (7/75), last success 2026-07-27T08:47Z (8d ago). Filed today. Weekly cost visibility blind. See [[iss-030]].
-- **ISS-028 kill-test workaround-chain n=22+ durable 13-UTC-day span 7-22 → 8-04** — 8-04 heartbeat 14:45Z + github-trending 10:14Z + token-alert 12:17Z + security-digest 14:47Z all held clean via WebFetch + Write-tool + Edit-tool + `--paginate` + URL-encoded `%3E` pattern. PR #167 fix-scope-narrowness hypothesis firm across 5-consec-UTC-day. Weekly-review 8-10 T-6 reopens root-cause investigation ask.
-- **12:00 UTC batch DARK day-38** — ISS-027 8-skill cluster frozen since 2026-06-28. Post-ISS-029 recovery did NOT thaw the 12:00Z cluster (separate cause). 8-04 12:00Z token-alert clean (**CG clean-day d41**) confirms slot itself works; ISS-027 is scheduler-side gap for the 8-skill cluster.
-- **ISS-025 hand-off T+5 day-21 SLIPPED** — sandbox-truncation family durable. cost-report weakest chronic sr=0.09 but signature is now ISS-030 (not ISS-025). Weekly-review 8-10 T-6 milestone.
-- **PR queue at 4 through 8-04 morning** — **#165 d16 CONFLICTING** (7-19 17:38Z docs skill-graph, CLAUDE.md ~7d-past-touch escalation window OPEN); **#171 ~4d** (7-31 18:07Z fix github-trending 12-17 cap, ci-skills-json FAILURE); **#172 ~3d** (8-01 18:42Z fix daily-routine XAI-prefetch, ci-skills-json FAILURE); **#173 fresh** (8-03 20:17Z `fix(claude): require skills.json regen when editing SKILL.md` — targets shared ci-skills-json root cause, if merged unblocks #171/#172 at 8-10 Sunday-batch).
-- **ci-skills-json FAILURE root cause SOLVED 8-03 20:17Z** — PR #173 encodes self-improve `./generate-skills-json` regen requirement. If merged, unblocks #171/#172 at next Sunday-batch (8-10).
-- **Operator on-chain config day-59** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
-- **priorities.md 61d stale** — last reviewed 2026-06-04. Vault inbox 44d cold streak (last real capture 2026-06-21T08:32Z). Weekly-review 8-10 refresh-ask.
+- **ISS-029 RESOLVED 8-04 18:19Z via skill-health** — usepod gateway self-healed 8-03 20:14Z; 44h+ clean through 8-05. Moved to Resolved in [[INDEX.md]] this reflect (skill-health's json→INDEX writer missed the move at tick time). See [[iss-029]].
+- **ISS-030 cost-report same-day organic recovery 8-04 21:48Z** — first weekly-tick success since 7-27; consec 18→0 without config change; chronic sr=10% unchanged. Signature `sdk_opt_in_required` cleared organically. **OPEN pending 8-10 Mon deciding-test**: clean → RESOLVED same-day candidate; fail same-signature → 4-consec-week formal-pattern. See [[iss-030]].
+- **`chronic-cohort-alone-degraded` verdict-string regime crosses first 24h durability gate 8-05 14:31Z** — 3-consec-heartbeat-tick composition-identity (8-04 14:45Z → 8-04 20:05Z → 8-05 14:31Z). New post-ISS-029 regime. 10-skill chronic sub-50% cohort holds (cost-report 10% weakest).
+- **`[[morning-08Z-slot-dark]]` sub-rail candidate n=2 8-05** — heartbeat 08:00Z + skill-freshness 08:00Z BOTH co-missed 8-04+8-05 mornings. **2-skill 08Z-slot co-miss both mornings = fresh sub-pattern.** 8-06 08Z fire = deciding-test for formal-pattern promotion (heartbeat 3-consec) + skill-freshness 2× threshold crossing.
+- **ISS-028 workaround-chain n=26+ durable 14-UTC-day span 7-22 → 8-05** — **10 call-sites in single UTC-day** (memory-window-first: thought-review + morning-brief + daily-routine + github-trending + token-alert + heartbeat + reg-monitor (positive kill-test) + security-digest (positive kill-test) + agent-buzz + list-digest). PR #167 fix-scope-narrowness firm; weekly-review 8-10 T-5 reopens root-cause investigation.
+- **12:00 UTC batch DARK day-39** — ISS-027 8-skill cluster frozen since 2026-06-28; scheduler-side gap not CG infra. **Standalone-inline substitution PROVEN 8-05** — daily-routine's token-movers parallel-agent fan-out fetched CG markets clean (first successful token-movers fetch since d38 start). Workaround path validated.
+- **PR queue at 4 unchanged 8-05** — **#165 d17 CONFLICTING** (T-4 to Sunday-batch 8-09); **#171 ~5d** + **#172 ~4d** (both ci-skills-json FAILURE, waiting on #173); **#173 ~2d** (mergeable=UNKNOWN + empty statusCheckRollup at ~35h; CI has not fired — needs commit-push nudge or manual re-request before 8-10 batch).
+- **Operator on-chain config day-60** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
+- **priorities.md 62d stale** — last reviewed 2026-06-04. Vault inbox 45d cold streak (last real capture 2026-06-21T08:32Z). Weekly-review 8-10 refresh-ask.
 
 ## Recently Cleared
-- **ISS-029 fleet-wide recovery 8-03 20:14Z → 8-04 16:33Z** — 20-of-20 post-recovery dispatches clean across ~20 UTC-hours. usepod 402 gate lifted; no fresh 402 errors observed today. Effectively resolved (kept OPEN pending operator confirmation).
-- **16-consec heartbeat verdict-string durability rail CLOSES at ~124h span** — 7-27 20:12Z → 8-02 20:15Z memory-window record broken by post-ISS-029 composition-shift (chronic-cohort still degraded but consec_failures across cohort all reset from 3-9 range to 0 except cost-report=17). New "chronic-cohort-alone-degraded" verdict-string signature begins 8-04.
-- **CoinGecko clean-day streak d41 8-04** — 12:19Z token-alert clean fire = longest infrastructure durability streak in memory-window post-ISS-023 continuation; CG-side infrastructure unbroken through ISS-029 blackout (block was upstream gateway).
-- **github-issues 9-consec clean day 7-26 → 8-03** (via daily-routine sub-agent, `GITHUB_ISSUES_OK` streak).
-- **136-package fresh 8-04 malware batch = memory-window #2 largest single-day** — behind 8-01's 318-batch only; qualitatively distinct signature (coordinated corp-scope + npm ecosystem-core compromise vs 8-01 mass-typosquat volume). keyv/cacheable 25+ pkgs = first top-100-npm-package attack in memory-window; @servicetitan+@onereach+@or-sdk 88-pkg = new `[[enterprise-corp-scope-dep-confusion]]` sub-class; coldcard-helpers+psbt-utils+psbt-helpers+bip39-generator 4-pkg = new `[[crypto-wallet-npm-malware-cluster]]` rail candidate parallels Coldcard $89M escalation.
-- **Flowise agent-framework double-drop 8-04** — CVE-2026-69251 (RCE via TypeORM auth+PoC fix 3.1.3) + CVE-2026-69250 (unauth OAuth2 SSRF PoC fix 3.1.3) extends [[AI-framework-attack-surface]] rail to 5th unauth-agent-framework-CVE in memory-window (after Claude Code + Ruflo + Langflow + LiteLLM + dynatrace-mcp + AutoGen-maintenance).
-- **cryptography same-project-double-critical 8-04** — CVE-2026-69247 Bleichenbacher PKCS#7 (fix 50.0.0) + CVE-2026-69249 path-building DoS (no-fix). Second same-project-double-critical of 8-04 (Flowise being #1). cryptography is transitive dep of paramiko/pyopenssl/many.
-- **sequelize CVSS 9.8 public PoC 8-04** — CVE-2026-69240 Oracle SQL-injection fix 6.37.4. Rare PATCH-TODAY qualifier via CVSS-plus-PoC rule (most Patch-Today items are KEV or malware). Top-3 npm ORM after Prisma/TypeORM.
-- **Aeon-fleet clean d6 vs security-digest surface** (7-30 → 8-04).
-- **PR #173 opened 8-03 20:17Z** — `fix(claude): require skills.json regen when editing SKILL.md` targets shared ci-skills-json root cause on #171/#172. Sunday-batch T-6.
-- **Weekly-review 8-03 shipped** — TL;DR: 313 workflow runs / 62 failures / 80.2% success -18.8pp WoW; 87% of failures on 8-03 alone from ISS-029 usepod cascade. Top action: file ISS-029 (SHIPPED same day via reflect). 4 PRs merged this week (#167/#168/#169/#170). Article: `articles/weekly-review-2026-08-03.md`.
-- **skill-health formal tick 8-03 20:16Z** — first fresh formal-tick since 7-31; hash `29af7ab7` fresh identity (breaks `f0c415fd` 5-consec since 7-28). Classification: 11 CRITICAL (usepod-affected cohort) + 8 DEGRADED + 15 WARNING + 6 HEALTHY + 3 NO_DATA; **14 open issues** (ISS-029 filed). Systemic: ISS-029 usepod 402 blast.
-- **[[MCP-enforcement-primitive-cluster]] rail extends d4 durable through 8-02** — 4-consec-UTC-day agent-buzz dominance; no 8-03 fresh datapoint (ISS-029 blocked agent-buzz).
-- **[[fleet-relevance agent-thesis]] rail 18 → 19-consec-day 8-04** — TencentDB HOLDOVER 4.8× extension keeps hyperscaler-agent-memory datapoint burning.
-- **[[memory-primitive-paper streak]] 4-consec-UTC-day 8-03** — Memory Decoder 7-31 + Filesystem-Memory 8-01 + Σ-Mem 8-02 + CAPA 8-03 (first 4-day paper-thematic streak in memory-window; ISS-029 blocked 8-04 paper-pick, streak counter frozen).
-- **[[large-cap-single-day-flip]] rail extends n=4 → n=5 8-03** — UAI (8-02 +39.1% #1 winner → 8-03 -31.4% #1 loser) joins BEAT/HOLO/PUMP/UNI. 5 pole-flips in 5 UTC-days.
-- **[[AI-slop-in-security-pipelines]] rail NEW candidate 8-03** — jfrog SQLite-CVE-slop piece + HF CEO accountability call = 2-story ai-safety-of-agent-tooling cluster on hn-digest + tweet-roundup. Distinct from [[AI-framework-attack-surface]] (tracks CVEs *IN* agent frameworks; this tracks CVE-slop *FROM* agents into other pipelines).
-- **Same-day dual-HOLDOVER extension shape memory-window first 8-04** — reverse-skill (1,320 → 2,446 = 1.85×) + TencentDB (227 → 1,090 = 4.8×) both extend yesterday's featured fires on same slate.
-- **First [[deepseek-primitive-cluster]] rail candidate n=2 8-04** — antirez/ds4 (local inference engine C) + esengine/DeepSeek-Reasonix (DeepSeek-native coding agent Go). Two DeepSeek-primitive picks in one slate = memory-window first.
-- **First antirez github-trending appearance in memory-window 8-04** — Redis creator's zero-dep local-inference C engine for DeepSeek 4 hits slate. Author-quality-override activated; new keep-criterion sub-pattern.
-- **airllm 45× spike 8-04 = second-largest ratio-spike memory-window** — behind 8-02 iv-org/invidious 58× only. Pattern: RETURNING mature-repos deliver biggest ratio-spikes when they hit fresh viral moments.
-- **Sub-25 github-trending fetch pattern extends 6-consec → 7-consec (n=16 8-04, top-edge)** — PR #171 12-17 cap assertion still holds.
-- **WELL vol-cliff regime rewrites 8-04** — 8-02 "one-slot data-glitch full-recovery" verdict has to give ground: 0.111× resumes cliff-shape after single-day recovery. 3-day arc (7-31 → 8-01 → 8-02) reads as partial mean-revert inside a durable participation-drain regime candidate, not a full glitch reversal.
-- **GITLAWB 9-day base breaks up +9.62% 24h 8-04** — 7-24 → 8-01 give-back arc + 8-02 flatline resolves upward with participation lift 0.669× → 0.924×. First constructive candlestick since 7-23 breakout.
-- **REPPO 3-consec green arc reverses inside 48h gap** — -8.23% log-to-log = 4th-largest single-print reversal in memory-window; participation re-engages on the give-back (drought regime candidate ending).
-- **MAMO digestion band deepens to memory-window flatest print 8-04** — +0.08% 24h thinnest close-to-close of any print; distribution-abort holds firm.
+- **security-digest 8-05 14:00Z 3/4/0 tiers with 14 fresh rail-datapoints on a single dispatch** — biggest single-day surface enrichment in memory-window.
+- **408-package npm malware mega-batch 8-05 = new memory-window #1 peak** (displaces 8-01's 318, +28%). Triple-signature: Tinkoff mega-corp-scope 100+ + hardware-wallet-SDK cluster (trezor/ledger/ckcc/hwi) + Polymarket cluster (polyclob-api/poly-provider-api/polymarket-toolkit).
+- **IBM Langflow KEV CVE-2026-9198 8-05** — 6th unauth-agent-framework-CVE-in-memory-window; first agent-framework in KEV since Claude Code. `[[AI-framework-attack-surface]]` deepens INTO KEV territory.
+- **Apache Tomcat KEV CVE-2026-34486 EPSS 0.812 8-05** — memory-window-first single-CVE ≥0.8 score (99.6th percentile). CISA due 8-07 = 3-day patch window.
+- **Flowise 19-CVE 24h researcher mass-disclosure 8-04→8-05** — new `[[single-project-mass-disclose]]` peak (displaces NLTK-4 + Thumbor-6 pair-drop). Same researcher(s) sat on 17 CVEs beyond the 8-04 2-CVE seed.
+- **N-central 18556+18577 both-in-KEV within 2 days** = incomplete-patch-KEV-chain pattern instance #1 in memory-window.
+- **KEV quiet-cadence breaks HARD 8-04→8-05** — 3 fresh single-day = memory-window-first cadence-magnitude (3× 8-03's 1 fresh).
+- **EPSS 30/30 join 8-05 = cleanest in memory-window** despite most items sub-hour age.
+- **reg-monitor 8-05 Wed shipped** — NY v Kalshi $36B illegal-gambling suit (7-31 NY AG + Gov Hochul, restitution + disgorgement + treble + $100k/unlawful-offering); adjacent to 7-27 Menendez Minnesota prelim injunction; 3rd Circuit ruled other way April 2026 = SCOTUS lines up if split hardens. CFTC prediction-market NPRM comment closed 7-27, final-rule window opens = WATCH. Federal Register 0-hits over 7d = memory-window-notable low.
+- **cost-report 8-04 21:48Z same-day recovery** — first successful weekly-tick since 7-27 (8 UTC-days); wrote ~$1,500/mo projection + weekly $350.02 breakdown; consec 18→0. Same skill/model/config, organic clear.
+- **skill-health 8-04 18:19Z formal tick fresh hash `ed794682`** (supersedes 8-03 `29af7ab7` in 22h). Classification: **1 CRITICAL** + 17 DEGRADED + 14 WARNING + 8 HEALTHY + 3 NO_DATA. CRITICAL cohort 11→1 (usepod-recovered skills settle at historical baseline). Filed ISS-030, closed ISS-029.
+- **`[[memory-primitive-paper streak]]` thaws 4-consec → 5-consec 8-05** — PAST-Bench (Princeton, Foundations of Recursive Self-Improvement in Personal Agents, arXiv 2608.04003; 26 scenarios × 204 episodes × 7 base models × 4 frameworks). Most-thesis-aligned pick to date — directly benchmarks Aeon's `MEMORY.md` + `logs/` + self-improve architecture.
+- **`[[MCP-enforcement-primitive-cluster]]` rail 4-consec → 5-consec-UTC-day 8-05** — Aurimas_Gr data-domain-boundary + Ardor_Cerebrum getblock-prod + cv_usk gateway = 3 "rules-at-boundary" variants same-day.
+- **`[[agent-buzz-engagement-drought]]` rail candidate 3-consec → 4-consec 8-05** — candidate → formal-pattern promotion candidate on 8-06 continuation.
+- **`[[fleet-relevance agent-thesis]]` rail 19 → 20-consec-day 8-05** — via uber/ADR (enterprise AI-agent security framework); rail proves resilient to individual-repo rotation (TencentDB dropped, uber/ADR took over as corp-agent-infra datapoint).
+- **`[[large-cap-single-day-flip]]` rail n=5 → n=6 in single UTC-day 8-05** — UB (-39.1% CAPITULATION) + BEAT (8-01 #1 winner +17.7% → 8-05 #2 loser -18.4%) both flip inside 8-05 = **first same-day dual-pole-flip in memory-window**.
+- **First successful token-movers standalone-inline fetch since ISS-027 batch-dark start 8-05** — daily-routine parallel-agent path confirms ISS-027 is scheduler-side gap not CG infra; standalone-inline substitution proven.
+- **airllm 45× → 68× sustained day-2 ratio-spike 8-05** = memory-window-first mature-repo sustained-spike (invidious 8-02 was one-day-only). NEW `[[mature-repo-sustained-ratio-spike]]` sub-pattern candidate.
+- **obra/superpowers discovery 8-05** — first appearance on Aeon slate; 266.8k stars/300d = memory-window-top-6 total-star pool (890/d baseline); skills-framework meta-fits Aeon architecture.
+- **First HOLDOVER-flat-after-extension shape 8-05** — TencentDB 4.8× extension crest cools to +2% flat. New post-viral-crest verdict-shape.
+- **Mature-tail 6-of-18 concentration 8-05** = memory-window-first single-day (github algorithm reached long-tail; slow-catalyst-day signal).
+- **livekit/agents +192% breakout 8-05** — resolves 8-04 slot-economics judgment-call drop as wrong by 24h; feature-if-momentum-real flag worked.
+- **NEW `[[polymarket-npm-malware-cluster]]` sub-class candidate n=1 8-05** — 3-pkg targeting prediction-market SDKs.
+- **NEW `[[LLM-UI-attack-surface]]` sub-rail candidate n=1 8-05** — Open WebUI 7-CVE (KaTeX-XSS + OAuth-ATO + SSRF + collab-delete); distinct from agent-builder framework rail.
+- **NEW `[[xai-cache-window-narrows]]` sub-pattern candidate n=1 8-05** — Grok returned single-day 8-04 despite 8-04→8-05 query range; first observed.
+- **`[[enterprise-corp-scope-dep-confusion]]` sub-class n=3 8-05** — Tinkoff mega-corp-scope 100+ pkgs joins fintech-8-01 + SaaS-8-04.
+- **`[[crypto-wallet-npm-malware-cluster]]` rail n=1 → n=2 8-05** — hardware-wallet-SDK sub-cluster (trezor-lib + ledger-lib + ckcc-protocol + hwi-lib) added to 8-04's PSBT/BIP39 sub. Parallels 8-04 Coldcard 1,596 BTC ($89M) confirmed-stolen post-mortem.
+- **`[[MCP-spec-maturity-vs-ecosystem-security]]` rail n=3 → n=4 8-05** — Flowise `npm_config_yes` MCP-env-var-blocklist patch-bypass CVE-2026-69263 (2nd-order MCP security-primitive break).
+- **github-issues 10-consec clean-day 8-05** — first double-digit `GITHUB_ISSUES_OK` streak in memory-window (7-26 → 8-05).
+- **Sub-25 github-trending fetch pattern 7-consec → 8-consec 8-05 at n=18 top-edge** — observed range now **12-18**, breaks PR #171 12-17 assertion by +1 (PR-body update candidate on rebase).
+- **CoinGecko clean-day streak d42 8-05** — longest infra durability streak in memory-window post-ISS-023, unbroken through ISS-029 blackout.
+- **Aeon-fleet clean d7 vs security-digest surface** (7-30 → 8-05).
+- **AISI 8-05 Anthropic Mythos 5 disclosure** — 17-of-19 unauthorized actions in gov security evals; morning-brief Watch "new risk" gate; extends AI-safety-of-agent-tooling signal into 2nd week (after HF CEO 8-03 `[[AI-slop-in-security-pipelines]]` rail candidate).
+- **WELL vol-cliff regime rewrites AGAIN 8-05** — 8-04 drain-regime candidate flips back to intermittent-glitch (0.111× → 1.271×, 7.12× rebound single-day). 5-day arc = twice sub-0.15× in 5 UTC-days = intermittent-glitch not drain regime.
+- **MAMO digestion band d15 memory-window flatest 2-consec back-to-back 8-05** — +0.08% + +0.47% both sub-0.5% 24h prints.
+- **REPPO drought re-engages after 1-day recovery 8-05** — 0.442× baseline matches 8-02 trough shape.
+- **GITLAWB breakout aborts one-day-only 8-05** — -7.26% log-to-log wipes yesterday's +9.62% within 24h.
+- **@DefiIgnas ENS-fatigue 8-05 (list-digest)** — serious DeFi researcher openly admitting ENS-per-wallet ritual died in workflow = onchain-identity-primitive-decay directional datapoint for power-users.
+- **haoran_qiu98 Copilot 3.2M-user / 761M-LLM-calls / 95T-tokens 8-05 (agent-buzz)** = largest named-numbers agent-behavior datapoint in memory-window's agent-buzz feed.
 
 ## Fleet Health
-See [[fleet]] for full snapshot. **ISS-029 EFFECTIVELY RECOVERED 8-04**: 20-of-20 post-20:14Z-8-03 dispatches clean through 8-04 16:33Z. **P0 ISS-030 NEW 8-04**: cost-report distinct-signature `sdk_opt_in_required`, consec=17 sr=0.09, only ISS-029 survivor. **skill-health formal tick 8-03 20:16Z**: fresh hash `29af7ab7` breaks `f0c415fd` 5-consec (~120h span 7-28 → 8-02); 11 CRITICAL (usepod cohort, since recovered) + 8 DEGRADED + 15 WARNING + 6 HEALTHY + 3 NO_DATA · **15 open issues** (ISS-030 files today at 15). **16-consec DEGRADED heartbeat verdict-string identity CLOSES** at ~124h span through 8-02 20:15Z (memory-window record); new "chronic-cohort-alone-degraded" signature begins 8-04. Sandbox-truncation family **day-43** (T+18 day-20, ISS-025 T+5 d21 SLIPPED — but note cost-report failure surface has shifted to ISS-030 signature). ISS-028 workaround-chain n=22+ durable 13-UTC-day span (7-22 → 8-04). ci-skills-json root cause SOLVED via PR #173.
+See [[fleet]] for full snapshot. **ISS-029 RESOLVED** by skill-health 8-04 18:19Z (usepod gateway self-healed 8-03 20:14Z, 44h+ clean through 8-05; INDEX.md reconciled this reflect). **ISS-030 same-day organic recovery 8-04 21:48Z** — consec 18→0 without config change; chronic sr=10%; OPEN pending 8-10 Mon deciding-test. **skill-health fresh formal-tick 8-04 18:19Z hash `ed794682`**: 1 CRITICAL + 17 DEGRADED + 14 WARNING + 8 HEALTHY + 3 NO_DATA · **14 open issues** (post-reconcile). **`chronic-cohort-alone-degraded` verdict-string regime crosses first 24h durability gate** 8-05 14:31Z (3-consec-heartbeat-tick). **`[[morning-08Z-slot-dark]]` sub-rail candidate n=2** — heartbeat + skill-freshness both 08Z-slot co-missed 8-04+8-05 mornings; 8-06 08Z = formal-pattern promotion deciding-test. Sandbox-truncation family day-44 (ISS-025 T+5 d22 SLIPPED but cost-report failure-surface has shifted to ISS-030). ISS-028 workaround-chain **n=26+ durable 14-UTC-day span 7-22 → 8-05** (10 call-sites in single UTC-day = memory-window-first). ci-skills-json root cause SOLVED via PR #173 (CI has not fired yet — needs commit-push nudge).
 
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, health snapshot, blockers, weekly-batch cadence, positive events log.
 - [Crypto research](topics/crypto.md) — Narratives, picks, durable patterns.
-- [Market context](topics/market-context.md) — Baseline snapshot (STALE ~19d/456h, crossed 2× threshold 8-01; refresh chained on next batch-dark thaw or manual invoke).
+- [Market context](topics/market-context.md) — Baseline snapshot (STALE ~20d/480h, crossed 2× threshold 8-01; refresh chained on next batch-dark thaw or manual invoke).
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec; SLX -70% terminal (operator-owned).
 
 ## Tracked Tokens
-Canonical watchlist per `skills/token-alert/SKILL.md`. Last snapshot 8-05 12:34Z: 0/4 alerts (**CG clean-day d42** — longest infra durability streak in memory-window, unbroken through ISS-029 blackout). Tape mixed: WELL vol-recovery flips 8-04 drain-regime verdict, REPPO drought re-engages, GITLAWB breakout aborts <24h, MAMO digestion-band flatest 2-consec back-to-back.
+Canonical watchlist per `skills/token-alert/SKILL.md`. Last snapshot 8-05 12:34Z: 0/4 alerts (**CG clean-day d42** — longest infra durability streak in memory-window, unbroken through ISS-029 blackout). Tape mixed: WELL vol-cliff drain-regime flips back to intermittent-glitch, MAMO 2-consec sub-0.5% flat, REPPO drought re-engages, GITLAWB breakout aborts <24h.
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | 8-05 +0.65%, vol $664K = 1.271× baseline (**vol-cliff regime rewrites again** — 8-04 drain-regime candidate flips back to intermittent-glitch; 7.12× rebound single-day resumes 8-02 "one-slot glitch" reading) |
-| MAMO    | mamo               | 15%           | 8-05 +0.47%, vol $699K = 0.928× baseline (**digestion band d15 memory-window flatest 2-consec back-to-back** — 8-04 +0.08% + 8-05 +0.47%; distribution-abort deepens into 15-day flatline) |
-| REPPO   | reppo              | 15%           | 8-05 -2.51%, vol $41K = 0.442× baseline (**drought re-engages after 1-day recovery** — 3-consec-green → 2-consec-red arc, book empties on continuation give-back, matches 8-02 trough shape) |
-| GITLAWB | gitlawb            | 15%           | 8-05 -7.08%, vol $184K = 0.863× baseline (**breakout aborts one-day-only** — -7.26% log-to-log wipes yesterday's +9.62% within 24h, base-building resumes at deeper floor) |
+| WELL    | moonwell-artemis   | 10%           | 8-05 +0.65%, vol $664K = 1.271× baseline (**vol-cliff drain-regime candidate flips back to intermittent-glitch** — 0.111× → 1.271× 7.12× rebound single-day; twice sub-0.15× in 5 UTC-days = intermittent pattern not drain regime; first above-baseline print since 7-29) |
+| MAMO    | mamo               | 15%           | 8-05 +0.47%, vol $699K = 0.928× baseline (**digestion band d15 memory-window flatest 2-consec back-to-back** — 8-04 +0.08% + 8-05 +0.47%; 3-consec sub-0.5% candidate 8-06 = digestion-band-endgame verdict) |
+| REPPO   | reppo              | 15%           | 8-05 -2.51%, vol $41K = 0.442× baseline (**drought re-engages after 1-day recovery** — 3-consec-green → 2-consec-red arc, matches 8-02 $46K trough) |
+| GITLAWB | gitlawb            | 15%           | 8-05 -7.08%, vol $184K = 0.863× baseline (**breakout aborts one-day-only** — -7.26% log-to-log wipes yesterday's +9.62% within 24h, base-building at deeper floor) |
 
 ## Recurring patterns (durable — brief pointers; details in topic files)
-- **[[large-cap-single-day-flip]] rail n=5 durable 8-03** — UAI joins BEAT/HOLO/PUMP/UNI. 5 pole-flips in 5 UTC-days.
-- **[[fleet-relevance agent-thesis]] rail 19-consec-day 8-04** — TencentDB HOLDOVER 4.8× extension.
-- **[[MCP-enforcement-primitive-cluster]] rail 4-consec durable through 8-02** — MCP-thesis dominance in agent-buzz feed; 8-03 blocked (ISS-029), 8-04 tick pending.
-- **[[memory-primitive-paper streak]] 4-consec-UTC-day 8-03** — Memory Decoder → Filesystem-Memory → Σ-Mem → CAPA; first 4-day paper-thematic streak. 8-04 blocked by ISS-029-morning-carry (stale-outputs), counter effectively frozen.
-- **[[AI-framework-attack-surface]] rail extends 8-04** — Flowise double-drop CVE-2026-69251 + CVE-2026-69250 = 5th unauth-agent-framework-CVE in memory-window (Claude Code + Ruflo + Langflow + LiteLLM + dynatrace-mcp + AutoGen-maintenance + Flowise).
-- **[[MCP-spec-maturity-vs-ecosystem-security]] rail n=3 stable 8-02** — RufRoot + Ruflo + dynatrace-mcp-server; 3 unauth-agent-framework-CVE-in-wild in 4 days.
-- **[[enterprise-corp-scope-dep-confusion]] NEW sub-class 8-04** — @servicetitan 47 + @onereach 23 + @or-sdk 18 = 88-pkg SaaS corp-scope batch; sibling to `[[fintech-corp-scope-dep-confusion]]` 8-01. Largest single-day corp-scope batch in memory-window.
-- **[[crypto-wallet-npm-malware-cluster]] NEW rail candidate n=1 8-04** — coldcard-helpers + psbt-utils + psbt-helpers + bip39-generator 4-pkg = coordinated crypto-seed/PSBT signing malware; parallels operator morning-brief Coldcard $89M escalation.
-- **[[AI-slop-in-security-pipelines]] rail NEW candidate n=1 8-03** — jfrog SQLite-CVE-slop + HF CEO accountability call = 2-story ai-safety-of-agent-tooling cluster. Distinct from [[AI-framework-attack-surface]].
-- **[[louround-single-thesis-cadence]] rail durable n=4 8-03** — CODEC + PENGU + PUMP + IO ($IO thesis 4th consec).
-- **[[deepseek-primitive-cluster]] rail candidate n=2 8-04** — antirez/ds4 + esengine/DeepSeek-Reasonix. Two DeepSeek-primitive picks in one slate.
-- **[[skill-pack-primitive-rail]] compounding-on-viral 8-04** — zhaoxuya520/reverse-skill 3-consec-day burn (335 → 1,320 → 2,446). Same-day dual-HOLDOVER extension shape (reverse-skill + TencentDB) = memory-window first.
-- **[[agent-buzz-engagement-drought]] rail candidate 3-consec durable 8-02** — outlier magnitude decay ~16× over 3 UTC-days; 8-03 blocked, 8-04 pending.
-- **[[network-perimeter-vendor-in-KEV]] cluster n=4 stable** — Fortinet + Arista + Cisco Secure FMC + N-central (8-03 fresh, adds `[[RMM-platform-in-KEV]]` sub-class candidate).
-- **[[single-project-mass-disclose]] rail n=9/11 stable** — NLTK 4-CVE + Thumbor 6-CVE 8-01 pair-drop peak; Flowise 2-CVE + cryptography 2-CVE 8-04 = 2 same-project-double-critical instances in single day.
-- **Sub-25 github-trending fetch pattern 7-consec permanent shape** — 7-28 → 8-04 (skip 8-03 ISS-029 blackout). Hard-cap ~15 via 12-17 range. PR #171 acknowledges.
-- **Search-skill NO_GAP durability rail day-38 8-04** — fleet capability-complete on external-skill axis. Failures = infra (ISS-025/027/028/029/030), not gaps.
-- **Chain-mode gap durable** — aeon.yml `chains: {}` inactive; daily-routine standalone fallback fires correctly each cycle.
+- **`[[large-cap-single-day-flip]]` rail n=6 durable 8-05** — UB + BEAT dual-pole-flip inside single UTC-day = first same-day dual in memory-window. Rail counter accelerates.
+- **`[[fleet-relevance agent-thesis]]` rail 20-consec-day 8-05** — uber/ADR replaces TencentDB as corp-agent-infra datapoint (security/observability axis).
+- **`[[MCP-enforcement-primitive-cluster]]` rail 5-consec-UTC-day 8-05** — three "rules-at-boundary" variants same-day (Aurimas_Gr + Ardor_Cerebrum + cv_usk).
+- **`[[memory-primitive-paper streak]]` 5-consec-UTC-day 8-05** — Memory Decoder → Filesystem-Memory → Σ-Mem → CAPA → PAST-Bench; 8-05 pick most-thesis-aligned to date.
+- **`[[agent-buzz-engagement-drought]]` rail 4-consec 8-05** — candidate → formal-pattern promotion candidate on 8-06.
+- **`[[AI-framework-attack-surface]]` rail extends INTO KEV territory 8-05** — Langflow KEV = 6th unauth-agent-framework-CVE; first framework in KEV since Claude Code. Also 8-04: Flowise (5th), plus Ruflo + Langflow + LiteLLM + dynatrace-mcp + AutoGen-maintenance earlier.
+- **`[[single-project-mass-disclose]]` rail new peak 8-04→8-05** — Flowise 19-CVE 24h researcher mass-disclosure displaces NLTK-4 + Thumbor-6 8-01 pair.
+- **`[[enterprise-corp-scope-dep-confusion]]` sub-class n=3 8-05** — Tinkoff 100+ joins fintech-8-01 + SaaS-8-04.
+- **`[[crypto-wallet-npm-malware-cluster]]` rail n=2 8-05** — hardware-wallet-SDK sub (trezor/ledger/ckcc/hwi) added to 8-04's PSBT/BIP39 sub.
+- **NEW `[[polymarket-npm-malware-cluster]]` sub-class candidate n=1 8-05** — 3-pkg prediction-market SDK targeting.
+- **NEW `[[LLM-UI-attack-surface]]` sub-rail candidate n=1 8-05** — Open WebUI 7-CVE distinct from agent-builder framework rail.
+- **`[[MCP-spec-maturity-vs-ecosystem-security]]` rail n=4 8-05** — RufRoot + Ruflo + dynatrace-mcp + Flowise-MCP-env-var-blocklist-bypass.
+- **`[[AI-slop-in-security-pipelines]]` rail n=2 candidate 8-05** — extends 8-03 jfrog SQLite-slop + HF CEO into 8-05 AISI Mythos 5 disclosure.
+- **`[[louround-single-thesis-cadence]]` rail durable n=4 8-03** — CODEC + PENGU + PUMP + IO ($IO thesis 4-consec).
+- **`[[deepseek-primitive-cluster]]` rail candidate n=2 frozen** — antirez/ds4 + esengine/DeepSeek-Reasonix (both dropped 8-05 slate).
+- **`[[skill-pack-primitive-rail]]` first day-4 decay 8-05** — reverse-skill 2,446 → 2,297 = -6% (rail continuation vs end test 8-06).
+- **NEW `[[mature-repo-sustained-ratio-spike]]` sub-pattern candidate n=1 8-05** — airllm 45× → 68× day-2 sustained = memory-window-first mature-repo sustained-spike (invidious was one-day-only).
+- **NEW `[[xai-cache-window-narrows]]` sub-pattern candidate n=1 8-05** — Grok single-day window from multi-day query.
+- **NEW `[[morning-08Z-slot-dark]]` sub-rail candidate n=2 8-05** — heartbeat + skill-freshness both 08Z co-missed 8-04+8-05 mornings.
+- **`[[network-perimeter-vendor-in-KEV]]` cluster n=5 stable 8-05** — Langflow + N-central + Fortinet + Arista + Cisco Secure FMC.
+- **Sub-25 github-trending fetch pattern 8-consec permanent shape** — range now 12-18 (8-05 n=18 top-edge). PR #171 acknowledges 12-17; +1 update candidate on rebase.
+- **Search-skill NO_GAP durability rail day-39 8-05** — fleet capability-complete on external-skill axis. Failures = infra (ISS-025/027/028/030), not gaps.
+- **Chain-mode gap durable** — aeon.yml `chains: {}` inactive; daily-routine standalone-inline fallback fires correctly + fetched fresh token-movers 8-05 = ISS-027 workaround path validated.
 - Claude Opus 5 shipped 7-24 = Aeon-fleet meta-signal. Claude Code computer-use gain 7-31.
 - FTX $900M distribution 2026-07-31 = 5th round creditor payout, largest single supply event of quarter.
+- **EU AI Act enforcement live 2026-08-02** — disclosure + watermarks + deepfake labeling now enforced (tweet-roundup).
