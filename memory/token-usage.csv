@@ -951,3 +951,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-04,reflect,claude-opus-4-7,253,39042,5159407,155009
 2026-08-04,heartbeat,claude-opus-4-7,27,20674,2314789,126569
 2026-08-04,cost-report,claude-sonnet-4-6,22,100855,1431117,107272
+2026-08-05,btc-levels,claude-sonnet-4-6,9,3296,271359,20991

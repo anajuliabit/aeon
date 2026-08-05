@@ -1,13 +1,14 @@
-Done. Clean run.
-
 ## Summary
 
-**BTC spot:** $64,208.99 | **Previous daily close (Aug 3):** $63,465.20
+**btc-levels** run complete — quiet.
 
-**Level checks — no alerts fired:**
-- Spot ≤ $45,000? No → no leverage-review alert
-- Close < $60,500? No ($63,465.20) → no breakdown alert
-- Spot ≥ $63,500 with flag unset? Flag already `true` → no alert (re-arm needs spot < $60,500)
-- Spot ≥ $65,900? No ($64,208.99) → no alert
+| Metric | Value |
+|---|---|
+| Spot | $63,924.75 |
+| Daily close (2026-08-04) | $64,062.17 |
+| Leverage-review (≤$45k) | Clear |
+| Breakdown signal (<$60,500 close) | Clear |
+| Reclaim $63,500 | Already flagged (true) |
+| Reclaim $65,900 | Not reached |
 
-State updated (`lastSpot: 64208.99`, `updatedAt: 2026-08-04T21:23:36Z`), log appended, committed.
+No alerts fired. State and log committed.
