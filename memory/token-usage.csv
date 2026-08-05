@@ -955,3 +955,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-05,btc-levels,claude-sonnet-4-6,11,3212,351009,21923
 2026-08-05,daily-routine,claude-opus-4-7,13,7695,759037,12857
 2026-08-05,github-trending,claude-opus-4-7,263,23809,1392198,80209
+2026-08-05,token-alert,claude-opus-4-7,20,13492,999311,67665

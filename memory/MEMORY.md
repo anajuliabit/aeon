@@ -50,14 +50,14 @@ See [[fleet]] for full snapshot. **ISS-029 EFFECTIVELY RECOVERED 8-04**: 20-of-2
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec; SLX -70% terminal (operator-owned).
 
 ## Tracked Tokens
-Canonical watchlist per `skills/token-alert/SKILL.md`. Last snapshot 8-04 12:19Z: 0/4 alerts (**CG clean-day d41** — infrastructure durability streak intact through ISS-029 blackout). Tape mixed with cliff-shapes on 3 of 4 vol axes.
+Canonical watchlist per `skills/token-alert/SKILL.md`. Last snapshot 8-05 12:34Z: 0/4 alerts (**CG clean-day d42** — longest infra durability streak in memory-window, unbroken through ISS-029 blackout). Tape mixed: WELL vol-recovery flips 8-04 drain-regime verdict, REPPO drought re-engages, GITLAWB breakout aborts <24h, MAMO digestion-band flatest 2-consec back-to-back.
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | 8-04 +3.11%, vol $93K = 0.111× baseline (**vol-cliff regime rewrites** — 8-02 "glitch full-recovery" verdict falls, drain-regime candidate; thin-book bounce shape) |
-| MAMO    | mamo               | 15%           | 8-04 +0.08%, vol $689K = 0.872× baseline (**digestion band d14 memory-window flatest print** — distribution-abort holds firm) |
-| REPPO   | reppo              | 15%           | 8-04 -0.65%, vol $85K = 0.882× baseline (**3-consec green arc reverses** -8.23% log-to-log; participation recovers off drought nadir) |
-| GITLAWB | gitlawb            | 15%           | 8-04 +9.62%, vol $237K = 0.924× baseline (**9-day base breaks up out of noise floor** — first constructive candle since 7-23 breakout, participation lifts) |
+| WELL    | moonwell-artemis   | 10%           | 8-05 +0.65%, vol $664K = 1.271× baseline (**vol-cliff regime rewrites again** — 8-04 drain-regime candidate flips back to intermittent-glitch; 7.12× rebound single-day resumes 8-02 "one-slot glitch" reading) |
+| MAMO    | mamo               | 15%           | 8-05 +0.47%, vol $699K = 0.928× baseline (**digestion band d15 memory-window flatest 2-consec back-to-back** — 8-04 +0.08% + 8-05 +0.47%; distribution-abort deepens into 15-day flatline) |
+| REPPO   | reppo              | 15%           | 8-05 -2.51%, vol $41K = 0.442× baseline (**drought re-engages after 1-day recovery** — 3-consec-green → 2-consec-red arc, book empties on continuation give-back, matches 8-02 trough shape) |
+| GITLAWB | gitlawb            | 15%           | 8-05 -7.08%, vol $184K = 0.863× baseline (**breakout aborts one-day-only** — -7.26% log-to-log wipes yesterday's +9.62% within 24h, base-building resumes at deeper floor) |
 
 ## Recurring patterns (durable — brief pointers; details in topic files)
 - **[[large-cap-single-day-flip]] rail n=5 durable 8-03** — UAI joins BEAT/HOLO/PUMP/UNI. 5 pole-flips in 5 UTC-days.
