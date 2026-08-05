@@ -1,0 +1,899 @@
+{
+  "root": "card-analytics",
+  "state": {},
+  "elements": {
+    "card-analytics": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics",
+        "description": "2026-08-05"
+      },
+      "children": [
+        "summary-stack",
+        "sep1",
+        "critical-section",
+        "sep2",
+        "degraded-section",
+        "sep3",
+        "top-runs-section",
+        "sep4",
+        "report-link-section"
+      ]
+    },
+    "summary-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "window-text",
+        "stats-row",
+        "anomalies-breakdown"
+      ]
+    },
+    "window-text": {
+      "type": "Text",
+      "props": {
+        "text": "Window: last 7d · 246 runs · 31 skills",
+        "variant": "body"
+      }
+    },
+    "stats-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "success-stat",
+        "anomalies-stat"
+      ]
+    },
+    "success-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "75.2%"
+      }
+    },
+    "anomalies-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "24"
+      }
+    },
+    "anomalies-breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "10 🔴 SILENT + 14 🟠 LOW_SUCCESS",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical-heading",
+        "critical-alert",
+        "critical-list"
+      ]
+    },
+    "critical-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Critical: SILENT Skills (10)",
+        "level": "h3"
+      }
+    },
+    "critical-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "10 skills zero runs this window (ISS-027 batch-dark d39+)"
+      }
+    },
+    "critical-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-1",
+        "crit-2",
+        "crit-3",
+        "crit-4",
+        "crit-5",
+        "crit-6",
+        "crit-7",
+        "crit-8",
+        "crit-9",
+        "crit-10"
+      ]
+    },
+    "crit-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-1-name",
+        "crit-1-badge",
+        "crit-1-detail"
+      ]
+    },
+    "crit-1-name": {
+      "type": "Text",
+      "props": {
+        "text": "token-movers",
+        "variant": "lead"
+      }
+    },
+    "crit-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "`10 12 * * *`, zero runs",
+        "variant": "caption"
+      }
+    },
+    "crit-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-2-name",
+        "crit-2-badge",
+        "crit-2-detail"
+      ]
+    },
+    "crit-2-name": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor",
+        "variant": "lead"
+      }
+    },
+    "crit-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "`20 12 * * *`, zero runs",
+        "variant": "caption"
+      }
+    },
+    "crit-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-3-name",
+        "crit-3-badge",
+        "crit-3-detail"
+      ]
+    },
+    "crit-3-name": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor",
+        "variant": "lead"
+      }
+    },
+    "crit-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "`40 12 * * *`, zero runs",
+        "variant": "caption"
+      }
+    },
+    "crit-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-4-name",
+        "crit-4-badge"
+      ]
+    },
+    "crit-4-name": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview",
+        "variant": "lead"
+      }
+    },
+    "crit-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-5-name",
+        "crit-5-badge"
+      ]
+    },
+    "crit-5-name": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh",
+        "variant": "lead"
+      }
+    },
+    "crit-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-6-name",
+        "crit-6-badge"
+      ]
+    },
+    "crit-6-name": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "lead"
+      }
+    },
+    "crit-6-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-7-name",
+        "crit-7-badge"
+      ]
+    },
+    "crit-7-name": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse",
+        "variant": "lead"
+      }
+    },
+    "crit-7-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-8-name",
+        "crit-8-badge"
+      ]
+    },
+    "crit-8-name": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog",
+        "variant": "lead"
+      }
+    },
+    "crit-8-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-9": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-9-name",
+        "crit-9-badge"
+      ]
+    },
+    "crit-9-name": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "lead"
+      }
+    },
+    "crit-9-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "crit-10": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-10-name",
+        "crit-10-badge"
+      ]
+    },
+    "crit-10-name": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "lead"
+      }
+    },
+    "crit-10-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-alert",
+        "degraded-list"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 Degraded: LOW_SUCCESS Skills (14)",
+        "level": "h3"
+      }
+    },
+    "degraded-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "14 skills below operational success thresholds"
+      }
+    },
+    "degraded-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-1",
+        "deg-2",
+        "deg-3",
+        "deg-4",
+        "deg-5",
+        "deg-6",
+        "deg-7",
+        "deg-8",
+        "deg-9",
+        "deg-10",
+        "deg-11",
+        "deg-12",
+        "deg-13",
+        "deg-14"
+      ]
+    },
+    "deg-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-1-name",
+        "deg-1-badge",
+        "deg-1-detail"
+      ]
+    },
+    "deg-1-name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "deg-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "5.3% over 19 runs (ISS-030)",
+        "variant": "caption"
+      }
+    },
+    "deg-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-2-name",
+        "deg-2-badge",
+        "deg-2-detail"
+      ]
+    },
+    "deg-2-name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "lead"
+      }
+    },
+    "deg-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "44.4% over 9 runs (ISS-029)",
+        "variant": "caption"
+      }
+    },
+    "deg-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-3-name",
+        "deg-3-badge",
+        "deg-3-detail"
+      ]
+    },
+    "deg-3-name": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "lead"
+      }
+    },
+    "deg-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "20.0% over 5 runs (ISS-029)",
+        "variant": "caption"
+      }
+    },
+    "deg-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-4-name",
+        "deg-4-badge"
+      ]
+    },
+    "deg-4-name": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow",
+        "variant": "lead"
+      }
+    },
+    "deg-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-5-name",
+        "deg-5-badge"
+      ]
+    },
+    "deg-5-name": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill",
+        "variant": "lead"
+      }
+    },
+    "deg-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-6-name",
+        "deg-6-badge"
+      ]
+    },
+    "deg-6-name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan",
+        "variant": "lead"
+      }
+    },
+    "deg-6-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-7-name",
+        "deg-7-badge"
+      ]
+    },
+    "deg-7-name": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine",
+        "variant": "lead"
+      }
+    },
+    "deg-7-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-8-name",
+        "deg-8-badge"
+      ]
+    },
+    "deg-8-name": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "lead"
+      }
+    },
+    "deg-8-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-9": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-9-name",
+        "deg-9-badge"
+      ]
+    },
+    "deg-9-name": {
+      "type": "Text",
+      "props": {
+        "text": "thought-review",
+        "variant": "lead"
+      }
+    },
+    "deg-9-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-10": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-10-name",
+        "deg-10-badge"
+      ]
+    },
+    "deg-10-name": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief",
+        "variant": "lead"
+      }
+    },
+    "deg-10-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-11": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-11-name",
+        "deg-11-badge"
+      ]
+    },
+    "deg-11-name": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter",
+        "variant": "lead"
+      }
+    },
+    "deg-11-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-12": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-12-name",
+        "deg-12-badge"
+      ]
+    },
+    "deg-12-name": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker",
+        "variant": "lead"
+      }
+    },
+    "deg-12-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-13": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-13-name",
+        "deg-13-badge"
+      ]
+    },
+    "deg-13-name": {
+      "type": "Text",
+      "props": {
+        "text": "reflect",
+        "variant": "lead"
+      }
+    },
+    "deg-13-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "deg-14": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-14-name",
+        "deg-14-badge"
+      ]
+    },
+    "deg-14-name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health",
+        "variant": "lead"
+      }
+    },
+    "deg-14-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-runs-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-runs-heading",
+        "top-runs-items"
+      ]
+    },
+    "top-runs-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by Runs",
+        "level": "h3"
+      }
+    },
+    "top-runs-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top-1",
+        "top-2",
+        "top-3"
+      ]
+    },
+    "top-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels (39 runs)",
+        "variant": "body"
+      }
+    },
+    "top-2": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat (21 runs)",
+        "variant": "body"
+      }
+    },
+    "top-3": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report (19 runs)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "report-link-section": {
+      "type": "Link",
+      "props": {
+        "label": "Full Report: articles/skill-analytics-2026-08-05.md",
+        "href": "articles/skill-analytics-2026-08-05.md"
+      }
+    }
+  }
+}
