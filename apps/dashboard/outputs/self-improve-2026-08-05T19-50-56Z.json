@@ -1,0 +1,123 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack_header",
+        "alert_blocker",
+        "separator_1",
+        "heading_prs",
+        "stack_prs",
+        "separator_2",
+        "text_dependency"
+      ]
+    },
+    "stack_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "heading_status",
+        "badge_timestamp"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit-gate holds",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "badge_timestamp": {
+      "type": "Badge",
+      "props": {
+        "text": "18Z",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "alert_blocker": {
+      "type": "Alert",
+      "props": {
+        "title": "Authoring blocked",
+        "message": "No new authoring until sunday-batch clears queue",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Open improvement PRs",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_171",
+        "pr_172",
+        "pr_173"
+      ]
+    },
+    "pr_171": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#171 github-trending 12-17 cap",
+        "href": "https://github.com/aeon/aeon/pull/171"
+      },
+      "children": []
+    },
+    "pr_172": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#172 daily-routine XAI prefetch",
+        "href": "https://github.com/aeon/aeon/pull/172"
+      },
+      "children": []
+    },
+    "pr_173": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#173 skills.json regen",
+        "href": "https://github.com/aeon/aeon/pull/173"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_dependency": {
+      "type": "Text",
+      "props": {
+        "text": "#173 unblocks the other two if it merges 8-10",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

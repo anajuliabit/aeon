@@ -1,1 +1,1 @@
-self-improve: added missing XAI prefetch case for daily-routine tweet-roundup (was chronically WebSearch-fallback for want of a prefetch case). PR: https://github.com/anajuliabit/aeon/pull/172
+self-improve 18Z: exit-gate holds. 3 open improvement PRs (#171 github-trending 12-17 cap, #172 daily-routine XAI prefetch, #173 skills.json regen) — no new authoring until sunday-batch clears queue. #173 unblocks the other two if it merges 8-10.
