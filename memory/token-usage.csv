@@ -959,4 +959,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-05,security-digest,claude-opus-4-7,72,34341,6195976,108136
 2026-08-05,btc-levels,claude-sonnet-4-6,18143,4360,406907,44612
 2026-08-05,agent-buzz,claude-opus-4-7,15,20561,871147,86023
-2026-08-05,skill-health,claude-opus-4-7,274,27715,2950807,103399
+2026-08-05,goal-tracker,claude-opus-4-7,21,23331,1681395,115568

@@ -1,65 +1,71 @@
 {
-  "run_at": "2026-08-04T15:30:00Z",
+  "run_at": "2026-08-05T18:15:00Z",
   "goals": {
-    "iss-029-fleet-wide-usepod-402": {
+    "iss-029-effectively-recovered": {
       "status": "ON_TRACK",
-      "activity_count_14d": 120,
-      "last_activity_date": "2026-08-04",
-      "note": "NEW goal since prior run. Filed by reflect 8-03 20:14Z (ISS-029.md status=open, category=missing-secret, 18 affected skills). 8-04 heartbeat 14:45Z: '20-of-20 dispatches post-20:14Z all succeeded' + 'ISS-029 effectively resolved'. Per skill constraint 'prefer false negatives' — NOT marked DONE because INDEX.md still lists status:open with resolved_at:null; no formal PR merge. Activity ~120 in 14d (all concentrated in 8-03 evening + 8-04). Trend: new (no prior snapshot record)."
+      "activity_count_14d": 150,
+      "last_activity_date": "2026-08-05",
+      "note": "Continues clean 44h+ post-recovery per heartbeat 14:31Z 8-05. No fresh 402 signatures across 8-04 or 8-05 dispatches. INDEX.md still lists status:open — kept OPEN pending operator INDEX flip (skill-health 18:00Z 8-05 = reconciliation deciding-test). Not marked DONE per 'prefer false negatives' constraint. Trend: flat vs prior ON_TRACK snapshot."
+    },
+    "iss-030-cost-report-sdk-opt-in": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 90,
+      "last_activity_date": "2026-08-05",
+      "note": "First positive-datapoint since filing: cost-report 8-04 21:48:47Z successful weekly-tick fire, consec 18 → 0, sr 9% → 10% (chronic historical unchanged). Same skill/model/config resumed clean without config change. Deciding-test is 8-10 Mon weekly-tick — if clean, ISS-030 candidate for RESOLVED; if fails same signature, formal-pattern threshold at 4-consec-week-shape. Trend: improving (positive-clear vs prior NEW/at-risk shape)."
     },
     "iss-028-kill-test-workaround-chain": {
       "status": "BLOCKED",
-      "activity_count_14d": 330,
-      "last_activity_date": "2026-08-04",
-      "note": "Prior BLOCKED holds. Workaround-chain n=22+ across 13-UTC-day span 7-22 → 8-04 (heartbeat 14:45Z advanced from n=21+ via github-trending 10:14Z call-site NEGATIVE). Blocker unchanged: PR #167 fix-scope narrow (heartbeat/security-digest only) missed sub-agent + list-digest + skill-graph + append + URL-encoded surfaces. Activity 351 → ~330 = -6% (within ±25% flat). Trend: flat."
+      "activity_count_14d": 350,
+      "last_activity_date": "2026-08-05",
+      "note": "Rail extends to n=26+ across 14-UTC-day span 7-22 → 8-05 (9+ call-site fires 8-05 alone = most in single UTC-day in rail history: thought-review + morning-brief + daily-routine + github-trending + token-alert + heartbeat + reg-monitor + security-digest + list-digest + agent-buzz). PR #167 fix-scope narrowness confirmed durable — misses sub-agent + list-digest + skill-graph + append + URL-encoded surfaces. Weekly-review 8-10 T-5 root-cause investigation ask. Trend: flat."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 300,
-      "last_activity_date": "2026-08-04",
-      "note": "Prior BLOCKED holds. Day-38 today (rolled from d37 at UTC midnight). 8-04 heartbeat 14:45Z: 'ISS-027 12:00 UTC batch DARK day-38 — Post-ISS-029 recovery did NOT thaw the 12:00Z cluster — separate cause.' 8-skill cluster still frozen since 2026-06-28 21:00Z. CG clean-day streak d41 continuation (8-04 12:19Z token-alert clean). Activity 418 → ~300 = -28% (borderline; same status BLOCKED). Trend: flat."
+      "activity_count_14d": 320,
+      "last_activity_date": "2026-08-05",
+      "note": "ISS-027 12:00 UTC batch DARK d39 (rolled from d38 at 12:00Z 8-05). 8-skill cluster frozen since 2026-06-28 21:00Z. token-alert 12:34Z clean fire = CG d42 confirms slot itself works; scheduler-side gap for the 8-skill cluster. Post-ISS-029 recovery did NOT thaw the 12:00Z cluster (separate cause). Trend: flat."
     },
     "iss-025-hand-off": {
       "status": "BLOCKED",
-      "activity_count_14d": 400,
-      "last_activity_date": "2026-08-04",
-      "note": "Prior BLOCKED holds. T+5 day-21 today (rolled from d20). Cost-report sr slips further 12% → 11% → 10% (7/73) via fresh 8-04 12:15Z failure with distinct sdk_opt_in_required signature (ISS-030 candidate, non-usepod, non-sandbox-truncation shape). Sole reliable unblock unchanged: operator direct-author dangerouslyDisableSandbox pivot at aeon.yml:479-495. Activity 494 → ~400 = -19% (within ±25%). Trend: flat."
+      "activity_count_14d": 380,
+      "last_activity_date": "2026-08-05",
+      "note": "T+6 day-22 today (rolled from d21). Sandbox-truncation family day-44. Cost-report failure surface has shifted to ISS-030 signature (sdk_opt_in_required), not ISS-025. Sole reliable unblock unchanged: operator direct-author dangerouslyDisableSandbox pivot at aeon.yml:479-495. Weekly-review 8-10 T-5. Trend: flat."
     },
-    "pr-queue-at-3-through-8-03-morning": {
+    "pr-queue-at-4": {
       "status": "BLOCKED",
-      "activity_count_14d": 280,
-      "last_activity_date": "2026-08-04",
-      "note": "NEW combined goal (prior split: pr-165-past-gate-conflicting + pr-171-fresh-self-improve both NEEDS_ATTENTION). Queue at 4 as of 8-04 (was 3 through 8-03 morning): #165 d16 CONFLICTING (7-19, docs skill-graph); #171 ~4d (7-31, github-trending 12-17 cap, ci-skills-json FAILURE 3-consec); #172 ~3d (8-01, daily-routine XAI prefetch, ci-skills-json FAILURE 3-consec); #173 fresh (8-03 20:17Z, claude require skills.json regen — targets shared ci-skills-json root cause on #171/#172). Blocker: operator weekly-batch cadence (next window 8-09 Sunday) + ci-skills-json shared FAILURE blocking #171/#172. Trend: new (goal composition changed)."
+      "activity_count_14d": 290,
+      "last_activity_date": "2026-08-05",
+      "note": "PR queue unchanged at 4 through 8-05 morning + 14:31Z heartbeat: #165 d17 CONFLICTING (7-19 docs skill-graph, past 7d escalation window T-5 to 8-09 Sunday-batch), #171 ~5d (7-31 github-trending 12-17 cap, ci-skills-json FAILURE waiting on #173), #172 ~4d (8-01 daily-routine XAI prefetch, ci-skills-json FAILURE waiting on #173), #173 ~2d (8-03 20:17Z ci-skills-json root-cause fix, mergeable=UNKNOWN + empty statusCheckRollup = CI hasn't triggered in ~35h). Blocker: operator weekly-batch cadence Sunday 8-09 + PR #173 CI trigger gap. Trend: flat."
     },
-    "ci-skills-json-failure-3-consec-day-formal-pattern": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 80,
-      "last_activity_date": "2026-08-04",
-      "note": "NEW goal since prior run. Root cause identified 8-02 via `gh run view 30713133283 --log-failed`: self-improve edits SKILL.md without running `./generate-skills-json`. PR #173 fresh 8-03 20:17Z targets exactly this: 'fix(claude): require skills.json regen when editing SKILL.md'. Formal-pattern threshold (3-consec-day) crossed 8-02. If #173 merges Sunday-batch 8-09, unblocks #171/#172. Activity ~80 in 14d. Trend: new."
+    "ci-skills-json-root-cause-solved": {
+      "status": "NEEDS_ATTENTION",
+      "activity_count_14d": 90,
+      "last_activity_date": "2026-08-05",
+      "note": "STATUS SHIFT ON_TRACK → NEEDS_ATTENTION. PR #173 (fresh 8-03 20:17Z) targets exact root cause — but mergeable=UNKNOWN + empty statusCheckRollup confirmed ~35h without CI trigger firing (per morning-brief 07:16Z + heartbeat 14:31Z). Fix is in-flight but not verifiable until CI runs. If #173 stays ungreen through 8-09 Sunday-batch, #171/#172 unblock path breaks. Trend: degrading (from ON_TRACK snapshot, CI trigger gap is fresh blocker for the fix)."
     },
-    "operator-on-chain-config-day-58": {
+    "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 170,
-      "last_activity_date": "2026-08-04",
-      "note": "Prior BLOCKED holds. Day-59 today (rolled from d58). defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Blocker phrase 'blocked' paired with defi-monitor/on-chain keywords 36+ times across 24 files in 14d. Operator action required — no automated unblock path. Activity 153 → ~170 = +11% (within ±25%). Trend: flat."
+      "activity_count_14d": 175,
+      "last_activity_date": "2026-08-05",
+      "note": "Day-60 today (rolled from d59). defi-monitor NO_CONFIG persists: memory/on-chain-watches.yml still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator-owned — no automated unblock path. Trend: flat."
     },
-    "priorities-md-60d-stale": {
+    "priorities-md-stale": {
       "status": "BLOCKED",
-      "activity_count_14d": 80,
-      "last_activity_date": "2026-08-04",
-      "note": "STATUS SHIFT AT_RISK → BLOCKED. Prior run applied 'Judgment override AT_RISK' note; this run applies mechanical rule (blocker_signal paired 3 times in 14d window: 7-24 + 7-26 logs). Priorities.md last reviewed 2026-06-04 = 61d today (rolled from d60). Vault inbox 43d cold streak. Blocker: no automated write path per thought-review skill spec — operator-owned refresh. Activity 176 → ~80 = -55% (>50% drop = degrading per activity rule). Trend: degrading (status reclassified to off-ladder BLOCKED + activity fell ≥50%)."
+      "activity_count_14d": 90,
+      "last_activity_date": "2026-08-05",
+      "note": "Day-62 today (rolled from d61). Vault inbox d45 cold streak (last real capture 2026-06-21T08:32Z). thought-review 07:16Z 8-05 confirms staleness + inbox drought both extend. Operator-owned refresh per thought-review skill spec — no automated write path. Weekly-review 8-10 T-5 refresh-ask. Trend: flat."
     }
   },
   "recently_cleared": {
     "07-utc-scheduler-slot-degraded": {
       "status": "DONE",
       "completed_at": "2026-08-02",
-      "note": "Kept for continuity — cleared in prior run 8-03."
+      "note": "Kept for continuity."
     },
     "07:00-utc-scheduler-slot-miss": {
       "status": "DONE",
       "completed_at": "2026-07-31",
-      "note": "Superseded by 07-utc-scheduler-slot-degraded 8-02 DONE. Kept for continuity."
+      "note": "Kept for continuity."
     },
     "iss-027-028-doc-gap": {
       "status": "DONE",
