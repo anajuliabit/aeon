@@ -1,20 +1,23 @@
+`STATUS_PAGE=DEGRADED — wrote docs/status.md`
+
 ## Summary
 
-Ran heartbeat skill at 14:31 UTC (14:00 slot, +31min dispatch-lag). All findings deduped against prior 48h logs — notification skipped.
+Ran the heartbeat skill for the 2026-08-05 20:00Z tick (fired at 20:50Z, +50min dispatch-lag on 20:00Z slot).
 
 **Files modified:**
-- `docs/status.md` — wholesale rewrite (43-skill table + 15-issue table, Overall 🔴 DEGRADED, Updated 2026-08-05 14:31 UTC, Next-scheduled btc-levels 16:15 UTC)
-- `memory/logs/2026-08-05.md` — full heartbeat entry appended
+- `docs/status.md` — regenerated wholesale (43 enabled skills sorted by last_success desc, 14 open issues, overall 🔴 DEGRADED, next scheduled run evening-recap at 21:00 UTC).
+- `memory/logs/2026-08-05.md` — appended Heartbeat 20:50 UTC section + Summary via Edit tool (bash `>` redirect blocked per ISS-028 workaround-chain, extending single-UTC-day call-site count to 12 = new memory-window record).
 
-**Verdict:** 🔴 DEGRADED — P0 chronic cohort persists (10 skills sr<50%, cost-report 10% worst). Composition-identity "chronic-cohort-alone-degraded" holds 3-consec-heartbeat-tick ~24h span (first cross-UTC-day durability gate crossed for new post-ISS-029 regime).
+**Findings (all dedup vs prior 48h — no notification sent per SKILL.md rule):**
+- **P0:** No failed/stuck/consec>=3 skills; 10-skill chronic-cohort persists (cost-report 10%, skill-analytics 21%, reg-monitor 21%, vuln-scanner 23%, market-context-refresh 32%, narrative-tracker 33%, search-skill 38%, fleet-control 40%, security-digest 43%, aixbt-pulse 47%). Composition-identity "chronic-cohort-alone-degraded" holds **4-consec-heartbeat-tick ~30h span = second 24h durability gate crossed + first evening-slot durability tick**.
+- **P1:** PR queue at 4 unchanged (#173 d2, #172 d5, #171 d6, #165 d17 CONFLICTING); operator weekly-batch cadence per CLAUDE.md. No urgent issues.
+- **P2:** ISS-030 pending 8-10 deciding-test; priorities.md 62d stale.
+- **P3:** ISS-027 12:00Z batch-dark d39; weekly-shiplog 16d stale; **skill-freshness formally crosses 2× threshold this tick (42h edge → 48.5h formal cross)**; heartbeat 08Z 2-consec-morning miss; 3 skills with no state entry (autoresearch/fork-skill-gap/operator-scorecard, dispatch-only).
 
-**Fresh signals (memory only, no notify):**
-1. cost-report ISS-030 signature cleared 8-04 21:48Z (consec 18→0 via weekly recovery, sr held 10% chronic)
-2. heartbeat 08:00Z 8-05 slot missed = 2-consec-morning miss (8-04 + 8-05), `[[morning-08Z-slot-dark]]` candidate
-3. skill-freshness co-missing 08Z slot both mornings, edge of 2× threshold (42h/48h)
-4. ISS-028 workaround-chain n=24+ across 14-UTC-day span
-5. ISS-029 clean 44h+ post-recovery
+**Fresh datapoints (non-dedup) for memory absorption:**
+1. New `[[heartbeat-dispatch-lag]]` rail candidate n=3 (31→45→50min escalation under 60min-warn).
+2. skill-freshness 2× threshold formally crossed.
+3. Chronic-cohort regime crosses second 24h durability gate + first evening-slot tick.
+4. ISS-028 workaround-chain 12 call-sites single-UTC-day (new memory-window record).
 
-**Notification:** SKIPPED — all 7 findings within 48h dedup window per skill spec.
-
-**Exit:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED · NOTIFY=SKIPPED (all 7 findings dedup'd 48h)`
+**Follow-up:** (i) 8-06 08Z decisive `[[morning-08Z-slot-dark]]` formal-pattern promotion test; (ii) 8-06 heartbeat dispatch-lag 4-consec candidate; (iii) 8-06 skill-health INDEX.md atomic-emit test; (iv) 8-10 Mon ISS-030 deciding-test; (v) PR #173 CI-nudge before 8-10 batch.
