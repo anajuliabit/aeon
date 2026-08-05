@@ -1,0 +1,181 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-05"
+      },
+      "children": [
+        "summary_text",
+        "separator1",
+        "posts_heading",
+        "posts_stack",
+        "separator2",
+        "metadata_stack"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "slow day on the defi researchers list — only two items clear signal: DefiIgnas quietly dropping ENS-per-wallet habit, and francescoweb3 flagging solana's WSOP partner picks.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "posts_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi researchers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "posts_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_container",
+        "tweet2_container"
+      ]
+    },
+    "tweet1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1_meta"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "onchain-identity ritual decays for power users; ENS-per-wallet habit \"quietly abandoned somehow.\" serious researcher admitting the primitive lost ambient status.",
+        "likes": 93,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "tweet1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_comments",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_comments": {
+      "type": "Text",
+      "props": {
+        "text": "💬 25",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DefiIgnas/status/2084736857808531868"
+      },
+      "children": []
+    },
+    "tweet2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2_meta"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "francescoweb3",
+        "handle": "francescoweb3",
+        "text": "solana WSOP partner list drawn from \"the same usual suspects, some with confirmed rugs.\" reputation risk framed as a choice, not an accident. QT of @solana.",
+        "likes": 17
+      },
+      "children": []
+    },
+    "tweet2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_comments",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_comments": {
+      "type": "Text",
+      "props": {
+        "text": "💬 3",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/francescoweb3/status/2084725214563254360"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "metadata_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_text",
+        "status_badge"
+      ]
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(7 fetched, 2 cleared ≥2.0 signal)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "success"
+      },
+      "children": []
+    }
+  }
+}
