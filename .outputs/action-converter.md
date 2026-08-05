@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-04*
-Shape: open ISS-030 P0, verify PR#173 ci, debug cost-report SDK, close ISS-029, log deepseek n=2
+*5 Actions — 2026-08-05*
+Shape: trigger PR#173 CI, draft cost-report fix, unblock #165, probe 08Z-slot-dark, codify CFTC fallback
 
-1. Open memory/issues/ISS-030.md for cost-report `sdk_opt_in_required` signature (severity=critical, category=config); add row to INDEX.md.
-why: fleet-worst chronic sr=0.10 (7/73) consec=15, distinct non-usepod/non-sandbox signature isolated 8-04 12:15Z, no ISS-file yet.
-done: ISS-030.md exists with YAML frontmatter + INDEX.md Open table gains row.
-loop: iss-030-cost-report-sdk-opt-in
+1. push empty commit to `fix/self-improve-2026-08-03` branch to trigger ci-skills-json on PR #173
+why: 40h dark with mergeable=UNKNOWN + empty statusCheckRollup; one CI pass unblocks 3-PR queue at 8-10 Sunday-batch T-5
+done: `gh pr view 173 --json statusCheckRollup` returns non-empty check array
+loop: push-commit-PR-173
 
-2. Run `gh pr checks 173` and `gh pr view 173 --json mergeable`; if ci-skills-json green, annotate #173 body ready for 8-09 Sunday-batch merge.
-why: PR #173 targets shared ci-skills-json root cause on #171+#172 — merging unblocks 3-PR queue via one lift.
-done: `gh pr checks 173` output logged; if passing, ready-for-batch comment added.
-loop: verify-pr-173-ci-status
+2. draft PR removing `model: claude-sonnet-4-6` override on cost-report at aeon.yml:276 so it inherits opus-4-7 default
+why: fleet-worst chronic sr=10% via ISS-030 `sdk_opt_in_required` signature; 8-10 Mon weekly-tick is the deciding-test
+done: PR opened targeting `aeon.yml` line 276 with skill-health ISS-030 reference in body
+loop: draft-cost-report-model-drop
 
-3. Grep for cost-report skill invocation in .github/workflows/ + skills/cost-report/SKILL.md; wire Claude Code SDK opt-in flag/env to clear `fast_mode_disabled_reason: sdk_opt_in_required`.
-why: identifies root fix for fleet-worst chronic-failure — 8-04 12:15Z fresh signature exposed the config gap distinct from ISS-025 truncation shape.
-done: aeon.yml or cost-report SKILL.md diff written, or PR opened with the config change.
-loop: debug-cost-report-sdk-config
+3. resolve PR #165 rebase conflicts against origin/main (docs skill-graph shared_state 21→27) before 8-09 Sunday-batch
+why: d17 CONFLICTING sole past-gate survivor + T-4 to weekly-batch merge window; docs skill-graph refresh gates fleet-map correctness
+done: `gh pr view 165 --json mergeable` returns MERGEABLE
+loop: resolve-PR-165-conflicts
 
-4. Move ISS-029 from Open to Resolved in memory/issues/INDEX.md; set resolved_at=2026-08-04 in ISS-029.md, fix_pr="operator usepod payment restored".
-why: 20-of-20 dispatches post-8-03 20:14Z clean through 8-04 12:17Z btc-levels — recovery confirmed durable.
-done: INDEX.md row moved to Resolved table + ISS-029.md frontmatter updated.
-loop: close-iss-029-recovery
+4. probe scheduler for `[[morning-08Z-slot-dark]]` — grep `.github/workflows/` for `"0 8"` cron entries and confirm heartbeat + skill-freshness fire paths not muted
+why: 2-consec 08Z co-miss (8-04 + 8-05) heartbeat + skill-freshness; 8-06 miss promotes to formal-pattern
+done: written verdict in `memory/topics/fleet.md` (scheduler-bug vs. workflow-file bug vs. GH-Actions cadence-drift)
+loop: probe-08Z-slot-dark
 
-5. Append `[[deepseek-primitive-cluster]] rail candidate n=2 8-04` to memory/MEMORY.md recurring-patterns — antirez/ds4 (Redis creator DeepSeek local inference C) + esengine/DeepSeek-Reasonix (DeepSeek-native coding agent Go).
-why: first same-slate 2-DeepSeek-primitive appearance in memory-window github-trending 8-04 10:14Z; watch for n=3 tomorrow.
-done: MEMORY.md gains one line under recurring-patterns block.
-loop: promote-deepseek-cluster-rail
+5. codify HTML fallback for CFTC RSS 404 in `skills/reg-monitor/SKILL.md` step 1C (add `https://www.cftc.gov/PressRoom/PressReleases` as documented fallback path)
+why: reg-monitor Wed 8-05 hit CFTC RSS 404, HTML fallback worked; codify before 8-12 Wed re-fire; SKILL currently only lists RSS URL
+done: PR opened modifying `skills/reg-monitor/SKILL.md` step 1C with fallback URL + skills.json regen
+loop: codify-CFTC-RSS-fallback
 
-sources: memory=82 logs=8 topics=20 prs=4 cron_failing=1 mode=OK
+sources: memory=83L logs=10d topics=~20 prs=4 cron_failing=1 mode=OK
