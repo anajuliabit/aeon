@@ -1,32 +1,25 @@
-*GitHub Trending — 2026-08-04*
+*GitHub Trending — 2026-08-05*
 
-*Top pick* — [lyogavin/airllm](https://github.com/lyogavin/airllm)
-Consumer inference floor drops sharply: 70B params on a single 4GB GPU. Fires at 45× its own baseline in one day.
+*Top pick* — [firecrawl/pdf-inspector](https://github.com/firecrawl/pdf-inspector)
+day-2 compounding (+49% vs yesterday, 42× baseline) on a standalone rust pdf classifier + extractor. rag ingest primitive from a team that already ships the saas.
 
 *AI/ML*
-• [lyogavin/airllm](https://github.com/lyogavin/airllm) — ★ 1,085 today (27.8k total) · Jupyter · RETURNING
-Layered offload pushes a 70B model through a 4GB card. Local-inference goalpost moves.
+• [lyogavin/airllm](https://github.com/lyogavin/airllm) — ★ 1,711t (28.7k total) · Jupyter · RETURNING
+day-2 sustained compounding (+58% vs yesterday, 68× baseline). settles yesterday's question: not a one-day spike like invidious 8-02.
 
-• [antirez/ds4](https://github.com/antirez/ds4) — ★ 384 today (20.5k total) · C · ACCELERATING
-Redis creator hand-writes a C inference engine for DeepSeek 4 across Metal/CUDA/ROCm. Zero-dep local path.
+• [obra/superpowers](https://github.com/obra/superpowers) — ★ 653t (266.8k total) · Shell · ACCELERATING
+jesse vincent's agentic-skills framework. 266.8k stars in 300d is one of the largest total-star pools on any trending sweep in memory-window; first appearance on ours.
 
-• [esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — ★ 883 today (30.4k total) · Go · ACCELERATING
-DeepSeek-native terminal coding agent. 290 stars/d for 105 days straight; today 3× on fresh push.
-
-• [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) — ★ 2,446 today (16.9k total) · PowerShell · HOLDOVER
-Day-3 compounding burn: 335 → 1,320 → 2,446. Security/reverse-eng skill router extends the skill-pack rail.
+• [livekit/agents](https://github.com/livekit/agents) — ★ 432t (12.6k total) · Python · RETURNING
++192% breakout day. livekit crosses from real-time infra into voice-agent framework. dropped yesterday on slot economics, kept today on the fresh spike.
 
 *Devtools*
-• [firecrawl/pdf-inspector](https://github.com/firecrawl/pdf-inspector) — ★ 1,699 today (9.1k total) · Rust · ACCELERATING
-Firecrawl ships a standalone Rust PDF classifier and text extractor. RAG ingest primitive with real perf.
+• [firecrawl/pdf-inspector](https://github.com/firecrawl/pdf-inspector) — ★ 2,540t (10.7k total) · Rust · ACCELERATING
+fast pdf classification + extraction as a lib, split out of firecrawl's saas ingest pipeline.
 
 *Infra*
-• [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) — ★ 1,090 today (12.6k total) · TypeScript · HOLDOVER
-Yesterday's 227-star fire compounds 4.8× to 1,090. Hyperscaler agent-memory hub keeps burning.
-
-*Web/Apps*
-• [usekaneo/kaneo](https://github.com/usekaneo/kaneo) — ★ 665 today (7.1k total) · TypeScript · RETURNING
-Open-source PM tool at 55× baseline today. Third trending appearance in a week; past coincidence now.
+• [uber/ADR](https://github.com/uber/ADR) — ★ 148t (836 total) · Python · RETURNING
+uber ships enterprise ai-agent security: observability, benchmarking, threat detection. rare corp-oss drop on agent-ops.
 
 ---
-sources: trending=ok · gh_api=ok · kept 7/16
+sources: trending=ok · gh_api=ok · kept 5/18
