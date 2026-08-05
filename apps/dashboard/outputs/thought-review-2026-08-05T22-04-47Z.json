@@ -1,0 +1,92 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_captures",
+        "row_inbox",
+        "row_priorities",
+        "text_weekly"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures in last 24h",
+        "value": "0"
+      }
+    },
+    "row_inbox": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_cold_streak",
+        "stat_inbox_days"
+      ]
+    },
+    "badge_cold_streak": {
+      "type": "Badge",
+      "props": {
+        "text": "cold streak",
+        "variant": "outline"
+      }
+    },
+    "stat_inbox_days": {
+      "type": "Stat",
+      "props": {
+        "label": "vault inbox",
+        "value": "45d"
+      }
+    },
+    "row_priorities": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_stale",
+        "stat_priorities_days"
+      ]
+    },
+    "badge_stale": {
+      "type": "Badge",
+      "props": {
+        "text": "stale",
+        "variant": "destructive"
+      }
+    },
+    "stat_priorities_days": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md",
+        "value": "62d"
+      }
+    },
+    "text_weekly": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review 8-10 T-5 carries the refresh-ask",
+        "variant": "muted"
+      }
+    }
+  }
+}
