@@ -1,18 +1,18 @@
-*Agent Buzz — 2026-08-04*
-_thin day: three concrete MCP launches on the ship side, two capability-boundary pieces on the safety side._
+*Agent Buzz — 2026-08-05*
+_mostly the mcp-as-enforcement frame — three "put the rules at the boundary" variants, plus two agent-behavior-at-scale drops._
 
-**MCP shipping surface**
-• @sethsetse — lance.app: MCP server that ships iOS apps end-to-end, no App Store Connect handling from the human.
-  https://x.com/sethsetse/status/2084427897725665785
-• @gustavocaetano — mcp-genoffice bridges @genspark_ai's open-sourced GenOffice into Hermes' MCP catalog as first git-install entry.
-  https://x.com/gustavocaetano/status/2084423187664601485
-• @polyfork_ — agent builds a full village via REST + MCP, one draw call at the end. Live at polyfork.dev.
-  https://x.com/polyfork_/status/2084413908912328980
+**mcp as enforcement layer**
+• @Aurimas_Gr — each data domain owns its mcp server; usage rules sit at the source, not inside the agent
+  https://x.com/Aurimas_Gr/status/2084608000610754903
+• @Ardor_Cerebrum — getblock prod: agent gets vpn + read-only creds to live infra, mcp handles routing, no sandbox
+  https://x.com/Ardor_Cerebrum/status/2084501691886669960
+• @cv_usk — one gateway mcp fronting the servers: auth, rate-limit, audit in one place
+  https://x.com/cv_usk/status/2084523730068230442
 
-**Agent capability boundary**
-• @1clawAI — Microsoft's Black Hat pitch: keep credentials unreachable from the agent itself. That's the only durable control, not sandboxing after the fact.
-  https://x.com/1clawAI/status/2084427473190621565
-• @BkashJosi — GitHub Agent Finder: discover-on-demand + policy-approved tool loading instead of shipping every capability upfront.
-  https://x.com/BkashJosi/status/2084427730796564622
+**agent behavior at scale**
+• @haoran_qiu98 — first prod-scale copilot-agent characterization: 3.2M users, 13M sessions, 761M llm calls, 95T tokens
+  https://x.com/haoran_qiu98/status/2084441858286235769
+• @AINativeF — scrambletoolbench: agents keep searching even when their own tool graph already points to the answer
+  https://x.com/AINativeF/status/2084790602693259346
 
-<!-- _src: xai-cache · candidates: 12 → kept: 5 -->
+<!-- _src: xai-cache · candidates: 10 → kept: 5 -->
