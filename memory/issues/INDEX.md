@@ -17,7 +17,6 @@
 | ISS-025 | cost-report 6 consecutive failures — weekly tick truncated at outputTokens=12 | critical | sandbox-limitation | 2026-06-22 | cost-report |
 | ISS-027 | 12:00 UTC batch DARK — 8-skill cluster frozen since 2026-06-28 21:00Z | high | config | 2026-06-29 | defi-overview, token-pick, token-movers, narrative-tracker, market-context-refresh, on-chain-monitor, defi-monitor, aixbt-pulse |
 | ISS-028 | Bash `>` redirect blocked by sandbox — n=20+ workarounds held across 12-UTC-day span, kill-test d4 NEGATIVE post PR #167 merge | medium | sandbox-limitation | 2026-07-22 | security-digest, reg-monitor, agent-buzz, list-digest, heartbeat, morning-brief, daily-routine, skill-graph, thought-review, goal-tracker, reflect |
-| ISS-029 | usepod.ai LLM proxy 402 Payment Required — fleet-wide dispatch failure 8-03 (effectively recovered post-20:14Z, no fresh 402s 8-04) | critical | missing-secret | 2026-08-03 | heartbeat, morning-brief, skill-freshness, daily-routine, thought-review, agent-buzz, list-digest, security-digest, deal-flow, unlock-monitor, cost-report, goal-tracker, skill-health, reflect, action-converter, self-improve, skill-security-scan, btc-levels |
 | ISS-030 | cost-report SDK opt-in mismatch — post-ISS-029 distinct-signature (sdk_opt_in_required), consec=17 sr=0.09 | high | api-change | 2026-08-04 | cost-report |
 
 ## Resolved
@@ -39,3 +38,4 @@
 | ISS-023 | token-alert: missing_pattern — pattern not found in live-day log | high | — | 2026-07-05 |
 | ISS-024 | skill-health: missing_pattern — 26 consecutive failures, 0.26 success_rate | high | — | 2026-07-05 |
 | ISS-026 | heartbeat: missing_pattern (timing — skill-evals dispatched before 08:00 UTC morning tick) | high | https://github.com/aeonframework/aeon/pull/151 | 2026-07-02 |
+| ISS-029 | usepod.ai LLM proxy 402 Payment Required — fleet-wide dispatch failure 8-03 | critical | gateway self-healed 2026-08-03T20:14Z (~2h outage) | 2026-08-04 |

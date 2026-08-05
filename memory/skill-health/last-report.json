@@ -1,18 +1,18 @@
 {
-  "hash": "ed7946824b3ec31307452bf04f28ddb16a6c8121e1d762965524f050ba518149",
-  "last_notified_at": "2026-08-04T18:19:52Z",
-  "last_run_at": "2026-08-04T18:19:52Z",
+  "hash": "35369f69ae8692fef0783b86965a9e9255cc88df6aadb25fd3af87298f60aa4e",
+  "last_notified_at": "2026-08-05T19:51:30Z",
+  "last_run_at": "2026-08-05T19:51:30Z",
   "classification": {
-    "critical": ["cost-report"],
-    "degraded": ["action-converter", "aixbt-pulse", "defi-monitor", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
+    "critical": [],
+    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
     "flapping": [],
     "warning": ["agent-buzz", "daily-routine", "deal-flow", "defi-overview", "evening-recap", "fork-skill-digest", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
     "healthy_count": 8,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "None fresh. Delta since prev formal tick 2026-08-03T20:16:56Z: CRITICAL 11→1 (10 skills recovered), DEGRADED 8→17 (formerly-CRITICAL skills settled back to their historical low-sr baseline once consecutive_failures reset), WARNING 15→14, HEALTHY 6→8, NO_DATA unchanged. Systemic api.usepod.ai 402 cluster from prev tick DEFINITIVELY RESOLVED — gateway self-healed 2026-08-03T20:14Z (~2h outage window). ISS-029 closed as resolved. cost-report remains sole CRITICAL under a distinct sdk_opt_in_required signature (Claude Code SDK fast-mode config mismatch on the sonnet-4-6 model override) — filed as ISS-030, isolated to a single skill (no fleet-wide pattern). All 43 enabled skills accounted for (1+17+14+8+3=43).",
+  "systemic": "None fresh. Delta since prev formal tick 2026-08-04T18:19:52Z: CRITICAL 1→0 (cost-report consec 17→0 after 2026-08-04T21:48:47Z success — first weekly report since 7-27 shipped), DEGRADED 17→18 (cost-report promoted from CRITICAL, all others unchanged), WARNING 14→14, HEALTHY 8→8, NO_DATA 3→3. No fresh usepod 402 signatures in the ~24h window; no fresh sdk_opt_in_required signatures since 8-04 20:32Z. Chronic-cohort DEGRADED baseline (skill-analytics 0.19, reg-monitor 0.21, vuln-scanner 0.23, market-context-refresh 0.32, narrative-tracker 0.33, search-skill 0.38, security-digest 0.43, aixbt-pulse 0.47, skill-health/self-improve 0.51, defi-monitor/action-converter/goal-tracker 0.53, reflect 0.55, skill-evals 0.56, unlock-monitor 0.57, list-digest 0.59) unchanged — historical low-sr floor from months of pre-recovery accumulation. INDEX.md ISS-029 sync completed this run (file was marked resolved 8-04 18:19:52Z but INDEX row lingered under Open — heartbeat 20:05Z 8-04 flagged the discrepancy).",
   "open_issues": 14,
   "resolved_this_run": 1,
-  "filed_this_run": 1,
-  "prev_hash": "29af7ab737121b6d6fb32901d8992bc0e73a4742bbd9e68a1c0dbac35ed0cab7"
+  "filed_this_run": 0,
+  "prev_hash": "ed7946824b3ec31307452bf04f28ddb16a6c8121e1d762965524f050ba518149"
 }
