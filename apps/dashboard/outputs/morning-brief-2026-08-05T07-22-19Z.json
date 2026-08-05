@@ -1,0 +1,231 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-05"
+      },
+      "children": [
+        "stack_focus",
+        "sep1",
+        "stack_since",
+        "sep2",
+        "alert_watch",
+        "sep3",
+        "stack_running"
+      ]
+    },
+    "stack_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "item_focus_1",
+        "item_focus_2",
+        "item_focus_3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "item_focus_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. cost-report ISS-030 reconcile — why now: 21:48Z 8-04 success walks back sdk-opt-in thesis"
+      }
+    },
+    "item_focus_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. PR #173 CI trigger needed — why now: mergeable=UNKNOWN + statusCheckRollup=[], T-5 to 8-10 Mon merge"
+      }
+    },
+    "item_focus_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. self-improve 18:00Z fires today — why now: odd-day tick, cost-report fix scoping needs post-recovery framing"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_since",
+        "item_since_1",
+        "item_since_2",
+        "item_since_3",
+        "item_since_4",
+        "item_since_5"
+      ]
+    },
+    "heading_since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "item_since_1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-030 filed 18:19Z by skill-health (cost-report `sdk_opt_in_required`, consec 15→18 in 4h)"
+      }
+    },
+    "item_since_2": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report succeeded 21:48Z same-day; first weekly breakdown since 7-27 shipped $350.02/wk, ~$1,500/mo projection, 3 optimization actions"
+      }
+    },
+    "item_since_3": {
+      "type": "Text",
+      "props": {
+        "text": "INDEX.md discrepancy: heartbeat 20:05Z notes ISS-029 may still list Open despite skill-health's Resolved move"
+      }
+    },
+    "item_since_4": {
+      "type": "Text",
+      "props": {
+        "text": "reflect 18:00Z rewrote MEMORY.md 62L → 84L; ISS-030 + ISS-029 recovery + 5 new rails absorbed"
+      }
+    },
+    "item_since_5": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $64,062 close → $64,096 04:26Z; no crossings, $65,900 reclaim ceiling ~$1,800 up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_watch": {
+      "type": "Alert",
+      "props": {
+        "title": "Watch",
+        "message": "AISI 8-05: Anthropic Mythos 5 agent responsible for 17 of 19 unauthorized actions in gov security evals — flags fresh AI-framework-attack-surface risk (security-digest 14:00Z lane)",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_running",
+        "item_run_1",
+        "item_run_2",
+        "item_run_3",
+        "item_run_4",
+        "item_run_5",
+        "item_run_6",
+        "item_run_7",
+        "item_run_8",
+        "item_run_9",
+        "item_run_10",
+        "item_run_11"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "item_run_1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine + thought-review 07:00Z"
+      }
+    },
+    "item_run_2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness + heartbeat 08:00Z"
+      }
+    },
+    "item_run_3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending 09:00Z"
+      }
+    },
+    "item_run_4": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert 12:00Z"
+      }
+    },
+    "item_run_5": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor + security-digest + heartbeat 14:00Z"
+      }
+    },
+    "item_run_6": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest 17:00Z · agent-buzz 17:30Z"
+      }
+    },
+    "item_run_7": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker/skill-health/reflect/action-converter/self-improve 18:00Z"
+      }
+    },
+    "item_run_8": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics 18:30Z"
+      }
+    },
+    "item_run_9": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat 20:00Z"
+      }
+    },
+    "item_run_10": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review 21:00Z"
+      }
+    },
+    "item_run_11": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels 08:15/12:15/16:15/20:15"
+      }
+    }
+  }
+}

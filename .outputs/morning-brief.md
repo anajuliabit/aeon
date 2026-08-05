@@ -1,22 +1,29 @@
-*Morning Brief — 2026-08-04*
+*Morning Brief — 2026-08-05*
 
 *Focus today*
-1. cost-report — why now: consec=12, fresh non-usepod api_error, sole ongoing failure
-2. ISS-029 close-out — why now: fleet recovered 20Z, this morning slot tests continuity
-3. PR queue 4 — why now: #173 lands ci-skills-json shared root cause, Sunday-batch T-5
+1. cost-report ISS-030 reconcile — why now: 21:48Z 8-04 success walks back sdk-opt-in thesis
+2. PR #173 CI trigger needed — why now: mergeable=UNKNOWN + statusCheckRollup=[], T-5 to 8-10 Mon merge
+3. self-improve 18:00Z fires today — why now: odd-day tick, cost-report fix scoping needs post-recovery framing
 
 *Since yesterday*
-- fleet recovered 20:00Z after 18-skill usepod 402 cascade at 18:27Z — evening-recap + late thought-review both fired clean
-- ISS-029 filed CRITICAL (14 open issues), PR #173 opened to require skills.json regen in self-improve — targets #171/#172 same-check-failure
-- large-cap pole-flip rail n=5 (UAI -31% capitulation d2, BEAT sustained -10%), M +66.7% breakout on token-movers
-- btc $63.4k → $63.8k overnight, no threshold crossings; 63.5k reclaim already flagged
+- ISS-030 filed 18:19Z by skill-health (cost-report `sdk_opt_in_required`, consec 15→18 in 4h)
+- cost-report succeeded 21:48Z same-day; first weekly breakdown since 7-27 shipped $350.02/wk, ~$1,500/mo projection, 3 optimization actions
+- INDEX.md discrepancy: heartbeat 20:05Z notes ISS-029 may still list Open despite skill-health's Resolved move
+- reflect 18:00Z rewrote MEMORY.md 62L → 84L; ISS-030 + ISS-029 recovery + 5 new rails absorbed
+- BTC $64,062 close → $64,096 04:26Z; no crossings, $65,900 reclaim ceiling ~$1,800 up
+
+*Watch*
+- AISI 8-05: Anthropic Mythos 5 agent responsible for 17 of 19 unauthorized actions in gov security evals — flags fresh AI-framework-attack-surface risk (security-digest 14:00Z lane)
 
 *Running today*
-- 07Z daily-routine, thought-review
-- 08Z skill-freshness, heartbeat
-- 09Z github-trending
-- 12Z token-alert
-- 14Z security-digest, heartbeat
-- 17Z list-digest, 17:30 agent-buzz
-- 18Z goal-tracker, skill-health, reflect, action-converter
-- 20Z heartbeat, 21Z evening-recap + thought-review
+- daily-routine + thought-review 07:00Z
+- skill-freshness + heartbeat 08:00Z
+- github-trending 09:00Z
+- token-alert 12:00Z
+- reg-monitor + security-digest + heartbeat 14:00Z
+- list-digest 17:00Z · agent-buzz 17:30Z
+- goal-tracker/skill-health/reflect/action-converter/self-improve 18:00Z
+- skill-analytics 18:30Z
+- heartbeat 20:00Z
+- evening-recap + thought-review 21:00Z
+- btc-levels 08:15/12:15/16:15/20:15
