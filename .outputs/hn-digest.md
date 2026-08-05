@@ -1,34 +1,28 @@
-*HN Digest — 2026-08-01*
+*HN Digest — 2026-08-05*
 
-_ai cuts both ways today — 500-bug chrome sweep on one side, quanta critique of thinking-token theater on the other; tailscale eats a hugging face post-mortem it didn't have to._
+_ai-tooling day again — 2 of 5 are model/agent infra. libexpat gets an unlikely municipal sponsor, waymo turns on dallas, interpol puts a majority-percentage on ai-assisted cybercrime in africa._
 
-1. **[Security & policy]** [Google fixed more Chrome bugs in June than over the past two years, thanks to AI](https://blog.google/security/chrome-stronger-with-every-update/) — 505 pts · 519 comments
-   Why it matters: ai-driven fuzzing and triage graduated from suggestion to production — one month of chrome fixes eclipsed the prior 24.
-   HN take: "adversarial testing, checking developer assumptions, refactor suggestions... critiques reserved for blindly generating code are too easily conflated with the rest." — _mw888_
-   [Discussion](https://news.ycombinator.com/item?id=49120097)
+1. **[AI & agents]** [Mistral's Shieldstral: 3B open-weights model for multimodal moderation](https://mistral.ai/news/shieldstral/) — 378 pts · 90 comments
+   Why it matters: purpose-built moderation weights small enough to self-host, permissive terms. one more hosted-guardrail api you can cut.
+   HN take: "whole world of purpose-built vertical llms out there — cost-optimized, task-specific. Mistral and Thinking Machines are scooping up everything that doesn't need frontier general-purpose models." — _nikcub_
+   [Discussion](https://news.ycombinator.com/item?id=49171268)
 
-2. **[Security & policy]** [Tailscale didn't stop the Hugging Face intrusion](https://tailscale.com/blog/hugging-face-intrusion) — 540 pts · 201 comments
-   Why it matters: no tailscale cve was exploited, but a customer got popped through it. they wrote the post-mortem anyway.
-   HN take: "they could have just stayed quiet and i dont think anyone would have bat an eye." — _john_strinlai_
-   [Discussion](https://news.ycombinator.com/item?id=49127306)
+2. **[AI & agents]** [I am retiring from fulltime writing (and pseudonymity) to launch Guardian Angel](https://twitter.com/gwern/status/2084739205071343837) — 258 pts · 156 comments
+   Why it matters: gwern drops ~15 years of pseudonymity to build a personal-ai product — pitched as an alignment/privacy layer between users and frontier models.
+   HN take: "how much would i pay to rent my fucking self from a landlord?... they're incentivised to keep dropping 'my' intelligence and dangle a booster carrot for a small fee." — _jodrellblank_
+   [Discussion](https://news.ycombinator.com/item?id=49174900)
 
-3. **[AI & agents]** [qm – Multiplayer agent harness for work](https://github.com/yc-software/qm) — 555 pts · 113 comments
-   Why it matters: yc's tooling arm ships an agent harness whose contribution rule is "describe the change in .md, we'll implement it" — humans write text, agents write code.
-   HN take: "sqlite has a conceptually similar contribution process — motivated by keeping copyrighted code out. asking that 'random people' don't send code is not a novel, post-ai idea." — _jez_
-   [Discussion](https://news.ycombinator.com/item?id=49126604)
+3. **[Infra & devtools]** [libexpat now funded by the City of Munich for up to 6 months](https://blog.hartwork.org/posts/libexpat-city-of-munich-open-source-sabbatical/) — 244 pts · 33 comments
+   Why it matters: xml parser that ships with basically every linux distro finally gets paid maintenance — a municipality picks up the tab instead of a foundation or vendor.
+   HN take: "our mayor until 2014 furthered LiMux — migrated 14,000+ public-admin PCs to Linux. his successor caved to Microsoft's siren song, abolished LiMux, and Microsoft got a nice campus in the city." — _weinzierl_
+   [Discussion](https://news.ycombinator.com/item?id=49176606)
 
-4. **[AI & agents]** [Run Kimi K3 using 29 GB of RAM at 0.50 tok/s](https://github.com/sqliteai/waste) — 239 pts · 96 comments
-   Why it matters: sqliteai's `waste` streams a 1t-param model off ssd; kimi k3 on a mac at half a token per second. accessibility over throughput.
-   HN take: "this Mac uses 30-50W, so 40-60 tok/Wh, vs maybe 80k for a modern GPU cluster. So that's about 1000-2000x more power for the SSD streaming." — _herf_
-   [Discussion](https://news.ycombinator.com/item?id=49123386)
+4. **[Business & funding]** [Waymo in Dallas](https://waymo.com/blog/shorts/dallas-open-to-all/) — 284 pts · 479 comments
+   Why it matters: another open-to-all city. cadence is starting to read like a real network rather than a demo, and uber pricing is the pressure axis.
+   HN take: "uber rides run ~$1.5/mile. assume 200K miles lifetime, 3mi/kWh, $0.20/kWh — generates $300K in revenue against $13K of electricity." — _dmitriy_ko_
+   [Discussion](https://news.ycombinator.com/item?id=49172836)
 
-5. **[AI & agents]** [Is AI reasoning right for the wrong reasons?](https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/) — 159 pts · 182 comments
-   Why it matters: quanta profiles melanie mitchell's argument that chain-of-thought and thinking tokens are "wishful mnemonics" — the labels drive belief more than the mechanism warrants.
-   HN take: "sensible legislation might require commercial AI providers discourage anthropomorphisation by avoiding personal pronouns from chatbot interfaces. GOOD: 'this computer system can start the refund process.'" — _ForHackernews_
-   [Discussion](https://news.ycombinator.com/item?id=49124358)
-
-6. **[Misc]** [Elevators](https://john.fun/elevators) — 1244 pts · 297 comments
-   Why it matters: interactive walkthrough of modern elevator dispatch — group control, destination dispatch, regen braking, the physics that make naive queueing math wrong.
-   HN take: "going down empty is typically more energy-consuming — counterweighted. if brakes fail the cab won't crash down, it will go up, possibly dragging you into the fire. many firefighters died because of that." — _cyberax_
-   [Discussion](https://news.ycombinator.com/item?id=49124218)
-
+5. **[Security & policy]** [AI fuels more than half of cybercrime in Africa as scams surge — Interpol](https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/) — 198 pts · 159 comments
+   Why it matters: first regional assessment to put a majority-percentage on ai-assisted crime. deepfake romance and llm-drafted phishing named as the dominant vectors.
+   HN take: "this paper is the one and only source for every claim from the past 10 years that 'scammers make mistakes in scams on purpose.'... the paper itself is pure speculation." — _Nition_
+   [Discussion](https://news.ycombinator.com/item?id=49175826)

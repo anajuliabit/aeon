@@ -1,37 +1,38 @@
-*Daily Routine — 2026-08-04*
+*Daily Routine — 2026-08-05*
 
-_chain outputs stale-carried from 8-01 (ISS-029 usepod 402 blocked 8-03 dispatches); tweet roundup on WebSearch fallback (XAI unreachable in sandbox — no prefetch case for daily-routine)._
+*Top Winners (24h)*
+1. PUMP: $0.002466 (+10.4%, 7d +32%) — TRENDING+UP day-5 continuity
+2. SHFL: $0.3060 (+10.1%) — thin book, rank #213
+3. BTW: $0.1271 (+8.9%)
+4. VELVET: $0.4666 (+8.2%)
+5. ZEC: $517.91 (+6.3%) — MAJOR, privacy bid on $226M vol
 
-*Top 5 Winners (24h · 8-01 tape)*
-1. BEAT $4.57 (+17.7% · 7d +35%) — breakout sustained
-2. US $0.0452 (+10.8%)
-3. M $1.09 (+10.3%)
-4. PUMP $0.00219 (+9.5%) — trending, $106M vol leads
-5. PI $0.0864 (+5.6%)
+*Top Losers (24h)*
+1. UB: $0.1158 (-39.1%) — CAPITULATION, memory-window magnitude tier
+2. BEAT: $2.54 (-18.4%, 7d -31%) — pole-flip vs 8-01 #1 winner
+3. META: $5.56 (-13.3%)
+4. LDO: $0.2882 (-12.9%) — CAPITULATION, DeFi bleed
+5. BinanceLife: $0.4854 (-8.4%)
 
-*Top 5 Losers (24h · 8-01 tape)*
-1. UNI $4.12 (-8.5%) — 7-31 winner → 8-01 loser, 3rd consec flip-day
-2. AAVE $91.12 (-7.7%)
-3. LIT $2.05 (-7.7%)
-4. HYPE $52.30 (-6.4%) — only top-10 dropping harder than BTC/ETH
-5. ONDO $0.386 (-4.0%)
+_tape: 37% top-100 green, median -0.1%; BTC +0.7% / ETH +0.3% / HYPE +4.8% majors, DeFi bleeds. [[large-cap-single-day-flip]] rail extends n=6 (UB + BEAT join UAI/HOLO/UNI/PUMP)._
 
-*Tweet Roundup* (WebSearch fallback — listicle-heavy, low signal)
-*AI:* EU AI Act high-risk provisions enforceable 8-02: risk mgmt + human oversight + chatbot self-ID mandates. Google shipping consumer agents that phone stores to check inventory. Cequence AI Gateway ships AI Discovery + LLM/Skill Registry + Agent Personas.
-*Dev:* a16z warns holding devs liable for downstream misuse would break OSS. TypeScript overtook Python + JS by GitHub contributor count (+66.6% YoY).
-*Crypto:* generic-listicle results — no fresh chatter surfaced through fallback path.
+*Tweet Roundup*
+_xai skipped — sandbox strips $XAI_API_KEY; websearch fallback_
+
+*Crypto:* $170M into spot BTC ETFs 8-04 (IBIT $111M lead) against Coldcard 1,596 BTC confirmed stolen, 32k BTC onto exchanges same day, FalconX -10% headcount, Hashdex closing a BTC ETF. Fear&Greed 25 extreme fear, BTC dom 56.6%.
+*AI:* EU AI Act enforcement live 8-02 — disclosure required for AI interactions + synthetic-media watermarks + deepfake labeling. Cognition acquires Poke (low nine-figures) for Devin. GPT-5.6 Sol 89.5% Terminal-Bench 2.1 edges Opus 5 89.1%.
+*Dev:* Google joins Eclipse Foundation, sponsors Open VSX (powers Antigravity/Kiro/Cursor/Windsurf). Linux 7.0 Rust support promoted from experimental to stable.
 
 *Paper of the Day*
-"Filesystem-Based Memory for LLM Agents: Organization, Evolution, and Sustainability" — Zhou/Yu/Wei/Wu +7 · ↑6
-first systematic study of the exact `MEMORY.md` + `topics/` + `logs/` shape aeon runs on — organized stores halve retrieval cost at scale, and organization erodes for all but the strongest management agent.
-https://arxiv.org/abs/2607.26637
+"PAST-Bench: Foundations of Recursive Self-Improvement in Personal Agents" — Princeton, ↑18. 26 scenarios × 204 episodes across 7 models × 4 frameworks: gains real but uneven, headline improvement often lacks evidence of the save/retrieve/update path it claims. exactly the loop aeon runs on. [arxiv.org/abs/2608.04003](https://arxiv.org/abs/2608.04003)
+_[[memory-primitive-paper streak]] 4-consec → 5-consec, thaws ISS-029 8-04 freeze._
 
 *GitHub Issues*
-GITHUB_ISSUES_OK — no new issues (streak extends, 8-consec-day baseline from memory)
+GITHUB_ISSUES_OK — clean-day streak 9 → 10 (7-26 → 8-05)
 
 *HN Digest*
-1. [Google fixed more Chrome bugs in June than past two years, thanks to AI](https://blog.google/security/chrome-stronger-with-every-update/) (505pts) — ai fuzzing + triage graduated to prod; 1 month eclipses prior 24. [Discuss](https://news.ycombinator.com/item?id=49120097)
-2. [Tailscale didn't stop the Hugging Face intrusion](https://tailscale.com/blog/hugging-face-intrusion) (540pts) — no tailscale CVE, customer popped through it; post-mortem shipped anyway. [Discuss](https://news.ycombinator.com/item?id=49127306)
-3. [qm — multiplayer agent harness for work](https://github.com/yc-software/qm) (555pts) — yc contribution rule: describe change in `.md`, agents write code. [Discuss](https://news.ycombinator.com/item?id=49126604)
-4. [Run Kimi K3 in 29GB RAM at 0.50 tok/s](https://github.com/sqliteai/waste) (239pts) — sqliteai streams 1T-param off ssd; 1000-2000× more power than GPU cluster per token. [Discuss](https://news.ycombinator.com/item?id=49123386)
-5. [Is AI reasoning right for the wrong reasons?](https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/) (159pts) — mitchell: CoT + thinking tokens = wishful mnemonics. [Discuss](https://news.ycombinator.com/item?id=49124358)
+1. [Mistral Shieldstral: 3B open-weights multimodal moderation](https://mistral.ai/news/shieldstral/) (378pts) — self-hostable guardrail, one more hosted-api you can cut. [HN](https://news.ycombinator.com/item?id=49171268)
+2. [Gwern drops pseudonymity to launch Guardian Angel](https://twitter.com/gwern/status/2084739205071343837) (258pts) — personal-ai product pitched as alignment/privacy layer. [HN](https://news.ycombinator.com/item?id=49174900)
+3. [libexpat funded by City of Munich 6mo](https://blog.hartwork.org/posts/libexpat-city-of-munich-open-source-sabbatical/) (244pts) — municipal open-source sabbatical, not foundation or vendor. [HN](https://news.ycombinator.com/item?id=49176606)
+4. [Waymo opens Dallas](https://waymo.com/blog/shorts/dallas-open-to-all/) (284pts) — cadence reads like network, not demo. [HN](https://news.ycombinator.com/item?id=49172836)
+5. [Interpol: AI fuels >50% of cybercrime in Africa](https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/) (198pts) — first regional majority-% on ai-assisted crime. [HN](https://news.ycombinator.com/item?id=49175826)
