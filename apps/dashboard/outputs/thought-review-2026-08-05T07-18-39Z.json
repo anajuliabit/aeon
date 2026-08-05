@@ -1,0 +1,74 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "summary_stack",
+        "separator",
+        "items_stack"
+      ]
+    },
+    "summary_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "period",
+        "captures"
+      ]
+    },
+    "period": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "caption"
+      }
+    },
+    "captures": {
+      "type": "Stat",
+      "props": {
+        "label": "captures",
+        "value": "0"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1",
+        "item2"
+      ]
+    },
+    "item1": {
+      "type": "Badge",
+      "props": {
+        "text": "vault inbox cold d44",
+        "variant": "secondary"
+      }
+    },
+    "item2": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md",
+        "message": "62d since last review — worth a refresh",
+        "type": "warning"
+      }
+    }
+  }
+}
