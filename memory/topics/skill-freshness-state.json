@@ -1,17 +1,12 @@
 {
-  "last_run_at": "2026-08-03T08:00:00Z",
+  "last_run_at": "2026-08-06T09:30:00Z",
   "last_verdict": "FRESHNESS_STALE",
-  "last_flagged_fingerprint": "f789cd3bca626257444b895c8b1636402081e86e",
+  "last_flagged_fingerprint": "fd5c367b5476282da0197e4b22eadd3ba1b1cf56",
   "consumer_count": 43,
-  "dependency_count": 11,
-  "flagged_count": 7,
+  "dependency_count": 8,
+  "flagged_count": 2,
   "first_seen_at": {
     "skill-security-scan:articles/workflow-security-audit-2026-04-11.md": "2026-07-25T08:53:42Z",
-    "aixbt-pulse:memory/topics/aixbt-grounding.md": "2026-07-25T08:53:42Z",
-    "aixbt-pulse:memory/topics/aixbt-clusters.md": "2026-07-25T08:53:42Z",
-    "aixbt-pulse:memory/topics/aixbt-chains.md": "2026-07-25T08:53:42Z",
-    "vuln-scanner:.outputs/github-trending.md": "2026-07-25T08:53:42Z",
-    "market-context-refresh:memory/topics/market-context.md": "2026-07-25T08:53:42Z",
-    "token-pick:memory/topics/market-context.md": "2026-07-25T08:53:42Z"
+    "vuln-scanner:.outputs/github-trending.md": "2026-07-25T08:53:42Z"
   }
 }

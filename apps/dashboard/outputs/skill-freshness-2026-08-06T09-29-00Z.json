@@ -1,0 +1,285 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Freshness",
+        "description": "2026-08-06"
+      },
+      "children": [
+        "alert_status",
+        "stats_section",
+        "sep1",
+        "resolved_section",
+        "sep2",
+        "stale_section",
+        "sep3",
+        "action_section",
+        "sep4",
+        "full_report"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "FRESHNESS_STALE",
+        "message": "2 of 8 deps flagged across 2 of 43 enabled consumers",
+        "type": "warning"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_deps",
+        "stat_consumers"
+      ]
+    },
+    "stat_deps": {
+      "type": "Stat",
+      "props": {
+        "label": "Dependencies Flagged",
+        "value": "2/8"
+      }
+    },
+    "stat_consumers": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled Consumers",
+        "value": "2/43"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "resolved_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "resolved_heading",
+        "resolved_text"
+      ]
+    },
+    "resolved_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolved Flags",
+        "level": "h3"
+      }
+    },
+    "resolved_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 prior-run flags resolved to fresh: aixbt-pulse (×3), market-context-refresh, token-pick — all updated 2026-08-05 22:06Z",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stale_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stale_heading",
+        "issue1_stack",
+        "issue2_stack"
+      ]
+    },
+    "stale_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Persistent Stale Flags",
+        "level": "h3"
+      }
+    },
+    "issue1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue1_title",
+        "issue1_source",
+        "issue1_details",
+        "issue1_badges"
+      ]
+    },
+    "issue1_title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan",
+        "variant": "lead"
+      }
+    },
+    "issue1_source": {
+      "type": "Text",
+      "props": {
+        "text": "Reference: articles/workflow-security-audit-2026-04-11.md",
+        "variant": "body"
+      }
+    },
+    "issue1_details": {
+      "type": "Text",
+      "props": {
+        "text": "117 days old • Last flagged: 2026-07-25",
+        "variant": "caption"
+      }
+    },
+    "issue1_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_articles_weekly",
+        "badge_stale1"
+      ]
+    },
+    "badge_articles_weekly": {
+      "type": "Badge",
+      "props": {
+        "text": "articles-weekly",
+        "variant": "outline"
+      }
+    },
+    "badge_stale1": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "issue2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue2_title",
+        "issue2_source",
+        "issue2_details",
+        "issue2_badges"
+      ]
+    },
+    "issue2_title": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "lead"
+      }
+    },
+    "issue2_source": {
+      "type": "Text",
+      "props": {
+        "text": "Reference: .outputs/github-trending.md",
+        "variant": "body"
+      }
+    },
+    "issue2_details": {
+      "type": "Text",
+      "props": {
+        "text": "~11 hours old • Last flagged: 2026-07-25",
+        "variant": "caption"
+      }
+    },
+    "issue2_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_outputs",
+        "badge_stale2"
+      ]
+    },
+    "badge_outputs": {
+      "type": "Badge",
+      "props": {
+        "text": "outputs",
+        "variant": "outline"
+      }
+    },
+    "badge_stale2": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_heading",
+        "action1",
+        "action2"
+      ]
+    },
+    "action_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Items",
+        "level": "h3"
+      }
+    },
+    "action1": {
+      "type": "Text",
+      "props": {
+        "text": "workflow-security-audit is disabled — reference in skill-security-scan is historical docs.",
+        "variant": "body"
+      }
+    },
+    "action2": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner flag clears after today's github-trending 09:00Z run.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full_report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/skill-freshness-2026-08-06.md",
+        "source": "skill-freshness"
+      }
+    }
+  }
+}

@@ -1,15 +1,11 @@
-## Summary
+*Skill Freshness — 2026-08-06*
+🔴 FRESHNESS_STALE — 2 of 8 deps flagged across 2 of 43 enabled consumers
 
-**skill-freshness ran for 2026-08-03 — FRESHNESS_NO_CHANGE.**
+5 prior-run flags resolved to fresh (aixbt-pulse ×3, market-context-refresh, token-pick — all updated 2026-08-05 22:06Z). 2 persistent STALE flags unchanged since 2026-07-25 (12+ days):
 
-- **43 enabled consumers audited · 11 dependencies checked · 7 flagged (all STALE)**
-- **Fingerprint `f789cd3bca626257444b895c8b1636402081e86e`** — unchanged for the 3rd consecutive day (8-01 → 8-02 → 8-03). Notification suppressed; re-emits as a periodic reminder on **2026-08-08** (7-day window from last notification).
-- **No new flags, no cleared flags** vs yesterday.
+Worst:
+- skill-security-scan ← articles/workflow-security-audit-2026-04-11.md (117d old, class articles-weekly, sev STALE)
+- vuln-scanner ← .outputs/github-trending.md (~11h old, class outputs, sev STALE)
 
-The 7 persistent stale items (all 9 days since first_seen 2026-07-25):
-1. `skill-security-scan` ← `articles/workflow-security-audit-2026-04-11.md` (114d, producer disabled)
-2–4. `aixbt-pulse` ← 3× `memory/topics/aixbt-{grounding,clusters,chains}.md` (~36d, dead slot d36 / ISS-027)
-5–6. `market-context-refresh` + `token-pick` ← `memory/topics/market-context.md` (~19d, primary feed unavailable)
-7. `vuln-scanner` ← `.outputs/github-trending.md` (~23h, structural — github-trending runs at 09:00, one hour after this skill)
-
-**Files written**: `articles/skill-freshness-2026-08-03.md`, `memory/topics/skill-freshness-state.json` (last_run_at updated), `memory/logs/2026-08-03.md` (log appended).
+Action: workflow-security-audit is disabled — reference in skill-security-scan is historical docs. vuln-scanner flag clears after today's github-trending 09:00Z run.
+Full: articles/skill-freshness-2026-08-06.md
