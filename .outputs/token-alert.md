@@ -1,20 +1,14 @@
+Log entry appended. Token-alert complete: `TOKEN_ALERT_OK`, no notify invoked.
+
 ## Summary
 
-`TOKEN_ALERT_OK` — 0/4 fires. CoinGecko HTTP 200 clean, 4/4 entries, **CG clean-day d42** (extends 8-04's d41, longest infra durability streak in memory-window post-ISS-023).
-
-**Prints (8-05 12:34Z):**
-- WELL $0.00292888 · +0.65% · vol $664K = 1.271× baseline
-- MAMO $0.00924725 · +0.47% · vol $699K = 0.928× baseline
-- REPPO $0.01509531 · -2.51% · vol $41K = 0.442× baseline
-- GITLAWB $0.00002338 · -7.08% · vol $184K = 0.863× baseline
-
-All 24h changes sub-threshold (10%/15%/15%/15%), all vol ratios sub-3×, no Floor/Ceiling configured → threshold-cross skipped. No `./notify` per skill spec (alert-gate not tripped).
-
-**Files modified:**
-- `.tmp/token-alert/cg.json` — fresh CG fetch
-- `memory/logs/2026-08-05.md` — full log entry appended
-- `memory/MEMORY.md` — Tracked Tokens snapshot line refreshed to 8-05
-
-**Fresh signal for next reflect:** (i) WELL vol-cliff regime rewrites again (7.12× single-day rebound flips 8-04 drain-regime verdict back to intermittent-glitch); (ii) MAMO 2-consec sub-0.5% flat = memory-window-first back-to-back digestion-band print; (iii) REPPO drought re-engages after 1-day recovery; (iv) GITLAWB breakout aborts <24h (-7.26% log-to-log wipes yesterday's +9.62%); (v) CG clean-day d42 rail continuation.
-
-**Follow-up:** 8-06 12:00Z tests WELL intermittent-glitch pattern durability (3rd cliff-recovery cycle candidate), MAMO 3-consec-flat sub-shape candidate, REPPO drought resumption, GITLAWB base-building continuation vs re-breakout.
+- **Files modified**: `memory/logs/2026-08-06.md` (appended `## Token Alert — 12:00 UTC` block with prices, log-to-log deltas, 5-run vol baselines, 24h/vol-spike/threshold-cross checks, fresh datapoints + follow-ups).
+- **Actions taken**: parsed MEMORY.md Tracked Tokens (4 entries: WELL/MAMO/REPPO/GITLAWB); read 8-05 log for prior prices + 5-day baseline chain; single unauth CoinGecko `simple/price` curl (HTTP 200, 394B, 4 entries clean); computed all three checks per SKILL.md step 2.
+- **Output**: `TOKEN_ALERT_OK` — 0/4 alerts fired.
+  - WELL $0.00296351 · +1.25% · vol 2.603× baseline (approaching 3× spike from below)
+  - MAMO $0.00915969 · -1.07% · vol 0.956× baseline
+  - REPPO $0.01376604 · **-8.32%** · vol 1.850× baseline
+  - GITLAWB $0.00002062 · **-10.84%** (72% of 15% rail) · vol 1.016× baseline
+- **Fresh signals** (for reflect absorption): CG clean-day d43 · WELL 3-consec vol-cliff recovery-climb approaching 3× spike threshold · MAMO 3-consec-sub-0.5% digestion-band-endgame candidate FAILS deciding-test · REPPO drought-break sell-flush (biggest single-day drop in memory-window on 3.144× yesterday vol) · GITLAWB capitulation post-failed-breakout 3-day arc · two-token simultaneous baseline-cross (REPPO+GITLAWB) first in post-cliff era.
+- **Follow-up**: 8-07 WELL 3× ambient-spike-threshold-cross candidate · MAMO amplitude-expansion test · REPPO flush completion vs continuation · GITLAWB threshold-cross-alert candidate at 72% rail (4%+ additional drop = first fire in memory-window).
+- **Silent-success path**: no `./notify` invocation (no alerts triggered per SKILL.md step 3).
