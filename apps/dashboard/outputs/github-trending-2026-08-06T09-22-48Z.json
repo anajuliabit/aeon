@@ -1,0 +1,636 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-06"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "top-pick-section",
+        "sep-1",
+        "ai-ml-section",
+        "sep-2",
+        "infra-section",
+        "sep-3",
+        "sources-text"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-top",
+        "link-computer-top",
+        "desc-computer-top"
+      ]
+    },
+    "heading-top": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "link-computer-top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cloudflare/computer",
+        "href": "https://github.com/cloudflare/computer"
+      },
+      "children": []
+    },
+    "desc-computer-top": {
+      "type": "Text",
+      "props": {
+        "text": "Cloudflare ships computer-use as a primitive: SQLite state in a Durable Object, FUSE-mounted into a sandbox container, RPC-synced via capnweb.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "ai-ml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-aiml",
+        "repo-1",
+        "repo-2",
+        "repo-3",
+        "repo-4",
+        "repo-5"
+      ]
+    },
+    "heading-aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-1-header",
+        "repo-1-stats",
+        "repo-1-desc"
+      ]
+    },
+    "repo-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo-1-link",
+        "repo-1-lang",
+        "repo-1-status"
+      ]
+    },
+    "repo-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cloudflare/computer",
+        "href": "https://github.com/cloudflare/computer"
+      },
+      "children": []
+    },
+    "repo-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "repo-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo-1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-1-today",
+        "repo-1-total"
+      ]
+    },
+    "repo-1-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "891"
+      },
+      "children": []
+    },
+    "repo-1-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "4.1k"
+      },
+      "children": []
+    },
+    "repo-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Virtual filesystem inside a Durable Object, pluggable execution surface (container + FUSE + RPC). Hyperscaler joins the agent-runtime layer.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-2-header",
+        "repo-2-stats",
+        "repo-2-desc"
+      ]
+    },
+    "repo-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo-2-link",
+        "repo-2-lang",
+        "repo-2-status"
+      ]
+    },
+    "repo-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TencentCloud/TencentDB-Agent-Memory",
+        "href": "https://github.com/TencentCloud/TencentDB-Agent-Memory"
+      },
+      "children": []
+    },
+    "repo-2-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "repo-2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo-2-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-2-today",
+        "repo-2-total"
+      ]
+    },
+    "repo-2-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "1,892"
+      },
+      "children": []
+    },
+    "repo-2-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "15.5k"
+      },
+      "children": []
+    },
+    "repo-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "+70% resurgence after 1-day flat cool. 2nd viral peak on the team-level agent memory hub (chat memory, skills, code graphs).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-3-header",
+        "repo-3-stats",
+        "repo-3-desc"
+      ]
+    },
+    "repo-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo-3-link",
+        "repo-3-lang",
+        "repo-3-status"
+      ]
+    },
+    "repo-3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "obra/superpowers",
+        "href": "https://github.com/obra/superpowers"
+      },
+      "children": []
+    },
+    "repo-3-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "repo-3-status": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo-3-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-3-today",
+        "repo-3-total"
+      ]
+    },
+    "repo-3-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "931"
+      },
+      "children": []
+    },
+    "repo-3-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "267.6k"
+      },
+      "children": []
+    },
+    "repo-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Agentic skills framework, day-2 sustained (+43% vs 8-05). First slate day-2 continuation at 267k total.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-4-header",
+        "repo-4-stats",
+        "repo-4-desc"
+      ]
+    },
+    "repo-4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo-4-link",
+        "repo-4-lang",
+        "repo-4-status"
+      ]
+    },
+    "repo-4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "addyosmani/agent-skills",
+        "href": "https://github.com/addyosmani/agent-skills"
+      },
+      "children": []
+    },
+    "repo-4-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "JavaScript",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "repo-4-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo-4-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-4-today",
+        "repo-4-total"
+      ]
+    },
+    "repo-4-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "226"
+      },
+      "children": []
+    },
+    "repo-4-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "82.2k"
+      },
+      "children": []
+    },
+    "repo-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Production-grade skills catalog for coding agents (skills.addy.ie). 3rd skills-framework repo on Aeon's slate this week.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-5-header",
+        "repo-5-stats",
+        "repo-5-desc"
+      ]
+    },
+    "repo-5-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo-5-link",
+        "repo-5-lang",
+        "repo-5-status"
+      ]
+    },
+    "repo-5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "huangruiteng/loopx",
+        "href": "https://github.com/huangruiteng/loopx"
+      },
+      "children": []
+    },
+    "repo-5-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "repo-5-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo-5-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-5-today",
+        "repo-5-total"
+      ]
+    },
+    "repo-5-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "326"
+      },
+      "children": []
+    },
+    "repo-5-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "2.5k"
+      },
+      "children": []
+    },
+    "repo-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Loop-engineering state kernel for long-running agent teams. Narrow-purpose runtime for multi-agent orchestration.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "infra-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-infra",
+        "repo-infra-1"
+      ]
+    },
+    "heading-infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo-infra-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-infra-1-header",
+        "repo-infra-1-stats",
+        "repo-infra-1-desc"
+      ]
+    },
+    "repo-infra-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo-infra-1-link",
+        "repo-infra-1-lang",
+        "repo-infra-1-status"
+      ]
+    },
+    "repo-infra-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "uber/ADR",
+        "href": "https://github.com/uber/ADR"
+      },
+      "children": []
+    },
+    "repo-infra-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "repo-infra-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo-infra-1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-infra-1-today",
+        "repo-infra-1-total"
+      ]
+    },
+    "repo-infra-1-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "354"
+      },
+      "children": []
+    },
+    "repo-infra-1-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "1.2k"
+      },
+      "children": []
+    },
+    "repo-infra-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Uber's enterprise agent-security framework, day-2 +139% acceleration. Corp-agent-infra rail 20 → 21-consec.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 6/13",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
