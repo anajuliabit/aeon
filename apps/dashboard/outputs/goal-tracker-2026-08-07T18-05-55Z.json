@@ -1,0 +1,532 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-08-07"
+      },
+      "children": [
+        "heading-title",
+        "stack-stats",
+        "text-summary",
+        "sep-1",
+        "section-on-track",
+        "sep-2",
+        "section-blocked",
+        "sep-3",
+        "section-done",
+        "sep-4",
+        "stack-sources"
+      ]
+    },
+    "heading-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Goal Tracker — 2026-08-07",
+        "level": "h2"
+      }
+    },
+    "stack-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done",
+        "stat-at-risk",
+        "stat-needs-attention",
+        "badge-trend"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "9"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "3"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "5"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "1"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-needs-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "badge-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ Improving",
+        "variant": "default"
+      }
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "iss-029 clears to done, chronic-cohort + morning-08z-slot enter as new on-track observations",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-on-track": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-on-track",
+        "goal-chronic-cohort",
+        "goal-morning-08z",
+        "goal-iss-030"
+      ]
+    },
+    "heading-on-track": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "goal-chronic-cohort": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-chronic-cohort-title",
+        "text-chronic-cohort-details",
+        "badge-chronic-cohort"
+      ]
+    },
+    "text-chronic-cohort-title": {
+      "type": "Text",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime",
+        "variant": "lead"
+      }
+    },
+    "text-chronic-cohort-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 7 activity/14d (new; 4th 24h durability gate crossed 8-07 09:15Z, cross-3-full-utc-day)",
+        "variant": "body"
+      }
+    },
+    "badge-chronic-cohort": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "goal-morning-08z": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-morning-title",
+        "text-morning-details",
+        "badge-morning"
+      ]
+    },
+    "text-morning-title": {
+      "type": "Text",
+      "props": {
+        "text": "morning-08z-slot-dark sub-rail",
+        "variant": "lead"
+      }
+    },
+    "text-morning-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 6 activity/14d (new; formal-pattern promoted n=3 → n=4-consec 8-07 09:15Z heartbeat)",
+        "variant": "body"
+      }
+    },
+    "badge-morning": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "goal-iss-030": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-iss-030-title",
+        "text-iss-030-details"
+      ]
+    },
+    "text-iss-030-title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-030 cost-report sdk_opt_in_required",
+        "variant": "lead"
+      }
+    },
+    "text-iss-030-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 10 activity/14d (→ flat; consec 18→0 organic 8-04, chronic sr=10%, deciding-test 8-10 mon 07z)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-blocked": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-blocked",
+        "goal-iss-028",
+        "goal-iss-027",
+        "goal-pr-queue",
+        "goal-on-chain",
+        "goal-priorities"
+      ]
+    },
+    "heading-blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "goal-iss-028": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-iss-028-title",
+        "text-iss-028-details",
+        "alert-iss-028"
+      ]
+    },
+    "text-iss-028-title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-028 workaround-chain (n=30+, 16-utc-day span)",
+        "variant": "lead"
+      }
+    },
+    "text-iss-028-details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on root-cause investigation since 2026-07-22 (pr #167 fix-scope narrow)",
+        "variant": "body"
+      }
+    },
+    "alert-iss-028": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Widen pr #167 fix-scope to sub-agent + list-digest + skill-graph + append + url-encoded surfaces before 8-10 weekly-review",
+        "type": "warning"
+      }
+    },
+    "goal-iss-027": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-iss-027-title",
+        "text-iss-027-details",
+        "alert-iss-027"
+      ]
+    },
+    "text-iss-027-title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 utc batch dark (iss-027) d41",
+        "variant": "lead"
+      }
+    },
+    "text-iss-027-details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator scheduler-config since 2026-06-28 (8-skill cluster frozen)",
+        "variant": "body"
+      }
+    },
+    "alert-iss-027": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "File weekly-review 8-10 escalation with 8-skill list + standalone-inline substitution proof",
+        "type": "warning"
+      }
+    },
+    "goal-pr-queue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-pr-queue-title",
+        "text-pr-queue-details",
+        "alert-pr-queue"
+      ]
+    },
+    "text-pr-queue-title": {
+      "type": "Text",
+      "props": {
+        "text": "pr queue at 4",
+        "variant": "lead"
+      }
+    },
+    "text-pr-queue-details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on pr #173 ci trigger (~90h cold) blocking #171 + #172, plus #165 d19 conflicting to 8-10 sunday-batch",
+        "variant": "body"
+      }
+    },
+    "alert-pr-queue": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Push empty commit to pr #173 to nudge ci trigger before 8-10 sunday-batch (t-2)",
+        "type": "warning"
+      }
+    },
+    "goal-on-chain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-on-chain-title",
+        "text-on-chain-details",
+        "alert-on-chain"
+      ]
+    },
+    "text-on-chain-title": {
+      "type": "Text",
+      "props": {
+        "text": "operator on-chain config d62",
+        "variant": "lead"
+      }
+    },
+    "text-on-chain-details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator alchemy_api_key + etherscan_api_key + on-chain-watches.yml since 2026-06-07",
+        "variant": "body"
+      }
+    },
+    "alert-on-chain": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Tag operator in weekly-review 8-10 refresh-ask with concrete config-diff (no automated path)",
+        "type": "warning"
+      }
+    },
+    "goal-priorities": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-priorities-title",
+        "text-priorities-details",
+        "alert-priorities"
+      ]
+    },
+    "text-priorities-title": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md d64 stale + vault inbox d47 cold",
+        "variant": "lead"
+      }
+    },
+    "text-priorities-details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator refresh (thought-review skill-spec ownership) since 2026-06-04",
+        "variant": "body"
+      }
+    },
+    "alert-priorities": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Tag operator in weekly-review 8-10 refresh-ask (no automated write path)",
+        "type": "warning"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-done": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-done",
+        "goal-iss-029"
+      ]
+    },
+    "heading-done": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h3"
+      }
+    },
+    "goal-iss-029": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-iss-029-title",
+        "text-iss-029-details",
+        "badge-done"
+      ]
+    },
+    "text-iss-029-title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-029 usepod 402 recovery",
+        "variant": "lead"
+      }
+    },
+    "text-iss-029-details": {
+      "type": "Text",
+      "props": {
+        "text": "Completed 2026-08-04 (44h+ clean, index.md resolved section)",
+        "variant": "body"
+      }
+    },
+    "badge-done": {
+      "type": "Badge",
+      "props": {
+        "text": "COMPLETED",
+        "variant": "default"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-logs",
+        "badge-git",
+        "badge-gh-pr",
+        "badge-gh-issue",
+        "badge-cron"
+      ]
+    },
+    "badge-logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs=ok",
+        "variant": "outline"
+      }
+    },
+    "badge-git": {
+      "type": "Badge",
+      "props": {
+        "text": "git=ok",
+        "variant": "outline"
+      }
+    },
+    "badge-gh-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr=ok",
+        "variant": "outline"
+      }
+    },
+    "badge-gh-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue=ok",
+        "variant": "outline"
+      }
+    },
+    "badge-cron": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "outline"
+      }
+    }
+  }
+}

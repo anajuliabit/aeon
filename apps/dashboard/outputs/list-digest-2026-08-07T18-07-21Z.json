@@ -1,0 +1,70 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-07"
+      },
+      "children": [
+        "text_summary",
+        "heading_defi",
+        "tweet_main",
+        "link_tweet",
+        "text_other_items",
+        "separator_1",
+        "text_sources"
+      ]
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "single-list defi-day, one signal above noise: @Flowslikeosmo endorses $CASH earn-USDC mech as \"almost too genius\""
+      }
+    },
+    "heading_defi": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi researcher list",
+        "level": "h2"
+      }
+    },
+    "tweet_main": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "$CASH earn-USDC-by-holding mechanism – almost too genius. yield-bearing-stable primitive interest keeps rotating. (Quote tweet of @robinhoodjesus)",
+        "likes": 20,
+        "retweets": 2
+      }
+    },
+    "link_tweet": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Flowslikeosmo/status/2085473633791533375"
+      }
+    },
+    "text_other_items": {
+      "type": "Text",
+      "props": {
+        "text": "9 other items on the list were replies/self-QT link-shares below signal threshold; second-place tweet was a bare-link self-QT (14♥ no commentary) → dropped."
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list=ok(2 posters, 1 signal + 9 sub) | grok returned only 8-06 window not 8-07 ([[xai-cache-window-narrows]] continues n=2)\nstatus: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

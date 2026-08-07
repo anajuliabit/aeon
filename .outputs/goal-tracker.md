@@ -1,27 +1,25 @@
-*Goal Tracker — 2026-08-05*
+*goal tracker — 2026-08-07*
 
-Summary: 9 goals — 0 at risk, 1 needs attention, 2 on track, 6 blocked, 0 done (overall → flat)
-
-NEEDS ATTENTION
-• ci-skills-json root cause solved — 0d idle, 90 activity/14d (ON_TRACK → NEEDS_ATTENTION ↓)
-  → Action: push empty commit to PR #173 branch to trigger the stalled ci-skills-json check
-
-BLOCKED
-• iss-028 kill-test workaround-chain n=26+ — 14-UTC-day span 7-22 → 8-05; PR #167 fix-scope narrow
-  → Action: file follow-up PR extending #167 to sub-agent + list-digest + skill-graph + append + URL-encoded call-sites
-• 12-utc batch dark d39 — scheduler-side gap on 8-skill cluster since 2026-06-28 21:00Z
-  → Action: audit .github/workflows/ for the frozen 12:00Z cron entries and repair or re-enable
-• iss-025 hand-off T+6 d22 — sandbox-truncation family day-44; cost-report signature shifted to ISS-030
-  → Action: operator direct-authors dangerouslyDisableSandbox pivot at aeon.yml:479-495
-• pr-queue-at-4 — #165 d17 CONFLICTING · #171 ~5d · #172 ~4d · #173 ~2d (CI hasn't fired in ~35h)
-  → Action: nudge PR #173 CI first; unblocks #171/#172 for 8-09 Sunday-batch
-• operator on-chain config d60 — defi-monitor NO_CONFIG; missing pool/position entries + 2 API keys
-  → Action: operator populates memory/on-chain-watches.yml pool/position + adds ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets
-• priorities.md d62 stale — vault inbox d45 cold; last real capture 2026-06-21T08:32Z
-  → Action: operator refreshes vault/priorities.md before 8-10 weekly-review
+9 goals — 0 at risk, 0 needs attention, 3 on track, 5 blocked, 1 done (overall ↑ improving; iss-029 clears to done, chronic-cohort + morning-08z-slot enter as new on-track observations)
 
 ON TRACK
-• iss-029 effectively recovered — 0d idle, 150 activity/14d (flat, 44h+ clean post-recovery)
-• iss-030 cost-report sdk-opt-in — 0d idle, 90 activity/14d (↑ improving — 8-04 21:48Z weekly-tick clean, consec 18 → 0)
+• chronic-cohort-alone-degraded regime — 0d idle, 7 activity/14d (new; 4th 24h durability gate crossed 8-07 09:15Z, cross-3-full-utc-day)
+• morning-08z-slot-dark sub-rail — 0d idle, 6 activity/14d (new; formal-pattern promoted n=3 → n=4-consec 8-07 09:15Z heartbeat)
+• iss-030 cost-report sdk_opt_in_required — 0d idle, 10 activity/14d (→ flat; consec 18→0 organic 8-04, chronic sr=10%, deciding-test 8-10 mon 07z)
+
+BLOCKED
+• iss-028 workaround-chain (n=30+, 16-utc-day span) — waiting on root-cause investigation since 2026-07-22 (pr #167 fix-scope narrow)
+  → Action: widen pr #167 fix-scope to sub-agent + list-digest + skill-graph + append + url-encoded surfaces before 8-10 weekly-review
+• 12:00 utc batch dark (iss-027) d41 — waiting on operator scheduler-config since 2026-06-28 (8-skill cluster frozen)
+  → Action: file weekly-review 8-10 escalation with 8-skill list + standalone-inline substitution proof
+• pr queue at 4 — waiting on pr #173 ci trigger (~90h cold) blocking #171 + #172, plus #165 d19 conflicting to 8-10 sunday-batch
+  → Action: push empty commit to pr #173 to nudge ci trigger before 8-10 sunday-batch (t-2)
+• operator on-chain config d62 — waiting on operator alchemy_api_key + etherscan_api_key + on-chain-watches.yml since 2026-06-07
+  → Action: tag operator in weekly-review 8-10 refresh-ask with concrete config-diff (no automated path)
+• priorities.md d64 stale + vault inbox d47 cold — waiting on operator refresh (thought-review skill-spec ownership) since 2026-06-04
+  → Action: tag operator in weekly-review 8-10 refresh-ask (no automated write path)
+
+DONE
+• iss-029 usepod 402 recovery — completed 2026-08-04 (44h+ clean, index.md resolved section)
 
 Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
