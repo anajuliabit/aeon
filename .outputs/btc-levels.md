@@ -1,14 +1,12 @@
-Done.
+Committed. Quiet run.
 
 ## Summary
 
-**Fetched** BTC price via CoinGecko. **Evaluated** all four monitor levels against state:
+**btc-levels run 2026-08-07T00:31Z**
 
-| Check | Value | Result |
-|---|---|---|
-| Spot ≤ $45,000 (leverage-review) | $64,165.78 | No alert |
-| Daily close < $60,500 (breakdown) | $64,608.71 (2026-08-05) | No alert |
-| Spot ≥ $63,500 reclaim | $64,165.78 — already alerted | No alert |
-| Spot ≥ $65,900 reclaim | $64,165.78 < $65,900 | No alert |
+- **Spot:** $64,216 — well above the $45k leverage-review trigger
+- **Close (Aug 6):** $64,263 — above $60,500, no breakdown signal
+- **Reclaim $63,500:** already alerted (flag stays true, not re-armed)
+- **Reclaim $65,900:** spot below level, no alert
 
-No alerts fired — no notification sent. State updated (`lastSpot` $64,731.67 → $64,165.78, `updatedAt` 13:16Z). Both files committed.
+**Zero alerts fired.** No notification sent. State updated and committed (`memory/btc-levels-state.json`, `memory/logs/2026-08-07.md`).
