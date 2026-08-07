@@ -5,6 +5,46 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-08-07)
+
+- **skill-health fresh formal tick 8-05 19:51Z hash `35369f69`** (supersedes 8-04 `ed794682` in ~25h; `prev_hash` verified). Classification: **0 CRITICAL** · **18 DEGRADED** · **14 WARNING** · **8 HEALTHY** · **3 NO_DATA**. **14 open issues**. Systemic: CRITICAL 1→0 (cost-report promoted DEGRADED post 8-04 21:48Z same-day recovery); no fresh usepod 402 / sdk_opt_in_required signatures in 24h window. **INDEX.md ISS-029 sync completed automatically this run** — resolves 8-05-reflect's atomic-emit-defect concern (data-consistency writer worked on next tick).
+- **ISS-030 cost-report OPEN pending 8-10 Mon 07Z deciding-test (T-3)** — 8-04 21:48Z same-day organic recovery holds; chronic sr=10%. Clean → RESOLVED same-day candidate; fail → 4-consec-week formal-pattern.
+- **`[[morning-08Z-slot-dark]]` formal-pattern n=4-consec 8-07** — heartbeat + skill-freshness co-miss 4-consec mornings (8-04/8-05/8-06/8-07). Rail crossed 24h durability gate 4×. 8-08 08Z fire = n=5-consec candidate.
+- **`[[heartbeat-dispatch-lag]]` rail slot-specific 8-07 confirmed** — sequence 31→50→50→75→75→**24**min at 14Z slot recovery = 08Z co-slot cluster-dark is slot-specific pattern, NOT fleet-wide dispatch-degrade. 14Z + 20Z slots recover normally.
+- **chronic-cohort-alone-degraded regime crosses 4th 24h durability gate 8-07 09:15Z → 7-consec-heartbeat-tick ~71h span 8-04 14:45Z → 8-07 14:24Z cross-3-full-UTC-day + into 4th** = deepest composition-identity print in memory-window. 10-skill chronic sub-50% cohort composition-locked: cost-report 10% / skill-analytics 21% / reg-monitor 21% / vuln-scanner 23% / market-context-refresh 32% / narrative-tracker 33% / search-skill 38% / fleet-control 40% (disabled) / security-digest 43% / aixbt-pulse 47%.
+- **8-06 fleet all-day-dark shape one-day-only NOT cluster-shift** — 9-skill evening batch + morning-brief + daily-routine + heartbeat 14/20Z all missed 8-06 UTC-day. 8-07 07Z morning cluster fired clean (morning-brief 07:59Z + daily-routine 08:28Z + thought-review 08:02Z) = blackout absorbed within 24h. Distinct from persistent `[[morning-08Z-slot-dark]]` cluster.
+- **Fleet clean-consec d3 crossing 8-07** — unbroken since 8-04 21:48Z cost-report same-day organic recovery (through 8-05 + 8-06 all-day-dark + 8-07 morning fires).
+- **PR queue at 4 unchanged 8-07** — **#173 CI cold ~90h at heartbeat 14:24Z** (T-2 to Sunday-batch 8-09, commit-push nudge needed); **#172 d6** + **#171 d7** (both ci-skills-json FAILURE waiting on #173); **#165 d19 CONFLICTING** (T-2 to 8-09, still in-cycle per weekly-batch cadence).
+- **Bash `>` redirect workaround-chain n=32+ durable 16-UTC-day span 7-22 → 8-07** — **9 fresh 8-07 call-sites** (daily-routine + 4 sub-agents + heartbeat + token-alert + security-digest + list-digest). New sibling family observed 8-07 github-trending: bash-redirect-block + heredoc-parser-over-length (distinct from ISS-028 env-expansion), worked around via Edit-tool 2-step.
+- **12:00 UTC batch DARK day-41** — ISS-027 8-skill cluster frozen since 2026-06-28. **Standalone-inline substitution 2nd successful daily-routine fetch 8-07** (8-05 first, 8-06 daily-routine didn't run, 8-07 second) — path holds when daily-routine fires but not when daily-routine itself misses (8-06 case). Token-alert 12Z slot fires clean 2-consec-day (8-06 + 8-07) — token-alert's own slot is not part of ISS-027 cluster.
+- **weekly-shiplog 09:00Z Monday slot** — last_success 2026-07-20 = 18d ago on 7d schedule. 8-03 missed (ISS-029). Next 8-10.
+- **Sub-25 github-trending fetch pattern 10-consec permanent shape 8-07** — 7-28 → 8-07 with 8-03 skip; range 12-18 (8-06 n=13 + 8-07 n=13 = first back-to-back low-edge print in memory-window).
+- **Aeon-fleet clean d8 vs security-digest surface 8-07** (7-30 → 8-07) — extended through 8-06 all-day-dark; capability-complete on defensive-import axis.
+
+## Positive events 8-05 evening → 8-07 afternoon
+
+- **skill-health 8-05 19:51Z formal tick fresh hash `35369f69`** — supersedes 8-04 `ed794682` in ~25h; CRITICAL 1→0, INDEX.md ISS-029 sync completed automatically.
+- **8-07 token-alert 12Z FIRST MULTI-TOKEN ALERT FIRE in memory-window** — GITLAWB 24h +21.74% (first 24h-change alert ever, breaches 15% rail) + REPPO vol-spike 4.854× baseline (first REPPO vol-spike ever). Morning-brief 07Z focus-item #3 (GITLAWB at 72% of rail) validates as forward-looking call within 5h.
+- **GITLAWB 4-day arc closes cleanly 8-07** — 8-04 +9.62% breakout → 8-05 -7.08% abort → 8-06 -10.84% capitulation → 8-07 +21.74% snap-back = first complete-arc capitulation-then-bounce shape in memory-window; +21.74% snap-back is 2.01× the drop = asymmetric recovery signature.
+- **REPPO 3-day vol arc $41K→$128K→$384K = 9.4× compounding across 48h 8-07** — small +1.88% price move despite vol explosion = **NEW `[[vol-spike-flat-price]]` sub-shape n=1**.
+- **`[[large-cap-single-day-flip]]` rail n=6 → n=7 8-07 via BEAT same-coin 48h reflip** — first same-coin pole-reflip in memory-window. **NEW `[[same-coin-48h-reflip]]` sub-shape n=1**.
+- **CG clean-day streak d42 → d45 across 8-05 → 8-07** — unbroken through 8-06 all-day-dark + 12Z batch-dark d41 + ISS-029 blackout.
+- **daily-routine 8-07 second successful standalone-inline run of ISS-027 batch-dark era** (8-05 first, 8-06 gap, 8-07 second) — path holds when daily-routine fires.
+- **paper-pick AgentOPSD 8-07** (arXiv 2608.05987, Tsinghua, ↑49) — extends `[[memory-primitive-paper streak]]` 5 → 6-consec-UTC-day (8-04 gap absorbed); pairs with 8-05 PAST-Bench on recursive-self-improve axis (method + benchmark).
+- **`[[fleet-relevance agent-thesis]]` rail 20 → 21-consec-day 8-06 (uber/ADR day-2 sustained) → 22-consec-day 8-07 (paper-pick axis handoff)** — cross-surface durability confirmed.
+- **`[[skill-pack-primitive-rail]]` formalizes at n=4 credible authors in 8 days 8-07** — mattpocock/skills (207.9k stars) joins obra + reverse-skill + addyosmani. Primitive going ecosystem.
+- **`[[hyperscaler-agent-runtime-primitive]]` sub-rail promoted candidate → durable 8-07** — cloudflare/computer +215% day-2 (13.5× → 34.6× baseline) = first hyperscaler agent-runtime sustained-viral. First back-to-back same-repo top-pick in memory-window (8-06 + 8-07). Durable Object + FUSE mount + capnweb RPC primitive.
+- **`[[2-peak-with-1-day-trough]]` viral-shape closes at day-4 8-07** — TencentDB 4-day arc 1,090 → 1,111 → 1,892 → 1,057 (-44% decay after 2nd peak).
+- **`[[top-pick-soft-decay-while-visible]]` verdict-shape day-3 8-07** — firecrawl/pdf-inspector 2,540 → 1,582 → 1,190 = 2-consec-decay while on trending; first memory-window top-pick to soft-decay 3 UTC-days without evaporating.
+- **`[[all-agent-slate]]` sub-shape candidate n=2 8-07** — 100% agent-domain 2-consec-day (6-of-6 + 5-of-5).
+- **`[[mature-repo-sustained-ratio-spike]]` sub-pattern candidate FROZEN at n=1 8-07** — airllm broke day-3 (-51%). Rail needs n=2 to promote.
+- **security-digest 8-07 shipped 3/4/0 tiers** with 3 NEW sub-class candidates (claude-brand-typosquat + whatsapp-baileys + ai-agent-brand-typosquat) + Traefik 6-CVE mass-disclosure + Dolyame 10-pkg (2nd Russian-fintech in same UTC-week) + @united-airlines-org first airline-vertical + @ccfly 4-arch installer + JetBrains TeamCity KEV 2nd CI/CD-server-in-KEV + MCP-branded-malware n=5. Aeon-fleet clean d8. EPSS 10/10 clean 2-consec-day.
+- **daily-routine tweet-roundup 8-07 Google CodeMender ships** = first fleet-visible defensive-side AI counter-agent for security. **NEW `[[defensive-AI-security-counter-agents]]` sub-rail candidate n=1**.
+- **Hashdex $DEFI ETF closure at $14M 8-07** = first spot-BTC-ETF failure of cycle.
+- **AMD acquires Taalas 8-07 (HN anchor)** — compute-in-memory hyperscaler acquisition; same-day cluster with AgentOPSD paper = compute-in-memory silicon + credit-assignment methodology compressing toward agent-runtime primitive.
+- **github-issues clean-day streak 10 → 12-consec 8-07** (8-06 skip absorbed per silence-on-clean-day rule) — first double-digit-plus extends +2 UTC-days.
+- **8-07 07Z morning cluster fires clean absorbing 8-06 all-day-dark** — morning-brief 07:59Z + daily-routine 08:28Z + thought-review 08:02Z + btc-levels 00:31Z/05:19Z/09:15Z all clean; scheduler restored.
+
 ## Current health snapshot (2026-08-05)
 
 - **ISS-029 RESOLVED by skill-health 8-04 18:19Z** — usepod.ai 402 payment gate lifted 8-03 20:14Z; 44h+ clean through 8-05 afternoon (0 fresh 402s). skill-health `last-report.json` records `resolved_this_run: 1` for ISS-029 at 8-04 18:19Z (CRITICAL cohort 11→1, DEGRADED 8→17 as formerly-CRITICAL skills settled at historical baseline once consec_failures reset). **INDEX.md discrepancy 8-05**: ISS-029 still listed under Open in `memory/issues/INDEX.md` despite `resolved_this_run: 1` — skill-health's json→INDEX.md writer missed the move. Reconciled this reflect.
