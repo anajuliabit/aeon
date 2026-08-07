@@ -1,46 +1,43 @@
-*Token Movers — 2026-08-05*
+*Token Movers — 2026-08-07*
 
-_Mixed-to-red tape — 37% of top-100 green, median -0.1% 24h; BTC +0.7% / ETH +0.3% / HYPE +4.8% leads majors, but DeFi bleeds (LDO [CAPITULATION], ETHFI/MORPHO red) and prior-week winners (BEAT, UB) unwind hard._
+_broad risk-off but shallow — 32/100 top coins green, median top-50 −0.8%; large-caps mostly red, no capitulation vol._
 
 *Top Winners (24h)*
-1. PUMP (Pump.fun) — $0.002466  +10.4% / 7d +32.0% / 1h -0.6%  •  $155M / #66  [TRENDING+UP]
-2. SHFL (Shuffle) — $0.3060  +10.1% / 7d +8.7% / 1h 0.0%  •  $1.1M / #213
-3. BTW (Bitway) — $0.1271  +8.9% / 7d +21.2% / 1h -3.5%  •  $16M / #127
-4. VELVET (Velvet) — $0.4666  +8.2% / 7d +14.1% / 1h -0.6%  •  $6.0M / #163
-5. ZEC (Zcash) — $517.91  +6.3% / 7d +11.8% / 1h +0.2%  •  $226M / #14  [MAJOR]
-6. LIT (Lighter) — $2.14  +5.9% / 7d -8.9% / 1h +0.3%  •  $32M / #93
-7. ZRO (LayerZero) — $0.7905  +5.9% / 7d -0.3% / 1h +0.9%  •  $40M / #129
-8. FET (Fetch AI / ASI) — $0.1524  +5.6% / 7d +13.4% / 1h +0.9%  •  $44M / #117
-9. US (Talus) — $0.05350  +5.5% / 7d +22.5% / 1h +0.2%  •  $8.8M / #189
-10. CVX (Convex Finance) — $1.41  +5.5% / 7d +3.7% / 1h -0.6%  •  $5.1M / #215
+1. XPIN (XPIN Network) — $0.001749  +12.5% / 7d +21.2% / 1h +0.8%  •  $2.2M / #669
+2. BEAT (Audiera) — $2.15  +12.0% / 7d −43.7% / 1h +3.1%  •  $68M / #82
+3. LIT (Lighter) — $2.36  +8.9% / 7d +6.5% / 1h +0.1%  •  $45M / #90  [TRENDING+UP]
+4. BTW (Bitway) — $0.1893  +7.6% / 7d +136.6% / 1h −1.2%  •  $23M / #107
+5. EDGE (edgeX) — $0.3919  +7.3% / 7d −1.7% / 1h +0.2%  •  $3.3M / #206
+6. ADA (Cardano) — $0.2016  +7.1% / 7d +19.6% / 1h 0.0%  •  $783M / #16  [MAJOR]
+7. BinanceLife (币安人生) — $0.5397  +6.8% / 7d −15.5% / 1h −0.7%  •  $11M / #94
+8. CFX (Conflux) — $0.04033  +6.5% / 7d −7.6% / 1h −1.9%  •  $7.4M / #153
+9. Q (Quack AI) — $0.02286  +6.1% / 7d +4.4% / 1h 0.0%  •  $2.1M / #271
+10. XEC (eCash) — $0.000006620  +6.1% / 7d +9.7% / 1h +0.9%  •  $14M / #208
 
 *Top Losers (24h)*
-1. UB (Unibase) — $0.1158  -39.1% / 7d -15.0% / 1h -7.9%  •  $52M / #125  [CAPITULATION]
-2. BEAT (Audiera) — $2.54  -18.4% / 7d -31.1% / 1h +0.5%  •  $40M / #79
-3. META (MetaDAO) — $5.56  -13.3% / 7d -13.6% / 1h +0.7%  •  $23M / #218
-4. LDO (Lido DAO) — $0.2882  -12.9% / 7d -20.6% / 1h +0.5%  •  $85M / #143  [CAPITULATION]
-5. 币安人生 (BinanceLife) — $0.4854  -8.4% / 7d -21.0% / 1h -4.0%  •  $9.5M / #99
-6. ETHFI (Ether.fi) — $0.3664  -6.9% / 7d -8.5% / 1h +0.4%  •  $49M / #113
-7. VVV (Venice Token) — $11.62  -4.6% / 7d -8.9% / 1h -0.7%  •  $9.2M / #91
-8. TRAC (OriginTrail) — $0.2739  -4.2% / 7d -1.8% / 1h -0.1%  •  $1.0M / #224
-9. CC (Canton) — $0.1095  -4.0% / 7d -8.0% / 1h +0.7%  •  $17M / #22
-10. XCN (Onyxcoin) — $0.003090  -3.3% / 7d -7.0% / 1h +0.8%  •  $4.8M / #225
+1. CC (Canton) — $0.08814  −13.5% / 7d −26.4% / 1h −1.8%  •  $19M / #27
+2. BONK — $0.000002550  −8.7% / 7d −8.9% / 1h −9.0%  •  $42M / #146  [TRENDING+DOWN]
+3. VELVET — $0.4488  −8.0% / 7d +6.6% / 1h −0.2%  •  $4.6M / #168
+4. TEL (Telcoin) — $0.001450  −6.8% / 7d −16.8% / 1h +0.3%  •  $1.5M / #202
+5. ONDO — $0.3497  −6.4% / 7d −12.9% / 1h 0.0%  •  $120M / #44
+6. CARDS (Collector Crypt) — $0.1517  −6.1% / 7d −3.9% / 1h +0.3%  •  $1.2M / #507
+7. META (MetaDAO) — $4.96  −6.1% / 7d +9.0% / 1h +0.2%  •  $2.9M / #234
+8. FET (ASI Alliance) — $0.1315  −5.8% / 7d −6.6% / 1h −1.5%  •  $77M / #126
+9. US (Talus) — $0.05217  −5.4% / 7d +8.8% / 1h −2.0%  •  $5.8M / #191
+10. UB (Unibase) — $0.1334  −4.9% / 7d −17.3% / 1h −2.3%  •  $29M / #119
 
 *Trending*
-1. GRVT (GRVT Token) — #555, $0.3203, 24h +21.9%
-2. PENGU (Pudgy Penguins) — #107, $0.006058, 24h -1.4%
-3. QUID (Squid) — #918, $0.1081, 24h 0.0%
-4. TAKE (OVERTAKE) — #936, $0.04428, 24h +26.8%
-5. SOL (Solana) — #7, $73.90, 24h +0.7%  [MAJOR]
-6. PI (Pi Network) — #67, $0.08546, 24h +3.1%
-7. PUMP (Pump.fun) — #64, $0.002460, 24h +10.4%  [TRENDING+UP]
+1. BSB (Block Street) — #549, $0.1560, 24h +15.1%  [TRENDING+UP]
+2. LIT (Lighter) — #89, $2.36, 24h +8.5%  [TRENDING+UP]
+3. CASHCAT — #268, $0.09978, 24h −6.9%  [TRENDING+DOWN]
+4. PENGU (Pudgy Penguins) — #109, $0.006038, 24h −3.7%
+5. BONK — #148, 24h −7.7%  [TRENDING+DOWN]
+6. ACE (Fusionist) — #876, $0.1549, 24h +113.0%  [PUMP-RISK]
+7. SOL (Solana) — #7, $72.88, 24h −1.4%  [MAJOR]
 
 *Notable*
-- PUMP: [TRENDING+UP] day-5 continuity vs 8-01 output (+9.5% → +10.4%), 7d +32% now — sustained bid, still leading vol among winners at $155M
-- BEAT pole-flip: 8-01 #1 winner (+17.7% / 7d +35%) → today #2 loser (-18.4% / 7d -31%). Full round-trip inside 5 UTC-days extends the [[large-cap-single-day-flip]] rail (UAI/HOLO/UNI/PUMP/UB cohort)
-- UB (Unibase): -39.1% single-day = memory-window magnitude tier; matches 7-31 UB "flame-out" pattern with fresh 1h -7.9% acceleration
-- LDO [CAPITULATION]: -12.9% on vol/mcap 0.35 (strict rule hit), 7d -20.6% — DeFi-native bleed
-- ZEC [MAJOR] rank #14 +6.3% on $226M vol — privacy narrative bid, largest volume among winners after PUMP
-- TAKE (trending): +26.8% at rank #936 — low-cap high-momentum, edges toward [PUMP-RISK] threshold (>30% cutoff) but not yet triggered
-
-_source: coingecko markets + trending (both curl HTTP 200, first clean token-movers fetch post-ISS-027 batch-dark d38 run standalone via daily-routine)._
+• ACE Fusionist #876 +113% on trending — PUMP-RISK, deep-microcap spike, no top-250 liquidity confirmation
+• HFT Hashflow #632 trending +46.7% — second PUMP-RISK candidate outside top-250 markets
+• BEAT +12.0% relief bounce inverts 8-05's −18.4% capitulation print inside 48h; 7d still −43.7%
+• CC Canton #27 −13.5% is the day's largest large-cap bleed but vol/mcap 0.005 — no capitulation confirmation
+• BTW Bitway 7d +136.6% still adding +7.6% today — sustained multi-week climb intact at rank #107

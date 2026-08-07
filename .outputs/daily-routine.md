@@ -1,38 +1,47 @@
-*Daily Routine — 2026-08-05*
+*Daily Routine — 2026-08-07*
 
-*Top Winners (24h)*
-1. PUMP: $0.002466 (+10.4%, 7d +32%) — TRENDING+UP day-5 continuity
-2. SHFL: $0.3060 (+10.1%) — thin book, rank #213
-3. BTW: $0.1271 (+8.9%)
-4. VELVET: $0.4666 (+8.2%)
-5. ZEC: $517.91 (+6.3%) — MAJOR, privacy bid on $226M vol
+_broad risk-off but shallow — 32/100 top-100 green, median top-50 −0.8%; large-caps mostly red, no capitulation vol._
 
-*Top Losers (24h)*
-1. UB: $0.1158 (-39.1%) — CAPITULATION, memory-window magnitude tier
-2. BEAT: $2.54 (-18.4%, 7d -31%) — pole-flip vs 8-01 #1 winner
-3. META: $5.56 (-13.3%)
-4. LDO: $0.2882 (-12.9%) — CAPITULATION, DeFi bleed
-5. BinanceLife: $0.4854 (-8.4%)
+*Top 10 Winners (24h)*
+1. XPIN: $0.001749 (+12.5%)
+2. BEAT: $2.15 (+12.0%)
+3. LIT: $2.36 (+8.9%) [TRENDING+UP]
+4. BTW: $0.1893 (+7.6%, 7d +136.6%)
+5. EDGE: $0.3919 (+7.3%)
+6. ADA: $0.2016 (+7.1%) [MAJOR]
+7. BinanceLife: $0.5397 (+6.8%)
+8. CFX: $0.04033 (+6.5%)
+9. Q: $0.02286 (+6.1%)
+10. XEC: $0.0000066 (+6.1%)
 
-_tape: 37% top-100 green, median -0.1%; BTC +0.7% / ETH +0.3% / HYPE +4.8% majors, DeFi bleeds. [[large-cap-single-day-flip]] rail extends n=6 (UB + BEAT join UAI/HOLO/UNI/PUMP)._
+*Top 10 Losers (24h)*
+1. CC (Canton): $0.08814 (−13.5%)
+2. BONK: $0.00000255 (−8.7%) [TRENDING+DOWN]
+3. VELVET: $0.4488 (−8.0%)
+4. TEL: $0.001450 (−6.8%)
+5. ONDO: $0.3497 (−6.4%)
+6. CARDS: $0.1517 (−6.1%)
+7. META (MetaDAO): $4.96 (−6.1%)
+8. FET: $0.1315 (−5.8%)
+9. US (Talus): $0.05217 (−5.4%)
+10. UB: $0.1334 (−4.9%)
+
+_notable: BEAT +12.0% inverts 8-05's −18.4% capitulation in 48h (7d still −43.7%); ACE Fusionist #876 +113% on trending = PUMP-RISK microcap; BTW 7d +136.6% sustained multi-week climb intact._
 
 *Tweet Roundup*
-_xai skipped — sandbox strips $XAI_API_KEY; websearch fallback_
-
-*Crypto:* $170M into spot BTC ETFs 8-04 (IBIT $111M lead) against Coldcard 1,596 BTC confirmed stolen, 32k BTC onto exchanges same day, FalconX -10% headcount, Hashdex closing a BTC ETF. Fear&Greed 25 extreme fear, BTC dom 56.6%.
-*AI:* EU AI Act enforcement live 8-02 — disclosure required for AI interactions + synthetic-media watermarks + deepfake labeling. Cognition acquires Poke (low nine-figures) for Devin. GPT-5.6 Sol 89.5% Terminal-Bench 2.1 edges Opus 5 89.1%.
-*Dev:* Google joins Eclipse Foundation, sponsors Open VSX (powers Antigravity/Kiro/Cursor/Windsurf). Linux 7.0 Rust support promoted from experimental to stable.
+*Crypto:* Hashdex closes $DEFI ETF at $14M raised = first spot-BTC-ETF failure; extreme fear regime holds, BTC $64.5k +0.5%, ETH $1,905 +1.9%; XRP whale accumulation, US Senate Clarity Act progresses.
+*AI:* Qwen3.8 Max ships from Alibaba (8-02, fresh model); Claude Code drops subagent-spawn cap + adds self-hosted envs + cross-session messaging.
+*Dev:* Google CodeMender ships as agent to fix vulns at scale (extends `[[AI-slop-in-security-pipelines]]` on the defensive side); GitHub Actions had another US-hours outage — forge-migration talk in the thread.
 
 *Paper of the Day*
-"PAST-Bench: Foundations of Recursive Self-Improvement in Personal Agents" — Princeton, ↑18. 26 scenarios × 204 episodes across 7 models × 4 frameworks: gains real but uneven, headline improvement often lacks evidence of the save/retrieve/update path it claims. exactly the loop aeon runs on. [arxiv.org/abs/2608.04003](https://arxiv.org/abs/2608.04003)
-_[[memory-primitive-paper streak]] 4-consec → 5-consec, thaws ISS-029 8-04 freeze._
+"AgentOPSD: Recursive Self-Distillation for Agentic RL" — Wang/Yang +8 (Tsinghua) ↑49. Turn-level credit for long-horizon agent RL via recursive Bayesian belief updates on teacher-student log-prob gaps; no critic, no extra rollouts, 89.1% ALFWorld with Qwen2.5-7B. Pairs with 8-05's PAST-Bench — that one asked "does the loop work," this one answers "how to assign credit inside it." [arxiv 2608.05987](https://arxiv.org/abs/2608.05987)
 
 *GitHub Issues*
-GITHUB_ISSUES_OK — clean-day streak 9 → 10 (7-26 → 8-05)
+- No new issues (12-consec clean-day 7-26 → 8-07, first double-digit-plus in memory-window)
 
 *HN Digest*
-1. [Mistral Shieldstral: 3B open-weights multimodal moderation](https://mistral.ai/news/shieldstral/) (378pts) — self-hostable guardrail, one more hosted-api you can cut. [HN](https://news.ycombinator.com/item?id=49171268)
-2. [Gwern drops pseudonymity to launch Guardian Angel](https://twitter.com/gwern/status/2084739205071343837) (258pts) — personal-ai product pitched as alignment/privacy layer. [HN](https://news.ycombinator.com/item?id=49174900)
-3. [libexpat funded by City of Munich 6mo](https://blog.hartwork.org/posts/libexpat-city-of-munich-open-source-sabbatical/) (244pts) — municipal open-source sabbatical, not foundation or vendor. [HN](https://news.ycombinator.com/item?id=49176606)
-4. [Waymo opens Dallas](https://waymo.com/blog/shorts/dallas-open-to-all/) (284pts) — cadence reads like network, not demo. [HN](https://news.ycombinator.com/item?id=49172836)
-5. [Interpol: AI fuels >50% of cybercrime in Africa](https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/) (198pts) — first regional majority-% on ai-assisted crime. [HN](https://news.ycombinator.com/item?id=49175826)
+1. [AMD acquires Taalas — etches models into silicon](https://news.ycombinator.com/item?id=49201970) (621pts) — hyperscaler pays up for compute-in-memory; moves "weights are the wiring" from lab to acquisition-priced.
+2. [GitHub Actions degraded](https://news.ycombinator.com/item?id=49198302) (391pts) — another US-hours CI outage; thread turns to forge-migration + self-hosting math.
+3. [Humans miss 1-in-3 threats approving AI agent commands](https://news.ycombinator.com/item?id=49195468) (293pts) — 40k plays / 409k decisions = empirical floor for HITL review fatigue.
+4. [NM court orders Meta $567M + hides likes for under-18s](https://news.ycombinator.com/item?id=49204352) (204pts) — 90h/mo cap, no push 10p-7a; likely pushes kids to snapchat.
+5. [Mario Meets Pareto](https://news.ycombinator.com/item?id=49195231) (1027pts) — day's top HN story; scrollytelling explainer of pareto frontiers via mario kart stats.

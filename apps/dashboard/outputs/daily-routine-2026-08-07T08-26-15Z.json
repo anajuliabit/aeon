@@ -1,0 +1,656 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-07"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "market-overview",
+        "separator-1",
+        "winners-section",
+        "separator-2",
+        "losers-section",
+        "separator-3",
+        "notable-section",
+        "separator-4",
+        "tweets-section",
+        "separator-5",
+        "paper-section",
+        "separator-6",
+        "github-section",
+        "separator-7",
+        "hn-section"
+      ]
+    },
+    "market-overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "overview-heading",
+        "overview-text"
+      ]
+    },
+    "overview-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Overview",
+        "level": "h2"
+      }
+    },
+    "overview-text": {
+      "type": "Text",
+      "props": {
+        "text": "Broad risk-off but shallow — 32/100 top-100 green, median top-50 −0.8%; large-caps mostly red, no capitulation vol.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Token",
+          "Price",
+          "24h Change",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "XPIN",
+            "$0.001749",
+            "+12.5%",
+            ""
+          ],
+          [
+            "2",
+            "BEAT",
+            "$2.15",
+            "+12.0%",
+            ""
+          ],
+          [
+            "3",
+            "LIT",
+            "$2.36",
+            "+8.9%",
+            "TRENDING+UP"
+          ],
+          [
+            "4",
+            "BTW",
+            "$0.1893",
+            "+7.6%, 7d +136.6%",
+            ""
+          ],
+          [
+            "5",
+            "EDGE",
+            "$0.3919",
+            "+7.3%",
+            ""
+          ],
+          [
+            "6",
+            "ADA",
+            "$0.2016",
+            "+7.1%",
+            "MAJOR"
+          ],
+          [
+            "7",
+            "BinanceLife",
+            "$0.5397",
+            "+6.8%",
+            ""
+          ],
+          [
+            "8",
+            "CFX",
+            "$0.04033",
+            "+6.5%",
+            ""
+          ],
+          [
+            "9",
+            "Q",
+            "$0.02286",
+            "+6.1%",
+            ""
+          ],
+          [
+            "10",
+            "XEC",
+            "$0.0000066",
+            "+6.1%",
+            ""
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Token",
+          "Price",
+          "24h Change",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "CC (Canton)",
+            "$0.08814",
+            "−13.5%",
+            ""
+          ],
+          [
+            "2",
+            "BONK",
+            "$0.00000255",
+            "−8.7%",
+            "TRENDING+DOWN"
+          ],
+          [
+            "3",
+            "VELVET",
+            "$0.4488",
+            "−8.0%",
+            ""
+          ],
+          [
+            "4",
+            "TEL",
+            "$0.001450",
+            "−6.8%",
+            ""
+          ],
+          [
+            "5",
+            "ONDO",
+            "$0.3497",
+            "−6.4%",
+            ""
+          ],
+          [
+            "6",
+            "CARDS",
+            "$0.1517",
+            "−6.1%",
+            ""
+          ],
+          [
+            "7",
+            "META (MetaDAO)",
+            "$4.96",
+            "−6.1%",
+            ""
+          ],
+          [
+            "8",
+            "FET",
+            "$0.1315",
+            "−5.8%",
+            ""
+          ],
+          [
+            "9",
+            "US (Talus)",
+            "$0.05217",
+            "−5.4%",
+            ""
+          ],
+          [
+            "10",
+            "UB",
+            "$0.1334",
+            "−4.9%",
+            ""
+          ]
+        ]
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-text"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-text": {
+      "type": "Text",
+      "props": {
+        "text": "BEAT +12.0% inverts 8-05's −18.4% capitulation in 48h (7d still −43.7%); ACE Fusionist #876 +113% on trending = PUMP-RISK microcap; BTW 7d +136.6% sustained multi-week climb intact.",
+        "variant": "body"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-heading",
+        "tweets-crypto-stack",
+        "tweets-ai-stack",
+        "tweets-dev-stack"
+      ]
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "tweets-crypto-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-crypto-heading",
+        "tweets-crypto-text"
+      ]
+    },
+    "tweets-crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "tweets-crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "Hashdex closes $DEFI ETF at $14M raised = first spot-BTC-ETF failure; extreme fear regime holds, BTC $64.5k +0.5%, ETH $1,905 +1.9%; XRP whale accumulation, US Senate Clarity Act progresses.",
+        "variant": "body"
+      }
+    },
+    "tweets-ai-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-ai-heading",
+        "tweets-ai-text"
+      ]
+    },
+    "tweets-ai-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "tweets-ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "Qwen3.8 Max ships from Alibaba (8-02, fresh model); Claude Code drops subagent-spawn cap + adds self-hosted envs + cross-session messaging.",
+        "variant": "body"
+      }
+    },
+    "tweets-dev-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-dev-heading",
+        "tweets-dev-text"
+      ]
+    },
+    "tweets-dev-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "tweets-dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "Google CodeMender ships as agent to fix vulns at scale (extends AI-slop-in-security-pipelines on the defensive side); GitHub Actions had another US-hours outage — forge-migration talk in the thread.",
+        "variant": "body"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-stack"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper-link",
+        "paper-desc"
+      ]
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AgentOPSD: Recursive Self-Distillation for Agentic RL",
+        "href": "https://arxiv.org/abs/2608.05987",
+        "source": "arxiv 2608.05987"
+      }
+    },
+    "paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Wang/Yang +8 (Tsinghua) ↑49. Turn-level credit for long-horizon agent RL via recursive Bayesian belief updates on teacher-student log-prob gaps; no critic, no extra rollouts, 89.1% ALFWorld with Qwen2.5-7B. Pairs with 8-05's PAST-Bench — that one asked 'does the loop work,' this one answers 'how to assign credit inside it.'",
+        "variant": "body"
+      }
+    },
+    "separator-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "github-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-heading",
+        "github-text"
+      ]
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (12-consec clean-day 7-26 → 8-07, first double-digit-plus in memory-window)",
+        "variant": "body"
+      }
+    },
+    "separator-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-item-1",
+        "hn-item-2",
+        "hn-item-3",
+        "hn-item-4",
+        "hn-item-5"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-1",
+        "hn-desc-1"
+      ]
+    },
+    "hn-link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AMD acquires Taalas — etches models into silicon",
+        "href": "https://news.ycombinator.com/item?id=49201970",
+        "source": "Hacker News",
+        "score": "621 pts"
+      }
+    },
+    "hn-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperscaler pays up for compute-in-memory; moves 'weights are the wiring' from lab to acquisition-priced.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-2",
+        "hn-desc-2"
+      ]
+    },
+    "hn-link-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GitHub Actions degraded",
+        "href": "https://news.ycombinator.com/item?id=49198302",
+        "source": "Hacker News",
+        "score": "391 pts"
+      }
+    },
+    "hn-desc-2": {
+      "type": "Text",
+      "props": {
+        "text": "Another US-hours CI outage; thread turns to forge-migration + self-hosting math.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-3",
+        "hn-desc-3"
+      ]
+    },
+    "hn-link-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Humans miss 1-in-3 threats approving AI agent commands",
+        "href": "https://news.ycombinator.com/item?id=49195468",
+        "source": "Hacker News",
+        "score": "293 pts"
+      }
+    },
+    "hn-desc-3": {
+      "type": "Text",
+      "props": {
+        "text": "40k plays / 409k decisions = empirical floor for HITL review fatigue.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-4",
+        "hn-desc-4"
+      ]
+    },
+    "hn-link-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NM court orders Meta $567M + hides likes for under-18s",
+        "href": "https://news.ycombinator.com/item?id=49204352",
+        "source": "Hacker News",
+        "score": "204 pts"
+      }
+    },
+    "hn-desc-4": {
+      "type": "Text",
+      "props": {
+        "text": "90h/mo cap, no push 10p-7a; likely pushes kids to snapchat.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-5",
+        "hn-desc-5"
+      ]
+    },
+    "hn-link-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Mario Meets Pareto",
+        "href": "https://news.ycombinator.com/item?id=49195231",
+        "source": "Hacker News",
+        "score": "1027 pts"
+      }
+    },
+    "hn-desc-5": {
+      "type": "Text",
+      "props": {
+        "text": "Day's top HN story; scrollytelling explainer of pareto frontiers via mario kart stats.",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
-*paper pick — 2026-08-05*
+*paper pick — 2026-08-07*
 
-"PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents" — Xue/Ding/Shen +6 (Princeton) · ↑18
-first benchmark that isolates whether persistent agents actually improve from retained experience — 26 scenarios × 204 episodes, 7 base models × 4 frameworks, gains real but uneven, and headline improvement often lacks evidence of the intended save/retrieve/update pathway. exactly the loop aeon runs on.
-[Read](https://arxiv.org/abs/2608.04003) | [PDF](https://arxiv.org/pdf/2608.04003)
+"AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning" — Zi-Han Wang, Yujiu Yang +8 (Tsinghua) · ↑49
+turn-level credit for long-horizon agent RL via recursive bayesian belief updates on teacher-student log-prob gaps; no critic, no extra rollouts, 89.1% on ALFWorld with Qwen2.5-7B.
+[Read](https://arxiv.org/abs/2608.05987) | [PDF](https://arxiv.org/pdf/2608.05987)
+
+_extends `[[memory-primitive-paper streak]]` 5 → 6-consec, pairs with 8-05's PAST-Bench on the recursive-self-improvement thread._
