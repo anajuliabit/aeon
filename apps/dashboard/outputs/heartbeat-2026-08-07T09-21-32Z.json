@@ -1,0 +1,267 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat 09:15z"
+      },
+      "children": [
+        "alert-degraded",
+        "sep-1",
+        "heading-fresh",
+        "fresh-1",
+        "fresh-2-intro",
+        "fresh-2-skills",
+        "fresh-3",
+        "sep-2",
+        "heading-carry",
+        "carry-items",
+        "sep-3",
+        "status-morning",
+        "status-summary"
+      ]
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "System Status: DEGRADED"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-fresh": {
+      "type": "Heading",
+      "props": {
+        "text": "Fresh",
+        "level": "h3"
+      }
+    },
+    "fresh-1": {
+      "type": "Text",
+      "props": {
+        "text": "morning-08Z-slot-dark rail n=3 → n=4-consec — heartbeat + skill-freshness both 08Z co-missed again (8-04 + 8-05 + 8-06 + 8-07). formal-pattern durability crosses another 24h."
+      }
+    },
+    "fresh-2-intro": {
+      "type": "Text",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime 6-consec-heartbeat-tick / ~66h span = 4th 24h durability gate crossed. same 10-skill composition holds:"
+      }
+    },
+    "fresh-2-skills": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "skill-cost-report",
+        "skill-analytics",
+        "skill-reg-monitor",
+        "skill-vuln-scanner",
+        "skill-market-context",
+        "skill-narrative-tracker",
+        "skill-search-skill",
+        "skill-fleet-control",
+        "skill-security-digest",
+        "skill-aixbt-pulse"
+      ]
+    },
+    "skill-cost-report": {
+      "type": "Stat",
+      "props": {
+        "label": "cost-report (ISS-030)",
+        "value": "10%"
+      }
+    },
+    "skill-analytics": {
+      "type": "Stat",
+      "props": {
+        "label": "skill-analytics",
+        "value": "21%"
+      }
+    },
+    "skill-reg-monitor": {
+      "type": "Stat",
+      "props": {
+        "label": "reg-monitor",
+        "value": "21%"
+      }
+    },
+    "skill-vuln-scanner": {
+      "type": "Stat",
+      "props": {
+        "label": "vuln-scanner",
+        "value": "23%"
+      }
+    },
+    "skill-market-context": {
+      "type": "Stat",
+      "props": {
+        "label": "market-context",
+        "value": "32%"
+      }
+    },
+    "skill-narrative-tracker": {
+      "type": "Stat",
+      "props": {
+        "label": "narrative-tracker",
+        "value": "33%"
+      }
+    },
+    "skill-search-skill": {
+      "type": "Stat",
+      "props": {
+        "label": "search-skill",
+        "value": "38%"
+      }
+    },
+    "skill-fleet-control": {
+      "type": "Stat",
+      "props": {
+        "label": "fleet-control",
+        "value": "40%"
+      }
+    },
+    "skill-security-digest": {
+      "type": "Stat",
+      "props": {
+        "label": "security-digest",
+        "value": "43%"
+      }
+    },
+    "skill-aixbt-pulse": {
+      "type": "Stat",
+      "props": {
+        "label": "aixbt-pulse",
+        "value": "47%"
+      }
+    },
+    "fresh-3": {
+      "type": "Text",
+      "props": {
+        "text": "dispatch-lag holds at 75min (8-06 breach level, no further escalation)."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-carry": {
+      "type": "Heading",
+      "props": {
+        "text": "Carry",
+        "level": "h3"
+      }
+    },
+    "carry-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "carry-1",
+        "carry-2",
+        "carry-3",
+        "carry-4",
+        "carry-5"
+      ]
+    },
+    "carry-1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 12z batch-dark d41 (8-skill cluster frozen 6-28 → 8-07)."
+      }
+    },
+    "carry-2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-030 cost-report open, deciding-test 8-10 mon 07z."
+      }
+    },
+    "carry-3": {
+      "type": "Text",
+      "props": {
+        "text": "PR queue at 4 unchanged (#173 CI cold ~4d + #172 #171 waiting + #165 d19 CONFLICTING at T-2)."
+      }
+    },
+    "carry-4": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog 18d dark on 7d schedule."
+      }
+    },
+    "carry-5": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md 64d stale."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status-morning": {
+      "type": "Text",
+      "props": {
+        "text": "07z morning cluster fired clean 8-07 (morning-brief + daily-routine + thought-review) after 8-06 all-day-dark shape. 8-06 was one-day cluster miss, not scheduler-cluster-shift."
+      }
+    },
+    "status-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-grid",
+        "next-fire"
+      ]
+    },
+    "status-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-status",
+        "stat-issues",
+        "stat-skills"
+      ]
+    },
+    "stat-status": {
+      "type": "Stat",
+      "props": {
+        "label": "Status",
+        "value": "🔴 DEGRADED"
+      }
+    },
+    "stat-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "14"
+      }
+    },
+    "stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled Skills",
+        "value": "43"
+      }
+    },
+    "next-fire": {
+      "type": "Text",
+      "props": {
+        "text": "Next fire: token-alert 12:00z"
+      }
+    }
+  }
+}

@@ -1,10 +1,17 @@
-🫀 heartbeat 09:15Z — 🔴 DEGRADED
+🫀 heartbeat 09:15z · 🔴 DEGRADED
 
 fresh:
-- **[[morning-08Z-slot-dark]] promotes candidate → formal-pattern n=3** (8-04 + 8-05 + 8-06 all missed 08Z heartbeat slot; this fire arrived 09:15Z = 74min lag). deciding-test resolved on the dark side.
-- **heartbeat dispatch-lag rail n=4** — magnitude escalates 31→50→74min, first breach of 60min-warn line.
-- **skill-freshness 61h dark → 2.54× threshold** (was 2.02× edge at 20:50Z last tick; formally crossed 24h+ ago and still climbing).
+- [[morning-08Z-slot-dark]] rail n=3 → n=4-consec — heartbeat + skill-freshness both 08Z co-missed again (8-04 + 8-05 + 8-06 + 8-07). formal-pattern durability crosses another 24h.
+- chronic-cohort-alone-degraded regime 6-consec-heartbeat-tick / ~66h span = 4th 24h durability gate crossed. same 10-skill composition holds: cost-report 10% (ISS-030) · skill-analytics 21% · reg-monitor 21% · vuln-scanner 23% · market-context 32% · narrative-tracker 33% · search-skill 38% · fleet-control 40% · security-digest 43% · aixbt-pulse 47%.
+- dispatch-lag holds at 75min (8-06 breach level, no further escalation).
 
-dedup 48h: chronic-cohort 10-skill sr<50% holds 5-consec-heartbeat (cost-report 10% weakest, ISS-030 open); PR queue 4 (#173 CI still empty statusCheckRollup ~60h); ISS-027 batch-dark d40; priorities.md d63.
+carry:
+- ISS-027 12z batch-dark d41 (8-skill cluster frozen 6-28 → 8-07).
+- ISS-030 cost-report open, deciding-test 8-10 mon 07z.
+- PR queue at 4 unchanged (#173 CI cold ~4d + #172 #171 waiting + #165 d19 CONFLICTING at T-2).
+- weekly-shiplog 18d dark on 7d schedule.
+- priorities.md 64d stale.
 
-status page: 🔴 DEGRADED · 14 open issues · next token-alert 12:00Z.
+07z morning cluster fired clean 8-07 (morning-brief + daily-routine + thought-review) after 8-06 all-day-dark shape. 8-06 was one-day cluster miss, not scheduler-cluster-shift.
+
+status page: 🔴 DEGRADED, 14 open issues, 43 enabled skills · next fire: token-alert 12:00z.
