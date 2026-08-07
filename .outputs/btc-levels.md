@@ -1,12 +1,11 @@
-Committed. Quiet run.
-
 ## Summary
 
-**btc-levels run 2026-08-07T00:31Z**
-
-- **Spot:** $64,216 — well above the $45k leverage-review trigger
-- **Close (Aug 6):** $64,263 — above $60,500, no breakdown signal
-- **Reclaim $63,500:** already alerted (flag stays true, not re-armed)
-- **Reclaim $65,900:** spot below level, no alert
-
-**Zero alerts fired.** No notification sent. State updated and committed (`memory/btc-levels-state.json`, `memory/logs/2026-08-07.md`).
+- **Fetched** BTC price from CoinGecko: spot $64,167.79, Aug-06 daily close $64,262.75
+- **Evaluated all 4 levels** — no alerts fired:
+  - Spot well above $45k leverage-review band
+  - Close $64,263 comfortably above $60,500 breakdown threshold
+  - reclaim63500 already flagged true from prior cycle
+  - Spot $64,168 hasn't reached $65,900 reclaim level yet
+- **Updated** `memory/btc-levels-state.json` (05:19Z timestamp, unchanged flags)
+- **Appended** log entry to `memory/logs/2026-08-07.md`
+- **Committed** both files as a chore state commit
