@@ -1,21 +1,26 @@
-*Evening Recap — 2026-08-05*
-_TL;DR: dense ship day — 14 fresh security rail-datapoints and ISS-029 sealed Resolved, but PR #173 CI dark at 48h blocks Sunday-batch queue clear._
+*Evening Recap — 2026-08-07*
+_TL;DR: busiest signal day in memory-window — first multi-token alert, fleet-relevant npm malware sub-class, ISS-029 closed; PR #173 CI still dark at 4 days._
 
 *Headlines:*
-- security-digest — 408-pkg malware peak (new memory-window #1), Langflow KEV 6th agent-framework, Tomcat EPSS 0.812 (99.6th pct) · `apps/dashboard/outputs/skill-analytics.json`
-- reflect — ISS-029 → Resolved (INDEX data-consistency defect reconciled), MEMORY.md 84L → 101L, 6 new sub-rail candidates · `memory/issues/INDEX.md`
-- skill-analytics — 75.2% success (−5pp WoW), 24 anomalies, article + dashboard shipped · `articles/skill-analytics-2026-08-05.md`
-- skill-health — cost-report CRITICAL→DEGRADED (consec 18→0 via 8-04 recovery), hash `35369f69` · `docs/status.md`
-- daily-routine — first token-movers clean fetch since ISS-027 d38 (2026-06-28); confirms ISS-027 is scheduler-side gap not CG infra · `.outputs/token-movers.md`
+- token-alert — GITLAWB +21.74% + REPPO vol 4.854×; first multi-token alert fire in memory-window · `.tmp/token-alert/msg.md`
+- security-digest — `claude-remote-agent` + `remote-claude-daemon` npm typosquat (fleet-relevant); Traefik 6-CVE; JetBrains TeamCity KEV (CISA due 8-08) · `.tmp/security-digest/msg.md`
+- goal-tracker — ISS-029 → DONE; morning-08Z-slot-dark + chronic-cohort formalized as tracked goals · `memory/goal-state.json`
+- skill-freshness — FRESHNESS_STALE; skill-security-scan 118d stale (d13+ streak) · `articles/skill-freshness-2026-08-07.md`
+- reflect — 48h MEMORY.md consolidation (102L → 108L); 4 pattern crossings + 5 rail promotions absorbed · `memory/MEMORY.md`
 
 *Notable:*
-- reg-monitor — NY v Kalshi $36B ACT-tier; CFTC prediction-market NPRM post-comment-close WATCH; Wed-cadence PASS post-ISS-029
-- github-trending — 5 picks (firecrawl/pdf-inspector 42×; airllm 68× d2 sustained); 8-consec sub-25 fetch rail
-- self-improve — EXIT GATE (3 open PRs; queue-full pause holds through 8-10 Sunday-batch)
-- agent-buzz — MCP-enforcement 5-consec; [[agent-buzz-engagement-drought]] 4-consec candidate → formal-pattern on 8-06 continuation
+- daily-routine — 4 sub-skills fresh (AgentOPSD paper-pick, token-movers CG d44, hn-digest 6 picks); notify 3,103 chars delivered
+- github-trending — cloudflare/computer top pick 2-consec at 34.6× baseline; skill-pack rail formalizes at 4 authors
+- action-converter — 5 actions queued: close-reopen #173 CI, cost-report fix PR, ISS-031, ISS-032, amend #171
+- self-improve — exit-gate trip; 3 open PRs queue-full, waiting 8-10 batch
+- agent-buzz — cross-vendor agent-plugins spec ships; MCP 10–30 tool accuracy cliff named
 
 *Decisions for tomorrow:*
-- Trigger PR #173 CI: push empty commit on `fix/self-improve-2026-08-03` (48h+ dark, mergeable=UNKNOWN; unblocks #171 + #172 at 8-10 batch) · https://github.com/anajuliabit/aeon/pull/173
-- Watch 8-06 08:00Z heartbeat + skill-freshness — [[morning-08Z-slot-dark]] formal-pattern deciding-test (skill-freshness already at 48.5h, formally >2× threshold)
+- close-reopen PR #173 to trigger CI (96h dark, unblocks #171 + #172 for 8-10 batch) · https://github.com/anajuliabit/aeon/pull/173
+- JetBrains TeamCity CISA due 8-08 — fleet grep clean (0 hits); external-only exposure confirmed
 
-_+11 routine runs collapsed · sources: log=ok cron-state=ok_
+*Blockers:*
+- PR #173 — CI dark ~96h, #172 + #171 queued behind it · https://github.com/anajuliabit/aeon/pull/173
+- ISS-027 — 12:00Z 8-skill batch d41 dark (frozen 2026-06-28)
+
+_+12 routine runs collapsed · sources: log=ok cron-state=ok_
