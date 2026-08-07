@@ -1,12 +1,11 @@
 {
-  "last_run_at": "2026-08-06T09:30:00Z",
+  "last_run_at": "2026-08-07T09:15:29Z",
   "last_verdict": "FRESHNESS_STALE",
-  "last_flagged_fingerprint": "fd5c367b5476282da0197e4b22eadd3ba1b1cf56",
+  "last_flagged_fingerprint": "4774f3475673deec0e4da911d37853d32691fa32",
   "consumer_count": 43,
   "dependency_count": 8,
-  "flagged_count": 2,
+  "flagged_count": 1,
   "first_seen_at": {
-    "skill-security-scan:articles/workflow-security-audit-2026-04-11.md": "2026-07-25T08:53:42Z",
-    "vuln-scanner:.outputs/github-trending.md": "2026-07-25T08:53:42Z"
+    "skill-security-scan:articles/workflow-security-audit-2026-04-11.md": "2026-07-25T08:53:42Z"
   }
 }

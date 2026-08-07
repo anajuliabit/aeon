@@ -1,0 +1,283 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Freshness"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_date",
+        "alert_status",
+        "sep1",
+        "heading_worst",
+        "worst_stack",
+        "sep2",
+        "heading_resolved",
+        "resolved_stack",
+        "sep3",
+        "heading_action",
+        "action_stack",
+        "sep4",
+        "link_full_report"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Freshness — 2026-08-07",
+        "level": "h1"
+      }
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 FRESHNESS_STALE",
+        "message": "1 of 8 deps flagged across 1 of 43 enabled consumers",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_worst": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst",
+        "level": "h3"
+      }
+    },
+    "worst_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "worst_consumer_text",
+        "worst_dep_row",
+        "worst_badges"
+      ]
+    },
+    "worst_consumer_text": {
+      "type": "Text",
+      "props": {
+        "text": "Consumer: skill-security-scan",
+        "variant": "body"
+      }
+    },
+    "worst_dep_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "worst_dep_label",
+        "worst_dep_link"
+      ]
+    },
+    "worst_dep_label": {
+      "type": "Text",
+      "props": {
+        "text": "Dependency:",
+        "variant": "body"
+      }
+    },
+    "worst_dep_link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/workflow-security-audit-2026-04-11.md",
+        "href": "articles/workflow-security-audit-2026-04-11.md"
+      }
+    },
+    "worst_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_118d",
+        "badge_articles_weekly",
+        "badge_stale_sev"
+      ]
+    },
+    "badge_118d": {
+      "type": "Badge",
+      "props": {
+        "text": "118d old",
+        "variant": "destructive"
+      }
+    },
+    "badge_articles_weekly": {
+      "type": "Badge",
+      "props": {
+        "text": "class: articles-weekly",
+        "variant": "secondary"
+      }
+    },
+    "badge_stale_sev": {
+      "type": "Badge",
+      "props": {
+        "text": "sev: STALE",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_resolved": {
+      "type": "Heading",
+      "props": {
+        "text": "↗ Resolved since 2026-08-06",
+        "level": "h3"
+      }
+    },
+    "resolved_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "resolved_consumer_text",
+        "resolved_dep_row",
+        "resolved_badges"
+      ]
+    },
+    "resolved_consumer_text": {
+      "type": "Text",
+      "props": {
+        "text": "Consumer: vuln-scanner",
+        "variant": "body"
+      }
+    },
+    "resolved_dep_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "resolved_dep_label",
+        "resolved_dep_link"
+      ]
+    },
+    "resolved_dep_label": {
+      "type": "Text",
+      "props": {
+        "text": "Dependency:",
+        "variant": "body"
+      }
+    },
+    "resolved_dep_link": {
+      "type": "Link",
+      "props": {
+        "label": ".outputs/github-trending.md",
+        "href": ".outputs/github-trending.md"
+      }
+    },
+    "resolved_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_47min",
+        "badge_committed"
+      ]
+    },
+    "badge_47min": {
+      "type": "Badge",
+      "props": {
+        "text": "~47min",
+        "variant": "secondary"
+      }
+    },
+    "badge_committed": {
+      "type": "Badge",
+      "props": {
+        "text": "committed 08:28Z daily-routine batch (below 4h threshold)",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "action_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_text1",
+        "action_text2",
+        "action_note"
+      ]
+    },
+    "action_text1": {
+      "type": "Text",
+      "props": {
+        "text": "Check workflow-security-audit — producer disabled since 2026-04-11 (118 days).",
+        "variant": "body"
+      }
+    },
+    "action_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Add <!-- skill-freshness:ignore --> to skill-security-scan's SKILL.md prose refs if not an active runtime read.",
+        "variant": "body"
+      }
+    },
+    "action_note": {
+      "type": "Text",
+      "props": {
+        "text": "This will suppress freshness checks for that reference.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_full_report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Freshness Report",
+        "href": "articles/skill-freshness-2026-08-07.md"
+      }
+    }
+  }
+}
