@@ -1,0 +1,121 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-08-07"
+      },
+      "children": [
+        "stack_tokens"
+      ]
+    },
+    "stack_tokens": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_gitlawb",
+        "separator_1",
+        "section_reppo"
+      ]
+    },
+    "section_gitlawb": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_gitlawb",
+        "stat_gitlawb_price",
+        "stat_gitlawb_volume",
+        "text_gitlawb_trigger"
+      ]
+    },
+    "heading_gitlawb": {
+      "type": "Heading",
+      "props": {
+        "text": "GITLAWB",
+        "level": "h2"
+      }
+    },
+    "stat_gitlawb_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002512",
+        "delta": "+21.74%",
+        "trend": "up"
+      }
+    },
+    "stat_gitlawb_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$226,580",
+        "delta": "1.11× baseline"
+      }
+    },
+    "text_gitlawb_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger: 24h |change| > 15% rail — snap-back from 8-06 -10.84% capitulation; 4-day arc breakout→abort→capitulation→bounce, first threshold-cross fire in memory-window.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_reppo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_reppo",
+        "stat_reppo_price",
+        "stat_reppo_volume",
+        "text_reppo_trigger"
+      ]
+    },
+    "heading_reppo": {
+      "type": "Heading",
+      "props": {
+        "text": "REPPO",
+        "level": "h2"
+      }
+    },
+    "stat_reppo_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.01391827",
+        "delta": "+1.88%",
+        "trend": "up"
+      }
+    },
+    "stat_reppo_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$384,455",
+        "delta": "4.85× baseline ($79k)"
+      }
+    },
+    "text_reppo_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger: vol-spike > 3× — 2-consec-day rising vol post 8-06 sell-flush; participation returns without directional print.",
+        "variant": "body"
+      }
+    }
+  }
+}
