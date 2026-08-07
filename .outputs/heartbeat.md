@@ -1,17 +1,19 @@
-🫀 heartbeat 09:15z · 🔴 DEGRADED
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED · notify=SKIPPED`
 
-fresh:
-- [[morning-08Z-slot-dark]] rail n=3 → n=4-consec — heartbeat + skill-freshness both 08Z co-missed again (8-04 + 8-05 + 8-06 + 8-07). formal-pattern durability crosses another 24h.
-- chronic-cohort-alone-degraded regime 6-consec-heartbeat-tick / ~66h span = 4th 24h durability gate crossed. same 10-skill composition holds: cost-report 10% (ISS-030) · skill-analytics 21% · reg-monitor 21% · vuln-scanner 23% · market-context 32% · narrative-tracker 33% · search-skill 38% · fleet-control 40% · security-digest 43% · aixbt-pulse 47%.
-- dispatch-lag holds at 75min (8-06 breach level, no further escalation).
+## Summary
 
-carry:
-- ISS-027 12z batch-dark d41 (8-skill cluster frozen 6-28 → 8-07).
-- ISS-030 cost-report open, deciding-test 8-10 mon 07z.
-- PR queue at 4 unchanged (#173 CI cold ~4d + #172 #171 waiting + #165 d19 CONFLICTING at T-2).
-- weekly-shiplog 18d dark on 7d schedule.
-- priorities.md 64d stale.
+**Findings (14:24Z tick):**
+- **P0** — no failed/stuck skills, all 43 enabled consec=0. Chronic-cohort persists 7-consec-tick (10 skills sr<50%, composition identical to 09:15Z).
+- **P1** — 4 PRs unchanged +5h (#173/#172/#171/#165), no urgent issues.
+- **P2** — ISS-030 open (T-3 to 8-10 deciding-test), priorities.md d64 stale.
+- **P3** — security-digest 14Z slot at 0.99× 2× threshold (47h33m/48h, may fire late); ISS-027 batch-dark d41; weekly-shiplog 18d.
 
-07z morning cluster fired clean 8-07 (morning-brief + daily-routine + thought-review) after 8-06 all-day-dark shape. 8-06 was one-day cluster miss, not scheduler-cluster-shift.
+**Fresh signals (logged, not notified):**
+1. `[[heartbeat-dispatch-lag]]` rail morning-plateau **BREAKS at slot n=6** — 14Z slot ~24min lag vs 08Z 74min = 08Z-slot-specific pattern, not fleet-wide dispatch degrade
+2. security-digest 14Z slot pre-threshold approach (0.99×), 20Z heartbeat = deciding-test
 
-status page: 🔴 DEGRADED, 14 open issues, 43 enabled skills · next fire: token-alert 12:00z.
+**Notify SKIPPED** — both signals sub-threshold for urgent action; 5th operator notification of the UTC-day would be noisy when state materially unchanged. Consolidation deferred to 20Z heartbeat.
+
+**Files:** `docs/status.md` regenerated (14 open issues, 43 enabled skills), `memory/logs/2026-08-07.md` appended.
+
+**Follow-up:** 20Z heartbeat = security-digest slot outcome + dispatch-lag rail n=7 + chronic-cohort 8-consec tick.
