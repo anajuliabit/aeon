@@ -1,27 +1,24 @@
-*GitHub Trending — 2026-08-06*
+*GitHub Trending — 2026-08-07*
 
 *Top pick* — [cloudflare/computer](https://github.com/cloudflare/computer)
-Cloudflare ships computer-use as a primitive: SQLite state in a Durable Object, FUSE-mounted into a sandbox container, RPC-synced via capnweb.
+day-2 +215% vs 8-06 (891 → 2,802 today) — first hyperscaler agent-runtime primitive to sustain viral compounding, not one-day debut spike.
 
 *AI/ML*
-• [cloudflare/computer](https://github.com/cloudflare/computer) — 891 today (4.1k total) · TypeScript · ACCELERATING
-Virtual filesystem inside a Durable Object, pluggable execution surface (container + FUSE + RPC). Hyperscaler joins the agent-runtime layer.
+• [cloudflare/computer](https://github.com/cloudflare/computer) — ★ 2.8k today (5.1k total) · TypeScript · [ACCELERATING]
+34.6× baseline day-2 (was 13.5× yesterday). Durable Object + SQLite + FUSE mount = computer-use as edge primitive.
 
-• [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) — 1,892 today (15.5k total) · TypeScript · HOLDOVER
-+70% resurgence after 1-day flat cool. 2nd viral peak on the team-level agent memory hub (chat memory, skills, code graphs).
+• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 1.9k today (207.9k total) · Shell · [RETURNING]
+matt pocock (typescript educator) drops his .agents directory. 4th credible-author skills-pack in 8 days — primitive going ecosystem.
 
-• [obra/superpowers](https://github.com/obra/superpowers) — 931 today (267.6k total) · Shell · HOLDOVER
-Agentic skills framework, day-2 sustained (+43% vs 8-05). First slate day-2 continuation at 267k total.
+• [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ★ 593 today (83.3k total) · JavaScript · [HOLDOVER]
+day-2 +162% vs 8-06 (226 → 593). yesterday's below-baseline judgment-call keep validates on the upside.
 
-• [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — 226 today (82.2k total) · JavaScript · RETURNING
-Production-grade skills catalog for coding agents (skills.addy.ie). 3rd skills-framework repo on Aeon's slate this week.
+• [huangruiteng/loopx](https://github.com/huangruiteng/loopx) — ★ 847 today (3.2k total) · Python · [HOLDOVER]
+day-2 +160% (326 → 847), 18× baseline. loop-engineering state kernel — narrow runtime piece for long-running agent teams.
 
-• [huangruiteng/loopx](https://github.com/huangruiteng/loopx) — 326 today (2.5k total) · Python · ACCELERATING
-Loop-engineering state kernel for long-running agent teams. Narrow-purpose runtime for multi-agent orchestration.
-
-*Infra*
-• [uber/ADR](https://github.com/uber/ADR) — 354 today (1.2k total) · Python · HOLDOVER
-Uber's enterprise agent-security framework, day-2 +139% acceleration. Corp-agent-infra rail 20 → 21-consec.
+*Devtools*
+• [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) — ★ 237 today (29.2k total) · Python · [RETURNING]
+persistent code graph exposed as an MCP server. replaces per-query codebase ingestion with a queryable index for agents.
 
 ---
-sources: trending=ok · gh_api=ok · kept 6/13
+sources: trending=ok · gh_api=ok · kept 5/13
