@@ -1,0 +1,207 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-08-07",
+        "description": "standardization day: a cross-vendor agent-plugins spec ships, and the MCP tool-wrapping cliff finally gets a number."
+      },
+      "children": [
+        "sep1",
+        "heading1",
+        "stack1",
+        "sep2",
+        "heading2",
+        "stack2",
+        "sep3",
+        "heading3",
+        "stack3",
+        "sep4",
+        "meta"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "agent plugins spec ships",
+        "level": "h3"
+      }
+    },
+    "stack1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1a",
+        "link1a",
+        "tweet1b",
+        "link1b"
+      ]
+    },
+    "tweet1a": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aidevnewss",
+        "handle": "@aidevnewss",
+        "text": "openai/github/aws/cursor/vercel push agent plugins as one package format carrying skills and MCP servers cross-client."
+      }
+    },
+    "link1a": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aidevnewss/status/2085443561936552415"
+      }
+    },
+    "tweet1b": {
+      "type": "TweetCard",
+      "props": {
+        "author": "VSMdev",
+        "handle": "@VSMdev",
+        "text": "vs code takes the spec but keeps its own commands/hooks/marketplace on top — partial portability, not full."
+      }
+    },
+    "link1b": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/VSMdev/status/2085516235257893025"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP tool-wrapping hits a cliff",
+        "level": "h3"
+      }
+    },
+    "stack2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2a",
+        "link2a",
+        "tweet2b",
+        "link2b"
+      ]
+    },
+    "tweet2a": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AgenticAIFdn",
+        "handle": "@AgenticAIFdn",
+        "text": "wrapping every api as an MCP tool degrades agent accuracy past 10–30 tools; each definition eats context."
+      }
+    },
+    "link2a": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/AgenticAIFdn/status/2085440771428319437"
+      }
+    },
+    "tweet2b": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ManasTak",
+        "handle": "@ManasTak",
+        "text": "counter-move: skip MCP and tool-call schemas, let the model write code against raw APIs."
+      }
+    },
+    "link2b": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/ManasTak/status/2085455876798689640"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading3": {
+      "type": "Heading",
+      "props": {
+        "text": "governance, not models",
+        "level": "h3"
+      }
+    },
+    "stack3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3a",
+        "link3a",
+        "tweet3b",
+        "link3b"
+      ]
+    },
+    "tweet3a": {
+      "type": "TweetCard",
+      "props": {
+        "author": "johniosifov",
+        "handle": "@johniosifov",
+        "text": "28% of enterprise multi-agent deploys work; the 72% failure mode is governance gaps, not model quality."
+      }
+    },
+    "link3a": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/johniosifov/status/2085348321632158142"
+      }
+    },
+    "tweet3b": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AgenticAIFdn",
+        "handle": "@AgenticAIFdn",
+        "text": "case for MCP-server governance layers; scaling/security/observability breaks when each service spins up its own MCP."
+      }
+    },
+    "link3b": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/AgenticAIFdn/status/2085448368621228180"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "meta": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 10 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

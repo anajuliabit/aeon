@@ -1,18 +1,22 @@
-*Agent Buzz — 2026-08-05*
-_mostly the mcp-as-enforcement frame — three "put the rules at the boundary" variants, plus two agent-behavior-at-scale drops._
+*Agent Buzz — 2026-08-07*
+_standardization day: a cross-vendor agent-plugins spec ships, and the MCP tool-wrapping cliff finally gets a number._
 
-**mcp as enforcement layer**
-• @Aurimas_Gr — each data domain owns its mcp server; usage rules sit at the source, not inside the agent
-  https://x.com/Aurimas_Gr/status/2084608000610754903
-• @Ardor_Cerebrum — getblock prod: agent gets vpn + read-only creds to live infra, mcp handles routing, no sandbox
-  https://x.com/Ardor_Cerebrum/status/2084501691886669960
-• @cv_usk — one gateway mcp fronting the servers: auth, rate-limit, audit in one place
-  https://x.com/cv_usk/status/2084523730068230442
+**agent plugins spec ships**
+• @aidevnewss — openai/github/aws/cursor/vercel push agent plugins as one package format carrying skills and MCP servers cross-client.
+  https://x.com/aidevnewss/status/2085443561936552415
+• @VSMdev — vs code takes the spec but keeps its own commands/hooks/marketplace on top — partial portability, not full.
+  https://x.com/VSMdev/status/2085516235257893025
 
-**agent behavior at scale**
-• @haoran_qiu98 — first prod-scale copilot-agent characterization: 3.2M users, 13M sessions, 761M llm calls, 95T tokens
-  https://x.com/haoran_qiu98/status/2084441858286235769
-• @AINativeF — scrambletoolbench: agents keep searching even when their own tool graph already points to the answer
-  https://x.com/AINativeF/status/2084790602693259346
+**MCP tool-wrapping hits a cliff**
+• @AgenticAIFdn — wrapping every api as an MCP tool degrades agent accuracy past 10–30 tools; each definition eats context.
+  https://x.com/AgenticAIFdn/status/2085440771428319437
+• @ManasTak — counter-move: skip MCP and tool-call schemas, let the model write code against raw APIs.
+  https://x.com/ManasTak/status/2085455876798689640
 
-<!-- _src: xai-cache · candidates: 10 → kept: 5 -->
+**governance, not models**
+• @johniosifov — 28% of enterprise multi-agent deploys work; the 72% failure mode is governance gaps, not model quality.
+  https://x.com/johniosifov/status/2085348321632158142
+• @AgenticAIFdn — case for MCP-server governance layers; scaling/security/observability breaks when each service spins up its own MCP.
+  https://x.com/AgenticAIFdn/status/2085448368621228180
+
+<!-- _src: xai · candidates: 10 → kept: 6_ -->
