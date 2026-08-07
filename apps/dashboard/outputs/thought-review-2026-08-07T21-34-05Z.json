@@ -1,0 +1,79 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "heading",
+        "captures_stat",
+        "inbox_stat",
+        "priorities_stack",
+        "separator",
+        "prompt_alert"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🧭 thought review",
+        "level": "h3"
+      }
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures in last 24h",
+        "value": "0"
+      }
+    },
+    "inbox_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Inbox cold streak",
+        "value": "47d"
+      }
+    },
+    "priorities_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "priorities_stat",
+        "priorities_date"
+      ]
+    },
+    "priorities_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md stale",
+        "value": "64d"
+      }
+    },
+    "priorities_date": {
+      "type": "Text",
+      "props": {
+        "text": "Last reviewed 2026-06-04",
+        "variant": "caption"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prompt_alert": {
+      "type": "Alert",
+      "props": {
+        "message": "worth a refresh?",
+        "type": "info"
+      }
+    }
+  }
+}
