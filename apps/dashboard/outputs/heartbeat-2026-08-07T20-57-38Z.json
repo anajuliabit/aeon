@@ -1,0 +1,163 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🫀 heartbeat",
+        "description": "20:52Z · 🔴 DEGRADED"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "signals_section",
+        "sep2",
+        "carry_section",
+        "sep3",
+        "status_page"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "System Status",
+        "message": "DEGRADED",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "signals_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "signals_heading",
+        "signal1",
+        "signal2",
+        "signal3",
+        "signal4",
+        "signal5"
+      ]
+    },
+    "signals_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fresh signals (14Z consolidation window)",
+        "level": "h2"
+      }
+    },
+    "signal1": {
+      "type": "Text",
+      "props": {
+        "text": "`[[heartbeat-dispatch-lag]]` rail n=6→n=7 at 20Z slot ~52min. sequence 31→50→50→75→75→24→52 = 08Z stuck 75min plateau, 14Z recovered 24min, 20Z mid-tier 52min. slot-specific pattern deepens — 3 distinct slot-shapes in same UTC-day, not fleet-wide dispatch-degrade.",
+        "variant": "body"
+      }
+    },
+    "signal2": {
+      "type": "Text",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime 7-consec → 8-consec-tick. ~77h span 8-04 14:45Z → 8-07 20:52Z, 4-consec-full-UTC-day = 5th 24h durability gate crossed. deepest composition-identity print in memory-window continues.",
+        "variant": "body"
+      }
+    },
+    "signal3": {
+      "type": "Text",
+      "props": {
+        "text": "`[[security-digest-14Z-slot-dark]]` candidate DOES NOT PROMOTE — security-digest fired late 14:31Z (dispatch-lag ~31min). resolved as slot-late not slot-dark.",
+        "variant": "body"
+      }
+    },
+    "signal4": {
+      "type": "Text",
+      "props": {
+        "text": "18Z evening batch full recovery — goal-tracker + skill-health + reflect + action-converter + self-improve all fired clean. confirms 8-06 fleet all-day-dark shape truly one-day-only.",
+        "variant": "body"
+      }
+    },
+    "signal5": {
+      "type": "Text",
+      "props": {
+        "text": "fleet clean-consec d3 continues into 20Z tick (unbroken since 8-04 21:48Z cost-report same-day organic recovery).",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "carry_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "carry_heading",
+        "carry_item1",
+        "carry_item2",
+        "carry_item3",
+        "carry_item4",
+        "carry_item5"
+      ]
+    },
+    "carry_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Carry",
+        "level": "h2"
+      }
+    },
+    "carry_item1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #173 CI cold ~96h (T-2 to 8-10 Sunday-batch)",
+        "variant": "body"
+      }
+    },
+    "carry_item2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-030 T-3 to 8-10 Mon 07Z deciding-test",
+        "variant": "body"
+      }
+    },
+    "carry_item3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 batch-dark d41",
+        "variant": "body"
+      }
+    },
+    "carry_item4": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md d64 stale",
+        "variant": "body"
+      }
+    },
+    "carry_item5": {
+      "type": "Text",
+      "props": {
+        "text": "14 open issues",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status_page": {
+      "type": "Text",
+      "props": {
+        "text": "status page: docs/status.md refreshed 20:52Z",
+        "variant": "caption"
+      }
+    }
+  }
+}

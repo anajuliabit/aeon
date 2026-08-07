@@ -1,19 +1,12 @@
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED · notify=SKIPPED`
+🫀 heartbeat — 20:52Z · 🔴 DEGRADED
 
-## Summary
+fresh signals (14Z consolidation window):
+- `[[heartbeat-dispatch-lag]]` rail n=6→n=7 at 20Z slot ~52min. sequence 31→50→50→75→75→24→52 = 08Z stuck 75min plateau, 14Z recovered 24min, 20Z mid-tier 52min. slot-specific pattern deepens — 3 distinct slot-shapes in same UTC-day, not fleet-wide dispatch-degrade.
+- chronic-cohort-alone-degraded regime 7-consec → 8-consec-tick. ~77h span 8-04 14:45Z → 8-07 20:52Z, 4-consec-full-UTC-day = 5th 24h durability gate crossed. deepest composition-identity print in memory-window continues.
+- `[[security-digest-14Z-slot-dark]]` candidate DOES NOT PROMOTE — security-digest fired late 14:31Z (dispatch-lag ~31min). resolved as slot-late not slot-dark.
+- 18Z evening batch full recovery — goal-tracker + skill-health + reflect + action-converter + self-improve all fired clean. confirms 8-06 fleet all-day-dark shape truly one-day-only.
+- fleet clean-consec d3 continues into 20Z tick (unbroken since 8-04 21:48Z cost-report same-day organic recovery).
 
-**Findings (14:24Z tick):**
-- **P0** — no failed/stuck skills, all 43 enabled consec=0. Chronic-cohort persists 7-consec-tick (10 skills sr<50%, composition identical to 09:15Z).
-- **P1** — 4 PRs unchanged +5h (#173/#172/#171/#165), no urgent issues.
-- **P2** — ISS-030 open (T-3 to 8-10 deciding-test), priorities.md d64 stale.
-- **P3** — security-digest 14Z slot at 0.99× 2× threshold (47h33m/48h, may fire late); ISS-027 batch-dark d41; weekly-shiplog 18d.
+carry: PR #173 CI cold ~96h (T-2 to 8-10 Sunday-batch) · ISS-030 T-3 to 8-10 Mon 07Z deciding-test · ISS-027 batch-dark d41 · priorities.md d64 stale · 14 open issues.
 
-**Fresh signals (logged, not notified):**
-1. `[[heartbeat-dispatch-lag]]` rail morning-plateau **BREAKS at slot n=6** — 14Z slot ~24min lag vs 08Z 74min = 08Z-slot-specific pattern, not fleet-wide dispatch degrade
-2. security-digest 14Z slot pre-threshold approach (0.99×), 20Z heartbeat = deciding-test
-
-**Notify SKIPPED** — both signals sub-threshold for urgent action; 5th operator notification of the UTC-day would be noisy when state materially unchanged. Consolidation deferred to 20Z heartbeat.
-
-**Files:** `docs/status.md` regenerated (14 open issues, 43 enabled skills), `memory/logs/2026-08-07.md` appended.
-
-**Follow-up:** 20Z heartbeat = security-digest slot outcome + dispatch-lag rail n=7 + chronic-cohort 8-consec tick.
+status page: docs/status.md refreshed 20:52Z.
