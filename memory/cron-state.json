@@ -450,13 +450,13 @@
   },
   "security-digest": {
     "last_dispatch": "2026-08-07T14:18:48Z",
-    "last_status": "dispatched",
-    "last_success": "2026-08-05T14:51:16Z",
-    "total_runs": 129,
-    "total_successes": 56,
+    "last_status": "success",
+    "last_success": "2026-08-07T14:31:25Z",
+    "total_runs": 130,
+    "total_successes": 57,
     "total_failures": 73,
     "consecutive_failures": 0,
-    "success_rate": 0.43,
+    "success_rate": 0.44,
     "last_quality_score": 4,
     "last_failed": "2026-08-03T18:27:02Z",
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
