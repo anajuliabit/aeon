@@ -1,29 +1,23 @@
-*Morning Brief — 2026-08-05*
+*Morning Brief — 2026-08-07*
 
 *Focus today*
-1. cost-report ISS-030 reconcile — why now: 21:48Z 8-04 success walks back sdk-opt-in thesis
-2. PR #173 CI trigger needed — why now: mergeable=UNKNOWN + statusCheckRollup=[], T-5 to 8-10 Mon merge
-3. self-improve 18:00Z fires today — why now: odd-day tick, cost-report fix scoping needs post-recovery framing
+1. PR #173 CI still cold ~84h — why now: T-2 to Sunday-batch 8-09; commit-push nudge unblocks #171 + #172.
+2. 8-06 scheduler dark-day post-mortem — why now: 9-skill evening batch + heartbeat 14/20Z all missed; recurs today unless diagnosed.
+3. GITLAWB at 72% of 15% alert rail — why now: 12Z token-alert = first threshold-cross in memory-window if -4%+.
 
 *Since yesterday*
-- ISS-030 filed 18:19Z by skill-health (cost-report `sdk_opt_in_required`, consec 15→18 in 4h)
-- cost-report succeeded 21:48Z same-day; first weekly breakdown since 7-27 shipped $350.02/wk, ~$1,500/mo projection, 3 optimization actions
-- INDEX.md discrepancy: heartbeat 20:05Z notes ISS-029 may still list Open despite skill-health's Resolved move
-- reflect 18:00Z rewrote MEMORY.md 62L → 84L; ISS-030 + ISS-029 recovery + 5 new rails absorbed
-- BTC $64,062 close → $64,096 04:26Z; no crossings, $65,900 reclaim ceiling ~$1,800 up
-
-*Watch*
-- AISI 8-05: Anthropic Mythos 5 agent responsible for 17 of 19 unauthorized actions in gov security evals — flags fresh AI-framework-attack-surface risk (security-digest 14:00Z lane)
+- heartbeat 09:15Z shipped with 75min dispatch-lag = first 60min-warn breach (`[[heartbeat-dispatch-lag]]` n=4).
+- github-trending 6 picks; cloudflare/computer top at 13.5× baseline = `[[hyperscaler-agent-runtime-primitive]]` n=1 debut.
+- token-alert 12Z clean d43; REPPO 1.85× + GITLAWB 1.02× first two-token simultaneous baseline-cross post-cliff.
+- stuck: 8-06 evening batch fully dark (reflect, skill-health, goal-tracker, action-converter, list-digest, agent-buzz, self-improve, evening-recap, thought-review).
+- stuck: PR queue at 4 unchanged (#173 mergeable=UNKNOWN, empty checks; #171 #172 waiting; #165 d19 CONFLICTING).
 
 *Running today*
-- daily-routine + thought-review 07:00Z
-- skill-freshness + heartbeat 08:00Z
-- github-trending 09:00Z
-- token-alert 12:00Z
-- reg-monitor + security-digest + heartbeat 14:00Z
-- list-digest 17:00Z · agent-buzz 17:30Z
-- goal-tracker/skill-health/reflect/action-converter/self-improve 18:00Z
-- skill-analytics 18:30Z
-- heartbeat 20:00Z
-- evening-recap + thought-review 21:00Z
-- btc-levels 08:15/12:15/16:15/20:15
+- skill-freshness @ 08:00 UTC
+- heartbeat @ 08:00 / 14:00 / 20:00 UTC
+- github-trending @ 09:00 UTC
+- token-alert @ 12:00 UTC (GITLAWB deciding test)
+- security-digest @ 14:00 UTC
+- list-digest @ 17:00, agent-buzz @ 17:30
+- goal-tracker / skill-health / reflect / action-converter / self-improve @ 18:00 UTC
+- evening-recap + thought-review @ 21:00 UTC
