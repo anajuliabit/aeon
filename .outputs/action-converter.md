@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-05*
-Shape: trigger PR#173 CI, draft cost-report fix, unblock #165, probe 08Z-slot-dark, codify CFTC fallback
+*5 Actions — 2026-08-07*
+Shape: close-reopen PR#173 CI, ship cost-report fix, file ISS-031+032, amend #171 range
 
-1. push empty commit to `fix/self-improve-2026-08-03` branch to trigger ci-skills-json on PR #173
-why: 40h dark with mergeable=UNKNOWN + empty statusCheckRollup; one CI pass unblocks 3-PR queue at 8-10 Sunday-batch T-5
-done: `gh pr view 173 --json statusCheckRollup` returns non-empty check array
-loop: push-commit-PR-173
+1. close-reopen PR #173 via `gh pr close 173 && gh pr reopen 173` to force a fresh CI trigger on branch `fix/self-improve-2026-08-03`.
+why: CI cold 84h+ blocks 3-PR self-improve queue at 8-10 Sunday-batch T-2; empty statusCheckRollup + mergeable=UNKNOWN since 8-03; reopen fires `pull_request.reopened` event.
+done: `gh pr view 173 --json statusCheckRollup` returns non-empty check-runs list within 10min.
+loop: close-reopen-PR-173-CI
 
-2. draft PR removing `model: claude-sonnet-4-6` override on cost-report at aeon.yml:276 so it inherits opus-4-7 default
-why: fleet-worst chronic sr=10% via ISS-030 `sdk_opt_in_required` signature; 8-10 Mon weekly-tick is the deciding-test
-done: PR opened targeting `aeon.yml` line 276 with skill-health ISS-030 reference in body
-loop: draft-cost-report-model-drop
+2. Open PR removing `model: claude-sonnet-4-6` override at `aeon.yml:276` on branch `fix/cost-report-iss-030-model-drop`.
+why: ISS-030 fleet-worst chronic sr=10% signature is `sdk_opt_in_required` under sonnet-4-6; drop lets 8-10 Mon 07Z deciding-test T-3 fire clean and auto-close the ticket.
+done: `gh pr view` shows a new PR opened with body linking ISS-030 + ci-skills-json check passing.
+loop: iss-030-cost-report-model-drop
 
-3. resolve PR #165 rebase conflicts against origin/main (docs skill-graph shared_state 21→27) before 8-09 Sunday-batch
-why: d17 CONFLICTING sole past-gate survivor + T-4 to weekly-batch merge window; docs skill-graph refresh gates fleet-map correctness
-done: `gh pr view 165 --json mergeable` returns MERGEABLE
-loop: resolve-PR-165-conflicts
+3. File `memory/issues/ISS-031.md` for `[[morning-08Z-slot-dark]]` formal-pattern n=4-consec (heartbeat + skill-freshness 08Z co-miss 8-04→8-07) + add row to `memory/issues/INDEX.md` Open table.
+why: today's 09:15Z heartbeat promoted the rail candidate n=3 → n=4-consec = crosses another 24h durability gate; formal-pattern threshold reached = ledger entry gates skill-repair path.
+done: `memory/issues/ISS-031.md` exists with YAML frontmatter (severity medium, category config, detected_by heartbeat 8-07 09:15Z) + INDEX Open row present.
+loop: file-iss-031-morning-08z-slot-dark
 
-4. probe scheduler for `[[morning-08Z-slot-dark]]` — grep `.github/workflows/` for `"0 8"` cron entries and confirm heartbeat + skill-freshness fire paths not muted
-why: 2-consec 08Z co-miss (8-04 + 8-05) heartbeat + skill-freshness; 8-06 miss promotes to formal-pattern
-done: written verdict in `memory/topics/fleet.md` (scheduler-bug vs. workflow-file bug vs. GH-Actions cadence-drift)
-loop: probe-08Z-slot-dark
+4. File `memory/issues/ISS-032.md` for `[[heartbeat-dispatch-lag]]` rail n=5 magnitude flat at 75min (60min-warn breach 2nd consecutive UTC-day).
+why: heartbeat 8-07 09:15Z surfaced sequence 31→50→50→75→75min = breach-plateau distinct from 08Z-slot-dark cause; symptom is delay-on-fire not co-miss, warrants its own ledger entry.
+done: `memory/issues/ISS-032.md` exists with YAML frontmatter (severity medium, category config, detected_by heartbeat 8-07 09:15Z, root_cause pending) + INDEX Open row present.
+loop: file-iss-032-heartbeat-dispatch-lag
 
-5. codify HTML fallback for CFTC RSS 404 in `skills/reg-monitor/SKILL.md` step 1C (add `https://www.cftc.gov/PressRoom/PressReleases` as documented fallback path)
-why: reg-monitor Wed 8-05 hit CFTC RSS 404, HTML fallback worked; codify before 8-12 Wed re-fire; SKILL currently only lists RSS URL
-done: PR opened modifying `skills/reg-monitor/SKILL.md` step 1C with fallback URL + skills.json regen
-loop: codify-CFTC-RSS-fallback
+5. Amend PR #171 body via `gh pr edit 171 --body-file -` to bump asserted cap from 12-17 → 12-18 (8-05 github-trending fetched n=18 top-edge, breaks assertion +1).
+why: 8-consec-day sub-25 fetch pattern's observed range is 12-18 not 12-17; reviewer misread risk on 8-10 batch if body still claims 12-17; single-file line edit.
+done: `gh pr view 171 --json body` shows "12-18" range assertion in body text.
+loop: amend-pr-171-range
 
-sources: memory=83L logs=10d topics=~20 prs=4 cron_failing=1 mode=OK
+sources: memory=101 logs=10 topics=19 prs=4 cron_failing=0 mode=OK

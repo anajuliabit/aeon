@@ -1,0 +1,255 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-08-07"
+      },
+      "children": [
+        "summary-text",
+        "sep-1",
+        "defi-section",
+        "sep-2",
+        "findings-section",
+        "sep-3",
+        "footer-section"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "DeFi Day: Single signal above noise — @Flowslikeosmo endorses $CASH earn-USDC mech as \"almost too genius\"",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "defi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "defi-heading",
+        "researcher-item"
+      ]
+    },
+    "defi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Researcher List",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "researcher-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "researcher-link",
+        "qt-stack",
+        "tweet-card",
+        "view-link"
+      ]
+    },
+    "researcher-link": {
+      "type": "Link",
+      "props": {
+        "label": "@Flowslikeosmo",
+        "href": "https://x.com/Flowslikeosmo"
+      },
+      "children": []
+    },
+    "qt-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "qt-label",
+        "rh-link",
+        "metrics-note"
+      ]
+    },
+    "qt-label": {
+      "type": "Text",
+      "props": {
+        "text": "Quote tweet of",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "rh-link": {
+      "type": "Link",
+      "props": {
+        "label": "@robinhoodjesus",
+        "href": "https://x.com/robinhoodjesus"
+      },
+      "children": []
+    },
+    "metrics-note": {
+      "type": "Text",
+      "props": {
+        "text": "(♥20 ↻2 💬8)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "tweet-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "Signal-boosts $CASH earn-USDC-by-holding mechanism (\"almost too genius\" = strong endorsement from a serious DeFi voice); yield-bearing-stable primitive interest keeps rotating",
+        "likes": 20,
+        "retweets": 2
+      },
+      "children": []
+    },
+    "view-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Tweet",
+        "href": "https://x.com/Flowslikeosmo/status/2085473633791533375"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "findings-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "subthreshold-heading",
+        "subthreshold-text",
+        "second-place-text",
+        "metrics-grid"
+      ]
+    },
+    "subthreshold-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Thresholding Results",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "subthreshold-text": {
+      "type": "Text",
+      "props": {
+        "text": "9 other items on the list were replies/self-QT link-shares below signal threshold"
+      },
+      "children": []
+    },
+    "second-place-text": {
+      "type": "Text",
+      "props": {
+        "text": "Second-place tweet was a bare-link self-QT (14♥ no commentary) → dropped.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-posters",
+        "stat-signals",
+        "stat-subthreshold"
+      ]
+    },
+    "stat-posters": {
+      "type": "Stat",
+      "props": {
+        "label": "Posters",
+        "value": "2"
+      },
+      "children": []
+    },
+    "stat-signals": {
+      "type": "Stat",
+      "props": {
+        "label": "Signals Above Threshold",
+        "value": "1"
+      },
+      "children": []
+    },
+    "stat-subthreshold": {
+      "type": "Stat",
+      "props": {
+        "label": "Sub-Threshold Items",
+        "value": "9"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-text",
+        "grok-alert",
+        "status-badge"
+      ]
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: list=ok (2 posters, 1 signal + 9 sub)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "grok-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Data Window Issue",
+        "message": "Grok returned only 8-06 window not 8-07 ([[xai-cache-window-narrows]] continues n=2)",
+        "type": "info"
+      },
+      "children": []
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      },
+      "children": []
+    }
+  }
+}
