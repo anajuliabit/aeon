@@ -1,14 +1,17 @@
+Done. Quiet run — no alerts fired.
+
 ## Summary
 
-**btc-levels** run at 09:15Z — quiet, no alerts.
+**BTC price fetched at 13:10Z:**
+- Spot: $65,263 (up from $64,676 at 09:15Z)
+- Previous daily close (Aug-06): $64,263
 
-| | Value |
-|---|---|
-| Spot | $64,676 |
-| Previous UTC daily close (Aug-06) | $64,263 |
-| Leverage-review trigger (≤ $45k) | Clear |
-| Breakdown signal (close < $60,500) | Clear — close well above |
-| Reclaim $63,500 | Already alerted (flag = true), not re-armed |
-| Reclaim $65,900 | Not reached ($1,224 away) |
+**Level evaluation:**
+| Level | Trigger | Result |
+|---|---|---|
+| Spot ≤ $45k (leverage review) | $65,263 > $45k | ✗ no alert |
+| Close < $60,500 (breakdown) | $64,263 > $60,500 | ✗ no alert |
+| Spot ≥ $63,500 reclaim | Flag already true | ✗ no alert |
+| Spot ≥ $65,900 reclaim | $65,263 < $65,900 | ✗ not triggered |
 
-No notification sent. State file and log updated, committed to main.
+No notification sent. State updated (`lastSpot` $64,676 → $65,263) and committed to `main`. The $65,900 reclaim level is within ~$637 of current spot — next run may trigger that alert if momentum holds.
