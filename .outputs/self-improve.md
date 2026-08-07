@@ -1,1 +1,1 @@
-self-improve 18Z: exit-gate holds. 3 open improvement PRs (#171 github-trending 12-17 cap, #172 daily-routine XAI prefetch, #173 skills.json regen) — no new authoring until sunday-batch clears queue. #173 unblocks the other two if it merges 8-10.
+self-improve: 3+ open PRs (queue-full — #173/#172/#171) — waiting for review batch 8-09
