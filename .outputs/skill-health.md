@@ -1,17 +1,20 @@
-*Skill Health — 8-05*
-HEALTH: DEGRADED(18) · no fresh systemic · post-ISS-029 fleet stable
+🩺 skill-health — 2026-08-07 18Z
 
-🟡 DEGRADED (18)
-- cost-report — sr 0.10, consec 17→0 after 8-04 21:48Z print (was CRITICAL) → ISS-030 stays open
-- skill-analytics — sr 0.19, chronic baseline
-- reg-monitor — sr 0.21, chronic baseline
-- vuln-scanner — sr 0.23 → ISS-018
-- search-skill — sr 0.38 → ISS-021
-+13 more — see memory/issues/INDEX.md
+HEALTH: DEGRADED(18) — hash `35369f69` unchanged since 8-05 19:51Z tick (~46h), no state delta; daily-cadence reminder tick
 
-⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — dispatch-only cadence, expected
+SYSTEMIC:
+- ISS-027 12Z 8-skill batch d41 dormant (frozen 6-28): 4 in DEGRADED cohort (market-context-refresh 32% / narrative-tracker 33% / aixbt-pulse 47% / defi-monitor 53%) + 4 in WARNING (defi-overview 69% / token-pick 64% / token-movers 65% / on-chain-monitor 72%)
+- ISS-030 cost-report sr 10% fleet-worst → deciding-test 8-10 07Z (T-3)
+
+🟡 DEGRADED (18) — top-5 by days-since-last-success:
+- market-context-refresh 32% · 40d dormant → ISS-027
+- narrative-tracker 33% · 40d dormant → ISS-027
+- aixbt-pulse 47% · 40d dormant → ISS-027
+- defi-monitor 53% · 40d dormant → ISS-027
+- vuln-scanner 23% · 6d idle → ISS-018
++13 more (chronic sub-60 cohort unchanged) — see memory/issues/INDEX.md
+
+⚪ NO DATA (3): autoresearch (workflow_dispatch), fork-skill-gap (Sun 21Z weekly), operator-scorecard (Mon 10:30Z weekly)
 🟢 HEALTHY: 8
 
-Delta: cost-report CRITICAL→DEGRADED (first weekly cost print since 7-27 shipped). No fresh usepod 402 or sdk_opt_in_required signatures in the last ~24h.
-
-Open issues: 14 · Resolved this run: 1 (ISS-029 INDEX sync — file pre-resolved 8-04)
+open issues: 14 · filed: 0 · resolved: 0

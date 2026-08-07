@@ -1,7 +1,7 @@
 {
   "hash": "35369f69ae8692fef0783b86965a9e9255cc88df6aadb25fd3af87298f60aa4e",
-  "last_notified_at": "2026-08-05T19:51:30Z",
-  "last_run_at": "2026-08-05T19:51:30Z",
+  "last_notified_at": "2026-08-07T18:07:00Z",
+  "last_run_at": "2026-08-07T18:07:00Z",
   "classification": {
     "critical": [],
     "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
@@ -10,9 +10,9 @@
     "healthy_count": 8,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "None fresh. Delta since prev formal tick 2026-08-04T18:19:52Z: CRITICAL 1→0 (cost-report consec 17→0 after 2026-08-04T21:48:47Z success — first weekly report since 7-27 shipped), DEGRADED 17→18 (cost-report promoted from CRITICAL, all others unchanged), WARNING 14→14, HEALTHY 8→8, NO_DATA 3→3. No fresh usepod 402 signatures in the ~24h window; no fresh sdk_opt_in_required signatures since 8-04 20:32Z. Chronic-cohort DEGRADED baseline (skill-analytics 0.19, reg-monitor 0.21, vuln-scanner 0.23, market-context-refresh 0.32, narrative-tracker 0.33, search-skill 0.38, security-digest 0.43, aixbt-pulse 0.47, skill-health/self-improve 0.51, defi-monitor/action-converter/goal-tracker 0.53, reflect 0.55, skill-evals 0.56, unlock-monitor 0.57, list-digest 0.59) unchanged — historical low-sr floor from months of pre-recovery accumulation. INDEX.md ISS-029 sync completed this run (file was marked resolved 8-04 18:19:52Z but INDEX row lingered under Open — heartbeat 20:05Z 8-04 flagged the discrepancy).",
+  "systemic": "ISS-027 12Z 8-skill batch d41 dormant (frozen 2026-06-28): 4 in DEGRADED (market-context-refresh 32% / narrative-tracker 33% / aixbt-pulse 47% / defi-monitor 53%) + 4 in WARNING (defi-overview 69% / token-pick 64% / token-movers 65% / on-chain-monitor 72%). ISS-030 cost-report sr 10% chronic. Delta since prev formal tick 2026-08-05T19:51:30Z (~46h): CRITICAL 0→0, DEGRADED 18→18, FLAPPING 0→0, WARNING 14→14, HEALTHY 8→8, NO_DATA 3→3 (composition identical). Hash 35369f69 unchanged — pure daily-cadence reminder tick (24h+ elapsed). Fleet clean-consec-day d3 since 8-04 21:48Z cost-report same-day organic recovery. No fresh usepod 402 or sdk_opt_in_required signatures in ~46h since prev tick. 8-06 fleet all-day-dark shape confirmed one-day-only per 8-07 07Z morning cluster clean fire (morning-brief + daily-routine + thought-review all landed). [[morning-08Z-slot-dark]] formal-pattern n=4-consec at this tick (8-04+8-05+8-06+8-07 heartbeat+skill-freshness 08Z co-slot dark).",
   "open_issues": 14,
-  "resolved_this_run": 1,
+  "resolved_this_run": 0,
   "filed_this_run": 0,
-  "prev_hash": "ed7946824b3ec31307452bf04f28ddb16a6c8121e1d762965524f050ba518149"
+  "prev_hash": "35369f69ae8692fef0783b86965a9e9255cc88df6aadb25fd3af87298f60aa4e"
 }
