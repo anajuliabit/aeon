@@ -1,0 +1,66 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_conclusion",
+        "stack_details"
+      ]
+    },
+    "text_conclusion": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_timeframe",
+        "badge_captures",
+        "badge_inbox"
+      ]
+    },
+    "badge_timeframe": {
+      "type": "Badge",
+      "props": {
+        "text": "Last 24h",
+        "variant": "outline"
+      }
+    },
+    "badge_captures": {
+      "type": "Badge",
+      "props": {
+        "text": "0 captures",
+        "variant": "outline"
+      }
+    },
+    "badge_inbox": {
+      "type": "Badge",
+      "props": {
+        "text": "Inbox 46d cold",
+        "variant": "outline"
+      }
+    }
+  }
+}
