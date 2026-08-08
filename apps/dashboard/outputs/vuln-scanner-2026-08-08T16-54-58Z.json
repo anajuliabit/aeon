@@ -1,0 +1,348 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "vuln-scanner"
+      },
+      "children": [
+        "project-link",
+        "status-badges",
+        "repo-overview",
+        "metrics-row",
+        "sep-1",
+        "findings-section",
+        "sep-2",
+        "practices-section",
+        "sep-3",
+        "scanner-results",
+        "sep-4",
+        "actions-section"
+      ]
+    },
+    "project-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pranshuparmar/witr",
+        "href": "https://github.com/pranshuparmar/witr",
+        "source": "GitHub"
+      }
+    },
+    "status-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-clean",
+        "badge-partial"
+      ]
+    },
+    "badge-clean": {
+      "type": "Badge",
+      "props": {
+        "text": "clean audit",
+        "variant": "default"
+      }
+    },
+    "badge-partial": {
+      "type": "Badge",
+      "props": {
+        "text": "partial-scan",
+        "variant": "outline"
+      }
+    },
+    "repo-overview": {
+      "type": "Text",
+      "props": {
+        "text": "20k-star Go CLI that traces \"why is this running?\"",
+        "variant": "lead"
+      }
+    },
+    "metrics-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "metric-loc",
+        "metric-repo-age"
+      ]
+    },
+    "metric-loc": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines Reviewed",
+        "value": "25k"
+      }
+    },
+    "metric-repo-age": {
+      "type": "Text",
+      "props": {
+        "text": "8-month-old repo",
+        "variant": "caption"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "findings-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "findings-title",
+        "cve-intro",
+        "cve-list",
+        "cve-status",
+        "hand-audit-result"
+      ]
+    },
+    "findings-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Vulnerability Findings",
+        "level": "h3"
+      }
+    },
+    "cve-intro": {
+      "type": "Text",
+      "props": {
+        "text": "2 dep-CVE candidates via osv-api:"
+      }
+    },
+    "cve-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-1",
+        "cve-2"
+      ]
+    },
+    "cve-1": {
+      "type": "Text",
+      "props": {
+        "text": "• x/sys `NewNTUnicodeString` — int-overflow"
+      }
+    },
+    "cve-2": {
+      "type": "Text",
+      "props": {
+        "text": "• x/text `unicode/norm` — infinite loop"
+      }
+    },
+    "cve-status": {
+      "type": "Alert",
+      "props": {
+        "title": "Assessment",
+        "message": "Both dropped as unreachable. Neither package is called or vendored into the compiled binary.",
+        "type": "success"
+      }
+    },
+    "hand-audit-result": {
+      "type": "Alert",
+      "props": {
+        "title": "Hand-Audit",
+        "message": "Found nothing exploitable",
+        "type": "success"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "practices-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "practices-title",
+        "practices-list",
+        "practices-summary"
+      ]
+    },
+    "practices-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Security Practices Observed",
+        "level": "h3"
+      }
+    },
+    "practices-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "practice-1",
+        "practice-2",
+        "practice-3",
+        "practice-4",
+        "practice-5"
+      ]
+    },
+    "practice-1": {
+      "type": "Text",
+      "props": {
+        "text": "• isValidContainerID validation discipline"
+      }
+    },
+    "practice-2": {
+      "type": "Text",
+      "props": {
+        "text": "• isValidServiceLabel validation discipline"
+      }
+    },
+    "practice-3": {
+      "type": "Text",
+      "props": {
+        "text": "• -- separator discipline"
+      }
+    },
+    "practice-4": {
+      "type": "Text",
+      "props": {
+        "text": "• SanitizeTerminal on every attacker-influenced output field"
+      }
+    },
+    "practice-5": {
+      "type": "Text",
+      "props": {
+        "text": "• Printer wrapper auto-sanitizing string args"
+      }
+    },
+    "practices-summary": {
+      "type": "Alert",
+      "props": {
+        "title": "Quality Assessment",
+        "message": "Unusually solid security posture for an 8-month-old repo",
+        "type": "success"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "scanner-results": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "scanner-title",
+        "scanner-table"
+      ]
+    },
+    "scanner-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanner Results",
+        "level": "h3"
+      }
+    },
+    "scanner-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Scanner",
+          "Status",
+          "Details"
+        ],
+        "rows": [
+          [
+            "semgrep",
+            "fail",
+            ""
+          ],
+          [
+            "trufflehog",
+            "fail",
+            ""
+          ],
+          [
+            "osv-binary",
+            "fail",
+            "iss-018 day-47; /usr/bin/go execution blocked"
+          ],
+          [
+            "osv-api",
+            "ok",
+            "2 candidates identified, both unreachable"
+          ],
+          [
+            "hand-audit",
+            "ok",
+            "No exploitable issues found"
+          ]
+        ]
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "actions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions-title",
+        "actions-list"
+      ]
+    },
+    "actions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions Taken",
+        "level": "h3"
+      }
+    },
+    "actions-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1",
+        "action-2"
+      ]
+    },
+    "action-1": {
+      "type": "Text",
+      "props": {
+        "text": "• Zero PVR filed"
+      }
+    },
+    "action-2": {
+      "type": "Text",
+      "props": {
+        "text": "• Zero PR opened"
+      }
+    }
+  }
+}

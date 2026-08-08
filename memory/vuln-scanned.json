@@ -1,5 +1,21 @@
 [
   {
+    "repo": "pranshuparmar/witr",
+    "scanned_at": "2026-08-08T16:55:00Z",
+    "findings": 0,
+    "channel": "clean-audit-partial-scan",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "osv-api": "ok",
+      "slither": "n/a",
+      "hand-audit": "ok"
+    },
+    "article": "articles/vuln-scan-2026-08-08.md",
+    "notes": "pranshuparmar/witr 20,077-star Go CLI+TUI 'why is this running?' — traces any process/port/container/file back to what started it via /proc + lsof + platform APIs. SECURITY.md present with clean PVR-first policy (Reporting a Vulnerability → GitHub Security tab, 48h ack SLA). ~25,854 LOC Go audited across cmd/ + internal/{proc,target,output,app,tui,launchd,source,pipeline} (vendor excluded). Selected from .outputs/github-trending.md 2026-08-08 devtools cluster (skipped top pick PrimeIntellect-ai/prime-agent 8,173★ TS — no SECURITY.md + unverified PVR status = safe-channel-not-guaranteed per skill Step 1 preference; celld 2,456★ same posture). osv-api batch query (33 direct+indirect deps) surfaced 2 candidates both DROPPED as unreachable: (a) GO-2026-5024 CVE-2026-39824 golang.org/x/sys v0.38.0→0.44.0 Windows-only integer overflow in NewNTUnicodeString — grep shows function defined in vendor but zero callers in compiled binary; (b) GO-2026-5970 CVE-2026-56852 golang.org/x/text v0.3.8→0.39.0 infinite loop in unicode/norm sub-package — that sub-package is NOT vendored (vendor/modules.txt scopes x/text to transform only), so vulnerable code not in compiled binary. Hand-audit found unusually strong defensive posture for young devtool: isValidContainerID rejects leading-dash + non-[A-Za-z0-9._-] before docker/podman/crictl/nerdctl inspect calls (internal/proc/container.go:73), isValidServiceLabel enforces ^[a-zA-Z0-9][a-zA-Z0-9._-]*$ on FreeBSD/Darwin service names, filepath.Abs used with inline comment to prevent leading-dash lsof/fstat argv injection (target/file_{darwin,freebsd}.go:13), -- separator discipline on docker/systemctl commands, terminal-escape sanitization SanitizeTerminal/SanitizeTerminalLine applied broadly (output/standard.go covers process command+cmdline+user+container+service+workingdir+gitrepo+gitbranch+health+chain names+socket lines+thermal state+file paths+fd list+socket info; output/printer.go wraps fmt.Fprintf to auto-sanitize all string/[]byte/error/fmt.Stringer args via type switch, only custom ansiString type used for color escapes passes through unmodified; output/safe_writer.go wraps io.Writer; internal/tui/data.go mirrors sanitize in TUI table cells). Container IDs sourced from trusted runtime JSON listings. Zero net.Listen/setuid/YAML-unmarshal/template-engine in non-test code — pure CLI+TUI, no daemon. Two low-severity defense-in-depth notes surfaced but NOT PVR-filed (below the bar): (i) unicode.IsControl misses Unicode Cf category (BiDi override U+202E, ZWJ U+200D) — visual spoofing only, no code exec; (ii) install.sh curl-fetches release binary without SHA256 verification — standard curl|bash posture. Zero PVR filed, zero public PR, zero .pending-disclosure/ draft. Fleet-wide ISS-018 sandbox family day-47 (pip install + curl|sh + downloaded-binary-exec all denied — even `go version` blocked despite /usr/bin/go present) — partial-scan verdict per skill Sandbox note. OSV.dev batch API used as substitute for osv-scanner binary (equivalent CVE coverage over Go ecosystem), hand-audit substituted for Semgrep."
+  },
+  {
     "repo": "yc-software/qm",
     "scanned_at": "2026-08-01T16:45:00Z",
     "findings": 0,

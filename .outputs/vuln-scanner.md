@@ -1,13 +1,2 @@
-🔒 *vuln-scanner — yc-software/qm*
-
-clean audit. 8 candidates reviewed, 0 confirmed.
-
-target: 4,302★ ts multiplayer agent harness. PVR enabled + SECURITY.md present.
-
-npm audit clean across 6 workspaces (577 deps). 3 parallel explore agents (auth+capability / injection+ssrf+traversal / secrets+crypto) over ~350 ts files — every low/medium candidate dropped in triage (defense-in-depth, deliberate design, misconfig-not-code, dev-only + attacker-privilege exceeds-yield).
-
-notably tight surface — alg-pinned jose, timingSafeEqual throughout, replay-deduped source-auth, host-pinned credential-broker, IP-pinned egress with fail-closed lua authz, closed dns-rebinding.
-
-scanners: semgrep=fail, trufflehog=fail, osv-binary=fail (iss-018 sandbox day-40), npm-audit=ok, hand-audit=ok.
-
-zero PVR filed. zero PR opened. channel warm.
+*vuln-scanner — pranshuparmar/witr*
+clean audit, partial-scan. 20k-star go cli that traces "why is this running?" — 25k loc reviewed. 2 dep-cve candidates via osv-api (x/sys `NewNTUnicodeString` int-overflow, x/text `unicode/norm` infinite loop) both dropped as unreachable: neither package is called or vendored into the compiled binary. hand-audit found nothing exploitable — isValidContainerID + isValidServiceLabel + `--` separator discipline + SanitizeTerminal on every attacker-influenced output field + Printer wrapper auto-sanitizing string args, unusually solid for an 8-month-old repo. zero pvr filed, zero pr opened. scanners: semgrep=fail, trufflehog=fail, osv-binary=fail (iss-018 day-47, even /usr/bin/go execution blocked), osv-api=ok, hand-audit=ok.
