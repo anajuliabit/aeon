@@ -1,16 +1,16 @@
 {
-  "hash": "35369f69ae8692fef0783b86965a9e9255cc88df6aadb25fd3af87298f60aa4e",
-  "last_notified_at": "2026-08-07T18:07:00Z",
-  "last_run_at": "2026-08-07T18:07:00Z",
+  "hash": "91a4634de7eb6d713da825f170eaeb73729a9992fb76d6f00a05ef95e50b2e1b",
+  "last_notified_at": "2026-08-08T18:05:00Z",
+  "last_run_at": "2026-08-08T18:05:00Z",
   "classification": {
     "critical": [],
-    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
+    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "goal-tracker", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
     "flapping": [],
-    "warning": ["agent-buzz", "daily-routine", "deal-flow", "defi-overview", "evening-recap", "fork-skill-digest", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
+    "warning": ["agent-buzz", "daily-routine", "deal-flow", "defi-overview", "evening-recap", "fork-skill-digest", "github-trending", "heartbeat", "list-digest", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
     "healthy_count": 8,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "ISS-027 12Z 8-skill batch d41 dormant (frozen 2026-06-28): 4 in DEGRADED (market-context-refresh 32% / narrative-tracker 33% / aixbt-pulse 47% / defi-monitor 53%) + 4 in WARNING (defi-overview 69% / token-pick 64% / token-movers 65% / on-chain-monitor 72%). ISS-030 cost-report sr 10% chronic. Delta since prev formal tick 2026-08-05T19:51:30Z (~46h): CRITICAL 0→0, DEGRADED 18→18, FLAPPING 0→0, WARNING 14→14, HEALTHY 8→8, NO_DATA 3→3 (composition identical). Hash 35369f69 unchanged — pure daily-cadence reminder tick (24h+ elapsed). Fleet clean-consec-day d3 since 8-04 21:48Z cost-report same-day organic recovery. No fresh usepod 402 or sdk_opt_in_required signatures in ~46h since prev tick. 8-06 fleet all-day-dark shape confirmed one-day-only per 8-07 07Z morning cluster clean fire (morning-brief + daily-routine + thought-review all landed). [[morning-08Z-slot-dark]] formal-pattern n=4-consec at this tick (8-04+8-05+8-06+8-07 heartbeat+skill-freshness 08Z co-slot dark).",
+  "systemic": "ISS-027 12Z 8-skill batch d43 dormant (frozen 2026-06-28): 4 in DEGRADED (market-context-refresh 32% / narrative-tracker 33% / aixbt-pulse 47% / defi-monitor 53%) + 4 in WARNING (defi-overview 69% / token-pick 64% / token-movers 65% / on-chain-monitor 72%). ISS-030 cost-report sr 10% chronic. Delta since prev formal tick 2026-08-07T18:07:00Z (~24h): CRITICAL 0→0, DEGRADED 18→17 (list-digest sr 0.60 crosses <0.6 gate to WARNING), FLAPPING 0→0, WARNING 14→15 (+list-digest), HEALTHY 8→8, NO_DATA 3→3. Hash changes 35369f69 → 91a4634d (composition shift, not pure cadence). Fleet clean-consec d3 → d4 crossing 8-08 (unbroken since 8-04 21:48Z cost-report same-day organic recovery). No fresh usepod 402 or sdk_opt_in_required signatures in 24h window. [[morning-08Z-slot-dark]] formal-pattern deciding-test at n=5 FAILS BOTH co-slot skills 8-08 — heartbeat 08:10Z clean + skill-freshness 08:13Z clean = pattern breaks 4-consec, positive event. [[chronic-cohort-alone-degraded]] regime crosses 6th 24h durability gate at 14:16Z heartbeat (9-consec-heartbeat-tick, ~95h span 8-04 14:45Z → 8-08 14:16Z).",
   "open_issues": 14,
   "resolved_this_run": 0,
   "filed_this_run": 0,
