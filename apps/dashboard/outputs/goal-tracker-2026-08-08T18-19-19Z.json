@@ -1,0 +1,579 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-08"
+      },
+      "children": [
+        "summary-section",
+        "sep-1",
+        "trends-section",
+        "sep-2",
+        "on-track-section",
+        "sep-3",
+        "blocked-section",
+        "sep-4",
+        "sources-section"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-heading",
+        "summary-grid"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-total-goals",
+        "stat-at-risk",
+        "stat-needs-attention",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total-goals": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "8"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-needs-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "3"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "5"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trends-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trends-heading",
+        "trends-grid"
+      ]
+    },
+    "trends-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Overall Trends",
+        "level": "h2"
+      }
+    },
+    "trends-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-improving",
+        "stat-degrading",
+        "stat-flat"
+      ]
+    },
+    "stat-improving": {
+      "type": "Stat",
+      "props": {
+        "label": "Improving",
+        "value": "1",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-degrading": {
+      "type": "Stat",
+      "props": {
+        "label": "Degrading",
+        "value": "1",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-flat": {
+      "type": "Stat",
+      "props": {
+        "label": "Flat",
+        "value": "6"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item-1",
+        "on-track-item-2",
+        "on-track-item-3"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track",
+        "level": "h2"
+      }
+    },
+    "on-track-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot1-title",
+        "ot1-badges",
+        "ot1-details"
+      ]
+    },
+    "ot1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-030 cost-report sdk-opt-in",
+        "level": "h3"
+      }
+    },
+    "ot1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ot1-badge-idle",
+        "ot1-badge-activity",
+        "ot1-badge-status"
+      ]
+    },
+    "ot1-badge-idle": {
+      "type": "Badge",
+      "props": {
+        "text": "0d idle"
+      }
+    },
+    "ot1-badge-activity": {
+      "type": "Badge",
+      "props": {
+        "text": "15+ activity/14d"
+      }
+    },
+    "ot1-badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "flat"
+      }
+    },
+    "ot1-details": {
+      "type": "Text",
+      "props": {
+        "text": "T-2 to 8-10 Mon 07Z deciding-test, chronic sr=10% unchanged, no fresh sdk_opt_in_required signature",
+        "variant": "body"
+      }
+    },
+    "on-track-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot2-title",
+        "ot2-badges",
+        "ot2-details"
+      ]
+    },
+    "ot2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime",
+        "level": "h3"
+      }
+    },
+    "ot2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ot2-badge-idle",
+        "ot2-badge-activity",
+        "ot2-badge-status"
+      ]
+    },
+    "ot2-badge-idle": {
+      "type": "Badge",
+      "props": {
+        "text": "0d idle"
+      }
+    },
+    "ot2-badge-activity": {
+      "type": "Badge",
+      "props": {
+        "text": "20+ activity/14d"
+      }
+    },
+    "ot2-badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "flat"
+      }
+    },
+    "ot2-details": {
+      "type": "Text",
+      "props": {
+        "text": "crosses 5th + 6th 24h durability gate 8-08 = 9-consec-heartbeat-tick ~95h span, deepest composition-identity print in memory-window",
+        "variant": "body"
+      }
+    },
+    "on-track-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot3-title",
+        "ot3-badges",
+        "ot3-details"
+      ]
+    },
+    "ot3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "[[morning-08z-slot-dark]] formal-pattern",
+        "level": "h3"
+      }
+    },
+    "ot3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ot3-badge-idle",
+        "ot3-badge-activity",
+        "ot3-badge-status"
+      ]
+    },
+    "ot3-badge-idle": {
+      "type": "Badge",
+      "props": {
+        "text": "0d idle"
+      }
+    },
+    "ot3-badge-activity": {
+      "type": "Badge",
+      "props": {
+        "text": "15+ activity/14d"
+      }
+    },
+    "ot3-badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "improving",
+        "variant": "secondary"
+      }
+    },
+    "ot3-details": {
+      "type": "Text",
+      "props": {
+        "text": "deciding-test at n=5 FAILS on both co-slot skills, formal-pattern from 8-07 n=4-consec resolves as 4-consec-terminating, dispatch-lag collapses 75min → 4min at 08z",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3",
+        "blocked-item-4",
+        "blocked-item-5"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked",
+        "level": "h2"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b1-title",
+        "b1-text",
+        "b1-alert"
+      ]
+    },
+    "b1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "pr queue at 4",
+        "level": "h3"
+      }
+    },
+    "b1-text": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on 8-09 sunday-batch operator review since 8-05. Queue GROWS 4 → 5 8-08 via pr #174 opened 00:31z overnight, first advisor-workflow-opened pr in memory-window; #173 ci cold ~4.6d = t-1 nudge window narrows",
+        "variant": "body"
+      }
+    },
+    "b1-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "close-reopen pr #173 to trigger fresh ci dispatch before 8-09 sunday-batch t-1"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b2-title",
+        "b2-text",
+        "b2-alert"
+      ]
+    },
+    "b2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-028 workaround-chain",
+        "level": "h3"
+      }
+    },
+    "b2-text": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on root-cause investigation since 7-30 pr #167 merge. rail extends n=32+ → n=33+ 8-08 via daily-routine + list-digest + agent-buzz + vuln-scanner sibling, 17-utc-day span 7-22 → 8-08",
+        "variant": "body"
+      }
+    },
+    "b2-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "reopen pr #167 fix-scope-narrowness at 8-10 weekly-review root-cause investigation ask"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b3-title",
+        "b3-text",
+        "b3-alert"
+      ]
+    },
+    "b3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "12:00 utc batch dark",
+        "level": "h3"
+      }
+    },
+    "b3-text": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on scheduler-side gap fix since 2026-06-28. iss-027 d42 today, 8-skill cluster frozen; token-alert 12z 3-consec clean confirms cluster-specific dispatcher path",
+        "variant": "body"
+      }
+    },
+    "b3-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "file scheduler-side gap investigation ticket separate from iss-028 (distinct root cause)"
+      }
+    },
+    "blocked-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b4-title",
+        "b4-text",
+        "b4-alert"
+      ]
+    },
+    "b4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "operator on-chain config",
+        "level": "h3"
+      }
+    },
+    "b4-text": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator secrets + on-chain-watches.yml since day-1. day-63 today, defi-monitor NO_CONFIG persists",
+        "variant": "body"
+      }
+    },
+    "b4-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "ask operator at 8-10 weekly-review to add ALCHEMY_API_KEY + ETHERSCAN_API_KEY + memory/on-chain-watches.yml"
+      }
+    },
+    "blocked-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b5-title",
+        "b5-text",
+        "b5-alert"
+      ]
+    },
+    "b5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "priorities.md 62d stale",
+        "level": "h3"
+      }
+    },
+    "b5-text": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator refresh since 2026-06-04. day-65 today, vault inbox d48 cold streak",
+        "variant": "body"
+      }
+    },
+    "b5-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "ask operator at 8-10 weekly-review to refresh priorities.md + capture new inbox items"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok (shallow single-commit window, memory logs authoritative), gh_pr=ok (14 prs 30d window, 5 open), gh_issue=ok (1 issue 30d window, iss #144), cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
