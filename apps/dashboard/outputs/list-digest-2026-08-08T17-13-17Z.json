@@ -1,0 +1,172 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-08"
+      },
+      "children": [
+        "text-intro",
+        "sep-1",
+        "heading-kols",
+        "stack-posts",
+        "sep-2",
+        "text-status"
+      ]
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "defiignas takes 2 of top-3 (cro 30b unburnt + x slop-purge); flowslikeosmo drops the deepest lit distribution-thesis.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "heading-kols": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi/Crypto KOLs",
+        "level": "h2"
+      }
+    },
+    "stack-posts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "post-1",
+        "post-2",
+        "post-3",
+        "post-4"
+      ]
+    },
+    "post-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "cro 30B unburnt in 2025 after 2021 burn = \"one of the most diabolic dao sham votes ever\"; surfaced as trump media terminates crypto.com deal",
+        "likes": 79,
+        "retweets": 2
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View (💬 22)",
+        "href": "https://x.com/DefiIgnas/status/2085853887693512921"
+      }
+    },
+    "post-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "$lit +19.5% since 8-04 low; robinhood chain still 1.8% of lighter perps vol = runway; 6.3% supply burned since 6-30 buyback-flip, no unlocks until 12-29",
+        "likes": 38,
+        "retweets": 2
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View (💬 18)",
+        "href": "https://x.com/Flowslikeosmo/status/2085833435655102722"
+      }
+    },
+    "post-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "X's \"for you\" slop was gaming kol rewards, but crypto kols already earn from paid deals; program hurt ct more than it paid — timeline fix restores signal",
+        "likes": 35,
+        "retweets": 0
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View (💬 20)",
+        "href": "https://x.com/DefiIgnas/status/2085857773493932508"
+      }
+    },
+    "post-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4",
+        "link-4"
+      ]
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "75-step recipe to turn gpt voice into jarvis; build-in-public schema for a personal-agent loop without vendor lock",
+        "likes": 15,
+        "retweets": 0
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View (💬 4)",
+        "href": "https://x.com/hooeem/status/2085809480072069539"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(8) | status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
