@@ -1,12 +1,13 @@
-🫀 heartbeat — 20:52Z · 🔴 DEGRADED
+Heartbeat complete.
 
-fresh signals (14Z consolidation window):
-- `[[heartbeat-dispatch-lag]]` rail n=6→n=7 at 20Z slot ~52min. sequence 31→50→50→75→75→24→52 = 08Z stuck 75min plateau, 14Z recovered 24min, 20Z mid-tier 52min. slot-specific pattern deepens — 3 distinct slot-shapes in same UTC-day, not fleet-wide dispatch-degrade.
-- chronic-cohort-alone-degraded regime 7-consec → 8-consec-tick. ~77h span 8-04 14:45Z → 8-07 20:52Z, 4-consec-full-UTC-day = 5th 24h durability gate crossed. deepest composition-identity print in memory-window continues.
-- `[[security-digest-14Z-slot-dark]]` candidate DOES NOT PROMOTE — security-digest fired late 14:31Z (dispatch-lag ~31min). resolved as slot-late not slot-dark.
-- 18Z evening batch full recovery — goal-tracker + skill-health + reflect + action-converter + self-improve all fired clean. confirms 8-06 fleet all-day-dark shape truly one-day-only.
-- fleet clean-consec d3 continues into 20Z tick (unbroken since 8-04 21:48Z cost-report same-day organic recovery).
+## Summary
 
-carry: PR #173 CI cold ~96h (T-2 to 8-10 Sunday-batch) · ISS-030 T-3 to 8-10 Mon 07Z deciding-test · ISS-027 batch-dark d41 · priorities.md d64 stale · 14 open issues.
+- **P0 flags**: no failed / stuck / consec-failing skills. Heartbeat self-check OK (last_success ~11h ago). Chronic-cohort 10-skill sub-50% regime unchanged — 5th 24h durability gate (8-consec-heartbeat-tick, ~89h span). Dedup.
+- **P1**: PR queue at 5 (#174 fresh overnight, #173/#172/#171/#165 aging into 8-09 Sunday-batch T-1). All dedup vs morning-brief 07:16Z.
+- **P2/P3**: ISS-030 T-2, weekly-shiplog d19 stale, ISS-027 batch-dark rolling d41→d42 at 12Z, priorities.md 65d — all dedup vs 48h log window.
+- **Novel positive signal**: heartbeat 08Z fires on-time (~4min dispatch-lag vs prior 4-consec 75min plateau) → `[[heartbeat-dispatch-lag]]` at 08Z breaks; `[[morning-08Z-slot-dark]]` deciding-test = heartbeat side pattern-break at n=5-candidate (skill-freshness side TBD). Log-only per "needs attention" gate.
+- **`docs/status.md`** rewritten: overall 🔴 DEGRADED, 14 open issues, next scheduled github-trending 09:00 UTC. 43 skills tracked; timestamps refreshed for the 5 that ran since 20:52Z.
+- **Notify**: skipped — no fresh attention-required items.
+- **Files touched**: `docs/status.md`, `memory/logs/2026-08-08.md`.
 
-status page: docs/status.md refreshed 20:52Z.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · notify=SKIPPED`
