@@ -1,0 +1,255 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest"
+      },
+      "children": [
+        "heading",
+        "verdict",
+        "sources",
+        "sep1",
+        "patch_today_heading",
+        "patch_today_stack",
+        "sep2",
+        "patch_week_heading",
+        "patch_week_stack"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Security Digest — 2026-08-08",
+        "level": "h2"
+      }
+    },
+    "verdict": {
+      "type": "Badge",
+      "props": {
+        "text": "3 actively exploited, 4 to schedule",
+        "variant": "destructive"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h3"
+      }
+    },
+    "patch_today_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve_2026_8037_item",
+        "ghsa_rg76_item",
+        "npm_malware_alert"
+      ]
+    },
+    "cve_2026_8037_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_2026_8037_link",
+        "cve_2026_8037_details"
+      ]
+    },
+    "cve_2026_8037_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-8037",
+        "href": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-8037",
+        "source": "Progress Kemp LoadMaster"
+      }
+    },
+    "cve_2026_8037_details": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-08-07 · EPSS 0.848 (99.7 pct) · CVSS 9.6\n\nPre-auth heap-uninit → RCE via API (watchTowr PoC live, eSentire flags targeted). CISA due 2026-08-10.\n\n→ patch LoadMaster to the June-2026 bulletin fix today.",
+        "variant": "body"
+      }
+    },
+    "ghsa_rg76_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa_rg76_link",
+        "ghsa_rg76_details"
+      ]
+    },
+    "ghsa_rg76_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-rg76-677x-56q9",
+        "href": "https://github.com/advisories/GHSA-rg76-677x-56q9",
+        "source": "crypto-js (npm) · CVE-2026-71851"
+      }
+    },
+    "ghsa_rg76_details": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.0\n\nWordArray.random() gives 2^39–2^47 effective entropy; Coinspect Ill Bloom confirmed downstream BIP39 seeds already brute-forced (drained wallets in the wild).\n\n→ upgrade crypto-js to ≥4.0.0; rotate any BIP39/wallet seed derived from WordArray.random().",
+        "variant": "body"
+      }
+    },
+    "npm_malware_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "322 npm malware advisories in 48h",
+        "message": "Dolyame BNPL + Tinkoff SME corp-scope batches roll on; Baileys typosquat cluster now 8+ pkgs; Claude-brand typosquat (claude-remote-agent, remote-claude-daemon, wormgpt-cli) fleet-relevant; new sub-clusters Sui/Move (sui-graphql-client, sui-migration-audit-*, move-bcs-codec) + Nigerian-fintech (@simplipayng/checkout, @voxepay/checkout, @nasdtickets/common, 10 pkgs).\n\n→ audit any npm install from the last 48h against the campaign roots; rotate creds exposed to a hit.",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h3"
+      }
+    },
+    "patch_week_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ghsa_wvpp_item",
+        "ghsa_hc8v_item",
+        "ghsa_wcx4_item",
+        "ghsa_gm37_item"
+      ]
+    },
+    "ghsa_wvpp_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa_wvpp_link",
+        "ghsa_wvpp_details"
+      ]
+    },
+    "ghsa_wvpp_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-wvpp-8hx9-p66j",
+        "href": "https://github.com/advisories/GHSA-wvpp-8hx9-p66j",
+        "source": "GitPython ≤3.1.57 (pip) · 5-GHSA mass-disclose"
+      }
+    },
+    "ghsa_wvpp_details": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.5–8.8\n\ngit-option smuggling + config-name injection → RCE via forged core.sshCommand/hooksPath; sibling GHSAs cover arbitrary file overwrite + template-clone hooks + submodule-name path escape.\n\n→ upgrade GitPython to ≥3.1.58.",
+        "variant": "body"
+      }
+    },
+    "ghsa_hc8v_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa_hc8v_link",
+        "ghsa_hc8v_details"
+      ]
+    },
+    "ghsa_hc8v_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-hc8v-wwc9-vgxm",
+        "href": "https://github.com/advisories/GHSA-hc8v-wwc9-vgxm",
+        "source": "go-git v5+v6 (Go) · CVE-2026-71556"
+      }
+    },
+    "ghsa_hc8v_details": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.1\n\nWorktree ops follow symlinks; writes escape checkout path.\n\n→ upgrade to v5.19.2 or v6.0.0-alpha.5.",
+        "variant": "body"
+      }
+    },
+    "ghsa_wcx4_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa_wcx4_link",
+        "ghsa_wcx4_details"
+      ]
+    },
+    "ghsa_wcx4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-wcx4-wpfv-mc5c",
+        "href": "https://github.com/advisories/GHSA-wcx4-wpfv-mc5c",
+        "source": "jsii-diff (npm) · CVE-2026-15895 · AWS bulletin"
+      }
+    },
+    "ghsa_wcx4_details": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.8\n\nCommand injection via crafted package argument in AWS jsii CI tooling.\n\n→ upgrade jsii-diff to ≥1.131.0.",
+        "variant": "body"
+      }
+    },
+    "ghsa_gm37_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa_gm37_link",
+        "ghsa_gm37_details"
+      ]
+    },
+    "ghsa_gm37_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-gm37-52c6-37mw",
+        "href": "https://github.com/advisories/GHSA-gm37-52c6-37mw",
+        "source": "pymdown-extensions (pip) · CVE-2026-67422"
+      }
+    },
+    "ghsa_gm37_details": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.5\n\nReDoS in caret/tilde/betterem/magiclink — 45-byte input pins render thread.\n\n→ upgrade to ≥11.0.1.",
+        "variant": "body"
+      }
+    }
+  }
+}
