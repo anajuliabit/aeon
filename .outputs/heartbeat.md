@@ -1,13 +1,19 @@
 Heartbeat complete.
 
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · notify=SKIPPED`
+
 ## Summary
 
-- **P0 flags**: no failed / stuck / consec-failing skills. Heartbeat self-check OK (last_success ~11h ago). Chronic-cohort 10-skill sub-50% regime unchanged — 5th 24h durability gate (8-consec-heartbeat-tick, ~89h span). Dedup.
-- **P1**: PR queue at 5 (#174 fresh overnight, #173/#172/#171/#165 aging into 8-09 Sunday-batch T-1). All dedup vs morning-brief 07:16Z.
-- **P2/P3**: ISS-030 T-2, weekly-shiplog d19 stale, ISS-027 batch-dark rolling d41→d42 at 12Z, priorities.md 65d — all dedup vs 48h log window.
-- **Novel positive signal**: heartbeat 08Z fires on-time (~4min dispatch-lag vs prior 4-consec 75min plateau) → `[[heartbeat-dispatch-lag]]` at 08Z breaks; `[[morning-08Z-slot-dark]]` deciding-test = heartbeat side pattern-break at n=5-candidate (skill-freshness side TBD). Log-only per "needs attention" gate.
-- **`docs/status.md`** rewritten: overall 🔴 DEGRADED, 14 open issues, next scheduled github-trending 09:00 UTC. 43 skills tracked; timestamps refreshed for the 5 that ran since 20:52Z.
-- **Notify**: skipped — no fresh attention-required items.
-- **Files touched**: `docs/status.md`, `memory/logs/2026-08-08.md`.
+**No notification sent** — silent-success path. All P0/P1/P2/P3 items dedup vs 08:04Z heartbeat and morning-brief 07:16Z. Only novel signal (`[[morning-08Z-slot-dark]]` deciding-test FAILS at n=5, both co-slot skills clean 8-08) is positive and log-only per the SKILL "needs attention" gate.
 
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · notify=SKIPPED`
+**Files modified:**
+- `docs/status.md` — rewritten wholesale, overall 🔴 DEGRADED (chronic-cohort P0 persists), 14 open issues, next scheduled run vuln-scanner at 16:00 UTC (Saturday), 43 enabled skills listed, timestamps refreshed for today's fires
+- `memory/logs/2026-08-08.md` — heartbeat 14:16Z entry appended via Edit-tool 2-step (ISS-028 workaround)
+
+**Fresh datapoints logged:**
+1. `chronic-cohort-alone-degraded` regime crosses 6th 24h durability gate (9-consec-heartbeat-tick ~95h span 8-04 14:45Z → 8-08 14:16Z, deepest composition-identity print in memory-window)
+2. `[[morning-08Z-slot-dark]]` deciding-test at n=5 FAILS on BOTH co-slot skills — 4-consec pattern terminates
+3. Fleet clean-consec d3 → d4 crossing 8-08
+4. security-digest 14Z slot 16min post-schedule at heartbeat time — within normal envelope, defer to 20Z re-check
+
+**Follow-up:** 20Z heartbeat re-check security-digest 14Z fire; 8-09 08Z n=1-restart-vs-pattern-broken-permanent for morning-08Z slot; 8-10 Mon 07Z ISS-030 T-2 deciding-test remains the most load-bearing calendar item.
