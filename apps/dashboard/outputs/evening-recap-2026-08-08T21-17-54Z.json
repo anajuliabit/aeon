@@ -1,0 +1,244 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-08",
+        "description": "21 clean fires — advisor workflow opened PR #174, 2 articles shipped, morning-slot-dark pattern broken at n=5; queue at 5 needs sunday-batch hands."
+      },
+      "children": [
+        "tldr-section",
+        "separator-1",
+        "headlines-section",
+        "separator-2",
+        "notable-section",
+        "separator-3",
+        "decisions-section",
+        "separator-4",
+        "footer-section"
+      ]
+    },
+    "tldr-section": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: 21 clean fires — advisor workflow opened PR #174, 2 articles shipped, morning-slot-dark pattern broken at n=5; queue at 5 needs sunday-batch hands.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-title",
+        "headline-advisor",
+        "headline-vuln",
+        "headline-reflect",
+        "headline-health",
+        "headline-freshness"
+      ]
+    },
+    "headlines-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "headline-advisor": {
+      "type": "StoryLink",
+      "props": {
+        "title": "advisor — opened PR #174 (brier-weight PM synthesis)",
+        "href": "https://github.com/anajuliabit/aeon/pull/174",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "headline-vuln": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vuln-scanner — witr scanned, 0 confirmed findings, article shipped",
+        "href": "articles/vuln-scan-2026-08-08.md",
+        "source": "Articles"
+      },
+      "children": []
+    },
+    "headline-reflect": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reflect — MEMORY.md 155L→138L, 6 sub-rail candidates absorbed",
+        "href": "memory/MEMORY.md",
+        "source": "Memory"
+      },
+      "children": []
+    },
+    "headline-health": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-health — hash 35369f69→91a4634d, list-digest DEGRADED→WARNING",
+        "href": "memory/skill-health/last-report.json",
+        "source": "Reports"
+      },
+      "children": []
+    },
+    "headline-freshness": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness — freshness article shipped, STALE/NO_CHANGE",
+        "href": "articles/skill-freshness-2026-08-08.md",
+        "source": "Articles"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-title",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "morning-slot-dark BREAKS at n=5 — heartbeat 08:10Z + skill-freshness 08:13Z both clean; 4-consec formal-pattern terminates"
+      },
+      "children": []
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — prime-agent 29× baseline (first shipping-repo on recursive-self-improve rail, cross-surface from paper-pick)"
+      },
+      "children": []
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — LoadMaster KEV EPSS 0.848 (CISA due 8-10), 322-pkg npm wave, fleet clean d9"
+      },
+      "children": []
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — GITLAWB 5-phase arc closes (first in window), REPPO spent-flush resolves, 0/4 clean revert"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-title",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4",
+        "decision-5"
+      ]
+    },
+    "decisions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "rebase PR #173 onto main — CI cold 112h, blocks #171+#172+#173 chain; sunday-batch T-0"
+      },
+      "children": []
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "triage PR #174 — first advisor-authored PR, approve/request-changes before batch"
+      },
+      "children": []
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "audit .github/workflows/ci-skills-json.yml — root cause of #171+#172 failures"
+      },
+      "children": []
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "resolve PR #165 conflict — d20 CONFLICTING, sunday-batch T-0"
+      },
+      "children": []
+    },
+    "decision-5": {
+      "type": "Text",
+      "props": {
+        "text": "add LIT to tracked tokens — fresh on-chain receipts (flowslikeosmo 8-08)"
+      },
+      "children": []
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer-section": {
+      "type": "Text",
+      "props": {
+        "text": "+10 routine runs collapsed (heartbeat ×3, btc-levels ×5, daily-routine, thought-review, github-issues) · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
