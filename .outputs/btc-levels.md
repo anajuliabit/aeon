@@ -1,13 +1,12 @@
 ## Summary
 
-Ran btc-levels for 2026-08-08T12:39Z.
+**btc-levels run — 2026-08-08T16:39Z**
 
-**Data fetched:** CoinGecko returned spot $64,963.54 and previous UTC daily close $64,289.46 (2026-08-06).
+- **Spot:** $64,996 | **Daily close (2026-08-06):** $64,289
+- **All levels clear — no notification sent:**
+  - Leverage trigger ($45k): spot $64,996 → well above, no action
+  - Breakdown ($60.5k close): close $64,289 → above threshold, no alert
+  - Reclaim $63,500: already armed (reclaim63500Alerted=true), no change
+  - Reclaim $65,900: spot $64,996 < $65,900, not yet crossed
 
-**Level evaluation — no alerts fired:**
-- Leverage-review (≤$45k): clear — spot $64,964
-- Breakdown close (<$60,500): clear — close $64,289 > threshold
-- Reclaim $63,500: already armed (`reclaim63500Alerted: true`), no re-arm trigger (spot not below $60,500)
-- Reclaim $65,900: not yet crossed — spot $64,964 < $65,900
-
-**Files updated and committed:** `memory/btc-levels-state.json`, `memory/logs/2026-08-08.md`. No notification sent (quiet run).
+**Files updated:** `memory/btc-levels-state.json` (spot refreshed to $64,996), `memory/logs/2026-08-08.md` (16:39Z one-liner appended). Committed as chore.
