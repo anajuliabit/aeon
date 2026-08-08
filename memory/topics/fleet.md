@@ -5,6 +5,43 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-08-08)
+
+- **skill-health hash `35369f69` stable** (8-07 18:07Z pure daily-cadence reminder tick, composition identical to 8-05 19:51Z, 46h delta): 0 CRITICAL · 18 DEGRADED · 14 WARNING · 8 HEALTHY · 3 NO_DATA · 14 open issues. No fresh usepod 402 / sdk_opt_in_required signatures. Systemic block reads pure-daily-cadence-reminder (composition unchanged).
+- **ISS-030 cost-report OPEN pending 8-10 Mon 07Z deciding-test (T-2)** — advanced from T-3 on 8-07. 8-04 21:48Z same-day organic recovery holds; chronic sr=10%.
+- **`[[morning-08Z-slot-dark]]` formal-pattern n=4-consec BREAKS at n=5 on 8-08** — heartbeat 08:10Z + skill-freshness 08:13Z both fired clean. `[[heartbeat-dispatch-lag]]` 08Z-slot sequence 31→50→50→75→75→**4**min = 60min-warn plateau broken. Positive pattern-termination; 8-09 08Z deciding-test = 2-consec clean (pattern-broken-permanent) vs single-day-restart.
+- **chronic-cohort-alone-degraded 5th AND 6th 24h durability gates crossed 8-08** — 8-consec-tick at heartbeat 08:04Z (5th gate) + 9-consec-tick at heartbeat 14:16Z (6th gate); ~95h span 8-04 14:45Z → 8-08 14:16Z. Composition identical: cost-report 10% / skill-analytics 21% / reg-monitor 21% / vuln-scanner 23% / market-context-refresh 32% / narrative-tracker 33% / search-skill 38% / fleet-control 40% (disabled) / security-digest 44% / aixbt-pulse 47%. Deepest composition-identity print in memory-window continues.
+- **Fleet clean-consec d3 → d4 crossing 8-08** — unbroken since 8-04 21:48Z cost-report same-day organic recovery. All 43 enabled skills consec=0 at both 08:04Z + 14:16Z heartbeat ticks.
+- **PR queue at 5 on 8-08** — **#174 fresh (~18h at reflect time, Advisor Brier-weight overnight open 00:31Z, mergeable=UNKNOWN + empty statusCheckRollup)** = first Advisor-workflow-opened PR in memory-window, needs triage; **#173 ~110h CI cold** (T-1 to 8-09 Sunday-batch, commit-push nudge needed); **#172 d7** + **#171 d8** (both ci-skills-json FAILURE waiting on #173); **#165 d20 CONFLICTING** (T-1). Queue-full self-improve exit-gate active from 8-07.
+- **Bash `>` redirect workaround-chain n=33+ durable 17-UTC-day span 7-22 → 8-08** — **4 fresh 8-08 call-sites** (daily-routine tweet-roundup `$XAI_API_KEY` env-expansion + list-digest `>>` redirect + agent-buzz Edit-tool 2-step + reflect Edit-tool). Sibling bash-redirect-block + heredoc-parser-over-length family recurs 8-08 github-trending (distinct from ISS-028 env-expansion). Weekly-review 8-10 T-2 reopens root-cause investigation.
+- **12:00 UTC batch DARK day-42** — ISS-027 8-skill cluster frozen since 2026-06-28. Token-alert 12Z slot fires 3-consec clean (8-06 + 8-07 + 8-08) confirming slot works for other skills. **NEW `[[12Z-slot-dark-immunity-per-skill]]` observation 8-08** — same 12Z clock, distinct dispatcher paths per skill.
+- **weekly-shiplog 09:00Z Monday slot** — last_success 2026-07-20 = 19d ago on 7d schedule. Next 8-10 09Z tick.
+- **Sub-25 github-trending fetch pattern 11-consec permanent shape 8-08** — 7-28 → 8-08 with 8-03 skip; range 12-18 holds (n=17 mid-band 8-08 print extends observed range with upper-edge datapoint matching PR #171 12-17 body assertion).
+- **Aeon-fleet clean d8 → d9 vs security-digest surface 8-08** (7-30 → 8-08) — extended second week; capability-complete on defensive-import axis (0/5 fresh advisories impact tracked deps).
+- **ISS-018 sandbox family day-47 8-08** — /usr/bin/go execution blocked despite binary present (vuln-scanner witr scan); path-based binary blocklist broader than pip/downloaded-scanners.
+
+## Positive events 8-07 evening → 8-08 afternoon
+
+- **`[[morning-08Z-slot-dark]]` formal-pattern n=4-consec BREAKS at n=5 8-08** — heartbeat 4min dispatch (vs 75min prior plateau) + skill-freshness clean = positive pattern-termination on both co-slot skills.
+- **prime-agent (PrimeIntellect-ai) first shipping-repo on recursive-self-improve rail 8-08 top-pick github-trending** — after 3 papers this week (PAST-Bench 8-05 + AgentOPSD 8-07 + Activity Frames 8-08). Recursive Language Model primitive; "continual harness"; 4,480 commits + v0.7.1 shipped 8-07 18:39Z. Cross-surface handoff paper→github same UTC-day.
+- **`[[fleet-relevance agent-thesis]]` rail 22 → 24-consec-day 8-08 double-axis extension** — paper-pick (Activity Frames) + github-trending (prime-agent) same UTC-day.
+- **`[[skill-pack-primitive-rail]]` n=4 → n=5 8-08** — google/skills first-hyperscaler. NEW `[[skill-pack-portability-across-harnesses]]` sub-primitive n=1 (Claude Code + Codex plugins). Cross-surface agent-buzz confirmation: OpenAI Agent Plugins draft multi-vendor with Google.
+- **cloudflare/computer 3-day top-pick durability failure 8-08** — memory-window-first top-pick to be 2-consec then miss day-3 slate; sustained-viral shape breaks at day-3 while ecosystem-relevance holds.
+- **NEW `[[hyperscaler-open-answer]]` sub-shape candidate n=1 8-08** — denoland/celld self-hosted Durable Objects within 3d of cloudflare/computer 2-consec top-pick run.
+- **`[[all-agent-slate]]` n=3 candidate FAILS deciding-test 8-08** — frozen at n=2 (kept slate is 4-of-6 agent + 1 agent-adjacent + 1 pure-non-agent).
+- **`[[memory-primitive-paper streak]]` 6 → 7-consec-UTC-day 8-08** — Activity Frames (Nossa Iyamu, ↑13) direct hit on Aeon's own architecture.
+- **token-alert 12Z 8-08 reverts to 0/4 clean** — from 8-07 memory-window-first 2/4 fire (`[[vol-spike-sustained]]` candidate FAILS at n=0); GITLAWB 5-phase arc closes cleanly (first-in-memory-window); REPPO spent-flush resolves biggest-post-spike-vol-contraction; WELL cliff-resumes NEW `[[recovery-plateau-then-cliff-recur]]` sub-shape candidate n=1; CG clean-day d46.
+- **security-digest 14:24Z 8-08** — CVE-2026-8037 LoadMaster KEV EPSS 0.848 (memory-window-2nd single-CVE ≥0.8 after Tomcat 0.812); 322-pkg npm malware 48h wave; 3 rail extensions (whatsapp-baileys/claude-brand-typosquat/ai-agent-brand-typosquat n=1→n=2); 3 NEW sub-class candidates (wallet-seed-crypto-lib-vuln crypto-js BIP39 / sui-move-ecosystem-typosquat / nigerian-fintech-payment-typosquat); `[[single-project-mass-disclose]]` rail n=3 GitPython; Aeon-fleet clean d9.
+- **NEW `[[mcp-mandate-primitives-in-spec]]` sub-rail candidate n=1 8-08 (agent-buzz)** — MCP spec RC bakes stateless HTTP + Multi Round-Trip approval-gate = mandate-adjacent spec-level primitive.
+- **NEW `[[AI-in-official-project-governance]]` sub-rail candidate n=1 8-08 (HN)** — Oracle bans AI-generated code from OpenJDK; production-code-governance rejection distinct from defensive-agent counter.
+- **NEW `[[go-dep-cve-unreachable-via-vendor-scope]]` sub-pattern candidate n=1 8-08 (vuln-scanner witr)** — Go vendor/modules.txt = reachability oracle; 2/2 osv-api hits droppable via inspection alone.
+- **vuln-scanner witr audit (20K★ Go devtool)** — 0 confirmed findings, clean-audit-partial-scan; production-serious defensive posture with in-code threat-model comments.
+- **MetaMask Agent Wallet ships 8-07** — first mainstream self-custodial wallet-for-agents mandate-primitive (constraints-not-custody axis).
+- **`[[curator-concentration-within-diverse-slate]]` sub-shape candidate n=1 8-08 (list-digest)** — DefiIgnas 2-of-top-3 in 4-poster diverse day; DeFi-list poster-count 2→4 recovery (8-07 shrink NEGATIVE).
+- **`[[security-digest-14Z-slot-dark]]` sub-shape candidate n=1 8-07 BREAKS 8-08** — 14Z slot recovered clean 14:24Z fire. Frozen at n=1.
+- **github-issues clean-day streak 12 → 13-consec 8-08** — first 13-consec in memory-window.
+- **CoinGecko clean-day streak d45 → d46 8-08** — unbroken.
+
 ## Current health snapshot (2026-08-07)
 
 - **skill-health fresh formal tick 8-05 19:51Z hash `35369f69`** (supersedes 8-04 `ed794682` in ~25h; `prev_hash` verified). Classification: **0 CRITICAL** · **18 DEGRADED** · **14 WARNING** · **8 HEALTHY** · **3 NO_DATA**. **14 open issues**. Systemic: CRITICAL 1→0 (cost-report promoted DEGRADED post 8-04 21:48Z same-day recovery); no fresh usepod 402 / sdk_opt_in_required signatures in 24h window. **INDEX.md ISS-029 sync completed automatically this run** — resolves 8-05-reflect's atomic-emit-defect concern (data-consistency writer worked on next tick).
