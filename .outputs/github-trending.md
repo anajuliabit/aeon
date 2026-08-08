@@ -1,24 +1,28 @@
-*GitHub Trending — 2026-08-07*
+*GitHub Trending — 2026-08-08*
 
-*Top pick* — [cloudflare/computer](https://github.com/cloudflare/computer)
-day-2 +215% vs 8-06 (891 → 2,802 today) — first hyperscaler agent-runtime primitive to sustain viral compounding, not one-day debut spike.
+*Top pick* — [PrimeIntellect-ai/prime-agent](https://github.com/PrimeIntellect-ai/prime-agent)
+first shipping-repo on the recursive-self-improve rail after 3 papers this week — recursive language model treats context as variables and spawns sub-agents inside a persistent IPython REPL.
 
 *AI/ML*
-• [cloudflare/computer](https://github.com/cloudflare/computer) — ★ 2.8k today (5.1k total) · TypeScript · [ACCELERATING]
-34.6× baseline day-2 (was 13.5× yesterday). Durable Object + SQLite + FUSE mount = computer-use as edge primitive.
+• [PrimeIntellect-ai/prime-agent](https://github.com/PrimeIntellect-ai/prime-agent) — ★ 2.3k today (7.3k) · TypeScript · [ACCELERATING]
+"continual harness" persists working context across sessions; 4,480 commits + explicit warnings around model-generated code execution = production-serious, not vibecoded.
 
-• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 1.9k today (207.9k total) · Shell · [RETURNING]
-matt pocock (typescript educator) drops his .agents directory. 4th credible-author skills-pack in 8 days — primitive going ecosystem.
+• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 2.2k today (209k) · Shell · [HOLDOVER]
+day-2 sustained +15% (1.9k → 2.2k) — first non-decay day-2 for a skill-pack repo in memory-window; primitive stops looking like one-author hype.
 
-• [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ★ 593 today (83.3k total) · JavaScript · [HOLDOVER]
-day-2 +162% vs 8-06 (226 → 593). yesterday's below-baseline judgment-call keep validates on the upside.
+• [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ★ 1.1k today (84k) · JavaScript · [HOLDOVER]
+day-3 +91% acceleration (226 → 593 → 1,131) — viral peak still expanding on day-3, rare shape for the skill-pack rail.
 
-• [huangruiteng/loopx](https://github.com/huangruiteng/loopx) — ★ 847 today (3.2k total) · Python · [HOLDOVER]
-day-2 +160% (326 → 847), 18× baseline. loop-engineering state kernel — narrow runtime piece for long-running agent teams.
+• [google/skills](https://github.com/google/skills) — ★ 327 today (16k) · Python · [ACCELERATING]
+5th distinct credible-author skill-pack in 9 days; first hyperscaler on the rail — bundles Claude Code and Codex plugins so one pack ports across harnesses.
+
+*Infra*
+• [denoland/celld](https://github.com/denoland/celld) — ★ 516 today (2.3k) · Rust · [ACCELERATING]
+self-hosted Durable Objects — direct OSS answer to the cloudflare/computer primitive that topped this slate 2 days running; S3 + SQLite per cell, no consensus service.
 
 *Devtools*
-• [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) — ★ 237 today (29.2k total) · Python · [RETURNING]
-persistent code graph exposed as an MCP server. replaces per-query codebase ingestion with a queryable index for agents.
+• [pranshuparmar/witr](https://github.com/pranshuparmar/witr) — ★ 234 today (20k) · Go · [ACCELERATING]
+"why is this running?" — traces any process, port, container, or file back to what started it via /proc + lsof + platform APIs; single-binary CLI + TUI.
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/13
+sources: trending=ok · gh_api=ok (12/12) · kept 6/17
