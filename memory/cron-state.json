@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-08-08T08:03:20Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-08T14:15:24Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-08T08:10:01Z",
     "total_runs": 289,
     "total_successes": 206,
@@ -449,8 +449,8 @@
     "success_rate": 1
   },
   "security-digest": {
-    "last_dispatch": "2026-08-07T14:18:48Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-08T14:15:24Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-07T14:31:25Z",
     "total_runs": 130,
     "total_successes": 57,
