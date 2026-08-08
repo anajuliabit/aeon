@@ -1,0 +1,121 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-08-08"
+      },
+      "children": [
+        "teaser",
+        "sep-1",
+        "heading-1",
+        "tweet-1",
+        "tweet-2",
+        "sep-2",
+        "heading-2",
+        "tweet-3",
+        "tweet-4",
+        "sep-3",
+        "heading-3",
+        "tweet-5",
+        "footer"
+      ]
+    },
+    "teaser": {
+      "type": "Text",
+      "props": {
+        "text": "mostly MCP standardization — Agent Plugins land with OpenAI+Google+AWS backing, spec RC bakes in stateless + pause-for-approval.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Plugins go multi-vendor",
+        "level": "h2"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "sl1ma4",
+        "handle": "@sl1ma4",
+        "text": "OpenAI + AWS + Cursor + GitHub + VS Code + Vercel back Agent Plugins as a shared packaging format for MCP server skills/configs\nhttps://x.com/sl1ma4/status/2085688445540708373"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "nakamurahiroki",
+        "handle": "@nakamurahiroki",
+        "text": "Google joining the Agent Plugins effort graduates MCP from Anthropic-thing to cross-lab skills primitive\nhttps://x.com/nakamurahiroki/status/2085878399365738533"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-2": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP RC: stateless + pause-for-approval",
+        "level": "h2"
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AgenticAIFdn",
+        "handle": "@AgenticAIFdn",
+        "text": "stateless HTTP in the MCP RC drops session bottlenecks, MCP services go horizontally scalable\nhttps://x.com/AgenticAIFdn/status/2085803230747857190"
+      }
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AgenticAIFdn",
+        "handle": "@AgenticAIFdn",
+        "text": "MCP 2026-07-28 adds Multi Round-Trip Requests: agents pause for human approval, resume without long-lived connections\nhttps://x.com/AgenticAIFdn/status/2085716372886007889"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-3": {
+      "type": "Heading",
+      "props": {
+        "text": "Benchmarks miss the wild",
+        "level": "h2"
+      }
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "TheTuringPost",
+        "handle": "@TheTuringPost",
+        "text": "\"Agents in the Wild\" argues static benchmarks miss the real failure surface: coordination, verification, fallback, human-in-loop\nhttps://x.com/TheTuringPost/status/2085823436543390039"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai · candidates: 12 → kept: 5_",
+        "variant": "caption"
+      }
+    }
+  }
+}
