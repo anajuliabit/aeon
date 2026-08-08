@@ -1,16 +1,16 @@
 ## Summary
 
-**btc-levels run — 2026-08-08 04:41 UTC**
+**BTC Levels run — 2026-08-08T08:56Z**
 
-| Data | Value |
+- **Spot:** $64,957 (down from $65,010 at the 04:41Z run)
+- **Daily close (2026-08-06):** $64,289
+
+**Level checks (all clear — quiet run):**
+| Level | Result |
 |---|---|
-| Spot | $65,010.25 |
-| Previous daily close (2026-08-06) | $64,289.46 |
+| Spot ≤ $45,000 (leverage-review) | Clear — spot $64,957 |
+| Close < $60,500 (breakdown signal) | Clear — close $64,289 > $60,500 |
+| Spot ≥ $63,500 (reclaim) | Already armed from prior cycle — no new alert |
+| Spot ≥ $65,900 (stabilization confirmed) | Not yet crossed — $64,957 < $65,900 |
 
-**Level evaluation — no alerts fired:**
-- Leverage-review (≤$45k): clear — spot $20k above trigger
-- Breakdown (<$60,500 daily close): clear — close $3,789 above threshold
-- Reclaim $63,500: already armed (`reclaim63500Alerted: true`) — no new notification
-- Reclaim $65,900: spot $889 below level — not yet crossed
-
-No `./notify` sent (quiet run is the norm). State and log committed.
+**No notification sent** (quiet run per spec). State and log committed to `main`.
