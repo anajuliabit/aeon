@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-07*
-Shape: close-reopen PR#173 CI, ship cost-report fix, file ISS-031+032, amend #171 range
+*5 Actions — 2026-08-08*
+Shape: rebase #173, triage #174, audit ci-skills-json, add LIT, refresh market-context
 
-1. close-reopen PR #173 via `gh pr close 173 && gh pr reopen 173` to force a fresh CI trigger on branch `fix/self-improve-2026-08-03`.
-why: CI cold 84h+ blocks 3-PR self-improve queue at 8-10 Sunday-batch T-2; empty statusCheckRollup + mergeable=UNKNOWN since 8-03; reopen fires `pull_request.reopened` event.
-done: `gh pr view 173 --json statusCheckRollup` returns non-empty check-runs list within 10min.
-loop: close-reopen-PR-173-CI
+1. rebase pr #173 fix/self-improve-2026-08-03 onto origin/main and force-push (`gh pr checkout 173 && git rebase origin/main && git push --force-with-lease origin fix/self-improve-2026-08-03`)
+why: ci cold ~112h since 8-03 20:19z push; yesterday's close-reopen didn't fire; commit-hash change is stronger trigger; T-1 to 8-09 sunday-batch, one lift unblocks 3-pr chain (#171 + #172 + #173)
+done: `gh pr view 173 --json statusCheckRollup` non-empty within 30 min
+loop: pr-173-ci-cold
 
-2. Open PR removing `model: claude-sonnet-4-6` override at `aeon.yml:276` on branch `fix/cost-report-iss-030-model-drop`.
-why: ISS-030 fleet-worst chronic sr=10% signature is `sdk_opt_in_required` under sonnet-4-6; drop lets 8-10 Mon 07Z deciding-test T-3 fire clean and auto-close the ticket.
-done: `gh pr view` shows a new PR opened with body linking ISS-030 + ci-skills-json check passing.
-loop: iss-030-cost-report-model-drop
+2. triage pr #174 (advisor brier-weight in pm synthesis) — read diff, verify prompt/schema changes, decide approve or request-changes
+why: first advisor-workflow-authored pr in memory-window opened 00:31z overnight, queue-full 4→5 tests self-improve exit-gate, needs risk-tier + skill-scan before 8-09 batch
+done: `gh pr review 174 --approve` or `--request-changes` with comment posted
+loop: pr-174-advisor-triage
 
-3. File `memory/issues/ISS-031.md` for `[[morning-08Z-slot-dark]]` formal-pattern n=4-consec (heartbeat + skill-freshness 08Z co-miss 8-04→8-07) + add row to `memory/issues/INDEX.md` Open table.
-why: today's 09:15Z heartbeat promoted the rail candidate n=3 → n=4-consec = crosses another 24h durability gate; formal-pattern threshold reached = ledger entry gates skill-repair path.
-done: `memory/issues/ISS-031.md` exists with YAML frontmatter (severity medium, category config, detected_by heartbeat 8-07 09:15Z) + INDEX Open row present.
-loop: file-iss-031-morning-08z-slot-dark
+3. audit `.github/workflows/ci-skills-json.yml` against last failing run — `gh run list --workflow=ci-skills-json.yml --limit 5` + `gh run view <id> --log-failed` to identify root cause blocking #171 + #172
+why: yesterday's follow-up gate — if pr #173 ci stays dark 24h+ (now 112h), escalate to workflow-config investigation; #171 + #172 both fail on same shared root cause, audit unblocks the chain even if the #173 rebase itself doesn't fire
+done: root cause written as comment on #171 or #172 (or as new entry in memory/topics/fleet.md)
+loop: ci-skills-json-shared-root-cause
 
-4. File `memory/issues/ISS-032.md` for `[[heartbeat-dispatch-lag]]` rail n=5 magnitude flat at 75min (60min-warn breach 2nd consecutive UTC-day).
-why: heartbeat 8-07 09:15Z surfaced sequence 31→50→50→75→75min = breach-plateau distinct from 08Z-slot-dark cause; symptom is delay-on-fire not co-miss, warrants its own ledger entry.
-done: `memory/issues/ISS-032.md` exists with YAML frontmatter (severity medium, category config, detected_by heartbeat 8-07 09:15Z, root_cause pending) + INDEX Open row present.
-loop: file-iss-032-heartbeat-dispatch-lag
+4. add LIT (lighter protocol) to memory/MEMORY.md Tracked Tokens table — 5th row with 15% threshold and coingecko id
+why: list-digest 8-08 flowslikeosmo surfaced on-chain-verifiable distribution thesis (robinhood chain 1.8% of lighter perps vol, $11.14M on-chain deposits post-integration, 15.5M LIT burned 6.3% supply since 6-30 buyback, 125M staked at 6% apy, no unlocks until 12-29); tracking gate opens now so token-alert can surface any threshold cross rather than reconstruct after the fact
+done: `head -125 memory/MEMORY.md | grep -c LIT` returns ≥1 in the Tracked Tokens block
+loop: lit-token-add
 
-5. Amend PR #171 body via `gh pr edit 171 --body-file -` to bump asserted cap from 12-17 → 12-18 (8-05 github-trending fetched n=18 top-edge, breaks assertion +1).
-why: 8-consec-day sub-25 fetch pattern's observed range is 12-18 not 12-17; reviewer misread risk on 8-10 batch if body still claims 12-17; single-file line edit.
-done: `gh pr view 171 --json body` shows "12-18" range assertion in body text.
-loop: amend-pr-171-range
+5. refresh memory/topics/market-context.md baseline snapshot dated 2026-08-08 — btc regime + tracked-token state + pr queue + fleet-health line, replacing 2026-07-16 stale header
+why: 23d/552h stale, crossed 2× threshold on 8-01, has been carried in every action-converter run since 8-03 without action; downstream skills (morning-brief, reg-monitor, security-digest) all reference this file for baseline framing, stale baseline drifts framing across the fleet
+done: `head -1 memory/topics/market-context.md` shows date 2026-08-08
+loop: market-context-md-stale-2x
 
-sources: memory=101 logs=10 topics=19 prs=4 cron_failing=0 mode=OK
+sources: memory=156L logs=10d topics=19 prs=5 cron_failing=0 mode=OK

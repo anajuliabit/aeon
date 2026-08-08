@@ -1,0 +1,364 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-08",
+        "description": "shape: rebase #173, triage #174, audit ci-skills-json, add LIT, refresh market-context"
+      },
+      "children": [
+        "action_1",
+        "sep_1",
+        "action_2",
+        "sep_2",
+        "action_3",
+        "sep_3",
+        "action_4",
+        "sep_4",
+        "action_5",
+        "sep_5",
+        "sources"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_title",
+        "a1_cmd",
+        "a1_why_label",
+        "a1_why_text",
+        "a1_done_label",
+        "a1_done_text",
+        "a1_loop"
+      ]
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. rebase pr #173 fix/self-improve-2026-08-03 onto origin/main and force-push",
+        "level": "h3"
+      }
+    },
+    "a1_cmd": {
+      "type": "Text",
+      "props": {
+        "text": "`gh pr checkout 173 && git rebase origin/main && git push --force-with-lease origin fix/self-improve-2026-08-03`",
+        "variant": "caption"
+      }
+    },
+    "a1_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "ci cold ~112h since 8-03 20:19z push; yesterday's close-reopen didn't fire; commit-hash change is stronger trigger; T-1 to 8-09 sunday-batch, one lift unblocks 3-pr chain (#171 + #172 + #173)",
+        "variant": "body"
+      }
+    },
+    "a1_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "`gh pr view 173 --json statusCheckRollup` non-empty within 30 min",
+        "variant": "body"
+      }
+    },
+    "a1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-173-ci-cold",
+        "variant": "outline"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_title",
+        "a2_why_label",
+        "a2_why_text",
+        "a2_done_label",
+        "a2_done_text",
+        "a2_loop"
+      ]
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. triage pr #174 (advisor brier-weight in pm synthesis) — read diff, verify prompt/schema changes, decide approve or request-changes",
+        "level": "h3"
+      }
+    },
+    "a2_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a2_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "first advisor-workflow-authored pr in memory-window opened 00:31z overnight, queue-full 4→5 tests self-improve exit-gate, needs risk-tier + skill-scan before 8-09 batch",
+        "variant": "body"
+      }
+    },
+    "a2_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "`gh pr review 174 --approve` or `--request-changes` with comment posted",
+        "variant": "body"
+      }
+    },
+    "a2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-174-advisor-triage",
+        "variant": "outline"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_title",
+        "a3_cmd",
+        "a3_why_label",
+        "a3_why_text",
+        "a3_done_label",
+        "a3_done_text",
+        "a3_loop"
+      ]
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. audit `.github/workflows/ci-skills-json.yml` against last failing run — identify root cause blocking #171 + #172",
+        "level": "h3"
+      }
+    },
+    "a3_cmd": {
+      "type": "Text",
+      "props": {
+        "text": "`gh run list --workflow=ci-skills-json.yml --limit 5` + `gh run view <id> --log-failed`",
+        "variant": "caption"
+      }
+    },
+    "a3_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a3_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "yesterday's follow-up gate — if pr #173 ci stays dark 24h+ (now 112h), escalate to workflow-config investigation; #171 + #172 both fail on same shared root cause, audit unblocks the chain even if the #173 rebase itself doesn't fire",
+        "variant": "body"
+      }
+    },
+    "a3_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "root cause written as comment on #171 or #172 (or as new entry in memory/topics/fleet.md)",
+        "variant": "body"
+      }
+    },
+    "a3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: ci-skills-json-shared-root-cause",
+        "variant": "outline"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_title",
+        "a4_why_label",
+        "a4_why_text",
+        "a4_done_label",
+        "a4_done_text",
+        "a4_loop"
+      ]
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. add LIT (lighter protocol) to memory/MEMORY.md Tracked Tokens table — 5th row with 15% threshold and coingecko id",
+        "level": "h3"
+      }
+    },
+    "a4_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a4_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest 8-08 flowslikeosmo surfaced on-chain-verifiable distribution thesis (robinhood chain 1.8% of lighter perps vol, $11.14M on-chain deposits post-integration, 15.5M LIT burned 6.3% supply since 6-30 buyback, 125M staked at 6% apy, no unlocks until 12-29); tracking gate opens now so token-alert can surface any threshold cross rather than reconstruct after the fact",
+        "variant": "body"
+      }
+    },
+    "a4_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "`head -125 memory/MEMORY.md | grep -c LIT` returns ≥1 in the Tracked Tokens block",
+        "variant": "body"
+      }
+    },
+    "a4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: lit-token-add",
+        "variant": "outline"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_title",
+        "a5_why_label",
+        "a5_why_text",
+        "a5_done_label",
+        "a5_done_text",
+        "a5_loop"
+      ]
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. refresh memory/topics/market-context.md baseline snapshot dated 2026-08-08 — btc regime + tracked-token state + pr queue + fleet-health line, replacing 2026-07-16 stale header",
+        "level": "h3"
+      }
+    },
+    "a5_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a5_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "23d/552h stale, crossed 2× threshold on 8-01, has been carried in every action-converter run since 8-03 without action; downstream skills (morning-brief, reg-monitor, security-digest) all reference this file for baseline framing, stale baseline drifts framing across the fleet",
+        "variant": "body"
+      }
+    },
+    "a5_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "`head -1 memory/topics/market-context.md` shows date 2026-08-08",
+        "variant": "body"
+      }
+    },
+    "a5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: market-context-md-stale-2x",
+        "variant": "outline"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=156L logs=10d topics=19 prs=5 cron_failing=0 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
