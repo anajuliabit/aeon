@@ -1,0 +1,176 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-08-09 — thin slice — claude cost-vs-endorsement chatter (qwen matches fable 5, dario names claude code fav) plus two builder-frame drops."
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1-heading",
+        "section1-stack",
+        "separator1",
+        "section2-heading",
+        "section2-stack"
+      ]
+    },
+    "section1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "claude's market position",
+        "level": "h2"
+      }
+    },
+    "section1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1-container",
+        "item2-container"
+      ]
+    },
+    "item1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item1-tweet",
+        "item1-link"
+      ]
+    },
+    "item1-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0x0SojalSec",
+        "handle": "@0x0SojalSec",
+        "text": "Qwen 3.8 Max scores 58 on Agentic Index, one point behind Claude Fable 5 at 5-8× lower cost."
+      }
+    },
+    "item1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0x0SojalSec/status/2086239947372310888"
+      }
+    },
+    "item2-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item2-tweet",
+        "item2-link"
+      ]
+    },
+    "item2-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ForwardEditor",
+        "handle": "@ForwardEditor",
+        "text": "Anthropic's Dario Amodei names Claude Code his favorite agentic CLI — endorsement, not a benchmark."
+      }
+    },
+    "item2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ForwardEditor/status/2086237269829054754"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-builder frames",
+        "level": "h2"
+      }
+    },
+    "section2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item3-container",
+        "item4-container"
+      ]
+    },
+    "item3-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item3-tweet",
+        "item3-link"
+      ]
+    },
+    "item3-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "beamnxw",
+        "handle": "@beamnxw",
+        "text": "argues libuv-style event loop is the right mental model for agents waiting on tools, not black-box magic."
+      }
+    },
+    "item3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/beamnxw/status/2086237412053696624"
+      }
+    },
+    "item4-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item4-tweet",
+        "item4-link"
+      ]
+    },
+    "item4-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SouranyPhomhome",
+        "handle": "@SouranyPhomhome",
+        "text": "three.js + GSAP + coding agents will collapse the cost of shipping real-time 3D landing pages."
+      }
+    },
+    "item4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/SouranyPhomhome/status/2086240904780697750"
+      }
+    }
+  }
+}

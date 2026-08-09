@@ -1,20 +1,16 @@
-*Agent Buzz — 2026-08-08*
-_mostly MCP standardization — Agent Plugins land with OpenAI+Google+AWS backing, spec RC bakes in stateless + pause-for-approval._
+*Agent Buzz — 2026-08-09*
+_thin slice — claude cost-vs-endorsement chatter (qwen matches fable 5, dario names claude code fav) plus two builder-frame drops._
 
-**Agent Plugins go multi-vendor**
-• @sl1ma4 — OpenAI + AWS + Cursor + GitHub + VS Code + Vercel back Agent Plugins as a shared packaging format for MCP server skills/configs
-  https://x.com/sl1ma4/status/2085688445540708373
-• @nakamurahiroki — Google joining the Agent Plugins effort graduates MCP from Anthropic-thing to cross-lab skills primitive
-  https://x.com/nakamurahiroki/status/2085878399365738533
+**claude's market position**
+• @0x0SojalSec — Qwen 3.8 Max scores 58 on Agentic Index, one point behind Claude Fable 5 at 5-8× lower cost.
+  https://x.com/0x0SojalSec/status/2086239947372310888
+• @ForwardEditor — Anthropic's Dario Amodei names Claude Code his favorite agentic CLI — endorsement, not a benchmark.
+  https://x.com/ForwardEditor/status/2086237269829054754
 
-**MCP RC: stateless + pause-for-approval**
-• @AgenticAIFdn — stateless HTTP in the MCP RC drops session bottlenecks, MCP services go horizontally scalable
-  https://x.com/AgenticAIFdn/status/2085803230747857190
-• @AgenticAIFdn — MCP 2026-07-28 adds Multi Round-Trip Requests: agents pause for human approval, resume without long-lived connections
-  https://x.com/AgenticAIFdn/status/2085716372886007889
+**agent-builder frames**
+• @beamnxw — argues libuv-style event loop is the right mental model for agents waiting on tools, not black-box magic.
+  https://x.com/beamnxw/status/2086237412053696624
+• @SouranyPhomhome — three.js + GSAP + coding agents will collapse the cost of shipping real-time 3D landing pages.
+  https://x.com/SouranyPhomhome/status/2086240904780697750
 
-**Benchmarks miss the wild**
-• @TheTuringPost — "Agents in the Wild" argues static benchmarks miss the real failure surface: coordination, verification, fallback, human-in-loop
-  https://x.com/TheTuringPost/status/2085823436543390039
-
-<!-- _src: xai · candidates: 12 → kept: 5_ -->
+<!-- _src: xai · candidates: 10 → kept: 4_ -->
