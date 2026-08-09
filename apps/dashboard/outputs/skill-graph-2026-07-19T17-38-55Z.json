@@ -1,0 +1,100 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Graph"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading",
+        "change_stat",
+        "separator",
+        "metrics_grid",
+        "pr_link"
+      ]
+    },
+    "heading": {
+      "type": "Text",
+      "props": {
+        "text": "Skill Graph updated",
+        "variant": "lead"
+      }
+    },
+    "change_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "shared_state",
+        "value": "27",
+        "delta": "+6",
+        "trend": "up"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_skills",
+        "stat_enabled",
+        "stat_depends_on",
+        "stat_shared_state"
+      ]
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "191"
+      }
+    },
+    "stat_enabled": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled",
+        "value": "43"
+      }
+    },
+    "stat_depends_on": {
+      "type": "Stat",
+      "props": {
+        "label": "depends_on",
+        "value": "5"
+      }
+    },
+    "stat_shared_state": {
+      "type": "Stat",
+      "props": {
+        "label": "shared_state",
+        "value": "27"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pull Request #165",
+        "href": "https://github.com/anajuliabit/aeon/pull/165",
+        "source": "GitHub"
+      }
+    }
+  }
+}
