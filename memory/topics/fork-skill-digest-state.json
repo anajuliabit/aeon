@@ -1,35 +1,16 @@
 {
-  "last_run": "2026-08-02",
+  "last_run": "2026-08-09",
   "target_repo": "aaronjmars/aeon",
-  "n_active": 50,
-  "n_configured": 49,
-  "n_template": 0,
+  "n_active": 59,
+  "n_configured": 19,
+  "n_template": 39,
   "n_unreadable": 1,
   "buckets": {
     "DEFAULT_FLIP_ENABLE": [],
-    "DEFAULT_FLIP_DISABLE": [
-      {"skill": "action-converter", "forks": 40, "pct": 0.82},
-      {"skill": "search-skill", "forks": 38, "pct": 0.78},
-      {"skill": "self-improve", "forks": 36, "pct": 0.73},
-      {"skill": "autoresearch", "forks": 36, "pct": 0.73},
-      {"skill": "github-trending", "forks": 34, "pct": 0.69},
-      {"skill": "skill-health", "forks": 33, "pct": 0.67},
-      {"skill": "security-digest", "forks": 32, "pct": 0.65},
-      {"skill": "token-pick", "forks": 32, "pct": 0.65},
-      {"skill": "vuln-scanner", "forks": 31, "pct": 0.63},
-      {"skill": "defi-overview", "forks": 31, "pct": 0.63},
-      {"skill": "token-movers", "forks": 31, "pct": 0.63},
-      {"skill": "narrative-tracker", "forks": 30, "pct": 0.61},
-      {"skill": "unlock-monitor", "forks": 30, "pct": 0.61},
-      {"skill": "reflect", "forks": 28, "pct": 0.57},
-      {"skill": "deal-flow", "forks": 28, "pct": 0.57},
-      {"skill": "list-digest", "forks": 27, "pct": 0.55},
-      {"skill": "goal-tracker", "forks": 27, "pct": 0.55},
-      {"skill": "agent-buzz", "forks": 26, "pct": 0.53}
-    ],
+    "DEFAULT_FLIP_DISABLE": [],
     "MODEL_CONSENSUS": [],
     "VAR_HOTSPOT": [],
-    "EMERGING": []
+    "EMERGING": [{"skill": "github-monitor", "pct": 0.263}]
   },
   "fork_only_skills": [
     {"fork": "swarm-ai-research/aeon-atlas", "skill": "atlas"},
@@ -47,13 +28,20 @@
     {"fork": "damo-nu11/aeon-minebean", "skill": "mine-bean"},
     {"fork": "lawbworld-tech/aeon", "skill": "lawb-pool-monitor"},
     {"fork": "ether-btc/aeon", "skill": "github-upstream-tracker"},
-    {"fork": "Marr554/aeon", "skill": "priority-brief"}
+    {"fork": "Marr554/aeon", "skill": "priority-brief"},
+    {"fork": "bspacer/aeon", "skill": "robinhood-mcp"},
+    {"fork": "bspacer/aeon", "skill": "you-web-search"},
+    {"fork": "bspacer/aeon", "skill": "aeon-doctor"},
+    {"fork": "bspacer/aeon", "skill": "seo-audit"},
+    {"fork": "chxoky/aeon", "skill": "trader-memory-compact"},
+    {"fork": "Da6hkin/aeon", "skill": "money-radar"},
+    {"fork": "Marr554/aeon", "skill": "thread-writer"}
   ],
   "fingerprints": [
-    {"fork": "stefrogovskyi/aeon", "total_overrides": 30, "dominant_category": "meta"},
-    {"fork": "nigelon11/aeon", "total_overrides": 25, "dominant_category": "meta"},
-    {"fork": "Svector-anu/svectors-lab", "total_overrides": 15, "dominant_category": "fork-only"},
-    {"fork": "Marr554/aeon", "total_overrides": 10, "dominant_category": "dev"},
-    {"fork": "Aluma/aeon", "total_overrides": 8, "dominant_category": "dev"}
+    {"fork": "Aluma/aeon", "total_overrides": 39, "dominant_category": "dev"},
+    {"fork": "bspacer/aeon", "total_overrides": 33, "dominant_category": "dev"},
+    {"fork": "nigelon11/aeon", "total_overrides": 13, "dominant_category": "meta"},
+    {"fork": "olanotolu/aeon", "total_overrides": 13, "dominant_category": "mixed"},
+    {"fork": "Svector-anu/svectors-lab", "total_overrides": 12, "dominant_category": "fork-only"}
   ]
 }

@@ -1,0 +1,539 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date-text",
+        "deployment-section",
+        "sep-1",
+        "stats-heading",
+        "stats-grid",
+        "sep-2",
+        "skills-heading",
+        "skills-stack",
+        "sep-3",
+        "watchlist-heading",
+        "watchlist-stack",
+        "sep-4",
+        "customizer-heading",
+        "customizer-stack",
+        "sep-5",
+        "report-link"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-08-09",
+        "variant": "caption"
+      }
+    },
+    "deployment-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deployment-heading",
+        "deployment-text",
+        "deployment-badges-stack"
+      ]
+    },
+    "deployment-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Deployments by bspacer",
+        "level": "h3"
+      }
+    },
+    "deployment-text": {
+      "type": "Text",
+      "props": {
+        "text": "Not in upstream: robinhood-mcp, aeon-doctor, seo-audit, you-web-search"
+      }
+    },
+    "deployment-badges-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-rhoodmcp",
+        "badge-doctor",
+        "badge-seo",
+        "badge-search"
+      ]
+    },
+    "badge-rhoodmcp": {
+      "type": "Badge",
+      "props": {
+        "text": "robinhood-mcp",
+        "variant": "default"
+      }
+    },
+    "badge-doctor": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon-doctor",
+        "variant": "default"
+      }
+    },
+    "badge-seo": {
+      "type": "Badge",
+      "props": {
+        "text": "seo-audit",
+        "variant": "default"
+      }
+    },
+    "badge-search": {
+      "type": "Badge",
+      "props": {
+        "text": "you-web-search",
+        "variant": "default"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h3"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-active-forks",
+        "stat-configured",
+        "stat-configured-pct"
+      ]
+    },
+    "stat-active-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Forks Scanned",
+        "value": "59"
+      }
+    },
+    "stat-configured": {
+      "type": "Stat",
+      "props": {
+        "label": "Configured",
+        "value": "19",
+        "delta": "↓30 from 49",
+        "trend": "down"
+      }
+    },
+    "stat-configured-pct": {
+      "type": "Stat",
+      "props": {
+        "label": "Fleet Configured %",
+        "value": "32%",
+        "delta": "↓66 from 98%",
+        "trend": "down"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Fork-Only Skills",
+        "level": "h3"
+      }
+    },
+    "skills-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skill-1",
+        "skill-2",
+        "skill-3",
+        "skill-4",
+        "skill-5",
+        "skill-6"
+      ]
+    },
+    "skill-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-1-title",
+        "skill-1-desc"
+      ]
+    },
+    "skill-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "robinhood-mcp",
+        "variant": "lead"
+      }
+    },
+    "skill-1-desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-1-author",
+        "skill-1-info"
+      ]
+    },
+    "skill-1-author": {
+      "type": "Badge",
+      "props": {
+        "text": "bspacer",
+        "variant": "secondary"
+      }
+    },
+    "skill-1-info": {
+      "type": "Text",
+      "props": {
+        "text": "Robinhood MCP trading agent",
+        "variant": "caption"
+      }
+    },
+    "skill-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-2-title",
+        "skill-2-desc"
+      ]
+    },
+    "skill-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-doctor",
+        "variant": "lead"
+      }
+    },
+    "skill-2-desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-2-author",
+        "skill-2-info"
+      ]
+    },
+    "skill-2-author": {
+      "type": "Badge",
+      "props": {
+        "text": "bspacer",
+        "variant": "secondary"
+      }
+    },
+    "skill-2-info": {
+      "type": "Text",
+      "props": {
+        "text": "static config linter, weekly",
+        "variant": "caption"
+      }
+    },
+    "skill-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-3-title",
+        "skill-3-desc"
+      ]
+    },
+    "skill-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "seo-audit",
+        "variant": "lead"
+      }
+    },
+    "skill-3-desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-3-author",
+        "skill-3-info"
+      ]
+    },
+    "skill-3-author": {
+      "type": "Badge",
+      "props": {
+        "text": "bspacer",
+        "variant": "secondary"
+      }
+    },
+    "skill-3-info": {
+      "type": "Text",
+      "props": {
+        "text": "daily on-page SEO + Core Web Vitals",
+        "variant": "caption"
+      }
+    },
+    "skill-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-4-title",
+        "skill-4-desc"
+      ]
+    },
+    "skill-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "you-web-search",
+        "variant": "lead"
+      }
+    },
+    "skill-4-desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-4-author",
+        "skill-4-info"
+      ]
+    },
+    "skill-4-author": {
+      "type": "Badge",
+      "props": {
+        "text": "bspacer",
+        "variant": "secondary"
+      }
+    },
+    "skill-4-info": {
+      "type": "Text",
+      "props": {
+        "text": "You.com API search, on-demand",
+        "variant": "caption"
+      }
+    },
+    "skill-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-5-title",
+        "skill-5-desc"
+      ]
+    },
+    "skill-5-title": {
+      "type": "Text",
+      "props": {
+        "text": "trader-memory-compact",
+        "variant": "lead"
+      }
+    },
+    "skill-5-desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-5-author",
+        "skill-5-info"
+      ]
+    },
+    "skill-5-author": {
+      "type": "Badge",
+      "props": {
+        "text": "chxoky",
+        "variant": "secondary"
+      }
+    },
+    "skill-5-info": {
+      "type": "Text",
+      "props": {
+        "text": "bounded traders.md compaction",
+        "variant": "caption"
+      }
+    },
+    "skill-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-6-title",
+        "skill-6-desc"
+      ]
+    },
+    "skill-6-title": {
+      "type": "Text",
+      "props": {
+        "text": "money-radar",
+        "variant": "lead"
+      }
+    },
+    "skill-6-desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-6-author",
+        "skill-6-info"
+      ]
+    },
+    "skill-6-author": {
+      "type": "Badge",
+      "props": {
+        "text": "Da6hkin",
+        "variant": "secondary"
+      }
+    },
+    "skill-6-info": {
+      "type": "Text",
+      "props": {
+        "text": "twice-daily cross-stream money ideas",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watchlist-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watchlist (Emerging)",
+        "level": "h3"
+      }
+    },
+    "watchlist-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "watchlist-name",
+        "watchlist-progress"
+      ]
+    },
+    "watchlist-name": {
+      "type": "Text",
+      "props": {
+        "text": "github-monitor"
+      }
+    },
+    "watchlist-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 26,
+        "max": 100,
+        "label": "5/19"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "customizer-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Heaviest Customizer",
+        "level": "h3"
+      }
+    },
+    "customizer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "customizer-name",
+        "customizer-details"
+      ]
+    },
+    "customizer-name": {
+      "type": "Text",
+      "props": {
+        "text": "Aluma/aeon",
+        "variant": "lead"
+      }
+    },
+    "customizer-details": {
+      "type": "Text",
+      "props": {
+        "text": "~39 overrides, gpt models, vch-build stack",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "report-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/fork-skill-digest-2026-08-09.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

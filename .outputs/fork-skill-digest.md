@@ -1,19 +1,18 @@
-*Fork Skill Digest — 2026-08-02*
-40 forks disable action-converter (upstream defaults on) — fleet is voting it as noise
+*Fork Skill Digest — 2026-08-09*
+bspacer shipped robinhood-mcp, aeon-doctor, seo-audit, you-web-search — not in upstream
 
-Scanned 50 active forks; 49 are configured (98%). Fleet turned over since last run (79→50).
+Scanned 59 active forks; 19 are configured (down from 49/98% last week — fleet configured% collapsed to 32%).
 
-Flip disable (upstream on → fleet off):
-- action-converter — 40 forks (82%)
-- search-skill — 38 forks (78%)
-- self-improve — 36 forks (73%)
-- autoresearch — 36 forks (73%)
-- github-trending — 34 forks (69%)
-- +13 more skills above 50% threshold
+New fork-only skills:
+- robinhood-mcp (bspacer) — Robinhood MCP trading agent
+- aeon-doctor (bspacer) — static config linter, weekly
+- seo-audit (bspacer) — daily on-page SEO + Core Web Vitals
+- you-web-search (bspacer) — You.com API search, on-demand
+- trader-memory-compact (chxoky) — bounded traders.md compaction
+- money-radar (Da6hkin) — twice-daily cross-stream money ideas
 
-New fork-only skills (14 vs 0 last week):
-atlas ecosystem (swarm-ai-research), lawb-pool-monitor, mine-bean, github-upstream-tracker, verdikta-hunter, hunter-22, picks-tracker, priority-brief, vch-program, okf-export, memory-flush + more
+Watchlist (emerging): github-monitor 26% (5/19)
 
-Heaviest customizer: stefrogovskyi/aeon (~30 overrides, meta)
+Heaviest customizer: Aluma/aeon (~39 overrides, gpt models, vch-build stack)
 
-Full report: https://github.com/aeonframework/aeon/blob/main/articles/fork-skill-digest-2026-08-02.md
+Full report: https://github.com/anajuliabit/aeon/blob/main/articles/fork-skill-digest-2026-08-09.md
