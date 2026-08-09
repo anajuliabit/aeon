@@ -1,12 +1,12 @@
 ## Summary
 
-**BTC Levels Monitor — 2026-08-09**
+**btc-levels run — 2026-08-09 08:00Z**
 
-- **Spot**: $64,924.62 | **Daily close (2026-08-08)**: $64,917.24
-- All levels clear:
-  - Leverage-review (≤$45k): well above — no alert
-  - Breakdown close (<$60,500): $64,917 is healthy — no alert
-  - Reclaim $63,500: already alerted in prior run — flag stays set
-  - Reclaim $65,900: spot at $64,924 — $975 below the level, not yet crossed
-- **No notification sent** (quiet run — all signals inactive)
-- State and log committed to `main`
+- **Spot**: $64,744 | **Daily close**: $64,917 (both well clear of all alert levels)
+- All 4 alert conditions evaluated: no fires
+  - Leverage-review (≤$45k): clear
+  - Breakdown close (<$60.5k): clear
+  - Reclaim $63.5k: already alerted, re-arm not triggered
+  - Reclaim $65.9k: spot below level
+- **Note**: CoinGecko returned a stale live-price timestamp (~05:16Z Aug 8); no practical impact since all closes are far above thresholds
+- State and log committed — no notification sent (quiet run)
