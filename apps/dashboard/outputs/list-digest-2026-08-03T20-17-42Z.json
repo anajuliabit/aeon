@@ -1,0 +1,127 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-03"
+      },
+      "children": [
+        "text-intro",
+        "sep-1",
+        "heading-research",
+        "stack-tweet1",
+        "stack-tweet2",
+        "sep-2",
+        "text-sources",
+        "badge-status"
+      ]
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "louround takes the whole feed for the 4th consec UTC-day — this one's the $IO thesis (down 98% from ATH, only DePIN with real ARR).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-research": {
+      "type": "Heading",
+      "props": {
+        "text": "DePIN/crypto research list",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack-tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround",
+        "handle": "Louround_",
+        "text": "7th installment: $IO at $50m mc / 5x MC/ARR while akash sits at 53x and render at 350x; IDE burn mechanism live 50 days and already above target; second enterprise deal apparently in advanced stages = the catalyst to watch",
+        "likes": 29,
+        "retweets": 3
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2084006972622622964"
+      },
+      "children": []
+    },
+    "stack-tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround",
+        "handle": "Louround_",
+        "text": "thread receipts: monthly net earnings $250k mar → $1m may (4×); $8m of ARR concentrated in a single enterprise = the risk; IDE untested against a 50%+ drawdown yet",
+        "likes": 2
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2084007065434182033"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list=ok(10) — grok returned zero 8-03 posts, backfill from 8-02 = 8-tweet @Louround_ IO thread + 2 low-signal replies",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "outline"
+      },
+      "children": []
+    }
+  }
+}

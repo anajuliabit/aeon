@@ -1,0 +1,157 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-08-03",
+        "description": "Frame-of-agent day — three voices arguing scaffolds over raw MCP tool-wrapping, three sketching the stack around it."
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2",
+        "sep2",
+        "footer"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "tweets1"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "Scaffolds over raw MCP wrapping",
+        "level": "h3"
+      }
+    },
+    "tweets1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "marfinxx",
+        "handle": "@marfinxx",
+        "text": "Chinese group swaps probabilistic prompt loops for code-as-harness: sub-agent VMs, evidence gates, multi-agent graphs.\nhttps://x.com/marfinxx/status/2084010232762573033"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "neural_avb",
+        "handle": "@neural_avb",
+        "text": "REPL-first + spec-driven skills lets agents manufacture logic, sidestepping MCP tool-count ceilings.\nhttps://x.com/neural_avb/status/2083921717651804386"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DThompsonDev",
+        "handle": "@DThompsonDev",
+        "text": "Pipelines of small specialized agents with explicit handoffs and validation, not one monolithic agent.\nhttps://x.com/DThompsonDev/status/2084059392178098323"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "tweets2"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Stack layering & governance",
+        "level": "h3"
+      }
+    },
+    "tweets2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet4",
+        "tweet5",
+        "tweet6"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "goyalshaliniuk",
+        "handle": "@goyalshaliniuk",
+        "text": "Triad framing: MCP for context/memory, A2A for collaboration, function calling for task DAG — all three.\nhttps://x.com/goyalshaliniuk/status/2083877976777867553"
+      }
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "jithinraj",
+        "handle": "@jithinraj",
+        "text": "PEAC layers portable signed/verifiable records on MCP tool calls for cross-team auditability.\nhttps://x.com/jithinraj/status/2084018375987208286"
+      }
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "izzetcakmak35",
+        "handle": "@izzetcakmak35",
+        "text": "ENTARC ships an autonomous VC agent scoring deals and paying USDC on Arc with on-chain receipts.\nhttps://x.com/izzetcakmak35/status/2084056937474183409"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 10 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

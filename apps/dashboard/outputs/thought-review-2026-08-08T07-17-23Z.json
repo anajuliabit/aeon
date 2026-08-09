@@ -1,0 +1,66 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "content"
+      ]
+    },
+    "content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading",
+        "stat-captures",
+        "stat-inbox",
+        "stat-priorities",
+        "alert-refresh"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🧭 thought review · last 24h",
+        "level": "h2"
+      }
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "stat-inbox": {
+      "type": "Stat",
+      "props": {
+        "label": "Inbox",
+        "value": "48d cold",
+        "delta": "last capture 2026-06-21"
+      }
+    },
+    "stat-priorities": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md",
+        "value": "65d stale",
+        "delta": "since 2026-06-04"
+      }
+    },
+    "alert-refresh": {
+      "type": "Alert",
+      "props": {
+        "message": "worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}

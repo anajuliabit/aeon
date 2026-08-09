@@ -1,0 +1,231 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reg monitor",
+        "description": "2026-08-05 · 1 enforcement to plan around this week, 1 comment-period close to watch"
+      },
+      "children": [
+        "summary_stat",
+        "separator_1",
+        "act_section",
+        "watch_section",
+        "separator_2",
+        "sources_section"
+      ]
+    },
+    "summary_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Developments scored",
+        "value": "6",
+        "delta": "1 act / 1 watch"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "act_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act_heading",
+        "act_item_1"
+      ]
+    },
+    "act_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h2"
+      }
+    },
+    "act_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "kalshi_story",
+        "kalshi_status",
+        "kalshi_details",
+        "kalshi_context",
+        "kalshi_timeline",
+        "kalshi_angle"
+      ]
+    },
+    "kalshi_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ny v kalshi — $36b illegal-gambling suit",
+        "href": "https://www.forbes.com/sites/zennonkapron/2026/08/04/new-york-wants-36-billion-from-kalshi-a-federal-judge-next-door-just-shielded-it/",
+        "source": "Forbes"
+      }
+    },
+    "kalshi_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_ny",
+        "badge_active"
+      ]
+    },
+    "badge_ny": {
+      "type": "Badge",
+      "props": {
+        "text": "NY State",
+        "variant": "secondary"
+      }
+    },
+    "badge_active": {
+      "type": "Badge",
+      "props": {
+        "text": "Active enforcement",
+        "variant": "destructive"
+      }
+    },
+    "kalshi_details": {
+      "type": "Text",
+      "props": {
+        "text": "AG Letitia James + Gov Hochul filed 7-31 in Manhattan State Court. Restitution + disgorgement + treble gains + $100k per unlawful offering — ~$36B total.",
+        "variant": "body"
+      }
+    },
+    "kalshi_context": {
+      "type": "Text",
+      "props": {
+        "text": "Sits directly opposite the 7-27 Menendez preliminary injunction in Minnesota where CFTC preemption was granted. Kalshi is appealing to 2nd Circuit; 3rd Circuit already ruled the other way in April 2026, so SCOTUS lines up if the split hardens.",
+        "variant": "caption"
+      }
+    },
+    "kalshi_timeline": {
+      "type": "Alert",
+      "props": {
+        "title": "Timeline",
+        "message": "2nd circuit appeal in-flight, no argument date yet",
+        "type": "info"
+      }
+    },
+    "kalshi_angle": {
+      "type": "Text",
+      "props": {
+        "text": "Prediction market angle: Direct hit on Kalshi NY access + sports-contract legality. Polymarket exposed by extension. Tradeable event candidate: \"CFTC preemption survives at SCOTUS by [date]\".",
+        "variant": "lead"
+      }
+    },
+    "watch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_heading",
+        "watch_item_1"
+      ]
+    },
+    "watch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h2"
+      }
+    },
+    "watch_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cftc_story",
+        "cftc_status",
+        "cftc_details"
+      ]
+    },
+    "cftc_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC prediction-market NPRM — comment period closed 7-27",
+        "href": "https://www.ropesgray.com/en/insights/alerts/2026/06/rewriting-the-rulebook-cftc-proposes-rule-changes-for-prediction-market-contracts",
+        "source": "Ropes & Gray"
+      }
+    },
+    "cftc_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_federal",
+        "badge_nprm"
+      ]
+    },
+    "badge_federal": {
+      "type": "Badge",
+      "props": {
+        "text": "US Federal",
+        "variant": "secondary"
+      }
+    },
+    "badge_nprm": {
+      "type": "Badge",
+      "props": {
+        "text": "NPRM under review",
+        "variant": "outline"
+      }
+    },
+    "cftc_details": {
+      "type": "Text",
+      "props": {
+        "text": "3-step framework to evaluate whether event contracts \"involve\" unlawful activity, gaming, terrorism, assassination, or war. Comment window shut; commission review live. Final rule window opens now.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "federal-register=ok(0-hits) · sec=ok(0-relevant) · cftc=ok(html-fallback, rss 404) · websearch=ok · congress=skip",
+        "variant": "caption"
+      }
+    }
+  }
+}

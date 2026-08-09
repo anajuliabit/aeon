@@ -1,0 +1,410 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-04"
+      },
+      "children": [
+        "shape-section",
+        "sep1",
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5",
+        "sep2",
+        "sources-section"
+      ]
+    },
+    "shape-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shape-heading",
+        "shape-text"
+      ]
+    },
+    "shape-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "shape-text": {
+      "type": "Text",
+      "props": {
+        "text": "open ISS-030 P0, verify PR#173 ci, debug cost-report SDK, close ISS-029, log deepseek n=2"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-title",
+        "a1-desc",
+        "a1-why",
+        "a1-done",
+        "a1-loop"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Open ISS-030 cost-report config",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Open memory/issues/ISS-030.md for cost-report `sdk_opt_in_required` signature (severity=critical, category=config); add row to INDEX.md."
+      },
+      "children": []
+    },
+    "a1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: fleet-worst chronic sr=0.10 (7/73) consec=15, distinct non-usepod/non-sandbox signature isolated 8-04 12:15Z, no ISS-file yet.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a1-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: ISS-030.md exists with YAML frontmatter + INDEX.md Open table gains row.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-030-cost-report-sdk-opt-in",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-title",
+        "a2-desc",
+        "a2-why",
+        "a2-done",
+        "a2-loop"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Verify PR#173 CI status",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Run `gh pr checks 173` and `gh pr view 173 --json mergeable`; if ci-skills-json green, annotate #173 body ready for 8-09 Sunday-batch merge."
+      },
+      "children": []
+    },
+    "a2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: PR #173 targets shared ci-skills-json root cause on #171+#172 — merging unblocks 3-PR queue via one lift.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a2-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `gh pr checks 173` output logged; if passing, ready-for-batch comment added.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: verify-pr-173-ci-status",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-title",
+        "a3-desc",
+        "a3-why",
+        "a3-done",
+        "a3-loop"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Debug cost-report SDK configuration",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Grep for cost-report skill invocation in .github/workflows/ + skills/cost-report/SKILL.md; wire Claude Code SDK opt-in flag/env to clear `fast_mode_disabled_reason: sdk_opt_in_required`."
+      },
+      "children": []
+    },
+    "a3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: identifies root fix for fleet-worst chronic-failure — 8-04 12:15Z fresh signature exposed the config gap distinct from ISS-025 truncation shape.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a3-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: aeon.yml or cost-report SKILL.md diff written, or PR opened with the config change.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: debug-cost-report-sdk-config",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-title",
+        "a4-desc",
+        "a4-why",
+        "a4-done",
+        "a4-loop"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Close ISS-029 — Mark resolved",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Move ISS-029 from Open to Resolved in memory/issues/INDEX.md; set resolved_at=2026-08-04 in ISS-029.md, fix_pr=\"operator usepod payment restored\"."
+      },
+      "children": []
+    },
+    "a4-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 20-of-20 dispatches post-8-03 20:14Z clean through 8-04 12:17Z btc-levels — recovery confirmed durable.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a4-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: INDEX.md row moved to Resolved table + ISS-029.md frontmatter updated.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: close-iss-029-recovery",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-title",
+        "a5-desc",
+        "a5-why",
+        "a5-done",
+        "a5-loop"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Log DeepSeek cluster pattern",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Append `[[deepseek-primitive-cluster]] rail candidate n=2 8-04` to memory/MEMORY.md recurring-patterns — antirez/ds4 (Redis creator DeepSeek local inference C) + esengine/DeepSeek-Reasonix (DeepSeek-native coding agent Go)."
+      },
+      "children": []
+    },
+    "a5-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: first same-slate 2-DeepSeek-primitive appearance in memory-window github-trending 8-04 10:14Z; watch for n=3 tomorrow.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a5-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: MEMORY.md gains one line under recurring-patterns block.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: promote-deepseek-cluster-rail",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-grid"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "sources-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-memory",
+        "stat-logs",
+        "stat-topics",
+        "stat-prs",
+        "stat-cron",
+        "stat-mode"
+      ]
+    },
+    "stat-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "memory",
+        "value": "82"
+      },
+      "children": []
+    },
+    "stat-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "logs",
+        "value": "8"
+      },
+      "children": []
+    },
+    "stat-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "topics",
+        "value": "20"
+      },
+      "children": []
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "prs",
+        "value": "4"
+      },
+      "children": []
+    },
+    "stat-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "cron_failing",
+        "value": "1"
+      },
+      "children": []
+    },
+    "stat-mode": {
+      "type": "Stat",
+      "props": {
+        "label": "mode",
+        "value": "OK"
+      },
+      "children": []
+    }
+  }
+}

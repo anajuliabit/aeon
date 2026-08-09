@@ -1,23 +1,22 @@
-*goal tracker — 2026-07-30*
+*Goal Tracker — 2026-08-08*
 
-summary: 7 goals — 1 at risk, 0 needs attention, 0 on track, 6 blocked, 0 done (overall → flat)
+Summary: 8 goals — 0 at risk, 0 needs attention, 3 on track, 5 blocked, 0 done (overall → flat: 1 improving [morning-08z pattern-break], 1 degrading [pr queue 4→5], 6 flat).
 
-AT RISK
-• priorities.md 56d stale — 0d idle, 145 activity/14d (→ flat, was AT_RISK)
-  → action: operator refresh priorities.md current-focus section (thought-review 07:26Z one-liner nudge, 55d→56d roll)
+ON TRACK
+• iss-030 cost-report sdk-opt-in — 0d idle, 15+ activity/14d (flat — T-2 to 8-10 Mon 07Z deciding-test, chronic sr=10% unchanged, no fresh sdk_opt_in_required signature)
+• chronic-cohort-alone-degraded regime — 0d idle, 20+ activity/14d (flat — crosses 5th + 6th 24h durability gate 8-08 = 9-consec-heartbeat-tick ~95h span, deepest composition-identity print in memory-window)
+• `[[morning-08z-slot-dark]]` formal-pattern — 0d idle, 15+ activity/14d (↑ improving — deciding-test at n=5 FAILS on both co-slot skills, formal-pattern from 8-07 n=4-consec resolves as 4-consec-terminating, dispatch-lag collapses 75min → 4min at 08z)
 
 BLOCKED
-• ISS-025 capture-step PR T+11 day-14 — waiting on operator direct-author since 7-07 (8d past 1-week slip milestone; iss-025-hand-off T-0 today)
-  → action: operator direct-author dangerouslyDisableSandbox pivot against .github/workflows/aeon.yml:479-495
-• 12:00 UTC batch DARK day-32 — frozen since 2026-06-28 21:00Z, waiting on ISS-027 diagnosis
-  → action: author memory/issues/ISS-027.md + operator restart 8-skill 12:00Z cluster in aeon.yml
-• ISS-027/028 doc-gap d24 — no file authored, +4d past weekly-review 7-27 last-chance window
-  → action: create memory/issues/ISS-027.md + memory/issues/ISS-028.md (action-converter scored 125 + 80)
-• PR #165 d11 CONFLICTING — created 7-19 17:38Z, waiting operator Sunday batch cadence
-  → action: operator resolve conflicts + batch-merge in next Sunday review window
-• PR #167 d7 — created 7-23 18:22Z bash-redirect fix, crosses 7d weekly-batch gate today (new)
-  → action: operator batch-merge in next Sunday review window
-• Operator on-chain config day-53 — defi-monitor NO_CONFIG, missing ALCHEMY_API_KEY + ETHERSCAN_API_KEY
-  → action: operator add both secrets + populate memory/on-chain-watches.yml with type:pool/type:position entries
+• pr queue at 4 — waiting on 8-09 sunday-batch operator review since 8-05 (**queue GROWS 4 → 5 8-08** via pr #174 opened 00:31z overnight, first advisor-workflow-opened pr in memory-window; #173 ci cold ~4.6d = t-1 nudge window narrows)
+  → Action: close-reopen pr #173 to trigger fresh ci dispatch before 8-09 sunday-batch t-1
+• iss-028 workaround-chain — waiting on root-cause investigation since 7-30 pr #167 merge (rail extends n=32+ → n=33+ 8-08 via daily-routine + list-digest + agent-buzz + vuln-scanner sibling, 17-utc-day span 7-22 → 8-08)
+  → Action: reopen pr #167 fix-scope-narrowness at 8-10 weekly-review root-cause investigation ask
+• 12:00 utc batch dark — waiting on scheduler-side gap fix since 2026-06-28 (iss-027 d42 today, 8-skill cluster frozen; token-alert 12z 3-consec clean confirms cluster-specific dispatcher path)
+  → Action: file scheduler-side gap investigation ticket separate from iss-028 (distinct root cause)
+• operator on-chain config — waiting on operator secrets + on-chain-watches.yml since day-1 (day-63 today, defi-monitor NO_CONFIG persists)
+  → Action: ask operator at 8-10 weekly-review to add ALCHEMY_API_KEY + ETHERSCAN_API_KEY + memory/on-chain-watches.yml
+• priorities.md 62d stale — waiting on operator refresh since 2026-06-04 (day-65 today, vault inbox d48 cold streak)
+  → Action: ask operator at 8-10 weekly-review to refresh priorities.md + capture new inbox items
 
-sources: logs=ok (14d window 07-16→07-30, 22 files), git=partial(shallow clone, 1 commit), gh_pr=ok (16 PRs since 6-30, PR #170 fresh 7-29 hn-digest path fix unrelated), gh_issue=ok(empty), cron-state=ok
+Sources: logs=ok, git=ok (shallow single-commit window, memory logs authoritative), gh_pr=ok (14 prs 30d window, 5 open), gh_issue=ok (1 issue 30d window, iss #144), cron-state=ok

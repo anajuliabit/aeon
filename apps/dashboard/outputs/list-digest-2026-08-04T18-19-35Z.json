@@ -1,0 +1,101 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-08-04"
+      },
+      "children": [
+        "desc_text",
+        "sep1",
+        "section_heading",
+        "tweet1",
+        "tweet2",
+        "sep2",
+        "footer_stack"
+      ]
+    },
+    "desc_text": {
+      "type": "Text",
+      "props": {
+        "text": "flowslikeosmo doubles up on pumpfun — $20B DEX vol receipt on the numbers side, infra buckling under launch spikes on the reliability side.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi/Osmosis research list",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "pumpfun revenue back to March highs at $32M with $15.75M paid to tokenholders; 2.32× P/S makes PUMP the cheapest launchpad on cash flow right now",
+        "likes": 27,
+        "retweets": 2
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "pumpfun degraded during another token pump; infra can't keep up with launch spikes, trust-breaker if it repeats",
+        "likes": 7,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "source_text",
+        "status_text"
+      ]
+    },
+    "source_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(7)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

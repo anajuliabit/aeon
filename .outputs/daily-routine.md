@@ -1,51 +1,48 @@
-*Daily Routine — 2026-07-31*
+*daily routine — 2026-08-09*
 
-*Top 10 Winners (24h)*
-1. UB: $0.161 (+16.1%) — 7d +38% BREAKOUT
-2. DCR: $13.46 (+15.8%)
-3. CARDS: $0.158 (+15.7%)
-4. UNI: $4.39 (+13.7%) — large-cap standout
-5. CFX: $0.0442 (+5.6%)
-6. PUMP: $0.00200 (+5.4%) — flipped from -7.1% yesterday
-7. VET: $0.00476 (+5.3%)
-8. CAKE: $1.45 (+5.2%)
-9. FIL: $0.714 (+4.9%)
-10. ENA: $0.0815 (+4.3%)
+_tape: 59/100 top green, median +0.3%. muted middle; TUT the outlier — R166 +325.8% on 7d +1008% = pump-risk._
 
-*Top 10 Losers (24h)*
-1. HOLO: $0.0676 (-14.4%) — flipped from +10.5% yesterday
-2. US: $0.0484 (-9.0%)
-3. M: $1.018 (-8.5%)
-4. VSN: $0.0370 (-7.0%)
-5. KAITO: $1.15 (-5.8%) FADE
-6. ZBCN: $0.00176 (-5.3%)
-7. ZAMA: $0.0548 (-5.3%)
-8. ZRO: $0.720 (-4.9%)
-9. DEXE: $2.46 (-4.0%) FADE
-10. RAIN: $0.01306 (-3.8%) — only major-cap loser (#13)
+*winners (24h)*
+1. TUT $0.230  +325.8% / 7d +1008% / 1h +8.5%  • $701M / R166  [pump-risk, trending+up]
+2. BEAT $3.19  +48.0% / 7d −10.8%  • $47M / R64  [fade]
+3. BTW $0.187  +28.8% / 7d +113.6%  • $20M / R108  [breakout, 5d-reflip]
+4. SKYAI $0.124  +12.5% / 7d +350%  • $27M / R227  [breakout, microcap]
+5. PUMP $0.00251  +11.1% / 7d +13.5%  • $73M / R68
+6. PYTH $0.042  +9.5% / 7d +4.7%  • $20M / R121
+7. CC $0.098  +8.9% / 7d −15.0%  • $21M / R25  [major, fade]
 
-Market pulse: 58/100 top alts green, top-50 median +0.4%. BTC $65,023 (+2.09%), fear-greed 25.
+*losers (24h)*
+1. CYS $0.83  −16.6% / 7d +179.6%  • $58M / R213  [capitulation]
+2. B $0.142  −13.0% / 7d −10.8%  • $5M / R202
+3. KAITO $0.70  −10.2% / 7d −39.6%  • $86M / R179
+4. PIEVERSE $0.78  −6.1%  • $6M / R150
+5. RUNE $0.43  −4.1%  • $21M / R196
 
-*Tweet Roundup* (WebSearch fallback — XAI sandbox-blocked, no prefetch)
-*Crypto:* GRVT +62% / BANK -57% swings dominate d1 rotation; BitMart winds down 9-year exchange; Fed leaves rates unchanged, DeFi mcap +2.6% to $62.7B on the drift.
-*AI:* Opus 5 hits intelligence 61 at ~half Fable 5 cost, Auto Mode drives browser prompt-injection to 0/129; llama.cpp gains MCP tool-protocol support = local agentic loop; NVIDIA NOOA object-oriented agent framework drops.
-*Dev:* CISA ships "Open Source Software: Security Principles and Practices" federal guidance 7-30; SpaceX $60B Cursor acquisition reshapes IDE market; Claude Code gains computer use.
+*tweet roundup*
+crypto: btc pinned $63.8k–$66k range; eth $1,927. muted tape, no fresh catalyst; TUT + BTW carrying most of the vol on the winners board.
+ai: claude opus 5 still #1 on artificial analysis; openai ships chatgpt work (agentic gpt-5.6, sol/terra/luna tier split); deepseek-v4 dual-mode; nvidia opens NOOA agent framework.
+dev: HN top take "code was never the hard part is an insult"; shopify swapped redis for mysql on inventory reservations (SKIP LOCKED + row-per-unit) — boring infra winning.
 
-*Paper of the Day*
-"Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory" — Zhu/Li/Yang/Su · ↑29. 6.9B memory + Pythia-410M beats Pythia-12B on 17 benchmarks with 39% fewer params. memory as its own scaling axis.
-https://arxiv.org/abs/2607.27919
+*paper of the day*
+"from economic agents to agentic economies: a systems blueprint for economic world models" — han, li · ↑28
+direct shot at the sherwood-shaped question: how do you spec an economic world model where agents are actors, not tools. skip if you're not building at that layer.
+[read](https://arxiv.org/abs/2608.06020) | [pdf](https://arxiv.org/pdf/2608.06020)
 
-*GitHub Issues*
-No new issues (6th consec clean day for user:anajuliabit)
+*github issues*
+no new issues in last 24h.
 
-*HN Digest*
-1. [Stacked PRs live on GitHub](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/) (606pts) — native stacked-PR public preview.
-   [Discuss](https://news.ycombinator.com/item?id=49112232)
-2. [TV streaming stick preloaded malware](https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/) (684pts) — Krebs on hardware-side supply-chain compromise.
-   [Discuss](https://news.ycombinator.com/item?id=49112744)
-3. [GPT-5.6 price-perf frontier](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/) (557pts) — OpenAI reprices, extends Opus 5 / GPT-5.6 cost-lever competition.
-   [Discuss](https://news.ycombinator.com/item?id=49112867)
-4. [Gemini Robotics 2 whole-body](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) (539pts) — big-lab embodied AI drop extends embodied-agent-runtime rail to n=3.
-   [Discuss](https://news.ycombinator.com/item?id=49111237)
-5. [Anthropic cybersecurity-eval incidents](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) (168pts) — post-mortems 3 real-world cyber incidents seen in evals.
-   [Discuss](https://news.ycombinator.com/item?id=49116922)
+*hn digest*
+1. **[dev]** [code was never the hard part is an insult](https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers) — 698 · 417c
+   why: pushback on the "coding is easy, thinking is hard" line the LLM pitch leans on.
+   hn: "the hard part is always the design part... starting with a bad design is no good" — _effed3_
+   [discuss](https://news.ycombinator.com/item?id=49222189)
+2. **[infra]** [shopify replaced redis with mysql for inventory reservations](https://shopify.engineering/scaling-inventory-reservations) — 154 · 85c
+   why: SKIP LOCKED + one row per unit at scale; reconcilable state beats event-driven.
+   hn: "SQL is decades of relational algebra... pure magic across vast sets" — _trueno_
+   [discuss](https://news.ycombinator.com/item?id=49226536)
+3. **[ai]** [message your other claude code sessions](https://code.claude.com/docs/en/cross-session-messaging) — 107 · 44c
+   why: cross-session messaging primitive for orchestrated agent fleets.
+   hn: "when my claude/codex finishes cooking... it pings a local http endpoint that plays a frog sound. massively boosts quality of life" — _andai_
+   [discuss](https://news.ycombinator.com/item?id=49222824)
+
+_xai x_search skipped — memory 8-08 signal (fell back to websearch entirely); websearch fallback used._

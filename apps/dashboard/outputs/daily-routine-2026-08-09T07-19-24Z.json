@@ -1,0 +1,1388 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-09"
+      },
+      "children": [
+        "tape-summary",
+        "sep1",
+        "winners-section",
+        "sep2",
+        "losers-section",
+        "sep3",
+        "tweets-section",
+        "sep4",
+        "paper-section",
+        "sep5",
+        "github-section",
+        "sep6",
+        "hn-section",
+        "sep7",
+        "footer"
+      ]
+    },
+    "tape-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tape-heading",
+        "tape-text",
+        "tape-highlight"
+      ]
+    },
+    "tape-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tape Summary",
+        "level": "h2"
+      }
+    },
+    "tape-text": {
+      "type": "Text",
+      "props": {
+        "text": "59/100 top green, median +0.3%. Muted middle.",
+        "variant": "body"
+      }
+    },
+    "tape-highlight": {
+      "type": "Alert",
+      "props": {
+        "title": "TUT Outlier Alert",
+        "message": "R166 +325.8% on 7d +1008% = pump-risk",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winner-1",
+        "winner-2",
+        "winner-3",
+        "winner-4",
+        "winner-5",
+        "winner-6",
+        "winner-7"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winner-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1-header",
+        "w1-stats",
+        "w1-tags"
+      ]
+    },
+    "w1-header": {
+      "type": "Text",
+      "props": {
+        "text": "1. TUT $0.230",
+        "variant": "lead"
+      }
+    },
+    "w1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w1-24h",
+        "w1-7d",
+        "w1-1h",
+        "w1-mcap",
+        "w1-rank"
+      ]
+    },
+    "w1-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+325.8%",
+        "trend": "up"
+      }
+    },
+    "w1-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+1008%",
+        "trend": "up"
+      }
+    },
+    "w1-1h": {
+      "type": "Stat",
+      "props": {
+        "label": "1h",
+        "value": "+8.5%",
+        "trend": "up"
+      }
+    },
+    "w1-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$701M",
+        "variant": "caption"
+      }
+    },
+    "w1-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R166",
+        "variant": "secondary"
+      }
+    },
+    "w1-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w1-tag-pump",
+        "w1-tag-trending"
+      ]
+    },
+    "w1-tag-pump": {
+      "type": "Badge",
+      "props": {
+        "text": "pump-risk",
+        "variant": "destructive"
+      }
+    },
+    "w1-tag-trending": {
+      "type": "Badge",
+      "props": {
+        "text": "trending+up",
+        "variant": "default"
+      }
+    },
+    "winner-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w2-header",
+        "w2-stats",
+        "w2-tags"
+      ]
+    },
+    "w2-header": {
+      "type": "Text",
+      "props": {
+        "text": "2. BEAT $3.19",
+        "variant": "lead"
+      }
+    },
+    "w2-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w2-24h",
+        "w2-7d",
+        "w2-mcap",
+        "w2-rank"
+      ]
+    },
+    "w2-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+48.0%",
+        "trend": "up"
+      }
+    },
+    "w2-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "−10.8%",
+        "trend": "down"
+      }
+    },
+    "w2-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$47M",
+        "variant": "caption"
+      }
+    },
+    "w2-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R64",
+        "variant": "secondary"
+      }
+    },
+    "w2-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w2-tag-fade"
+      ]
+    },
+    "w2-tag-fade": {
+      "type": "Badge",
+      "props": {
+        "text": "fade",
+        "variant": "outline"
+      }
+    },
+    "winner-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w3-header",
+        "w3-stats",
+        "w3-tags"
+      ]
+    },
+    "w3-header": {
+      "type": "Text",
+      "props": {
+        "text": "3. BTW $0.187",
+        "variant": "lead"
+      }
+    },
+    "w3-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w3-24h",
+        "w3-7d",
+        "w3-mcap",
+        "w3-rank"
+      ]
+    },
+    "w3-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+28.8%",
+        "trend": "up"
+      }
+    },
+    "w3-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+113.6%",
+        "trend": "up"
+      }
+    },
+    "w3-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$20M",
+        "variant": "caption"
+      }
+    },
+    "w3-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R108",
+        "variant": "secondary"
+      }
+    },
+    "w3-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w3-tag-breakout",
+        "w3-tag-reflip"
+      ]
+    },
+    "w3-tag-breakout": {
+      "type": "Badge",
+      "props": {
+        "text": "breakout",
+        "variant": "default"
+      }
+    },
+    "w3-tag-reflip": {
+      "type": "Badge",
+      "props": {
+        "text": "5d-reflip",
+        "variant": "default"
+      }
+    },
+    "winner-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w4-header",
+        "w4-stats",
+        "w4-tags"
+      ]
+    },
+    "w4-header": {
+      "type": "Text",
+      "props": {
+        "text": "4. SKYAI $0.124",
+        "variant": "lead"
+      }
+    },
+    "w4-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w4-24h",
+        "w4-7d",
+        "w4-mcap",
+        "w4-rank"
+      ]
+    },
+    "w4-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+12.5%",
+        "trend": "up"
+      }
+    },
+    "w4-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+350%",
+        "trend": "up"
+      }
+    },
+    "w4-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$27M",
+        "variant": "caption"
+      }
+    },
+    "w4-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R227",
+        "variant": "secondary"
+      }
+    },
+    "w4-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w4-tag-breakout",
+        "w4-tag-microcap"
+      ]
+    },
+    "w4-tag-breakout": {
+      "type": "Badge",
+      "props": {
+        "text": "breakout",
+        "variant": "default"
+      }
+    },
+    "w4-tag-microcap": {
+      "type": "Badge",
+      "props": {
+        "text": "microcap",
+        "variant": "default"
+      }
+    },
+    "winner-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w5-header",
+        "w5-stats"
+      ]
+    },
+    "w5-header": {
+      "type": "Text",
+      "props": {
+        "text": "5. PUMP $0.00251",
+        "variant": "lead"
+      }
+    },
+    "w5-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w5-24h",
+        "w5-7d",
+        "w5-mcap",
+        "w5-rank"
+      ]
+    },
+    "w5-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+11.1%",
+        "trend": "up"
+      }
+    },
+    "w5-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+13.5%",
+        "trend": "up"
+      }
+    },
+    "w5-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$73M",
+        "variant": "caption"
+      }
+    },
+    "w5-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R68",
+        "variant": "secondary"
+      }
+    },
+    "winner-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w6-header",
+        "w6-stats"
+      ]
+    },
+    "w6-header": {
+      "type": "Text",
+      "props": {
+        "text": "6. PYTH $0.042",
+        "variant": "lead"
+      }
+    },
+    "w6-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w6-24h",
+        "w6-7d",
+        "w6-mcap",
+        "w6-rank"
+      ]
+    },
+    "w6-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+9.5%",
+        "trend": "up"
+      }
+    },
+    "w6-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+4.7%",
+        "trend": "up"
+      }
+    },
+    "w6-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$20M",
+        "variant": "caption"
+      }
+    },
+    "w6-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R121",
+        "variant": "secondary"
+      }
+    },
+    "winner-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w7-header",
+        "w7-stats",
+        "w7-tags"
+      ]
+    },
+    "w7-header": {
+      "type": "Text",
+      "props": {
+        "text": "7. CC $0.098",
+        "variant": "lead"
+      }
+    },
+    "w7-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w7-24h",
+        "w7-7d",
+        "w7-mcap",
+        "w7-rank"
+      ]
+    },
+    "w7-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+8.9%",
+        "trend": "up"
+      }
+    },
+    "w7-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "−15.0%",
+        "trend": "down"
+      }
+    },
+    "w7-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$21M",
+        "variant": "caption"
+      }
+    },
+    "w7-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R25",
+        "variant": "secondary"
+      }
+    },
+    "w7-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w7-tag-major",
+        "w7-tag-fade"
+      ]
+    },
+    "w7-tag-major": {
+      "type": "Badge",
+      "props": {
+        "text": "major",
+        "variant": "default"
+      }
+    },
+    "w7-tag-fade": {
+      "type": "Badge",
+      "props": {
+        "text": "fade",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "loser-1",
+        "loser-2",
+        "loser-3",
+        "loser-4",
+        "loser-5"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "loser-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l1-header",
+        "l1-stats",
+        "l1-tags"
+      ]
+    },
+    "l1-header": {
+      "type": "Text",
+      "props": {
+        "text": "1. CYS $0.83",
+        "variant": "lead"
+      }
+    },
+    "l1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l1-24h",
+        "l1-7d",
+        "l1-mcap",
+        "l1-rank"
+      ]
+    },
+    "l1-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "−16.6%",
+        "trend": "down"
+      }
+    },
+    "l1-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+179.6%",
+        "trend": "up"
+      }
+    },
+    "l1-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$58M",
+        "variant": "caption"
+      }
+    },
+    "l1-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R213",
+        "variant": "secondary"
+      }
+    },
+    "l1-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "l1-tag-cap"
+      ]
+    },
+    "l1-tag-cap": {
+      "type": "Badge",
+      "props": {
+        "text": "capitulation",
+        "variant": "destructive"
+      }
+    },
+    "loser-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l2-header",
+        "l2-stats"
+      ]
+    },
+    "l2-header": {
+      "type": "Text",
+      "props": {
+        "text": "2. B $0.142",
+        "variant": "lead"
+      }
+    },
+    "l2-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l2-24h",
+        "l2-7d",
+        "l2-mcap",
+        "l2-rank"
+      ]
+    },
+    "l2-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "−13.0%",
+        "trend": "down"
+      }
+    },
+    "l2-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "−10.8%",
+        "trend": "down"
+      }
+    },
+    "l2-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$5M",
+        "variant": "caption"
+      }
+    },
+    "l2-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R202",
+        "variant": "secondary"
+      }
+    },
+    "loser-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l3-header",
+        "l3-stats"
+      ]
+    },
+    "l3-header": {
+      "type": "Text",
+      "props": {
+        "text": "3. KAITO $0.70",
+        "variant": "lead"
+      }
+    },
+    "l3-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l3-24h",
+        "l3-7d",
+        "l3-mcap",
+        "l3-rank"
+      ]
+    },
+    "l3-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "−10.2%",
+        "trend": "down"
+      }
+    },
+    "l3-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "−39.6%",
+        "trend": "down"
+      }
+    },
+    "l3-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$86M",
+        "variant": "caption"
+      }
+    },
+    "l3-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R179",
+        "variant": "secondary"
+      }
+    },
+    "loser-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l4-header",
+        "l4-stats"
+      ]
+    },
+    "l4-header": {
+      "type": "Text",
+      "props": {
+        "text": "4. PIEVERSE $0.78",
+        "variant": "lead"
+      }
+    },
+    "l4-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l4-24h",
+        "l4-mcap",
+        "l4-rank"
+      ]
+    },
+    "l4-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "−6.1%",
+        "trend": "down"
+      }
+    },
+    "l4-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$6M",
+        "variant": "caption"
+      }
+    },
+    "l4-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R150",
+        "variant": "secondary"
+      }
+    },
+    "loser-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l5-header",
+        "l5-stats"
+      ]
+    },
+    "l5-header": {
+      "type": "Text",
+      "props": {
+        "text": "5. RUNE $0.43",
+        "variant": "lead"
+      }
+    },
+    "l5-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l5-24h",
+        "l5-mcap",
+        "l5-rank"
+      ]
+    },
+    "l5-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "−4.1%",
+        "trend": "down"
+      }
+    },
+    "l5-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "$21M",
+        "variant": "caption"
+      }
+    },
+    "l5-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "R196",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-heading",
+        "crypto-tweet",
+        "ai-tweet",
+        "dev-tweet"
+      ]
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "crypto-tweet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-label",
+        "crypto-text"
+      ]
+    },
+    "crypto-label": {
+      "type": "Badge",
+      "props": {
+        "text": "crypto",
+        "variant": "secondary"
+      }
+    },
+    "crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC pinned $63.8k–$66k range; ETH $1,927. Muted tape, no fresh catalyst; TUT + BTW carrying most of the vol on the winners board.",
+        "variant": "body"
+      }
+    },
+    "ai-tweet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-label",
+        "ai-text"
+      ]
+    },
+    "ai-label": {
+      "type": "Badge",
+      "props": {
+        "text": "ai",
+        "variant": "secondary"
+      }
+    },
+    "ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "Claude Opus 5 still #1 on Artificial Analysis; OpenAI ships ChatGPT Work (agentic GPT-5.6, Sol/Terra/Luna tier split); Deepseek-V4 dual-mode; Nvidia opens NOOA agent framework.",
+        "variant": "body"
+      }
+    },
+    "dev-tweet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev-label",
+        "dev-text"
+      ]
+    },
+    "dev-label": {
+      "type": "Badge",
+      "props": {
+        "text": "dev",
+        "variant": "secondary"
+      }
+    },
+    "dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "HN top take \"code was never the hard part is an insult\"; Shopify swapped Redis for MySQL on inventory reservations (SKIP LOCKED + row-per-unit) — boring infra winning.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-title",
+        "paper-authors",
+        "paper-desc",
+        "paper-links"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-title": {
+      "type": "Text",
+      "props": {
+        "text": "\"From Economic Agents to Agentic Economies: A Systems Blueprint for Economic World Models\"",
+        "variant": "lead"
+      }
+    },
+    "paper-authors": {
+      "type": "Text",
+      "props": {
+        "text": "Han, Li · ↑28",
+        "variant": "caption"
+      }
+    },
+    "paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Direct shot at the Sherwood-shaped question: how do you spec an economic world model where agents are actors, not tools. Skip if you're not building at that layer.",
+        "variant": "body"
+      }
+    },
+    "paper-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "paper-link-read",
+        "paper-link-pdf"
+      ]
+    },
+    "paper-link-read": {
+      "type": "Link",
+      "props": {
+        "label": "Read",
+        "href": "https://arxiv.org/abs/2608.06020"
+      }
+    },
+    "paper-link-pdf": {
+      "type": "Link",
+      "props": {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2608.06020"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "github-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-heading",
+        "github-text"
+      ]
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues in last 24h.",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-1",
+        "hn-2",
+        "hn-3"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Hacker News Digest",
+        "level": "h2"
+      }
+    },
+    "hn-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn1-title",
+        "hn1-meta",
+        "hn1-why",
+        "hn1-comment",
+        "hn1-link"
+      ]
+    },
+    "hn1-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Code was never the hard part is an insult",
+        "href": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
+        "source": "dev"
+      }
+    },
+    "hn1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "698 points · 417 comments",
+        "variant": "caption"
+      }
+    },
+    "hn1-why": {
+      "type": "Text",
+      "props": {
+        "text": "Pushback on the \"coding is easy, thinking is hard\" line the LLM pitch leans on.",
+        "variant": "body"
+      }
+    },
+    "hn1-comment": {
+      "type": "Text",
+      "props": {
+        "text": "HN top: \"The hard part is always the design part... starting with a bad design is no good\" — effed3",
+        "variant": "muted"
+      }
+    },
+    "hn1-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49222189"
+      }
+    },
+    "hn-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn2-title",
+        "hn2-meta",
+        "hn2-why",
+        "hn2-comment",
+        "hn2-link"
+      ]
+    },
+    "hn2-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Shopify replaced Redis with MySQL for inventory reservations",
+        "href": "https://shopify.engineering/scaling-inventory-reservations",
+        "source": "infra"
+      }
+    },
+    "hn2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "154 points · 85 comments",
+        "variant": "caption"
+      }
+    },
+    "hn2-why": {
+      "type": "Text",
+      "props": {
+        "text": "SKIP LOCKED + one row per unit at scale; reconcilable state beats event-driven.",
+        "variant": "body"
+      }
+    },
+    "hn2-comment": {
+      "type": "Text",
+      "props": {
+        "text": "HN top: \"SQL is decades of relational algebra... pure magic across vast sets\" — trueno",
+        "variant": "muted"
+      }
+    },
+    "hn2-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49226536"
+      }
+    },
+    "hn-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn3-title",
+        "hn3-meta",
+        "hn3-why",
+        "hn3-comment",
+        "hn3-link"
+      ]
+    },
+    "hn3-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Message your other Claude Code sessions",
+        "href": "https://code.claude.com/docs/en/cross-session-messaging",
+        "source": "ai"
+      }
+    },
+    "hn3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "107 points · 44 comments",
+        "variant": "caption"
+      }
+    },
+    "hn3-why": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-session messaging primitive for orchestrated agent fleets.",
+        "variant": "body"
+      }
+    },
+    "hn3-comment": {
+      "type": "Text",
+      "props": {
+        "text": "HN top: \"When my Claude/Codex finishes cooking... it pings a local HTTP endpoint that plays a frog sound. Massively boosts quality of life\" — andai",
+        "variant": "muted"
+      }
+    },
+    "hn3-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49222824"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-text"
+      ]
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "X AI x_search skipped — memory 8-08 signal (fell back to websearch entirely); websearch fallback used.",
+        "variant": "muted"
+      }
+    }
+  }
+}

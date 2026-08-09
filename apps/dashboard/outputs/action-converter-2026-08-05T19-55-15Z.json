@@ -1,0 +1,375 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-08-05"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "text_shape",
+        "sep1",
+        "stack_actions",
+        "sep2",
+        "text_sources"
+      ]
+    },
+    "text_shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: trigger PR#173 CI, draft cost-report fix, unblock #165, probe 08Z-slot-dark, codify CFTC fallback",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action_1",
+        "action_2",
+        "action_3",
+        "action_4",
+        "action_5"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_1_title",
+        "action_1_details"
+      ]
+    },
+    "action_1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Push empty commit to fix/self-improve-2026-08-03 branch to trigger ci-skills-json on PR #173",
+        "level": "h3"
+      }
+    },
+    "action_1_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_1_why",
+        "action_1_done",
+        "action_1_loop"
+      ]
+    },
+    "action_1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 40h dark with mergeable=UNKNOWN + empty statusCheckRollup; one CI pass unblocks 3-PR queue at 8-10 Sunday-batch T-5",
+        "variant": "muted"
+      }
+    },
+    "action_1_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: gh pr view 173 --json statusCheckRollup returns non-empty check array",
+        "variant": "muted"
+      }
+    },
+    "action_1_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: push-commit-PR-173",
+        "variant": "caption"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_2_title",
+        "action_2_details"
+      ]
+    },
+    "action_2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Draft PR removing model: claude-sonnet-4-6 override on cost-report at aeon.yml:276",
+        "level": "h3"
+      }
+    },
+    "action_2_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_2_context",
+        "action_2_why",
+        "action_2_done",
+        "action_2_loop"
+      ]
+    },
+    "action_2_context": {
+      "type": "Text",
+      "props": {
+        "text": "Inherit opus-4-7 default",
+        "variant": "caption"
+      }
+    },
+    "action_2_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: fleet-worst chronic sr=10% via ISS-030 sdk_opt_in_required signature; 8-10 Mon weekly-tick is the deciding-test",
+        "variant": "muted"
+      }
+    },
+    "action_2_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: PR opened targeting aeon.yml line 276 with skill-health ISS-030 reference in body",
+        "variant": "muted"
+      }
+    },
+    "action_2_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: draft-cost-report-model-drop",
+        "variant": "caption"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_3_title",
+        "action_3_details"
+      ]
+    },
+    "action_3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Resolve PR #165 rebase conflicts against origin/main before 8-09 Sunday-batch",
+        "level": "h3"
+      }
+    },
+    "action_3_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_3_context",
+        "action_3_why",
+        "action_3_done",
+        "action_3_loop"
+      ]
+    },
+    "action_3_context": {
+      "type": "Text",
+      "props": {
+        "text": "Docs skill-graph shared_state (21→27)",
+        "variant": "caption"
+      }
+    },
+    "action_3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: d17 CONFLICTING sole past-gate survivor + T-4 to weekly-batch merge window; docs skill-graph refresh gates fleet-map correctness",
+        "variant": "muted"
+      }
+    },
+    "action_3_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: gh pr view 165 --json mergeable returns MERGEABLE",
+        "variant": "muted"
+      }
+    },
+    "action_3_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: resolve-PR-165-conflicts",
+        "variant": "caption"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_4_title",
+        "action_4_details"
+      ]
+    },
+    "action_4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Probe scheduler for [[morning-08Z-slot-dark]] — grep .github/workflows/ for \"0 8\" cron entries",
+        "level": "h3"
+      }
+    },
+    "action_4_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_4_context",
+        "action_4_why",
+        "action_4_done",
+        "action_4_loop"
+      ]
+    },
+    "action_4_context": {
+      "type": "Text",
+      "props": {
+        "text": "Confirm heartbeat + skill-freshness fire paths not muted",
+        "variant": "caption"
+      }
+    },
+    "action_4_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 2-consec 08Z co-miss (8-04 + 8-05) heartbeat + skill-freshness; 8-06 miss promotes to formal-pattern",
+        "variant": "muted"
+      }
+    },
+    "action_4_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: written verdict in memory/topics/fleet.md (scheduler-bug vs. workflow-file bug vs. GH-Actions cadence-drift)",
+        "variant": "muted"
+      }
+    },
+    "action_4_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: probe-08Z-slot-dark",
+        "variant": "caption"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_5_title",
+        "action_5_details"
+      ]
+    },
+    "action_5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Codify HTML fallback for CFTC RSS 404 in skills/reg-monitor/SKILL.md step 1C",
+        "level": "h3"
+      }
+    },
+    "action_5_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_5_context",
+        "action_5_why",
+        "action_5_done",
+        "action_5_loop"
+      ]
+    },
+    "action_5_context": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action_5_context_text",
+        "action_5_url"
+      ]
+    },
+    "action_5_context_text": {
+      "type": "Text",
+      "props": {
+        "text": "Add documented fallback path:",
+        "variant": "caption"
+      }
+    },
+    "action_5_url": {
+      "type": "Link",
+      "props": {
+        "label": "https://www.cftc.gov/PressRoom/PressReleases",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases"
+      }
+    },
+    "action_5_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: reg-monitor Wed 8-05 hit CFTC RSS 404, HTML fallback worked; codify before 8-12 Wed re-fire; SKILL currently only lists RSS URL",
+        "variant": "muted"
+      }
+    },
+    "action_5_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: PR opened modifying skills/reg-monitor/SKILL.md step 1C with fallback URL + skills.json regen",
+        "variant": "muted"
+      }
+    },
+    "action_5_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: codify-CFTC-RSS-fallback",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: memory=83L logs=10d topics=~20 prs=4 cron_failing=1 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

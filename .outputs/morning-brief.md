@@ -1,22 +1,29 @@
-*morning brief — 2026-07-31*
+*Morning Brief — 2026-08-09 (sunday)*
 
-*focus today*
-1. iss-028 kill-test — why now: pr #167 merged 23:37z, first live fires today
-2. iss-025 hand-off d16 slipped past t-0 — why now: weekly-review action #1, cost-report 12% sr weakest
-3. market-context.md refresh — why now: 14d stale crosses today, 09:15z fingerprint-flip due
+*Focus today*
+1. clear pr queue at 5 — why now: sunday-batch T-0 per claude.md cadence.
+2. iss-030 cost-report pre-check — why now: 8-10 07z weekly-tick T-1, no operator lever tomorrow.
+3. 08z heartbeat + skill-freshness watch — why now: `morning-08z-slot-dark` restart deciding-test in ~48min.
 
-*since yesterday*
-- shipped: pr #167 (bash-redirect) + #170 (hn-digest path) merged 23:37z, queue 3→1
-- filed: iss-027 + iss-028 landed via reflect 18:22z, 24d doc-gap closed (index 11→13 open)
-- stuck: pr #165 d12 conflicting, sole past-gate survivor
-- recovered: 07:00z slot fires today (1-instance miss, not repeated)
+*Since yesterday*
+- fleet clean-consec d3 → d4 held through evening (21 clean fires 8-08).
+- skill-health hash shift 35369f69 → 91a4634d — first composition-shift in 3-consec formal-tick (list-digest crossed sr=0.60 degraded→warning).
+- chronic-cohort 7th 24h gate crossed 20:03z heartbeat (10-consec-tick ~101h span).
+- pr queue at 5 unchanged since 07z (#174 fresh advisor brier-weight + #173 ci-cold 5d + #172/#171 blocked on #173 + #165 conflicting d20) — waits on operator hands.
+- cloudflare/computer 3-day durability failure (-69%, memory-window-first top-pick sustain break); prime-agent top-pick same day (first shipping-repo on recursive-self-improve rail).
 
-*watch*
-- ftx $900m creditor distribution today — largest single supply event of quarter; watch btc-levels + token-alert for regime break vs steady prints
-
-*running today*
-- skill-freshness @ 08:00z (fingerprint-flip expected)
-- github-trending @ 09:00z
-- security-digest @ 14:00z (iss-028 kill-test slot)
-- reflect + action-converter + goal-tracker + skill-health @ 18:00z
-- evening-recap + thought-review @ 21:00z
+*Running today*
+- skill-freshness @ 08:00 utc
+- heartbeat @ 08/14/20 utc
+- github-trending @ 09:00 utc
+- btc-levels @ 09:15/13:15/17:15/21:15 utc
+- token-alert @ 12:00 utc
+- security-digest @ 14:00 utc
+- skill-graph @ 17:00 utc (sunday)
+- list-digest @ 17:00 utc
+- agent-buzz @ 17:30 utc
+- goal-tracker + skill-health + reflect + action-converter + self-improve @ 18:00 utc
+- fork-skill-digest @ 18:30 utc (sunday)
+- fork-cohort + skill-update-check @ 19:00 utc (sunday)
+- evening-recap + thought-review @ 21:00 utc
+- skill-evals @ 22:00 utc (sunday)

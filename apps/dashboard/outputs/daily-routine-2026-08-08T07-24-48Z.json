@@ -1,0 +1,645 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-08"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_winners",
+        "stack_winners",
+        "sep1",
+        "heading_losers",
+        "stack_losers",
+        "sep2",
+        "heading_trending",
+        "text_trending",
+        "sep3",
+        "heading_pulse",
+        "stack_pulse",
+        "sep4",
+        "heading_tracked",
+        "text_tracked",
+        "sep5",
+        "heading_tweets",
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "sep6",
+        "heading_paper",
+        "stack_paper",
+        "sep7",
+        "heading_issues",
+        "alert_issues",
+        "sep8",
+        "heading_hn",
+        "text_hn_intro",
+        "storylink_hn_1",
+        "storylink_hn_2",
+        "storylink_hn_3",
+        "storylink_hn_4",
+        "storylink_hn_5",
+        "storylink_hn_6"
+      ]
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "stack_winners": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winner1",
+        "winner2",
+        "winner3",
+        "winner4",
+        "winner5",
+        "winner6",
+        "winner7",
+        "winner8",
+        "winner9",
+        "winner10"
+      ]
+    },
+    "winner1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "winner1_text",
+        "winner1_badges"
+      ]
+    },
+    "winner1_text": {
+      "type": "Text",
+      "props": {
+        "text": "CYS $1.04 +60.9% / 7d +260% • $69M"
+      }
+    },
+    "winner1_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_trending_up_1",
+        "badge_pump_risk"
+      ]
+    },
+    "badge_trending_up_1": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP"
+      }
+    },
+    "badge_pump_risk": {
+      "type": "Badge",
+      "props": {
+        "text": "PUMP-RISK"
+      }
+    },
+    "winner2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "winner2_text",
+        "winner2_badges"
+      ]
+    },
+    "winner2_text": {
+      "type": "Text",
+      "props": {
+        "text": "PIEVERSE $0.854 +15.4% / 7d +26% • $10M"
+      }
+    },
+    "winner2_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_breakout"
+      ]
+    },
+    "badge_breakout": {
+      "type": "Badge",
+      "props": {
+        "text": "BREAKOUT"
+      }
+    },
+    "winner3": {
+      "type": "Text",
+      "props": {
+        "text": "GOMINING $0.292 +12.4% • $8M"
+      }
+    },
+    "winner4": {
+      "type": "Text",
+      "props": {
+        "text": "AKT $0.512 +7.9% / 7d +14% • $5M"
+      }
+    },
+    "winner5": {
+      "type": "Text",
+      "props": {
+        "text": "BEAT $2.11 +6.5% / 7d −51% • $23M"
+      }
+    },
+    "winner6": {
+      "type": "Text",
+      "props": {
+        "text": "XEC $0.0000070 +6.4% • $15M"
+      }
+    },
+    "winner7": {
+      "type": "Text",
+      "props": {
+        "text": "TWT $0.401 +5.9% • $9M"
+      }
+    },
+    "winner8": {
+      "type": "Text",
+      "props": {
+        "text": "OKB $93.35 +5.5% • $36M"
+      }
+    },
+    "winner9": {
+      "type": "Text",
+      "props": {
+        "text": "ETHFI $0.383 +5.5% • $29M"
+      }
+    },
+    "winner10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "winner10_text",
+        "winner10_badges"
+      ]
+    },
+    "winner10_text": {
+      "type": "Text",
+      "props": {
+        "text": "CC $0.0935 +4.6% / 7d −21% • $20M"
+      }
+    },
+    "winner10_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_trending_up_2"
+      ]
+    },
+    "badge_trending_up_2": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "stack_losers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "loser1",
+        "loser2",
+        "loser3",
+        "loser4",
+        "loser5",
+        "loser6",
+        "loser7",
+        "loser8",
+        "loser9",
+        "loser10"
+      ]
+    },
+    "loser1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "loser1_text",
+        "loser1_note"
+      ]
+    },
+    "loser1_text": {
+      "type": "Text",
+      "props": {
+        "text": "BTW $0.141 −23.8%"
+      }
+    },
+    "loser1_note": {
+      "type": "Text",
+      "props": {
+        "text": "(yesterday's +7.6% winner)",
+        "variant": "muted"
+      }
+    },
+    "loser2": {
+      "type": "Text",
+      "props": {
+        "text": "Talus $0.0446 −16.7%"
+      }
+    },
+    "loser3": {
+      "type": "Text",
+      "props": {
+        "text": "KAITO $0.766 −14.4% / 7d −29% • $41M"
+      }
+    },
+    "loser4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "loser4_text",
+        "loser4_badges"
+      ]
+    },
+    "loser4_text": {
+      "type": "Text",
+      "props": {
+        "text": "BONK $0.00000252 −10.8%"
+      }
+    },
+    "loser4_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_capitulation"
+      ]
+    },
+    "badge_capitulation": {
+      "type": "Badge",
+      "props": {
+        "text": "CAPITULATION"
+      }
+    },
+    "loser5": {
+      "type": "Text",
+      "props": {
+        "text": "CRO $0.0479 −9.5%"
+      }
+    },
+    "loser6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "loser6_text",
+        "loser6_note"
+      ]
+    },
+    "loser6_text": {
+      "type": "Text",
+      "props": {
+        "text": "BinanceLife $0.509 −8.1%"
+      }
+    },
+    "loser6_note": {
+      "type": "Text",
+      "props": {
+        "text": "(yesterday's +6.8% winner)",
+        "variant": "muted"
+      }
+    },
+    "loser7": {
+      "type": "Text",
+      "props": {
+        "text": "CARDS $0.140 −7.5%"
+      }
+    },
+    "loser8": {
+      "type": "Text",
+      "props": {
+        "text": "TAG $0.00127 −6.2%"
+      }
+    },
+    "loser9": {
+      "type": "Text",
+      "props": {
+        "text": "B $0.163 −4.8%"
+      }
+    },
+    "loser10": {
+      "type": "Text",
+      "props": {
+        "text": "ZANO $8.43 −4.6%"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_trending": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "text_trending": {
+      "type": "Text",
+      "props": {
+        "text": "PENGU, BICO #395 +40%, WKC +25%, CC #26, CYS +45%, CASHCAT, BLESS +44%"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_pulse": {
+      "type": "Heading",
+      "props": {
+        "text": "Pulse",
+        "level": "h2"
+      }
+    },
+    "stack_pulse": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pulse_text",
+        "pulse_stat",
+        "pulse_detail"
+      ]
+    },
+    "pulse_text": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed leaning green",
+        "variant": "lead"
+      }
+    },
+    "pulse_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "63/100",
+        "label": "top-100 up"
+      }
+    },
+    "pulse_detail": {
+      "type": "Text",
+      "props": {
+        "text": "top-50 median +0.9%; mid-cap breakouts (CYS +61%, PIEVERSE +15%) offset by single-name blowups (BTW −24%, KAITO, BONK cap-vol)."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tracked": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked",
+        "level": "h2"
+      }
+    },
+    "text_tracked": {
+      "type": "Text",
+      "props": {
+        "text": "GITLAWB +14.4% (thin vol $216K); WELL +3.7%, MAMO +1.2%, REPPO flat."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Crypto",
+        "text": "ETH outperforming BTC in capital rotation (+7.1% vs +1.8%, @thecryptobasic). @ethereum team surfaces 2025 themes reinforcing DeFi role."
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AI",
+        "text": "Tencent Hy3 (295B/21B active) reframed as execution engine, not chatbot (@TheUltimate_AI). State of AI 2025 year-end: industry-wide acceleration (@ArtificialAnlys)."
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Dev",
+        "text": "Musk announces X codebase full open-sourcing. @Al_Grigor maps current AI dev-tool landscape (chat assistants + agentic IDEs)."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "stack_paper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_paper",
+        "text_paper_desc",
+        "link_paper_pdf"
+      ]
+    },
+    "storylink_paper": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Activity Frames: Deterministic Screen-Activity Compilation for Agent Memory and Replay",
+        "source": "arXiv · Nossa Iyamu",
+        "score": "↑13",
+        "href": "https://arxiv.org/abs/2608.05784"
+      }
+    },
+    "text_paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Compiles passive screen capture into byte-identical zero-model episodes an agent can replay at zero tokens; measures a real Routine Overhead Ratio (60–343×) instead of hand-waving one."
+      }
+    },
+    "link_paper_pdf": {
+      "type": "Link",
+      "props": {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2608.05784"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "alert_issues": {
+      "type": "Alert",
+      "props": {
+        "message": "No new issues (13 consecutive clean days)",
+        "type": "success"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "text_hn_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Heavy AI day — DeepSeek V4 Flash prices out closed models, Oracle bans AI-generated code from OpenJDK, 2027 memory already sold out.",
+        "variant": "muted"
+      }
+    },
+    "storylink_hn_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DeepSeek V4 Flash 0731",
+        "source": "Hacker News",
+        "score": "570pts/344c",
+        "href": "https://arcprize.org/results/deepseek-v4-flash-0731"
+      }
+    },
+    "storylink_hn_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Oracle bans AI-generated code from OpenJDK",
+        "source": "Hacker News",
+        "score": "446pts/307c",
+        "href": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code"
+      }
+    },
+    "storylink_hn_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Postgres 300× faster for analytics",
+        "source": "Hacker News",
+        "score": "270pts/136c",
+        "href": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/"
+      }
+    },
+    "storylink_hn_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Nixpkgs core team disbanded",
+        "source": "Hacker News",
+        "score": "264pts/118c",
+        "href": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413"
+      }
+    },
+    "storylink_hn_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "2027 memory capacity sold out",
+        "source": "Hacker News",
+        "score": "321pts/293c",
+        "href": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out"
+      }
+    },
+    "storylink_hn_6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Water system controllers off internet — ex-NSA chief",
+        "source": "Hacker News",
+        "score": "175pts/114c",
+        "href": "https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070"
+      }
+    }
+  }
+}

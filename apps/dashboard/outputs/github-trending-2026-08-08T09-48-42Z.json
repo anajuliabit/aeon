@@ -1,0 +1,495 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-08"
+      },
+      "children": [
+        "section_top_pick",
+        "sep1",
+        "section_ai_ml",
+        "sep2",
+        "section_infra",
+        "sep3",
+        "section_devtools",
+        "sep4",
+        "section_footer"
+      ]
+    },
+    "section_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_pick",
+        "item_top_pick"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_top_pick",
+        "text_top_pick_desc"
+      ]
+    },
+    "link_top_pick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PrimeIntellect-ai/prime-agent",
+        "href": "https://github.com/PrimeIntellect-ai/prime-agent"
+      },
+      "children": []
+    },
+    "text_top_pick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "first shipping-repo on the recursive-self-improve rail after 3 papers this week — recursive language model treats context as variables and spawns sub-agents inside a persistent IPython REPL.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_ai_ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_ai_ml",
+        "repo_aiml_1",
+        "repo_aiml_2",
+        "repo_aiml_3",
+        "repo_aiml_4"
+      ]
+    },
+    "heading_ai_ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo_aiml_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml_1_header",
+        "aiml_1_meta",
+        "aiml_1_desc"
+      ]
+    },
+    "aiml_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_1_link",
+        "aiml_1_badge"
+      ]
+    },
+    "aiml_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PrimeIntellect-ai/prime-agent",
+        "href": "https://github.com/PrimeIntellect-ai/prime-agent"
+      },
+      "children": []
+    },
+    "aiml_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml_1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 2.3k today (7.3k) · TypeScript",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "aiml_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "\"continual harness\" persists working context across sessions; 4,480 commits + explicit warnings around model-generated code execution = production-serious, not vibecoded.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo_aiml_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml_2_header",
+        "aiml_2_meta",
+        "aiml_2_desc"
+      ]
+    },
+    "aiml_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_2_link",
+        "aiml_2_badge"
+      ]
+    },
+    "aiml_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mattpocock/skills",
+        "href": "https://github.com/mattpocock/skills"
+      },
+      "children": []
+    },
+    "aiml_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml_2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 2.2k today (209k) · Shell",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "aiml_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "day-2 sustained +15% (1.9k → 2.2k) — first non-decay day-2 for a skill-pack repo in memory-window; primitive stops looking like one-author hype.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo_aiml_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml_3_header",
+        "aiml_3_meta",
+        "aiml_3_desc"
+      ]
+    },
+    "aiml_3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_3_link",
+        "aiml_3_badge"
+      ]
+    },
+    "aiml_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "addyosmani/agent-skills",
+        "href": "https://github.com/addyosmani/agent-skills"
+      },
+      "children": []
+    },
+    "aiml_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml_3_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.1k today (84k) · JavaScript",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "aiml_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "day-3 +91% acceleration (226 → 593 → 1,131) — viral peak still expanding on day-3, rare shape for the skill-pack rail.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo_aiml_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml_4_header",
+        "aiml_4_meta",
+        "aiml_4_desc"
+      ]
+    },
+    "aiml_4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_4_link",
+        "aiml_4_badge"
+      ]
+    },
+    "aiml_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google/skills",
+        "href": "https://github.com/google/skills"
+      },
+      "children": []
+    },
+    "aiml_4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml_4_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 327 today (16k) · Python",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "aiml_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "5th distinct credible-author skill-pack in 9 days; first hyperscaler on the rail — bundles Claude Code and Codex plugins so one pack ports across harnesses.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_infra",
+        "repo_infra_1"
+      ]
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo_infra_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "infra_1_header",
+        "infra_1_meta",
+        "infra_1_desc"
+      ]
+    },
+    "infra_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "infra_1_link",
+        "infra_1_badge"
+      ]
+    },
+    "infra_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "denoland/celld",
+        "href": "https://github.com/denoland/celld"
+      },
+      "children": []
+    },
+    "infra_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "infra_1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 516 today (2.3k) · Rust",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "infra_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "self-hosted Durable Objects — direct OSS answer to the cloudflare/computer primitive that topped this slate 2 days running; S3 + SQLite per cell, no consensus service.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "repo_devtools_1"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo_devtools_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_1_header",
+        "devtools_1_meta",
+        "devtools_1_desc"
+      ]
+    },
+    "devtools_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "devtools_1_link",
+        "devtools_1_badge"
+      ]
+    },
+    "devtools_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pranshuparmar/witr",
+        "href": "https://github.com/pranshuparmar/witr"
+      },
+      "children": []
+    },
+    "devtools_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "devtools_1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 234 today (20k) · Go",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "devtools_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "\"why is this running?\" — traces any process, port, container, or file back to what started it via /proc + lsof + platform APIs; single-binary CLI + TUI.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok (12/12) · kept 6/17",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

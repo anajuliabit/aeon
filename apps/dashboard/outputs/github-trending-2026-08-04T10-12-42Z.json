@@ -1,0 +1,603 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-04"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_toppick",
+        "sep_1",
+        "section_aiml",
+        "sep_2",
+        "section_devtools",
+        "sep_3",
+        "section_infra",
+        "sep_4",
+        "section_webapps",
+        "sep_5",
+        "text_sources"
+      ]
+    },
+    "section_toppick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_toppick",
+        "repo_airllm_top"
+      ]
+    },
+    "h_toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      }
+    },
+    "repo_airllm_top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_airllm_top",
+        "text_airllm_top_desc"
+      ]
+    },
+    "link_airllm_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "lyogavin/airllm",
+        "href": "https://github.com/lyogavin/airllm"
+      }
+    },
+    "text_airllm_top_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Consumer inference floor drops sharply: 70B params on a single 4GB GPU. Fires at 45× its own baseline in one day.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_aiml",
+        "repo_aiml_1",
+        "repo_aiml_2",
+        "repo_aiml_3",
+        "repo_aiml_4"
+      ]
+    },
+    "h_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "repo_aiml_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_aiml_1",
+        "meta_aiml_1",
+        "desc_aiml_1"
+      ]
+    },
+    "link_aiml_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "lyogavin/airllm",
+        "href": "https://github.com/lyogavin/airllm"
+      }
+    },
+    "meta_aiml_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_aiml_1",
+        "badge_lang_aiml_1",
+        "badge_status_aiml_1"
+      ]
+    },
+    "text_stars_aiml_1": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1,085 today (27.8k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_lang_aiml_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Jupyter",
+        "variant": "secondary"
+      }
+    },
+    "badge_status_aiml_1": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      }
+    },
+    "desc_aiml_1": {
+      "type": "Text",
+      "props": {
+        "text": "Layered offload pushes a 70B model through a 4GB card. Local-inference goalpost moves.",
+        "variant": "body"
+      }
+    },
+    "repo_aiml_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_aiml_2",
+        "meta_aiml_2",
+        "desc_aiml_2"
+      ]
+    },
+    "link_aiml_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "antirez/ds4",
+        "href": "https://github.com/antirez/ds4"
+      }
+    },
+    "meta_aiml_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_aiml_2",
+        "badge_lang_aiml_2",
+        "badge_status_aiml_2"
+      ]
+    },
+    "text_stars_aiml_2": {
+      "type": "Text",
+      "props": {
+        "text": "★ 384 today (20.5k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_lang_aiml_2": {
+      "type": "Badge",
+      "props": {
+        "text": "C",
+        "variant": "secondary"
+      }
+    },
+    "badge_status_aiml_2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc_aiml_2": {
+      "type": "Text",
+      "props": {
+        "text": "Redis creator hand-writes a C inference engine for DeepSeek 4 across Metal/CUDA/ROCm. Zero-dep local path.",
+        "variant": "body"
+      }
+    },
+    "repo_aiml_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_aiml_3",
+        "meta_aiml_3",
+        "desc_aiml_3"
+      ]
+    },
+    "link_aiml_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "esengine/DeepSeek-Reasonix",
+        "href": "https://github.com/esengine/DeepSeek-Reasonix"
+      }
+    },
+    "meta_aiml_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_aiml_3",
+        "badge_lang_aiml_3",
+        "badge_status_aiml_3"
+      ]
+    },
+    "text_stars_aiml_3": {
+      "type": "Text",
+      "props": {
+        "text": "★ 883 today (30.4k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_lang_aiml_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Go",
+        "variant": "secondary"
+      }
+    },
+    "badge_status_aiml_3": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc_aiml_3": {
+      "type": "Text",
+      "props": {
+        "text": "DeepSeek-native terminal coding agent. 290 stars/d for 105 days straight; today 3× on fresh push.",
+        "variant": "body"
+      }
+    },
+    "repo_aiml_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_aiml_4",
+        "meta_aiml_4",
+        "desc_aiml_4"
+      ]
+    },
+    "link_aiml_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "zhaoxuya520/reverse-skill",
+        "href": "https://github.com/zhaoxuya520/reverse-skill"
+      }
+    },
+    "meta_aiml_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_aiml_4",
+        "badge_lang_aiml_4",
+        "badge_status_aiml_4"
+      ]
+    },
+    "text_stars_aiml_4": {
+      "type": "Text",
+      "props": {
+        "text": "★ 2,446 today (16.9k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_lang_aiml_4": {
+      "type": "Badge",
+      "props": {
+        "text": "PowerShell",
+        "variant": "secondary"
+      }
+    },
+    "badge_status_aiml_4": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "default"
+      }
+    },
+    "desc_aiml_4": {
+      "type": "Text",
+      "props": {
+        "text": "Day-3 compounding burn: 335 → 1,320 → 2,446. Security/reverse-eng skill router extends the skill-pack rail.",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_devtools",
+        "repo_devtools_1"
+      ]
+    },
+    "h_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "repo_devtools_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_devtools_1",
+        "meta_devtools_1",
+        "desc_devtools_1"
+      ]
+    },
+    "link_devtools_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "firecrawl/pdf-inspector",
+        "href": "https://github.com/firecrawl/pdf-inspector"
+      }
+    },
+    "meta_devtools_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_devtools_1",
+        "badge_lang_devtools_1",
+        "badge_status_devtools_1"
+      ]
+    },
+    "text_stars_devtools_1": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1,699 today (9.1k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_lang_devtools_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "secondary"
+      }
+    },
+    "badge_status_devtools_1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc_devtools_1": {
+      "type": "Text",
+      "props": {
+        "text": "Firecrawl ships a standalone Rust PDF classifier and text extractor. RAG ingest primitive with real perf.",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_infra",
+        "repo_infra_1"
+      ]
+    },
+    "h_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "repo_infra_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_infra_1",
+        "meta_infra_1",
+        "desc_infra_1"
+      ]
+    },
+    "link_infra_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TencentCloud/TencentDB-Agent-Memory",
+        "href": "https://github.com/TencentCloud/TencentDB-Agent-Memory"
+      }
+    },
+    "meta_infra_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_infra_1",
+        "badge_lang_infra_1",
+        "badge_status_infra_1"
+      ]
+    },
+    "text_stars_infra_1": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1,090 today (12.6k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_lang_infra_1": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "badge_status_infra_1": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "default"
+      }
+    },
+    "desc_infra_1": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's 227-star fire compounds 4.8× to 1,090. Hyperscaler agent-memory hub keeps burning.",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_webapps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_webapps",
+        "repo_webapps_1"
+      ]
+    },
+    "h_webapps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "repo_webapps_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_webapps_1",
+        "meta_webapps_1",
+        "desc_webapps_1"
+      ]
+    },
+    "link_webapps_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "usekaneo/kaneo",
+        "href": "https://github.com/usekaneo/kaneo"
+      }
+    },
+    "meta_webapps_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_webapps_1",
+        "badge_lang_webapps_1",
+        "badge_status_webapps_1"
+      ]
+    },
+    "text_stars_webapps_1": {
+      "type": "Text",
+      "props": {
+        "text": "★ 665 today (7.1k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_lang_webapps_1": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "badge_status_webapps_1": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      }
+    },
+    "desc_webapps_1": {
+      "type": "Text",
+      "props": {
+        "text": "Open-source PM tool at 55× baseline today. Third trending appearance in a week; past coincidence now.",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 7/16",
+        "variant": "caption"
+      }
+    }
+  }
+}

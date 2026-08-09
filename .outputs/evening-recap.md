@@ -1,25 +1,24 @@
-*Evening Recap — 2026-07-30*
-_TL;DR: productive-but-incomplete — reflect closed a 24d doc-gap (ISS-027/028 filed), security pushed 3 criticals, and ISS-025 hand-off slipped its T-0 deadline to d15._
+*Evening Recap — 2026-08-08*
+_TL;DR: 21 clean fires — advisor workflow opened PR #174, 2 articles shipped, morning-slot-dark pattern broken at n=5; queue at 5 needs sunday-batch hands._
 
 *Headlines:*
-- reflect — ISS-027.md + ISS-028.md filed, MEMORY.md rebuilt · memory/issues/ISS-027.md
-- security-digest — Cisco FMC KEV + kube-logging RCE + flyto-core 6-CVE; 3 patch-today / 5 this-week · .tmp/security-digest.md
-- heartbeat 15:16Z — 07:00Z slot MISS confirmed (morning-brief + daily-routine + thought-review all dropped) · docs/status.md
-- github-trending — jcode top pick (Rust efficiency-first n=1) + VibeVoice (open-voice rail n=2); 4 picks shipped · .outputs/github-trending.md
-- agent-buzz — Ruflo MCP CVE-2026-59726 (first-in-wild) + stateless spec + Copilot GA same-day · .tmp/agent-buzz.md
+- advisor — opened PR #174 (brier-weight PM synthesis) · https://github.com/anajuliabit/aeon/pull/174
+- vuln-scanner — witr scanned, 0 confirmed findings, article shipped · articles/vuln-scan-2026-08-08.md
+- reflect — MEMORY.md 155L→138L, 6 sub-rail candidates absorbed · memory/MEMORY.md
+- skill-health — hash 35369f69→91a4634d, list-digest DEGRADED→WARNING · memory/skill-health/last-report.json
+- skill-freshness — freshness article shipped, STALE/NO_CHANGE · articles/skill-freshness-2026-08-08.md
 
 *Notable:*
-- btc-levels ×5 — spot $64,218–$64,845, all levels clear
-- token-alert — 0/4 alerts, 37th clean CG day; REPPO 1.386× leads vol-intensity
-- skill-freshness — FRESHNESS_NO_CHANGE, fingerprint `1ab8c658` stable 5d
-- skill-health — DEGRADED(18) stable-hash 3rd-consec tick; daily-cadence notify sent
-- list-digest — buyback rail: ETHFI 3.04× P/F + AERO merger mechanics; 1 list / 3 tweets
+- morning-slot-dark BREAKS at n=5 — heartbeat 08:10Z + skill-freshness 08:13Z both clean; 4-consec formal-pattern terminates
+- github-trending — prime-agent 29× baseline (first shipping-repo on recursive-self-improve rail, cross-surface from paper-pick)
+- security-digest — LoadMaster KEV EPSS 0.848 (CISA due 8-10), 322-pkg npm wave, fleet clean d9
+- token-alert — GITLAWB 5-phase arc closes (first in window), REPPO spent-flush resolves, 0/4 clean revert
 
 *Decisions for tomorrow:*
-- merge PR #167 (bash-redirect fix, d7 past weekly-batch gate) · https://github.com/anajuliabit/aeon/pull/167
-- merge PR #165 (CONFLICTING, d11) · https://github.com/anajuliabit/aeon/pull/165
-- ISS-025 hand-off slipped T-0: operator direct-author against aeon.yml:479-495 (now d15)
-- if 07:00Z slot misses 7-31, file new ISS (1-instance today — not yet ISS-worthy)
-- PR #170 just crossed 24h · https://github.com/anajuliabit/aeon/pull/170
+- rebase PR #173 onto main — CI cold 112h, blocks #171+#172+#173 chain; sunday-batch T-0
+- triage PR #174 — first advisor-authored PR, approve/request-changes before batch
+- audit .github/workflows/ci-skills-json.yml — root cause of #171+#172 failures
+- resolve PR #165 conflict — d20 CONFLICTING, sunday-batch T-0
+- add LIT to tracked tokens — fresh on-chain receipts (flowslikeosmo 8-08)
 
-_+1 collapsed (heartbeat 09:04Z dedup-skip) · sources: log=ok cron-state=ok_
+_+10 routine runs collapsed (heartbeat ×3, btc-levels ×5, daily-routine, thought-review, github-issues) · sources: log=ok cron-state=ok_

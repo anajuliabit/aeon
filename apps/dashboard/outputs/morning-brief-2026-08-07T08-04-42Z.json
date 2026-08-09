@@ -1,0 +1,241 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief",
+        "description": "2026-08-07"
+      },
+      "children": [
+        "section-focus",
+        "sep1",
+        "section-yesterday",
+        "sep2",
+        "section-running"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "1. PR #173 CI still cold ~84h",
+        "message": "T-2 to Sunday-batch 8-09; commit-push nudge unblocks #171 + #172.",
+        "type": "warning"
+      }
+    },
+    "focus-item-2": {
+      "type": "Alert",
+      "props": {
+        "title": "2. 8-06 scheduler dark-day post-mortem",
+        "message": "9-skill evening batch + heartbeat 14/20Z all missed; recurs today unless diagnosed.",
+        "type": "error"
+      }
+    },
+    "focus-item-3": {
+      "type": "Alert",
+      "props": {
+        "title": "3. GITLAWB at 72% of 15% alert rail",
+        "message": "12Z token-alert = first threshold-cross in memory-window if -4%+.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-yesterday",
+        "yesterday-item-1",
+        "yesterday-item-2",
+        "yesterday-item-3",
+        "yesterday-item-4",
+        "yesterday-item-5"
+      ]
+    },
+    "heading-yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "heartbeat 09:15Z shipped with 75min dispatch-lag",
+        "message": "First 60min-warn breach ([[heartbeat-dispatch-lag]] n=4)",
+        "type": "warning"
+      }
+    },
+    "yesterday-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yest-2-text",
+        "yest-2-badge"
+      ]
+    },
+    "yest-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending 6 picks; cloudflare/computer top at 13.5× baseline",
+        "variant": "body"
+      }
+    },
+    "yest-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "[[hyperscaler-agent-runtime-primitive]] n=1 debut",
+        "variant": "secondary"
+      }
+    },
+    "yesterday-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert 12Z clean d43; REPPO 1.85× + GITLAWB 1.02× first two-token simultaneous baseline-cross post-cliff.",
+        "variant": "body"
+      }
+    },
+    "yesterday-item-4": {
+      "type": "Alert",
+      "props": {
+        "title": "8-06 evening batch fully dark",
+        "message": "reflect, skill-health, goal-tracker, action-converter, list-digest, agent-buzz, self-improve, evening-recap, thought-review",
+        "type": "error"
+      }
+    },
+    "yesterday-item-5": {
+      "type": "Alert",
+      "props": {
+        "title": "PR queue at 4 unchanged",
+        "message": "#173 mergeable=UNKNOWN, empty checks; #171 #172 waiting; #165 d19 CONFLICTING",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-running",
+        "running-list"
+      ]
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "run-1",
+        "run-2",
+        "run-3",
+        "run-4",
+        "run-5",
+        "run-6",
+        "run-7",
+        "run-8"
+      ]
+    },
+    "run-1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00 UTC",
+        "variant": "body"
+      }
+    },
+    "run-2": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08:00 / 14:00 / 20:00 UTC",
+        "variant": "body"
+      }
+    },
+    "run-3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 UTC",
+        "variant": "body"
+      }
+    },
+    "run-4": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00 UTC (GITLAWB deciding test)",
+        "variant": "body"
+      }
+    },
+    "run-5": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00 UTC",
+        "variant": "body"
+      }
+    },
+    "run-6": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest @ 17:00, agent-buzz @ 17:30",
+        "variant": "body"
+      }
+    },
+    "run-7": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker / skill-health / reflect / action-converter / self-improve @ 18:00 UTC",
+        "variant": "body"
+      }
+    },
+    "run-8": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review @ 21:00 UTC",
+        "variant": "body"
+      }
+    }
+  }
+}

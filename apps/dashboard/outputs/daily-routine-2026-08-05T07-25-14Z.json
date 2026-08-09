@@ -1,0 +1,603 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-05"
+      },
+      "children": [
+        "top-winners-section",
+        "sep-1",
+        "top-losers-section",
+        "sep-2",
+        "tape-section",
+        "sep-3",
+        "tweet-section",
+        "sep-4",
+        "paper-section",
+        "sep-5",
+        "github-section",
+        "sep-6",
+        "hn-section"
+      ]
+    },
+    "top-winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Ticker",
+          "Price",
+          "24h Change",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "PUMP",
+            "$0.002466",
+            "+10.4%",
+            "TRENDING+UP day-5 continuity; 7d +32%"
+          ],
+          [
+            "SHFL",
+            "$0.3060",
+            "+10.1%",
+            "thin book, rank #213"
+          ],
+          [
+            "BTW",
+            "$0.1271",
+            "+8.9%",
+            ""
+          ],
+          [
+            "VELVET",
+            "$0.4666",
+            "+8.2%",
+            ""
+          ],
+          [
+            "ZEC",
+            "$517.91",
+            "+6.3%",
+            "MAJOR, privacy bid on $226M vol"
+          ]
+        ]
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Ticker",
+          "Price",
+          "24h Change",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "UB",
+            "$0.1158",
+            "-39.1%",
+            "CAPITULATION, memory-window magnitude tier"
+          ],
+          [
+            "BEAT",
+            "$2.54",
+            "-18.4%",
+            "pole-flip vs 8-01 #1 winner; 7d -31%"
+          ],
+          [
+            "META",
+            "$5.56",
+            "-13.3%",
+            ""
+          ],
+          [
+            "LDO",
+            "$0.2882",
+            "-12.9%",
+            "CAPITULATION, DeFi bleed"
+          ],
+          [
+            "BinanceLife",
+            "$0.4854",
+            "-8.4%",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tape-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tape-heading",
+        "tape-content"
+      ]
+    },
+    "tape-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tape",
+        "level": "h3"
+      }
+    },
+    "tape-content": {
+      "type": "Text",
+      "props": {
+        "text": "37% top-100 green, median -0.1%; BTC +0.7% / ETH +0.3% / HYPE +4.8% majors, DeFi bleeds. large-cap-single-day-flip rail extends n=6 (UB + BEAT join UAI/HOLO/UNI/PUMP)."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-heading",
+        "tweet-note",
+        "crypto-subsection",
+        "ai-subsection",
+        "dev-subsection"
+      ]
+    },
+    "tweet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "tweet-note": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "xai skipped — sandbox strips $XAI_API_KEY; websearch fallback"
+      }
+    },
+    "crypto-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-label",
+        "crypto-content"
+      ]
+    },
+    "crypto-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Crypto"
+      }
+    },
+    "crypto-content": {
+      "type": "Text",
+      "props": {
+        "text": "$170M into spot BTC ETFs 8-04 (IBIT $111M lead) against Coldcard 1,596 BTC confirmed stolen, 32k BTC onto exchanges same day, FalconX -10% headcount, Hashdex closing a BTC ETF. Fear&Greed 25 extreme fear, BTC dom 56.6%."
+      }
+    },
+    "ai-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-label",
+        "ai-content"
+      ]
+    },
+    "ai-label": {
+      "type": "Badge",
+      "props": {
+        "text": "AI"
+      }
+    },
+    "ai-content": {
+      "type": "Text",
+      "props": {
+        "text": "EU AI Act enforcement live 8-02 — disclosure required for AI interactions + synthetic-media watermarks + deepfake labeling. Cognition acquires Poke (low nine-figures) for Devin. GPT-5.6 Sol 89.5% Terminal-Bench 2.1 edges Opus 5 89.1%."
+      }
+    },
+    "dev-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev-label",
+        "dev-content"
+      ]
+    },
+    "dev-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Dev"
+      }
+    },
+    "dev-content": {
+      "type": "Text",
+      "props": {
+        "text": "Google joins Eclipse Foundation, sponsors Open VSX (powers Antigravity/Kiro/Cursor/Windsurf). Linux 7.0 Rust support promoted from experimental to stable."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-stack"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper-link",
+        "paper-detail",
+        "paper-note"
+      ]
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PAST-Bench: Foundations of Recursive Self-Improvement in Personal Agents",
+        "href": "https://arxiv.org/abs/2608.04003",
+        "source": "Princeton",
+        "score": "↑18"
+      }
+    },
+    "paper-detail": {
+      "type": "Text",
+      "props": {
+        "text": "26 scenarios × 204 episodes across 7 models × 4 frameworks: gains real but uneven, headline improvement often lacks evidence of the save/retrieve/update path it claims. exactly the loop aeon runs on.",
+        "variant": "caption"
+      }
+    },
+    "paper-note": {
+      "type": "Text",
+      "props": {
+        "text": "memory-primitive-paper streak 4-consec → 5-consec, thaws ISS-029 8-04 freeze.",
+        "variant": "muted"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "github-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-heading",
+        "github-content"
+      ]
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "github-status",
+        "github-text"
+      ]
+    },
+    "github-status": {
+      "type": "Badge",
+      "props": {
+        "text": "OK",
+        "variant": "default"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "clean-day streak 9 → 10 (7-26 → 8-05)"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-list"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-1",
+        "hn-2",
+        "hn-3",
+        "hn-4",
+        "hn-5"
+      ]
+    },
+    "hn-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-1-link",
+        "hn-1-desc",
+        "hn-1-hn"
+      ]
+    },
+    "hn-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Mistral Shieldstral: 3B open-weights multimodal moderation",
+        "href": "https://mistral.ai/news/shieldstral/",
+        "score": "378pts"
+      }
+    },
+    "hn-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "self-hostable guardrail, one more hosted-api you can cut.",
+        "variant": "caption"
+      }
+    },
+    "hn-1-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN",
+        "href": "https://news.ycombinator.com/item?id=49171268"
+      }
+    },
+    "hn-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-2-link",
+        "hn-2-desc",
+        "hn-2-hn"
+      ]
+    },
+    "hn-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Gwern drops pseudonymity to launch Guardian Angel",
+        "href": "https://twitter.com/gwern/status/2084739205071343837",
+        "score": "258pts"
+      }
+    },
+    "hn-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "personal-ai product pitched as alignment/privacy layer.",
+        "variant": "caption"
+      }
+    },
+    "hn-2-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN",
+        "href": "https://news.ycombinator.com/item?id=49174900"
+      }
+    },
+    "hn-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-3-link",
+        "hn-3-desc",
+        "hn-3-hn"
+      ]
+    },
+    "hn-3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "libexpat funded by City of Munich 6mo",
+        "href": "https://blog.hartwork.org/posts/libexpat-city-of-munich-open-source-sabbatical/",
+        "score": "244pts"
+      }
+    },
+    "hn-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "municipal open-source sabbatical, not foundation or vendor.",
+        "variant": "caption"
+      }
+    },
+    "hn-3-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN",
+        "href": "https://news.ycombinator.com/item?id=49176606"
+      }
+    },
+    "hn-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-4-link",
+        "hn-4-desc",
+        "hn-4-hn"
+      ]
+    },
+    "hn-4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Waymo opens Dallas",
+        "href": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+        "score": "284pts"
+      }
+    },
+    "hn-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "cadence reads like network, not demo.",
+        "variant": "caption"
+      }
+    },
+    "hn-4-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN",
+        "href": "https://news.ycombinator.com/item?id=49172836"
+      }
+    },
+    "hn-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-5-link",
+        "hn-5-desc",
+        "hn-5-hn"
+      ]
+    },
+    "hn-5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Interpol: AI fuels >50% of cybercrime in Africa",
+        "href": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "score": "198pts"
+      }
+    },
+    "hn-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "first regional majority-% on ai-assisted crime.",
+        "variant": "caption"
+      }
+    },
+    "hn-5-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN",
+        "href": "https://news.ycombinator.com/item?id=49175826"
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest — 2026-08-02"
+      },
+      "children": [
+        "alert_main",
+        "stack_overall_stats",
+        "sep_1",
+        "heading_disable",
+        "table_disable",
+        "sep_2",
+        "heading_new",
+        "text_new_count",
+        "text_skills_list",
+        "sep_3",
+        "text_heaviest",
+        "storylink_report"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "message": "40 forks disable action-converter (upstream defaults on) — fleet is voting it as noise",
+        "type": "info"
+      },
+      "children": []
+    },
+    "stack_overall_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_scanned",
+        "stat_configured",
+        "stat_turnover"
+      ]
+    },
+    "stat_scanned": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks scanned",
+        "value": "50"
+      },
+      "children": []
+    },
+    "stat_configured": {
+      "type": "Stat",
+      "props": {
+        "label": "Configured",
+        "value": "49",
+        "delta": "98%"
+      },
+      "children": []
+    },
+    "stat_turnover": {
+      "type": "Stat",
+      "props": {
+        "label": "Fleet turnover",
+        "value": "79 → 50"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_disable": {
+      "type": "Heading",
+      "props": {
+        "text": "Flip disable (upstream on → fleet off)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "table_disable": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Forks disabled",
+          "Percentage"
+        ],
+        "rows": [
+          [
+            "action-converter",
+            "40",
+            "82%"
+          ],
+          [
+            "search-skill",
+            "38",
+            "78%"
+          ],
+          [
+            "self-improve",
+            "36",
+            "73%"
+          ],
+          [
+            "autoresearch",
+            "36",
+            "73%"
+          ],
+          [
+            "github-trending",
+            "34",
+            "69%"
+          ],
+          [
+            "+13 more skills",
+            "—",
+            "above 50% threshold"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "New fork-only skills",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_new_count": {
+      "type": "Text",
+      "props": {
+        "text": "14 new skills (vs 0 last week)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_skills_list": {
+      "type": "Text",
+      "props": {
+        "text": "atlas ecosystem (swarm-ai-research), lawb-pool-monitor, mine-bean, github-upstream-tracker, verdikta-hunter, hunter-22, picks-tracker, priority-brief, vch-program, okf-export, memory-flush + more"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_heaviest": {
+      "type": "Text",
+      "props": {
+        "text": "Heaviest customizer: stefrogovskyi/aeon (~30 overrides, meta)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "storylink_report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Fork Skill Digest Report",
+        "href": "https://github.com/aeonframework/aeon/blob/main/articles/fork-skill-digest-2026-08-02.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,566 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-01",
+        "description": "Skill: action-converter"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep5",
+        "metadata"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action1_heading",
+        "action1_target",
+        "action1_why_block",
+        "action1_done_block",
+        "action1_loop"
+      ]
+    },
+    "action1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Wire ISS-025 hand-off PR",
+        "level": "h3"
+      }
+    },
+    "action1_target": {
+      "type": "Text",
+      "props": {
+        "text": "Target: `.github/workflows/aeon.yml:479-495` capture-step overwrite (emit fenced block in assistant text, not Write tool).",
+        "variant": "body"
+      }
+    },
+    "action1_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_why_label",
+        "action1_why_text"
+      ]
+    },
+    "action1_why_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "action1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "T+2 day-17 SLIPPED past 7-30 deadline; cost-report sr=0.12 (7/58) weakest chronic-failure durable, weekly-review 8-03 rolls d19.",
+        "variant": "body"
+      }
+    },
+    "action1_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_done_label",
+        "action1_done_text"
+      ]
+    },
+    "action1_done_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "default"
+      }
+    },
+    "action1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "branch pushed + `gh pr create` for aeon.yml capture-step fix.",
+        "variant": "body"
+      }
+    },
+    "action1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: wire-iss-025-t-plus-2-d17",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action2_heading",
+        "action2_target",
+        "action2_why_block",
+        "action2_done_block",
+        "action2_loop"
+      ]
+    },
+    "action2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Annotate ISS-028 scope-narrowness",
+        "level": "h3"
+      }
+    },
+    "action2_target": {
+      "type": "Text",
+      "props": {
+        "text": "Target: `memory/issues/ISS-028.md` with PR #167 fix-scope narrowness — heartbeat/security-digest surfaces resolved, daily-routine hn-digest + github-trending + list-digest + agent-buzz still block.",
+        "variant": "body"
+      }
+    },
+    "action2_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_why_label",
+        "action2_why_text"
+      ]
+    },
+    "action2_why_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "action2_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "kill-test d2 NEGATIVE confirmed today at 3 call-sites; workaround-chain n=15+ across 11-UTC-day span 7-22→8-01.",
+        "variant": "body"
+      }
+    },
+    "action2_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_done_label",
+        "action2_done_text"
+      ]
+    },
+    "action2_done_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "default"
+      }
+    },
+    "action2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-028.md gets Post-fix-investigation section listing 4 unresolved call-sites + n=15 count.",
+        "variant": "body"
+      }
+    },
+    "action2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: annotate-iss-028-scope-narrowness",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action3_heading",
+        "action3_target",
+        "action3_why_block",
+        "action3_done_block",
+        "action3_loop"
+      ]
+    },
+    "action3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Compact MEMORY.md",
+        "level": "h3"
+      }
+    },
+    "action3_target": {
+      "type": "Text",
+      "props": {
+        "text": "Target: dedupe duplicate \"## Recently Cleared\" header (lines 14 + 31), refresh Tracked Tokens Recent Activity for 8-01 12:00Z prints, fold 3 fresh rails ([[skill-pack-primitive-rail]] n=5→n=6 via reverse-skill, [[large-cap-single-day-flip]] NEW n=3 HOLO/PUMP/UNI, [[MCP-spec-maturity-vs-ecosystem-security]] n=2 Ruflo+Dynatrace).",
+        "variant": "body"
+      }
+    },
+    "action3_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_why_label",
+        "action3_why_text"
+      ]
+    },
+    "action3_why_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "action3_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "two \"Recently Cleared\" sections is a hygiene bug; 3 rail deltas + 4 token prints drift-risk pre-reflect 18:00Z.",
+        "variant": "body"
+      }
+    },
+    "action3_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_done_label",
+        "action3_done_text"
+      ]
+    },
+    "action3_done_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "default"
+      }
+    },
+    "action3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md single Recently Cleared block + Tracked Tokens table 8-01 data + 3 rail lines under Recurring patterns.",
+        "variant": "body"
+      }
+    },
+    "action3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: compact-memory-md-hygiene",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action4_heading",
+        "action4_target",
+        "action4_why_block",
+        "action4_done_block",
+        "action4_loop"
+      ]
+    },
+    "action4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Audit PR #171",
+        "level": "h3"
+      }
+    },
+    "action4_target": {
+      "type": "Text",
+      "props": {
+        "text": "Target: `gh pr diff 171` (self-improve github-trending 12-17 candidate cap fix, 23h open) and post inline notes if the fix hardcodes vs derives the cap from 5-consec fetch pattern.",
+        "variant": "body"
+      }
+    },
+    "action4_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_why_label",
+        "action4_why_text"
+      ]
+    },
+    "action4_why_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "action4_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "sub-25 fetch pattern crossed 5-consec durable rail 8-01 (7-28→8-01 range 12-17); operator batch-merge cadence 8-03 = 2d out.",
+        "variant": "body"
+      }
+    },
+    "action4_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_done_label",
+        "action4_done_text"
+      ]
+    },
+    "action4_done_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "default"
+      }
+    },
+    "action4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "`gh pr review 171` comment posted OR approval left with rationale in body.",
+        "variant": "body"
+      }
+    },
+    "action4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: audit-pr-171-diff",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action5_heading",
+        "action5_target",
+        "action5_why_block",
+        "action5_done_block",
+        "action5_loop"
+      ]
+    },
+    "action5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Distill memory-paper",
+        "level": "h3"
+      }
+    },
+    "action5_target": {
+      "type": "Text",
+      "props": {
+        "text": "Target: Filesystem-Memory paper (arXiv 2607.26637, today's paper-pick) into `memory/topics/memory-architecture.md` as 5 bullets covering the MEMORY.md-index-plus-topics-plus-logs shape Aeon runs.",
+        "variant": "body"
+      }
+    },
+    "action5_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_why_label",
+        "action5_why_text"
+      ]
+    },
+    "action5_why_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "action5_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "paper studies our exact architecture; two load-bearing findings (organized stores halve retrieval cost; organization erodes for all but strongest agent) map onto reflect skill drift.",
+        "variant": "body"
+      }
+    },
+    "action5_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_done_label",
+        "action5_done_text"
+      ]
+    },
+    "action5_done_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "default"
+      }
+    },
+    "action5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "new file `memory/topics/memory-architecture.md` with 5 bullets + arxiv citation.",
+        "variant": "body"
+      }
+    },
+    "action5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: category:learn",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metadata_heading",
+        "metadata_grid"
+      ]
+    },
+    "metadata_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources & Context",
+        "level": "h4"
+      }
+    },
+    "metadata_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_memory",
+        "stat_logs",
+        "stat_topics",
+        "stat_prs",
+        "stat_cron",
+        "stat_mode"
+      ]
+    },
+    "stat_memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "82L"
+      }
+    },
+    "stat_logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "8d"
+      }
+    },
+    "stat_topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "~20"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "2"
+      }
+    },
+    "stat_cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Failing",
+        "value": "10"
+      }
+    },
+    "stat_mode": {
+      "type": "Stat",
+      "props": {
+        "label": "Mode",
+        "value": "OK"
+      }
+    }
+  }
+}

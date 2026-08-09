@@ -1,0 +1,118 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-08-04",
+        "description": "thin day: three concrete MCP launches on the ship side, two capability-boundary pieces on the safety side."
+      },
+      "children": [
+        "section-1",
+        "links-1",
+        "separator-1",
+        "section-2",
+        "links-2",
+        "separator-2",
+        "note"
+      ]
+    },
+    "section-1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP shipping surface",
+        "level": "h2"
+      }
+    },
+    "links-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link-1",
+        "link-2",
+        "link-3"
+      ]
+    },
+    "link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@sethsetse — lance.app: MCP server that ships iOS apps end-to-end, no App Store Connect handling from the human.",
+        "href": "https://x.com/sethsetse/status/2084427897725665785",
+        "source": "X"
+      }
+    },
+    "link-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@gustavocaetano — mcp-genoffice bridges @genspark_ai's open-sourced GenOffice into Hermes' MCP catalog as first git-install entry.",
+        "href": "https://x.com/gustavocaetano/status/2084423187664601485",
+        "source": "X"
+      }
+    },
+    "link-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@polyfork_ — agent builds a full village via REST + MCP, one draw call at the end. Live at polyfork.dev.",
+        "href": "https://x.com/polyfork_/status/2084413908912328980",
+        "source": "X"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent capability boundary",
+        "level": "h2"
+      }
+    },
+    "links-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link-4",
+        "link-5"
+      ]
+    },
+    "link-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@1clawAI — Microsoft's Black Hat pitch: keep credentials unreachable from the agent itself. That's the only durable control, not sandboxing after the fact.",
+        "href": "https://x.com/1clawAI/status/2084427473190621565",
+        "source": "X"
+      }
+    },
+    "link-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@BkashJosi — GitHub Agent Finder: discover-on-demand + policy-approved tool loading instead of shipping every capability upfront.",
+        "href": "https://x.com/BkashJosi/status/2084427730796564622",
+        "source": "X"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "note": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 12 → kept: 5",
+        "variant": "caption"
+      }
+    }
+  }
+}

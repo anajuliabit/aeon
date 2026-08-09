@@ -1,0 +1,301 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect — Memory Consolidation",
+        "description": "Fleet-wide outage, issue tracking, and consolidation summary"
+      },
+      "children": [
+        "alert-issue",
+        "sep1",
+        "fleet-status-section",
+        "sep2",
+        "consolidation-section"
+      ]
+    },
+    "alert-issue": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "ISS-029: Fleet-wide usepod.ai 402 Payment Required",
+        "message": "Blocks ~18 skills across 11:49Z and 18:27Z dispatch waves. Requires operator-gated recovery: payment top-up or backup proxy rotation."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet-status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet-heading",
+        "fleet-stack"
+      ]
+    },
+    "fleet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h2"
+      }
+    },
+    "fleet-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-affected",
+        "text-outage-waves",
+        "text-preoutage-success",
+        "text-cli-status",
+        "text-recovery-window"
+      ]
+    },
+    "stat-affected": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Affected",
+        "value": "~18"
+      }
+    },
+    "text-outage-waves": {
+      "type": "Text",
+      "props": {
+        "text": "Outage dispatch waves: 11:49Z and 18:27Z"
+      }
+    },
+    "text-preoutage-success": {
+      "type": "Text",
+      "props": {
+        "text": "Pre-outage success: btc-levels on 2026-08-03 at 04:50Z"
+      }
+    },
+    "text-cli-status": {
+      "type": "Text",
+      "props": {
+        "text": "This reflect runs via CLI outside the failing proxy"
+      }
+    },
+    "text-recovery-window": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly-review scheduled for 2026-08-03 (T-0), 5-action window waiting on fleet recovery"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "consolidation-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "consolidation-heading",
+        "text-consolidation-date",
+        "rails-heading",
+        "rails-grid"
+      ]
+    },
+    "consolidation-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Consolidation Summary",
+        "level": "h2"
+      }
+    },
+    "text-consolidation-date": {
+      "type": "Text",
+      "props": {
+        "text": "Memory consolidated for 2026-08-03"
+      }
+    },
+    "rails-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Rails Consolidated (2026-08-02 Evening)",
+        "level": "h3"
+      }
+    },
+    "rails-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "rail-mcp",
+        "rail-fleet",
+        "rail-agent",
+        "rail-sunday",
+        "rail-ci",
+        "rail-fix"
+      ]
+    },
+    "rail-mcp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rail-mcp-label",
+        "rail-mcp-badge"
+      ]
+    },
+    "rail-mcp-label": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-enforcement-primitive-cluster",
+        "variant": "lead"
+      }
+    },
+    "rail-mcp-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "4 consecutive durable",
+        "variant": "secondary"
+      }
+    },
+    "rail-fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rail-fleet-label",
+        "rail-fleet-badge"
+      ]
+    },
+    "rail-fleet-label": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-relevance agent-thesis",
+        "variant": "lead"
+      }
+    },
+    "rail-fleet-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "18 consecutive days",
+        "variant": "secondary"
+      }
+    },
+    "rail-agent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rail-agent-label",
+        "rail-agent-badge"
+      ]
+    },
+    "rail-agent-label": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz-engagement-drought",
+        "variant": "lead"
+      }
+    },
+    "rail-agent-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "3 consecutive candidate",
+        "variant": "secondary"
+      }
+    },
+    "rail-sunday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rail-sunday-label",
+        "rail-sunday-badge"
+      ]
+    },
+    "rail-sunday-label": {
+      "type": "Text",
+      "props": {
+        "text": "Sunday-slot cluster",
+        "variant": "lead"
+      }
+    },
+    "rail-sunday-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "6 of 6",
+        "variant": "secondary"
+      }
+    },
+    "rail-ci": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rail-ci-label",
+        "rail-ci-detail"
+      ]
+    },
+    "rail-ci-label": {
+      "type": "Text",
+      "props": {
+        "text": "CI skills JSON",
+        "variant": "lead"
+      }
+    },
+    "rail-ci-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause identified via gh run view",
+        "variant": "caption"
+      }
+    },
+    "rail-fix": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rail-fix-label",
+        "rail-fix-detail"
+      ]
+    },
+    "rail-fix-label": {
+      "type": "Text",
+      "props": {
+        "text": "Duplicate Header Fix",
+        "variant": "lead"
+      }
+    },
+    "rail-fix-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Removed duplicate 'Recently Cleared' from prior consolidation",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-07"
+      },
+      "children": [
+        "heading-main",
+        "sep1",
+        "section-list",
+        "sep2",
+        "section-other",
+        "sep3",
+        "section-sources"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Single-list defi-day, one signal above noise: @Flowslikeosmo endorses $CASH earn-USDC mech as \"almost too genius\"",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-list": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Researcher List",
+        "level": "h3"
+      }
+    },
+    "tweet-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "Signal-boosts $CASH earn-USDC-by-holding mechanism (\"almost too genius\" = strong endorsement from a serious DeFi voice); yield-bearing-stable primitive interest keeps rotating, QT of x.com/robinhoodjesus",
+        "likes": 20,
+        "retweets": 2
+      }
+    },
+    "text-comments": {
+      "type": "Text",
+      "props": {
+        "text": "💬 8 comments",
+        "variant": "caption"
+      }
+    },
+    "link-view": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Flowslikeosmo/status/2085473633791533375"
+      }
+    },
+    "section-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-list",
+        "tweet-card",
+        "text-comments",
+        "link-view"
+      ]
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other Items",
+        "level": "h3"
+      }
+    },
+    "text-other": {
+      "type": "Text",
+      "props": {
+        "text": "9 other items on the list were replies/self-QT link-shares below signal threshold; second-place tweet was a bare-link self-QT (14♥ no commentary) → dropped."
+      }
+    },
+    "section-other": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-other",
+        "text-other"
+      ]
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources & Status",
+        "level": "h3"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "list=ok(2 posters, 1 signal + 9 sub) | grok returned only 8-06 window not 8-07 ([[xai-cache-window-narrows]] continues n=2)"
+      }
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "success"
+      }
+    },
+    "section-sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-sources",
+        "text-sources",
+        "badge-status"
+      ]
+    }
+  }
+}

@@ -1,9 +1,17 @@
-Heartbeat complete — all findings dedup vs 48h window, notify skipped.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · notify=SKIPPED`
 
 ## Summary
-- Files created/modified: `docs/status.md` (regenerated, 43-skill table + 13 open issues, Overall 🔴 DEGRADED, next-run btc-levels 16:15Z), `memory/logs/2026-07-31.md` (heartbeat 14:44Z entry appended)
-- Actions taken: Read MEMORY.md + last 2d of logs + cron-state.json (56 entries) + aeon.yml + issues/INDEX.md (13 open) + gh pr list (1 open: #165 d12) + gh issue list (0 urgent); ran all P0/P1/P2/P3 checks; wrote status page; dedup-check → no notify
-- Output: `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
-- Findings (all dedup vs prior ticks): 10-skill chronic-failure cohort persists (9-consec verdict-string identity ~65h span); PR #165 d12 CONFLICTING (within CLAUDE.md weekly-batch cadence guidance); 7 MEMORY-flagged items rolling per UTC-day (ISS-025 T+1 slipped, batch-dark d34, priorities.md 57d stale, etc.)
-- Positive deltas since 7-30 21:09Z: PR queue clears 3→1 overnight (#167 + #170 both merged 23:37Z); 07:00Z scheduler-slot recovers d1 (morning-brief + daily-routine + thought-review fire at +33-41min dispatch-lag vs 7-30 whole-slot MISS = 1-instance anomaly confirmed); ISS-028 kill-test slot underway (PR #167 fresh-merge propagation window active)
-- No follow-up actions needed — 20:00Z heartbeat tick will observe afternoon fires (security-digest 14:00Z in-flight, evening cluster 18:00Z pending)
+
+Ran heartbeat 08:03Z 8-09.
+
+**Findings (all dedup vs 48h logs, no notify sent):**
+- **P0**: 0 failed, 0 stuck across 43 enabled skills; 10-skill chronic-cohort composition holds (10-consec-tick, 7th 24h durability gate crossed ~113h span). Heartbeat self-check OK (~12h since last).
+- **P1**: PR queue 5 unchanged (#174/#173/#172/#171/#165); 8-09 Sunday-batch T-0 today.
+- **P2**: ISS-030 T-1 to 8-10 Mon 07Z deciding-test; operator on-chain d64; priorities.md 66d stale.
+- **P3**: `[[morning-08Z-slot-dark]]` restart deciding-test — **2-consec-clean VERDICT = pattern-broken-permanent** (3min dispatch-lag today after 4min yesterday); weekly-shiplog 20d stale; ISS-027 batch-dark rolls d43 at 12Z.
+
+**Files modified:**
+- `docs/status.md` — full regen; overall 🔴 DEGRADED, 14 open issues, next run github-trending 09:00Z.
+- `memory/logs/2026-08-09.md` — appended heartbeat 08:03Z section.
+
+**Follow-up:** watch skill-freshness 08Z co-slot outcome; monitor Sunday-batch operator activity on PR queue.

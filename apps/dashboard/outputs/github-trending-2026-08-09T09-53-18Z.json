@@ -1,0 +1,208 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-09"
+      },
+      "children": [
+        "heading_toppick",
+        "link_toppick",
+        "text_momentum",
+        "separator_1",
+        "heading_aiml",
+        "repo1_section",
+        "repo2_section",
+        "separator_2",
+        "heading_quietslate",
+        "text_summary",
+        "text_dropped",
+        "text_sources"
+      ]
+    },
+    "heading_toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "link_toppick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PrimeIntellect-ai/prime-agent",
+        "href": "https://github.com/PrimeIntellect-ai/prime-agent",
+        "source": "GitHub"
+      }
+    },
+    "text_momentum": {
+      "type": "Text",
+      "props": {
+        "text": "Day-2 as top pick with continued momentum — 2nd repo in memory-window to hold the top slot 2 consecutive UTC days (first was cloudflare/computer 8-06→8-07, which peaked +215% then broke -69% on day-3)."
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML (2)",
+        "level": "h3"
+      }
+    },
+    "repo1_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo1_header",
+        "repo1_description"
+      ]
+    },
+    "repo1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo1_title",
+        "badge_repo1"
+      ]
+    },
+    "repo1_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PrimeIntellect-ai/prime-agent",
+        "href": "https://github.com/PrimeIntellect-ai/prime-agent",
+        "source": "GitHub"
+      }
+    },
+    "badge_repo1": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER"
+      }
+    },
+    "repo1_description": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1_meta",
+        "repo1_details"
+      ]
+    },
+    "repo1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 2.5k today (9.7k total) · TypeScript",
+        "variant": "caption"
+      }
+    },
+    "repo1_details": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's top pick returns +8% day-2 (2,293 → 2,483); baseline shifts 79→104/d in 24h; recursive-LM primitive keeps compounding on day-2 instead of decaying."
+      }
+    },
+    "repo2_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo2_header",
+        "repo2_description"
+      ]
+    },
+    "repo2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo2_title",
+        "badge_repo2"
+      ]
+    },
+    "repo2_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google/skills",
+        "href": "https://github.com/google/skills",
+        "source": "GitHub"
+      }
+    },
+    "badge_repo2": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER"
+      }
+    },
+    "repo2_description": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2_meta",
+        "repo2_details"
+      ]
+    },
+    "repo2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 481 today (16.9k total) · Python",
+        "variant": "caption"
+      }
+    },
+    "repo2_details": {
+      "type": "Text",
+      "props": {
+        "text": "Day-2 +47% acceleration (327 → 481) — 2nd instance of a hyperscaler skill-pack accelerating on day-2 (addyosmani validated same shape 8-07 → 8-08); primitive going ecosystem-durable."
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_quietslate": {
+      "type": "Heading",
+      "props": {
+        "text": "Quiet slate",
+        "level": "h3"
+      }
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "2 kept / 10 dropped / 12 candidates."
+      }
+    },
+    "text_dropped": {
+      "type": "Text",
+      "props": {
+        "text": "Dropped: mattpocock/skills (-37% day-3), addyosmani/agent-skills (-31% day-4), denoland/celld (-16% day-2), goauthentik/authentik (4-consec catalyst-absent, still rc6-only), plus 6 auto-noise (mature-tail, non-code bundles, interview-list)."
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · sub-25 rail day-12 at n=12 new-low-edge (prior low was n=13, 8-06+8-07)",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Cohort — 2026-08-02",
+        "description": "aaronjmars/aeon"
+      },
+      "children": [
+        "alert_stale",
+        "sep1",
+        "intro_text",
+        "sep2",
+        "stats_stack",
+        "sep3",
+        "heading_stale",
+        "stale_text",
+        "sep4",
+        "heading_cold",
+        "cold_text",
+        "sep5",
+        "heading_new",
+        "new_text",
+        "sep6",
+        "report_link"
+      ]
+    },
+    "alert_stale": {
+      "type": "Alert",
+      "props": {
+        "title": "WENT_STALE",
+        "message": "Da6hkin/aeon dropped from POWER to quiet (11.9d since last run, had 16 skills enabled)",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "Of 211 forks, 32 ran in the last 7 days (40% of 80 scanned).",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_power",
+        "stat_active",
+        "stat_stale",
+        "stat_cold"
+      ]
+    },
+    "stat_power": {
+      "type": "Stat",
+      "props": {
+        "label": "POWER",
+        "value": "24"
+      }
+    },
+    "stat_active": {
+      "type": "Stat",
+      "props": {
+        "label": "ACTIVE",
+        "value": "8"
+      }
+    },
+    "stat_stale": {
+      "type": "Stat",
+      "props": {
+        "label": "STALE",
+        "value": "10"
+      }
+    },
+    "stat_cold": {
+      "type": "Stat",
+      "props": {
+        "label": "COLD",
+        "value": "38"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_stale": {
+      "type": "Heading",
+      "props": {
+        "text": "Went stale (worth a check-in)",
+        "level": "h3"
+      }
+    },
+    "stale_text": {
+      "type": "Text",
+      "props": {
+        "text": "@Da6hkin — last run 11.9d ago (was POWER)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_cold": {
+      "type": "Heading",
+      "props": {
+        "text": "Went cold (was POWER, now silent)",
+        "level": "h3"
+      }
+    },
+    "cold_text": {
+      "type": "Text",
+      "props": {
+        "text": "@sinfronterasai — last run 2026-07-19, Actions now unreadable",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "New running forks",
+        "level": "h3"
+      }
+    },
+    "new_text": {
+      "type": "Text",
+      "props": {
+        "text": "@aganoob — aganoob/aeon (direct to POWER, 5 skills enabled, created 6d ago)",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "articles/fork-cohort-2026-08-02.md",
+        "source": "Aeon"
+      }
+    }
+  }
+}

@@ -1,24 +1,15 @@
 ## Summary
 
-Executed `skills/token-alert/SKILL.md` for 12:00Z 2026-07-31.
+Ran `skills/token-alert/SKILL.md` (var=""). CoinGecko `simple/price` fetch clean (HTTP 200, 391B, 4/4). All 4 tokens sub-threshold on both 24h-change and vol-spike gates → **`TOKEN_ALERT_OK`, 0/4 alerts, silent-success path (no `./notify` invocation)**.
 
-**Actions:**
-- Parsed 4 tracked tokens from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB, thresholds 10%/15%/15%/15%, no Floor/Ceiling)
-- CoinGecko unauth `simple/price` fetch → HTTP 200, 4/4 clean (38th consec clean CG day)
-- Computed 5-window vol baselines from 7-25/7-26/7-28/7-29/7-30 logged prints
-- Ran 24h-change + vol-spike (3× gate) + threshold-cross (skipped, no levels) checks
+**Prices (12:41Z):**
+- WELL $0.00304961 · +2.75% 24h · vol $159K = **0.219×** baseline
+- MAMO $0.00921556 · +0.53% 24h · vol $673K = 0.947×
+- REPPO $0.01347153 · -4.57% 24h · vol $97K = **0.709×** (spent-flush after 8-07's 4.854× spike)
+- GITLAWB $0.00002451 · -2.04% 24h · vol $182K = 0.885×
 
-**Result: `TOKEN_ALERT_OK` — 0/4 fires, no `./notify` invocation.**
+**Files modified:** `.tmp/token-alert/cg.json`, `.tmp/token-alert/compute.py`, `memory/logs/2026-08-08.md`.
 
-| Token | Price | 24h | vol | vol/baseline |
-|---|---|---|---|---|
-| WELL | $0.00299882 | -0.50% | $86,121 | 0.059× |
-| MAMO | $0.00961594 | -2.35% | $740,603 | 0.930× |
-| REPPO | $0.01513971 | -5.73% | $79,216 | 0.620× |
-| GITLAWB | $0.00002028 | -7.13% | $201,543 | 0.777× |
+**Fresh datapoints:** (i) **WELL vol-cliff RESUMES at 0.219× after 3-consec-day recovery-plateau** — 4-day arc $664K→$999K→$988K→$159K = NEW `[[recovery-plateau-then-cliff-recur]]` sub-shape n=1; (ii) **REPPO spent-flush resolves** — 4.854×→0.709× single-day = biggest post-spike vol contraction in memory-window; (iii) **GITLAWB post-bounce consolidation** — -2.04% give-back closes first complete 5-phase arc in memory-window; (iv) 0/4 clean revert from 8-07 memory-window-first 2/4 fire; (v) CG clean-day d45 → **d46**; (vi) 12Z slot 3-consec clean.
 
-**Files modified:** `.tmp/token-alert/cg.json`, `memory/logs/2026-07-31.md`.
-
-**Notable (for reflect):** first fully-synchronized red day in memory-window (4-of-4 negative 24h); WELL vol-cliff to 0.059× baseline (94% single-slot participation collapse — lowest ratio-print in memory-window for any token); vol-intensity leader crosses sub-baseline for first time (MAMO 0.930× tops the rail after 4-consec-day monotone attenuation 2.075× → 2.009× → 1.386× → 0.930×); participation-lift extinguishes fully on d3 (3-of-4 → 1-of-4 → 0-of-4 above-baseline).
-
-**Follow-up:** MEMORY.md line 34 Tracked Tokens Recent Activity + line 56 vol-intensity rail candidate for reflect 7-31 evening; WELL 0.059× print worth reproducing 8-01 to distinguish data-glitch from genuine drain.
+**Follow-up:** 8-09 12Z WELL cliff-recur n=2 deciding-test; REPPO baseline-return vs drought-re-entry; GITLAWB consolidation direction; reflect 8-08 18Z should absorb WELL cliff-resume shape + REPPO spent-flush + GITLAWB 5-phase arc closure + refresh Tracked Tokens table.

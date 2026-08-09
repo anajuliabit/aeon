@@ -1,38 +1,33 @@
-*HN Digest — 2026-07-28*
+*HN Digest — 2026-08-07*
 
-_open-weights day. 3 of 7 orbit anthropic's position, kimi-k3's 3T drop, and anthropic's book-shredding fallout. bun-in-rust postmortem, google's dmca loss, and a fire-cloud in france close it._
+_amd buys taalas to etch models into silicon. github actions eats a us workday. 1-in-3 ai-agent commands get waved through by human reviewers._
 
-1. **[AI & agents]** [Our position on open-weights models](https://www.anthropic.com/news/position-open-weights-models) — 782 pts · 1107 comments
-   Why it matters: anthropic backs open weights in principle, pushes compute/export limits on frontier training. bio and cyber flagged as red lines.
-   HN take: "leveling the playing field empowers ordinary people more than governments already at the frontier. general intelligence is dual-use" — _txrx0000_
-   [Discussion](https://news.ycombinator.com/item?id=49076057)
+1. **[AI & agents]** [AMD acquires Taalas to boost inference by etching models in silicon](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344) — 621 pts · 467 comments
+   Why it matters: hyperscaler-cpu vendor pays up for a compute-in-memory play. moves the "weights are the wiring" thesis from lab-curiosity to acquisition-priced.
+   HN take: "it's a true compute-in-memory architecture where weights are stored in the connections between transistors that perform the matrix multiply. sram needs too many transistors, dram needs an incompatible process, phase-change memories aren't ready." — _Legend2440_
+   [Discussion](https://news.ycombinator.com/item?id=49201970)
 
-2. **[AI & agents]** [Kimi-K3 on HuggingFace](https://huggingface.co/moonshotai/Kimi-K3) — 1334 pts · 526 comments
-   Why it matters: moonshot ships 3T-param mxfp4-native open weights plus tech report. largest open drop to date, sized to force a real $/MTok anchor.
-   HN take: "~1.5TB of VRAM, at the limit of 8xb200s. realistically 16x for context/throughput. finally a real $/MTok anchor for a 3T model" — _NitpickLawyer_
-   [Discussion](https://news.ycombinator.com/item?id=49065752)
+2. **[Infra & devtools]** [GitHub Actions and Pages experiencing degraded availability](https://www.githubstatus.com/incidents/qcvjkzcs7j74) — 391 pts · 310 comments
+   Why it matters: another us-hours ci outage on the platform half the industry ships on. thread turns to forge migration and self-hosting math.
+   HN take: "today it exploded jobs with 'failed' and 'The job was not acquired by Runner of type hosted even after multiple attempts'. should say 'timed out, no runner available, try again later or pay $$ here for priority'." — _dboreham_
+   [Discussion](https://news.ycombinator.com/item?id=49198302)
 
-3. **[AI & culture]** [AI companies are shredding rare books](https://twitter.com/HedgieMarkets/status/2081534588485296565) — 763 pts · 479 comments
-   Why it matters: anthropic destroyed physical rare books to digitize for training, backed by a june fair-use ruling. some titles were last-copies.
-   HN take: "you can reprint a bestseller. you can't replace the last three copies of an 18th-century botanical text once someone shreds them for training data" — _est31_
-   [Discussion](https://news.ycombinator.com/item?id=49068738)
+3. **[AI & agents]** [Humans missed 1 in 3 threats approving AI agent commands across 40k game runs](https://scalex.dev/blog/ai-agent-permissions-stats/) — 293 pts · 207 comments
+   Why it matters: 40k plays / 409k decisions gives an empirical floor for human-in-the-loop review fatigue. history-log context is largely ignored.
+   HN take: "fatigue causes people to jump to bypasses. we need to raise awareness of the new threat types. sandboxing and permission isolation from tooling need to be easier — hitl is not an acceptable alternative." — _Wirbelwind (author)_
+   [Discussion](https://news.ycombinator.com/item?id=49195468)
 
-4. **[Infra & devtools]** [PGSimCity — How PostgreSQL Works](https://nikolays.github.io/PGSimCity/) — 901 pts · 88 comments
-   Why it matters: interactive simcity-style viz of postgres internals. wal, autovacuum, buffer cache, workers. teaching aid, not a debugger.
-   HN take: "why is a new process a square through a tube to a building where a pinball switch glows red? it gets lost in the sauce" — _graypegg_
-   [Discussion](https://news.ycombinator.com/item?id=49063754)
+4. **[Security & policy]** [New Mexico court orders Meta to pay $567m over child mental health harms](https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta) — 204 pts · 132 comments
+   Why it matters: not just a fine. the order forces meta to hide likes for under-18s, kill night notifications, cap use at 90h/mo.
+   HN take: "for under-18s, meta will eliminate push notifications 10pm-7am daily and 8am-3pm on school days; usage capped at 90 hours per month. tbh these restrictions will just push kids to snapchat." — _tristanj_
+   [Discussion](https://news.ycombinator.com/item?id=49204352)
 
-5. **[Infra & devtools]** [How is the Bun rewrite in Rust going?](https://lockwood.dev/ai/2026/07/27/how-is-the-bun-rewrite-in-rust-going.html) — 464 pts · 367 comments
-   Why it matters: 4 months post-rewrite, commits flatlined and no user-facing release shipped. postmortem questions the token spend.
-   HN take: "someone fixed the zig original with sub-second builds by modernizing the codebase. the issues that justified the rewrite were self-inflicted" — _bendmorris_
-   [Discussion](https://news.ycombinator.com/item?id=49067854)
+5. **[Culture]** [Taste Is All That's Left](https://notashelf.dev/posts/taste-is-all-thats-left) — 390 pts · 283 comments
+   Why it matters: post-ai-slop version of the "diff can't see the difference" argument. market timing has commoditized the surface, taste is the residual moat.
+   HN take: "taste was all that was left when product design peaked in 2010-12. figma/sketch and design systems automated the job away — any cmu grad could be a top tier designer. same thing basically happening here." — _purplemoonx_
+   [Discussion](https://news.ycombinator.com/item?id=49199346)
 
-6. **[Security & policy]** [Judge rejects Google's DMCA claim against scrapers](https://www.techdirt.com/2026/07/27/judge-rejects-googles-attempt-to-dmca-its-way-out-of-being-scraped/) — 295 pts · 118 comments
-   Why it matters: court dismisses google v serpapi. search-index data isn't copyrightable, dmca doesn't reach scraping. wide read for ai training pipelines.
-   HN take: "suit was filed because openai was using serpapi. alphabet is an anthropic investor. amended complaint due aug 10" — _1vuio0pswjnm7_
-   [Discussion](https://news.ycombinator.com/item?id=49073513)
-
-7. **[Science & culture]** [French firefighters face 'pyrocumulonimbus' for first time](https://www.france24.com/en/live-news/20260726-french-firefighters-face-pyrocumulonimbus-for-first-time) — 451 pts · 358 comments
-   Why it matters: gironde wildfire made its own thunderstorm with self-igniting downwind lightning. 8-10 fire-storm episodes this season vs 2 in 2017's pedrogão.
-   HN take: "biggest wildfire in spain: 2026. norway: 2026. germany: 2025. uk: 2025. almost every european country broke records in the same window" — _pvaldes_
-   [Discussion](https://news.ycombinator.com/item?id=49060495)
+6. **[Science & pedagogy]** [Mario Meets Pareto](https://www.mayerowitz.io/blog/mario-meets-pareto) — 1027 pts · 156 comments
+   Why it matters: interactive scrollytelling explainer that teaches the pareto frontier through mario kart stat curves. day's top-vote story on hn.
+   HN take: "extremely accessible when you teach as concrete scenarios in simple language with useful visualizations instead of abstract x, y foos and bars with an unfamiliar jargon term every 3rd word." — _applfanboysbgon_
+   [Discussion](https://news.ycombinator.com/item?id=49195231)

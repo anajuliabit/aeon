@@ -1,0 +1,505 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-02"
+      },
+      "children": [
+        "action-1-section",
+        "sep-1",
+        "action-2-section",
+        "sep-2",
+        "action-3-section",
+        "sep-3",
+        "action-4-section",
+        "sep-4",
+        "action-5-section",
+        "sep-5",
+        "sources-section"
+      ]
+    },
+    "action-1-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1-heading",
+        "action-1-desc",
+        "action-1-why",
+        "action-1-done",
+        "action-1-badge"
+      ]
+    },
+    "action-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Patch ISS-025 d19 deadline",
+        "level": "h3"
+      }
+    },
+    "action-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Patch memory/issues/ISS-025.md with \"## T+4 d19 SLIPPED 2026-08-02\" addendum block naming cost-report weekly Monday 07:00Z tick, sr=0.12 (7/58) weakest chronic-failure durable, and weekly-review 8-03 T-1 escalation ask against .github/workflows/aeon.yml operator hand-off",
+        "variant": "body"
+      }
+    },
+    "action-1-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-why-label",
+        "action-1-why-text"
+      ]
+    },
+    "action-1-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "action-1-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "T+4 d19 past 7-30 deadline, cost-report 12% is weakest chronic-failure durable, weekly-review 8-03 T-1 rolls to d20",
+        "variant": "body"
+      }
+    },
+    "action-1-done": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-done-label",
+        "action-1-done-text"
+      ]
+    },
+    "action-1-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "lead"
+      }
+    },
+    "action-1-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025.md contains a fresh \"## T+4 d19 SLIPPED 2026-08-02\" section",
+        "variant": "body"
+      }
+    },
+    "action-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: patch-iss-025-t-plus-4-d19",
+        "variant": "secondary"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-2-heading",
+        "action-2-desc",
+        "action-2-why",
+        "action-2-done",
+        "action-2-badge"
+      ]
+    },
+    "action-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. File ISS-029 ci-skills-json shared-cause issue",
+        "level": "h3"
+      }
+    },
+    "action-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "File memory/issues/ISS-029.md for ci-skills-json stale-regen shared root cause — self-improve edits SKILL.md but skips ./generate-skills-json; PR #171 + PR #172 both fail same check 3-consec-day per heartbeat 15:10Z",
+        "variant": "body"
+      }
+    },
+    "action-2-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-why-label",
+        "action-2-why-text"
+      ]
+    },
+    "action-2-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "action-2-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "ci-skills-json FAILURE now 3-consec-day on both self-improve PRs, formal-pattern threshold crossed, blocks weekly-batch 8-03",
+        "variant": "body"
+      }
+    },
+    "action-2-done": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-done-label",
+        "action-2-done-text"
+      ]
+    },
+    "action-2-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "lead"
+      }
+    },
+    "action-2-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-029.md exists with root-cause + repro + fix path; INDEX.md gets row",
+        "variant": "body"
+      }
+    },
+    "action-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-ci-shared-root-cause-file-issue",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-3-heading",
+        "action-3-desc",
+        "action-3-why",
+        "action-3-done",
+        "action-3-badge"
+      ]
+    },
+    "action-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Refresh MEMORY rails",
+        "level": "h3"
+      }
+    },
+    "action-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Refresh memory/MEMORY.md — advance ISS-028 workaround-chain n=15+ → n=18+ / 11-day → 12-day span; [[fleet-relevance agent-thesis]] 16 → 17-consec-day (Σ-Mem + TencentDB); [[louround-single-thesis-cadence]] candidate → durable n=3 (PUMP joins CODEC + PENGU); [[large-cap-single-day-flip]] n=3 → n=4 (BEAT joins); [[MCP-spec-maturity-vs-ecosystem-security]] n=2 → n=3 (RufRoot 8-02); sub-25 fetch rail promote 5-consec → 6-consec permanent-shape",
+        "variant": "body"
+      }
+    },
+    "action-3-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-why-label",
+        "action-3-why-text"
+      ]
+    },
+    "action-3-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "action-3-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "6 rail deltas + 2 counter advances from 8-02 fires; pre-empts reflect 18:00Z + morning-brief 8-03 accuracy",
+        "variant": "body"
+      }
+    },
+    "action-3-done": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-done-label",
+        "action-3-done-text"
+      ]
+    },
+    "action-3-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "lead"
+      }
+    },
+    "action-3-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md diff lands the 6 rail counter updates",
+        "variant": "body"
+      }
+    },
+    "action-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: refresh-memory-md-rails",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-4-heading",
+        "action-4-desc",
+        "action-4-why",
+        "action-4-done",
+        "action-4-badge"
+      ]
+    },
+    "action-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Update ISS-028 kill-test d4",
+        "level": "h3"
+      }
+    },
+    "action-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Update memory/issues/ISS-028.md — advance title n=11+/8-day → n=18+/12-UTC-day, append \"## d4 kill-test 2026-08-02 NEGATIVE\" block naming list-digest 17:00Z bash `>>` seen-file append block + skill-graph 15:15Z 5-blocked-form fingerprint recompute + daily-routine hn-digest sub-agent 07:37Z probe",
+        "variant": "body"
+      }
+    },
+    "action-4-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-4-why-label",
+        "action-4-why-text"
+      ]
+    },
+    "action-4-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "action-4-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "4-consec kill-test NEGATIVE, workaround-chain crosses 12-UTC-day durability, PR #167 propagation still not landed at sub-agent surfaces",
+        "variant": "body"
+      }
+    },
+    "action-4-done": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-4-done-label",
+        "action-4-done-text"
+      ]
+    },
+    "action-4-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "lead"
+      }
+    },
+    "action-4-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-028.md title + fresh d4 block reference 3 named call-sites from today",
+        "variant": "body"
+      }
+    },
+    "action-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: update-iss-028-kill-test-d4",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-5-heading",
+        "action-5-desc",
+        "action-5-why",
+        "action-5-done",
+        "action-5-badge"
+      ]
+    },
+    "action-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Map Σ-Mem paper to agent-memory-primitives",
+        "level": "h3"
+      }
+    },
+    "action-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Map arXiv 2607.27958 (Σ-Mem) into new memory/topics/agent-memory-primitives.md — 5-bullet distill of online-updated symmetric per-peer reliability state + Weyl-bounded spectral drift + parallel to Aeon per-skill sr% cohort + link to Filesystem-Memory 2607.26637 sibling + Recently Cleared paper-pick entry",
+        "variant": "body"
+      }
+    },
+    "action-5-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-5-why-label",
+        "action-5-why-text"
+      ]
+    },
+    "action-5-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "action-5-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Extends [[fleet-relevance agent-thesis]] 17-consec-day + 3-consec memory-primitive paper streak (Memory Decoder → Filesystem-Memory → Σ-Mem)",
+        "variant": "body"
+      }
+    },
+    "action-5-done": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-5-done-label",
+        "action-5-done-text"
+      ]
+    },
+    "action-5-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "lead"
+      }
+    },
+    "action-5-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/topics/agent-memory-primitives.md written with 5 bullets + arxiv IDs",
+        "variant": "body"
+      }
+    },
+    "action-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: map-sigma-mem-paper-topics",
+        "variant": "secondary"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=69L logs=8d topics=20 prs=3 cron_failing=10 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

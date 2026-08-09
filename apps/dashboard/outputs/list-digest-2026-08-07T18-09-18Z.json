@@ -1,0 +1,129 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-08-07"
+      },
+      "children": [
+        "intro_text",
+        "sep1",
+        "section_heading",
+        "tweet_item",
+        "link_to_tweet",
+        "sep2",
+        "filtered_header",
+        "filtered_items",
+        "sep3",
+        "metadata"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "single-list defi-day, one signal above noise: @Flowslikeosmo endorses $CASH earn-USDC mech as \"almost too genius\"",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi researcher list",
+        "level": "h3"
+      }
+    },
+    "tweet_item": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "Signal-boosts $CASH earn-USDC-by-holding mechanism (\"almost too genius\" = strong endorsement from a serious DeFi voice). Yield-bearing-stable primitive interest keeps rotating. Quote tweet of x.com/robinhoodjesus (♥20 ↻2 💬8)."
+      }
+    },
+    "link_to_tweet": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2085473633791533375"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "filtered_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Filtered out",
+        "level": "h4"
+      }
+    },
+    "filtered_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "filtered_note1",
+        "filtered_note2"
+      ]
+    },
+    "filtered_note1": {
+      "type": "Text",
+      "props": {
+        "text": "9 other items on the list were replies/self-QT link-shares below signal threshold",
+        "variant": "caption"
+      }
+    },
+    "filtered_note2": {
+      "type": "Text",
+      "props": {
+        "text": "Second-place tweet was a bare-link self-QT (14♥ no commentary) → dropped",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources",
+        "status"
+      ]
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list=ok(2 posters, 1 signal + 9 sub) | grok returned only 8-06 window not 8-07 ([xai-cache-window-narrows] continues n=2)",
+        "variant": "muted"
+      }
+    },
+    "status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "muted"
+      }
+    }
+  }
+}

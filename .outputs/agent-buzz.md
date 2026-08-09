@@ -1,22 +1,20 @@
-*Agent Buzz — 2026-07-30*
-_mcp-heavy day. 2026-07-28 stateless spec drops, ruflo mcp bridge becomes CVE-2026-59726, copilot's mcp surface hits GA._
+*Agent Buzz — 2026-08-08*
+_mostly MCP standardization — Agent Plugins land with OpenAI+Google+AWS backing, spec RC bakes in stateless + pause-for-approval._
 
-**MCP 2026-07-28 goes stateless**
-• @sthnavy — spec ships stateless: no init handshake, self-contained calls; discovery, inputs, long-task, cache, auth all rebuilt.
-  https://x.com/sthnavy/status/2082611680480239695
-• @fujikawa — same spec across harness implementations produces 30x cost variance; runaway and security fixes bundled.
-  https://x.com/fujikawa/status/2082617070953673217
+**Agent Plugins go multi-vendor**
+• @sl1ma4 — OpenAI + AWS + Cursor + GitHub + VS Code + Vercel back Agent Plugins as a shared packaging format for MCP server skills/configs
+  https://x.com/sl1ma4/status/2085688445540708373
+• @nakamurahiroki — Google joining the Agent Plugins effort graduates MCP from Anthropic-thing to cross-lab skills primitive
+  https://x.com/nakamurahiroki/status/2085878399365738533
 
-**Ruflo MCP zero-auth (CVE-2026-59726)**
-• @AlexanderChopra — ruflo mcp bridge shipped with no auth: unauthenticated terminal_execute plus poisoned agent memory store.
-  https://x.com/AlexanderChopra/status/2082611102282899457
-• @ZeroDayDevApp — any network caller can inject commands and poison agent memory; no auth on the exposed mcp.
-  https://x.com/ZeroDayDevApp/status/2082609834763890860
+**MCP RC: stateless + pause-for-approval**
+• @AgenticAIFdn — stateless HTTP in the MCP RC drops session bottlenecks, MCP services go horizontally scalable
+  https://x.com/AgenticAIFdn/status/2085803230747857190
+• @AgenticAIFdn — MCP 2026-07-28 adds Multi Round-Trip Requests: agents pause for human approval, resume without long-lived connections
+  https://x.com/AgenticAIFdn/status/2085716372886007889
 
-**MCP surface expands**
-• @akira6592 — github copilot code review, agent skills, and mcp now generally available on the platform.
-  https://x.com/akira6592/status/2082609996983107911
-• @DanKornas — mcp-remote-macos-use ships: mcp server letting agents drive a local or remote mac (screen capture, keyboard, pointer, app actions).
-  https://x.com/DanKornas/status/2082607331066454408
+**Benchmarks miss the wild**
+• @TheTuringPost — "Agents in the Wild" argues static benchmarks miss the real failure surface: coordination, verification, fallback, human-in-loop
+  https://x.com/TheTuringPost/status/2085823436543390039
 
-<!-- _src: xai-cache · candidates: 12 → kept: 6 -->
+<!-- _src: xai · candidates: 12 → kept: 5_ -->

@@ -1,0 +1,315 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-03"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shape_line",
+        "sep1",
+        "action1",
+        "sep2",
+        "action2",
+        "sep3",
+        "action3",
+        "sep4",
+        "action4",
+        "sep5",
+        "action5",
+        "sep6",
+        "sources"
+      ]
+    },
+    "shape_line": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: file usepod P0, graft regen-step, rebase PR#165, raise ISS-025 d20, advance ISS-028 d5",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_title",
+        "a1_desc",
+        "a1_why",
+        "a1_done",
+        "a1_loop"
+      ]
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. file `memory/issues/ISS-030.md` for fleet-wide usepod.ai HTTP-402 outage",
+        "level": "h3"
+      }
+    },
+    "a1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "11+ skills consec_failures≥3 at 18:27Z burst (thought-review=9, skill-freshness/cost-report/unlock-monitor/btc-levels/daily-routine=6, security-digest=5, search-skill=4, deal-flow/self-improve/heartbeat=3), signature `Payment required. Retry with X-PAYMENT or PAYMENT-SIGNATURE header`"
+      }
+    },
+    "a1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: fresh dominant P0 today, no ISS-file exists, operator-gated billing/proxy path unclear until surfaced",
+        "variant": "muted"
+      }
+    },
+    "a1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `memory/issues/ISS-030.md` written with YAML frontmatter (severity=critical, category=missing-secret), `INDEX.md` open-table advances 13 → 14",
+        "variant": "muted"
+      }
+    },
+    "a1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "file-iss-030-usepod-402-outage"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_title",
+        "a2_desc",
+        "a2_why",
+        "a2_done",
+        "a2_loop"
+      ]
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. graft `./generate-skills-json` regen step into `skills/self-improve/SKILL.md` commit process",
+        "level": "h3"
+      }
+    },
+    "a2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "closes ci-skills-json 3-consec-day formal-pattern on PR #171 + #172"
+      }
+    },
+    "a2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: root cause `skills.json stale` identified 8-02 via `gh run view 30713133283 --log-failed`; systemic fix unblocks Sunday-batch merge window opening today",
+        "variant": "muted"
+      }
+    },
+    "a2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `skills/self-improve/SKILL.md` diff committed to a fix branch, PR opened against main, `gh pr checks` on #171/#172 rerun once merged",
+        "variant": "muted"
+      }
+    },
+    "a2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "fix-ci-skills-json-shared-root-cause"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_title",
+        "a3_why",
+        "a3_done",
+        "a3_loop"
+      ]
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. rebase PR #165 `docs(skill-graph): shared_state 21→27` against main to resolve `docs/skill-graph.md` merge conflict",
+        "level": "h3"
+      }
+    },
+    "a3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: d15 CONFLICTING sole survivor past-gate cohort, CLAUDE.md ~7d-past-touch escalation window open, Sunday-batch weekly-review 8-03 sole shot before d16 rolls",
+        "variant": "muted"
+      }
+    },
+    "a3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `gh pr view 165` shows MERGEABLE and green on required checks",
+        "variant": "muted"
+      }
+    },
+    "a3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "rebase-pr-165-conflict-d15"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_title",
+        "a4_desc",
+        "a4_why",
+        "a4_done",
+        "a4_loop"
+      ]
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. raise ISS-025 T+5 day-20 addendum block in `memory/issues/ISS-025.md`",
+        "level": "h3"
+      }
+    },
+    "a4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report weakest chronic-failure sr=11% (7/64) durable, 20d slip past 7-30 deadline"
+      }
+    },
+    "a4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: hand-off milestone rolls today Sunday-batch, weekly-review 8-03 action #1, operator-author still needed against `.github/workflows/aeon.yml:479-495`",
+        "variant": "muted"
+      }
+    },
+    "a4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `memory/issues/ISS-025.md` appended with `## T+5 d20 update — 2026-08-03` block naming sr regression + weekly-batch escalation",
+        "variant": "muted"
+      }
+    },
+    "a4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "raise-iss-025-t-plus-5-d20"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_title",
+        "a5_desc",
+        "a5_why",
+        "a5_done",
+        "a5_loop"
+      ]
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. advance ISS-028 kill-test d5 block in `memory/issues/ISS-028.md`",
+        "level": "h3"
+      }
+    },
+    "a5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "8-02 kill-test d3+d4 NEGATIVE at 3 sub-agent + call-site probes, workaround-chain n=18+ durable 12-UTC-day span 7-22 → 8-02, 4-consec-day formal-pattern"
+      }
+    },
+    "a5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: reflect 8-03 (Sunday-batch) reopens root-cause investigation into PR #167 fix-scope narrowness; pre-populated evidence block feeds that",
+        "variant": "muted"
+      }
+    },
+    "a5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `memory/issues/ISS-028.md` appended with `## Kill-test d5 — 2026-08-03` block naming today's blocked call-sites (skill-graph 5-blocked-form fingerprint recompute / list-digest `>>` append / daily-routine hn-digest sub-agent)",
+        "variant": "muted"
+      }
+    },
+    "a5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "advance-iss-028-kill-test-d5"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=75L logs=8d topics=~20 prs=3 cron_failing=11+consec-3 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

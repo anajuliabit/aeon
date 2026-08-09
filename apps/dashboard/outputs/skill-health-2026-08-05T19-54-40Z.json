@@ -1,0 +1,255 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 8-05"
+      },
+      "children": [
+        "status-line",
+        "sep1",
+        "degraded-section",
+        "sep2",
+        "nodata-section",
+        "sep3",
+        "healthy-section",
+        "sep4",
+        "delta-section",
+        "sep5",
+        "issues-section"
+      ]
+    },
+    "status-line": {
+      "type": "Text",
+      "props": {
+        "text": "DEGRADED(18) · no fresh systemic · post-ISS-029 fleet stable",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-table",
+        "degraded-more"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (18)",
+        "level": "h3"
+      }
+    },
+    "degraded-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Details",
+          "Issue"
+        ],
+        "rows": [
+          [
+            "cost-report",
+            "0.10",
+            "consec 17→0 after 8-04 21:48Z print (was CRITICAL)",
+            "ISS-030 stays open"
+          ],
+          [
+            "skill-analytics",
+            "0.19",
+            "chronic baseline",
+            "—"
+          ],
+          [
+            "reg-monitor",
+            "0.21",
+            "chronic baseline",
+            "—"
+          ],
+          [
+            "vuln-scanner",
+            "0.23",
+            "—",
+            "ISS-018"
+          ],
+          [
+            "search-skill",
+            "0.38",
+            "—",
+            "ISS-021"
+          ]
+        ]
+      }
+    },
+    "degraded-more": {
+      "type": "Text",
+      "props": {
+        "text": "+13 more — see memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "nodata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata-heading",
+        "nodata-text"
+      ]
+    },
+    "nodata-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "nodata-text": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — dispatch-only cadence, expected",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-stat"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "8"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "delta-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "delta-heading",
+        "delta-text"
+      ]
+    },
+    "delta-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Delta",
+        "level": "h3"
+      }
+    },
+    "delta-text": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report CRITICAL→DEGRADED (first weekly cost print since 7-27 shipped). No fresh usepod 402 or sdk_opt_in_required signatures in the last ~24h.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-heading",
+        "issues-stats"
+      ]
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      }
+    },
+    "issues-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-open",
+        "stat-resolved"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "14"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "1"
+      }
+    },
+    "resolved-note": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-029 INDEX sync — file pre-resolved 8-04",
+        "variant": "caption"
+      }
+    }
+  }
+}

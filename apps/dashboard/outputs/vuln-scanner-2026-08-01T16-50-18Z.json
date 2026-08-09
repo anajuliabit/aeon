@@ -1,0 +1,409 @@
+{
+  "root": "card_vuln_scanner",
+  "state": {},
+  "elements": {
+    "card_vuln_scanner": {
+      "type": "Card",
+      "props": {
+        "title": "vuln-scanner — yc-software/qm",
+        "description": "Security audit: clean scan, 8 candidates, 0 confirmed"
+      },
+      "children": [
+        "audit_result",
+        "target",
+        "scan_coverage",
+        "security_features",
+        "scanner_results",
+        "actions"
+      ]
+    },
+    "audit_result": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "audit_heading",
+        "audit_stats"
+      ]
+    },
+    "audit_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Audit Result",
+        "level": "h2"
+      }
+    },
+    "audit_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "candidates_stat",
+        "confirmed_stat"
+      ]
+    },
+    "candidates_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Candidates Reviewed",
+        "value": "8"
+      }
+    },
+    "confirmed_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Confirmed Vulnerabilities",
+        "value": "0"
+      }
+    },
+    "target": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "target_heading",
+        "target_description",
+        "target_badges"
+      ]
+    },
+    "target_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Target",
+        "level": "h2"
+      }
+    },
+    "target_description": {
+      "type": "Text",
+      "props": {
+        "text": "4,302★ ts multiplayer agent harness",
+        "variant": "body"
+      }
+    },
+    "target_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pvr_badge",
+        "security_md_badge"
+      ]
+    },
+    "pvr_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PVR enabled",
+        "variant": "secondary"
+      }
+    },
+    "security_md_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SECURITY.md present",
+        "variant": "secondary"
+      }
+    },
+    "scan_coverage": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "scan_heading",
+        "npm_audit_badge",
+        "coverage_stats",
+        "agents_info",
+        "triage_note"
+      ]
+    },
+    "scan_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scan Coverage",
+        "level": "h2"
+      }
+    },
+    "npm_audit_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "npm audit clean",
+        "variant": "secondary"
+      }
+    },
+    "coverage_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "workspaces_stat",
+        "deps_stat",
+        "files_stat"
+      ]
+    },
+    "workspaces_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Workspaces",
+        "value": "6"
+      }
+    },
+    "deps_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Dependencies",
+        "value": "577"
+      }
+    },
+    "files_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TS Files Scanned",
+        "value": "~350"
+      }
+    },
+    "agents_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "agents_label",
+        "agent_badges"
+      ]
+    },
+    "agents_label": {
+      "type": "Text",
+      "props": {
+        "text": "3 parallel explore agents:",
+        "variant": "lead"
+      }
+    },
+    "agent_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "agent_auth",
+        "agent_injection",
+        "agent_secrets"
+      ]
+    },
+    "agent_auth": {
+      "type": "Badge",
+      "props": {
+        "text": "auth + capability",
+        "variant": "outline"
+      }
+    },
+    "agent_injection": {
+      "type": "Badge",
+      "props": {
+        "text": "injection + SSRF + traversal",
+        "variant": "outline"
+      }
+    },
+    "agent_secrets": {
+      "type": "Badge",
+      "props": {
+        "text": "secrets + crypto",
+        "variant": "outline"
+      }
+    },
+    "triage_note": {
+      "type": "Text",
+      "props": {
+        "text": "Every low/medium candidate dropped in triage: defense-in-depth, deliberate design, misconfig-not-code, dev-only + attacker-privilege exceeds-yield",
+        "variant": "caption"
+      }
+    },
+    "security_features": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "security_heading",
+        "security_list"
+      ]
+    },
+    "security_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable Security Features",
+        "level": "h2"
+      }
+    },
+    "security_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "feature_alg",
+        "feature_timing",
+        "feature_replay",
+        "feature_credential",
+        "feature_egress",
+        "feature_dns"
+      ]
+    },
+    "feature_alg": {
+      "type": "Badge",
+      "props": {
+        "text": "alg-pinned jose",
+        "variant": "outline"
+      }
+    },
+    "feature_timing": {
+      "type": "Badge",
+      "props": {
+        "text": "timingSafeEqual throughout",
+        "variant": "outline"
+      }
+    },
+    "feature_replay": {
+      "type": "Badge",
+      "props": {
+        "text": "replay-deduped source-auth",
+        "variant": "outline"
+      }
+    },
+    "feature_credential": {
+      "type": "Badge",
+      "props": {
+        "text": "host-pinned credential-broker",
+        "variant": "outline"
+      }
+    },
+    "feature_egress": {
+      "type": "Badge",
+      "props": {
+        "text": "IP-pinned egress with fail-closed lua authz",
+        "variant": "outline"
+      }
+    },
+    "feature_dns": {
+      "type": "Badge",
+      "props": {
+        "text": "closed dns-rebinding",
+        "variant": "outline"
+      }
+    },
+    "scanner_results": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "scanner_heading",
+        "scanner_table"
+      ]
+    },
+    "scanner_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanner Results",
+        "level": "h2"
+      }
+    },
+    "scanner_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Scanner",
+          "Status"
+        ],
+        "rows": [
+          [
+            "semgrep",
+            "fail"
+          ],
+          [
+            "trufflehog",
+            "fail"
+          ],
+          [
+            "osv-binary",
+            "fail (iss-018 sandbox day-40)"
+          ],
+          [
+            "npm-audit",
+            "ok"
+          ],
+          [
+            "hand-audit",
+            "ok"
+          ]
+        ]
+      }
+    },
+    "actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions_heading",
+        "actions_content"
+      ]
+    },
+    "actions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions Taken",
+        "level": "h2"
+      }
+    },
+    "actions_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pvr_stat",
+        "pr_stat",
+        "channel_status"
+      ]
+    },
+    "pvr_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "PVR Filed",
+        "value": "0"
+      }
+    },
+    "pr_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "PR Opened",
+        "value": "0"
+      }
+    },
+    "channel_status": {
+      "type": "Badge",
+      "props": {
+        "text": "Channel warm",
+        "variant": "secondary"
+      }
+    }
+  }
+}

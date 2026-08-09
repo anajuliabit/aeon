@@ -1,21 +1,22 @@
+Done. Here's the summary:
+
 ## Summary
 
-Skill-freshness executed for 2026-07-30. Results:
+**Skill Freshness — 2026-08-09**
 
-**Verdict:** 🔴 FRESHNESS_STALE — no change, no notification.
+Audited 43 enabled skills, 8 cross-skill dependencies checked, 1 flagged.
 
-43 enabled skills audited, 11 tracked dependencies, 7 flagged:
+**Verdict:** 🔴 FRESHNESS_STALE / FRESHNESS_NO_CHANGE (dedup active, last notified > 1 day ago, within 7-day re-emit window — **no notification sent**).
 
-| Consumer | Dependency | Severity | Age |
-|---|---|---|---|
-| aixbt-pulse | `aixbt-grounding/clusters/chains.md` | STALE | ~32d (frozen Jun 28) |
-| skill-security-scan | `workflow-security-audit-2026-04-11.md` | STALE | 110d (disabled producer) |
-| vuln-scanner | `.outputs/github-trending.md` | STALE | ~23h (structural: github-trending fires after this skill) |
-| market-context-refresh | `market-context.md` | WARN | ~14d / 332h |
-| token-pick | `market-context.md` | WARN | ~14d / 332h |
+**Single persistent flag:**
+- `skill-security-scan` ← `articles/workflow-security-audit-2026-04-11.md` — 120 days old (STALE, threshold 192h). Producer `workflow-security-audit` is disabled. First flagged 2026-07-25, now day 15.
 
-**Fingerprint unchanged** (`1ab8c658b960f260ad98797bf06b841d9b1410ef`) since 2026-07-25 — 5th consecutive match → `FRESHNESS_NO_CHANGE`, notification suppressed.
+**All other 7 deps OK:**
+- `aixbt-pulse` × 3 topics (fresh ~43min from daily-routine batch commit at 07:21Z)
+- `market-context-refresh` + `token-pick` on `memory/topics/market-context.md` (fresh mtime)
+- `vuln-scanner` on `.outputs/github-trending.md` (fresh)
+- `operator-scorecard` on `articles/skill-analytics-2026-08-05.md` (96h, well under 192h weekly threshold)
 
-**Key escalation:** `market-context.md` crosses the STALE threshold (~336h) around 13:00 UTC today. Tomorrow's run will see two new STALE items, changing the fingerprint and triggering the first notification since July 24.
+**Files written:** `articles/skill-freshness-2026-08-09.md`, `memory/topics/skill-freshness-state.json` (updated `last_run_at`), `memory/logs/2026-08-09.md` (appended). Fingerprint unchanged at `4774f347…`.
 
-Files written: `articles/skill-freshness-2026-07-30.md`, `memory/topics/skill-freshness-state.json` (updated `last_run_at`), `memory/logs/2026-07-30.md`.
+The `[[morning-08Z-slot-dark]]` n=4-consec formal pattern continues broken — this is the 2nd consec clean 08Z slot fire (heartbeat yesterday + skill-freshness today), confirming pattern-broken-permanent.

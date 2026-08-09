@@ -1,0 +1,602 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Deal Flow — 2026-08-03",
+        "description": "Capital clusters in agent primitives and nuclear-for-compute"
+      },
+      "children": [
+        "intro-text",
+        "sep1",
+        "deal-1-stack",
+        "deal-2-stack",
+        "deal-3-stack",
+        "deal-4-stack",
+        "deal-5-stack",
+        "deal-6-stack",
+        "deal-7-stack",
+        "deal-8-stack",
+        "sep2",
+        "sources-section"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "Capital clustered in two piles — agent primitives at Series B (Simile 2× UP in 5mo) and nuclear-for-compute at Series B/C (Antares 4.9× round-size 8mo post-B; Valar $1B Series B). Etched's $10.3B pre-shipping mark is the tape's contrarian bet against Nvidia.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-1-heading",
+        "deal-1-desc",
+        "deal-1-funding",
+        "deal-1-why",
+        "deal-1-badge"
+      ]
+    },
+    "deal-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Etched",
+        "level": "h3"
+      }
+    },
+    "deal-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Anti-Nvidia AI-inference ASIC | Lead: Sequoia (a16z, SK Hynix, Jane Street)"
+      }
+    },
+    "deal-1-funding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-1-stat-series-c",
+        "deal-1-stat-delta",
+        "deal-1-stat-prior"
+      ]
+    },
+    "deal-1-stat-series-c": {
+      "type": "Stat",
+      "props": {
+        "label": "Series C Funding",
+        "value": "$300M @ $10.3B post"
+      }
+    },
+    "deal-1-stat-delta": {
+      "type": "Stat",
+      "props": {
+        "label": "Growth vs Series B",
+        "value": "6.8×",
+        "trend": "up"
+      }
+    },
+    "deal-1-stat-prior": {
+      "type": "Text",
+      "props": {
+        "text": "Series B (Jun-2024): $1.5B post",
+        "variant": "caption"
+      }
+    },
+    "deal-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Sequoia + strategic SK Hynix pricing a single-workload chip at unicorn 6× the last mark, pre-shipping product.",
+        "variant": "body"
+      }
+    },
+    "deal-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AI Hardware",
+        "variant": "default"
+      }
+    },
+    "deal-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-2-heading",
+        "deal-2-desc",
+        "deal-2-funding",
+        "deal-2-why",
+        "deal-2-badge"
+      ]
+    },
+    "deal-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Simile",
+        "level": "h3"
+      }
+    },
+    "deal-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Foundation model for human behavior / synthetic-user simulation | Lead: Greenoaks"
+      }
+    },
+    "deal-2-funding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-2-stat-series-b",
+        "deal-2-stat-delta",
+        "deal-2-stat-prior"
+      ]
+    },
+    "deal-2-stat-series-b": {
+      "type": "Stat",
+      "props": {
+        "label": "Series B Funding",
+        "value": "$200M @ $2B post"
+      }
+    },
+    "deal-2-stat-delta": {
+      "type": "Stat",
+      "props": {
+        "label": "Growth vs Prior",
+        "value": "2×",
+        "trend": "up"
+      }
+    },
+    "deal-2-stat-prior": {
+      "type": "Text",
+      "props": {
+        "text": "Prior implied post: $1B",
+        "variant": "caption"
+      }
+    },
+    "deal-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: 5-month Series A → B at 2× is the fastest agent-primitive re-price of the cycle; synthetic users are the training-data side of the ZHC thesis.",
+        "variant": "body"
+      }
+    },
+    "deal-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Agent Primitives",
+        "variant": "default"
+      }
+    },
+    "deal-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-3-heading",
+        "deal-3-desc",
+        "deal-3-funding",
+        "deal-3-why",
+        "deal-3-badge"
+      ]
+    },
+    "deal-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Safe Superintelligence",
+        "level": "h3"
+      }
+    },
+    "deal-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Sutskever's pre-product AI lab | Lead: Nvidia"
+      }
+    },
+    "deal-3-funding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-3-stat-strategic",
+        "deal-3-stat-prior"
+      ]
+    },
+    "deal-3-stat-strategic": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategic Investment",
+        "value": "$5B"
+      }
+    },
+    "deal-3-stat-prior": {
+      "type": "Text",
+      "props": {
+        "text": "Prior valuation (Feb-2025): $32B",
+        "variant": "caption"
+      }
+    },
+    "deal-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Nvidia $5B pulls SSI off Google TPU onto Vera Rubin — chipmaker locking future training demand via equity, not sales.",
+        "variant": "body"
+      }
+    },
+    "deal-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AI / Chips",
+        "variant": "default"
+      }
+    },
+    "deal-4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-4-heading",
+        "deal-4-desc",
+        "deal-4-funding",
+        "deal-4-why",
+        "deal-4-badge"
+      ]
+    },
+    "deal-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Antares",
+        "level": "h3"
+      }
+    },
+    "deal-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Nuclear microreactors for defense/space (TRISO, 100kW–1MW) | Lead: Paradigm + Caffeinated Capital"
+      }
+    },
+    "deal-4-funding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-4-stat-series-c",
+        "deal-4-stat-growth",
+        "deal-4-stat-prior"
+      ]
+    },
+    "deal-4-stat-series-c": {
+      "type": "Stat",
+      "props": {
+        "label": "Series C Funding",
+        "value": "$370M equity + $100M debt"
+      }
+    },
+    "deal-4-stat-growth": {
+      "type": "Stat",
+      "props": {
+        "label": "Round-size growth (8mo post-B)",
+        "value": "4.9×",
+        "trend": "up"
+      }
+    },
+    "deal-4-stat-prior": {
+      "type": "Text",
+      "props": {
+        "text": "Series B (Dec-2025): $96M",
+        "variant": "caption"
+      }
+    },
+    "deal-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: 4.9× round-size 8mo post-B, week after Mark-0 hit first non-light-water criticality in the US since the 1980s — physics validation → immediate scale capital.",
+        "variant": "body"
+      }
+    },
+    "deal-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Nuclear / Energy",
+        "variant": "default"
+      }
+    },
+    "deal-5-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-5-heading",
+        "deal-5-desc",
+        "deal-5-funding",
+        "deal-5-why",
+        "deal-5-badge"
+      ]
+    },
+    "deal-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Valar Atomics",
+        "level": "h3"
+      }
+    },
+    "deal-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Small modular reactors for data-center power | Lead: Sequoia (Shaun Maguire, joins board)"
+      }
+    },
+    "deal-5-funding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-5-stat-series-b",
+        "deal-5-stat-credit"
+      ]
+    },
+    "deal-5-stat-series-b": {
+      "type": "Stat",
+      "props": {
+        "label": "Series B Funding",
+        "value": "$1B @ $6B post"
+      }
+    },
+    "deal-5-stat-credit": {
+      "type": "Stat",
+      "props": {
+        "label": "Credit Line",
+        "value": "$200M"
+      }
+    },
+    "deal-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: $1B at Series B for SMRs + Sequoia partner on board — second nuclear-for-compute megaround the same week.",
+        "variant": "body"
+      }
+    },
+    "deal-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Nuclear / Energy",
+        "variant": "default"
+      }
+    },
+    "deal-6-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-6-heading",
+        "deal-6-desc",
+        "deal-6-funding",
+        "deal-6-why",
+        "deal-6-badge"
+      ]
+    },
+    "deal-6-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "6. Glow",
+        "level": "h3"
+      }
+    },
+    "deal-6-desc": {
+      "type": "Text",
+      "props": {
+        "text": "AI-native endpoint security (ex-Meta VP + ex-Snowflake CISO) | Lead: Sequoia + Cyberstarts + Greenoaks + Redpoint"
+      }
+    },
+    "deal-6-funding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-6-stat-series-a"
+      ]
+    },
+    "deal-6-stat-series-a": {
+      "type": "Stat",
+      "props": {
+        "label": "Series A Funding",
+        "value": "$180M @ $1.2B post"
+      }
+    },
+    "deal-6-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Day-one $1.2B out of stealth = Sequoia + Cyberstarts pre-empting endpoint sec's AI rewrite before any competitor scales.",
+        "variant": "body"
+      }
+    },
+    "deal-6-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Security / AI",
+        "variant": "default"
+      }
+    },
+    "deal-7-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-7-heading",
+        "deal-7-desc",
+        "deal-7-funding",
+        "deal-7-why",
+        "deal-7-badge"
+      ]
+    },
+    "deal-7-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "7. June",
+        "level": "h3"
+      }
+    },
+    "deal-7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Scans legacy stack, autogenerates enterprise agent deployment plans | Lead: Time Ventures (Benioff); Dell, Levie, Greene, Kurtz on the cap table"
+      }
+    },
+    "deal-7-funding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-7-stat-preseed"
+      ]
+    },
+    "deal-7-stat-preseed": {
+      "type": "Stat",
+      "props": {
+        "label": "Pre-seed Funding",
+        "value": "$20M"
+      }
+    },
+    "deal-7-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Benioff + Dell + Levie + Kurtz on pre-seed = enterprise-agent distribution layer between agents and Salesforce/ServiceNow gets its first named bet.",
+        "variant": "body"
+      }
+    },
+    "deal-7-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Enterprise / Agents",
+        "variant": "default"
+      }
+    },
+    "deal-8-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deal-8-heading",
+        "deal-8-desc",
+        "deal-8-funding",
+        "deal-8-why",
+        "deal-8-badge"
+      ]
+    },
+    "deal-8-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "8. Antora Energy",
+        "level": "h3"
+      }
+    },
+    "deal-8-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Thermal-battery grid storage for data centers | Lead: G2 Venture Partners + Eclipse"
+      }
+    },
+    "deal-8-funding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-8-stat-series-c"
+      ]
+    },
+    "deal-8-stat-series-c": {
+      "type": "Stat",
+      "props": {
+        "label": "Series C Funding",
+        "value": "$550M"
+      }
+    },
+    "deal-8-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Third energy-for-compute megaround same week alongside Antares + Valar — thermal batteries are the same AI-power trade in a different form factor.",
+        "variant": "body"
+      }
+    },
+    "deal-8-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Energy / Storage",
+        "variant": "default"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "crunchbase=ok, techcrunch=ok, cryptorank=degraded(paywall), crypto-fundraising=ok, aift=ok, websearch=ok | candidates=25 → kept=8",
+        "variant": "caption"
+      }
+    }
+  }
+}

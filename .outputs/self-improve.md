@@ -1,1 +1,1 @@
-self-improve: github-trending SKILL.md 12-17 candidate ceiling documented (was ~25 fiction) — kills 4-day-durable false-anomaly signal before 5-consec ISS-file gate — PR: https://github.com/anajuliabit/aeon/pull/171
+self-improve: 3+ open PRs (queue-full — #173/#172/#171) — waiting for review batch 8-09

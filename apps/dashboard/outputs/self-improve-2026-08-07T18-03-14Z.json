@@ -1,0 +1,109 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_row",
+        "separator",
+        "prs_section"
+      ]
+    },
+    "status_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pr_count",
+        "queue_badge"
+      ]
+    },
+    "pr_count": {
+      "type": "Text",
+      "props": {
+        "text": "3+ open PRs",
+        "variant": "lead"
+      }
+    },
+    "queue_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "queue-full",
+        "variant": "destructive"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prs_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prs_list",
+        "wait_status"
+      ]
+    },
+    "prs_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr_173",
+        "pr_172",
+        "pr_171"
+      ]
+    },
+    "pr_173": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #173",
+        "href": "https://github.com/aeon/aeon/pull/173"
+      }
+    },
+    "pr_172": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #172",
+        "href": "https://github.com/aeon/aeon/pull/172"
+      }
+    },
+    "pr_171": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #171",
+        "href": "https://github.com/aeon/aeon/pull/171"
+      }
+    },
+    "wait_status": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting for review batch 8-09",
+        "variant": "muted"
+      }
+    }
+  }
+}

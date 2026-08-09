@@ -1,0 +1,252 @@
+{
+  "root": "card_freshness",
+  "state": {},
+  "elements": {
+    "card_freshness": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Freshness — 2026-08-01",
+        "description": "Dependency freshness monitoring report"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "stat_deps",
+        "heading_worst",
+        "stack_worst",
+        "sep2",
+        "heading_escalation",
+        "stack_escalation",
+        "sep3",
+        "heading_action",
+        "stack_actions",
+        "sep4",
+        "link_full"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "FRESHNESS_STALE — 7 of 11 deps flagged across 5 of 43 enabled consumers"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "stat_deps": {
+      "type": "Stat",
+      "props": {
+        "label": "Stale Dependencies",
+        "value": "7 of 11",
+        "delta": "across 5 of 43 consumers"
+      }
+    },
+    "heading_worst": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst Cases",
+        "level": "h3"
+      }
+    },
+    "stack_worst": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_security_scan",
+        "item_aixbt",
+        "item_market"
+      ]
+    },
+    "item_security_scan": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_security_scan_title",
+        "text_security_scan_details",
+        "badge_security_scan_status"
+      ]
+    },
+    "text_security_scan_title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan ← articles/workflow-security-audit-2026-04-11.md",
+        "variant": "lead"
+      }
+    },
+    "text_security_scan_details": {
+      "type": "Text",
+      "props": {
+        "text": "112 days old (articles/weekly) — stale due to disabled producer"
+      }
+    },
+    "badge_security_scan_status": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "item_aixbt": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_aixbt_title",
+        "text_aixbt_details",
+        "badge_aixbt_status"
+      ]
+    },
+    "text_aixbt_title": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse ← memory/topics/aixbt-grounding.md",
+        "variant": "lead"
+      }
+    },
+    "text_aixbt_details": {
+      "type": "Text",
+      "props": {
+        "text": "~34 days old (topics) — dead-slot d34+ needs separate fix"
+      }
+    },
+    "badge_aixbt_status": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "item_market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_market_title",
+        "text_market_details",
+        "badge_market_status"
+      ]
+    },
+    "text_market_title": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh ← memory/topics/market-context.md",
+        "variant": "lead"
+      }
+    },
+    "text_market_details": {
+      "type": "Text",
+      "props": {
+        "text": "~16 days old (topics) — escalated from WARN"
+      }
+    },
+    "badge_market_status": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "heading_escalation": {
+      "type": "Heading",
+      "props": {
+        "text": "Escalation",
+        "level": "h3"
+      }
+    },
+    "stack_escalation": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_esc_threshold",
+        "text_esc_change",
+        "text_esc_count"
+      ]
+    },
+    "text_esc_threshold": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh + token-pick cross 2× age threshold today (380h vs 336h)"
+      }
+    },
+    "text_esc_change": {
+      "type": "Text",
+      "props": {
+        "text": "First fingerprint change since 2026-07-25"
+      }
+    },
+    "text_esc_count": {
+      "type": "Text",
+      "props": {
+        "text": "All 7 flagged items now STALE (was 5 STALE + 2 WARN)"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions",
+        "level": "h3"
+      }
+    },
+    "stack_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_action_issue",
+        "text_action_aixbt",
+        "text_action_workflow"
+      ]
+    },
+    "text_action_issue": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 cluster unblock resolves market-context + token-pick"
+      }
+    },
+    "text_action_aixbt": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse dead-slot d34+ needs separate fix"
+      }
+    },
+    "text_action_workflow": {
+      "type": "Text",
+      "props": {
+        "text": "workflow-security-audit-2026-04-11.md stale due to disabled producer"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "link_full": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/skill-freshness-2026-08-01.md",
+        "source": "skill-freshness"
+      }
+    }
+  }
+}

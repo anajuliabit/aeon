@@ -1,0 +1,424 @@
+{
+  "root": "root-card",
+  "state": {},
+  "elements": {
+    "root-card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-08-05"
+      },
+      "children": [
+        "verdict-text",
+        "sep1",
+        "today-heading",
+        "langflow-stack",
+        "tomcat-stack",
+        "malware-stack",
+        "sep2",
+        "week-heading",
+        "flowise-stack",
+        "ncentral-stack",
+        "openwebui-stack",
+        "ghost-stack",
+        "sep3",
+        "stats-text"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 3 actively exploited (2 fresh KEV + 408-pkg npm malware peak), 4 to schedule (Flowise 9-CVE researcher-drop + N-central KEV tail + Open WebUI 7-pack + Ghost XSS). memory-window malware peak (408 > 8-01's 318). Sources: KEV, GH Advisory, EPSS.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Patch Today",
+        "level": "h2"
+      }
+    },
+    "langflow-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "langflow-link",
+        "langflow-badges",
+        "langflow-desc",
+        "langflow-details",
+        "langflow-action"
+      ]
+    },
+    "langflow-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-9198 — IBM Langflow",
+        "href": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "source": "KEV added 2026-08-04"
+      }
+    },
+    "langflow-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "langflow-epss",
+        "langflow-impact"
+      ]
+    },
+    "langflow-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.171 (97th pct)",
+        "variant": "secondary"
+      }
+    },
+    "langflow-impact": {
+      "type": "Badge",
+      "props": {
+        "text": "Unauth full RCE",
+        "variant": "destructive"
+      }
+    },
+    "langflow-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Code injection via unauth endpoint · CISA due 2026-08-07",
+        "variant": "body"
+      }
+    },
+    "langflow-details": {
+      "type": "Text",
+      "props": {
+        "text": "6th unauth-agent-framework-CVE in KEV; extends [[AI-framework-attack-surface]] to KEV-confirmed.",
+        "variant": "caption"
+      }
+    },
+    "langflow-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Upgrade Langflow to ≥1.5.1 today, or pull internet-exposed instances offline."
+      }
+    },
+    "tomcat-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tomcat-link",
+        "tomcat-epss",
+        "tomcat-desc",
+        "tomcat-action"
+      ]
+    },
+    "tomcat-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-34486 — Apache Tomcat",
+        "href": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "source": "KEV added 2026-08-04"
+      }
+    },
+    "tomcat-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.812 (99.6th pct — top single-CVE score Q3)",
+        "variant": "destructive"
+      }
+    },
+    "tomcat-desc": {
+      "type": "Text",
+      "props": {
+        "text": "EncryptInterceptor bypass · CISA due 2026-08-07",
+        "variant": "body"
+      }
+    },
+    "tomcat-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Patch Tomcat to 9.0.109 / 10.1.44 / 11.0.10 today; audit cluster-comm channels."
+      }
+    },
+    "malware-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "malware-title",
+        "malware-peak",
+        "malware-signature",
+        "malware-tinkoff",
+        "malware-wallet",
+        "malware-polymarket",
+        "malware-other",
+        "malware-action"
+      ]
+    },
+    "malware-title": {
+      "type": "Heading",
+      "props": {
+        "text": "408-package npm malware mega-batch",
+        "level": "h3"
+      }
+    },
+    "malware-peak": {
+      "type": "Stat",
+      "props": {
+        "label": "Packages (24h post-8-04)",
+        "value": "408",
+        "delta": "+90 vs 8-01",
+        "trend": "up"
+      }
+    },
+    "malware-signature": {
+      "type": "Text",
+      "props": {
+        "text": "Mega-batch signature: Tinkoff mega-corp-scope 100+ pkgs + wallet-cluster extension d2 + Polymarket-sub-cluster NEW + @umacloud CLI multi-arch 7-variant + @qlik/@nebula.js BI-vendor scope + beaver-ui-*/bigops-* continuations.",
+        "variant": "body"
+      }
+    },
+    "malware-tinkoff": {
+      "type": "Text",
+      "props": {
+        "text": "Tinkoff: tinkoff-*, statist-browser-typed-client-*, tramvai-tinkoff-*, volna-boxy-*, platform-ui-*",
+        "variant": "caption"
+      }
+    },
+    "malware-wallet": {
+      "type": "Text",
+      "props": {
+        "text": "Wallet: @zzzgenesis00/ethers-wallet, @zzzgenesis00/bip39-mnemonic, @zzzgenesis00/spl-token-utils, trezor-lib, ledger-lib, ckcc-protocol, hwi-lib, wallet-analytics",
+        "variant": "caption"
+      }
+    },
+    "malware-polymarket": {
+      "type": "Text",
+      "props": {
+        "text": "Polymarket: polyclob-api, poly-provider-api, polymarket-toolkit",
+        "variant": "caption"
+      }
+    },
+    "malware-other": {
+      "type": "Text",
+      "props": {
+        "text": "Other: @umacloud CLI (7-variant), @qlik/@nebula.js, beaver-ui-*, bigops-*",
+        "variant": "caption"
+      }
+    },
+    "malware-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Wallet rotation required",
+        "message": "Grep repos for direct deps of any listed prefix. If a build pulled @zzzgenesis00/*, ckcc-protocol, ledger-lib, or trezor-lib in last 24h: rotate wallet seeds + revoke keys."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Patch This Week",
+        "level": "h2"
+      }
+    },
+    "flowise-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "flowise-link",
+        "flowise-desc",
+        "flowise-cves",
+        "flowise-note",
+        "flowise-action"
+      ]
+    },
+    "flowise-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Flowise 9-CVE researcher-drop",
+        "href": "https://github.com/advisories?query=flowise+2026-08-04",
+        "source": "npm published 8-04 15:13Z–19:37Z"
+      }
+    },
+    "flowise-desc": {
+      "type": "Text",
+      "props": {
+        "text": "All no-patch. RCE, sandbox escape, token exfil across multiple subsystems.",
+        "variant": "body"
+      }
+    },
+    "flowise-cves": {
+      "type": "Text",
+      "props": {
+        "text": "• CVE-2026-69255: CSV-agent Pyodide RCE (\"Root Shell Verified\")\n• CVE-2026-69254: NodeVM sandbox escape\n• CVE-2026-69259: SQLite-Record-Manager RCE\n• CVE-2026-70477: CSV-agent prompt-injection RCE\n• CVE-2026-70470: Pyodide Unicode homoglyph bypass\n• CVE-2026-70478: OAuth2 refresh-endpoint token exfil\n• CVE-2026-69263: MCP env-var blocklist bypass (bypasses CVE-2025-8943)",
+        "variant": "caption"
+      }
+    },
+    "flowise-note": {
+      "type": "Text",
+      "props": {
+        "text": "Rail n=6",
+        "variant": "muted"
+      }
+    },
+    "flowise-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Isolate all Flowise deployments this week. Assume compromise if internet-exposed since 2026-08-04. Watch upstream for coordinated release."
+      }
+    },
+    "ncentral-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ncentral-link",
+        "ncentral-desc",
+        "ncentral-chain",
+        "ncentral-action"
+      ]
+    },
+    "ncentral-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-18556 — N-able N-central",
+        "href": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "source": "KEV added 2026-08-04"
+      }
+    },
+    "ncentral-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Parent of CVE-2026-18577 (dedup'd 8-03 KEV). Auth-bypass via alternate path. CISA due 2026-08-07.",
+        "variant": "body"
+      }
+    },
+    "ncentral-chain": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Incomplete-patch chain",
+        "message": "Original bug → CVE-2026-18556 → CVE-2026-18577 (incomplete-patch). [[RMM-platform-in-KEV]] continues."
+      }
+    },
+    "ncentral-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Confirm N-central 2026.3 HF1 covers both CVE IDs; discontinue if not."
+      }
+    },
+    "openwebui-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "openwebui-link",
+        "openwebui-desc",
+        "openwebui-cves",
+        "openwebui-action"
+      ]
+    },
+    "openwebui-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Open WebUI 7-CVE cluster",
+        "href": "https://github.com/advisories?query=open-webui+2026-08-04",
+        "source": "pip published 8-04 19:40Z–21:54Z"
+      }
+    },
+    "openwebui-desc": {
+      "type": "Text",
+      "props": {
+        "text": "XSS, auth bypass, SSRF across stored/reflected surfaces.",
+        "variant": "body"
+      }
+    },
+    "openwebui-cves": {
+      "type": "Text",
+      "props": {
+        "text": "• CVE-2026-70492 (8.7): Stored XSS via KaTeX\n• CVE-2026-70486 (8.2): Same-origin XSS→ATO\n• CVE-2026-70482 (8.1): OAuth ATO accepts any-client tokens\n• CVE-2026-70494 (8.1): Collab folder-delete\n• CVE-2026-70479 (7.7): SSRF via Playwright loader\n• CVE-2026-70485 (7.1): NAT64 internal-services SSRF",
+        "variant": "caption"
+      }
+    },
+    "openwebui-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade Open WebUI to ≥0.6.35 this week. Disable public signup on self-hosted instances."
+      }
+    },
+    "ghost-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ghost-link",
+        "ghost-cvss",
+        "ghost-action"
+      ]
+    },
+    "ghost-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-53950 — Ghost ActivityPub",
+        "href": "https://github.com/advisories/GHSA-xpp7-93x6-v29m",
+        "source": "@tryghost/activitypub (npm)"
+      }
+    },
+    "ghost-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5 — XSS",
+        "variant": "secondary"
+      }
+    },
+    "ghost-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade @tryghost/activitypub to fix release."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-text": {
+      "type": "Text",
+      "props": {
+        "text": "KEV this week: 5 (3 fresh 8-04: Langflow + Tomcat + N-central-parent; 2 dedup'd: N-central-child 8-03 + Cisco FMC 7-29). Aeon-fleet clean d7 vs digest surface.",
+        "variant": "muted"
+      }
+    }
+  }
+}

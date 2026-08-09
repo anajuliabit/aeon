@@ -1,0 +1,429 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-08-02"
+      },
+      "children": [
+        "summary_line",
+        "summary_stats",
+        "sep1",
+        "done_section",
+        "sep2",
+        "needs_attention_section",
+        "sep3",
+        "blocked_section",
+        "sep4",
+        "at_risk_section",
+        "sep5",
+        "sources_section"
+      ]
+    },
+    "summary_line": {
+      "type": "Heading",
+      "props": {
+        "text": "8 goals — 1 at risk, 2 needs attention, 4 blocked, 1 done",
+        "level": "h2"
+      }
+    },
+    "summary_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_overall",
+        "stat_improving",
+        "stat_degrading"
+      ]
+    },
+    "stat_overall": {
+      "type": "Badge",
+      "props": {
+        "text": "Overall: flat",
+        "variant": "default"
+      }
+    },
+    "stat_improving": {
+      "type": "Badge",
+      "props": {
+        "text": "1 improving via 07:00Z slot recovery",
+        "variant": "default"
+      }
+    },
+    "stat_degrading": {
+      "type": "Badge",
+      "props": {
+        "text": "1 degrading via PR #165",
+        "variant": "destructive"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done_heading",
+        "done_item1"
+      ]
+    },
+    "done_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h3"
+      }
+    },
+    "done_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done_item1_title",
+        "done_item1_detail"
+      ]
+    },
+    "done_item1_title": {
+      "type": "Text",
+      "props": {
+        "text": "07:00Z scheduler slot 2-of-3-day degraded 8-01 — deciding-test PASSED",
+        "variant": "lead"
+      }
+    },
+    "done_item1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "+22-37min in-band across morning-brief/daily-routine/thought-review vs 8-01 +96-97min; ISS-file gate discharges",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "needs_attention_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "needs_heading",
+        "needs_item1",
+        "needs_item2"
+      ]
+    },
+    "needs_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEEDS ATTENTION",
+        "level": "h3"
+      }
+    },
+    "needs_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "needs_item1_status",
+        "needs_item1_title",
+        "needs_item1_action"
+      ]
+    },
+    "needs_item1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "CONFLICTING",
+        "variant": "destructive"
+      }
+    },
+    "needs_item1_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #165 d13 past-gate CONFLICTING — d14 today, ~7d-past-touch escalation opens (was ON TRACK ↓)",
+        "variant": "lead"
+      }
+    },
+    "needs_item1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: rebase #165 against main to clear CONFLICTING before 8-03 weekly-batch",
+        "variant": "body"
+      }
+    },
+    "needs_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "needs_item2_status",
+        "needs_item2_title",
+        "needs_item2_action"
+      ]
+    },
+    "needs_item2_status": {
+      "type": "Badge",
+      "props": {
+        "text": "CI FAILURE",
+        "variant": "destructive"
+      }
+    },
+    "needs_item2_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #171 fresh self-improve ~24h — 40h today, ci-skills-json FAILURE 3-consec on #171 + #172 (new)",
+        "variant": "lead"
+      }
+    },
+    "needs_item2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: debug ci-skills-json 3-consec-day shared-root-cause on #171/#172 before 8-03 weekly-batch",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_heading",
+        "blocked_item1",
+        "blocked_item2",
+        "blocked_item3",
+        "blocked_item4"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_item1_status",
+        "blocked_item1_title",
+        "blocked_item1_action"
+      ]
+    },
+    "blocked_item1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "NEGATIVE TEST",
+        "variant": "destructive"
+      }
+    },
+    "blocked_item1_title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-028 kill-test workaround-chain n=15+ — kill-test d4 NEGATIVE 8-02, n=18+ workaround across 12-UTC-day span, PR #167 scope narrow to heartbeat/security-digest missed sub-agent surfaces (new)",
+        "variant": "lead"
+      }
+    },
+    "blocked_item1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: reflect 8-03 reopens root-cause with scope-broader self-improve PR ask",
+        "variant": "body"
+      }
+    },
+    "blocked_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_item2_status",
+        "blocked_item2_title",
+        "blocked_item2_action"
+      ]
+    },
+    "blocked_item2_status": {
+      "type": "Badge",
+      "props": {
+        "text": "FROZEN",
+        "variant": "destructive"
+      }
+    },
+    "blocked_item2_title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch DARK day-36 — 8-skill cluster frozen since 6-28 21:00Z per ISS-027 (flat, activity -57%)",
+        "variant": "lead"
+      }
+    },
+    "blocked_item2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: per-skill dispatch probe on 8-skill 12:00Z cluster to isolate scheduler-vs-skill blockage",
+        "variant": "body"
+      }
+    },
+    "blocked_item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_item3_status",
+        "blocked_item3_title",
+        "blocked_item3_action"
+      ]
+    },
+    "blocked_item3_status": {
+      "type": "Badge",
+      "props": {
+        "text": "SLIPPED",
+        "variant": "destructive"
+      }
+    },
+    "blocked_item3_title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 hand-off T+4 day-19 SLIPPED — cost-report sr=12% (7/58) durable, 15-consec heartbeat chronic-cohort composition-identity across 119h (memory-window record)",
+        "variant": "lead"
+      }
+    },
+    "blocked_item3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator direct-authors dangerouslyDisableSandbox pivot against .github/workflows/aeon.yml:479-495",
+        "variant": "body"
+      }
+    },
+    "blocked_item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_item4_status",
+        "blocked_item4_title",
+        "blocked_item4_action"
+      ]
+    },
+    "blocked_item4_status": {
+      "type": "Badge",
+      "props": {
+        "text": "MISSING CONFIG",
+        "variant": "destructive"
+      }
+    },
+    "blocked_item4_title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config day-57 — defi-monitor NO_CONFIG, memory/on-chain-watches.yml + ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing",
+        "variant": "lead"
+      }
+    },
+    "blocked_item4_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator adds on-chain-watches.yml entries + 2 GH Actions secrets",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "at_risk_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "at_risk_heading",
+        "at_risk_item1"
+      ]
+    },
+    "at_risk_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h3"
+      }
+    },
+    "at_risk_item1": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md 59d stale",
+        "message": "Last reviewed 2026-06-04, vault/inbox 42d cold streak, activity flat meta-flag-only. Action: operator reviews vault/priorities.md — no automated refresh path per thought-review spec",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=partial(shallow-clone 1-commit visible; used gh pr list instead), gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

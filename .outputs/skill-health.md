@@ -1,17 +1,17 @@
-*Skill Health — 2026-07-30*
-HEALTH: DEGRADED(18)  [systemic: output_tokens=0 sandbox-truncation, 18 skills, day-37]
+*Skill Health — 2026-08-08*
+HEALTH: DEGRADED(17)  [systemic: ISS-027 12Z 8-skill batch d43 dormant (4 in DEGRADED / 4 in WARNING); ISS-030 cost-report sr 10% chronic]
 
-daily-cadence reminder tick — composition stable since 7-28 19:02Z (hash 7bf88238 3rd consec, ~47h since last notify).
-
-🟡 DEGRADED (top 5 by dsls)
-- aixbt-pulse — sr 0.47, 32d dark — WAIT-API
-- defi-monitor — sr 0.53, 32d dark — WAIT-API
-- market-context-refresh — sr 0.32, 32d dark — WAIT-API
-- narrative-tracker — sr 0.33, 32d dark — WAIT-API
-- vuln-scanner — sr 0.21, 5d — INVESTIGATE → ISS-018
-+13 more — see memory/issues/INDEX.md
+🟡 DEGRADED (13 outside systemic)
+- skill-evals — sr 56%, 6d since success → INVESTIGATE
+- search-skill — sr 38%, 5d since success → INVESTIGATE (→ ISS-021)
+- unlock-monitor — sr 57%, 5d since success → INVESTIGATE
+- skill-analytics — sr 21%, 3d since success → INVESTIGATE
+- reg-monitor — sr 21%, 3d since success → INVESTIGATE
+- +8 more — see memory/issues/INDEX.md
 
 ⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
-🟢 HEALTHY: 10
+🟢 HEALTHY: 8
 
-open issues: 11 · resolved this run: 0 · filed this run: 0
+Delta since 8-07 18:07Z: list-digest DEGRADED→WARNING (sr 0.60 crosses gate). DEGRADED 18→17, WARNING 14→15. Fleet clean-consec d4 crossing 8-08. No fresh usepod / sdk_opt_in_required signatures. [[morning-08Z-slot-dark]] deciding-test FAILS at n=5 — heartbeat + skill-freshness both clean 8-08 08Z (positive break of 4-consec pattern).
+
+Open issues: 14 · Resolved this run: 0 · Filed this run: 0

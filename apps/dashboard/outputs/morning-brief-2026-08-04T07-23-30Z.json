@@ -1,0 +1,238 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-04"
+      },
+      "children": [
+        "heading_focus",
+        "stack_focus",
+        "sep1",
+        "heading_since",
+        "stack_since",
+        "sep2",
+        "heading_running",
+        "stack_running"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "stack_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_1_badge",
+        "focus_1_text"
+      ]
+    },
+    "focus_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "cost-report"
+      }
+    },
+    "focus_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "why now: consec=12, fresh non-usepod api_error, sole ongoing failure"
+      }
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_2_badge",
+        "focus_2_text"
+      ]
+    },
+    "focus_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-029 close-out"
+      }
+    },
+    "focus_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "why now: fleet recovered 20Z, this morning slot tests continuity"
+      }
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_3_badge",
+        "focus_3_text"
+      ]
+    },
+    "focus_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR queue 4"
+      }
+    },
+    "focus_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "why now: #173 lands ci-skills-json shared root cause, Sunday-batch T-5"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "stack_since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since_1",
+        "since_2",
+        "since_3",
+        "since_4"
+      ]
+    },
+    "since_1": {
+      "type": "Text",
+      "props": {
+        "text": "fleet recovered 20:00Z after 18-skill usepod 402 cascade at 18:27Z — evening-recap + late thought-review both fired clean"
+      }
+    },
+    "since_2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-029 filed CRITICAL (14 open issues), PR #173 opened to require skills.json regen in self-improve — targets #171/#172 same-check-failure"
+      }
+    },
+    "since_3": {
+      "type": "Text",
+      "props": {
+        "text": "large-cap pole-flip rail n=5 (UAI -31% capitulation d2, BEAT sustained -10%), M +66.7% breakout on token-movers"
+      }
+    },
+    "since_4": {
+      "type": "Text",
+      "props": {
+        "text": "btc $63.4k → $63.8k overnight, no threshold crossings; 63.5k reclaim already flagged"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "stack_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running_1",
+        "running_2",
+        "running_3",
+        "running_4",
+        "running_5",
+        "running_6",
+        "running_7",
+        "running_8"
+      ]
+    },
+    "running_1": {
+      "type": "Text",
+      "props": {
+        "text": "07Z daily-routine, thought-review"
+      }
+    },
+    "running_2": {
+      "type": "Text",
+      "props": {
+        "text": "08Z skill-freshness, heartbeat"
+      }
+    },
+    "running_3": {
+      "type": "Text",
+      "props": {
+        "text": "09Z github-trending"
+      }
+    },
+    "running_4": {
+      "type": "Text",
+      "props": {
+        "text": "12Z token-alert"
+      }
+    },
+    "running_5": {
+      "type": "Text",
+      "props": {
+        "text": "14Z security-digest, heartbeat"
+      }
+    },
+    "running_6": {
+      "type": "Text",
+      "props": {
+        "text": "17Z list-digest, 17:30 agent-buzz"
+      }
+    },
+    "running_7": {
+      "type": "Text",
+      "props": {
+        "text": "18Z goal-tracker, skill-health, reflect, action-converter"
+      }
+    },
+    "running_8": {
+      "type": "Text",
+      "props": {
+        "text": "20Z heartbeat, 21Z evening-recap + thought-review"
+      }
+    }
+  }
+}

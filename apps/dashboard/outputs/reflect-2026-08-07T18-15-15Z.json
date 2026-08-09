@@ -1,0 +1,199 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect",
+        "description": "Memory consolidated — 2026-08-07"
+      },
+      "children": [
+        "text_window",
+        "sep_1",
+        "heading_pattern",
+        "badge_pattern",
+        "stat_pattern_count",
+        "sep_2",
+        "heading_durability",
+        "text_durability_desc",
+        "stat_durability_gate",
+        "stat_chronic_duration",
+        "sep_3",
+        "heading_alerts",
+        "text_alert_intro",
+        "stat_gitlawb",
+        "stat_reppo",
+        "sep_4",
+        "heading_health",
+        "stat_hash",
+        "text_sync",
+        "sep_5",
+        "heading_security",
+        "text_security_intro",
+        "alert_typosquat",
+        "alert_skill_pack",
+        "alert_hyperscaler"
+      ]
+    },
+    "text_window": {
+      "type": "Text",
+      "props": {
+        "text": "48-hour reflect window absorbed 8-06 fleet-all-day-dark + 8-07 fires"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_pattern": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Pattern Observation",
+        "level": "h3"
+      }
+    },
+    "badge_pattern": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-08Z-slot-dark",
+        "variant": "default"
+      }
+    },
+    "stat_pattern_count": {
+      "type": "Stat",
+      "props": {
+        "label": "formal-pattern consecutive observations",
+        "value": "4"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_durability": {
+      "type": "Heading",
+      "props": {
+        "text": "Durability Gates — Chronic Cohort",
+        "level": "h3"
+      }
+    },
+    "text_durability_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Chronic cohort durability gate crossed"
+      }
+    },
+    "stat_durability_gate": {
+      "type": "Stat",
+      "props": {
+        "label": "Gate level (24h intervals)",
+        "value": "4th"
+      }
+    },
+    "stat_chronic_duration": {
+      "type": "Stat",
+      "props": {
+        "label": "7-consecutive chronic pattern",
+        "value": "~71 hours"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_alerts": {
+      "type": "Heading",
+      "props": {
+        "text": "Alert Fires",
+        "level": "h3"
+      }
+    },
+    "text_alert_intro": {
+      "type": "Text",
+      "props": {
+        "text": "First multi-token alert fire in memory window"
+      }
+    },
+    "stat_gitlawb": {
+      "type": "Stat",
+      "props": {
+        "label": "GITLAWB",
+        "value": "+21.74%",
+        "trend": "up"
+      }
+    },
+    "stat_reppo": {
+      "type": "Stat",
+      "props": {
+        "label": "REPPO volume multiplier",
+        "value": "4.854×"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Health",
+        "level": "h3"
+      }
+    },
+    "stat_hash": {
+      "type": "Stat",
+      "props": {
+        "label": "Fresh health hash",
+        "value": "35369f69"
+      }
+    },
+    "text_sync": {
+      "type": "Text",
+      "props": {
+        "text": "INDEX auto-sync complete"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security — New Sub-Class Candidates",
+        "level": "h3"
+      }
+    },
+    "text_security_intro": {
+      "type": "Text",
+      "props": {
+        "text": "3 new security sub-class candidates identified"
+      }
+    },
+    "alert_typosquat": {
+      "type": "Alert",
+      "props": {
+        "title": "claude-brand-typosquat-malware",
+        "message": "Fleet-relevant security candidate detected",
+        "type": "warning"
+      }
+    },
+    "alert_skill_pack": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-pack-primitive-rail",
+        "message": "Formalized at n=4 credible authors",
+        "type": "warning"
+      }
+    },
+    "alert_hyperscaler": {
+      "type": "Alert",
+      "props": {
+        "title": "hyperscaler-agent-runtime-primitive",
+        "message": "Promoted to durable by cloudflare/computer",
+        "type": "info"
+      }
+    }
+  }
+}

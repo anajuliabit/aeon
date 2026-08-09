@@ -1,17 +1,18 @@
 {
-  "hash": "7bf8823896fb596cd0d86b5060fb3574f0fa14e3d8f91399bf1ea8a1f947f8db",
-  "last_notified_at": "2026-07-30T18:15:11Z",
-  "last_run_at": "2026-07-30T18:15:11Z",
+  "hash": "91a4634de7eb6d713da825f170eaeb73729a9992fb76d6f00a05ef95e50b2e1b",
+  "last_notified_at": "2026-08-08T18:05:00Z",
+  "last_run_at": "2026-08-08T18:05:00Z",
   "classification": {
     "critical": [],
-    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner"],
+    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "goal-tracker", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
     "flapping": [],
-    "warning": ["agent-buzz", "daily-routine", "defi-overview", "fork-skill-digest", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
-    "healthy_count": 10,
+    "warning": ["agent-buzz", "daily-routine", "deal-flow", "defi-overview", "evening-recap", "fork-skill-digest", "github-trending", "heartbeat", "list-digest", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
+    "healthy_count": 8,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "NOTIFY (daily-cadence tick) — hash 7bf88238 unchanged 3rd-consec formal tick since 7-28 19:02Z (composition identical: 18 DEGRADED / 12 WARNING / 10 HEALTHY / 3 NO_DATA). Elapsed 47h13m > 24h daily-reminder gate → notify fired. No new CRITICAL/FLAPPING → 0 filings; no HEALTHY graduation for any open-issue affected skill (ISS-018 vuln-scanner still DEGRADED sr=0.21, ISS-019 defi-overview WARNING sr=0.69 not HEALTHY, ISS-020 token-pick WARNING sr=0.64, ISS-021 search-skill DEGRADED sr=0.38, ISS-025 cost-report DEGRADED sr=0.12) → 0 resolutions. Open issues stable at 11. Systemic signature output_tokens=0 sandbox-truncation family holds day-37 across 18 DEGRADED skills — signature identity with previous fire. skill-runs 168h fallback source unavailable in sandbox (permission-blocked, logged as SKILL_HEALTH_PARTIAL) — classification proceeded on cron-state + skill-health/*.json alone, no missing-skill risk (all 43 enabled skills have cron-state entries except the 3 dispatch-gated NO_DATA which are expected).",
-  "open_issues": 11,
+  "systemic": "ISS-027 12Z 8-skill batch d43 dormant (frozen 2026-06-28): 4 in DEGRADED (market-context-refresh 32% / narrative-tracker 33% / aixbt-pulse 47% / defi-monitor 53%) + 4 in WARNING (defi-overview 69% / token-pick 64% / token-movers 65% / on-chain-monitor 72%). ISS-030 cost-report sr 10% chronic. Delta since prev formal tick 2026-08-07T18:07:00Z (~24h): CRITICAL 0→0, DEGRADED 18→17 (list-digest sr 0.60 crosses <0.6 gate to WARNING), FLAPPING 0→0, WARNING 14→15 (+list-digest), HEALTHY 8→8, NO_DATA 3→3. Hash changes 35369f69 → 91a4634d (composition shift, not pure cadence). Fleet clean-consec d3 → d4 crossing 8-08 (unbroken since 8-04 21:48Z cost-report same-day organic recovery). No fresh usepod 402 or sdk_opt_in_required signatures in 24h window. [[morning-08Z-slot-dark]] formal-pattern deciding-test at n=5 FAILS BOTH co-slot skills 8-08 — heartbeat 08:10Z clean + skill-freshness 08:13Z clean = pattern breaks 4-consec, positive event. [[chronic-cohort-alone-degraded]] regime crosses 6th 24h durability gate at 14:16Z heartbeat (9-consec-heartbeat-tick, ~95h span 8-04 14:45Z → 8-08 14:16Z).",
+  "open_issues": 14,
   "resolved_this_run": 0,
-  "filed_this_run": 0
+  "filed_this_run": 0,
+  "prev_hash": "35369f69ae8692fef0783b86965a9e9255cc88df6aadb25fd3af87298f60aa4e"
 }

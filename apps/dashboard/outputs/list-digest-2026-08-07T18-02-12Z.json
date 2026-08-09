@@ -1,0 +1,83 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-07",
+        "description": "single-list defi-day, one signal above noise: @Flowslikeosmo endorses $CASH earn-USDC mech as \"almost too genius\""
+      },
+      "children": [
+        "list_heading",
+        "tweet_stack",
+        "filter_note",
+        "separator1",
+        "sources_text",
+        "status_badge"
+      ]
+    },
+    "list_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi researcher list",
+        "level": "h3"
+      }
+    },
+    "tweet_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet",
+        "view_link"
+      ]
+    },
+    "tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "Signal-boosts $CASH earn-USDC-by-holding mechanism (\"almost too genius\" = strong endorsement from a serious DeFi voice); yield-bearing-stable primitive interest keeps rotating, QT of x.com/robinhoodjesus",
+        "likes": 20,
+        "retweets": 2
+      }
+    },
+    "view_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2085473633791533375"
+      }
+    },
+    "filter_note": {
+      "type": "Text",
+      "props": {
+        "text": "9 other items on the list were replies/self-QT link-shares below signal threshold; second-place tweet was a bare-link self-QT (14♥ no commentary) → dropped.",
+        "variant": "caption"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list=ok(2 posters, 1 signal + 9 sub) | grok returned only 8-06 window not 8-07 (`[[xai-cache-window-narrows]]` continues n=2)",
+        "variant": "caption"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}

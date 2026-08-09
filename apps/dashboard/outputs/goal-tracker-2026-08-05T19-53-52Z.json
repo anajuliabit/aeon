@@ -1,0 +1,427 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-05"
+      },
+      "children": [
+        "summary_heading",
+        "summary_grid",
+        "overall_stat",
+        "sep1",
+        "needs_attention_heading",
+        "goal_na_1",
+        "sep2",
+        "blocked_heading",
+        "goal_blocked_1",
+        "goal_blocked_2",
+        "goal_blocked_3",
+        "goal_blocked_4",
+        "goal_blocked_5",
+        "goal_blocked_6",
+        "sep3",
+        "on_track_heading",
+        "goal_ot_1",
+        "goal_ot_2",
+        "sep4",
+        "sources_text"
+      ]
+    },
+    "summary_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_na",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_risk",
+        "stat_done"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "9"
+      }
+    },
+    "stat_na": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "1"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "2"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "6"
+      }
+    },
+    "stat_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "overall_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Overall Status",
+        "value": "Flat",
+        "trend": "neutral"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "needs_attention_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Needs Attention",
+        "level": "h3"
+      }
+    },
+    "goal_na_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "na1_title",
+        "na1_details",
+        "na1_action"
+      ]
+    },
+    "na1_title": {
+      "type": "Text",
+      "props": {
+        "text": "ci-skills-json root cause solved",
+        "variant": "lead"
+      }
+    },
+    "na1_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 90 activity/14d (ON_TRACK → NEEDS_ATTENTION ↓)",
+        "variant": "body"
+      }
+    },
+    "na1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: push empty commit to PR #173 branch to trigger the stalled ci-skills-json check",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked",
+        "level": "h3"
+      }
+    },
+    "goal_blocked_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked1_title",
+        "blocked1_details",
+        "blocked1_action"
+      ]
+    },
+    "blocked1_title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-028 kill-test workaround-chain n=26+",
+        "variant": "lead"
+      }
+    },
+    "blocked1_details": {
+      "type": "Text",
+      "props": {
+        "text": "14-UTC-day span 7-22 → 8-05; PR #167 fix-scope narrow",
+        "variant": "body"
+      }
+    },
+    "blocked1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: file follow-up PR extending #167 to sub-agent + list-digest + skill-graph + append + URL-encoded call-sites",
+        "variant": "muted"
+      }
+    },
+    "goal_blocked_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked2_title",
+        "blocked2_details",
+        "blocked2_action"
+      ]
+    },
+    "blocked2_title": {
+      "type": "Text",
+      "props": {
+        "text": "12-utc batch dark d39",
+        "variant": "lead"
+      }
+    },
+    "blocked2_details": {
+      "type": "Text",
+      "props": {
+        "text": "scheduler-side gap on 8-skill cluster since 2026-06-28 21:00Z",
+        "variant": "body"
+      }
+    },
+    "blocked2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: audit .github/workflows/ for the frozen 12:00Z cron entries and repair or re-enable",
+        "variant": "muted"
+      }
+    },
+    "goal_blocked_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked3_title",
+        "blocked3_details",
+        "blocked3_action"
+      ]
+    },
+    "blocked3_title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025 hand-off T+6 d22",
+        "variant": "lead"
+      }
+    },
+    "blocked3_details": {
+      "type": "Text",
+      "props": {
+        "text": "sandbox-truncation family day-44; cost-report signature shifted to ISS-030",
+        "variant": "body"
+      }
+    },
+    "blocked3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator direct-authors dangerouslyDisableSandbox pivot at aeon.yml:479-495",
+        "variant": "muted"
+      }
+    },
+    "goal_blocked_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked4_title",
+        "blocked4_details",
+        "blocked4_action"
+      ]
+    },
+    "blocked4_title": {
+      "type": "Text",
+      "props": {
+        "text": "pr-queue-at-4",
+        "variant": "lead"
+      }
+    },
+    "blocked4_details": {
+      "type": "Text",
+      "props": {
+        "text": "#165 d17 CONFLICTING · #171 ~5d · #172 ~4d · #173 ~2d (CI hasn't fired in ~35h)",
+        "variant": "body"
+      }
+    },
+    "blocked4_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: nudge PR #173 CI first; unblocks #171/#172 for 8-09 Sunday-batch",
+        "variant": "muted"
+      }
+    },
+    "goal_blocked_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked5_title",
+        "blocked5_details",
+        "blocked5_action"
+      ]
+    },
+    "blocked5_title": {
+      "type": "Text",
+      "props": {
+        "text": "operator on-chain config d60",
+        "variant": "lead"
+      }
+    },
+    "blocked5_details": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor NO_CONFIG; missing pool/position entries + 2 API keys",
+        "variant": "body"
+      }
+    },
+    "blocked5_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator populates memory/on-chain-watches.yml pool/position + adds ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets",
+        "variant": "muted"
+      }
+    },
+    "goal_blocked_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked6_title",
+        "blocked6_details",
+        "blocked6_action"
+      ]
+    },
+    "blocked6_title": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md d62 stale",
+        "variant": "lead"
+      }
+    },
+    "blocked6_details": {
+      "type": "Text",
+      "props": {
+        "text": "vault inbox d45 cold; last real capture 2026-06-21T08:32Z",
+        "variant": "body"
+      }
+    },
+    "blocked6_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator refreshes vault/priorities.md before 8-10 weekly-review",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track",
+        "level": "h3"
+      }
+    },
+    "goal_ot_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot1_title",
+        "ot1_details"
+      ]
+    },
+    "ot1_title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-029 effectively recovered",
+        "variant": "lead"
+      }
+    },
+    "ot1_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 150 activity/14d (flat, 44h+ clean post-recovery)",
+        "variant": "body"
+      }
+    },
+    "goal_ot_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot2_title",
+        "ot2_details"
+      ]
+    },
+    "ot2_title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-030 cost-report sdk-opt-in",
+        "variant": "lead"
+      }
+    },
+    "ot2_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 90 activity/14d (↑ improving — 8-04 21:48Z weekly-tick clean, consec 18 → 0)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

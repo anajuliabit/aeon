@@ -1,0 +1,343 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health — 2026-08-03",
+        "description": "Skill health audit with 11 critical failures from api.usepod.ai 402 payment_required"
+      },
+      "children": [
+        "alert-critical",
+        "sep1",
+        "systemic-section",
+        "sep2",
+        "critical-section",
+        "sep3",
+        "degraded-section",
+        "sep4",
+        "no-data-section",
+        "sep5",
+        "healthy-section",
+        "sep6",
+        "stats-section",
+        "sep7",
+        "action-section"
+      ]
+    },
+    "alert-critical": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: CRITICAL (11)",
+        "message": "11 skills failing with gateway 402 errors",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "systemic-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "systemic-heading",
+        "systemic-detail"
+      ]
+    },
+    "systemic-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Systemic Issue (ISS-029)",
+        "level": "h3"
+      }
+    },
+    "systemic-detail": {
+      "type": "Alert",
+      "props": {
+        "title": "api.usepod.ai 402 payment_required",
+        "message": "19-skill same-second cluster @ 18:26-27Z — All 11 CRITICAL skills share this gateway-402 signature",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical-heading",
+        "critical-badge",
+        "critical-list"
+      ]
+    },
+    "critical-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRITICAL (11)",
+        "level": "h3"
+      }
+    },
+    "critical-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "All share ISS-029 gateway-402 signature",
+        "variant": "destructive"
+      }
+    },
+    "critical-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crit-1",
+        "crit-2",
+        "crit-3",
+        "crit-4",
+        "crit-5",
+        "crit-more"
+      ]
+    },
+    "crit-1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report — 6 fails, 7d down — FIX CONFIG (usepod credits) → ISS-029/025",
+        "variant": "body"
+      }
+    },
+    "crit-2": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor — 6 fails, 7d down — FIX CONFIG → ISS-029",
+        "variant": "body"
+      }
+    },
+    "crit-3": {
+      "type": "Text",
+      "props": {
+        "text": "thought-review — 9 fails, ~22h down — FIX CONFIG → ISS-029",
+        "variant": "body"
+      }
+    },
+    "crit-4": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill — 4 fails, 7d down — FIX CONFIG → ISS-029/021",
+        "variant": "body"
+      }
+    },
+    "crit-5": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — 6 fails, ~37h down — FIX CONFIG → ISS-029",
+        "variant": "body"
+      }
+    },
+    "crit-more": {
+      "type": "Text",
+      "props": {
+        "text": "+6 more: skill-freshness, btc-levels, deal-flow, security-digest, self-improve, heartbeat — see memory/issues/ISS-029.md",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-list"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEGRADED (8)",
+        "level": "h3"
+      }
+    },
+    "degraded-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-1",
+        "deg-2",
+        "deg-3",
+        "deg-4",
+        "deg-5",
+        "deg-more"
+      ]
+    },
+    "deg-1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics — sr=0.19 (10/52) — INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "deg-2": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — sr=0.19 (9/47) — INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "deg-3": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — sr=0.23 — INVESTIGATE → ISS-018",
+        "variant": "body"
+      }
+    },
+    "deg-4": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — sr=0.32 — WAIT-API → ISS-027",
+        "variant": "body"
+      }
+    },
+    "deg-5": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — sr=0.33 — WAIT-API → ISS-027",
+        "variant": "body"
+      }
+    },
+    "deg-more": {
+      "type": "Text",
+      "props": {
+        "text": "+3 more: aixbt-pulse, defi-monitor, skill-evals — see memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-text"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "no-data-text": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch (workflow_dispatch), fork-skill-gap (Sun 21:00Z next 8-09), operator-scorecard (Mon 10:30Z next 8-04) — scheduler-gated, not dispatched today",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-badge"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "6 skills healthy",
+        "variant": "default"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-section": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-open-issues",
+        "stat-filed",
+        "stat-resolved"
+      ]
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "14"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "1",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved",
+        "value": "0"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-section": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "Verify USEPOD_TOKEN funded at usepod.ai OR flip aeon.yml gateway.provider direct→bankr/virtuals until direct rate-limit cools. skill-health's next tick 2026-08-04 18:00Z will itself fail if gateway stays broken.",
+        "type": "warning"
+      }
+    }
+  }
+}

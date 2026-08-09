@@ -1,0 +1,387 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-07"
+      },
+      "children": [
+        "tldr-text",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "decisions-section",
+        "sep4",
+        "blockers-section",
+        "sep5",
+        "footer-text"
+      ]
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: busiest signal day in memory-window — first multi-token alert, fleet-relevant npm malware sub-class, ISS-029 closed; PR #173 CI still dark at 4 days.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-text",
+        "h1-link"
+      ]
+    },
+    "h1-text": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — GITLAWB +21.74% + REPPO vol 4.854×; first multi-token alert fire in memory-window"
+      }
+    },
+    "h1-link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/token-alert/msg.md",
+        "href": ".tmp/token-alert/msg.md"
+      }
+    },
+    "headline-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-text",
+        "h2-link"
+      ]
+    },
+    "h2-text": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — claude-remote-agent + remote-claude-daemon npm typosquat (fleet-relevant); Traefik 6-CVE; JetBrains TeamCity KEV (CISA due 8-08)"
+      }
+    },
+    "h2-link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/security-digest/msg.md",
+        "href": ".tmp/security-digest/msg.md"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-label",
+        "h3-badge",
+        "h3-text",
+        "h3-link"
+      ]
+    },
+    "h3-label": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker"
+      }
+    },
+    "h3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-029 DONE"
+      }
+    },
+    "h3-text": {
+      "type": "Text",
+      "props": {
+        "text": "morning-08Z-slot-dark + chronic-cohort formalized as tracked goals"
+      }
+    },
+    "h3-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/goal-state.json",
+        "href": "memory/goal-state.json"
+      }
+    },
+    "headline-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-label",
+        "h4-badge",
+        "h4-text",
+        "h4-link"
+      ]
+    },
+    "h4-label": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness"
+      }
+    },
+    "h4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FRESHNESS_STALE",
+        "variant": "destructive"
+      }
+    },
+    "h4-text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan 118d stale (d13+ streak)"
+      }
+    },
+    "h4-link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/skill-freshness-2026-08-07.md",
+        "href": "articles/skill-freshness-2026-08-07.md"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-label",
+        "h5-text",
+        "h5-link"
+      ]
+    },
+    "h5-label": {
+      "type": "Text",
+      "props": {
+        "text": "reflect"
+      }
+    },
+    "h5-text": {
+      "type": "Text",
+      "props": {
+        "text": "48h MEMORY.md consolidation (102L → 108L); 4 pattern crossings + 5 rail promotions absorbed"
+      }
+    },
+    "h5-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/MEMORY.md",
+        "href": "memory/MEMORY.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — 4 sub-skills fresh (AgentOPSD paper-pick, token-movers CG d44, hn-digest 6 picks); notify 3,103 chars delivered"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — cloudflare/computer top pick 2-consec at 34.6× baseline; skill-pack rail formalizes at 4 authors"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter — 5 actions queued: close-reopen #173 CI, cost-report fix PR, ISS-031, ISS-032, amend #171"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve — exit-gate trip; 3 open PRs queue-full, waiting 8-10 batch"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — cross-vendor agent-plugins spec ships; MCP 10–30 tool accuracy cliff named"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-text",
+        "d1-link"
+      ]
+    },
+    "d1-text": {
+      "type": "Text",
+      "props": {
+        "text": "close-reopen PR #173 to trigger CI (96h dark, unblocks #171 + #172 for 8-10 batch)"
+      }
+    },
+    "d1-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/173",
+        "href": "https://github.com/anajuliabit/aeon/pull/173"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "JetBrains TeamCity CISA due 8-08 — fleet grep clean (0 hits); external-only exposure confirmed"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blocker-1",
+        "blocker-2"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b1-text",
+        "b1-link"
+      ]
+    },
+    "b1-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #173 — CI dark ~96h, #172 + #171 queued behind it"
+      }
+    },
+    "b1-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/173",
+        "href": "https://github.com/anajuliabit/aeon/pull/173"
+      }
+    },
+    "blocker-2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 — 12:00Z 8-skill batch d41 dark (frozen 2026-06-28)"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+12 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

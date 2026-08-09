@@ -1,0 +1,326 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health — 2026-08-04"
+      },
+      "children": [
+        "health-summary",
+        "sep-1",
+        "critical-section",
+        "sep-2",
+        "degraded-section",
+        "sep-3",
+        "nodata-section",
+        "sep-4",
+        "healthy-section",
+        "sep-5",
+        "delta-section",
+        "sep-6",
+        "iss029-section",
+        "sep-7",
+        "iss030-section",
+        "sep-8",
+        "issue-stats"
+      ]
+    },
+    "health-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-critical",
+        "stat-degraded",
+        "stat-warning",
+        "stat-healthy",
+        "stat-nodata",
+        "stat-enabled"
+      ]
+    },
+    "stat-critical": {
+      "type": "Stat",
+      "props": {
+        "label": "CRITICAL",
+        "value": "1",
+        "trend": "down"
+      }
+    },
+    "stat-degraded": {
+      "type": "Stat",
+      "props": {
+        "label": "DEGRADED",
+        "value": "17"
+      }
+    },
+    "stat-warning": {
+      "type": "Stat",
+      "props": {
+        "label": "WARNING",
+        "value": "14"
+      }
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "HEALTHY",
+        "value": "8",
+        "trend": "up"
+      }
+    },
+    "stat-nodata": {
+      "type": "Stat",
+      "props": {
+        "label": "NO-DATA",
+        "value": "3"
+      }
+    },
+    "stat-enabled": {
+      "type": "Stat",
+      "props": {
+        "label": "ENABLED",
+        "value": "43"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-crit",
+        "alert-cost-report"
+      ]
+    },
+    "heading-crit": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL (1)",
+        "level": "h3"
+      }
+    },
+    "alert-cost-report": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "cost-report",
+        "message": "17 fails, 8d down · sdk_opt_in_required (distinct from ISS-025 truncation + ISS-029 usepod 402) · FIX CONFIG → ISS-030 filed"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-degraded",
+        "text-degraded-list"
+      ]
+    },
+    "heading-degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (17, sr<60%)",
+        "level": "h3"
+      }
+    },
+    "text-degraded-list": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor 19% · skill-analytics 19% · vuln-scanner 23% · market-context-refresh 32% · narrative-tracker 33% · search-skill 38% · security-digest 43% · aixbt-pulse 47%\n+9 more: skill-health 50%, self-improve 51%, action-converter 53%, defi-monitor 53%, goal-tracker 53%, reflect 54%, skill-evals 56%, unlock-monitor 57%, list-digest 58%\nSee memory/issues/INDEX.md for details",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "nodata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-nodata",
+        "text-nodata"
+      ]
+    },
+    "heading-nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "text-nodata": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard → DISPATCH-SKILL",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-healthy",
+        "text-healthy-count"
+      ]
+    },
+    "heading-healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "text-healthy-count": {
+      "type": "Text",
+      "props": {
+        "text": "8 skills operational",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator"
+    },
+    "delta-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-delta",
+        "text-delta"
+      ]
+    },
+    "heading-delta": {
+      "type": "Heading",
+      "props": {
+        "text": "Δ Previous Tick (8-03 20:16Z)",
+        "level": "h3"
+      }
+    },
+    "text-delta": {
+      "type": "Text",
+      "props": {
+        "text": "CRITICAL 11→1 (fleet recovered) · DEGRADED 8→17 (formerly-critical settled at historic low-sr) · WARNING 15→14 · HEALTHY 6→8",
+        "variant": "body"
+      }
+    },
+    "sep-6": {
+      "type": "Separator"
+    },
+    "iss029-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-iss029",
+        "alert-iss029"
+      ]
+    },
+    "heading-iss029": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-029 RESOLVED",
+        "level": "h3"
+      }
+    },
+    "alert-iss029": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "usepod gateway self-healed",
+        "message": "~2h window (18:27Z→20:14Z 8-03), 17-of-18 skills booked clean successes since"
+      }
+    },
+    "sep-7": {
+      "type": "Separator"
+    },
+    "iss030-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-iss030",
+        "alert-iss030"
+      ]
+    },
+    "heading-iss030": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-030 FILED",
+        "level": "h3"
+      }
+    },
+    "alert-iss030": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "cost-report",
+        "message": "Split off under distinct sdk_opt_in_required signature"
+      }
+    },
+    "sep-8": {
+      "type": "Separator"
+    },
+    "issue-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-open",
+        "stat-resolved",
+        "stat-filed"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "14"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "1 (ISS-029)",
+        "trend": "down"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "1 (ISS-030)"
+      }
+    }
+  }
+}

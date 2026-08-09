@@ -1,0 +1,278 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-01"
+      },
+      "children": [
+        "stat-summary",
+        "text-summary",
+        "sep-1",
+        "heading-atrisk",
+        "stack-atrisk",
+        "sep-2",
+        "heading-blocked",
+        "stack-blocked",
+        "sep-3",
+        "heading-ontrack",
+        "stack-ontrack",
+        "sep-4",
+        "alert-scheduler",
+        "text-sources"
+      ]
+    },
+    "stat-summary": {
+      "type": "Stat",
+      "props": {
+        "label": "Overall Status",
+        "value": "5 goals",
+        "trend": "neutral"
+      }
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "1 at risk, 0 needs attention, 1 on track, 3 blocked, 0 done"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-atrisk": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h2"
+      }
+    },
+    "stack-atrisk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-atrisk-1"
+      ]
+    },
+    "item-atrisk-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-atrisk-1",
+        "text-atrisk-1",
+        "text-atrisk-1-action"
+      ]
+    },
+    "badge-atrisk-1": {
+      "type": "Badge",
+      "props": {
+        "text": "priorities.md",
+        "variant": "destructive"
+      }
+    },
+    "text-atrisk-1": {
+      "type": "Text",
+      "props": {
+        "text": "58d since last review (was 2026-06-04); activity is meta-nudges, not refresh work (→ flat)"
+      }
+    },
+    "text-atrisk-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator edit vault/priorities.md — 58d overdue, unblocks daily thought-review nudge",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "stack-blocked": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-blocked-1",
+        "item-blocked-2",
+        "item-blocked-3"
+      ]
+    },
+    "item-blocked-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-blocked-1",
+        "text-blocked-1",
+        "text-blocked-1-action"
+      ]
+    },
+    "badge-blocked-1": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025 capture-step PR hand-off",
+        "variant": "secondary"
+      }
+    },
+    "text-blocked-1": {
+      "type": "Text",
+      "props": {
+        "text": "T+2 d17 slipped past 7-30 T-0; cost-report sr=0.12 weakest chronic-failure durable (→ flat)"
+      }
+    },
+    "text-blocked-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator direct-author capture-step pivot against .github/workflows/aeon.yml:479-495",
+        "variant": "muted"
+      }
+    },
+    "item-blocked-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-blocked-2",
+        "text-blocked-2",
+        "text-blocked-2-action"
+      ]
+    },
+    "badge-blocked-2": {
+      "type": "Badge",
+      "props": {
+        "text": "12:00 UTC batch DARK",
+        "variant": "secondary"
+      }
+    },
+    "text-blocked-2": {
+      "type": "Text",
+      "props": {
+        "text": "d35, 8-skill cluster frozen since 6-28 21:00Z; ISS-027 signature durable (→ flat)"
+      }
+    },
+    "text-blocked-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: investigate aeon.yml 12:00Z cron for 8-skill batch — trace post-6-28 dispatch regression",
+        "variant": "muted"
+      }
+    },
+    "item-blocked-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-blocked-3",
+        "text-blocked-3",
+        "text-blocked-3-action"
+      ]
+    },
+    "badge-blocked-3": {
+      "type": "Badge",
+      "props": {
+        "text": "Operator on-chain config",
+        "variant": "secondary"
+      }
+    },
+    "text-blocked-3": {
+      "type": "Text",
+      "props": {
+        "text": "d56, defi-monitor NO_CONFIG; ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing, on-chain-watches.yml wallet-only (→ flat)"
+      }
+    },
+    "text-blocked-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator set alchemy+etherscan secrets, populate memory/on-chain-watches.yml pool/position entries",
+        "variant": "muted"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-ontrack": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "stack-ontrack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-ontrack-1"
+      ]
+    },
+    "item-ontrack-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ontrack-1",
+        "text-ontrack-1"
+      ]
+    },
+    "badge-ontrack-1": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #165",
+        "variant": "default"
+      }
+    },
+    "text-ontrack-1": {
+      "type": "Text",
+      "props": {
+        "text": "d13 past-gate CONFLICTING — sole survivor after 7-30 batch-merge; weekly-review 8-03 window 2d out (→ flat)"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "alert-scheduler": {
+      "type": "Alert",
+      "props": {
+        "title": "Scheduler Slot Issue",
+        "message": "07:00 UTC scheduler slot MISS reopened 8-01 (2-of-3-day pattern 7-30 MISS / 7-31 recovery / 8-01 MISS per heartbeat 08:37Z P3). Prior tracker cleared it 7-31; not re-added here per skill's read-only-on-goals constraint. Reopen candidate for operator or reflect 8-01 evening.",
+        "type": "warning"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=shallow, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

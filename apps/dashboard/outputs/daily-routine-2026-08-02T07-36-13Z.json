@@ -1,0 +1,581 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-02"
+      },
+      "children": [
+        "winners-section",
+        "winners-sep",
+        "losers-section",
+        "losers-sep",
+        "note-section",
+        "tweet-sep",
+        "tweet-section",
+        "paper-sep",
+        "paper-section",
+        "issues-sep",
+        "issues-section",
+        "hn-sep",
+        "hn-section"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h Change",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "UAI",
+            "$0.5396",
+            "+39.1%",
+            "BREAKOUT+PUMP-RISK"
+          ],
+          [
+            "META",
+            "$6.20",
+            "+17.7%",
+            "BREAKOUT"
+          ],
+          [
+            "APR",
+            "$0.2204",
+            "+12.5%",
+            ""
+          ],
+          [
+            "ULTIMA",
+            "$2389",
+            "+10.8%",
+            ""
+          ],
+          [
+            "ADA",
+            "$0.1864",
+            "+9.6%",
+            "MAJOR"
+          ],
+          [
+            "ENA",
+            "$0.08907",
+            "+9.6%",
+            ""
+          ],
+          [
+            "BTSE",
+            "$0.9586",
+            "+8.8%",
+            ""
+          ],
+          [
+            "UB",
+            "$0.1728",
+            "+7.9%",
+            ""
+          ],
+          [
+            "PIEVERSE",
+            "$0.7338",
+            "+6.2%",
+            ""
+          ],
+          [
+            "NIGHT",
+            "$0.01951",
+            "+6.0%",
+            ""
+          ]
+        ]
+      }
+    },
+    "winners-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table"
+      ]
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h Change"
+        ],
+        "rows": [
+          [
+            "BTW",
+            "$0.08613",
+            "-23.4%"
+          ],
+          [
+            "BEAT",
+            "$4.07",
+            "-10.5%"
+          ],
+          [
+            "DEXE",
+            "$2.33",
+            "-6.0%"
+          ],
+          [
+            "AERO",
+            "$0.3988",
+            "-4.8%"
+          ],
+          [
+            "STRK",
+            "$0.02462",
+            "-4.3%"
+          ],
+          [
+            "ZRO",
+            "$0.7219",
+            "-4.2%"
+          ],
+          [
+            "WIF",
+            "$0.1401",
+            "-3.9%"
+          ],
+          [
+            "EDGE",
+            "$0.3530",
+            "-3.8%"
+          ],
+          [
+            "LDO",
+            "$0.3273",
+            "-2.9%"
+          ],
+          [
+            "ZAMA",
+            "$0.05450",
+            "-2.8%"
+          ]
+        ]
+      }
+    },
+    "losers-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "note-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Note",
+        "level": "h3"
+      }
+    },
+    "note-text": {
+      "type": "Text",
+      "props": {
+        "text": "BEAT pole-flips yesterday's #1 winner (+17.7%) → today's #2 loser (-10.5%); [[large-cap-single-day-flip]] rail extends n=3 → n=4 in 4-consec UTC-days.",
+        "variant": "muted"
+      }
+    },
+    "note-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "note-heading",
+        "note-text"
+      ]
+    },
+    "tweet-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweet-crypto-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "tweet-crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "btc $62.9k / eth $1.86k both -3% into aug open, mcap $2.25T -2.4%; fear sentiment persists on regulatory + defi crosswinds. btc/eth/xrp faded key resistance end-of-july, aug range decides next direction.",
+        "variant": "body"
+      }
+    },
+    "tweet-ai-title": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "tweet-ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "rufroot cve-2026-59726 max-sev on ruflo agent framework (patched 3.16.3, loopback-bound + access-controls). zhuhai actor wired deepseek into hermes agent framework and hit 460+ internet-facing systems (citrix netscaler + marimo notebooks) where claude/openai models refused. 57% enterprises now with ai agents in prod, eu ai act obligations effective this month.",
+        "variant": "body"
+      }
+    },
+    "tweet-dev-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "tweet-dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "google joined eclipse foundation as strategic member sponsoring open vsx (apr 2026). bun mainstream 2026 (3x node perf, built-in bundler/transpiler/pm). deno 2.0 npm-compat. rust in linux kernel now stable / no longer experimental after 30y pure c.",
+        "variant": "body"
+      }
+    },
+    "tweet-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-heading",
+        "tweet-crypto-title",
+        "tweet-crypto-text",
+        "tweet-ai-title",
+        "tweet-ai-text",
+        "tweet-dev-title",
+        "tweet-dev-text"
+      ]
+    },
+    "paper-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems",
+        "href": "https://arxiv.org/abs/2607.27958",
+        "source": "Feng et al",
+        "score": "↑12"
+      }
+    },
+    "paper-description": {
+      "type": "Text",
+      "props": {
+        "text": "per-peer trust as online-updated symmetric state with bounded spectral drift — same shape as aeon's per-skill sr% cohort, generalized into a coordination primitive. extends [[fleet-relevance agent-thesis]] rail 16 → 17 consec-day.",
+        "variant": "muted"
+      }
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-link",
+        "paper-description"
+      ]
+    },
+    "issues-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "issues-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (8-consec-day clean streak, 7-26 → 8-02)",
+        "variant": "body"
+      }
+    },
+    "issues-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-heading",
+        "issues-text"
+      ]
+    },
+    "hn-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-item-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Google helped destroy RSS adoption",
+        "href": "https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds",
+        "source": "openrss.org",
+        "score": "498"
+      }
+    },
+    "hn-discuss-1": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49136821"
+      }
+    },
+    "hn-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "reader shutdown as inflection where google flipped user-serving to advertiser-serving; 13y-later postmortem.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-1",
+        "hn-discuss-1",
+        "hn-desc-1"
+      ]
+    },
+    "hn-item-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Seedance 2.5",
+        "href": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+        "source": "bytedance",
+        "score": "299"
+      }
+    },
+    "hn-discuss-2": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49138302"
+      }
+    },
+    "hn-desc-2": {
+      "type": "Text",
+      "props": {
+        "text": "bytedance video-gen: creator-steering the wedge, not raw fidelity.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-2",
+        "hn-discuss-2",
+        "hn-desc-2"
+      ]
+    },
+    "hn-item-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AI financial advice surprisingly good",
+        "href": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
+        "source": "MIT Sloan",
+        "score": "277"
+      }
+    },
+    "hn-discuss-3": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49139102"
+      }
+    },
+    "hn-desc-3": {
+      "type": "Text",
+      "props": {
+        "text": "llm advice clears median human advisor once prompted right.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-3",
+        "hn-discuss-3",
+        "hn-desc-3"
+      ]
+    },
+    "hn-item-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NetBSD 11.0",
+        "href": "https://blog.netbsd.org/tnf/entry/netbsd_11_0_released",
+        "source": "NetBSD",
+        "score": "263"
+      }
+    },
+    "hn-discuss-4": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49136736"
+      }
+    },
+    "hn-desc-4": {
+      "type": "Text",
+      "props": {
+        "text": "first major netbsd release in years; the portability project ships.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-4",
+        "hn-discuss-4",
+        "hn-desc-4"
+      ]
+    },
+    "hn-item-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Lean Kernel Soundness Bug #14576 Postmortem",
+        "href": "https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/",
+        "source": "leodemoura.github.io",
+        "score": "142"
+      }
+    },
+    "hn-discuss-5": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49137060"
+      }
+    },
+    "hn-desc-5": {
+      "type": "Text",
+      "props": {
+        "text": "lean's proof-checker had a real soundness bug; verified is not unbreakable, just tightest surface.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-5-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-5",
+        "hn-discuss-5",
+        "hn-desc-5"
+      ]
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-item-1-group",
+        "hn-item-2-group",
+        "hn-item-3-group",
+        "hn-item-4-group",
+        "hn-item-5-group"
+      ]
+    }
+  }
+}

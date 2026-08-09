@@ -1,0 +1,280 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🫀 heartbeat"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "fresh_section",
+        "sep2",
+        "dedup_section",
+        "sep3",
+        "statuspage_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "heartbeat 09:15Z",
+        "message": "🔴 DEGRADED",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "fresh_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fresh_heading",
+        "fresh_item_1",
+        "fresh_item_2",
+        "fresh_item_3"
+      ]
+    },
+    "fresh_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fresh",
+        "level": "h3"
+      }
+    },
+    "fresh_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item1_title",
+        "item1_detail1",
+        "item1_detail2"
+      ]
+    },
+    "item1_title": {
+      "type": "Text",
+      "props": {
+        "text": "[[morning-08Z-slot-dark]] promotes candidate → formal-pattern n=3",
+        "variant": "lead"
+      }
+    },
+    "item1_detail1": {
+      "type": "Text",
+      "props": {
+        "text": "8-04 + 8-05 + 8-06 all missed 08Z heartbeat slot; this fire arrived 09:15Z = 74min lag",
+        "variant": "body"
+      }
+    },
+    "item1_detail2": {
+      "type": "Text",
+      "props": {
+        "text": "deciding-test resolved on the dark side",
+        "variant": "body"
+      }
+    },
+    "fresh_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item2_title",
+        "item2_detail"
+      ]
+    },
+    "item2_title": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat dispatch-lag rail n=4",
+        "variant": "lead"
+      }
+    },
+    "item2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "magnitude escalates 31→50→74min, first breach of 60min-warn line",
+        "variant": "body"
+      }
+    },
+    "fresh_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item3_title",
+        "item3_detail"
+      ]
+    },
+    "item3_title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness 61h dark → 2.54× threshold",
+        "variant": "lead"
+      }
+    },
+    "item3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "was 2.02× edge at 20:50Z last tick; formally crossed 24h+ ago and still climbing",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "dedup_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dedup_heading",
+        "dedup_chronic",
+        "dedup_pr",
+        "dedup_issues"
+      ]
+    },
+    "dedup_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dedup 48h",
+        "level": "h3"
+      }
+    },
+    "dedup_chronic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dedup_chronic_title",
+        "dedup_chronic_detail"
+      ]
+    },
+    "dedup_chronic_title": {
+      "type": "Text",
+      "props": {
+        "text": "chronic-cohort 10-skill sr<50% holds 5-consec-heartbeat",
+        "variant": "lead"
+      }
+    },
+    "dedup_chronic_detail": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report 10% weakest, ISS-030 open",
+        "variant": "body"
+      }
+    },
+    "dedup_pr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dedup_pr_title",
+        "dedup_pr_detail"
+      ]
+    },
+    "dedup_pr_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR queue 4",
+        "variant": "lead"
+      }
+    },
+    "dedup_pr_detail": {
+      "type": "Text",
+      "props": {
+        "text": "#173 CI still empty statusCheckRollup ~60h",
+        "variant": "body"
+      }
+    },
+    "dedup_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dedup_iss1",
+        "dedup_iss2"
+      ]
+    },
+    "dedup_iss1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 batch-dark d40",
+        "variant": "body"
+      }
+    },
+    "dedup_iss2": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md d63",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "statuspage_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "statuspage_heading",
+        "statuspage_status",
+        "statuspage_issues",
+        "statuspage_alert"
+      ]
+    },
+    "statuspage_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Page",
+        "level": "h3"
+      }
+    },
+    "statuspage_status": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "statuspage_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "14"
+      }
+    },
+    "statuspage_alert": {
+      "type": "Text",
+      "props": {
+        "text": "next token-alert 12:00Z",
+        "variant": "caption"
+      }
+    }
+  }
+}

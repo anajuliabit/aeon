@@ -1,0 +1,128 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review",
+        "description": "last 24h"
+      },
+      "children": [
+        "body-stack"
+      ]
+    },
+    "body-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "captures-stat",
+        "sep",
+        "items-list"
+      ]
+    },
+    "captures-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "items-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "inbox-item",
+        "priorities-item",
+        "question"
+      ]
+    },
+    "inbox-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "inbox-label",
+        "inbox-badge"
+      ]
+    },
+    "inbox-label": {
+      "type": "Text",
+      "props": {
+        "text": "inbox",
+        "variant": "body"
+      }
+    },
+    "inbox-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "48d cold",
+        "variant": "secondary"
+      }
+    },
+    "priorities-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "priorities-row",
+        "priorities-date"
+      ]
+    },
+    "priorities-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "priorities-label",
+        "priorities-badge"
+      ]
+    },
+    "priorities-label": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md",
+        "variant": "body"
+      }
+    },
+    "priorities-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "65d stale",
+        "variant": "secondary"
+      }
+    },
+    "priorities-date": {
+      "type": "Text",
+      "props": {
+        "text": "last reviewed 2026-06-04",
+        "variant": "caption"
+      }
+    },
+    "question": {
+      "type": "Text",
+      "props": {
+        "text": "worth a refresh?",
+        "variant": "lead"
+      }
+    }
+  }
+}

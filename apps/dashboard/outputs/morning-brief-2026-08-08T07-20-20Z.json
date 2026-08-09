@@ -1,0 +1,215 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-08"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-stack",
+        "sep-1",
+        "yesterday-heading",
+        "yesterday-stack",
+        "sep-2",
+        "watch-heading",
+        "watch-stack",
+        "sep-3",
+        "running-heading",
+        "running-stack"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "1. close-reopen pr #173 — why now: ci cold ~5d, t-1 to 8-09 batch, one-lift unblocks 3-pr chain"
+      }
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "2. triage pr #174 (advisor brier-weight) — why now: opened 00:31z, queue 4 → 5 tests exit-gate"
+      }
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "3. gitlawb 12z re-check — why now: +21.74% snap-back yesterday, continuation-or-revert test"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "yesterday-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yesterday-1",
+        "yesterday-2",
+        "yesterday-3",
+        "yesterday-4"
+      ]
+    },
+    "yesterday-1": {
+      "type": "Text",
+      "props": {
+        "text": "pr #174 opened 00:31z (advisor brier-weight in pm synthesis) — queue 4 → 5"
+      }
+    },
+    "yesterday-2": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert 12z fired first multi-token in memory-window: gitlawb +21.74% (first 24h-change alert ever) + reppo vol 4.854× (first reppo vol-spike ever, 9.4× compounding across 48h)"
+      }
+    },
+    "yesterday-3": {
+      "type": "Text",
+      "props": {
+        "text": "reflect absorbed 4 formal-pattern crossings + 3 new npm-malware sub-classes (fleet-relevant [[claude-brand-typosquat-malware]] n=1)"
+      }
+    },
+    "yesterday-4": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat dispatch-lag rail n=7 = 3 distinct slot-shapes single day (08z stuck 75min / 14z recovered 24min / 20z mid 52min); slot-specific pattern confirmed, not fleet-wide"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-1"
+      ]
+    },
+    "watch-1": {
+      "type": "Text",
+      "props": {
+        "text": "metamask agent wallet ships 8-07 — agent-mandate primitive goes mainstream; sherwood thesis-adjacent (constraints-not-custody axis)"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4",
+        "running-5",
+        "running-6"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief + daily-routine + thought-review @ 07z (in flight)"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness + heartbeat @ 08z ([[morning-08z-slot-dark]] n=5-consec deciding-test)"
+      }
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09z, token-alert @ 12z, security-digest + heartbeat @ 14z"
+      }
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner @ 16z (sat), list-digest @ 17z, agent-buzz @ 17:30z"
+      }
+    },
+    "running-5": {
+      "type": "Text",
+      "props": {
+        "text": "18z batch: goal-tracker + skill-health + reflect + action-converter"
+      }
+    },
+    "running-6": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 20z, evening-recap + thought-review @ 21z"
+      }
+    }
+  }
+}

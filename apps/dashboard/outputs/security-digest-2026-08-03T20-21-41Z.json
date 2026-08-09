@@ -1,0 +1,232 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-03",
+        "description": "Verdict: 1 actively exploited, 5 to schedule, 2 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sep-1",
+        "heading-patch-today",
+        "storylink-18577",
+        "text-18577-full",
+        "alert-malware",
+        "text-malware-details",
+        "sep-2",
+        "heading-patch-week",
+        "storylink-69151",
+        "storylink-69149",
+        "storylink-68945",
+        "text-angular-full",
+        "storylink-69152",
+        "text-69152-full",
+        "storylink-18446",
+        "text-18446-full",
+        "storylink-69185",
+        "text-69185-full",
+        "storylink-13697",
+        "text-13697-full",
+        "sep-3",
+        "heading-monitor",
+        "storylink-gitpython",
+        "text-gitpython-full",
+        "storylink-ip-address",
+        "text-ip-address-full"
+      ]
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-patch-today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "storylink-18577": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-18577",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-18577",
+        "source": "NVD"
+      }
+    },
+    "text-18577-full": {
+      "type": "Text",
+      "props": {
+        "text": "N-able N-central · KEV added 2026-08-03 · CISA due 2026-08-06 · EPSS 0.015 (71st pct)\n\nauth bypass via alternate path/channel, incomplete patch for CVE-2026-18556. exploited per CISA.\n\nAction: apply N-central 2026.3 HF1 today or discontinue per BOD 26-04."
+      }
+    },
+    "alert-malware": {
+      "type": "Alert",
+      "props": {
+        "title": "Malware batch — 26 fresh packages",
+        "message": "25 npm + 1 pip in 24h post-yesterday's digest. aeon-fleet grep clean.",
+        "type": "warning"
+      }
+    },
+    "text-malware-details": {
+      "type": "Text",
+      "props": {
+        "text": "beaver-ui-* 5-pack (dep-confusion corp-scope: header/layout/grid/date-range-picker/items-with-more) + simple-date-formatter-* 4-pack + houzidawang80* 3-pack (numeric variants) + accounts-final-form/accounts-loading-state + fluid-type-ui + @types-beta/sdk + tailwind-anim + @custombots/custombot + tailwindcss-anim + internallib_v568 + bigops-chat-messages + lifestyle-test-utils + list-issue-predecessor-dependencies-block (npm) + trongriden (pip)\n\nAction: block @beaver-ui/* + simple-date-formatter-* + houzidawang80* installs; rotate any creds exposed to fresh installs in the last 24h."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-patch-week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "storylink-69151": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69151",
+        "href": "https://github.com/advisories/GHSA-jj27-h5hq-8x99",
+        "source": "GitHub"
+      }
+    },
+    "storylink-69149": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69149",
+        "href": "https://github.com/advisories/GHSA-vpx6-8pjr-4g3v",
+        "source": "GitHub"
+      }
+    },
+    "storylink-68945": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-68945",
+        "href": "https://github.com/advisories/GHSA-jhpw-976m-542j",
+        "source": "GitHub"
+      }
+    },
+    "text-angular-full": {
+      "type": "Text",
+      "props": {
+        "text": "Angular @common/@core/@compiler/@platform-server (npm)\n\ni18n XSS via event-handler attrs + SSR raw-content escaping gap + HttpTransferCache cross-request response reuse.\n\nAction: upgrade angular to ≥22.0.7 / ≥21.2.19 / ≥20.3.27 (19.x EOL, patch by upgrading major)."
+      }
+    },
+    "storylink-69152": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69152",
+        "href": "https://github.com/advisories/GHSA-rgw5-rvv9-x895",
+        "source": "GitHub"
+      }
+    },
+    "text-69152-full": {
+      "type": "Text",
+      "props": {
+        "text": "brace-expansion (npm) · CVSS 7.5\n\nDoS via unbounded intermediate arrays, bypasses CVE-2026-14257 mitigation. near-universal transitive dep.\n\nAction: upgrade to ≥1.1.18 / ≥2.1.4 / ≥3.0.6 / ≥5.0.9."
+      }
+    },
+    "storylink-18446": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-18446",
+        "href": "https://github.com/advisories/GHSA-7p8r-x3mc-p8w7",
+        "source": "GitHub"
+      }
+    },
+    "text-18446-full": {
+      "type": "Text",
+      "props": {
+        "text": "fast-uri (npm) · CVSS 7.5 · EPSS 0.002\n\nhost confusion via backslash authority introducer.\n\nAction: upgrade to ≥2.4.4 / ≥3.1.5 / ≥4.1.2."
+      }
+    },
+    "storylink-69185": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69185",
+        "href": "https://github.com/advisories/GHSA-2m8v-j782-fhvr",
+        "source": "GitHub"
+      }
+    },
+    "text-69185-full": {
+      "type": "Text",
+      "props": {
+        "text": "socket.io-parser (npm) · CVSS 7.5\n\nzero-attachment memory exhaustion.\n\nAction: upgrade to ≥3.3.6 / ≥3.4.5 / ≥4.2.7."
+      }
+    },
+    "storylink-13697": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-13697",
+        "href": "https://github.com/advisories/GHSA-4cwx-7wf7-3272",
+        "source": "GitHub"
+      }
+    },
+    "text-13697-full": {
+      "type": "Text",
+      "props": {
+        "text": "undici (npm) · CVSS 7.4 · EPSS 0.003\n\ncross-user info disclosure + parse-time crash via degenerate private cache directives.\n\nAction: upgrade to ≥7.29.0 / ≥8.9.0."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "storylink-gitpython": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-3f7w-8rr8-f37f",
+        "href": "https://github.com/advisories/GHSA-3f7w-8rr8-f37f",
+        "source": "GitHub"
+      }
+    },
+    "text-gitpython-full": {
+      "type": "Text",
+      "props": {
+        "text": "GitPython (pip) · CVSS 8.1 · no fix yet · ≤3.1.56\n\nunguarded git-option forwarding in IndexFile.checkout() + TagReference.create() → arbitrary file overwrite + read.\n\nAction: avoid untrusted refspec input; watch for patched release."
+      }
+    },
+    "storylink-ip-address": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-69192",
+        "href": "https://github.com/advisories/GHSA-mwp4-54f8-5fhr",
+        "source": "GitHub"
+      }
+    },
+    "text-ip-address-full": {
+      "type": "Text",
+      "props": {
+        "text": "ip-address (npm) · no fix yet · ≤10.3.0\n\nAddress4 decodes leading-zero octets as decimal while resolvers decode as octal → SSRF + trust-boundary bypass.\n\nAction: don't rely on Address4 for SSRF prevention until patched."
+      }
+    }
+  }
+}

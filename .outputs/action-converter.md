@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-30*
-Shape: deliver iss-025 handoff T-0, seed iss-027/028 d24, regenerate market-context, sync MEMORY rails
+*5 Actions — 2026-08-08*
+Shape: rebase #173, triage #174, audit ci-skills-json, add LIT, refresh market-context
 
-1. deliver `memory/issues/ISS-025-handoff.md` with the exact `.github/workflows/aeon.yml:479-495` capture-step patch diff (chain-runner writes to file not stdout).
-why: T-0 deadline day per weekly-review 7-27 action #1; retires 15d slip on cost-report 12% (7/58) sandbox-truncation driver.
-done: file `memory/issues/ISS-025-handoff.md` exists with fenced-diff block referenced from ISS-025 line 11 fix_pr field.
-loop: iss-025-hand-off-t0
+1. rebase pr #173 fix/self-improve-2026-08-03 onto origin/main and force-push (`gh pr checkout 173 && git rebase origin/main && git push --force-with-lease origin fix/self-improve-2026-08-03`)
+why: ci cold ~112h since 8-03 20:19z push; yesterday's close-reopen didn't fire; commit-hash change is stronger trigger; T-1 to 8-09 sunday-batch, one lift unblocks 3-pr chain (#171 + #172 + #173)
+done: `gh pr view 173 --json statusCheckRollup` non-empty within 30 min
+loop: pr-173-ci-cold
 
-2. seed `memory/issues/ISS-027.md` (batch-dark 8-skill cluster frozen since 2026-06-28) matching ISS-024/025 YAML-frontmatter schema.
-why: MEMORY line 4 references ISS-027 authoritatively but file absent d24; +4d past weekly-review 7-27 last-chance window; heartbeat verdicts rely on the ID.
-done: `memory/issues/ISS-027.md` written with id/title/status/severity/category/detected_by/affected_skills fields + INDEX.md row added.
-loop: iss-027-file-doc-gap-d24
+2. triage pr #174 (advisor brier-weight in pm synthesis) — read diff, verify prompt/schema changes, decide approve or request-changes
+why: first advisor-workflow-authored pr in memory-window opened 00:31z overnight, queue-full 4→5 tests self-improve exit-gate, needs risk-tier + skill-scan before 8-09 batch
+done: `gh pr review 174 --approve` or `--request-changes` with comment posted
+loop: pr-174-advisor-triage
 
-3. seed `memory/issues/ISS-028.md` (bash `>` redirect regression n=11 durable 7-22 → 7-30 8-UTC-day span) matching the same schema.
-why: paired doc-gap fires on every notify write via Write/Edit workaround chain; without file, root-cause hunt has no anchor and PR #167 lacks issue back-link.
-done: `memory/issues/ISS-028.md` written with detected_by=security-digest and affected_skills list ≥5 (security-digest, agent-buzz, reg-monitor, list-digest, heartbeat).
-loop: iss-028-file-doc-gap-d24
+3. audit `.github/workflows/ci-skills-json.yml` against last failing run — `gh run list --workflow=ci-skills-json.yml --limit 5` + `gh run view <id> --log-failed` to identify root cause blocking #171 + #172
+why: yesterday's follow-up gate — if pr #173 ci stays dark 24h+ (now 112h), escalate to workflow-config investigation; #171 + #172 both fail on same shared root cause, audit unblocks the chain even if the #173 rebase itself doesn't fire
+done: root cause written as comment on #171 or #172 (or as new entry in memory/topics/fleet.md)
+loop: ci-skills-json-shared-root-cause
 
-4. regenerate `memory/topics/market-context.md` header + snapshot from today's 12:00Z token-alert + 09:12Z github-trending + 15:22Z security-digest slates.
-why: skill-freshness 09:15Z flagged file crosses STALE ~13:00Z today (14d since 7-16 touch); market-context-refresh skill 32% SR (30/93) will not auto-fire; fingerprint change gates 7-31 notify.
-done: `Last updated` header reads `2026-07-30` and body includes Cisco Secure FMC KEV + REPPO cap-tail d2 + [[open-voice-primitive-rail]] entries.
-loop: market-context-stale-t0
+4. add LIT (lighter protocol) to memory/MEMORY.md Tracked Tokens table — 5th row with 15% threshold and coingecko id
+why: list-digest 8-08 flowslikeosmo surfaced on-chain-verifiable distribution thesis (robinhood chain 1.8% of lighter perps vol, $11.14M on-chain deposits post-integration, 15.5M LIT burned 6.3% supply since 6-30 buyback, 125M staked at 6% apy, no unlocks until 12-29); tracking gate opens now so token-alert can surface any threshold cross rather than reconstruct after the fact
+done: `head -125 memory/MEMORY.md | grep -c LIT` returns ≥1 in the Tracked Tokens block
+loop: lit-token-add
 
-5. sync MEMORY.md line 74 supply-chain rail entries with today's security-digest 15:22Z bumps and github-trending 09:12Z rail candidates.
-why: 3 concurrent rail extensions land same UTC-day (single-project-mass-disclose n=6 → n=7 via flyto-core 6-CVE, AI-framework-attack-surface n=3 → n=4 via @aws/agentcore, NEW network-perimeter-vendor-cluster-in-KEV n=4); drift risk before evening consolidation.
-done: MEMORY.md line 74 area shows n=6 → n=7 diff + 2 new rail lines with sample IDs (Cisco CVE-2026-20316, flyto-core GHSA-2956-977x-2w3r).
-loop: memory-md-supply-chain-rail-update
+5. refresh memory/topics/market-context.md baseline snapshot dated 2026-08-08 — btc regime + tracked-token state + pr queue + fleet-health line, replacing 2026-07-16 stale header
+why: 23d/552h stale, crossed 2× threshold on 8-01, has been carried in every action-converter run since 8-03 without action; downstream skills (morning-brief, reg-monitor, security-digest) all reference this file for baseline framing, stale baseline drifts framing across the fleet
+done: `head -1 memory/topics/market-context.md` shows date 2026-08-08
+loop: market-context-md-stale-2x
 
-sources: memory=88L logs=7d topics=~20 prs=3 cron_failing=10 mode=OK
+sources: memory=156L logs=10d topics=19 prs=5 cron_failing=0 mode=OK

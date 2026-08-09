@@ -1,17 +1,22 @@
-*Unlock Monitor — week of July 28, 2026*
+*unlock monitor — week of 2026-08-03*
 
-This week's headline: **FTX creditor distribution** lands Wed Jul 31, $900M court-ordered liquidation under legal timeline—no strategic discretion, immediate forced selling.
+$PROVE is the whole story this week. wed aug 5, $34.7M cliff — larger than the token's own $32.8M market cap. 8.6× daily volume, into a +15.9% 30d tape. fade the pump.
 
-FORCED
-- **FTX** — Wed Jul 31 — $900M creditor batch distribution, court-ordered with legal timeline constraints
+**CRISIS (>2.4× daily vol)**
+- $PROVE — wed aug 5 · 312.5M tokens (~21% supply, $34.7M)
+  cliff · team · 8.6× vol · 30d +15.9% → fade the pump
+  unlock $ exceeds mcap. weakness usually starts ~30d before, vol peaks on date, recovery window 10-14d out.
 
-STRAIN (1.0×–2.4× daily vol)
-- **HOPR** — Sun Jul 27 — 10M tokens (~$134K) · 1.94× vol · cliff
+**TRIVIAL — big headline, small strain**
+- $HYPE — thu aug 6 · 433K tokens ($22.74M, 0.11% supply)
+  cliff · team · 0.07× vol · 30d +21.8% → absorbable
+  tokenomist calls it structurally modest. $306M daily book swallows it.
+- $ENA — wed aug 5 · 171.88M tokens ($15.5M, team+investors)
+  cliff · team/investor · 0.11× vol · 30d +14.0% → absorbable
+  hayes reportedly accumulating, $142M daily book.
+- $STO — mon aug 3 · 20.82M ($760K, 2.1% total supply)
+  0.24× vol · 30d +23.4% → absorbable
 
-TRIVIAL (< 0.3× daily vol)  
-- **YGG** — Sun Jul 27 — 9.81M tokens (~$179K) · ecosystem
-- **RON** — Sun Jul 27 — 21.14M tokens · linear vesting
+*supply read:* PROVE is the only real event this week — a cliff larger than the market cap it's landing in, into a green 30d tape. that's a fade-pump setup by the book. HYPE and ENA sound big but sit on books that eat them. rest of the week is calendar noise on the absorption axis.
 
-*Supply read:* Week is supply-quiet at detail level—HOPR/YGG/RON below absorption noise (<0.5× vol each). FTX $900M forced distribution Wed is the headline watch (legal liquidation mechanism, not vesting cliff), likely absorbed into volatile cefi trading. Market in broad recovery (100/100 breadth 7-26), unlikely derailed by supply. No cliff-weakness patterns detected.
-
-sources: tokenomist=partial, defillama=fail(403), cryptorank=ok, dropstab=no_data, coingecko=ok
+sources: tokenomist=ok, defillama=fail, cryptorank=ok, dropstab=fail, coingecko=ok

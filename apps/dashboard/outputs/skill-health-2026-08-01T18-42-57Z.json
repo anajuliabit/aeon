@@ -1,0 +1,255 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health · 2026-08-01"
+      },
+      "children": [
+        "alert-degraded",
+        "main-info-stack",
+        "sep-1",
+        "degraded-section",
+        "sep-2",
+        "no-data-section",
+        "sep-3",
+        "healthy-section",
+        "sep-4",
+        "delta-section",
+        "sep-5",
+        "stats-section"
+      ]
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: DEGRADED(17) — hash 7bf88238 → f0c415fd",
+        "type": "warning"
+      }
+    },
+    "main-info-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "systemic-text"
+      ]
+    },
+    "systemic-text": {
+      "type": "Text",
+      "props": {
+        "text": "Systemic: output_tokens=0 sandbox-truncation family — day 40, ~20 skills",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-skills-stack",
+        "see-more-link"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (17)",
+        "level": "h3"
+      }
+    },
+    "degraded-skills-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-aixbt-pulse",
+        "skill-defi-monitor",
+        "skill-market-context",
+        "skill-narrative-tracker",
+        "skill-evals"
+      ]
+    },
+    "skill-aixbt-pulse": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse — sr=0.47, last_ok 34d (batch-dark) — WAIT-API → ISS-027",
+        "variant": "body"
+      }
+    },
+    "skill-defi-monitor": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor — sr=0.53, last_ok 34d (batch-dark) — FIX CONFIG (on-chain-watches.yml + Alchemy/Etherscan keys)",
+        "variant": "body"
+      }
+    },
+    "skill-market-context": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — sr=0.32, last_ok 34d — WAIT-API → ISS-027",
+        "variant": "body"
+      }
+    },
+    "skill-narrative-tracker": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — sr=0.33, last_ok 34d — WAIT-API → ISS-027",
+        "variant": "body"
+      }
+    },
+    "skill-evals": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals — sr=0.53, last_ok 6d — INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "see-more-link": {
+      "type": "Link",
+      "props": {
+        "label": "+12 more — see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-text"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "no-data-text": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — expected (dispatch-gated)",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-stat"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "10",
+        "label": "skills healthy"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "delta-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "delta-text"
+      ]
+    },
+    "delta-text": {
+      "type": "Text",
+      "props": {
+        "text": "delta since prev: evening-recap DEGRADED → WARNING (sr 0.59 → 0.6 after 7-31 21:57Z success)",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-open-issues",
+        "stat-resolved",
+        "stat-filed"
+      ]
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "value": "13",
+        "label": "open issues"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "resolved"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "filed"
+      }
+    }
+  }
+}

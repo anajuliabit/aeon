@@ -1,0 +1,6 @@
+semgrep=fail
+trufflehog=fail
+osv-binary=fail
+osv-api=ok
+slither=n/a
+hand-audit=ok

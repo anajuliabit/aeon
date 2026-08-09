@@ -158,6 +158,7 @@ When writing new skills, always include a "Sandbox note" section with the approp
 - Keep notifications concise — one paragraph max.
 - Never expose secrets in file content — use environment variables.
 - Never run destructive commands like `rm -rf /`.
+- When editing any `skills/*/SKILL.md`, run `./generate-skills-json` and stage the updated `skills.json` in the same commit — the `ci-skills-json` gate rejects PRs where the manifest is stale (name/description/var/schedule/category drift).
 
 ## PR review cadence
 

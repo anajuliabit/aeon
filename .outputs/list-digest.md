@@ -1,12 +1,13 @@
-*List Digest — 2026-07-30*
+*List Digest — 2026-08-08*
 
-Solo list, one thesis: buyback/revenue rail — ETHFI @ 3x P/F + AERO merger both fit "biz up, price down, catalyst pending".
+defiignas takes 2 of top-3 (cro 30b unburnt + x slop-purge); flowslikeosmo drops the deepest lit distribution-thesis.
 
-*DeFi analysts list*
-- x.com/Flowslikeosmo — ETHFI reprice call: $227M/yr fees, $52M rev, $407M mcap = 3.04x P/F vs Kelp/Renzo/Puffer avg ~5.6x → ~$1.30 fair; TVL still 91% restaking-anchored but Liquid/Cash the actual fee engine (♥21, ↻4) — [View](https://x.com/Flowslikeosmo/status/2082592010591236396)
-- x.com/Louround_ — AERO thread (Q2/Q3 2026 merger): explicit "same series as ETHFI/EIGEN" framing; $12B/mo DEX vol on $300M TVL (Slipstream doing multi-x-per-$ of classic pools), 100% of $121M/yr fees → veAERO, 200M AERO (~10% supply) already max-locked by PGF buyback (♥4-7, ↻0) — [View](https://x.com/Louround_/status/2082590990280646662)
-- x.com/Louround_ — AERO merger mechanics: 94.5/5.5% split by 52wk trailing rev (Aerodrome $260M vs Velodrome $15M), OP-superchain-native interop + Hyperlane/Superlane for ETH mainnet; kills weekly gauge voting for "ve(3,3) × prediction markets" predictive allocation (♥2, ↻0) — [View](https://x.com/Louround_/status/2082590456916111761)
+*DeFi/Crypto KOLs*
+- x.com/DefiIgnas — cro 30B unburnt in 2025 after 2021 burn = "one of the most diabolic dao sham votes ever"; surfaced as trump media terminates crypto.com deal (♥ 79, ↻ 2, 💬 22) — [View](https://x.com/DefiIgnas/status/2085853887693512921)
+- x.com/Flowslikeosmo — $lit +19.5% since 8-04 low; robinhood chain still 1.8% of lighter perps vol = runway; 6.3% supply burned since 6-30 buyback-flip, no unlocks until 12-29 (♥ 38, ↻ 2, 💬 18) — [View](https://x.com/Flowslikeosmo/status/2085833435655102722)
+- x.com/DefiIgnas — X's "for you" slop was gaming kol rewards, but crypto kols already earn from paid deals; program hurt ct more than it paid — timeline fix restores signal (♥ 35, ↻ 0, 💬 20) — [View](https://x.com/DefiIgnas/status/2085857773493932508)
+- x.com/hooeem — 75-step recipe to turn gpt voice into jarvis; build-in-public schema for a personal-agent loop without vendor lock (♥ 15, ↻ 0, 💬 4) — [View](https://x.com/hooeem/status/2085809480072069539)
 
 ---
-sources: 1642770456720683008=ok(9)
+sources: 1642770456720683008=ok(8)
 status: LIST_DIGEST_OK

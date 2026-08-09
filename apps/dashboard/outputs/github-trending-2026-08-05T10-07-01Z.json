@@ -1,0 +1,448 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-05"
+      },
+      "children": [
+        "top-pick-section",
+        "sep-1",
+        "ai-ml-section",
+        "sep-2",
+        "devtools-section",
+        "sep-3",
+        "infra-section",
+        "sep-4",
+        "sources-line"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-heading",
+        "top-pick-item"
+      ]
+    },
+    "top-pick-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "top-pick-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top-pick-title",
+        "top-pick-desc"
+      ]
+    },
+    "top-pick-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "firecrawl/pdf-inspector",
+        "href": "https://github.com/firecrawl/pdf-inspector"
+      }
+    },
+    "top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "day-2 compounding (+49% vs yesterday, 42× baseline) on a standalone rust pdf classifier + extractor. rag ingest primitive from a team that already ships the saas.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ai-ml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ai-ml-heading",
+        "airllm",
+        "superpowers",
+        "livekit"
+      ]
+    },
+    "ai-ml-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "airllm": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "airllm-header",
+        "airllm-desc"
+      ]
+    },
+    "airllm-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "airllm-title",
+        "airllm-stats",
+        "airllm-lang",
+        "airllm-badge"
+      ]
+    },
+    "airllm-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "lyogavin/airllm",
+        "href": "https://github.com/lyogavin/airllm"
+      }
+    },
+    "airllm-stats": {
+      "type": "Stat",
+      "props": {
+        "value": "1,711",
+        "delta": "28.7k total"
+      }
+    },
+    "airllm-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Jupyter",
+        "variant": "outline"
+      }
+    },
+    "airllm-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "airllm-desc": {
+      "type": "Text",
+      "props": {
+        "text": "day-2 sustained compounding (+58% vs yesterday, 68× baseline). settles yesterday's question: not a one-day spike like invidious 8-02.",
+        "variant": "body"
+      }
+    },
+    "superpowers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "superpowers-header",
+        "superpowers-desc"
+      ]
+    },
+    "superpowers-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "superpowers-title",
+        "superpowers-stats",
+        "superpowers-lang",
+        "superpowers-badge"
+      ]
+    },
+    "superpowers-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "obra/superpowers",
+        "href": "https://github.com/obra/superpowers"
+      }
+    },
+    "superpowers-stats": {
+      "type": "Stat",
+      "props": {
+        "value": "653",
+        "delta": "266.8k total"
+      }
+    },
+    "superpowers-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell",
+        "variant": "outline"
+      }
+    },
+    "superpowers-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "superpowers-desc": {
+      "type": "Text",
+      "props": {
+        "text": "jesse vincent's agentic-skills framework. 266.8k stars in 300d is one of the largest total-star pools on any trending sweep in memory-window; first appearance on ours.",
+        "variant": "body"
+      }
+    },
+    "livekit": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "livekit-header",
+        "livekit-desc"
+      ]
+    },
+    "livekit-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "livekit-title",
+        "livekit-stats",
+        "livekit-lang",
+        "livekit-badge"
+      ]
+    },
+    "livekit-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "livekit/agents",
+        "href": "https://github.com/livekit/agents"
+      }
+    },
+    "livekit-stats": {
+      "type": "Stat",
+      "props": {
+        "value": "432",
+        "delta": "12.6k total"
+      }
+    },
+    "livekit-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      }
+    },
+    "livekit-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "livekit-desc": {
+      "type": "Text",
+      "props": {
+        "text": "+192% breakout day. livekit crosses from real-time infra into voice-agent framework. dropped yesterday on slot economics, kept today on the fresh spike.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-heading",
+        "pdf-inspector"
+      ]
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "pdf-inspector": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pdf-inspector-header",
+        "pdf-inspector-desc"
+      ]
+    },
+    "pdf-inspector-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pdf-inspector-title",
+        "pdf-inspector-stats",
+        "pdf-inspector-lang",
+        "pdf-inspector-badge"
+      ]
+    },
+    "pdf-inspector-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "firecrawl/pdf-inspector",
+        "href": "https://github.com/firecrawl/pdf-inspector"
+      }
+    },
+    "pdf-inspector-stats": {
+      "type": "Stat",
+      "props": {
+        "value": "2,540",
+        "delta": "10.7k total"
+      }
+    },
+    "pdf-inspector-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "outline"
+      }
+    },
+    "pdf-inspector-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "pdf-inspector-desc": {
+      "type": "Text",
+      "props": {
+        "text": "fast pdf classification + extraction as a lib, split out of firecrawl's saas ingest pipeline.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "infra-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "infra-heading",
+        "uber-adr"
+      ]
+    },
+    "infra-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "uber-adr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adr-header",
+        "adr-desc"
+      ]
+    },
+    "adr-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "adr-title",
+        "adr-stats",
+        "adr-lang",
+        "adr-badge"
+      ]
+    },
+    "adr-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "uber/ADR",
+        "href": "https://github.com/uber/ADR"
+      }
+    },
+    "adr-stats": {
+      "type": "Stat",
+      "props": {
+        "value": "148",
+        "delta": "836 total"
+      }
+    },
+    "adr-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      }
+    },
+    "adr-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "adr-desc": {
+      "type": "Text",
+      "props": {
+        "text": "uber ships enterprise ai-agent security: observability, benchmarking, threat detection. rare corp-oss drop on agent-ops.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-line": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 5/18",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-08-08"
+      },
+      "children": [
+        "status_header",
+        "sep1",
+        "systemic_issues",
+        "sep2",
+        "degraded_skills_section",
+        "sep3",
+        "no_data_section",
+        "sep4",
+        "healthy_count",
+        "sep5",
+        "delta_section",
+        "sep6",
+        "issue_stats"
+      ]
+    },
+    "status_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "health_badge",
+        "degraded_count"
+      ]
+    },
+    "health_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HEALTH: DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "degraded_count": {
+      "type": "Stat",
+      "props": {
+        "value": "17"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "systemic_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "systemic_heading",
+        "systemic_alert"
+      ]
+    },
+    "systemic_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Systemic Issues",
+        "level": "h3"
+      }
+    },
+    "systemic_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "ISS-027 12Z 8-skill batch d43 dormant (4 in DEGRADED / 4 in WARNING); ISS-030 cost-report sr 10% chronic"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded_skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_badge",
+        "skill1",
+        "skill2",
+        "skill3",
+        "skill4",
+        "skill5",
+        "more_skills"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded Skills",
+        "level": "h3"
+      }
+    },
+    "degraded_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "13 outside systemic",
+        "variant": "secondary"
+      }
+    },
+    "skill1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals — sr 56%, 6d since success → INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "skill2": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill — sr 38%, 5d since success → INVESTIGATE (→ ISS-021)",
+        "variant": "body"
+      }
+    },
+    "skill3": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor — sr 57%, 5d since success → INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "skill4": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics — sr 21%, 3d since success → INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "skill5": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — sr 21%, 3d since success → INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "more_skills": {
+      "type": "Text",
+      "props": {
+        "text": "+8 more — see memory/issues/INDEX.md",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no_data_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no_data_heading",
+        "no_data_badge",
+        "no_data_text"
+      ]
+    },
+    "no_data_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data",
+        "level": "h3"
+      }
+    },
+    "no_data_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "3 skills",
+        "variant": "outline"
+      }
+    },
+    "no_data_text": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy_count": {
+      "type": "Stat",
+      "props": {
+        "value": "8",
+        "label": "Healthy skills",
+        "trend": "up"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "delta_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "delta_heading",
+        "delta1",
+        "delta2",
+        "delta3"
+      ]
+    },
+    "delta_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Delta since 8-07 18:07Z",
+        "level": "h3"
+      }
+    },
+    "delta1": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest DEGRADED→WARNING (sr 0.60 crosses gate)",
+        "variant": "body"
+      }
+    },
+    "delta2": {
+      "type": "Text",
+      "props": {
+        "text": "DEGRADED 18→17, WARNING 14→15",
+        "variant": "body"
+      }
+    },
+    "delta3": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet clean-consec d4 crossing 8-08. No fresh usepod / sdk_opt_in_required signatures. [[morning-08Z-slot-dark]] deciding-test FAILS at n=5 — heartbeat + skill-freshness both clean 8-08 08Z (positive break of 4-consec pattern).",
+        "variant": "caption"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "open_issues",
+        "resolved_issues",
+        "filed_issues"
+      ]
+    },
+    "open_issues": {
+      "type": "Stat",
+      "props": {
+        "value": "14",
+        "label": "Open issues"
+      }
+    },
+    "resolved_issues": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "Resolved this run"
+      }
+    },
+    "filed_issues": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "Filed this run"
+      }
+    }
+  }
+}

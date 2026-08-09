@@ -1,0 +1,78 @@
+{
+  "root": "card-thought-review",
+  "state": {},
+  "elements": {
+    "card-thought-review": {
+      "type": "Card",
+      "props": {
+        "title": "Thought Review",
+        "description": "Daily check-in status"
+      },
+      "children": [
+        "heading-main",
+        "text-period",
+        "stat-captures",
+        "text-ticks-label",
+        "text-ticks-times",
+        "badge-shape",
+        "sep-1",
+        "alert-priorities"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "🧭 Thought Review",
+        "level": "h2"
+      }
+    },
+    "text-period": {
+      "type": "Text",
+      "props": {
+        "text": "Last 24h",
+        "variant": "body"
+      }
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "text-ticks-label": {
+      "type": "Text",
+      "props": {
+        "text": "Second tick of the day"
+      }
+    },
+    "text-ticks-times": {
+      "type": "Text",
+      "props": {
+        "text": "07:36Z + 21:52Z",
+        "variant": "caption"
+      }
+    },
+    "badge-shape": {
+      "type": "Badge",
+      "props": {
+        "text": "Same shape",
+        "variant": "outline"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-priorities": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md — 57d stale",
+        "message": "Worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}

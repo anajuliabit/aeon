@@ -1,0 +1,356 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-05"
+      },
+      "children": [
+        "tldr-alert",
+        "sep-1",
+        "headlines-section",
+        "sep-2",
+        "notable-section",
+        "sep-3",
+        "decisions-section",
+        "sep-4",
+        "footer-section"
+      ]
+    },
+    "tldr-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "TL;DR",
+        "message": "Dense ship day — 14 fresh security rail-datapoints and ISS-029 sealed Resolved, but PR #173 CI dark at 48h blocks Sunday-batch queue clear.",
+        "type": "info"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "h1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-title",
+        "h1-desc",
+        "h1-link"
+      ]
+    },
+    "h1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "security-digest",
+        "level": "h3"
+      }
+    },
+    "h1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "408-pkg malware peak (new memory-window #1), Langflow KEV 6th agent-framework, Tomcat EPSS 0.812 (99.6th pct)"
+      }
+    },
+    "h1-link": {
+      "type": "Link",
+      "props": {
+        "label": "apps/dashboard/outputs/skill-analytics.json",
+        "href": "apps/dashboard/outputs/skill-analytics.json"
+      }
+    },
+    "h2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-title",
+        "h2-desc",
+        "h2-link"
+      ]
+    },
+    "h2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "reflect",
+        "level": "h3"
+      }
+    },
+    "h2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-029 → Resolved (INDEX data-consistency defect reconciled), MEMORY.md 84L → 101L, 6 new sub-rail candidates"
+      }
+    },
+    "h2-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "h3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-title",
+        "h3-desc",
+        "h3-link"
+      ]
+    },
+    "h3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-analytics",
+        "level": "h3"
+      }
+    },
+    "h3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "75.2% success (−5pp WoW), 24 anomalies, article + dashboard shipped"
+      }
+    },
+    "h3-link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/skill-analytics-2026-08-05.md",
+        "href": "articles/skill-analytics-2026-08-05.md"
+      }
+    },
+    "h4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-title",
+        "h4-desc",
+        "h4-link"
+      ]
+    },
+    "h4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-health",
+        "level": "h3"
+      }
+    },
+    "h4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report CRITICAL→DEGRADED (consec 18→0 via 8-04 recovery), hash 35369f69"
+      }
+    },
+    "h4-link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "h5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-title",
+        "h5-desc",
+        "h5-link"
+      ]
+    },
+    "h5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "daily-routine",
+        "level": "h3"
+      }
+    },
+    "h5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "first token-movers clean fetch since ISS-027 d38 (2026-06-28); confirms ISS-027 is scheduler-side gap not CG infra"
+      }
+    },
+    "h5-link": {
+      "type": "Link",
+      "props": {
+        "label": ".outputs/token-movers.md",
+        "href": ".outputs/token-movers.md"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — NY v Kalshi $36B ACT-tier; CFTC prediction-market NPRM post-comment-close WATCH; Wed-cadence PASS post-ISS-029"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — 5 picks (firecrawl/pdf-inspector 42×; airllm 68× d2 sustained); 8-consec sub-25 fetch rail"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve — EXIT GATE (3 open PRs; queue-full pause holds through 8-10 Sunday-batch)"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — MCP-enforcement 5-consec; [[agent-buzz-engagement-drought]] 4-consec candidate → formal-pattern on 8-06 continuation"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-text",
+        "d1-link"
+      ]
+    },
+    "d1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger PR #173 CI: push empty commit on fix/self-improve-2026-08-03 (48h+ dark, mergeable=UNKNOWN; unblocks #171 + #172 at 8-10 batch)"
+      }
+    },
+    "d1-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/173",
+        "href": "https://github.com/anajuliabit/aeon/pull/173"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "Watch 8-06 08:00Z heartbeat + skill-freshness — [[morning-08Z-slot-dark]] formal-pattern deciding-test (skill-freshness already at 48.5h, formally >2× threshold)"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-1",
+        "footer-2"
+      ]
+    },
+    "footer-1": {
+      "type": "Text",
+      "props": {
+        "text": "+11 routine runs collapsed",
+        "variant": "muted"
+      }
+    },
+    "footer-2": {
+      "type": "Text",
+      "props": {
+        "text": "sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

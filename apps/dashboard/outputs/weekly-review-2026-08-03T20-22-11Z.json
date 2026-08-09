@@ -1,0 +1,178 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review",
+        "description": "2026-08-03"
+      },
+      "children": [
+        "alert_action",
+        "separator_1",
+        "stack_health",
+        "separator_2",
+        "stack_actions",
+        "separator_3",
+        "stack_review"
+      ]
+    },
+    "alert_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Top Priority Action",
+        "message": "Diagnose 8-03 usepod 402 payment cascade root-cause + file ISS-029 by 2026-08-05 (54 failures / 1 UTC day, api.usepod.ai payment gate)"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_health",
+        "grid_stats"
+      ]
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h3"
+      }
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_runs",
+        "stat_success_rate",
+        "stat_cascade_impact"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill Runs (OK)",
+        "value": "251/313"
+      }
+    },
+    "stat_success_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "80.2%",
+        "delta": "-18.8pp",
+        "trend": "down"
+      }
+    },
+    "stat_cascade_impact": {
+      "type": "Stat",
+      "props": {
+        "label": "8-03 Cascade Failures",
+        "value": "87%"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_actions",
+        "grid_action_breakdown"
+      ]
+    },
+    "heading_actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Last-Week Actions (4 Total)",
+        "level": "h3"
+      }
+    },
+    "grid_action_breakdown": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "badge_shipped",
+        "badge_half",
+        "badge_slipped"
+      ]
+    },
+    "badge_shipped": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ Shipped — 2",
+        "variant": "default"
+      }
+    },
+    "badge_half": {
+      "type": "Badge",
+      "props": {
+        "text": "◐ Half — 1",
+        "variant": "secondary"
+      }
+    },
+    "badge_slipped": {
+      "type": "Badge",
+      "props": {
+        "text": "✗ Slipped — 1",
+        "variant": "destructive"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_review": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_full_review",
+        "link_full_review"
+      ]
+    },
+    "heading_full_review": {
+      "type": "Heading",
+      "props": {
+        "text": "Full Review",
+        "level": "h3"
+      }
+    },
+    "link_full_review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Weekly Review — 2026-08-03",
+        "href": "articles/weekly-review-2026-08-03.md",
+        "source": "Aeon"
+      }
+    }
+  }
+}
