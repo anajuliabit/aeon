@@ -1,0 +1,76 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Graph updated"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_edges",
+        "text_description",
+        "stack_metrics",
+        "link_pr"
+      ]
+    },
+    "stat_edges": {
+      "type": "Stat",
+      "props": {
+        "label": "EDGES_TOTAL",
+        "value": "74",
+        "delta": "+42",
+        "trend": "up"
+      }
+    },
+    "text_description": {
+      "type": "Text",
+      "props": {
+        "text": "generator format bump",
+        "variant": "muted"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_skills",
+        "stat_enabled"
+      ]
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Total skills",
+        "value": "191"
+      }
+    },
+    "stat_enabled": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled unchanged",
+        "value": "43"
+      }
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "View PR #176",
+        "href": "https://github.com/anajuliabit/aeon/pull/176"
+      }
+    }
+  }
+}
