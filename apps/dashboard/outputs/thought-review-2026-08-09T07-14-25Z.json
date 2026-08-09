@@ -1,0 +1,104 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Thought Review",
+        "description": "last 24h"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_captures",
+        "sep1",
+        "stack_inbox",
+        "stack_priorities",
+        "sep2",
+        "alert_refresh"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_inbox": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_inbox_label",
+        "text_inbox_detail"
+      ]
+    },
+    "text_inbox_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Inbox",
+        "level": "h4"
+      }
+    },
+    "text_inbox_detail": {
+      "type": "Text",
+      "props": {
+        "text": "49d cold (last real 2026-06-21)",
+        "variant": "caption"
+      }
+    },
+    "stack_priorities": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_priorities_label",
+        "text_priorities_detail"
+      ]
+    },
+    "text_priorities_label": {
+      "type": "Heading",
+      "props": {
+        "text": "priorities.md",
+        "level": "h4"
+      }
+    },
+    "text_priorities_detail": {
+      "type": "Text",
+      "props": {
+        "text": "66d stale (last reviewed 2026-06-04)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "alert_refresh": {
+      "type": "Alert",
+      "props": {
+        "title": "Assessment",
+        "message": "worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}
