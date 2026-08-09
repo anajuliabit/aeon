@@ -128,7 +128,7 @@ Message priority: Telegram > Discord > Slack (first message found wins per poll 
 
 ## Sandbox Limitations
 
-GitHub Actions runs Claude Code in a sandbox that may block outbound network from bash. Two patterns:
+GitHub Actions runs Claude Code in a sandbox that may block outbound network from bash AND bash file redirects. Three patterns:
 
 1. **Public APIs (no auth):** curl may fail intermittently. Always add a **WebFetch fallback** — WebFetch is a built-in Claude tool that bypasses the sandbox. Example: "If curl fails, use WebFetch for the same URL."
 
@@ -137,7 +137,13 @@ GitHub Actions runs Claude Code in a sandbox that may block outbound network fro
    - **Post-process** (after Claude runs): Write request JSON to `.pending-{service}/`. Create `scripts/postprocess-{name}.sh` to process them. The workflow runs all `scripts/postprocess-*.sh` after Claude finishes. Used for: `.pending-replicate/`, `.pending-notify/`, etc.
    - **`gh` CLI**: For GitHub API, use `gh api` instead of curl — handles auth internally.
 
-When writing new skills, always include a "Sandbox note" section with the appropriate fallback pattern.
+3. **Bash file redirects (`>`, `>>`, heredoc-to-file) blocked** — ISS-028, n=36+ hits across 12+ skills. Do NOT reach for `cat > file`, `cat >> file`, `echo ... >>`, or `cat <<EOF > file` — they get sandbox-denied on first try. Workarounds:
+   - **Create/overwrite a file** → use the `Write` tool.
+   - **Append to a file** (e.g. `memory/logs/${today}.md`) → Read the file first (Edit requires it), then use the `Edit` tool to insert new content at the end. Or write the new block to a `.tmp/` file with `Write`, then `Edit`-append the target with that block.
+   - **Save a curl response** → `curl -o file …` (the `-o` flag writes directly, no shell redirect).
+   - **Save `gh api` output** → use `--jq` for filtering, then either pipe into another command or capture via the `Write` tool from the printed stdout.
+
+When writing new skills, always include a "Sandbox note" section with the appropriate fallback pattern. When a SKILL step says "append to memory/logs/…", prefer the Write-to-`.tmp/`+Edit-append pattern from #3 over any `>>` shortcut.
 
 ## Security
 
