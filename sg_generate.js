@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const ROOT = '/home/runner/work/aeon/aeon';
 process.chdir(ROOT);
 
-const TODAY = '2026-05-31';
+const TODAY = '2026-08-09';
 const OUT_PATH = 'docs/skill-graph.md';
 const STATE_PATH = 'memory/topics/skill-graph-state.json';
 
@@ -387,6 +387,7 @@ const selfHealEdges = [
   { from: 'skill-health', to: 'skill-evals', type: 'shared' },
   { from: 'skill-evals', to: 'skill-repair', type: 'shared' },
   { from: 'skill-repair', to: 'self-improve', type: 'shared' },
+  { from: 'self-improve', to: 'heartbeat', type: 'shared' },
 ].filter(e => slugSet.has(e.from) && slugSet.has(e.to));
 
 // Explicit skill-reads-skill edges (e.g. daily-routine "Read skills/X/SKILL.md")
@@ -496,12 +497,33 @@ let verdictParts = [];
 if (mode === 'SKILL_GRAPH_NEW') {
   verdictParts.push(`first run with state file; baseline established for ${skills.length} skills across 5 categories (${currentEnabled.size} enabled)`);
 } else {
+  // Skip enabled/edge diffs when the prior doc could not be parsed
+  // for that dimension (avoids phantom "43 newly enabled" on format transitions).
+  const priorStateTotal = priorState ? ((priorState.edges || {}).depends_on || 0) + ((priorState.edges || {}).consume || 0) + ((priorState.edges || {}).shared_state || 0) + ((priorState.edges || {}).reactive || 0) : 0;
+  const enabledBaselineValid = priorEnabled.size > 0 || (priorState && priorState.enabled_count === 0);
+  // Edges baseline is valid only when the parser recovered at least 80% of what
+  // the prior state file claimed — otherwise the prior doc used a compressed
+  // format and per-edge diffs would be noisy.
+  const edgesBaselineValid = priorEdges.size >= Math.max(1, Math.floor(0.8 * priorStateTotal)) || priorStateTotal === 0;
+
   if (addedNodes.length) verdictParts.push(`NEW_SKILLS: ${addedNodes.sort().join(', ')}`);
   if (removedNodes.length) verdictParts.push(`RETIRED_SKILLS: ${removedNodes.sort().join(', ')}`);
-  if (addedEnabled.length) verdictParts.push(`NEW_ENABLED: ${addedEnabled.sort().join(', ')}`);
-  if (removedEnabled.length) verdictParts.push(`NEW_DISABLED: ${removedEnabled.sort().join(', ')}`);
-  if (addedEdges.length) verdictParts.push(`NEW_DEPS: ${addedEdges.sort().slice(0, 6).join(', ')}${addedEdges.length > 6 ? ` (+${addedEdges.length - 6} more)` : ''}`);
-  if (removedEdges.length) verdictParts.push(`REMOVED_DEPS: ${removedEdges.sort().slice(0, 6).join(', ')}${removedEdges.length > 6 ? ` (+${removedEdges.length - 6} more)` : ''}`);
+  if (enabledBaselineValid) {
+    if (addedEnabled.length) verdictParts.push(`NEW_ENABLED: ${addedEnabled.sort().join(', ')}`);
+    if (removedEnabled.length) verdictParts.push(`NEW_DISABLED: ${removedEnabled.sort().join(', ')}`);
+  } else if (priorState && priorState.enabled_count !== currentEnabled.size) {
+    verdictParts.push(`ENABLED_COUNT: ${priorState.enabled_count}→${currentEnabled.size}`);
+  }
+  if (edgesBaselineValid) {
+    if (addedEdges.length) verdictParts.push(`NEW_DEPS: ${addedEdges.sort().slice(0, 6).join(', ')}${addedEdges.length > 6 ? ` (+${addedEdges.length - 6} more)` : ''}`);
+    if (removedEdges.length) verdictParts.push(`REMOVED_DEPS: ${removedEdges.sort().slice(0, 6).join(', ')}${removedEdges.length > 6 ? ` (+${removedEdges.length - 6} more)` : ''}`);
+  } else {
+    const priorSharedTotal = priorState ? ((priorState.edges || {}).depends_on || 0) + ((priorState.edges || {}).consume || 0) + ((priorState.edges || {}).shared_state || 0) + ((priorState.edges || {}).reactive || 0) : 0;
+    const nowSharedTotal = dependsEdges.length + consumeEdges.length + allSharedEdges.length;
+    if (priorState && priorSharedTotal !== nowSharedTotal) {
+      verdictParts.push(`EDGES_TOTAL: ${priorSharedTotal}→${nowSharedTotal}`);
+    }
+  }
 }
 let verdictOneLine;
 if (verdictParts.length === 0) verdictOneLine = 'ARCHITECTURE_OK';
@@ -559,15 +581,32 @@ lines.push('');
 if (mode !== 'SKILL_GRAPH_NEW') {
   lines.push('## What changed since last run');
   lines.push('');
-  if (addedNodes.length === 0 && removedNodes.length === 0 && addedEnabled.length === 0 && removedEnabled.length === 0 && addedEdges.length === 0 && removedEdges.length === 0) {
+  const priorTotalForBody = priorState ? ((priorState.edges || {}).depends_on || 0) + ((priorState.edges || {}).consume || 0) + ((priorState.edges || {}).shared_state || 0) + ((priorState.edges || {}).reactive || 0) : 0;
+  const enabledOk = priorEnabled.size > 0 || (priorState && priorState.enabled_count === 0);
+  const edgesOk = priorEdges.size >= Math.max(1, Math.floor(0.8 * priorTotalForBody)) || priorTotalForBody === 0;
+  let anyReported = false;
+  if (addedNodes.length) { lines.push(`- **Added skills (${addedNodes.length})**: ${addedNodes.sort().map(s => '`' + s + '`').join(', ')}`); anyReported = true; }
+  if (removedNodes.length) { lines.push(`- **Removed skills (${removedNodes.length})**: ${removedNodes.sort().map(s => '`' + s + '`').join(', ')}`); anyReported = true; }
+  if (enabledOk) {
+    if (addedEnabled.length) { lines.push(`- **Newly enabled (${addedEnabled.length})**: ${addedEnabled.sort().map(s => '`' + s + '`').join(', ')}`); anyReported = true; }
+    if (removedEnabled.length) { lines.push(`- **Newly disabled (${removedEnabled.length})**: ${removedEnabled.sort().map(s => '`' + s + '`').join(', ')}`); anyReported = true; }
+  } else if (priorState && priorState.enabled_count !== currentEnabled.size) {
+    lines.push(`- **Enabled count**: ${priorState.enabled_count} → ${currentEnabled.size} (per-skill diff unavailable — prior graph format differed)`);
+    anyReported = true;
+  }
+  if (edgesOk) {
+    if (addedEdges.length) { lines.push(`- **Added edges (${addedEdges.length})**: ${addedEdges.sort().slice(0, 12).map(s => '`' + s + '`').join(', ')}${addedEdges.length > 12 ? ` and ${addedEdges.length - 12} more` : ''}`); anyReported = true; }
+    if (removedEdges.length) { lines.push(`- **Removed edges (${removedEdges.length})**: ${removedEdges.sort().slice(0, 12).map(s => '`' + s + '`').join(', ')}${removedEdges.length > 12 ? ` and ${removedEdges.length - 12} more` : ''}`); anyReported = true; }
+  } else if (priorState) {
+    const priorTotal = ((priorState.edges || {}).depends_on || 0) + ((priorState.edges || {}).consume || 0) + ((priorState.edges || {}).shared_state || 0) + ((priorState.edges || {}).reactive || 0);
+    const nowTotal = dependsEdges.length + consumeEdges.length + allSharedEdges.length;
+    if (priorTotal !== nowTotal) {
+      lines.push(`- **Edge totals**: depends_on ${(priorState.edges || {}).depends_on || 0}→${dependsEdges.length} · consume ${(priorState.edges || {}).consume || 0}→${consumeEdges.length} · shared_state ${(priorState.edges || {}).shared_state || 0}→${allSharedEdges.length} (per-edge diff unavailable — prior graph format differed)`);
+      anyReported = true;
+    }
+  }
+  if (!anyReported) {
     lines.push('Structural fingerprint shifted (frontmatter or embedded references), but the node/edge/enabled-state surface is unchanged.');
-  } else {
-    if (addedNodes.length) lines.push(`- **Added skills (${addedNodes.length})**: ${addedNodes.sort().map(s => '`' + s + '`').join(', ')}`);
-    if (removedNodes.length) lines.push(`- **Removed skills (${removedNodes.length})**: ${removedNodes.sort().map(s => '`' + s + '`').join(', ')}`);
-    if (addedEnabled.length) lines.push(`- **Newly enabled (${addedEnabled.length})**: ${addedEnabled.sort().map(s => '`' + s + '`').join(', ')}`);
-    if (removedEnabled.length) lines.push(`- **Newly disabled (${removedEnabled.length})**: ${removedEnabled.sort().map(s => '`' + s + '`').join(', ')}`);
-    if (addedEdges.length) lines.push(`- **Added edges (${addedEdges.length})**: ${addedEdges.sort().slice(0, 12).map(s => '`' + s + '`').join(', ')}${addedEdges.length > 12 ? ` and ${addedEdges.length - 12} more` : ''}`);
-    if (removedEdges.length) lines.push(`- **Removed edges (${removedEdges.length})**: ${removedEdges.sort().slice(0, 12).map(s => '`' + s + '`').join(', ')}${removedEdges.length > 12 ? ` and ${removedEdges.length - 12} more` : ''}`);
   }
   lines.push('');
   lines.push('---');
