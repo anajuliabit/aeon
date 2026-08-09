@@ -1,0 +1,143 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-09"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "sep1",
+        "section-heading",
+        "tweet1-container",
+        "tweet2-container",
+        "skipped-text",
+        "sep2",
+        "footer-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "Only one list wired in today, so no cross-list resonance. Signal is @Flowslikeosmo running a fundamentals-first shortlist plus one on-chain treasury note; everything else is chatter.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi/Crypto Research",
+        "level": "h2"
+      }
+    },
+    "tweet1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1-meta",
+        "tweet1-view"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "bullish continuation call on $CARDS $PUMP $LIT $HYPE, filtered on revenue + PMF + valuation. cashflow-backed tickers, not vibes rotations.",
+        "likes": 47,
+        "retweets": 3
+      }
+    },
+    "tweet1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "💬 18 comments",
+        "variant": "caption"
+      }
+    },
+    "tweet1-view": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2086180396300227058"
+      }
+    },
+    "tweet2-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2-meta",
+        "tweet2-view"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "QT flagging someone accumulating 0.6% of $PURR supply as treasury holdings. if it's a fund it's a DAT setup; if it's a whale it's concentration risk worth watching.",
+        "likes": 12
+      }
+    },
+    "tweet2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "💬 10 comments",
+        "variant": "caption"
+      }
+    },
+    "tweet2-view": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2086159519206313986"
+      }
+    },
+    "skipped-text": {
+      "type": "Text",
+      "props": {
+        "text": "rest of the day was one-word replies from @DefiIgnas / @DeFiMinty / @Flowslikeosmo. skipped.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list-1642770456720683008=ok(10) | status: LIST_DIGEST_OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
