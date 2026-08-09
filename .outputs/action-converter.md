@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-08*
-Shape: rebase #173, triage #174, audit ci-skills-json, add LIT, refresh market-context
+*5 Actions — 2026-08-09*
+Shape: prep ISS-030 T-1, review #176, seed shiplog, kick #174 CI, wire LIT
 
-1. rebase pr #173 fix/self-improve-2026-08-03 onto origin/main and force-push (`gh pr checkout 173 && git rebase origin/main && git push --force-with-lease origin fix/self-improve-2026-08-03`)
-why: ci cold ~112h since 8-03 20:19z push; yesterday's close-reopen didn't fire; commit-hash change is stronger trigger; T-1 to 8-09 sunday-batch, one lift unblocks 3-pr chain (#171 + #172 + #173)
-done: `gh pr view 173 --json statusCheckRollup` non-empty within 30 min
-loop: pr-173-ci-cold
+1. precheck ISS-030 cost-report against 8-10 07Z deciding-test — grep `skills/cost-report/SKILL.md` for `sdk_opt_in_required` handling and append verdict block to `memory/issues/ISS-030.md`.
+why: fleet-worst chronic sr=10%, T-1 today, no operator lever tomorrow if not primed tonight.
+done: `memory/issues/ISS-030.md` has fresh precheck block (clean-signature-since-8-04-organic OR fix-scope-draft).
+loop: precheck-iss-030-t-1
 
-2. triage pr #174 (advisor brier-weight in pm synthesis) — read diff, verify prompt/schema changes, decide approve or request-changes
-why: first advisor-workflow-authored pr in memory-window opened 00:31z overnight, queue-full 4→5 tests self-improve exit-gate, needs risk-tier + skill-scan before 8-09 batch
-done: `gh pr review 174 --approve` or `--request-changes` with comment posted
-loop: pr-174-advisor-triage
+2. review PR #176 skill-graph regen (EDGES 32→74) — diff-check node/edge deltas against `memory/topics/skill-graph-state.json` and post merge-ready|blocking verdict as PR comment.
+why: opened 17:10Z today, sunday-batch T-0, one-lift-if-clean before operator window closes.
+done: `gh pr comment 176` posted with verdict; verdict logged in `memory/logs/2026-08-09.md`.
+loop: review-pr-176-skill-graph
 
-3. audit `.github/workflows/ci-skills-json.yml` against last failing run — `gh run list --workflow=ci-skills-json.yml --limit 5` + `gh run view <id> --log-failed` to identify root cause blocking #171 + #172
-why: yesterday's follow-up gate — if pr #173 ci stays dark 24h+ (now 112h), escalate to workflow-config investigation; #171 + #172 both fail on same shared root cause, audit unblocks the chain even if the #173 rebase itself doesn't fire
-done: root cause written as comment on #171 or #172 (or as new entry in memory/topics/fleet.md)
-loop: ci-skills-json-shared-root-cause
+3. draft `articles/weekly-shiplog-2026-08-09.md` seed for 8-10 09Z Mon tick — catalog 7-27 → 8-09 shipped items from `memory/logs/` so tomorrow's fire has structure to extend.
+why: 20d stale on 7d schedule (3× miss), Mon tick T-1, seed short-circuits cold-start.
+done: article file exists with ≥5 dated shipped items and ≥3 rail-count deltas.
+loop: draft-weekly-shiplog
 
-4. add LIT (lighter protocol) to memory/MEMORY.md Tracked Tokens table — 5th row with 15% threshold and coingecko id
-why: list-digest 8-08 flowslikeosmo surfaced on-chain-verifiable distribution thesis (robinhood chain 1.8% of lighter perps vol, $11.14M on-chain deposits post-integration, 15.5M LIT burned 6.3% supply since 6-30 buyback, 125M staked at 6% apy, no unlocks until 12-29); tracking gate opens now so token-alert can surface any threshold cross rather than reconstruct after the fact
-done: `head -125 memory/MEMORY.md | grep -c LIT` returns ≥1 in the Tracked Tokens block
-loop: lit-token-add
+4. rebase PR #174 (Advisor Brier-weight) onto main to trigger CI — 42h at UNKNOWN with empty statusCheckRollup; commit-hash change is stronger than any reopen event.
+why: only stuck old-queue PR pre #176, weekly-batch needs a real CI verdict on 8-10.
+done: `git push --force-with-lease` lands on `webbrain/issue-144`; `gh pr view 174 --json statusCheckRollup` returns non-empty.
+loop: rebase-pr-174-advisor
 
-5. refresh memory/topics/market-context.md baseline snapshot dated 2026-08-08 — btc regime + tracked-token state + pr queue + fleet-health line, replacing 2026-07-16 stale header
-why: 23d/552h stale, crossed 2× threshold on 8-01, has been carried in every action-converter run since 8-03 without action; downstream skills (morning-brief, reg-monitor, security-digest) all reference this file for baseline framing, stale baseline drifts framing across the fleet
-done: `head -1 memory/topics/market-context.md` shows date 2026-08-08
-loop: market-context-md-stale-2x
+5. wire LIT into MEMORY.md Tracked Tokens (5th row, 15% threshold) — 8-08 list-digest surfaced @Flowslikeosmo hard receipts (Robinhood Chain 1.8% Lighter perps vol, $11.14M on-chain deposits, 15.5M burned since 6-30, no unlocks until 12-29).
+why: deferred from 8-08 action #4; opens token-alert coverage on a live receipt-backed thesis before the arc runs.
+done: `memory/MEMORY.md` Tracked Tokens table has 5th row (LIT / lit-protocol / 15% / recent activity blurb).
+loop: wire-lit-tracked-tokens
 
-sources: memory=156L logs=10d topics=19 prs=5 cron_failing=0 mode=OK
+sources: memory=117 logs=7d topics=11 prs=2 cron_failing=0 mode=OK

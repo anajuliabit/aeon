@@ -1,0 +1,641 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-09",
+        "description": "action-converter"
+      },
+      "children": [
+        "actions-stack",
+        "metadata-sep",
+        "metadata-section"
+      ]
+    },
+    "actions-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-title",
+        "a1-details",
+        "a1-why-group",
+        "a1-done-group",
+        "a1-loop-group"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. precheck ISS-030 cost-report against 8-10 07Z deciding-test",
+        "level": "h3"
+      }
+    },
+    "a1-details": {
+      "type": "Text",
+      "props": {
+        "text": "grep skills/cost-report/SKILL.md for sdk_opt_in_required handling and append verdict block to memory/issues/ISS-030.md.",
+        "variant": "muted"
+      }
+    },
+    "a1-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-why-badge",
+        "a1-why-text"
+      ]
+    },
+    "a1-why-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a1-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-worst chronic sr=10%, T-1 today, no operator lever tomorrow if not primed tonight."
+      }
+    },
+    "a1-done-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-done-badge",
+        "a1-done-text"
+      ]
+    },
+    "a1-done-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a1-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/issues/ISS-030.md has fresh precheck block (clean-signature-since-8-04-organic OR fix-scope-draft)."
+      }
+    },
+    "a1-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-loop-badge",
+        "a1-loop-text"
+      ]
+    },
+    "a1-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop",
+        "variant": "outline"
+      }
+    },
+    "a1-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "precheck-iss-030-t-1"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-title",
+        "a2-details",
+        "a2-why-group",
+        "a2-done-group",
+        "a2-loop-group"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. review PR #176 skill-graph regen (EDGES 32→74)",
+        "level": "h3"
+      }
+    },
+    "a2-details": {
+      "type": "Text",
+      "props": {
+        "text": "diff-check node/edge deltas against memory/topics/skill-graph-state.json and post merge-ready|blocking verdict as PR comment.",
+        "variant": "muted"
+      }
+    },
+    "a2-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-why-badge",
+        "a2-why-text"
+      ]
+    },
+    "a2-why-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a2-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "opened 17:10Z today, sunday-batch T-0, one-lift-if-clean before operator window closes."
+      }
+    },
+    "a2-done-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-done-badge",
+        "a2-done-text"
+      ]
+    },
+    "a2-done-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a2-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "gh pr comment 176 posted with verdict; verdict logged in memory/logs/2026-08-09.md."
+      }
+    },
+    "a2-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-loop-badge",
+        "a2-loop-text"
+      ]
+    },
+    "a2-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop",
+        "variant": "outline"
+      }
+    },
+    "a2-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "review-pr-176-skill-graph"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-title",
+        "a3-details",
+        "a3-why-group",
+        "a3-done-group",
+        "a3-loop-group"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. draft articles/weekly-shiplog-2026-08-09.md seed for 8-10 09Z Mon tick",
+        "level": "h3"
+      }
+    },
+    "a3-details": {
+      "type": "Text",
+      "props": {
+        "text": "catalog 7-27 → 8-09 shipped items from memory/logs/ so tomorrow's fire has structure to extend.",
+        "variant": "muted"
+      }
+    },
+    "a3-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-why-badge",
+        "a3-why-text"
+      ]
+    },
+    "a3-why-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a3-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "20d stale on 7d schedule (3× miss), Mon tick T-1, seed short-circuits cold-start."
+      }
+    },
+    "a3-done-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-done-badge",
+        "a3-done-text"
+      ]
+    },
+    "a3-done-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a3-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "article file exists with ≥5 dated shipped items and ≥3 rail-count deltas."
+      }
+    },
+    "a3-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-loop-badge",
+        "a3-loop-text"
+      ]
+    },
+    "a3-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop",
+        "variant": "outline"
+      }
+    },
+    "a3-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "draft-weekly-shiplog"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-title",
+        "a4-details",
+        "a4-why-group",
+        "a4-done-group",
+        "a4-loop-group"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. rebase PR #174 (Advisor Brier-weight) onto main to trigger CI",
+        "level": "h3"
+      }
+    },
+    "a4-details": {
+      "type": "Text",
+      "props": {
+        "text": "42h at UNKNOWN with empty statusCheckRollup; commit-hash change is stronger than any reopen event.",
+        "variant": "muted"
+      }
+    },
+    "a4-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-why-badge",
+        "a4-why-text"
+      ]
+    },
+    "a4-why-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a4-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "only stuck old-queue PR pre #176, weekly-batch needs a real CI verdict on 8-10."
+      }
+    },
+    "a4-done-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-done-badge",
+        "a4-done-text"
+      ]
+    },
+    "a4-done-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a4-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "git push --force-with-lease lands on webbrain/issue-144; gh pr view 174 --json statusCheckRollup returns non-empty."
+      }
+    },
+    "a4-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-loop-badge",
+        "a4-loop-text"
+      ]
+    },
+    "a4-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop",
+        "variant": "outline"
+      }
+    },
+    "a4-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "rebase-pr-174-advisor"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-title",
+        "a5-details",
+        "a5-why-group",
+        "a5-done-group",
+        "a5-loop-group"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. wire LIT into MEMORY.md Tracked Tokens (5th row, 15% threshold)",
+        "level": "h3"
+      }
+    },
+    "a5-details": {
+      "type": "Text",
+      "props": {
+        "text": "8-08 list-digest surfaced @Flowslikeosmo hard receipts (Robinhood Chain 1.8% Lighter perps vol, $11.14M on-chain deposits, 15.5M burned since 6-30, no unlocks until 12-29).",
+        "variant": "muted"
+      }
+    },
+    "a5-why-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-why-badge",
+        "a5-why-text"
+      ]
+    },
+    "a5-why-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "a5-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "deferred from 8-08 action #4; opens token-alert coverage on a live receipt-backed thesis before the arc runs."
+      }
+    },
+    "a5-done-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-done-badge",
+        "a5-done-text"
+      ]
+    },
+    "a5-done-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "a5-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/MEMORY.md Tracked Tokens table has 5th row (LIT / lit-protocol / 15% / recent activity blurb)."
+      }
+    },
+    "a5-loop-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-loop-badge",
+        "a5-loop-text"
+      ]
+    },
+    "a5-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop",
+        "variant": "outline"
+      }
+    },
+    "a5-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "wire-lit-tracked-tokens"
+      }
+    },
+    "metadata-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metadata-label",
+        "metadata-grid"
+      ]
+    },
+    "metadata-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Metadata",
+        "level": "h4"
+      }
+    },
+    "metadata-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "meta-memory",
+        "meta-logs",
+        "meta-topics",
+        "meta-prs",
+        "meta-cron",
+        "meta-mode"
+      ]
+    },
+    "meta-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "117"
+      }
+    },
+    "meta-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "7d"
+      }
+    },
+    "meta-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "11"
+      }
+    },
+    "meta-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "2"
+      }
+    },
+    "meta-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Failing",
+        "value": "0"
+      }
+    },
+    "meta-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "mode=OK",
+        "variant": "default"
+      }
+    }
+  }
+}
