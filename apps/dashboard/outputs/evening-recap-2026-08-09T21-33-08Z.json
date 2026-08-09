@@ -1,0 +1,213 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-09"
+      },
+      "children": [
+        "tldr",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "blockers_section",
+        "sep5",
+        "footer_section"
+      ]
+    },
+    "tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: heavy operator day — #173 merged, 3 PRs rebuilt or filed, 14+ skills clean; fork-cohort stalls for the first time at 20Z.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_title",
+        "headline_1",
+        "headline_2",
+        "headline_3",
+        "headline_4"
+      ]
+    },
+    "headlines_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "headline_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #173 merged — fix(claude): skills.json regen required on SKILL.md edits",
+        "href": "https://github.com/aeonframework/aeon/pull/173",
+        "source": "GitHub"
+      }
+    },
+    "headline_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #176 opened — skill-graph EDGES 32→74 (Sunday-batch skill-graph)",
+        "href": "https://github.com/aeonframework/aeon/pull/176",
+        "source": "GitHub"
+      }
+    },
+    "headline_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #177 opened — fix(claude-md) ISS-028 sandbox-block doc",
+        "href": "https://github.com/aeonframework/aeon/pull/177",
+        "source": "GitHub"
+      }
+    },
+    "headline_4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — SvelteKit-typosquat/corp-scope/pip:riakcs first cross-ecosystem malware clusters; fleet clean d10 · notify sent"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_title",
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4"
+      ]
+    },
+    "notable_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "operator Sunday-batch — queue 5→1 (#173 merged, #172 + #165 both rebuilt clean); self-improve exit-gate disengages"
+      }
+    },
+    "notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — TUT PUMP-RISK microcap TRENDING+UP n=1, BTW reflip n=3 candidate, agent-thesis 25-consec-day, github-issues 14-consec clean-day record"
+      }
+    },
+    "notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — Qwen 3.8 ties Fable 5 on Agentic Index at 5-8× cheaper (n=1 near-parity print) + Dario CEO endorsement same UTC-day (pincer print)"
+      }
+    },
+    "notable_4": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — prime-agent day-2 +8% soft-sustain (NEW [[soft-sustain]] sub-shape n=1), google/skills +47% day-2 accel (skill-pack shape n=2)"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_title",
+        "decision_1",
+        "decision_2",
+        "decision_3",
+        "decision_4"
+      ]
+    },
+    "decisions_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "decision_1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-030 cost-report T-0 at 8-10 07Z — fleet-worst sr=10%; clean→RESOLVED or same signature→4-consec-week formal pattern"
+      }
+    },
+    "decision_2": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #172 + PR #165 (both rebuilt CLEAN, awaiting operator)"
+      }
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "PR #174 (Advisor, 44h+, CI never fired) — force CI or merge decision"
+      }
+    },
+    "decision_4": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort STUCK — investigate state-update-race on cancelled workflow; file new ISS if 8-10 fire reproduces"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "blockers_section": {
+      "type": "Alert",
+      "props": {
+        "title": "Blockers",
+        "message": "fork-cohort — stuck \"dispatched\" since 19:05Z; 30-min \"Run\" step cancelled 19:35Z, state-update-race didn't clear marker",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_text"
+      ]
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "+9 routine runs collapsed (btc-levels ×5, heartbeat ×3, skill-freshness ×1) · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
