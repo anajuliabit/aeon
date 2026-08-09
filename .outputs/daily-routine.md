@@ -1,55 +1,48 @@
-*Daily Routine — 2026-08-08*
+*daily routine — 2026-08-09*
 
-*Top 10 Winners (24h)*
-1. CYS $1.04 +60.9% / 7d +260% • $69M [TRENDING+UP][PUMP-RISK]
-2. PIEVERSE $0.854 +15.4% / 7d +26% • $10M [BREAKOUT]
-3. GOMINING $0.292 +12.4% • $8M
-4. AKT $0.512 +7.9% / 7d +14% • $5M
-5. BEAT $2.11 +6.5% / 7d −51% • $23M
-6. XEC $0.0000070 +6.4% • $15M
-7. TWT $0.401 +5.9% • $9M
-8. OKB $93.35 +5.5% • $36M
-9. ETHFI $0.383 +5.5% • $29M
-10. CC $0.0935 +4.6% / 7d −21% • $20M [TRENDING+UP]
+_tape: 59/100 top green, median +0.3%. muted middle; TUT the outlier — R166 +325.8% on 7d +1008% = pump-risk._
 
-*Top 10 Losers (24h)*
-1. BTW $0.141 −23.8% (yesterday's +7.6% winner)
-2. Talus $0.0446 −16.7%
-3. KAITO $0.766 −14.4% / 7d −29% • $41M
-4. BONK $0.00000252 −10.8% [CAPITULATION]
-5. CRO $0.0479 −9.5%
-6. BinanceLife $0.509 −8.1% (yesterday's +6.8% winner)
-7. CARDS $0.140 −7.5%
-8. TAG $0.00127 −6.2%
-9. B $0.163 −4.8%
-10. ZANO $8.43 −4.6%
+*winners (24h)*
+1. TUT $0.230  +325.8% / 7d +1008% / 1h +8.5%  • $701M / R166  [pump-risk, trending+up]
+2. BEAT $3.19  +48.0% / 7d −10.8%  • $47M / R64  [fade]
+3. BTW $0.187  +28.8% / 7d +113.6%  • $20M / R108  [breakout, 5d-reflip]
+4. SKYAI $0.124  +12.5% / 7d +350%  • $27M / R227  [breakout, microcap]
+5. PUMP $0.00251  +11.1% / 7d +13.5%  • $73M / R68
+6. PYTH $0.042  +9.5% / 7d +4.7%  • $20M / R121
+7. CC $0.098  +8.9% / 7d −15.0%  • $21M / R25  [major, fade]
 
-*Trending*
-PENGU, BICO #395 +40%, WKC +25%, CC #26, CYS +45%, CASHCAT, BLESS +44%
+*losers (24h)*
+1. CYS $0.83  −16.6% / 7d +179.6%  • $58M / R213  [capitulation]
+2. B $0.142  −13.0% / 7d −10.8%  • $5M / R202
+3. KAITO $0.70  −10.2% / 7d −39.6%  • $86M / R179
+4. PIEVERSE $0.78  −6.1%  • $6M / R150
+5. RUNE $0.43  −4.1%  • $21M / R196
 
-_Pulse: mixed leaning green — 63/100 top-100 up, top-50 median +0.9%; mid-cap breakouts (CYS +61%, PIEVERSE +15%) offset by single-name blowups (BTW −24%, KAITO, BONK cap-vol)._
+*tweet roundup*
+crypto: btc pinned $63.8k–$66k range; eth $1,927. muted tape, no fresh catalyst; TUT + BTW carrying most of the vol on the winners board.
+ai: claude opus 5 still #1 on artificial analysis; openai ships chatgpt work (agentic gpt-5.6, sol/terra/luna tier split); deepseek-v4 dual-mode; nvidia opens NOOA agent framework.
+dev: HN top take "code was never the hard part is an insult"; shopify swapped redis for mysql on inventory reservations (SKIP LOCKED + row-per-unit) — boring infra winning.
 
-_Tracked: GITLAWB +14.4% (thin vol $216K); WELL +3.7%, MAMO +1.2%, REPPO flat._
+*paper of the day*
+"from economic agents to agentic economies: a systems blueprint for economic world models" — han, li · ↑28
+direct shot at the sherwood-shaped question: how do you spec an economic world model where agents are actors, not tools. skip if you're not building at that layer.
+[read](https://arxiv.org/abs/2608.06020) | [pdf](https://arxiv.org/pdf/2608.06020)
 
-*Tweet Roundup*
-*Crypto:* ETH outperforming BTC in capital rotation (+7.1% vs +1.8%, @thecryptobasic). @ethereum team surfaces 2025 themes reinforcing DeFi role.
-*AI:* Tencent Hy3 (295B/21B active) reframed as execution engine, not chatbot (@TheUltimate_AI). State of AI 2025 year-end: industry-wide acceleration (@ArtificialAnlys).
-*Dev:* Musk announces X codebase full open-sourcing. @Al_Grigor maps current AI dev-tool landscape (chat assistants + agentic IDEs).
+*github issues*
+no new issues in last 24h.
 
-*Paper of the Day*
-"Activity Frames: Deterministic Screen-Activity Compilation for Agent Memory and Replay" — Nossa Iyamu · ↑13
-compiles passive screen capture into byte-identical zero-model episodes an agent can replay at zero tokens; measures a real Routine Overhead Ratio (60–343×) instead of hand-waving one.
-[Read](https://arxiv.org/abs/2608.05784) | [PDF](https://arxiv.org/pdf/2608.05784)
+*hn digest*
+1. **[dev]** [code was never the hard part is an insult](https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers) — 698 · 417c
+   why: pushback on the "coding is easy, thinking is hard" line the LLM pitch leans on.
+   hn: "the hard part is always the design part... starting with a bad design is no good" — _effed3_
+   [discuss](https://news.ycombinator.com/item?id=49222189)
+2. **[infra]** [shopify replaced redis with mysql for inventory reservations](https://shopify.engineering/scaling-inventory-reservations) — 154 · 85c
+   why: SKIP LOCKED + one row per unit at scale; reconcilable state beats event-driven.
+   hn: "SQL is decades of relational algebra... pure magic across vast sets" — _trueno_
+   [discuss](https://news.ycombinator.com/item?id=49226536)
+3. **[ai]** [message your other claude code sessions](https://code.claude.com/docs/en/cross-session-messaging) — 107 · 44c
+   why: cross-session messaging primitive for orchestrated agent fleets.
+   hn: "when my claude/codex finishes cooking... it pings a local http endpoint that plays a frog sound. massively boosts quality of life" — _andai_
+   [discuss](https://news.ycombinator.com/item?id=49222824)
 
-*GitHub Issues*
-_no new issues (13-consec clean day)_
-
-*HN Digest*
-_heavy AI day — DeepSeek V4 Flash prices out closed models, Oracle bans AI-generated code from OpenJDK, 2027 memory already sold out._
-
-1. [DeepSeek V4 Flash 0731](https://arcprize.org/results/deepseek-v4-flash-0731) 570pts/344c — open-weights lands near GPT-5.6 Luna on ARC AGI at ~1/4 the cost.
-2. [Oracle bans AI-generated code from OpenJDK](https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code) 446pts/307c — even AI-touched contributions rejected; contradicts Ellison's public line.
-3. [Postgres 300× faster for analytics](https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/) 270pts/136c — batching + operator fusion + SIMD in a Claude-authored Rust port (pgrust).
-4. [Nixpkgs core team disbanded](https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413) 264pts/118c — governance collapse after years of steering-committee drama.
-5. [2027 memory capacity sold out](https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out) 321pts/293c — HBM + DDR5 fully allocated to AI datacenters through 2027.
-6. [Water system controllers off internet — ex-NSA chief](https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070) 175pts/114c — suspected Iranian attacks on US water utilities revive OT-airgap debate.
+_xai x_search skipped — memory 8-08 signal (fell back to websearch entirely); websearch fallback used._
