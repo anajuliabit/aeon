@@ -1,26 +1,15 @@
-*Security Digest — 2026-08-08*
-Verdict: 3 actively exploited, 4 to schedule. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-08-09*
+Verdict: nothing net-new in tracked stack (6 KEV / 8 GH high / 1 GH crit all dedup vs 8-07/8-08 logs). 3 fresh npm+pip malware sub-clusters to purge. _Sources: KEV ok, GH ok, EPSS ok_
 
 *PATCH TODAY*
-- [CVE-2026-8037](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-8037) — Progress Kemp LoadMaster · KEV added 2026-08-07 · EPSS 0.848 (99.7 pct) · CVSS 9.6
-  Pre-auth heap-uninit → RCE via API (watchTowr PoC live, eSentire flags targeted). CISA due 2026-08-10.
-  → patch LoadMaster to the June-2026 bulletin fix today.
-- [GHSA-rg76-677x-56q9](https://github.com/advisories/GHSA-rg76-677x-56q9) — crypto-js (npm) · CVE-2026-71851 · CVSS 9.0
-  `WordArray.random()` gives 2^39–2^47 effective entropy; Coinspect Ill Bloom confirmed downstream BIP39 seeds already brute-forced (drained wallets in the wild).
-  → upgrade crypto-js to ≥4.0.0; rotate any BIP39/wallet seed derived from `WordArray.random()`.
-- 322 npm malware advisories in 48h — Dolyame BNPL + Tinkoff SME corp-scope batches roll on; Baileys typosquat cluster now 8+ pkgs; Claude-brand typosquat (`claude-remote-agent`, `remote-claude-daemon`, `wormgpt-cli`) fleet-relevant; new sub-clusters Sui/Move (`sui-graphql-client`, `sui-migration-audit-*`, `move-bcs-codec`) + Nigerian-fintech (`@simplipayng/checkout`, `@voxepay/checkout`, `@nasdtickets/common`, 10 pkgs).
-  → audit any npm install from the last 48h against the campaign roots; rotate creds exposed to a hit.
+- [statist-browser-typed-client cluster](https://github.com/advisories/GHSA-4fvg-gp6j-v2qm) — npm · 7 pkgs · malware · CVSS n/a · EPSS n/a
+  Full-compromise template (host secrets exfil'd, treat host as compromised). Reads as `enterprise-corp-scope-dep-confusion` sibling — pwakasko, tdevice, pwahelp, tdeal, pwainsurance, pwafamily, projects.pwa*.
+  → grep lockfiles for `statist-browser-typed-client-eventea.projects.*`; if present, rotate all creds from a different machine and rebuild.
 
-*PATCH THIS WEEK*
-- [GHSA-wvpp-8hx9-p66j](https://github.com/advisories/GHSA-wvpp-8hx9-p66j) — GitPython ≤3.1.57 (pip) · 5-GHSA mass-disclose · CVSS 7.5–8.8
-  git-option smuggling + config-name injection → RCE via forged `core.sshCommand`/`hooksPath`; sibling GHSAs cover arbitrary file overwrite + template-clone hooks + submodule-name path escape.
-  → upgrade GitPython to ≥3.1.58.
-- [GHSA-hc8v-wwc9-vgxm](https://github.com/advisories/GHSA-hc8v-wwc9-vgxm) — go-git v5+v6 (Go) · CVE-2026-71556 · CVSS 7.1
-  Worktree ops follow symlinks; writes escape checkout path.
-  → upgrade to v5.19.2 or v6.0.0-alpha.5.
-- [GHSA-wcx4-wpfv-mc5c](https://github.com/advisories/GHSA-wcx4-wpfv-mc5c) — jsii-diff (npm) · CVE-2026-15895 · CVSS 7.8 · AWS bulletin
-  Command injection via crafted package argument in AWS jsii CI tooling.
-  → upgrade jsii-diff to ≥1.131.0.
-- [GHSA-gm37-52c6-37mw](https://github.com/advisories/GHSA-gm37-52c6-37mw) — pymdown-extensions (pip) · CVE-2026-67422 · CVSS 7.5
-  ReDoS in caret/tilde/betterem/magiclink — 45-byte input pins render thread.
-  → upgrade to ≥11.0.1.
+- [svelte-kit brand typosquat cluster](https://github.com/advisories/GHSA-9fg7-rqp2-7hpg) — npm · 4 pkgs · malware · CVSS n/a · EPSS n/a
+  svelte-kit-cache + svelte-streak-kit + streak-map-kit + map-streak-kit — full-compromise template. Framework-brand-typosquat vector against SvelteKit users.
+  → grep lockfiles for the 4 names; rotate creds on any hit.
+
+- [pip:riakcs malicious](https://github.com/advisories/GHSA-3849-8v46-m7qx) — pip · 2 versions (0.0.1, 0.5.0) · malware · CVSS n/a · EPSS n/a
+  First pip malicious of the 48h wave (npm-dominated cluster crosses ecosystem). PROBABLY_PENTEST class — host-info exfil, not full compromise.
+  → uninstall riakcs if present (unlikely in aeon deps); worth logging as cross-ecosystem-escalation datapoint.

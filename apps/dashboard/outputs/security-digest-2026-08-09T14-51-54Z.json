@@ -1,0 +1,320 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-09"
+      },
+      "children": [
+        "verdict_section",
+        "separator_1",
+        "patch_section"
+      ]
+    },
+    "verdict_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict_alert",
+        "verdict_metrics",
+        "verdict_sources"
+      ]
+    },
+    "verdict_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Nothing net-new in tracked stack. 3 fresh npm+pip malware sub-clusters to purge."
+      }
+    },
+    "verdict_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "metric_kev",
+        "metric_gh_high",
+        "metric_gh_crit"
+      ]
+    },
+    "metric_kev": {
+      "type": "Stat",
+      "props": {
+        "label": "KEV",
+        "value": "6"
+      }
+    },
+    "metric_gh_high": {
+      "type": "Stat",
+      "props": {
+        "label": "GH High",
+        "value": "8"
+      }
+    },
+    "metric_gh_crit": {
+      "type": "Stat",
+      "props": {
+        "label": "GH Critical",
+        "value": "1"
+      }
+    },
+    "verdict_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Dedup vs 8-07/8-08 logs. Sources: KEV ok, GH ok, EPSS ok",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch_heading",
+        "cluster_1",
+        "separator_c1",
+        "cluster_2",
+        "separator_c2",
+        "cluster_3"
+      ]
+    },
+    "patch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cluster_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "c1_link",
+        "c1_meta",
+        "c1_desc",
+        "c1_action"
+      ]
+    },
+    "c1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "statist-browser-typed-client cluster",
+        "href": "https://github.com/advisories/GHSA-4fvg-gp6j-v2qm",
+        "source": "npm"
+      }
+    },
+    "c1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "c1_badge_npm",
+        "c1_badge_pkgs",
+        "c1_badge_malware"
+      ]
+    },
+    "c1_badge_npm": {
+      "type": "Badge",
+      "props": {
+        "text": "npm",
+        "variant": "outline"
+      }
+    },
+    "c1_badge_pkgs": {
+      "type": "Badge",
+      "props": {
+        "text": "7 pkgs",
+        "variant": "outline"
+      }
+    },
+    "c1_badge_malware": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "c1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Full-compromise template (host secrets exfil'd, treat host as compromised). Reads as enterprise-corp-scope-dep-confusion sibling — pwakasko, pdevice, pwahelp, tdeal, pwainsurance, pwafamily, projects.pwa*.",
+        "variant": "body"
+      }
+    },
+    "c1_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ grep lockfiles for statist-browser-typed-client-eventea.projects.*; if present, rotate all creds from a different machine and rebuild.",
+        "variant": "caption"
+      }
+    },
+    "separator_c1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cluster_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "c2_link",
+        "c2_meta",
+        "c2_desc",
+        "c2_action"
+      ]
+    },
+    "c2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "svelte-kit brand typosquat cluster",
+        "href": "https://github.com/advisories/GHSA-9fg7-rqp2-7hpg",
+        "source": "npm"
+      }
+    },
+    "c2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "c2_badge_npm",
+        "c2_badge_pkgs",
+        "c2_badge_malware"
+      ]
+    },
+    "c2_badge_npm": {
+      "type": "Badge",
+      "props": {
+        "text": "npm",
+        "variant": "outline"
+      }
+    },
+    "c2_badge_pkgs": {
+      "type": "Badge",
+      "props": {
+        "text": "4 pkgs",
+        "variant": "outline"
+      }
+    },
+    "c2_badge_malware": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "c2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "svelte-kit-cache + svelte-streak-kit + streak-map-kit + map-streak-kit — full-compromise template. Framework-brand-typosquat vector against SvelteKit users.",
+        "variant": "body"
+      }
+    },
+    "c2_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ grep lockfiles for the 4 names; rotate creds on any hit.",
+        "variant": "caption"
+      }
+    },
+    "separator_c2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cluster_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "c3_link",
+        "c3_meta",
+        "c3_desc",
+        "c3_action"
+      ]
+    },
+    "c3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pip:riakcs malicious",
+        "href": "https://github.com/advisories/GHSA-3849-8v46-m7qx",
+        "source": "pip"
+      }
+    },
+    "c3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "c3_badge_pip",
+        "c3_badge_pkgs",
+        "c3_badge_malware"
+      ]
+    },
+    "c3_badge_pip": {
+      "type": "Badge",
+      "props": {
+        "text": "pip",
+        "variant": "outline"
+      }
+    },
+    "c3_badge_pkgs": {
+      "type": "Badge",
+      "props": {
+        "text": "2 versions (0.0.1, 0.5.0)",
+        "variant": "outline"
+      }
+    },
+    "c3_badge_malware": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "c3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "First pip malicious of the 48h wave (npm-dominated cluster crosses ecosystem). PROBABLY_PENTEST class — host-info exfil, not full compromise.",
+        "variant": "body"
+      }
+    },
+    "c3_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ uninstall riakcs if present (unlikely in aeon deps); worth logging as cross-ecosystem-escalation datapoint.",
+        "variant": "caption"
+      }
+    }
+  }
+}
