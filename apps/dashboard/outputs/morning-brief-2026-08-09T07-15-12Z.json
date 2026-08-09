@@ -1,0 +1,246 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-09 (sunday)"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_focus",
+        "sep1",
+        "section_yesterday",
+        "sep2",
+        "section_running"
+      ]
+    },
+    "section_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_focus",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. clear pr queue at 5 — why now: sunday-batch T-0 per claude.md cadence."
+      }
+    },
+    "focus_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. iss-030 cost-report pre-check — why now: 8-10 07z weekly-tick T-1, no operator lever tomorrow."
+      }
+    },
+    "focus_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. 08z heartbeat + skill-freshness watch — why now: `morning-08z-slot-dark` restart deciding-test in ~48min."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_yesterday",
+        "yesterday_item_1",
+        "yesterday_item_2",
+        "yesterday_item_3",
+        "yesterday_item_4",
+        "yesterday_item_5"
+      ]
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "fleet clean-consec d3 → d4 held through evening (21 clean fires 8-08)."
+      }
+    },
+    "yesterday_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health hash shift 35369f69 → 91a4634d — first composition-shift in 3-consec formal-tick (list-digest crossed sr=0.60 degraded→warning)."
+      }
+    },
+    "yesterday_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "chronic-cohort 7th 24h gate crossed 20:03z heartbeat (10-consec-tick ~101h span)."
+      }
+    },
+    "yesterday_item_4": {
+      "type": "Text",
+      "props": {
+        "text": "pr queue at 5 unchanged since 07z (#174 fresh advisor brier-weight + #173 ci-cold 5d + #172/#171 blocked on #173 + #165 conflicting d20) — waits on operator hands."
+      }
+    },
+    "yesterday_item_5": {
+      "type": "Text",
+      "props": {
+        "text": "cloudflare/computer 3-day durability failure (-69%, memory-window-first top-pick sustain break); prime-agent top-pick same day (first shipping-repo on recursive-self-improve rail)."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_running",
+        "running_item_1",
+        "running_item_2",
+        "running_item_3",
+        "running_item_4",
+        "running_item_5",
+        "running_item_6",
+        "running_item_7",
+        "running_item_8",
+        "running_item_9",
+        "running_item_10",
+        "running_item_11",
+        "running_item_12",
+        "running_item_13",
+        "running_item_14"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00 utc"
+      }
+    },
+    "running_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08/14/20 utc"
+      }
+    },
+    "running_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 utc"
+      }
+    },
+    "running_item_4": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels @ 09:15/13:15/17:15/21:15 utc"
+      }
+    },
+    "running_item_5": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00 utc"
+      }
+    },
+    "running_item_6": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00 utc"
+      }
+    },
+    "running_item_7": {
+      "type": "Text",
+      "props": {
+        "text": "skill-graph @ 17:00 utc (sunday)"
+      }
+    },
+    "running_item_8": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest @ 17:00 utc"
+      }
+    },
+    "running_item_9": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz @ 17:30 utc"
+      }
+    },
+    "running_item_10": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker + skill-health + reflect + action-converter + self-improve @ 18:00 utc"
+      }
+    },
+    "running_item_11": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest @ 18:30 utc (sunday)"
+      }
+    },
+    "running_item_12": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort + skill-update-check @ 19:00 utc (sunday)"
+      }
+    },
+    "running_item_13": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review @ 21:00 utc"
+      }
+    },
+    "running_item_14": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals @ 22:00 utc (sunday)"
+      }
+    }
+  }
+}

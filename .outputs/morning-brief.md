@@ -1,23 +1,29 @@
-*Morning Brief — 2026-08-08*
+*Morning Brief — 2026-08-09 (sunday)*
 
 *Focus today*
-1. close-reopen pr #173 — why now: ci cold ~5d, t-1 to 8-09 batch, one-lift unblocks 3-pr chain
-2. triage pr #174 (advisor brier-weight) — why now: opened 00:31z, queue 4 → 5 tests exit-gate
-3. gitlawb 12z re-check — why now: +21.74% snap-back yesterday, continuation-or-revert test
+1. clear pr queue at 5 — why now: sunday-batch T-0 per claude.md cadence.
+2. iss-030 cost-report pre-check — why now: 8-10 07z weekly-tick T-1, no operator lever tomorrow.
+3. 08z heartbeat + skill-freshness watch — why now: `morning-08z-slot-dark` restart deciding-test in ~48min.
 
 *Since yesterday*
-- pr #174 opened 00:31z (advisor brier-weight in pm synthesis) — queue 4 → 5
-- token-alert 12z fired first multi-token in memory-window: gitlawb +21.74% (first 24h-change alert ever) + reppo vol 4.854× (first reppo vol-spike ever, 9.4× compounding across 48h)
-- reflect absorbed 4 formal-pattern crossings + 3 new npm-malware sub-classes (fleet-relevant `[[claude-brand-typosquat-malware]]` n=1)
-- heartbeat dispatch-lag rail n=7 = 3 distinct slot-shapes single day (08z stuck 75min / 14z recovered 24min / 20z mid 52min); slot-specific pattern confirmed, not fleet-wide
-
-*Watch*
-- metamask agent wallet ships 8-07 — agent-mandate primitive goes mainstream; sherwood thesis-adjacent (constraints-not-custody axis)
+- fleet clean-consec d3 → d4 held through evening (21 clean fires 8-08).
+- skill-health hash shift 35369f69 → 91a4634d — first composition-shift in 3-consec formal-tick (list-digest crossed sr=0.60 degraded→warning).
+- chronic-cohort 7th 24h gate crossed 20:03z heartbeat (10-consec-tick ~101h span).
+- pr queue at 5 unchanged since 07z (#174 fresh advisor brier-weight + #173 ci-cold 5d + #172/#171 blocked on #173 + #165 conflicting d20) — waits on operator hands.
+- cloudflare/computer 3-day durability failure (-69%, memory-window-first top-pick sustain break); prime-agent top-pick same day (first shipping-repo on recursive-self-improve rail).
 
 *Running today*
-- morning-brief + daily-routine + thought-review @ 07z (in flight)
-- skill-freshness + heartbeat @ 08z (`[[morning-08z-slot-dark]]` n=5-consec deciding-test)
-- github-trending @ 09z, token-alert @ 12z, security-digest + heartbeat @ 14z
-- vuln-scanner @ 16z (sat), list-digest @ 17z, agent-buzz @ 17:30z
-- 18z batch: goal-tracker + skill-health + reflect + action-converter
-- heartbeat @ 20z, evening-recap + thought-review @ 21z
+- skill-freshness @ 08:00 utc
+- heartbeat @ 08/14/20 utc
+- github-trending @ 09:00 utc
+- btc-levels @ 09:15/13:15/17:15/21:15 utc
+- token-alert @ 12:00 utc
+- security-digest @ 14:00 utc
+- skill-graph @ 17:00 utc (sunday)
+- list-digest @ 17:00 utc
+- agent-buzz @ 17:30 utc
+- goal-tracker + skill-health + reflect + action-converter + self-improve @ 18:00 utc
+- fork-skill-digest @ 18:30 utc (sunday)
+- fork-cohort + skill-update-check @ 19:00 utc (sunday)
+- evening-recap + thought-review @ 21:00 utc
+- skill-evals @ 22:00 utc (sunday)
