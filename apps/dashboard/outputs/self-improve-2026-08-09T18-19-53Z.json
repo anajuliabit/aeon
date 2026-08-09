@@ -1,0 +1,117 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "Documented ISS-028 file-redirect sandbox block in CLAUDE.md"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading",
+        "badges",
+        "details",
+        "impact",
+        "separator",
+        "pr"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-028 File-Redirect Sandbox Block",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-issue",
+        "badge-pattern"
+      ]
+    },
+    "badge-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-028",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-pattern": {
+      "type": "Badge",
+      "props": {
+        "text": "Pattern #3",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "details": {
+      "type": "Text",
+      "props": {
+        "text": "Documented in CLAUDE.md. Pattern #3 cuts the cat >> first-try-fail cycle with sandbox-blocked file redirects (>, >>, heredoc-to-file).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "impact": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-skills",
+        "stat-hits"
+      ]
+    },
+    "stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Affected",
+        "value": "12+"
+      },
+      "children": []
+    },
+    "stat-hits": {
+      "type": "Stat",
+      "props": {
+        "label": "Workaround Instances",
+        "value": "36+"
+      },
+      "children": []
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #177",
+        "href": "https://github.com/anajuliabit/aeon/pull/177",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
