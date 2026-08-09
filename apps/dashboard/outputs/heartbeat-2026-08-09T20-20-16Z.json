@@ -1,0 +1,137 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat 20z"
+      },
+      "children": [
+        "alert-stuck",
+        "sep-1",
+        "stack-details"
+      ]
+    },
+    "alert-stuck": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "fork-cohort STUCK",
+        "message": "Dispatched 19:05z (sunday-weekly), workflow cancelled 19:35z at 30-min timeout, cron-state still shows dispatched at 20:14z (>45min stuck threshold)"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-incident",
+        "stack-incident-details",
+        "sep-2",
+        "heading-status",
+        "stack-other-status"
+      ]
+    },
+    "heading-incident": {
+      "type": "Heading",
+      "props": {
+        "text": "Incident Details",
+        "level": "h3"
+      }
+    },
+    "stack-incident-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-dispatch",
+        "text-cancel",
+        "text-check",
+        "text-first",
+        "text-cause"
+      ]
+    },
+    "text-dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "Dispatch: 19:05z (sunday-weekly)"
+      }
+    },
+    "text-cancel": {
+      "type": "Text",
+      "props": {
+        "text": "Workflow cancelled: 19:35z at 30-min timeout"
+      }
+    },
+    "text-check": {
+      "type": "Text",
+      "props": {
+        "text": "Status check: 20:14z (>45min stuck threshold)"
+      }
+    },
+    "text-first": {
+      "type": "Text",
+      "props": {
+        "text": "First fork-cohort stall in memory window (last success: 8-02)"
+      }
+    },
+    "text-cause": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: state-update race — \"Update cron state\" step ran on cancelled workflow but didn't clear dispatched marker"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Otherwise Clean",
+        "level": "h3"
+      }
+    },
+    "stack-other-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cohort",
+        "badge-skills",
+        "text-pr-queue"
+      ]
+    },
+    "badge-cohort": {
+      "type": "Badge",
+      "props": {
+        "text": "chronic-cohort: 10-skill composition unchanged 12-consec-tick",
+        "variant": "secondary"
+      }
+    },
+    "badge-skills": {
+      "type": "Badge",
+      "props": {
+        "text": "all skills: consec=0",
+        "variant": "secondary"
+      }
+    },
+    "text-pr-queue": {
+      "type": "Text",
+      "props": {
+        "text": "PR queue: 1→3 via sunday scheduled churn (#176 skill-graph + #177 self-improve claude-md fix)"
+      }
+    }
+  }
+}
