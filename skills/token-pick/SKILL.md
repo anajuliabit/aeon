@@ -171,49 +171,6 @@ sources: cg=ok|fail, dex=ok|fail, poly=ok|fail, x=ok|fail|absent
 
 If all sources failed, send `TOKEN_PICK_NO_DATA` with the source-status line — do not invent picks from cached intuition.
 
-### 6c. Stage the pick for the track record (ALWAYS — normal AND skip days)
-
-Write exactly one file `.pending-picks/${today}-token-pick.json` (create the
-directory if needed). After the run, `scripts/postprocess-picks.sh` POSTs it
-to the investiments dashboard, which paper-trades it at $1k notional and
-grades it hourly against target/invalidation/time-stop. This is the agent's
-public track record — never skip this step.
-
-Normal day (token pick made):
-
-```json
-{
-  "source": "token-pick",
-  "symbol": "SYMBOL",
-  "coingeckoId": "id-from-coins-markets-response",
-  "side": "long",
-  "entryPriceUsd": 1.23,
-  "targetPriceUsd": 1.6,
-  "invalidationPriceUsd": 1.05,
-  "horizonDays": 14,
-  "conviction": "HIGH (8/10)",
-  "thesis": "2-3 sentences: catalyst + named risk, ending with: wrong if <specific invalidation reason>"
-}
-```
-
-- `coingeckoId` is the `id` field of the picked token in the CoinGecko
-  `/coins/markets` response from step 1 — required, the grader prices with it.
-- `targetPriceUsd`/`invalidationPriceUsd`/`horizonDays` MUST equal the Exit
-  line in the notification (6a). State them there first, then copy here.
-- `conviction` must start with `HIGH` or `MEDIUM` (calibration depends on it).
-
-Skip day:
-
-```json
-{
-  "source": "token-pick",
-  "status": "skipped",
-  "thesis": "one line: why no pick today (best candidate symbol + score)"
-}
-```
-
-Prediction-market picks are NOT staged (the track record grades tokens only).
-
 ### 7. Log to `memory/logs/${today}.md`
 
 ```
@@ -224,7 +181,6 @@ Prediction-market picks are NOT staged (the track record grades tokens only).
 - **Market thesis:** [one line, including fair-value estimate]
 - **Sources:** cg=ok|fail, dex=ok|fail, poly=ok|fail
 - **Notification sent:** yes (normal | skip | no-data)
-- **Pick staged:** .pending-picks/${today}-token-pick.json (normal | skip)
 ```
 
 Append symbol + market question on a single line for easy grep next-day dedup, e.g.:
