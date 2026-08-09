@@ -1,7 +1,7 @@
 {
-  "hash": "91a4634de7eb6d713da825f170eaeb73729a9992fb76d6f00a05ef95e50b2e1b",
-  "last_notified_at": "2026-08-08T18:05:00Z",
-  "last_run_at": "2026-08-08T18:05:00Z",
+  "hash": "71d8c76ed1e09e5ef2dd9e93c11d691ed418579d5f1e1ed7a7ccbfa6f31e4c79",
+  "last_notified_at": "2026-08-09T18:17:18Z",
+  "last_run_at": "2026-08-09T18:17:18Z",
   "classification": {
     "critical": [],
     "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "goal-tracker", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
@@ -10,9 +10,9 @@
     "healthy_count": 8,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "ISS-027 12Z 8-skill batch d43 dormant (frozen 2026-06-28): 4 in DEGRADED (market-context-refresh 32% / narrative-tracker 33% / aixbt-pulse 47% / defi-monitor 53%) + 4 in WARNING (defi-overview 69% / token-pick 64% / token-movers 65% / on-chain-monitor 72%). ISS-030 cost-report sr 10% chronic. Delta since prev formal tick 2026-08-07T18:07:00Z (~24h): CRITICAL 0→0, DEGRADED 18→17 (list-digest sr 0.60 crosses <0.6 gate to WARNING), FLAPPING 0→0, WARNING 14→15 (+list-digest), HEALTHY 8→8, NO_DATA 3→3. Hash changes 35369f69 → 91a4634d (composition shift, not pure cadence). Fleet clean-consec d3 → d4 crossing 8-08 (unbroken since 8-04 21:48Z cost-report same-day organic recovery). No fresh usepod 402 or sdk_opt_in_required signatures in 24h window. [[morning-08Z-slot-dark]] formal-pattern deciding-test at n=5 FAILS BOTH co-slot skills 8-08 — heartbeat 08:10Z clean + skill-freshness 08:13Z clean = pattern breaks 4-consec, positive event. [[chronic-cohort-alone-degraded]] regime crosses 6th 24h durability gate at 14:16Z heartbeat (9-consec-heartbeat-tick, ~95h span 8-04 14:45Z → 8-08 14:16Z).",
+  "systemic": "Composition IDENTICAL to 8-08 18:05Z prev report — 0 CRITICAL + 17 DEGRADED + 0 FLAPPING + 15 WARNING + 8 HEALTHY + 3 NO_DATA. Zero delta on any tier. ISS-027 12Z 8-skill batch rolls d42 → d43 today at 12Z (4 in DEGRADED: market-context-refresh 32% / narrative-tracker 33% / aixbt-pulse 47% / defi-monitor 53% + 4 in WARNING: defi-overview 69% / token-pick 64% / token-movers 65% / on-chain-monitor 72% — same distribution as 8-08). ISS-030 cost-report sr 10% chronic sdk_opt_in_required — Mon 8-10 07Z weekly-tick T-0 = tomorrow. Fleet clean-consec d4 → d5 crossing 8-09 (unbroken since 8-04 21:48Z cost-report same-day organic recovery). All 43 enabled entries consec=0 across morning-brief 07:15Z + heartbeat 08:03Z + 14:44Z ticks. `[[chronic-cohort-alone-degraded]]` regime crosses 11-consec-heartbeat-tick ~119h span 8-04 14:45Z → 8-09 14:44Z (7th 24h durability gate crossed). `[[morning-08Z-slot-dark]]` pattern-broken-permanent VERDICT confirmed (heartbeat 08:06Z + skill-freshness 08:17Z both clean, 2-consec-clean over 8-08+8-09). PR queue COLLAPSED 5 → 1 via operator Sunday-batch T-0 (#173 merged, #172+#165 rebuilt clean, only #174 remains). Queue-full self-improve exit-gate DISENGAGED. `[[12Z-slot-dark-immunity-per-skill]]` extends to 4-consec clean token-alert 12Z fires. Notify gate: current_hash 71d8c76e != prev 91a4634d (systemic string rolled d42→d43 counter, composition set identical) AND delta 24h12m > 24h → notify (daily cadence reminder tick, composition-unchanged). SKILL_HEALTH_PARTIAL — skill-runs sandbox-blocked this run (bash execution denied by permission gate); cron-state-only analysis, no fallback data folded in.",
   "open_issues": 14,
   "resolved_this_run": 0,
   "filed_this_run": 0,
-  "prev_hash": "35369f69ae8692fef0783b86965a9e9255cc88df6aadb25fd3af87298f60aa4e"
+  "prev_hash": "91a4634de7eb6d713da825f170eaeb73729a9992fb76d6f00a05ef95e50b2e1b"
 }
