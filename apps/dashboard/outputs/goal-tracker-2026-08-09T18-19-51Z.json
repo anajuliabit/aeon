@@ -1,0 +1,439 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-09"
+      },
+      "children": [
+        "summary_stack",
+        "sep1",
+        "on_track_section",
+        "sep2",
+        "blocked_section",
+        "sep3",
+        "done_section",
+        "sep4",
+        "sources_section"
+      ]
+    },
+    "summary_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_text",
+        "summary_grid"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "Summary: 8 goals — 0 at risk, 0 needs attention, 3 on track, 4 blocked, 1 done (overall ↑ improving)",
+        "variant": "lead"
+      }
+    },
+    "summary_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_at_risk",
+        "stat_attention",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "8"
+      }
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "3",
+        "trend": "up"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "4"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "1"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on_track_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on_track_heading",
+        "on_track_item_1",
+        "on_track_item_2",
+        "on_track_item_3"
+      ]
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on_track_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot1_name",
+        "ot1_details"
+      ]
+    },
+    "ot1_name": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-030 cost-report",
+        "variant": "body"
+      }
+    },
+    "ot1_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 118 activity/14d (flat) — T-1 to 8-10 07Z deciding-test; no fresh sdk_opt_in_required in 24h",
+        "variant": "caption"
+      }
+    },
+    "on_track_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot2_name",
+        "ot2_details"
+      ]
+    },
+    "ot2_name": {
+      "type": "Text",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime",
+        "variant": "body"
+      }
+    },
+    "ot2_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 72 activity/14d (flat) — 11-consec-tick, 7th 24h gate crossed 8-09",
+        "variant": "caption"
+      }
+    },
+    "on_track_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot3_name",
+        "ot3_details"
+      ]
+    },
+    "ot3_name": {
+      "type": "Text",
+      "props": {
+        "text": "PR queue",
+        "variant": "body"
+      }
+    },
+    "ot3_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 340 activity/14d (↑ improving) — collapsed 5 → 2 via operator Sunday-batch (#173/#172/#171/#165 merged); only #174 + #176 remain",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_heading",
+        "blocked_item_1",
+        "blocked_item_2",
+        "blocked_item_3",
+        "blocked_item_4"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b1_name",
+        "b1_details",
+        "b1_action"
+      ]
+    },
+    "b1_name": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-028 workaround-chain",
+        "variant": "body"
+      }
+    },
+    "b1_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on root-cause investigation since 7-22, n=36+ across 18-UTC-day span",
+        "variant": "caption"
+      }
+    },
+    "b1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: reopen ISS-028 root-cause at weekly-review 8-10",
+        "variant": "muted"
+      }
+    },
+    "blocked_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b2_name",
+        "b2_details",
+        "b2_action"
+      ]
+    },
+    "b2_name": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch DARK",
+        "variant": "body"
+      }
+    },
+    "b2_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on ISS-027 scheduler-side fix since 6-28, d43 today",
+        "variant": "caption"
+      }
+    },
+    "b2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: escalate ISS-027 scheduler fix at weekly-review 8-10",
+        "variant": "muted"
+      }
+    },
+    "blocked_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b3_name",
+        "b3_details",
+        "b3_action"
+      ]
+    },
+    "b3_name": {
+      "type": "Text",
+      "props": {
+        "text": "operator on-chain config",
+        "variant": "body"
+      }
+    },
+    "b3_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on `on-chain-watches.yml` + ALCHEMY/ETHERSCAN keys, d64",
+        "variant": "caption"
+      }
+    },
+    "b3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: ping operator via weekly-review 8-10 refresh-ask",
+        "variant": "muted"
+      }
+    },
+    "blocked_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b4_name",
+        "b4_details",
+        "b4_action"
+      ]
+    },
+    "b4_name": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md stale",
+        "variant": "body"
+      }
+    },
+    "b4_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator refresh since 6-04, d66 + vault inbox d49 cold",
+        "variant": "caption"
+      }
+    },
+    "b4_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: include priorities.md refresh in weekly-review 8-10 ask",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done_heading",
+        "done_item_1"
+      ]
+    },
+    "done_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h3"
+      }
+    },
+    "done_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1_name",
+        "d1_details"
+      ]
+    },
+    "d1_name": {
+      "type": "Text",
+      "props": {
+        "text": "[[morning-08Z-slot-dark]] formal-pattern",
+        "variant": "body"
+      }
+    },
+    "d1_details": {
+      "type": "Text",
+      "props": {
+        "text": "completed 8-09 (pattern-broken-permanent: 2-consec clean 8-08 + 8-09; dispatch-lag collapse 75min → 3min)",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

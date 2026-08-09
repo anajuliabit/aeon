@@ -1,22 +1,23 @@
-*Goal Tracker — 2026-08-08*
+*Goal Tracker — 2026-08-09*
 
-Summary: 8 goals — 0 at risk, 0 needs attention, 3 on track, 5 blocked, 0 done (overall → flat: 1 improving [morning-08z pattern-break], 1 degrading [pr queue 4→5], 6 flat).
+Summary: 8 goals — 0 at risk, 0 needs attention, 3 on track, 4 blocked, 1 done (overall ↑ improving)
 
 ON TRACK
-• iss-030 cost-report sdk-opt-in — 0d idle, 15+ activity/14d (flat — T-2 to 8-10 Mon 07Z deciding-test, chronic sr=10% unchanged, no fresh sdk_opt_in_required signature)
-• chronic-cohort-alone-degraded regime — 0d idle, 20+ activity/14d (flat — crosses 5th + 6th 24h durability gate 8-08 = 9-consec-heartbeat-tick ~95h span, deepest composition-identity print in memory-window)
-• `[[morning-08z-slot-dark]]` formal-pattern — 0d idle, 15+ activity/14d (↑ improving — deciding-test at n=5 FAILS on both co-slot skills, formal-pattern from 8-07 n=4-consec resolves as 4-consec-terminating, dispatch-lag collapses 75min → 4min at 08z)
+• ISS-030 cost-report — 0d idle, 118 activity/14d (flat) — T-1 to 8-10 07Z deciding-test; no fresh sdk_opt_in_required in 24h
+• chronic-cohort-alone-degraded regime — 0d idle, 72 activity/14d (flat) — 11-consec-tick, 7th 24h gate crossed 8-09
+• PR queue — 0d idle, 340 activity/14d (↑ improving) — collapsed 5 → 2 via operator Sunday-batch (#173/#172/#171/#165 merged); only #174 + #176 remain
 
 BLOCKED
-• pr queue at 4 — waiting on 8-09 sunday-batch operator review since 8-05 (**queue GROWS 4 → 5 8-08** via pr #174 opened 00:31z overnight, first advisor-workflow-opened pr in memory-window; #173 ci cold ~4.6d = t-1 nudge window narrows)
-  → Action: close-reopen pr #173 to trigger fresh ci dispatch before 8-09 sunday-batch t-1
-• iss-028 workaround-chain — waiting on root-cause investigation since 7-30 pr #167 merge (rail extends n=32+ → n=33+ 8-08 via daily-routine + list-digest + agent-buzz + vuln-scanner sibling, 17-utc-day span 7-22 → 8-08)
-  → Action: reopen pr #167 fix-scope-narrowness at 8-10 weekly-review root-cause investigation ask
-• 12:00 utc batch dark — waiting on scheduler-side gap fix since 2026-06-28 (iss-027 d42 today, 8-skill cluster frozen; token-alert 12z 3-consec clean confirms cluster-specific dispatcher path)
-  → Action: file scheduler-side gap investigation ticket separate from iss-028 (distinct root cause)
-• operator on-chain config — waiting on operator secrets + on-chain-watches.yml since day-1 (day-63 today, defi-monitor NO_CONFIG persists)
-  → Action: ask operator at 8-10 weekly-review to add ALCHEMY_API_KEY + ETHERSCAN_API_KEY + memory/on-chain-watches.yml
-• priorities.md 62d stale — waiting on operator refresh since 2026-06-04 (day-65 today, vault inbox d48 cold streak)
-  → Action: ask operator at 8-10 weekly-review to refresh priorities.md + capture new inbox items
+• ISS-028 workaround-chain — waiting on root-cause investigation since 7-22, n=36+ across 18-UTC-day span
+  → Action: reopen ISS-028 root-cause at weekly-review 8-10
+• 12:00 UTC batch DARK — waiting on ISS-027 scheduler-side fix since 6-28, d43 today
+  → Action: escalate ISS-027 scheduler fix at weekly-review 8-10
+• operator on-chain config — waiting on `on-chain-watches.yml` + ALCHEMY/ETHERSCAN keys, d64
+  → Action: ping operator via weekly-review 8-10 refresh-ask
+• priorities.md stale — waiting on operator refresh since 6-04, d66 + vault inbox d49 cold
+  → Action: include priorities.md refresh in weekly-review 8-10 ask
 
-Sources: logs=ok, git=ok (shallow single-commit window, memory logs authoritative), gh_pr=ok (14 prs 30d window, 5 open), gh_issue=ok (1 issue 30d window, iss #144), cron-state=ok
+DONE
+• `[[morning-08Z-slot-dark]]` formal-pattern — completed 8-09 (pattern-broken-permanent: 2-consec clean 8-08 + 8-09; dispatch-lag collapse 75min → 3min)
+
+Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
