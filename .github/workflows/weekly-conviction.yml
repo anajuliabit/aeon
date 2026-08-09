@@ -1,8 +1,12 @@
 name: Weekly Conviction
 
 on:
-  schedule:
-    - cron: "0 12 * * 1"   # Mondays 12:00 UTC (before the daily advisor at 13:00)
+  # SCHEDULE DISABLED 2026-08-09 — see investment-advisor.yml for the full reasoning.
+  # The weekly conviction report is moving into the investiments service alongside the
+  # daily run; until that job is registered there, trigger this manually.
+  # workflow_dispatch is kept as the manual path.
+  #   schedule:
+  #     - cron: "0 12 * * 1"   # Mondays 12:00 UTC (before the daily advisor at 13:00)
   workflow_dispatch:
 
 jobs:
