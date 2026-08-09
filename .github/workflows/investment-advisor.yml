@@ -1,8 +1,19 @@
 name: Investment Advisor
 
 on:
-  schedule:
-    - cron: "0 13 * * *"   # daily 13:00 UTC
+  # SCHEDULE DISABLED 2026-08-09. The advisor pipeline now runs inside the investiments
+  # service itself (its own scheduler ticks every 5 min against a UTC-day state file on
+  # the Railway volume), so this cron would produce a SECOND report for the same date and
+  # POST it over the one the service just generated — last writer wins, and the two
+  # disagree because they are separate model runs. It has already happened once: on
+  # 2026-08-09 this workflow could not reach /api/snapshot mid-deploy and overwrote the
+  # day with {"summary": "Run aborted: portfolio snapshot unavailable."}.
+  #
+  # workflow_dispatch is deliberately KEPT: the scripts still work and are a usable manual
+  # fallback if the in-service pipeline is ever down. Restore the cron only if the
+  # investiments-side scheduler is retired.
+  #   schedule:
+  #     - cron: "0 13 * * *"   # daily 13:00 UTC
   workflow_dispatch:
 
 jobs:
