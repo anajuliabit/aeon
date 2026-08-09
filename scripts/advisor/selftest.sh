@@ -111,41 +111,13 @@ ZH='[{"date":"2026-06-01","totalUsd":0},{"date":"2026-06-02","totalUsd":100},{"d
 ZDD=$(printf '%s' "$ZH" | jq '[.[] | select((.totalUsd // 0) > 0)] as $h | if ($h | length) < 2 then {today: null} else [range($h | length) as $i | {dd: ((([$h[range(0; $i + 1)].totalUsd] | max) as $peak | if $peak > 0 then ($peak - $h[$i].totalUsd) / $peak * 100 else 0 end))}] | {today: .[-1].dd} end' -c)
 check "drawdown skips zero-total entries" "$(printf '%s' "$ZDD" | jq -r '.today')" "20"
 
-# --- run.sh daily-pick staging: rec -> pick mapping + filter ---
-# Every increase/decrease/hedge rec WITH a symbol is a candidate (hold dropped).
-# side: increase->long, decrease/hedge->short. Entry = level||spot; stablecoins
-# and entry-less recs are dropped downstream (bash, using the snapshot). Mirrors
-# the jq/bash in run.sh step 5.
+# --- run.sh recommendation fixture (shared by the Telegram filter checks) ---
 RECS='[
  {"symbol":"BTC","direction":"increase","level":67000,"invalidateLevel":61000,"horizonDays":30,"title":"Add BTC","action":"deploy","rationale":"reclaim"},
  {"symbol":"REPPO","direction":"decrease","level":0.42,"invalidateLevel":0.5,"horizonDays":60,"title":"Trim REPPO","action":"trim"},
  {"symbol":null,"direction":"hold","level":null,"invalidateLevel":null,"horizonDays":30,"title":"Hold","action":"wait"},
  {"symbol":"MAMO","direction":"increase","level":null,"invalidateLevel":null,"horizonDays":30,"title":"Add MAMO","action":"buy"},
  {"symbol":"USDC","direction":"increase","level":1,"invalidateLevel":null,"horizonDays":30,"title":"Deploy USDC","action":"vault"}]'
-# Candidate filter (jq) — symbol present + actionable direction. USDC/level-less
-# still pass here; stablecoin + entry checks run in bash (need the snapshot).
-CAND=$(printf '%s' "$RECS" | jq -c '[.[] | select(.symbol != null)
-  | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]')
-check "pick candidates include trims + drop holds" "$(printf '%s' "$CAND" | jq -r 'length')" "4"
-# side mapping
-sidemap() { [ "$1" = "increase" ] && echo long || echo short; }
-check "side increase -> long"  "$(sidemap increase)" "long"
-check "side decrease -> short" "$(sidemap decrease)" "short"
-check "side hedge -> short"    "$(sidemap hedge)"    "short"
-# stablecoin skip (snapshot isStable OR known ticker)
-SNAPFIX='{"analytics":{"assets":[{"symbol":"USDC","isStable":true},{"symbol":"REPPO","isStable":false}]},"positions":[{"symbol":"REPPO","price":0.40},{"symbol":"MAMO","price":0.0085}]}'
-isstable() { printf '%s' "$SNAPFIX" | jq -r --arg s "$1" '[.analytics.assets[]? | select((.symbol|ascii_downcase)==$s)|.isStable]|(first//false)'; }
-check "stablecoin USDC skipped" "$(isstable usdc)" "true"
-check "non-stable REPPO kept"   "$(isstable reppo)" "false"
-# entry fallback to snapshot spot when level absent (MAMO has no level)
-spot() { printf '%s' "$SNAPFIX" | jq -r --arg s "$1" '[.positions[]?|select((.symbol|ascii_downcase)==$s)|.price]|map(select(.!=null and .>0))|(first//empty)'; }
-check "entry falls back to spot for level-less rec" "$(spot mamo)" "0.0085"
-# invalidation orientation drop: short with inv<=entry must be nulled
-INVOK=$(jq -n --argjson entry 0.42 --arg side short --argjson inv 0.30 '
-  if $inv==null then null elif $side=="long" and $inv<$entry then $inv elif $side=="short" and $inv>$entry then $inv else null end')
-check "mis-oriented short invalidation dropped" "$INVOK" "null"
-PICKID=$(printf '%s' "$RECS" | jq -r '.[0] | "2026-06-14-advisor-daily-" + (.symbol | ascii_downcase)')
-check "pick id namespaced -daily-" "$PICKID" "2026-06-14-advisor-daily-btc"
 
 # --- run.sh Telegram trade filter: directional recs surface, holds don't ---
 TGTRADES=$(printf '%s' "$RECS" | jq -r '[.[] | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")] | length')
@@ -153,7 +125,7 @@ check "telegram surfaces all directional recs (incl decrease)" "$TGTRADES" "4"
 TGEMPTY=$(printf '%s' '[{"direction":"hold","symbol":null}]' | jq -r '[.[] | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")] | length')
 check "telegram trade list empty on all-hold report" "$TGEMPTY" "0"
 
-# --- run.sh short-term trades: side-aware re-filter + pick mapping ---
+# --- run.sh short-term trades: side-aware re-filter ---
 # LONG needs target>entry & invalidate<entry; SHORT needs target<entry &
 # invalidate>entry. Non-held, coingeckoId required. Mirrors run.sh step 5a.
 STTR_IN='{"trades":[
@@ -176,9 +148,6 @@ check "sttrade keeps valid long + short, drops rest" "$(printf '%s' "$STFILT" | 
 check "sttrade keeps WIF long" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol=="WIF")]|length')" "1"
 check "sttrade keeps PEPE short" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol=="PEPE" and .side=="short")]|length')" "1"
 check "sttrade drops held/mis-oriented/no-id" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol|test("REPPO|BADL|BADS|NOID"))]|length')" "0"
-STSHORT=$(printf '%s' "$STFILT" | jq -c '[.trades[]|select(.side=="short")][0] | {side, entryPriceUsd:.entry,
-  invalidationPriceUsd:(if (.invalidate//0)<=0 then null elif .side=="short" and .invalidate>.entry then .invalidate elif .side!="short" and .invalidate<.entry then .invalidate else null end)}')
-check "sttrade short keeps inv above entry" "$(printf '%s' "$STSHORT" | jq -r '"\(.side) \(.invalidationPriceUsd)"')" "short 0.0012"
 # Cap: many valid ideas are kept up to 5 (was 2). 7 valid longs -> 5.
 STMANY=$(jq -nc '{trades:[range(0;7) as $i | {symbol:("T"+($i|tostring)), coingeckoId:("id"+($i|tostring)), side:"long", entry:1.0, target:1.5, invalidate:0.8}]}' \
   | jq -c '{trades:[.trades[]? | (.side//"long") as $side | select(.symbol!=null and .coingeckoId!=null and (.entry//0)>0
