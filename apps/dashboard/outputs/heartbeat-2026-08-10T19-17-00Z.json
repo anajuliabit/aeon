@@ -1,0 +1,254 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat - Fleet Status",
+        "description": "Critical system-wide payment gateway failure"
+      },
+      "children": [
+        "alert_critical",
+        "sep1",
+        "section_overview",
+        "sep2",
+        "section_failed_skills",
+        "sep3",
+        "section_fork_cohort",
+        "sep4",
+        "section_recovery"
+      ]
+    },
+    "alert_critical": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Fleet-Wide 402 Error",
+        "message": "usepod payment-required signature back today (iss-029 recurrence)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_overview",
+        "text_overview",
+        "stat_failed_count",
+        "text_error_detail"
+      ]
+    },
+    "heading_overview": {
+      "type": "Heading",
+      "props": {
+        "text": "Failure Overview",
+        "level": "h2"
+      }
+    },
+    "text_overview": {
+      "type": "Text",
+      "props": {
+        "text": "21 skills failed on 8-10 dispatches since 10:49z. All share the same error:",
+        "variant": "body"
+      }
+    },
+    "stat_failed_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Affected",
+        "value": "21"
+      }
+    },
+    "text_error_detail": {
+      "type": "Text",
+      "props": {
+        "text": "api.usepod.ai/v1/messages payment required",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_failed_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_failed_skills",
+        "table_failed_skills"
+      ]
+    },
+    "heading_failed_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst Consecutive Failures",
+        "level": "h2"
+      }
+    },
+    "table_failed_skills": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Consecutive Failures"
+        ],
+        "rows": [
+          [
+            "btc-levels",
+            "17"
+          ],
+          [
+            "cost-report",
+            "15"
+          ],
+          [
+            "thought-review",
+            "15"
+          ],
+          [
+            "daily-routine",
+            "14"
+          ],
+          [
+            "skill-freshness",
+            "13"
+          ],
+          [
+            "weekly-shiplog",
+            "12"
+          ],
+          [
+            "heartbeat",
+            "10"
+          ],
+          [
+            "security-digest",
+            "8"
+          ],
+          [
+            "morning-brief",
+            "7"
+          ],
+          [
+            "github-trending",
+            "7"
+          ],
+          [
+            "unlock-monitor",
+            "7"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_fork_cohort": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fork_cohort",
+        "text_fork_cohort"
+      ]
+    },
+    "heading_fork_cohort": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork-Cohort Status",
+        "level": "h2"
+      }
+    },
+    "text_fork_cohort": {
+      "type": "Text",
+      "props": {
+        "text": "Still stuck since 2026-08-09 19:05z (dedup vs yesterday 20z heartbeat)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_recovery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_recovery",
+        "text_recovery",
+        "stack_status_file",
+        "text_next_check"
+      ]
+    },
+    "heading_recovery": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery Status",
+        "level": "h2"
+      }
+    },
+    "text_recovery": {
+      "type": "Text",
+      "props": {
+        "text": "No operator recovery path available. Gateway self-heal is the load-bearing wait.",
+        "variant": "body"
+      }
+    },
+    "stack_status_file": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_status_file_label",
+        "link_status_file"
+      ]
+    },
+    "text_status_file_label": {
+      "type": "Text",
+      "props": {
+        "text": "Status file marked as degraded:",
+        "variant": "body"
+      }
+    },
+    "link_status_file": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "text_next_check": {
+      "type": "Text",
+      "props": {
+        "text": "Next check at 20z heartbeat",
+        "variant": "muted"
+      }
+    }
+  }
+}

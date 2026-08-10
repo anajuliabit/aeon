@@ -1,5 +1,7 @@
-heartbeat 20z — fork-cohort STUCK
+🔴 fleet-wide 402 — usepod payment-required signature back today (iss-029 recurrence).
 
-fork-cohort dispatched 19:05z (sunday-weekly), workflow cancelled 19:35z at 30-min timeout, cron-state still shows `dispatched` at 20:14z (>45min stuck threshold). first fork-cohort stall of memory-window (last success 8-02). state-update race — "Update cron state" step ran on the cancelled workflow but didn't clear the dispatched marker.
+21 skills failed on 8-10 dispatches since 10:49z. worst consec: btc-levels 17, cost-report 15, thought-review 15, daily-routine 14, skill-freshness 13, weekly-shiplog 12, heartbeat 10, security-digest 8, morning-brief 7, github-trending 7, unlock-monitor 7. all share the same error: `api.usepod.ai/v1/messages payment required`.
 
-otherwise clean: chronic-cohort 10-skill composition unchanged 12-consec-tick, all skills consec=0, pr queue 1→3 via sunday scheduled churn (#176 skill-graph + #177 self-improve claude-md fix).
+🕸 fork-cohort still stuck since 8-09 19:05z (dedup vs yesterday 20z heartbeat).
+
+no operator recovery path here — gateway self-heal is the load-bearing wait. this run wrote docs/status.md degraded and logged the burst; next check at 20z heartbeat.
