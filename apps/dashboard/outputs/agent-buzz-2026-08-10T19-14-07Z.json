@@ -1,0 +1,339 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-08-10",
+        "description": "mcp argued from three angles today: killed off, gateway-policed, standardized into skills. two finance rails and one safety broadside on the side."
+      },
+      "children": [
+        "heading_s1",
+        "stack_s1",
+        "sep_1",
+        "heading_s2",
+        "stack_s2",
+        "sep_2",
+        "heading_s3",
+        "stack_s3",
+        "sep_3",
+        "heading_s4",
+        "stack_s4",
+        "sep_4",
+        "text_footer"
+      ]
+    },
+    "heading_s1": {
+      "type": "Heading",
+      "props": {
+        "text": "skills eat mcp",
+        "level": "h3"
+      }
+    },
+    "stack_s1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_pair_s1_1",
+        "tweet_pair_s1_2",
+        "tweet_pair_s1_3"
+      ]
+    },
+    "tweet_pair_s1_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_s1_1",
+        "link_s1_1"
+      ]
+    },
+    "tweet_s1_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "melvynx",
+        "handle": "melvynx",
+        "text": "argues mcp was a mistaken abstraction; skills + plain http suffice"
+      }
+    },
+    "link_s1_1": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/melvynx/status/2086600422522057135",
+        "href": "https://x.com/melvynx/status/2086600422522057135"
+      }
+    },
+    "tweet_pair_s1_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_s1_2",
+        "link_s1_2"
+      ]
+    },
+    "tweet_s1_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "tom_doerr",
+        "handle": "tom_doerr",
+        "text": "agentskillos orchestrates 200k+ public skills for agent build-out"
+      }
+    },
+    "link_s1_2": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/tom_doerr/status/2086600847052378411",
+        "href": "https://x.com/tom_doerr/status/2086600847052378411"
+      }
+    },
+    "tweet_pair_s1_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_s1_3",
+        "link_s1_3"
+      ]
+    },
+    "tweet_s1_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "yuutanman",
+        "handle": "yuutanman",
+        "text": "agent plugins 1.0.0 standardizes skills+mcp across ms/openai/aws/google"
+      }
+    },
+    "link_s1_3": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/yuutanman/status/2086601839454322721",
+        "href": "https://x.com/yuutanman/status/2086601839454322721"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_s2": {
+      "type": "Heading",
+      "props": {
+        "text": "policing mcp at the boundary",
+        "level": "h3"
+      }
+    },
+    "stack_s2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_pair_s2_1",
+        "tweet_pair_s2_2"
+      ]
+    },
+    "tweet_pair_s2_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_s2_1",
+        "link_s2_1"
+      ]
+    },
+    "tweet_s2_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "straikerai",
+        "handle": "straikerai",
+        "text": "17k+ mcp servers tracked, thousands vulnerable — supply chain now"
+      }
+    },
+    "link_s2_1": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/straikerai/status/2086602286592315677",
+        "href": "https://x.com/straikerai/status/2086602286592315677"
+      }
+    },
+    "tweet_pair_s2_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_s2_2",
+        "link_s2_2"
+      ]
+    },
+    "tweet_s2_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SheikAlthafDev",
+        "handle": "SheikAlthafDev",
+        "text": "identity/policy/logs belong at a gateway, not baked per-agent"
+      }
+    },
+    "link_s2_2": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/SheikAlthafDev/status/2086602759932121486",
+        "href": "https://x.com/SheikAlthafDev/status/2086602759932121486"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_s3": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-native financial rails",
+        "level": "h3"
+      }
+    },
+    "stack_s3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_pair_s3_1",
+        "tweet_pair_s3_2"
+      ]
+    },
+    "tweet_pair_s3_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_s3_1",
+        "link_s3_1"
+      ]
+    },
+    "tweet_s3_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "obuluslayer",
+        "handle": "obuluslayer",
+        "text": "settlement framework live on robinhood with x402, a2a arbitration"
+      }
+    },
+    "link_s3_1": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/obuluslayer/status/2086592130445726187",
+        "href": "https://x.com/obuluslayer/status/2086592130445726187"
+      }
+    },
+    "tweet_pair_s3_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_s3_2",
+        "link_s3_2"
+      ]
+    },
+    "tweet_s3_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SciFi",
+        "handle": "SciFi",
+        "text": "finevo-bench: longitudinal benchmark for self-evolving agents in finance"
+      }
+    },
+    "link_s3_2": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/SciFi/status/2086598660284969382",
+        "href": "https://x.com/SciFi/status/2086598660284969382"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_s4": {
+      "type": "Heading",
+      "props": {
+        "text": "rl produces solipsistic agents",
+        "level": "h3"
+      }
+    },
+    "stack_s4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_pair_s4_1"
+      ]
+    },
+    "tweet_pair_s4_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_s4_1",
+        "link_s4_1"
+      ]
+    },
+    "tweet_s4_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "xuanalogue",
+        "handle": "xuanalogue",
+        "text": "rl-trained agents hack each other for trivial goals, ignore sanctions"
+      }
+    },
+    "link_s4_1": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/xuanalogue/status/2086591062299336915",
+        "href": "https://x.com/xuanalogue/status/2086591062299336915"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 10 → kept: 8",
+        "variant": "caption"
+      }
+    }
+  }
+}

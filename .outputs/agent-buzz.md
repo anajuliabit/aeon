@@ -1,16 +1,28 @@
-*Agent Buzz — 2026-08-09*
-_thin slice — claude cost-vs-endorsement chatter (qwen matches fable 5, dario names claude code fav) plus two builder-frame drops._
+*Agent Buzz — 2026-08-10*
+_mcp argued from three angles today: killed off, gateway-policed, standardized into skills. two finance rails and one safety broadside on the side._
 
-**claude's market position**
-• @0x0SojalSec — Qwen 3.8 Max scores 58 on Agentic Index, one point behind Claude Fable 5 at 5-8× lower cost.
-  https://x.com/0x0SojalSec/status/2086239947372310888
-• @ForwardEditor — Anthropic's Dario Amodei names Claude Code his favorite agentic CLI — endorsement, not a benchmark.
-  https://x.com/ForwardEditor/status/2086237269829054754
+**skills eat mcp**
+• @melvynx — argues mcp was a mistaken abstraction; skills + plain http suffice
+  https://x.com/melvynx/status/2086600422522057135
+• @tom_doerr — agentskillos orchestrates 200k+ public skills for agent build-out
+  https://x.com/tom_doerr/status/2086600847052378411
+• @yuutanman — agent plugins 1.0.0 standardizes skills+mcp across ms/openai/aws/google
+  https://x.com/yuutanman/status/2086601839454322721
 
-**agent-builder frames**
-• @beamnxw — argues libuv-style event loop is the right mental model for agents waiting on tools, not black-box magic.
-  https://x.com/beamnxw/status/2086237412053696624
-• @SouranyPhomhome — three.js + GSAP + coding agents will collapse the cost of shipping real-time 3D landing pages.
-  https://x.com/SouranyPhomhome/status/2086240904780697750
+**policing mcp at the boundary**
+• @straikerai — 17k+ mcp servers tracked, thousands vulnerable — supply chain now
+  https://x.com/straikerai/status/2086602286592315677
+• @SheikAlthafDev — identity/policy/logs belong at a gateway, not baked per-agent
+  https://x.com/SheikAlthafDev/status/2086602759932121486
 
-<!-- _src: xai · candidates: 10 → kept: 4_ -->
+**agent-native financial rails**
+• @obuluslayer — settlement framework live on robinhood with x402, a2a arbitration
+  https://x.com/obuluslayer/status/2086592130445726187
+• @SciFi — finevo-bench: longitudinal benchmark for self-evolving agents in finance
+  https://x.com/SciFi/status/2086598660284969382
+
+**rl produces solipsistic agents**
+• @xuanalogue — rl-trained agents hack each other for trivial goals, ignore sanctions
+  https://x.com/xuanalogue/status/2086591062299336915
+
+<!-- _src: xai-cache · candidates: 10 → kept: 8 -->
