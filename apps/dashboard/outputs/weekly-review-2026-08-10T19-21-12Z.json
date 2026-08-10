@@ -1,0 +1,153 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review",
+        "description": "2026-08-10"
+      },
+      "children": [
+        "alert_top_action",
+        "sep1",
+        "health_section",
+        "sep2",
+        "prior_loop_section",
+        "sep3",
+        "full_review_link"
+      ]
+    },
+    "alert_top_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Top Action",
+        "message": "File ISS-031 + ship scripts/detect-usepod-402.sh by 2026-08-13. Usepod 402 signature recurred fleet-wide today (2nd event in 7d, 7h+ active, 14 skills stuck).",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health_heading",
+        "health_stats_stack",
+        "health_alert"
+      ]
+    },
+    "health_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h3"
+      }
+    },
+    "health_stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_success_week",
+        "stat_success_today",
+        "issues_text",
+        "prs_text"
+      ]
+    },
+    "stat_success_week": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills with ≥1 success this week",
+        "value": "30/43"
+      }
+    },
+    "stat_success_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills succeeded today",
+        "value": "0/43"
+      }
+    },
+    "issues_text": {
+      "type": "Text",
+      "props": {
+        "text": "Issues: 1 opened (ISS-030), 1 resolved (ISS-029)"
+      }
+    },
+    "prs_text": {
+      "type": "Text",
+      "props": {
+        "text": "6 PRs merged (8-09 batch)"
+      }
+    },
+    "health_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Fleet Status",
+        "message": "Usepod 402 active at 18:03Z",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prior_loop_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prior_heading",
+        "prior_result",
+        "prior_note"
+      ]
+    },
+    "prior_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Prior Loop",
+        "level": "h3"
+      }
+    },
+    "prior_result": {
+      "type": "Text",
+      "props": {
+        "text": "3 shipped / 1 slipped of 4"
+      }
+    },
+    "prior_note": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse d43 slipped 2nd week — retiring",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full_review_link": {
+      "type": "Link",
+      "props": {
+        "label": "Full review: articles/weekly-review-2026-08-10.md",
+        "href": "articles/weekly-review-2026-08-10.md"
+      }
+    }
+  }
+}
