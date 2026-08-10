@@ -1,0 +1,129 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-10"
+      },
+      "children": [
+        "intro-text",
+        "separator1",
+        "section-heading",
+        "tweets-stack",
+        "separator2",
+        "status-text"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet day — 2 signal items: $PUMP comps thesis + ACM memory-primitive paper. Rest is single-digit-likes noise.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Researchers",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1-group",
+        "tweet2-group"
+      ]
+    },
+    "tweet1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "$PUMP at 2.6x P/S vs Sky 7.6x, Aerodrome 9.0x, ETHFI 10.6x, CAKE 12.4x; rare net-positive value-flow-to-holders past 6mo.",
+        "likes": 88,
+        "retweets": 10
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2086498002995466579"
+      },
+      "children": []
+    },
+    "tweet2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "Agentic Context Management: archive+summarize stale work, retrieve on demand. Qwen3.5-9B on BrowseComp-Plus 57.0→72.7%, consistency 34.1→59.3%. Direct hit on Aeon's memory-primitive rail.",
+        "likes": 63,
+        "retweets": 9
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2086551234329153587"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(10, signal-2) | status: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
