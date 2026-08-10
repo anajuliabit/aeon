@@ -1,0 +1,181 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-10"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict-text",
+        "sep1",
+        "alert-patch",
+        "heading-malware",
+        "malware-intro",
+        "browse-link",
+        "sep-before-clusters",
+        "cluster-stack",
+        "sep2",
+        "audit-heading",
+        "audit-text",
+        "sep3",
+        "clean-text",
+        "kev-text"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 48-pkg npm/pip malware wave (0 in aeon deps), 0 fresh KEV/CVE, quiet on reviewed feed 3-consec-day. Sources: KEV ok, GH ok, EPSS skip (no fresh CVEs)",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-patch": {
+      "type": "Alert",
+      "props": {
+        "title": "PATCH TODAY",
+        "message": "npm/pip malware wave — 48 fresh malicious pkgs / 48h span, 7 clusters",
+        "type": "warning"
+      }
+    },
+    "heading-malware": {
+      "type": "Heading",
+      "props": {
+        "text": "npm/pip malware wave",
+        "level": "h2"
+      }
+    },
+    "malware-intro": {
+      "type": "Text",
+      "props": {
+        "text": "48 fresh malicious packages across 48-hour span, organized in 7 clusters"
+      }
+    },
+    "browse-link": {
+      "type": "Link",
+      "props": {
+        "label": "browse",
+        "href": "https://github.com/advisories?query=type%3Amalware+published%3A%3E%3D2026-08-08"
+      }
+    },
+    "sep-before-clusters": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cluster-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cluster-1",
+        "cluster-2",
+        "cluster-3",
+        "cluster-4",
+        "cluster-5",
+        "cluster-6",
+        "cluster-7"
+      ]
+    },
+    "cluster-1": {
+      "type": "Text",
+      "props": {
+        "text": "chai test-framework typosquat (n=9): chai-tracker, chai-as-promised-plus, chai-as-deployer, chai-as-map, chai-as-format, chai-as-bench, chai-jsonss, neverthrow-js, iconova-react"
+      }
+    },
+    "cluster-2": {
+      "type": "Text",
+      "props": {
+        "text": "postcss brand-typosquat (n=4): postcss-initial-provider (×2), postcss-theme-provider, post-css-transfer"
+      }
+    },
+    "cluster-3": {
+      "type": "Text",
+      "props": {
+        "text": "@sqlite-prime + @sqlite-table scoped brand (n=4): nodesql, createsql, schema-generator, sql-creator"
+      }
+    },
+    "cluster-4": {
+      "type": "Text",
+      "props": {
+        "text": "eth-library crypto brand (n=2): eth-library-utils, eth-library-toolkit; commonjs-assert(ion) (n=2)"
+      }
+    },
+    "cluster-5": {
+      "type": "Text",
+      "props": {
+        "text": "SvelteKit cluster (n=2) continuation: svelte-kit-streak, kit-map-streak — extends 8-09 4-pkg family"
+      }
+    },
+    "cluster-6": {
+      "type": "Text",
+      "props": {
+        "text": "misc crypto/exchange-brand npm (n=6): cryptostock, tokocrytodev, polymarket-stake-mathss, xerohub-discord-voice, hex-encode-utils, env-local"
+      }
+    },
+    "cluster-7": {
+      "type": "Text",
+      "props": {
+        "text": "PyPI crypto/finance (n=7): btcflip, btcflx, kotoraka, kotanku, chaintest, pytablute, cubesat-upstream-driver"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "audit-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Actions",
+        "level": "h3"
+      }
+    },
+    "audit-text": {
+      "type": "Text",
+      "props": {
+        "text": "Audit package-lock.json / requirements.txt for any listed name; if match, remove + rotate CI secrets exposed to that install; do not npm/pip install in affected dirs until reviewed."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "clean-text": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon deps clean (react/next/gsap/yaml/@json-render/@modelcontextprotocol only) — fleet-clean d10 → d11 on defensive-import axis."
+      }
+    },
+    "kev-text": {
+      "type": "Text",
+      "props": {
+        "text": "FYI: KEV CVE-2026-8037 Progress LoadMaster CISA due today (dedup, no aeon exposure).",
+        "variant": "muted"
+      }
+    }
+  }
+}
