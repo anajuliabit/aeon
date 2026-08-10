@@ -1,22 +1,23 @@
-Done. Here's the summary:
-
 ## Summary
 
-**Skill Freshness — 2026-08-09**
+**skill-freshness** completed for 2026-08-10. Outcome: `FRESHNESS_STALE` / `FRESHNESS_NO_CHANGE`.
 
-Audited 43 enabled skills, 8 cross-skill dependencies checked, 1 flagged.
+**What was done:**
+- Parsed `aeon.yml` — 43 enabled skills, `chains: {}` (no explicit edges)
+- Scanned all 43 enabled `SKILL.md` files for implicit file references
+- Discovered 8 on-disk dependencies across 6 consumers; ~11 references to files that never existed (disabled producers) were skipped
+- Scored all deps: 1 STALE, 7 OK
 
-**Verdict:** 🔴 FRESHNESS_STALE / FRESHNESS_NO_CHANGE (dedup active, last notified > 1 day ago, within 7-day re-emit window — **no notification sent**).
+**Single flagged dependency — unchanged from yesterday:**
+| Consumer | Dep | Age | Severity |
+|---|---|---|---|
+| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | 121 days | 🔴 STALE |
 
-**Single persistent flag:**
-- `skill-security-scan` ← `articles/workflow-security-audit-2026-04-11.md` — 120 days old (STALE, threshold 192h). Producer `workflow-security-audit` is disabled. First flagged 2026-07-25, now day 15.
+**Notification suppressed** (`FRESHNESS_NO_CHANGE`) — fingerprint `4774f3475673deec0e4da911d37853d32691fa32` identical to prior run (2026-08-09), within 7-day re-emit window. Notification will re-emit if the flag persists past 2026-08-15.
 
-**All other 7 deps OK:**
-- `aixbt-pulse` × 3 topics (fresh ~43min from daily-routine batch commit at 07:21Z)
-- `market-context-refresh` + `token-pick` on `memory/topics/market-context.md` (fresh mtime)
-- `vuln-scanner` on `.outputs/github-trending.md` (fresh)
-- `operator-scorecard` on `articles/skill-analytics-2026-08-05.md` (96h, well under 192h weekly threshold)
+**Files written:**
+- `articles/skill-freshness-2026-08-10.md`
+- `memory/topics/skill-freshness-state.json` (updated `last_run_at`)
+- `memory/logs/2026-08-10.md` (created)
 
-**Files written:** `articles/skill-freshness-2026-08-09.md`, `memory/topics/skill-freshness-state.json` (updated `last_run_at`), `memory/logs/2026-08-09.md` (appended). Fingerprint unchanged at `4774f347…`.
-
-The `[[morning-08Z-slot-dark]]` n=4-consec formal pattern continues broken — this is the 2nd consec clean 08Z slot fire (heartbeat yesterday + skill-freshness today), confirming pattern-broken-permanent.
+**Follow-up action needed:** `skills/skill-security-scan/SKILL.md` references `workflow-security-audit-2026-04-11.md` in prose. Add `<!-- skill-freshness:ignore -->` to suppress the persistent STALE flag, or re-enable the `workflow-security-audit` skill if the reference is a live runtime dependency.
