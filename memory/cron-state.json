@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-08-10T19:10:30Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-10T20:56:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-10T19:17:57Z",
     "total_runs": 305,
     "total_successes": 212,
@@ -309,8 +309,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-08-10T20:02:16Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-10T20:56:30Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-04T21:48:47Z",
     "total_runs": 95,
     "total_successes": 8,
@@ -629,7 +629,7 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-08-10T16:09:20Z",
+    "last_dispatch": "2026-08-10T20:56:30Z",
     "last_status": "dispatched",
     "last_success": "2026-08-09T20:55:49Z",
     "total_runs": 392,
