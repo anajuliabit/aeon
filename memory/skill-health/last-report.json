@@ -1,18 +1,18 @@
 {
-  "hash": "71d8c76ed1e09e5ef2dd9e93c11d691ed418579d5f1e1ed7a7ccbfa6f31e4c79",
-  "last_notified_at": "2026-08-09T18:17:18Z",
-  "last_run_at": "2026-08-09T18:17:18Z",
+  "hash": "253ed700e2444e8667f4ce33f2cf34c8c2e7cd07fe2ef6591c6192e7acf08f76",
+  "last_notified_at": "2026-08-10T19:14:12Z",
+  "last_run_at": "2026-08-10T19:14:12Z",
   "classification": {
-    "critical": [],
-    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "goal-tracker", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "unlock-monitor", "vuln-scanner"],
+    "critical": ["btc-levels", "cost-report", "daily-routine", "deal-flow", "goal-tracker", "github-trending", "heartbeat", "list-digest", "morning-brief", "security-digest", "skill-freshness", "skill-security-scan", "thought-review", "token-alert", "unlock-monitor", "weekly-shiplog"],
+    "degraded": ["action-converter", "aixbt-pulse", "defi-monitor", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner"],
     "flapping": [],
-    "warning": ["agent-buzz", "daily-routine", "deal-flow", "defi-overview", "evening-recap", "fork-skill-digest", "github-trending", "heartbeat", "list-digest", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
-    "healthy_count": 8,
+    "warning": ["agent-buzz", "defi-overview", "evening-recap", "on-chain-monitor", "token-movers", "token-pick"],
+    "healthy_count": 5,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "Composition IDENTICAL to 8-08 18:05Z prev report — 0 CRITICAL + 17 DEGRADED + 0 FLAPPING + 15 WARNING + 8 HEALTHY + 3 NO_DATA. Zero delta on any tier. ISS-027 12Z 8-skill batch rolls d42 → d43 today at 12Z (4 in DEGRADED: market-context-refresh 32% / narrative-tracker 33% / aixbt-pulse 47% / defi-monitor 53% + 4 in WARNING: defi-overview 69% / token-pick 64% / token-movers 65% / on-chain-monitor 72% — same distribution as 8-08). ISS-030 cost-report sr 10% chronic sdk_opt_in_required — Mon 8-10 07Z weekly-tick T-0 = tomorrow. Fleet clean-consec d4 → d5 crossing 8-09 (unbroken since 8-04 21:48Z cost-report same-day organic recovery). All 43 enabled entries consec=0 across morning-brief 07:15Z + heartbeat 08:03Z + 14:44Z ticks. `[[chronic-cohort-alone-degraded]]` regime crosses 11-consec-heartbeat-tick ~119h span 8-04 14:45Z → 8-09 14:44Z (7th 24h durability gate crossed). `[[morning-08Z-slot-dark]]` pattern-broken-permanent VERDICT confirmed (heartbeat 08:06Z + skill-freshness 08:17Z both clean, 2-consec-clean over 8-08+8-09). PR queue COLLAPSED 5 → 1 via operator Sunday-batch T-0 (#173 merged, #172+#165 rebuilt clean, only #174 remains). Queue-full self-improve exit-gate DISENGAGED. `[[12Z-slot-dark-immunity-per-skill]]` extends to 4-consec clean token-alert 12Z fires. Notify gate: current_hash 71d8c76e != prev 91a4634d (systemic string rolled d42→d43 counter, composition set identical) AND delta 24h12m > 24h → notify (daily cadence reminder tick, composition-unchanged). SKILL_HEALTH_PARTIAL — skill-runs sandbox-blocked this run (bash execution denied by permission gate); cron-state-only analysis, no fallback data folded in.",
-  "open_issues": 14,
+  "systemic": "SYSTEMIC: 16 CRITICAL + 5 WARNING skills on api.usepod.ai 402 — same signature as ISS-029 (2026-08-03, resolved). Fleet-wide dispatch failure recurrence in 15:10Z-18:03Z wave. Per skill-health constraint (never edit Resolved issues), filed as NEW issue ISS-031 with related:ISS-029 pointer. Composition SHOCK from 8-09 hash 71d8c76e: 0→16 CRITICAL, 17→13 DEGRADED, 15→6 WARNING, 8→5 HEALTHY. Notify gate: current_hash 253ed700 != prev 71d8c76e AND massive composition delta → notify. cost-report Mon 8-10 07Z deciding-test INCONCLUSIVE (signature = usepod 402, not sdk_opt_in_required — ISS-030 counter frozen n=1). ISS-027 12Z 8-skill batch d44 dark rolls unchanged. `[[chronic-cohort-alone-degraded]]` regime pattern BREAKS today (regime required no CRITICAL — now 16 CRITICAL). Aeon cannot self-repair — operator-gated (usepod top-up or gateway.provider flip in aeon.yml from direct → bankr/virtuals). SKILL_HEALTH_PARTIAL — skill-runs sandbox-blocked (permission gate), cron-state-only classification.",
+  "open_issues": 15,
   "resolved_this_run": 0,
-  "filed_this_run": 0,
-  "prev_hash": "91a4634de7eb6d713da825f170eaeb73729a9992fb76d6f00a05ef95e50b2e1b"
+  "filed_this_run": 1,
+  "prev_hash": "71d8c76ed1e09e5ef2dd9e93c11d691ed418579d5f1e1ed7a7ccbfa6f31e4c79"
 }

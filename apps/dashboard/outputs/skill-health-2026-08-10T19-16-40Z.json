@@ -1,0 +1,275 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill health — 2026-08-10",
+        "description": "Health status check for all skills"
+      },
+      "children": [
+        "alert-critical",
+        "sep1",
+        "critical-section",
+        "sep2",
+        "degraded-section",
+        "sep3",
+        "other-sections",
+        "sep4",
+        "context-section",
+        "sep5",
+        "summary-section"
+      ]
+    },
+    "alert-critical": {
+      "type": "Alert",
+      "props": {
+        "title": "CRITICAL SYSTEM HEALTH",
+        "message": "16 skills down. Systemic: api.usepod.ai 402 — 21 skills affected. Issue ISS-029 recurrence",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical-heading",
+        "critical-table",
+        "critical-more"
+      ]
+    },
+    "critical-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL (16) — top 5 by severity",
+        "level": "h3"
+      }
+    },
+    "critical-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Failures",
+          "Duration",
+          "Status"
+        ],
+        "rows": [
+          [
+            "weekly-shiplog",
+            "12 fails",
+            "21d down",
+            "WAIT-API (usepod 402) → ISS-031"
+          ],
+          [
+            "cost-report",
+            "15 fails",
+            "6d down",
+            "WAIT-API (usepod 402) → ISS-031"
+          ],
+          [
+            "btc-levels",
+            "17 fails",
+            "<1d down",
+            "WAIT-API (usepod 402) → ISS-031"
+          ],
+          [
+            "daily-routine",
+            "14 fails",
+            "1.5d down",
+            "WAIT-API (usepod 402) → ISS-031"
+          ],
+          [
+            "thought-review",
+            "15 fails",
+            "<1d down",
+            "WAIT-API (usepod 402) → ISS-031"
+          ]
+        ]
+      }
+    },
+    "critical-more": {
+      "type": "Text",
+      "props": {
+        "text": "+11 more: heartbeat, skill-freshness, security-digest, morning-brief, github-trending, unlock-monitor, token-alert, deal-flow, goal-tracker, list-digest, skill-security-scan — same signature — see memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-list"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (13)",
+        "level": "h3"
+      }
+    },
+    "degraded-list": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter, aixbt-pulse, defi-monitor, market-context-refresh, narrative-tracker, reflect, reg-monitor, search-skill, self-improve, skill-analytics, skill-evals, skill-health, vuln-scanner",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "other-sections": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-stack",
+        "healthy-stat"
+      ]
+    },
+    "no-data-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-text"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "no-data-text": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL",
+        "variant": "body"
+      }
+    },
+    "healthy-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy Skills",
+        "value": "5"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "context-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "context-heading",
+        "context-text",
+        "fix-heading",
+        "fix-text"
+      ]
+    },
+    "context-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Context",
+        "level": "h3"
+      }
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "Composition shock from 8-09 (0→16 CRITICAL in 24h) — every failing skill lands identical usepod 402 payload, same byte-for-byte as ISS-029. self-improve exit-gate re-engages by ISS-031 severity, not queue depth.",
+        "variant": "body"
+      }
+    },
+    "fix-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fix Ownership",
+        "level": "h3"
+      }
+    },
+    "fix-text": {
+      "type": "Text",
+      "props": {
+        "text": "Operator. Either top up usepod, or flip aeon.yml gateway.provider from direct → bankr/virtuals. Aeon cannot self-repair — the failure surface is the LLM proxy aeon runs on.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary-section": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-open",
+        "stat-resolved",
+        "stat-filed"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "1 (ISS-031)"
+      }
+    }
+  }
+}
