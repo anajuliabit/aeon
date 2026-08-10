@@ -1,0 +1,99 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "header_section",
+        "separator_1",
+        "details_section"
+      ]
+    },
+    "header_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_period",
+        "badge_captures",
+        "text_status"
+      ]
+    },
+    "text_period": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h"
+      }
+    },
+    "badge_captures": {
+      "type": "Badge",
+      "props": {
+        "text": "0 captures",
+        "variant": "outline"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_priorities",
+        "stat_staleness",
+        "text_recommendation"
+      ]
+    },
+    "alert_priorities": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md stale",
+        "message": "Last reviewed 2026-06-04",
+        "type": "warning"
+      }
+    },
+    "stat_staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "Days stale",
+        "value": "67"
+      }
+    },
+    "text_recommendation": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review T-0 today — worth a refresh",
+        "variant": "lead"
+      }
+    }
+  }
+}
