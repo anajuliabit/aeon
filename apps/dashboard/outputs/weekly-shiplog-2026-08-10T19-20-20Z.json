@@ -1,0 +1,173 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog",
+        "description": "2026-08-10"
+      },
+      "children": [
+        "intro",
+        "sep1",
+        "themes-section",
+        "sep2",
+        "activity-section",
+        "sep3",
+        "article-link"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "The vuln-scanner started running cargo-fuzz harnesses on repos it never wrote, the skill catalog cleared 70 with five new operator skills plus community-pack machinery, and Aeon migrated wholesale off its bespoke skill frontmatter onto the Agent Skills spec.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "themes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "themes-heading",
+        "themes-stack"
+      ]
+    },
+    "themes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Themes",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "themes-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme1",
+        "theme2",
+        "theme3"
+      ]
+    },
+    "theme1": {
+      "type": "Text",
+      "props": {
+        "text": "Vuln-scanner starts fuzzing binaries it never wrote",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "theme2": {
+      "type": "Text",
+      "props": {
+        "text": "Catalog clears 70, community-pack path becomes real",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "theme3": {
+      "type": "Text",
+      "props": {
+        "text": "Agent Skills spec-form replaces OKF; traces + Buzz online",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "activity-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "activity-heading",
+        "stats-grid"
+      ]
+    },
+    "activity-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Activity",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "commits",
+        "prs",
+        "additions",
+        "deletions"
+      ]
+    },
+    "commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "51"
+      },
+      "children": []
+    },
+    "prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "28"
+      },
+      "children": []
+    },
+    "additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Additions",
+        "value": "+16,617"
+      },
+      "children": []
+    },
+    "deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Deletions",
+        "value": "−2,128"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Article",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-10.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

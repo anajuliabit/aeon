@@ -1,11 +1,11 @@
-*Weekly Shiplog — 2026-07-20*
+*Weekly Shiplog — 2026-08-10*
 
-mcp integrations moved from prototype to production this week: oauth stopped breaking on rotating-token providers, three new mcp skills swapped in for the retired ctrl skill, and the aeon developer kit landed for outside builders.
+The vuln-scanner started running cargo-fuzz harnesses on repos it never wrote, the skill catalog cleared 70 with five new operator skills plus community-pack machinery, and Aeon migrated wholesale off its bespoke skill frontmatter onto the Agent Skills spec.
 
 Themes:
-- OAuth for MCP servers becomes durable
-- Three new MCP skills, CTRL retires
-- Aeon Developer Kit lands
+- Vuln-scanner starts fuzzing binaries it never wrote
+- Catalog clears 70, community-pack path becomes real
+- Agent Skills spec-form replaces OKF; traces + Buzz online
 
-29 commits · 26 PRs · +1,692 / −355
-https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-07-20.md
+51 commits · 28 PRs · +16,617 / −2,128
+https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-10.md
