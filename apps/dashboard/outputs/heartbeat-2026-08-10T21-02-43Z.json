@@ -1,0 +1,418 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "20:59Z Operational Status"
+      },
+      "children": [
+        "alert_main_status",
+        "sep_1",
+        "section_cost_report",
+        "sep_2",
+        "section_fleet_recovery",
+        "sep_3",
+        "section_fork_cohort",
+        "sep_4",
+        "section_pr_queue"
+      ]
+    },
+    "alert_main_status": {
+      "type": "Alert",
+      "props": {
+        "title": "Cost-Report Deciding Test",
+        "message": "🔴 SAME-SIGNATURE FAIL",
+        "type": "error"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_cost_report": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_cost_report",
+        "stack_cost_details"
+      ]
+    },
+    "heading_cost_report": {
+      "type": "Heading",
+      "props": {
+        "text": "Cost-Report Failure Details",
+        "level": "h3"
+      }
+    },
+    "stack_cost_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_cost_time",
+        "text_cost_issue",
+        "link_iss_030",
+        "text_cost_pattern",
+        "stat_consec_failures",
+        "text_cost_07z_masking",
+        "text_cost_20z_retry"
+      ]
+    },
+    "badge_cost_time": {
+      "type": "Badge",
+      "props": {
+        "text": "20:32Z",
+        "variant": "secondary"
+      }
+    },
+    "text_cost_issue": {
+      "type": "Text",
+      "props": {
+        "text": "Fresh fail on sdk_opt_in_required (not usepod 402)",
+        "variant": "body"
+      }
+    },
+    "link_iss_030": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-030",
+        "href": "memory/issues/ISS-030.md"
+      }
+    },
+    "text_cost_pattern": {
+      "type": "Text",
+      "props": {
+        "text": "4-consec-week formal-pattern triggered",
+        "variant": "body"
+      }
+    },
+    "stat_consec_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failures (consec)",
+        "value": "17",
+        "trend": "down"
+      }
+    },
+    "text_cost_07z_masking": {
+      "type": "Text",
+      "props": {
+        "text": "07Z tick was signature-masked by ISS-031 402 burst",
+        "variant": "caption"
+      }
+    },
+    "text_cost_20z_retry": {
+      "type": "Text",
+      "props": {
+        "text": "20Z retry gave the clean verdict",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_fleet_recovery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fleet",
+        "alert_burst_recovered",
+        "stack_recovery_details"
+      ]
+    },
+    "heading_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet-Wide 402 Burst Recovery",
+        "level": "h3"
+      }
+    },
+    "alert_burst_recovered": {
+      "type": "Alert",
+      "props": {
+        "title": "Recovery Status",
+        "message": "Fleet-wide 402 burst recovered",
+        "type": "success"
+      }
+    },
+    "stack_recovery_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_skills_recovered",
+        "text_dispatch_window",
+        "text_success_window",
+        "heading_stale_skills",
+        "stack_stale_list",
+        "text_stale_note"
+      ]
+    },
+    "stat_skills_recovered": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Dispatched & Succeeded",
+        "value": "13",
+        "trend": "up"
+      }
+    },
+    "text_dispatch_window": {
+      "type": "Text",
+      "props": {
+        "text": "Dispatch time: 19:10Z",
+        "variant": "caption"
+      }
+    },
+    "text_success_window": {
+      "type": "Text",
+      "props": {
+        "text": "Success window: 19:15–19:23Z",
+        "variant": "caption"
+      }
+    },
+    "heading_stale_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Remaining Stale Skills (❌/🕸)",
+        "level": "h4"
+      }
+    },
+    "stack_stale_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_btc_levels",
+        "badge_morning_brief",
+        "badge_github_trending",
+        "badge_token_alert",
+        "badge_search_skill",
+        "badge_skill_security_scan",
+        "badge_deal_flow",
+        "badge_unlock_monitor"
+      ]
+    },
+    "badge_btc_levels": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels",
+        "variant": "outline"
+      }
+    },
+    "badge_morning_brief": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief",
+        "variant": "outline"
+      }
+    },
+    "badge_github_trending": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "outline"
+      }
+    },
+    "badge_token_alert": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "outline"
+      }
+    },
+    "badge_search_skill": {
+      "type": "Badge",
+      "props": {
+        "text": "search-skill",
+        "variant": "outline"
+      }
+    },
+    "badge_skill_security_scan": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-security-scan",
+        "variant": "outline"
+      }
+    },
+    "badge_deal_flow": {
+      "type": "Badge",
+      "props": {
+        "text": "deal-flow",
+        "variant": "outline"
+      }
+    },
+    "badge_unlock_monitor": {
+      "type": "Badge",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "outline"
+      }
+    },
+    "text_stale_note": {
+      "type": "Text",
+      "props": {
+        "text": "Stale state-update-race carryovers from earlier burst; will self-clear on next dispatch",
+        "variant": "muted"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_fork_cohort": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fork",
+        "alert_fork_stuck",
+        "stack_fork_details"
+      ]
+    },
+    "heading_fork": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork-Cohort Status",
+        "level": "h3"
+      }
+    },
+    "alert_fork_stuck": {
+      "type": "Alert",
+      "props": {
+        "title": "Fork-Cohort Stalled",
+        "message": "Stuck ~26 hours",
+        "type": "warning"
+      }
+    },
+    "stack_fork_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_fork_last_success",
+        "text_fork_last_dispatch",
+        "text_fork_dedup_dates"
+      ]
+    },
+    "text_fork_last_success": {
+      "type": "Text",
+      "props": {
+        "text": "Last Success: 8-02",
+        "variant": "body"
+      }
+    },
+    "text_fork_last_dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "Last Dispatch: 8-09 19:05Z",
+        "variant": "body"
+      }
+    },
+    "text_fork_dedup_dates": {
+      "type": "Text",
+      "props": {
+        "text": "Dedup timestamps: 8-09 20:14Z + 8-10 19:12Z",
+        "variant": "caption"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_pr_queue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_pr_queue",
+        "stat_pr_count",
+        "stack_pr_list"
+      ]
+    },
+    "heading_pr_queue": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Queue Status",
+        "level": "h3"
+      }
+    },
+    "stat_pr_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Open PRs",
+        "value": "3"
+      }
+    },
+    "stack_pr_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_pr_174",
+        "link_pr_176",
+        "link_pr_177",
+        "text_pr_action"
+      ]
+    },
+    "link_pr_174": {
+      "type": "Link",
+      "props": {
+        "label": "#174",
+        "href": "https://github.com/aeon/aeon/pull/174"
+      }
+    },
+    "link_pr_176": {
+      "type": "Link",
+      "props": {
+        "label": "#176",
+        "href": "https://github.com/aeon/aeon/pull/176"
+      }
+    },
+    "link_pr_177": {
+      "type": "Link",
+      "props": {
+        "label": "#177",
+        "href": "https://github.com/aeon/aeon/pull/177"
+      }
+    },
+    "text_pr_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: dedup",
+        "variant": "caption"
+      }
+    }
+  }
+}

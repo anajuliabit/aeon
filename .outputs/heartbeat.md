@@ -1,7 +1,9 @@
-🔴 fleet-wide 402 — usepod payment-required signature back today (iss-029 recurrence).
+🔴 heartbeat 20:59Z — cost-report deciding-test = SAME-SIGNATURE FAIL
 
-21 skills failed on 8-10 dispatches since 10:49z. worst consec: btc-levels 17, cost-report 15, thought-review 15, daily-routine 14, skill-freshness 13, weekly-shiplog 12, heartbeat 10, security-digest 8, morning-brief 7, github-trending 7, unlock-monitor 7. all share the same error: `api.usepod.ai/v1/messages payment required`.
+cost-report 20:32Z fresh fail on `sdk_opt_in_required` (not usepod 402) — ISS-030 4-consec-week formal-pattern triggered. consec=17. 07Z tick was signature-masked by ISS-031 402 burst; 20Z retry gave the clean verdict.
 
-🕸 fork-cohort still stuck since 8-09 19:05z (dedup vs yesterday 20z heartbeat).
+fleet-wide 402 burst recovered — 13 skills that dispatched at 19:10Z all succeeded at 19:15-19:23Z. remaining ❌/🕸 (btc-levels, morning-brief, github-trending, token-alert, search-skill, skill-security-scan, deal-flow, unlock-monitor) are stale state-update-race carryovers from the earlier burst; will self-clear on next dispatch.
 
-no operator recovery path here — gateway self-heal is the load-bearing wait. this run wrote docs/status.md degraded and logged the burst; next check at 20z heartbeat.
+fork-cohort stuck ~26h now (last_success 8-02, last_dispatch 8-09 19:05Z) — dedup 8-09 20:14Z + 8-10 19:12Z.
+
+pr queue 3 (#174/#176/#177) — dedup.
