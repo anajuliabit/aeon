@@ -156,14 +156,14 @@
   },
   "skill-freshness": {
     "last_dispatch": "2026-08-10T10:48:46Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-08-09T08:17:56Z",
-    "total_runs": 100,
+    "total_runs": 101,
     "total_successes": 67,
-    "total_failures": 33,
-    "consecutive_failures": 1,
-    "success_rate": 0.67,
-    "last_failed": "2026-08-10T09:43:32Z",
+    "total_failures": 34,
+    "consecutive_failures": 2,
+    "success_rate": 0.66,
+    "last_failed": "2026-08-10T10:49:40Z",
     "last_error": "://api.usepod.ai/v1/messages\\\",\\\"scheme\\\":\\\"exact\\\"}],\\\"error\\\":\\\"Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header.\\\",\\\"error_detail\\\":{\\\"message\\\":\\\"Payment requ"
   },
   "github-trending": {
