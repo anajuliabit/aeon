@@ -1,26 +1,27 @@
-*Evening Recap — 2026-08-09*
-_TL;DR: heavy operator day — #173 merged, 3 PRs rebuilt or filed, 14+ skills clean; fork-cohort stalls for the first time at 20Z._
+*Evening Recap — 2026-08-10*
+_TL;DR: usepod 402 recurred fleet-wide, self-healed in ~4h, but cost-report printed sdk_opt_in_required clean at 20:32Z — ISS-030 formal-pattern trigger; net negative on the ISS axis._
 
 *Headlines:*
-- PR #173 merged — `fix(claude)`: skills.json regen required on SKILL.md edits · https://github.com/aeonframework/aeon/pull/173
-- PR #176 opened — skill-graph EDGES 32→74 (Sunday-batch skill-graph) · https://github.com/aeonframework/aeon/pull/176
-- PR #177 opened — `fix(claude-md)` ISS-028 sandbox-block doc · https://github.com/aeonframework/aeon/pull/177
-- security-digest — SvelteKit-typosquat/corp-scope/pip:riakcs first cross-ecosystem malware clusters; fleet clean d10 · notify sent
-- `[[morning-08Z-slot-dark]]` DONE — 2-consec clean closes 4-consec formal pattern; positive termination confirmed
+- weekly-shiplog — article shipped, 21d stale streak cleared · https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-10.md
+- weekly-review — weekly summary shipped · articles/weekly-review-2026-08-10.md
+- ISS-031 filed — usepod 402 recurrence, 0 → 16 CRITICAL in one wave · memory/issues/ISS-031.md
+- ISS-030 deciding-test = same-signature fail — cost-report 4-consec-week formal-pattern trigger n=1 · memory/issues/ISS-030.md
+- fleet 402 recovered — ~4h self-heal, 13 skills back 19:15Z · docs/status.md
 
 *Notable:*
-- operator Sunday-batch — queue 5→1 (#173 merged, #172 + #165 both rebuilt clean); self-improve exit-gate disengages
-- daily-routine — TUT PUMP-RISK microcap TRENDING+UP n=1, BTW reflip n=3 candidate, agent-thesis 25-consec-day, github-issues 14-consec clean-day record
-- agent-buzz — Qwen 3.8 ties Fable 5 on Agentic Index at 5-8× cheaper (n=1 near-parity print) + Dario CEO endorsement same UTC-day (pincer print)
-- github-trending — prime-agent day-2 +8% soft-sustain (NEW [[soft-sustain]] sub-shape n=1), google/skills +47% day-2 accel (skill-pack shape n=2)
+- security-digest — 48 fresh malware GHSAs; 3 new typosquat sub-classes (chai / postcss / scoped-double-scope); fleet import clean d11
+- daily-routine — KAU +111.6% anomalous spike; BEAT −51.8% 3rd flip; agent-thesis rail 26-consec via DCAS scaffold-portability paper
+- agent-buzz — engagement-drought 7-consec; MCP-vs-skills debate sub-rail n=1; settlement-framework-for-agents n=1
+- btc-levels 20:57Z — quiet, $64,098 spot, no alerts
 
 *Decisions for tomorrow:*
-- ISS-030 cost-report T-0 at 8-10 07Z — fleet-worst sr=10%; clean→RESOLVED or same signature→4-consec-week formal pattern
-- merge PR #172 + PR #165 (both rebuilt CLEAN, awaiting operator)
-- PR #174 (Advisor, 44h+, CI never fired) — force CI or merge decision
-- fork-cohort STUCK — investigate state-update-race on cancelled workflow; file new ISS if 8-10 fire reproduces
+- top-up usepod OR flip aeon.yml gateway.provider — ISS-031 operator-gated, 2nd recurrence in 7d
+- fix ISS-030 — sdk_opt_in_required formal-pattern confirmed; cost-report sr=8%
+- triage PR #174 — Advisor Brier-weight, ~69h old, CI never fired · https://github.com/anajuliabit/aeon/pull/174
+- merge PR #176 + PR #177 in weekly batch
 
 *Blockers:*
-- fork-cohort — stuck "dispatched" since 19:05Z; 30-min "Run" step cancelled 19:35Z, state-update-race didn't clear marker
+- fork-cohort — stuck >26h (dispatched 8-09 19:05Z); 48h escalation threshold 8-11 19:05Z
+- cost-report — consec=17; ISS-030 formal-pattern n=1; operator fix needed
 
-_+9 routine runs collapsed (btc-levels ×5, heartbeat ×3, skill-freshness ×1) · sources: log=ok cron-state=ok_
+_+5 routine runs collapsed · sources: log=ok cron-state=ok_

@@ -1,0 +1,608 @@
+{
+  "root": "card-evening-recap",
+  "state": {},
+  "elements": {
+    "card-evening-recap": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-10",
+        "description": "usepod 402 recurred fleet-wide, self-healed in ~4h, but cost-report printed sdk_opt_in_required clean at 20:32Z — ISS-030 formal-pattern trigger; net negative on the ISS axis."
+      },
+      "children": [
+        "tldr-section",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "decisions-section",
+        "sep4",
+        "blockers-section",
+        "sep5",
+        "footer-section"
+      ]
+    },
+    "tldr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tldr-heading",
+        "tldr-alert"
+      ]
+    },
+    "tldr-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "tldr-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "usepod 402 recurred fleet-wide, self-healed in ~4h. Cost-report printed sdk_opt_in_required clean at 20:32Z triggering ISS-030 formal-pattern.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-text",
+        "h1-link"
+      ]
+    },
+    "h1-text": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog — article shipped, 21d stale streak cleared",
+        "variant": "body"
+      }
+    },
+    "h1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-10.md",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-10.md"
+      }
+    },
+    "headline-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-text",
+        "h2-link"
+      ]
+    },
+    "h2-text": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review — weekly summary shipped",
+        "variant": "body"
+      }
+    },
+    "h2-link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/weekly-review-2026-08-10.md",
+        "href": "articles/weekly-review-2026-08-10.md"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-text",
+        "h3-link",
+        "h3-badge"
+      ]
+    },
+    "h3-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-031 filed — usepod 402 recurrence, 0 → 16 CRITICAL in one wave",
+        "variant": "body"
+      }
+    },
+    "h3-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/issues/ISS-031.md",
+        "href": "memory/issues/ISS-031.md"
+      }
+    },
+    "h3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CRITICAL",
+        "variant": "destructive"
+      }
+    },
+    "headline-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-text",
+        "h4-link"
+      ]
+    },
+    "h4-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-030 deciding-test = same-signature fail — cost-report 4-consec-week formal-pattern trigger n=1",
+        "variant": "body"
+      }
+    },
+    "h4-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/issues/ISS-030.md",
+        "href": "memory/issues/ISS-030.md"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-text",
+        "h5-link"
+      ]
+    },
+    "h5-text": {
+      "type": "Text",
+      "props": {
+        "text": "fleet 402 recovered — ~4h self-heal, 13 skills back 19:15Z",
+        "variant": "body"
+      }
+    },
+    "h5-link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-security",
+        "notable-daily",
+        "notable-buzz",
+        "notable-btc"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-security-heading",
+        "notable-security-text"
+      ]
+    },
+    "notable-security-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "security-digest",
+        "level": "h3"
+      }
+    },
+    "notable-security-text": {
+      "type": "Text",
+      "props": {
+        "text": "48 fresh malware GHSAs; 3 new typosquat sub-classes (chai / postcss / scoped-double-scope); fleet import clean d11",
+        "variant": "body"
+      }
+    },
+    "notable-daily": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-daily-heading",
+        "notable-daily-stat1",
+        "notable-daily-stat2",
+        "notable-daily-text"
+      ]
+    },
+    "notable-daily-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "daily-routine",
+        "level": "h3"
+      }
+    },
+    "notable-daily-stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "KAU",
+        "value": "+111.6%",
+        "delta": "anomalous spike",
+        "trend": "up"
+      }
+    },
+    "notable-daily-stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "BEAT",
+        "value": "−51.8%",
+        "delta": "3rd flip",
+        "trend": "down"
+      }
+    },
+    "notable-daily-text": {
+      "type": "Text",
+      "props": {
+        "text": "agent-thesis rail 26-consec via DCAS scaffold-portability paper",
+        "variant": "body"
+      }
+    },
+    "notable-buzz": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-buzz-heading",
+        "notable-buzz-text1",
+        "notable-buzz-text2",
+        "notable-buzz-text3"
+      ]
+    },
+    "notable-buzz-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-buzz",
+        "level": "h3"
+      }
+    },
+    "notable-buzz-text1": {
+      "type": "Text",
+      "props": {
+        "text": "engagement-drought 7-consec",
+        "variant": "body"
+      }
+    },
+    "notable-buzz-text2": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-vs-skills debate sub-rail n=1",
+        "variant": "body"
+      }
+    },
+    "notable-buzz-text3": {
+      "type": "Text",
+      "props": {
+        "text": "settlement-framework-for-agents n=1",
+        "variant": "body"
+      }
+    },
+    "notable-btc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-btc-heading",
+        "notable-btc-stat",
+        "notable-btc-text"
+      ]
+    },
+    "notable-btc-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "btc-levels 20:57Z",
+        "level": "h3"
+      }
+    },
+    "notable-btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC Spot",
+        "value": "$64,098"
+      }
+    },
+    "notable-btc-text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet, no alerts",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-text",
+        "d1-badge"
+      ]
+    },
+    "d1-text": {
+      "type": "Text",
+      "props": {
+        "text": "top-up usepod OR flip aeon.yml gateway.provider — ISS-031 operator-gated, 2nd recurrence in 7d",
+        "variant": "body"
+      }
+    },
+    "d1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-031",
+        "variant": "destructive"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2-text",
+        "d2-stat",
+        "d2-badge"
+      ]
+    },
+    "d2-text": {
+      "type": "Text",
+      "props": {
+        "text": "fix ISS-030 — sdk_opt_in_required formal-pattern confirmed",
+        "variant": "body"
+      }
+    },
+    "d2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "cost-report sr",
+        "value": "8%"
+      }
+    },
+    "d2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-030",
+        "variant": "destructive"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d3-text",
+        "d3-link"
+      ]
+    },
+    "d3-text": {
+      "type": "Text",
+      "props": {
+        "text": "triage PR #174 — Advisor Brier-weight, ~69h old, CI never fired",
+        "variant": "body"
+      }
+    },
+    "d3-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/174",
+        "href": "https://github.com/anajuliabit/aeon/pull/174"
+      }
+    },
+    "decision-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d4-text",
+        "d4-badges"
+      ]
+    },
+    "d4-text": {
+      "type": "Text",
+      "props": {
+        "text": "merge in weekly batch",
+        "variant": "body"
+      }
+    },
+    "d4-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d4-b1",
+        "d4-b2"
+      ]
+    },
+    "d4-b1": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #176",
+        "variant": "secondary"
+      }
+    },
+    "d4-b2": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #177",
+        "variant": "secondary"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blocker-1",
+        "blocker-2"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort",
+        "message": "stuck >26h (dispatched 8-09 19:05Z); 48h escalation threshold 8-11 19:05Z",
+        "type": "warning"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "consec=17; ISS-030 formal-pattern n=1; operator fix needed",
+        "type": "error"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-text1",
+        "footer-text2"
+      ]
+    },
+    "footer-text1": {
+      "type": "Text",
+      "props": {
+        "text": "+5 routine runs collapsed",
+        "variant": "caption"
+      }
+    },
+    "footer-text2": {
+      "type": "Text",
+      "props": {
+        "text": "sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
