@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-09*
-Shape: prep ISS-030 T-1, review #176, seed shiplog, kick #174 CI, wire LIT
+*5 Actions — 2026-08-10*
+Shape: usepod-402 fleet-wide recur, PR queue CI-hang triage, ISS-030 occlusion, BTW n=3 verdict
 
-1. precheck ISS-030 cost-report against 8-10 07Z deciding-test — grep `skills/cost-report/SKILL.md` for `sdk_opt_in_required` handling and append verdict block to `memory/issues/ISS-030.md`.
-why: fleet-worst chronic sr=10%, T-1 today, no operator lever tomorrow if not primed tonight.
-done: `memory/issues/ISS-030.md` has fresh precheck block (clean-signature-since-8-04-organic OR fix-scope-draft).
-loop: precheck-iss-030-t-1
+1. File ISS-031 for usepod-402 fleet-wide recur — same signature as ISS-029 (self-healed 8-03), returned 8-10 00Z window; heartbeat cf=10, cost-report cf=15, thought-review cf=15, daily-routine cf=14, skill-freshness cf=13, weekly-shiplog cf=12 all firing `Payment required` today
+why: LLM-proxy outage blocks 11+ skills; ISS-029 signature reopens = 2-consec-recur formal pattern class
+done: `memory/issues/ISS-031.md` written, `INDEX.md` open-table updated, `./notify` fires operator alert
+loop: L-usepod-402
 
-2. review PR #176 skill-graph regen (EDGES 32→74) — diff-check node/edge deltas against `memory/topics/skill-graph-state.json` and post merge-ready|blocking verdict as PR comment.
-why: opened 17:10Z today, sunday-batch T-0, one-lift-if-clean before operator window closes.
-done: `gh pr comment 176` posted with verdict; verdict logged in `memory/logs/2026-08-09.md`.
-loop: review-pr-176-skill-graph
+2. Cherry-pick + force-push-with-lease PR #174 (Advisor Brier-weight, ~50h stalled, `webbrain/issue-144` head) onto fresh branch off main — apply `[[pre-squash-history-rebuild-recipe]]` from 8-09 memory
+why: only remaining pre-squash-history candidate; recipe unblocked #173/#172/#165 same-day on 8-09; empty statusCheckRollup persists
+done: `gh pr view 174` returns mergeable=MERGEABLE + statusCheckRollup populates with ≥1 check
+loop: L-174
 
-3. draft `articles/weekly-shiplog-2026-08-09.md` seed for 8-10 09Z Mon tick — catalog 7-27 → 8-09 shipped items from `memory/logs/` so tomorrow's fire has structure to extend.
-why: 20d stale on 7d schedule (3× miss), Mon tick T-1, seed short-circuits cold-start.
-done: article file exists with ≥5 dated shipped items and ≥3 rail-count deltas.
-loop: draft-weekly-shiplog
+3. Push nudge commits to PRs #176 (skill-graph EDGES 32→74) + #177 (ISS-028 doc) — both fresh from 8-09 self-improve cycle, both show empty statusCheckRollup + mergeable=UNKNOWN 24h in
+why: CI hasn't dispatched on either branch; nudge = trailing-whitespace commit + force-push to trigger workflow dispatch
+done: `gh pr view 176` + `gh pr view 177` both return non-empty statusCheckRollup within 5min of push
+loop: L-176-177
 
-4. rebase PR #174 (Advisor Brier-weight) onto main to trigger CI — 42h at UNKNOWN with empty statusCheckRollup; commit-hash change is stronger than any reopen event.
-why: only stuck old-queue PR pre #176, weekly-batch needs a real CI verdict on 8-10.
-done: `git push --force-with-lease` lands on `webbrain/issue-144`; `gh pr view 174 --json statusCheckRollup` returns non-empty.
-loop: rebase-pr-174-advisor
+4. Log ISS-030 8-10 07Z deciding-test verdict to `memory/issues/ISS-030.md` — classify as `test-occluded` (usepod-402 signature-shift masks sdk_opt_in_required signature test); tag distinct fault-class, do NOT trigger 4-consec-week formal-pattern rollover
+why: preserves diagnostic; without today's verdict, tomorrow's tracker mis-classifies chronic 10% sr as pattern-continued
+done: ISS-030.md has `## 2026-08-10 verdict` section naming occlusion + signature-shift + next deciding-test date
+loop: L-iss030
 
-5. wire LIT into MEMORY.md Tracked Tokens (5th row, 15% threshold) — 8-08 list-digest surfaced @Flowslikeosmo hard receipts (Robinhood Chain 1.8% Lighter perps vol, $11.14M on-chain deposits, 15.5M burned since 6-30, no unlocks until 12-29).
-why: deferred from 8-08 action #4; opens token-alert coverage on a live receipt-backed thesis before the arc runs.
-done: `memory/MEMORY.md` Tracked Tokens table has 5th row (LIT / lit-protocol / 15% / recent activity blurb).
-loop: wire-lit-tracked-tokens
+5. Fetch BTW 24h + 7d via `curl -s "https://api.coingecko.com/api/v3/simple/price?ids=<btw-id>&vs_currencies=usd&include_24hr_change=true&include_7d_change=true"` + log `[[same-coin-48h-reflip]]` n=3 promotion verdict to `memory/topics/crypto.md`
+why: token-alert 12Z occluded by usepod-402; n=3 formal-pattern threshold today (6-day pole-inversion 8-04 → 8-09 already qualified); manual verdict prevents rail-formalization miss
+done: `memory/topics/crypto.md` has `## 2026-08-10 same-coin-48h-reflip verdict` section with BTW hold/fail classification
+loop: L-btw-reflip
 
-sources: memory=117 logs=7d topics=11 prs=2 cron_failing=0 mode=OK
+sources: memory=109 logs=6 topics=10 prs=3 cron_failing=21 mode=OK

@@ -1,0 +1,485 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-10",
+        "description": "usepod-402 fleet-wide recur, PR queue CI-hang triage, ISS-030 occlusion, BTW n=3 verdict"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5",
+        "sep-5",
+        "sources-section"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-heading",
+        "a1-content-stack"
+      ]
+    },
+    "a1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. File ISS-031 for usepod-402 fleet-wide recur",
+        "level": "h3"
+      }
+    },
+    "a1-content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-text-1",
+        "a1-text-2",
+        "a1-text-3",
+        "a1-text-4",
+        "a1-text-5",
+        "a1-text-6",
+        "a1-text-7"
+      ]
+    },
+    "a1-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Same signature as ISS-029 (self-healed 8-03), returned 8-10 00Z window",
+        "variant": "body"
+      }
+    },
+    "a1-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "Skills firing 'Payment required' today: heartbeat (cf=10), cost-report (cf=15), thought-review (cf=15), daily-routine (cf=14), skill-freshness (cf=13), weekly-shiplog (cf=12)",
+        "variant": "body"
+      }
+    },
+    "a1-text-3": {
+      "type": "Text",
+      "props": {
+        "text": "Why: LLM-proxy outage blocks 11+ skills; ISS-029 signature reopens = 2-consec-recur formal pattern class",
+        "variant": "body"
+      }
+    },
+    "a1-text-4": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ ISS-031.md written",
+        "variant": "secondary"
+      }
+    },
+    "a1-text-5": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ INDEX.md open-table updated",
+        "variant": "secondary"
+      }
+    },
+    "a1-text-6": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ operator alert fired",
+        "variant": "secondary"
+      }
+    },
+    "a1-text-7": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: L-usepod-402",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-heading",
+        "a2-content-stack"
+      ]
+    },
+    "a2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Cherry-pick + force-push PR #174",
+        "level": "h3"
+      }
+    },
+    "a2-content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-pr-link",
+        "a2-text-1",
+        "a2-text-2",
+        "a2-text-3",
+        "a2-text-4",
+        "a2-text-5"
+      ]
+    },
+    "a2-pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #174: Advisor Brier-weight (~50h stalled)",
+        "href": "https://github.com/aeon/aeon/pull/174",
+        "source": "webbrain/issue-144"
+      }
+    },
+    "a2-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Apply [[pre-squash-history-rebuild-recipe]] from 8-09 memory",
+        "variant": "body"
+      }
+    },
+    "a2-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "Only remaining pre-squash-history candidate; recipe unblocked #173/#172/#165 same-day on 8-09; empty statusCheckRollup persists",
+        "variant": "body"
+      }
+    },
+    "a2-text-3": {
+      "type": "Text",
+      "props": {
+        "text": "Why: PR queue CI-hang triage",
+        "variant": "body"
+      }
+    },
+    "a2-text-4": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ mergeable=MERGEABLE",
+        "variant": "secondary"
+      }
+    },
+    "a2-text-5": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: L-174",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-heading",
+        "a3-content-stack"
+      ]
+    },
+    "a3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Push nudge commits to PRs #176 + #177",
+        "level": "h3"
+      }
+    },
+    "a3-content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-links-row",
+        "a3-text-1",
+        "a3-text-2",
+        "a3-text-3",
+        "a3-text-4"
+      ]
+    },
+    "a3-links-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "a3-pr176",
+        "a3-pr177"
+      ]
+    },
+    "a3-pr176": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #176: skill-graph EDGES 32→74",
+        "href": "https://github.com/aeon/aeon/pull/176",
+        "source": "8-09 self-improve"
+      }
+    },
+    "a3-pr177": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #177: ISS-028 doc",
+        "href": "https://github.com/aeon/aeon/pull/177",
+        "source": "8-09 self-improve"
+      }
+    },
+    "a3-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Both show empty statusCheckRollup + mergeable=UNKNOWN 24h in",
+        "variant": "body"
+      }
+    },
+    "a3-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "Why: CI hasn't dispatched on either branch; nudge = trailing-whitespace commit + force-push to trigger workflow dispatch",
+        "variant": "body"
+      }
+    },
+    "a3-text-3": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ Both return non-empty statusCheckRollup within 5min",
+        "variant": "secondary"
+      }
+    },
+    "a3-text-4": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: L-176-177",
+        "variant": "muted"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-heading",
+        "a4-content-stack"
+      ]
+    },
+    "a4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Log ISS-030 8-10 07Z deciding-test verdict",
+        "level": "h3"
+      }
+    },
+    "a4-content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-issue-link",
+        "a4-text-1",
+        "a4-text-2",
+        "a4-text-3",
+        "a4-text-4",
+        "a4-text-5"
+      ]
+    },
+    "a4-issue-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-030",
+        "href": "https://github.com/aeon/aeon/blob/main/memory/issues/ISS-030.md"
+      }
+    },
+    "a4-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Classify as test-occluded (usepod-402 signature-shift masks sdk_opt_in_required signature test)",
+        "variant": "body"
+      }
+    },
+    "a4-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "Tag distinct fault-class, do NOT trigger 4-consec-week formal-pattern rollover",
+        "variant": "body"
+      }
+    },
+    "a4-text-3": {
+      "type": "Text",
+      "props": {
+        "text": "Why: Preserves diagnostic; without today's verdict, tomorrow's tracker mis-classifies chronic 10% sr as pattern-continued",
+        "variant": "body"
+      }
+    },
+    "a4-text-4": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ ISS-030.md has ## 2026-08-10 verdict section",
+        "variant": "secondary"
+      }
+    },
+    "a4-text-5": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: L-iss030",
+        "variant": "muted"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-heading",
+        "a5-content-stack"
+      ]
+    },
+    "a5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Fetch BTW 24h + 7d via CoinGecko + log same-coin-48h-reflip verdict",
+        "level": "h3"
+      }
+    },
+    "a5-content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-api-link",
+        "a5-text-1",
+        "a5-text-2",
+        "a5-text-3",
+        "a5-text-4",
+        "a5-text-5",
+        "a5-text-6"
+      ]
+    },
+    "a5-api-link": {
+      "type": "Link",
+      "props": {
+        "label": "CoinGecko /simple/price API",
+        "href": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&include_7d_change=true"
+      }
+    },
+    "a5-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Log [[same-coin-48h-reflip]] n=3 promotion verdict to memory/topics/crypto.md",
+        "variant": "body"
+      }
+    },
+    "a5-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "N=3 formal-pattern threshold today (6-day pole-inversion 8-04 → 8-09 already qualified)",
+        "variant": "body"
+      }
+    },
+    "a5-text-3": {
+      "type": "Text",
+      "props": {
+        "text": "Why: Token-alert 12Z occluded by usepod-402; manual verdict prevents rail-formalization miss",
+        "variant": "body"
+      }
+    },
+    "a5-text-4": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ memory/topics/crypto.md updated",
+        "variant": "secondary"
+      }
+    },
+    "a5-text-5": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ ## 2026-08-10 same-coin-48h-reflip verdict written",
+        "variant": "secondary"
+      }
+    },
+    "a5-text-6": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: L-btw-reflip",
+        "variant": "muted"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-stat"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-stat": {
+      "type": "Text",
+      "props": {
+        "text": "memory=109, logs=6, topics=10, prs=3, cron_failing=21, mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
