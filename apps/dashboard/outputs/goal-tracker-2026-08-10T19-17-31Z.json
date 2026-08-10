@@ -1,0 +1,408 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-10",
+        "description": "7 goals — 0 at risk, 0 needs attention, 3 on track, 4 blocked, 0 done (overall → flat, no status shifts vs 8-09)"
+      },
+      "children": [
+        "sep1",
+        "on-track-header",
+        "iss-030",
+        "chronic-cohort",
+        "pr-queue",
+        "sep2",
+        "blocked-header",
+        "iss-028",
+        "batch-dark",
+        "on-chain-config",
+        "priorities-stale",
+        "sep3",
+        "sources-header",
+        "sources"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "on-track-header": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "iss-030": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iss-030-badge",
+        "iss-030-title",
+        "iss-030-status",
+        "iss-030-test",
+        "iss-030-trigger",
+        "iss-030-cascade",
+        "iss-030-fleet"
+      ]
+    },
+    "iss-030-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ON TRACK",
+        "variant": "secondary"
+      }
+    },
+    "iss-030-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-030 cost-report sdk-opt-in",
+        "level": "h4"
+      }
+    },
+    "iss-030-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 14/14 days active (flat)",
+        "variant": "body"
+      }
+    },
+    "iss-030-test": {
+      "type": "Text",
+      "props": {
+        "text": "T-0 deciding-test FAILS same-signature 17:08Z (Payment required / X-PAYMENT header, usepod.ai/v1/messages)",
+        "variant": "body"
+      }
+    },
+    "iss-030-trigger": {
+      "type": "Text",
+      "props": {
+        "text": "4-consec-week formal-pattern trigger",
+        "variant": "body"
+      }
+    },
+    "iss-030-cascade": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet-wide cascade: cost-report + heartbeat + skill-freshness + morning-brief + security-digest + list-digest + thought-review + reg-monitor + market-context-refresh + skill-security-scan all fail same cause",
+        "variant": "body"
+      }
+    },
+    "iss-030-fleet": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet clean-consec d5 broken today",
+        "variant": "body"
+      }
+    },
+    "chronic-cohort": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "chronic-badge",
+        "chronic-title",
+        "chronic-status",
+        "chronic-gate",
+        "chronic-composition"
+      ]
+    },
+    "chronic-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ON TRACK",
+        "variant": "secondary"
+      }
+    },
+    "chronic-title": {
+      "type": "Heading",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime",
+        "level": "h4"
+      }
+    },
+    "chronic-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 10/14 days active (flat)",
+        "variant": "body"
+      }
+    },
+    "chronic-gate": {
+      "type": "Text",
+      "props": {
+        "text": "8th 24h durability gate crossed today (13-consec-heartbeat-tick, ~143h span 8-04 14:45Z → 8-10 17:08Z)",
+        "variant": "body"
+      }
+    },
+    "chronic-composition": {
+      "type": "Text",
+      "props": {
+        "text": "Composition-identity print may shift as fresh chronics enter via today's cascade (btc-levels consec=17, deal-flow consec=6, unlock-monitor consec=7)",
+        "variant": "body"
+      }
+    },
+    "pr-queue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-badge",
+        "pr-title",
+        "pr-status",
+        "pr-queue-status",
+        "pr-gate",
+        "pr-merged"
+      ]
+    },
+    "pr-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ON TRACK",
+        "variant": "secondary"
+      }
+    },
+    "pr-title": {
+      "type": "Heading",
+      "props": {
+        "text": "pr queue",
+        "level": "h4"
+      }
+    },
+    "pr-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 13/14 days active (flat)",
+        "variant": "body"
+      }
+    },
+    "pr-queue-status": {
+      "type": "Text",
+      "props": {
+        "text": "queue at 3 open on 8-10 (#174 Advisor Brier-weight ~66h, #176 skill-graph edges 32→74, #177 CLAUDE.md ISS-028 sandbox-block doc)",
+        "variant": "body"
+      }
+    },
+    "pr-gate": {
+      "type": "Text",
+      "props": {
+        "text": "Queue-full self-improve exit-gate RE-ENGAGES at n=3 threshold (was disengaged 8-09 at n=1)",
+        "variant": "body"
+      }
+    },
+    "pr-merged": {
+      "type": "Text",
+      "props": {
+        "text": "#175 + #178 merged 8-09 evening (advisor track-record fixes)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked-header": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "iss-028": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iss-028-badge",
+        "iss-028-title",
+        "iss-028-details",
+        "iss-028-action"
+      ]
+    },
+    "iss-028-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BLOCKED",
+        "variant": "destructive"
+      }
+    },
+    "iss-028-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-028 workaround-chain",
+        "level": "h4"
+      }
+    },
+    "iss-028-details": {
+      "type": "Text",
+      "props": {
+        "text": "n=37+ across 19-UTC-day span 7-22 → 8-10; sandbox blocks bash redirect + long heredoc parse (kill-test class)",
+        "variant": "body"
+      }
+    },
+    "iss-028-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action",
+        "message": "weekly-review 8-10 T-0 today reopens root-cause investigation (PR #167 narrow, PR #177 doc-level ack in review)"
+      }
+    },
+    "batch-dark": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "batch-badge",
+        "batch-title",
+        "batch-details",
+        "batch-action"
+      ]
+    },
+    "batch-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BLOCKED",
+        "variant": "destructive"
+      }
+    },
+    "batch-title": {
+      "type": "Heading",
+      "props": {
+        "text": "12:00 UTC batch DARK",
+        "level": "h4"
+      }
+    },
+    "batch-details": {
+      "type": "Text",
+      "props": {
+        "text": "day-44 since 6-28 21:00Z; 8-skill cluster dispatcher-side gap, not CG infra",
+        "variant": "body"
+      }
+    },
+    "batch-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action",
+        "message": "escalate ISS-027 scheduler-side dispatcher fix (12Z-slot per-skill immunity 5-consec durable via token-alert 12:06Z 8-06→8-10)"
+      }
+    },
+    "on-chain-config": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "onchain-badge",
+        "onchain-title",
+        "onchain-details",
+        "onchain-action"
+      ]
+    },
+    "onchain-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BLOCKED",
+        "variant": "destructive"
+      }
+    },
+    "onchain-title": {
+      "type": "Heading",
+      "props": {
+        "text": "operator on-chain config",
+        "level": "h4"
+      }
+    },
+    "onchain-details": {
+      "type": "Text",
+      "props": {
+        "text": "day-65; defi-monitor NO_CONFIG persists; needs on-chain-watches.yml + ALCHEMY_API_KEY + ETHERSCAN_API_KEY",
+        "variant": "body"
+      }
+    },
+    "onchain-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action",
+        "message": "weekly-review 8-10 T-0 today refresh-ask (operator-owned; no automated unblock path)"
+      }
+    },
+    "priorities-stale": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "priorities-badge",
+        "priorities-title",
+        "priorities-details",
+        "priorities-action"
+      ]
+    },
+    "priorities-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BLOCKED",
+        "variant": "destructive"
+      }
+    },
+    "priorities-title": {
+      "type": "Heading",
+      "props": {
+        "text": "priorities.md stale",
+        "level": "h4"
+      }
+    },
+    "priorities-details": {
+      "type": "Text",
+      "props": {
+        "text": "day-67; last reviewed 2026-06-04; vault inbox d50 cold streak (last real capture 2026-06-21T08:32Z)",
+        "variant": "body"
+      }
+    },
+    "priorities-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action",
+        "message": "weekly-review 8-10 T-0 today refresh-ask (operator-owned; thought-review 17:08Z failed today so d50 print is soft)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-header": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok (fleet-wide sdk_opt_in_required signature re-fires 17:08Z — ISS-030 T-0 deciding-test outcome load-bearing)",
+        "variant": "body"
+      }
+    }
+  }
+}
