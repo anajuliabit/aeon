@@ -1,48 +1,45 @@
-*daily routine — 2026-08-09*
+*Daily Routine — 2026-08-10*
 
-_tape: 59/100 top green, median +0.3%. muted middle; TUT the outlier — R166 +325.8% on 7d +1008% = pump-risk._
+_broad risk-off shallow tape — 24/100 top-100 green, median top-50 −1.0%; single-name blowups (BEAT −52%) hide otherwise quiet bleed._
 
-*winners (24h)*
-1. TUT $0.230  +325.8% / 7d +1008% / 1h +8.5%  • $701M / R166  [pump-risk, trending+up]
-2. BEAT $3.19  +48.0% / 7d −10.8%  • $47M / R64  [fade]
-3. BTW $0.187  +28.8% / 7d +113.6%  • $20M / R108  [breakout, 5d-reflip]
-4. SKYAI $0.124  +12.5% / 7d +350%  • $27M / R227  [breakout, microcap]
-5. PUMP $0.00251  +11.1% / 7d +13.5%  • $73M / R68
-6. PYTH $0.042  +9.5% / 7d +4.7%  • $20M / R121
-7. CC $0.098  +8.9% / 7d −15.0%  • $21M / R25  [major, fade]
+*Top 10 Winners (24h)*
+1. KAU (Kinesis Gold) $140.61 +111.6% / 7d +8.3%  •  $8.6M / #121 — anomalous single-day spike on gold-backed
+2. TIBBIR (Ribbita) $0.126 +30.9% / 7d +38.0%  •  $4.2M / #216 [BREAKOUT]
+3. B (BUILDon) $0.166 +20.8% / 7d +1.5%  •  $9.2M / #179
+4. CYS (Cysic) $1.21 +18.0% / 7d +331%  •  $87M / #166 [BREAKOUT]
+5. UB (Unibase) $0.143 +10.4% / 7d −25.9%  •  $10.5M / #116 [FADE]
+6. CASHCAT $0.149 +8.7% / 7d +181%  •  $19.9M / #196 [TRENDING+UP]
+7. KITE $0.106 +8.4%  •  $18.8M / #140
+8. CRV (Curve) $0.260 +7.8% / 7d +25.0%  •  $51M / #109
+9. CVX (Convex) $1.74 +7.1% / 7d +29.3%  •  $10.1M / #188
+10. MON (Monad) $0.0221 +4.9%  •  $29.4M / #137
 
-*losers (24h)*
-1. CYS $0.83  −16.6% / 7d +179.6%  • $58M / R213  [capitulation]
-2. B $0.142  −13.0% / 7d −10.8%  • $5M / R202
-3. KAITO $0.70  −10.2% / 7d −39.6%  • $86M / R179
-4. PIEVERSE $0.78  −6.1%  • $6M / R150
-5. RUNE $0.43  −4.1%  • $21M / R196
+*Top 10 Losers (24h)*
+1. BEAT (Audiera) $1.72 −51.8% / 7d −36%  •  $58M / #91 — flipped from +6.5% winner 8-08, biggest single-day blowup of memory-window
+2. US (Talus) $0.040 −10.4% / 7d −27%  •  $7M / #236
+3. VELVET $0.427 −7.2%  •  $4.3M / #169
+4. BTW (Bitway) $0.195 −6.7% / 7d +82%  •  $30.7M / #95 — 2nd-consec loser after 8-08 −23.8% flush
+5. TEL (Telcoin) $0.00152 −5.6%  •  $1.2M / #197
+6. KAITO $0.665 −4.9% / 7d −29%  •  $35.6M / #186
+7. IOTA $0.0342 −4.5%  •  $7.3M / #191
+8. M (MemeCore) $1.06 −4.4%  •  $6.8M / #51 [MAJOR]
+9. ZBCN (Zebec) $0.00168 −4.2%  •  $13.2M / #180
+10. BSV $14.25 −4.1% / 7d +12.8%  •  $6.8M / #128
 
-*tweet roundup*
-crypto: btc pinned $63.8k–$66k range; eth $1,927. muted tape, no fresh catalyst; TUT + BTW carrying most of the vol on the winners board.
-ai: claude opus 5 still #1 on artificial analysis; openai ships chatgpt work (agentic gpt-5.6, sol/terra/luna tier split); deepseek-v4 dual-mode; nvidia opens NOOA agent framework.
-dev: HN top take "code was never the hard part is an insult"; shopify swapped redis for mysql on inventory reservations (SKIP LOCKED + row-per-unit) — boring infra winning.
+*Tweet Roundup* _(XAI cache HIT, 10 tweets)_
+*Crypto:* Bitcoin_Devs visual [entropy tool](https://x.com/Bitcoin_Devs/status/2086459869620830310) (TRNG/PRNG/dice); CorySwan [macro minute](https://x.com/CorySwan/status/2086525701553828035) on yen collapse + Warsh switching teams. Thin day, no fresh catalyst.
+*AI:* Ng dropped 2h Stanford [graph engineering course](https://x.com/0xCodila/status/2086547599033536913) (1 prompt → 100 agents → loops → graphs); [same-day pincer](https://x.com/0xRafy/status/2086574967307813217) "prompting dead in 6 months, graphs replacing it." Stanford also 2.5h [build-LLM-from-scratch](https://x.com/RoundtableSpace/status/2086509060963336484).
+*Dev:* Free 578-page [game theory textbook](https://x.com/tsukiema_/status/2086505381119893523) (165 solved problems, multi-agent-relevant); OSS [site-cloner](https://x.com/RoundtableSpace/status/2086456212678472158) rebuilds any site in Next.js+Tailwind via parallel agents.
 
-*paper of the day*
-"from economic agents to agentic economies: a systems blueprint for economic world models" — han, li · ↑28
-direct shot at the sherwood-shaped question: how do you spec an economic world model where agents are actors, not tools. skip if you're not building at that layer.
-[read](https://arxiv.org/abs/2608.06020) | [pdf](https://arxiv.org/pdf/2608.06020)
+*Paper of the Day*
+"DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds" — Kishanthan Thangarajah, Boyuan Chen, Ahmed E. Hassan · ↑12
+CLI-agent trajectory datasets converged on OpenHands; fine-tuned models score well there but degrade on any other scaffold, base models don't. Direct hit on `[[fleet-relevance agent-thesis]]` — fleet runs on Claude Code, not OpenHands, so scaffold-portability is the load-bearing constraint. [Read](https://arxiv.org/abs/2608.06113) | [PDF](https://arxiv.org/pdf/2608.06113)
 
-*github issues*
-no new issues in last 24h.
+*GitHub Issues*
+No new issues — clean-day streak 15-consec (7-26 → 8-10), memory-window record extends.
 
-*hn digest*
-1. **[dev]** [code was never the hard part is an insult](https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers) — 698 · 417c
-   why: pushback on the "coding is easy, thinking is hard" line the LLM pitch leans on.
-   hn: "the hard part is always the design part... starting with a bad design is no good" — _effed3_
-   [discuss](https://news.ycombinator.com/item?id=49222189)
-2. **[infra]** [shopify replaced redis with mysql for inventory reservations](https://shopify.engineering/scaling-inventory-reservations) — 154 · 85c
-   why: SKIP LOCKED + one row per unit at scale; reconcilable state beats event-driven.
-   hn: "SQL is decades of relational algebra... pure magic across vast sets" — _trueno_
-   [discuss](https://news.ycombinator.com/item?id=49226536)
-3. **[ai]** [message your other claude code sessions](https://code.claude.com/docs/en/cross-session-messaging) — 107 · 44c
-   why: cross-session messaging primitive for orchestrated agent fleets.
-   hn: "when my claude/codex finishes cooking... it pings a local http endpoint that plays a frog sound. massively boosts quality of life" — _andai_
-   [discuss](https://news.ycombinator.com/item?id=49222824)
-
-_xai x_search skipped — memory 8-08 signal (fell back to websearch entirely); websearch fallback used._
+*HN Digest* _heavy AI-agent day — meta ships open weights, docker ships sandboxes_
+1. [Muse Glimmer: Meta's 30B open agentic model](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model) 823 pts · [#](https://news.ycombinator.com/item?id=49241679)
+2. [Docker Sandboxes for AI agents](https://www.docker.com/products/docker-sandboxes/) 546 pts · [#](https://news.ycombinator.com/item?id=49239751)
+3. [Tl;dv left 180k meeting recordings open](https://bobdahacker.com/blog/tldv-hack) 409 pts · [#](https://news.ycombinator.com/item?id=49242739)
+4. [Zuckerberg attacks 'closed' AI, Meta returns to open](https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878) 119 pts · [#](https://news.ycombinator.com/item?id=49243880)
