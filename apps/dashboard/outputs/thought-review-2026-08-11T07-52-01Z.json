@@ -1,0 +1,49 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review",
+        "description": "Last 24h"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "finding",
+        "separator",
+        "stale-alert"
+      ]
+    },
+    "finding": {
+      "type": "Text",
+      "props": {
+        "text": "0 captures. Nothing to surface.",
+        "variant": "body"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stale-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md is stale",
+        "message": "68 days since last review (2026-06-04) — worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}
