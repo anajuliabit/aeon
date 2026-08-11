@@ -309,8 +309,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-08-10T23:47:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-11T00:38:26Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-04T21:48:47Z",
     "total_runs": 100,
     "total_successes": 8,
@@ -629,8 +629,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-08-10T20:56:30Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-11T00:38:26Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-10T20:58:49Z",
     "total_runs": 393,
     "total_successes": 310,
