@@ -1,0 +1,315 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_degraded",
+        "sep1",
+        "timestamp",
+        "sep2",
+        "event_section",
+        "sep3",
+        "pattern_section",
+        "sep4",
+        "issue_section",
+        "sep5",
+        "metrics_section",
+        "sep6",
+        "escalation_section",
+        "sep7",
+        "recovery_section",
+        "sep8",
+        "status_section"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "System Degraded",
+        "message": "🔴 Status page updated to degraded"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "timestamp": {
+      "type": "Heading",
+      "props": {
+        "text": "08:41Z",
+        "level": "h3"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "event_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "event_heading",
+        "event_text"
+      ]
+    },
+    "event_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Primary Event",
+        "level": "h4"
+      }
+    },
+    "event_text": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report fresh sdk_opt_in_required fail at 08:19Z"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "pattern_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pattern_heading",
+        "pattern_text"
+      ]
+    },
+    "pattern_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Pattern Detection",
+        "level": "h4"
+      }
+    },
+    "pattern_text": {
+      "type": "Text",
+      "props": {
+        "text": "2nd same-signature print in 12h (post 8-10 20:32Z)"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "issue_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_heading",
+        "issue_details",
+        "issue_status"
+      ]
+    },
+    "issue_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue ISS-030",
+        "level": "h4"
+      }
+    },
+    "issue_details": {
+      "type": "Text",
+      "props": {
+        "text": "4-consecutive-week trigger extends to n=2 intra-day datapoints, still week-1 shape"
+      }
+    },
+    "issue_status": {
+      "type": "Badge",
+      "props": {
+        "text": "Active",
+        "variant": "destructive"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_heading",
+        "metrics_row"
+      ]
+    },
+    "metrics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h4"
+      }
+    },
+    "metrics_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_consec",
+        "stat_sr"
+      ]
+    },
+    "stat_consec": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failures",
+        "value": "28"
+      }
+    },
+    "stat_sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "8%",
+        "trend": "down"
+      }
+    },
+    "sep6": {
+      "type": "Separator"
+    },
+    "escalation_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "escalation_heading",
+        "escalation_text"
+      ]
+    },
+    "escalation_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Escalation Timeline",
+        "level": "h4"
+      }
+    },
+    "escalation_text": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort 48h escalation expected ~19:05Z tonight"
+      }
+    },
+    "sep7": {
+      "type": "Separator"
+    },
+    "recovery_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "recovery_heading",
+        "recovery_plan",
+        "dispatch_label",
+        "dispatch_list"
+      ]
+    },
+    "recovery_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery",
+        "level": "h4"
+      }
+    },
+    "recovery_plan": {
+      "type": "Text",
+      "props": {
+        "text": "6-skill stuck cohort self-clears on next dispatch"
+      }
+    },
+    "dispatch_label": {
+      "type": "Text",
+      "props": {
+        "text": "Expected dispatch times:",
+        "variant": "lead"
+      }
+    },
+    "dispatch_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dispatch_1",
+        "dispatch_2",
+        "dispatch_3"
+      ]
+    },
+    "dispatch_1": {
+      "type": "Text",
+      "props": {
+        "text": "• github-trending 09Z"
+      }
+    },
+    "dispatch_2": {
+      "type": "Text",
+      "props": {
+        "text": "• unlock-monitor 10Z"
+      }
+    },
+    "dispatch_3": {
+      "type": "Text",
+      "props": {
+        "text": "• token-alert 12Z"
+      }
+    },
+    "sep8": {
+      "type": "Separator"
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status_heading",
+        "status_text"
+      ]
+    },
+    "status_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Page Update",
+        "level": "h4"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "Status page rewrote to 🔴 degraded"
+      }
+    }
+  }
+}
