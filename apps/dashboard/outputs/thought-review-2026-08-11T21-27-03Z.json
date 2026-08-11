@@ -1,0 +1,65 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "info-row",
+        "alert-stale"
+      ]
+    },
+    "info-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-period",
+        "badge-captures",
+        "badge-status"
+      ]
+    },
+    "badge-period": {
+      "type": "Badge",
+      "props": {
+        "text": "last 24h"
+      }
+    },
+    "badge-captures": {
+      "type": "Badge",
+      "props": {
+        "text": "0 captures"
+      }
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "outline"
+      }
+    },
+    "alert-stale": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md stale",
+        "message": "Last reviewed 2026-06-04 (68 days ago) — worth a refresh",
+        "type": "warning"
+      }
+    }
+  }
+}
