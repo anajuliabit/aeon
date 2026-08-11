@@ -1,0 +1,650 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-11",
+        "description": "Cost-report breaks 33-fail streak, skill-health sheds 12 CRITICAL slots — recovery day, but fork-cohort at 49h stuck and ISS-032 unfiled."
+      },
+      "children": [
+        "tldr_section",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "blockers_section",
+        "sep5",
+        "footer_section"
+      ]
+    },
+    "tldr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr_heading",
+        "tldr_grid"
+      ]
+    },
+    "tldr_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "tldr_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "tldr_cost_report",
+        "tldr_skill_health",
+        "tldr_fork_cohort",
+        "tldr_iss032"
+      ]
+    },
+    "tldr_cost_report": {
+      "type": "Stat",
+      "props": {
+        "label": "cost-report streak",
+        "value": "33-consecutive",
+        "trend": "up"
+      }
+    },
+    "tldr_skill_health": {
+      "type": "Stat",
+      "props": {
+        "label": "CRITICAL slots",
+        "value": "16 → 4",
+        "delta": "-12",
+        "trend": "down"
+      }
+    },
+    "tldr_fork_cohort": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort",
+        "message": "49h stuck",
+        "type": "warning"
+      }
+    },
+    "tldr_iss032": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-032",
+        "message": "Unfiled",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_heading",
+        "headline_cost_report",
+        "headline_skill_health",
+        "headline_self_improve",
+        "headline_security_digest",
+        "headline_reflect"
+      ]
+    },
+    "headlines_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "headline_cost_report": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl_cr_title",
+        "hl_cr_details",
+        "hl_cr_link"
+      ]
+    },
+    "hl_cr_title": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "hl_cr_details": {
+      "type": "Text",
+      "props": {
+        "text": "20:08Z breaks 33-consecutive sdk_opt_in_required streak; n=5 intra-24h cluster same-day",
+        "variant": "body"
+      }
+    },
+    "hl_cr_link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/cost-report-2026-08-11.md",
+        "href": "articles/cost-report-2026-08-11.md"
+      }
+    },
+    "headline_skill_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl_sh_title",
+        "hl_sh_details",
+        "hl_sh_hash"
+      ]
+    },
+    "hl_sh_title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health",
+        "variant": "lead"
+      }
+    },
+    "hl_sh_details": {
+      "type": "Text",
+      "props": {
+        "text": "CRITICAL 16→4 post-ISS-031 usepod self-heal; ISS-031 reconciled",
+        "variant": "body"
+      }
+    },
+    "hl_sh_hash": {
+      "type": "Badge",
+      "props": {
+        "text": "hash ffb02679",
+        "variant": "secondary"
+      }
+    },
+    "headline_self_improve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl_si_title",
+        "hl_si_link",
+        "hl_si_desc"
+      ]
+    },
+    "hl_si_title": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve",
+        "variant": "lead"
+      }
+    },
+    "hl_si_link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #179: fix(token-alert)",
+        "href": "https://github.com/anajuliabit/aeon/pull/179"
+      }
+    },
+    "hl_si_desc": {
+      "type": "Text",
+      "props": {
+        "text": "volume-spike baseline daily-granular",
+        "variant": "caption"
+      }
+    },
+    "headline_security_digest": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl_sd_title",
+        "hl_sd_details",
+        "hl_sd_hash"
+      ]
+    },
+    "hl_sd_title": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "lead"
+      }
+    },
+    "hl_sd_details": {
+      "type": "Text",
+      "props": {
+        "text": "malware-only-surface n=4 + cross-ecosystem-escalation n=3 promoted; defi-protocol pip cluster 8 pkgs",
+        "variant": "body"
+      }
+    },
+    "hl_sd_hash": {
+      "type": "Badge",
+      "props": {
+        "text": "hash 2c70cffe",
+        "variant": "secondary"
+      }
+    },
+    "headline_reflect": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl_rf_title",
+        "hl_rf_details",
+        "hl_rf_link"
+      ]
+    },
+    "hl_rf_title": {
+      "type": "Text",
+      "props": {
+        "text": "reflect",
+        "variant": "lead"
+      }
+    },
+    "hl_rf_details": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md rewritten: 16 sub-shapes + 3 formal promotions absorbed",
+        "variant": "body"
+      }
+    },
+    "hl_rf_link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/logs/2026-08-11-reflect.md",
+        "href": "memory/logs/2026-08-11-reflect.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable_daily_routine",
+        "notable_github_trending",
+        "notable_agent_buzz",
+        "notable_token_alert",
+        "notable_action_converter"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable_daily_routine": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note_dr_title",
+        "note_dr_stats",
+        "note_dr_hash"
+      ]
+    },
+    "note_dr_title": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine",
+        "variant": "lead"
+      }
+    },
+    "note_dr_stats": {
+      "type": "Text",
+      "props": {
+        "text": "CYS 4-consecutive breakout (+47%, 7d +362%); Ouroboros = Aeon self-improve blueprint",
+        "variant": "body"
+      }
+    },
+    "note_dr_hash": {
+      "type": "Badge",
+      "props": {
+        "text": "hash ee1a46af",
+        "variant": "secondary"
+      }
+    },
+    "notable_github_trending": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note_gt_title",
+        "note_gt_details",
+        "note_gt_hash"
+      ]
+    },
+    "note_gt_title": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending",
+        "variant": "lead"
+      }
+    },
+    "note_gt_details": {
+      "type": "Text",
+      "props": {
+        "text": "6 kept; semantica top pick (agent-provenance primitive)",
+        "variant": "body"
+      }
+    },
+    "note_gt_hash": {
+      "type": "Badge",
+      "props": {
+        "text": "hash 60952bca",
+        "variant": "secondary"
+      }
+    },
+    "notable_agent_buzz": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note_ab_title",
+        "note_ab_details",
+        "note_ab_hash"
+      ]
+    },
+    "note_ab_title": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "lead"
+      }
+    },
+    "note_ab_details": {
+      "type": "Text",
+      "props": {
+        "text": "6-consecutive engagement drought breaks; Sengo_Sol engagement 115",
+        "variant": "body"
+      }
+    },
+    "note_ab_hash": {
+      "type": "Badge",
+      "props": {
+        "text": "hash f445de65",
+        "variant": "secondary"
+      }
+    },
+    "notable_token_alert": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note_ta_title",
+        "note_ta_details"
+      ]
+    },
+    "note_ta_title": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert ×2",
+        "variant": "lead"
+      }
+    },
+    "note_ta_details": {
+      "type": "Text",
+      "props": {
+        "text": "0/4 fires; CoinGecko d50 memory-window-first milestone",
+        "variant": "body"
+      }
+    },
+    "notable_action_converter": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note_ac_title",
+        "note_ac_details",
+        "note_ac_hash"
+      ]
+    },
+    "note_ac_title": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter",
+        "variant": "lead"
+      }
+    },
+    "note_ac_details": {
+      "type": "Text",
+      "props": {
+        "text": "5 actions: ISS-032 fork-cohort + ISS-030 deepen + PR #174 sync",
+        "variant": "body"
+      }
+    },
+    "note_ac_hash": {
+      "type": "Badge",
+      "props": {
+        "text": "hash 631b413b",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_heading",
+        "decision_iss032",
+        "decision_pr174",
+        "decision_iss031"
+      ]
+    },
+    "decisions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h3"
+      }
+    },
+    "decision_iss032": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dec_iss032_title",
+        "dec_iss032_text"
+      ]
+    },
+    "dec_iss032_title": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-032",
+        "variant": "destructive"
+      }
+    },
+    "dec_iss032_text": {
+      "type": "Text",
+      "props": {
+        "text": "File for fork-cohort (action-converter proposed 18:40Z, unfiled; state-update-race; 49h stuck)",
+        "variant": "body"
+      }
+    },
+    "decision_pr174": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dec_pr174_link",
+        "dec_pr174_text"
+      ]
+    },
+    "dec_pr174_link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #174: Advisor Brier-weight",
+        "href": "https://github.com/anajuliabit/aeon/pull/174"
+      }
+    },
+    "dec_pr174_text": {
+      "type": "Text",
+      "props": {
+        "text": "~93h pending, CI cold, mergeable=UNKNOWN",
+        "variant": "caption"
+      }
+    },
+    "decision_iss031": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dec_iss031_title",
+        "dec_iss031_text"
+      ]
+    },
+    "dec_iss031_title": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-031",
+        "variant": "outline"
+      }
+    },
+    "dec_iss031_text": {
+      "type": "Text",
+      "props": {
+        "text": "Resolve for 3 Monday-stuck skills before 2026-08-13 usepod-402 gate deadline",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers_heading",
+        "blocker_fork_cohort",
+        "blocker_cost_report",
+        "blocker_mon_scheduled"
+      ]
+    },
+    "blockers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h3"
+      }
+    },
+    "blocker_fork_cohort": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort",
+        "message": "49h+ stuck, past 48h threshold; ISS-032 not filed · last_dispatch 2026-08-09T19:05Z",
+        "type": "error"
+      }
+    },
+    "blocker_cost_report": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "ISS-030 sr=8%; n=5 intra-24h same-signature despite 20:08Z recovery",
+        "type": "warning"
+      }
+    },
+    "blocker_mon_scheduled": {
+      "type": "Alert",
+      "props": {
+        "title": "4 Monday-scheduled stuck",
+        "message": "search-skill, unlock-monitor, deal-flow, skill-security-scan until 2026-08-17",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_collapsed",
+        "footer_sources"
+      ]
+    },
+    "footer_collapsed": {
+      "type": "Text",
+      "props": {
+        "text": "+5 routine runs collapsed",
+        "variant": "muted"
+      }
+    },
+    "footer_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: log=ok · cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

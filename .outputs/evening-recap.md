@@ -1,27 +1,28 @@
-*Evening Recap — 2026-08-10*
-_TL;DR: usepod 402 recurred fleet-wide, self-healed in ~4h, but cost-report printed sdk_opt_in_required clean at 20:32Z — ISS-030 formal-pattern trigger; net negative on the ISS axis._
+*Evening Recap — 2026-08-11*
+_TL;DR: cost-report breaks 33-fail streak, skill-health sheds 12 CRITICAL slots — recovery day, but fork-cohort at 49h stuck and ISS-032 unfiled._
 
 *Headlines:*
-- weekly-shiplog — article shipped, 21d stale streak cleared · https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-10.md
-- weekly-review — weekly summary shipped · articles/weekly-review-2026-08-10.md
-- ISS-031 filed — usepod 402 recurrence, 0 → 16 CRITICAL in one wave · memory/issues/ISS-031.md
-- ISS-030 deciding-test = same-signature fail — cost-report 4-consec-week formal-pattern trigger n=1 · memory/issues/ISS-030.md
-- fleet 402 recovered — ~4h self-heal, 13 skills back 19:15Z · docs/status.md
+- cost-report — 20:08Z breaks 33-consec sdk_opt_in_required streak; n=5 intra-24h cluster same-day · articles/cost-report-2026-08-11.md
+- skill-health — CRITICAL 16→4 post-ISS-031 usepod self-heal; ISS-031 reconciled · hash ffb02679
+- self-improve — PR #179: fix(token-alert) volume-spike baseline daily-granular · https://github.com/anajuliabit/aeon/pull/179
+- security-digest — malware-only-surface n=4 + cross-ecosystem-escalation n=3 promoted; defi-protocol pip cluster 8 pkgs · hash 2c70cffe
+- reflect — MEMORY.md rewritten: 16 sub-shapes + 3 formal promotions absorbed · memory/logs/2026-08-11-reflect.md
 
 *Notable:*
-- security-digest — 48 fresh malware GHSAs; 3 new typosquat sub-classes (chai / postcss / scoped-double-scope); fleet import clean d11
-- daily-routine — KAU +111.6% anomalous spike; BEAT −51.8% 3rd flip; agent-thesis rail 26-consec via DCAS scaffold-portability paper
-- agent-buzz — engagement-drought 7-consec; MCP-vs-skills debate sub-rail n=1; settlement-framework-for-agents n=1
-- btc-levels 20:57Z — quiet, $64,098 spot, no alerts
+- daily-routine — CYS 4-consec breakout (+47%, 7d +362%); Ouroboros = Aeon self-improve blueprint · hash ee1a46af
+- github-trending — 6 kept; semantica top pick (agent-provenance primitive) · hash 60952bca
+- agent-buzz — 6-consec engagement drought breaks; Sengo_Sol eng 115 · hash f445de65
+- token-alert ×2 — 0/4 fires; CG d50 memory-window-first milestone
+- action-converter — 5 actions: ISS-032 fork-cohort + ISS-030 deepen + PR #174 sync · hash 631b413b
 
 *Decisions for tomorrow:*
-- top-up usepod OR flip aeon.yml gateway.provider — ISS-031 operator-gated, 2nd recurrence in 7d
-- fix ISS-030 — sdk_opt_in_required formal-pattern confirmed; cost-report sr=8%
-- triage PR #174 — Advisor Brier-weight, ~69h old, CI never fired · https://github.com/anajuliabit/aeon/pull/174
-- merge PR #176 + PR #177 in weekly batch
+- file ISS-032 for fork-cohort (action-converter proposed 18:40Z, unfiled; state-update-race; 49h stuck)
+- decide PR #174 Advisor Brier-weight (~93h, CI cold, mergeable=UNKNOWN) · https://github.com/anajuliabit/aeon/pull/174
+- resolve ISS-031 for 3 Mon-stuck skills before 8-13 usepod-402 gate deadline
 
 *Blockers:*
-- fork-cohort — stuck >26h (dispatched 8-09 19:05Z); 48h escalation threshold 8-11 19:05Z
-- cost-report — consec=17; ISS-030 formal-pattern n=1; operator fix needed
+- fork-cohort — 49h+ stuck, past 48h threshold; ISS-032 not filed · last_dispatch 2026-08-09T19:05Z
+- cost-report — ISS-030 sr=8%; n=5 intra-24h same-signature despite 20:08Z recovery
+- 4 Mon-scheduled stuck — search-skill/unlock-monitor/deal-flow/skill-security-scan until 8-17
 
 _+5 routine runs collapsed · sources: log=ok cron-state=ok_
