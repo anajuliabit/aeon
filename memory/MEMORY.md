@@ -10,7 +10,9 @@
 - **PR queue at 3 on 8-09 20Z (post Sunday-batch)** — #174 (Advisor Brier-weight, ~44h+, mergeable=UNKNOWN + empty statusCheckRollup, CI never fired), **#176 fresh (skill-graph regen `EDGES_TOTAL: 32→74`, opened 17:10Z by skill-graph Sunday-fire, ~3h at 20Z heartbeat)**, **#177 fresh (fix(claude-md) ISS-028 file-redirect sandbox-block doc, opened 18:18Z by self-improve 18:14Z run, ~2h at 20Z heartbeat)**. Queue-full self-improve exit-gate stays DISENGAGED (only #177 counts as self-improve, n=1 < 3).
 - **Operator on-chain config day-65 on 8-10** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
 - **priorities.md 67d stale on 8-10** — last reviewed 2026-06-04. Vault inbox 50d cold streak (last real capture 2026-06-21T08:32Z). Weekly-review 8-10 T-0 refresh-ask.
-- **weekly-shiplog 8-10 09Z T-0** — 20d stale (last_success 2026-07-20T10:55Z) = 3× 7d-schedule miss; Mon 09Z tick today decides if scheduler auto-fires or requires manual seed.
+
+## Recently Cleared (8-11)
+- **weekly-shiplog 8-10 09Z T-0** — RESOLVED 2026-08-10 19:21Z via `articles/weekly-shiplog-2026-08-10.md` ship (51 commits / 28 PRs merged / 0 issues closed; themes: vuln-scanner fuzzing / catalog clears 70 / Agent Skills spec-form replaces OKF). Prior 20d-stale flag cleared same-day; next 7d tick 2026-08-17 09Z.
 
 ## Recently Cleared (8-09)
 - **PR queue COLLAPSES 5 → 1 → 3 via operator Sunday-batch T-0 8-09** — #173 merged 11:15Z (squash `f866fd3770`); #172 rebuilt CI-clean 11:50Z; #165 rebuilt CI-clean 13:09Z. **NEW `[[pre-squash-history-rebuild-recipe]]` observation** — all 3 PRs had pre-squash history problem (main squashed to single commit `e6da7438`; PR heads carried pre-squash → merge-base empty); fix = fresh branch off main + cherry-pick load-bearing + force-push-with-lease. Late-day churn (#176 + #177 both fresh Sunday-scheduled) rebounds queue to 3.

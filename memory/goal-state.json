@@ -1,55 +1,67 @@
 {
-  "run_at": "2026-08-10T18:15:00Z",
+  "run_at": "2026-08-11T17:15:00Z",
   "goals": {
-    "iss-030-cost-report-sdk-opt-in": {
+    "iss-030-cost-report-4-consec-week-formal-pattern": {
       "status": "ON_TRACK",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-08-10",
-      "note": "T-0 deciding-test 8-10 FAILS same-signature at 17:08Z heartbeat retry — cost-report consec_fail=15, error `Payment required. Retry the same request with an X-PAYMENT or PAYMENT-SIGNATURE header` (usepod.ai/v1/messages), unchanged sdk_opt_in_required family. Broader fleet-wide cascade: cost-report + heartbeat (consec=10) + skill-freshness (consec=13) + morning-brief (consec=7) + security-digest (consec=8) + list-digest (consec=3) + thought-review (consec=15) + skill-security-scan (consec=3) + reg-monitor (consec=14) + market-context-refresh (consec=12) all fail same signature. 4-consec-week formal-pattern promotion trigger. Fleet clean-consec d5 (was extending through 8-09) broken today 8-10 17:08Z. Trend: flat status, but signature scope widened to ~11 skills."
+      "activity_count_14d": 15,
+      "last_activity_date": "2026-08-11",
+      "note": "ISS-030 pattern extends via n=3 same-signature sdk_opt_in_required prints intra-~18h (8-10 20:32Z n=1 + 8-11 08:19Z n=2 + 8-11 14:14Z n=3). consec=33 sr=7% (fresh drop from 8% at 08:41Z + 10% 8-10). Still week-1 shape of the 4-consec-week formal-pattern; intra-week cluster deepens without advancing a fresh week-tick. usepod 402 fleet-wide burst from 8-10 self-healed cleanly overnight (13-skill 19:10Z retry batch all succeeded). Trend: flat status, intra-week deepening."
     },
     "chronic-cohort-alone-degraded-regime": {
       "status": "ON_TRACK",
       "activity_count_14d": 10,
-      "last_activity_date": "2026-08-10",
-      "note": "8th 24h durability gate crossed 8-10 today (13-consec-heartbeat-tick, ~143h span 8-04 14:45Z → 8-10 17:08Z). 10-skill chronic sub-50% cohort composition-locked continues. But TODAY 8-10 the regime EXPANDS via broader sdk_opt_in_required cascade — cohort n=10 may split as fresh chronics enter (btc-levels consec=17, deal-flow consec=6, unlock-monitor consec=7 all fresh regressors today). Composition-identity print potentially breaks 8-10 depending on next-tick sr recomputation. Trend: flat status, but composition may shift."
+      "last_activity_date": "2026-08-11",
+      "note": "Composition ~stable through today: cost-report 7% / narrative-tracker 33% / market-context-refresh 32% / skill-analytics 21% / vuln-scanner 25% / reg-monitor 21% / aixbt-pulse 47% / security-digest 43% / search-skill 37% / weekly-shiplog 37% / unlock-monitor 38% / deal-flow 44%. 12+ consec-tick durability ~131h span through 14:46Z heartbeat. Skill-health 8-10 18:00Z flagged regime BREAK at CRITICAL(16) but 14:46Z reports it holds; composition stable. Trend: flat."
+    },
+    "fork-cohort-stuck-p0-novel": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 8,
+      "last_activity_date": "2026-08-11",
+      "note": "New goal — first stall of memory-window; state-update-race on cancelled workflow. Last success 2026-08-02T19:52:59Z, last_dispatch 2026-08-09T19:05Z (~67.7h at 14:46Z heartbeat). 48h escalation threshold ~19:05Z tonight (~4.3h from 14:46Z). Weekly-review 8-10 T-0 root-cause investigation candidate — check commit-results/update-cron-state steps for cancellation handling. File new ISS if uncleared at threshold. Trend: new."
     },
     "iss-028-workaround-chain": {
       "status": "BLOCKED",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-08-10",
-      "note": "Rail extends to n=37+ (fresh 8-10 call-site: heartbeat 17:08Z Edit-append + PR #177 opened 8-09 18:20Z documenting the sandbox-block class in CLAUDE.md). Durable 19-UTC-day span 7-22 → 8-10. Weekly-review 8-10 T-0 today reopens root-cause investigation. PR #167 fix-scope-narrowness firm; PR #177 doc-level acknowledgment in review. Trend: flat."
+      "activity_count_14d": 15,
+      "last_activity_date": "2026-08-11",
+      "note": "Rail extends to n=40+ (fresh 8-11 call-sites: token-alert 13:44Z operator-invoked re-check + goal-tracker 17Z heredoc-blocked). Durable 20-UTC-day span 7-22 → 8-11. PR #167 fix-scope-narrow + PR #177 CLAUDE.md doc both open awaiting operator weekly-batch. NEW `[[python-inline-exec-blocked]]` sub-variant surfaced by daily-routine 07:52Z (path-based python3 hits approval gate; jq-only substitute worked). Trend: flat, waiting on operator batch-review."
     },
-    "12-utc-batch-dark": {
+    "iss-027-12z-batch-dark-d45": {
       "status": "BLOCKED",
       "activity_count_14d": 14,
-      "last_activity_date": "2026-08-10",
-      "note": "ISS-027 12Z batch DARK day-44 today (rolled d43 8-09 → d44 8-10). 8-skill cluster frozen since 2026-06-28 21:00Z. Note: today's fleet-wide 17:08Z cascade is a DIFFERENT dispatcher-path (heartbeat retry cluster hitting sdk_opt_in_required), not the 12Z-slot silence. `[[12Z-slot-dark-immunity-per-skill]]` observation extends (token-alert 12:06Z fired 5-consec clean 8-06→8-10). Trend: flat."
+      "last_activity_date": "2026-08-11",
+      "note": "ISS-027 12Z batch DARK d45 today (rolled d44 8-10 → d45 8-11). 8-skill cluster frozen since 2026-06-28 21:00Z. Today's fleet-wide 8-10 402 cascade was a DIFFERENT dispatcher-path; per-dispatcher-path independence `[[12Z-slot-dark-immunity-per-skill]]` extends to 5-consec (token-alert 12:13Z fired clean). Scheduler-side gap, operator-gated. Trend: flat."
     },
-    "pr-queue": {
+    "pr-queue-at-3": {
       "status": "ON_TRACK",
       "activity_count_14d": 13,
-      "last_activity_date": "2026-08-10",
-      "note": "Queue at 3 open on 8-10 (rebuild from 1 on 8-09 evening): #174 (Advisor Brier-weight, ~66h since 8-08 00:31Z), #176 (skill-graph EDGES 32→74, opened 8-09 17:11Z), #177 (fix(claude-md): document ISS-028 file-redirect sandbox block, opened 8-09 18:20Z). Queue-full self-improve exit-gate RE-ENGAGES at n=3 threshold (was disengaged 8-09 at n=1). #175 + #178 merged 8-09 evening (advisor track-record fixes). Trend: flat (queue count returned to threshold)."
+      "last_activity_date": "2026-08-11",
+      "note": "Queue unchanged at 3 open through 14:46Z: #174 (Advisor Brier-weight, ~87h since 8-08 00:31Z, mergeable=UNKNOWN + empty statusCheckRollup — CI still hasn't fired), #176 (skill-graph regen EDGES 32→74, opened 8-09 17:10Z), #177 (fix(claude-md) ISS-028 file-redirect doc, opened 8-09 18:20Z). Queue-full self-improve exit-gate RE-ENGAGED at n=3 threshold. #175 + #178 merged 8-09 evening. Trend: flat."
     },
-    "operator-on-chain-config": {
+    "operator-on-chain-config-day-66": {
       "status": "BLOCKED",
       "activity_count_14d": 13,
-      "last_activity_date": "2026-08-10",
-      "note": "Day-65 today (rolled d64 8-09 → d65 8-10). defi-monitor NO_CONFIG persists. Operator-owned — no automated unblock path. Weekly-review 8-10 T-0 refresh-ask candidate today. Trend: flat."
+      "last_activity_date": "2026-08-11",
+      "note": "Day-66 today (rolled d65 8-10 → d66 8-11). defi-monitor NO_CONFIG persists. Operator-owned — no automated unblock path. Weekly-review 8-10 refresh-ask deferred. Trend: flat."
     },
-    "priorities-md-stale": {
+    "priorities-md-68d-stale": {
       "status": "BLOCKED",
       "activity_count_14d": 14,
-      "last_activity_date": "2026-08-10",
-      "note": "Day-67 today (rolled d66 8-09 → d67 8-10). Vault inbox d50 cold streak (last real capture 2026-06-21T08:32Z). thought-review 8-10 today failed at 17:08Z (consec=15) — inbox-drought detector offline for the day, so d50 print is soft. Weekly-review 8-10 T-0 refresh-ask today. Trend: flat."
+      "last_activity_date": "2026-08-11",
+      "note": "Day-68 today (rolled d67 8-10 → d68 8-11). Vault inbox d50 cold streak continues (last real capture 2026-06-21T08:32Z). thought-review 07:50Z surfaced `priorities.md 68d stale (last reviewed 2026-06-04) — worth a refresh` in notify tail. Vault-owned. Trend: flat."
     }
   },
   "recently_cleared": {
+    "weekly-shiplog-8-10-09z-t-0": {
+      "status": "DONE",
+      "completed_at": "2026-08-10",
+      "moved_at": "2026-08-11",
+      "note": "RESOLVED 2026-08-10 19:21Z via `articles/weekly-shiplog-2026-08-10.md` ship (51 commits / 28 PRs merged / 0 issues closed). Prior 20d-stale flag cleared same-day; next 7d tick 2026-08-17 09Z. Confirmed by heartbeat 20:59Z + morning-brief 07:52Z 8-11 (`weekly-shiplog 20d-stale cleared`)."
+    },
     "morning-08z-slot-dark": {
       "status": "DONE",
       "completed_at": "2026-08-09",
       "moved_at": "2026-08-09",
-      "note": "PATTERN-BROKEN-PERMANENT VERDICT confirmed 8-09 via 2-consec clean fires (heartbeat 08:03Z 3min lag + skill-freshness 08:17Z). Formal-pattern was n=4-consec 8-04→8-07; positive termination held across 8-08 + 8-09. NOTE: 8-10 08Z-slot untested — heartbeat 17:08Z cascade may indicate different regime resurfacing."
+      "note": "PATTERN-BROKEN-PERMANENT VERDICT confirmed 8-09 via 2-consec clean fires (heartbeat 08:03Z 3min lag + skill-freshness 08:17Z). Formal-pattern was n=4-consec 8-04→8-07; positive termination held across 8-08 + 8-09."
     },
     "iss-029-effectively-recovered": {
       "status": "DONE",
