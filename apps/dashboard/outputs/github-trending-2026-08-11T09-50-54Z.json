@@ -1,0 +1,473 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-08-11"
+      },
+      "children": [
+        "top_pick_section",
+        "separator_1",
+        "aiml_section",
+        "separator_2",
+        "devtools_section",
+        "sources_footer"
+      ]
+    },
+    "top_pick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_pick_label",
+        "semantica_top_link",
+        "semantica_top_desc"
+      ]
+    },
+    "top_pick_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      }
+    },
+    "semantica_top_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "semantica-agi/semantica",
+        "href": "https://github.com/semantica-agi/semantica"
+      }
+    },
+    "semantica_top_desc": {
+      "type": "Text",
+      "props": {
+        "text": "knowledge-graph infra with W3C PROV-O provenance and deterministic reasoning — the \"agents with receipts\" primitive built as infrastructure, not another RAG bolt-on.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aiml_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "aiml_heading",
+        "semantica_aiml",
+        "weathernext_repo",
+        "comfyui_repo",
+        "lifeos_repo"
+      ]
+    },
+    "aiml_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "semantica_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "semantica_aiml_header",
+        "semantica_aiml_stats",
+        "semantica_aiml_desc"
+      ]
+    },
+    "semantica_aiml_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "semantica-agi/semantica",
+        "href": "https://github.com/semantica-agi/semantica",
+        "score": "★ 970 today"
+      }
+    },
+    "semantica_aiml_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "semantica_star_total",
+        "semantica_lang",
+        "semantica_status"
+      ]
+    },
+    "semantica_star_total": {
+      "type": "Badge",
+      "props": {
+        "text": "4.5k total",
+        "variant": "outline"
+      }
+    },
+    "semantica_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      }
+    },
+    "semantica_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "semantica_aiml_desc": {
+      "type": "Text",
+      "props": {
+        "text": "polyglot triple/property-graph backend + PROV-O audit trails + MCP server; 6,000× faster node search claim, no LLM in the reasoning path.",
+        "variant": "body"
+      }
+    },
+    "weathernext_repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "weathernext_header",
+        "weathernext_stats",
+        "weathernext_desc"
+      ]
+    },
+    "weathernext_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google-deepmind/weathernext",
+        "href": "https://github.com/google-deepmind/weathernext",
+        "score": "★ 325 today"
+      }
+    },
+    "weathernext_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "weathernext_total",
+        "weathernext_lang",
+        "weathernext_status"
+      ]
+    },
+    "weathernext_total": {
+      "type": "Badge",
+      "props": {
+        "text": "7.4k total",
+        "variant": "outline"
+      }
+    },
+    "weathernext_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      }
+    },
+    "weathernext_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "weathernext_desc": {
+      "type": "Text",
+      "props": {
+        "text": "v0.3.0 landed 8-06 — deepmind's next-gen ensemble weather forecasting model shipping as open weights.",
+        "variant": "body"
+      }
+    },
+    "comfyui_repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "comfyui_header",
+        "comfyui_stats",
+        "comfyui_desc"
+      ]
+    },
+    "comfyui_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Comfy-Org/ComfyUI",
+        "href": "https://github.com/Comfy-Org/ComfyUI",
+        "score": "★ 922 today"
+      }
+    },
+    "comfyui_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "comfyui_total",
+        "comfyui_lang",
+        "comfyui_status"
+      ]
+    },
+    "comfyui_total": {
+      "type": "Badge",
+      "props": {
+        "text": "127k total",
+        "variant": "outline"
+      }
+    },
+    "comfyui_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      }
+    },
+    "comfyui_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "comfyui_desc": {
+      "type": "Text",
+      "props": {
+        "text": "v0.31.0 shipped 8-08; weekly release cadence keeps the diffusion node-graph gui pulling ~1k/day on a 3-year-old repo.",
+        "variant": "body"
+      }
+    },
+    "lifeos_repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "lifeos_header",
+        "lifeos_stats",
+        "lifeos_desc"
+      ]
+    },
+    "lifeos_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "danielmiessler/LifeOS",
+        "href": "https://github.com/danielmiessler/LifeOS",
+        "score": "★ 315 today"
+      }
+    },
+    "lifeos_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "lifeos_total",
+        "lifeos_lang",
+        "lifeos_status"
+      ]
+    },
+    "lifeos_total": {
+      "type": "Badge",
+      "props": {
+        "text": "18k total",
+        "variant": "outline"
+      }
+    },
+    "lifeos_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      }
+    },
+    "lifeos_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "lifeos_desc": {
+      "type": "Text",
+      "props": {
+        "text": "miessler's follow-up to fabric — a \"hill-climbing\" harness that treats current-state → ideal-state as an optimization loop, not a chat.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "devtools_heading",
+        "t3code_repo",
+        "codegraphrag_repo"
+      ]
+    },
+    "devtools_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "t3code_repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t3code_header",
+        "t3code_stats",
+        "t3code_desc"
+      ]
+    },
+    "t3code_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pingdotgg/t3code",
+        "href": "https://github.com/pingdotgg/t3code",
+        "score": "★ 389 today"
+      }
+    },
+    "t3code_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "t3code_total",
+        "t3code_lang",
+        "t3code_status"
+      ]
+    },
+    "t3code_total": {
+      "type": "Badge",
+      "props": {
+        "text": "18k total",
+        "variant": "outline"
+      }
+    },
+    "t3code_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      }
+    },
+    "t3code_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "t3code_desc": {
+      "type": "Text",
+      "props": {
+        "text": "theo's native mobile viewer for claude code sessions — run agents from a phone, not just a laptop with a tmux tab.",
+        "variant": "body"
+      }
+    },
+    "codegraphrag_repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "codegraphrag_header",
+        "codegraphrag_stats",
+        "codegraphrag_desc"
+      ]
+    },
+    "codegraphrag_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vitali87/code-graph-rag",
+        "href": "https://github.com/vitali87/code-graph-rag",
+        "score": "★ 682 today"
+      }
+    },
+    "codegraphrag_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "codegraphrag_total",
+        "codegraphrag_lang",
+        "codegraphrag_status"
+      ]
+    },
+    "codegraphrag_total": {
+      "type": "Badge",
+      "props": {
+        "text": "3.7k total",
+        "variant": "outline"
+      }
+    },
+    "codegraphrag_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      }
+    },
+    "codegraphrag_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "codegraphrag_desc": {
+      "type": "Text",
+      "props": {
+        "text": "knowledge-graph rag over multi-language monorepos — query and edit across the whole tree, not a file-window at a time.",
+        "variant": "body"
+      }
+    },
+    "sources_footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 6/16",
+        "variant": "caption"
+      }
+    }
+  }
+}
