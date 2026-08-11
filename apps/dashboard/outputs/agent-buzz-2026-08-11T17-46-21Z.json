@@ -1,0 +1,137 @@
+{
+  "root": "card-buzz",
+  "state": {},
+  "elements": {
+    "card-buzz": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-08-11"
+      },
+      "children": [
+        "subtitle",
+        "sep1",
+        "heading1",
+        "post1",
+        "post2",
+        "sep2",
+        "heading2",
+        "post3",
+        "post4",
+        "sep3",
+        "heading3",
+        "post5",
+        "post6",
+        "sep4",
+        "footer"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "three threads today: agents wired into money rails, MCP settling as the default skill/framework distribution layer, and deployment receipts from industrial + social.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "agents as economic actors",
+        "level": "h2"
+      }
+    },
+    "post1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@Sengo_Sol — crypto rails let agents act as economic principals: money is API, no KYC or approver in the loop",
+        "href": "https://x.com/Sengo_Sol/status/2086958485061706014",
+        "source": "@Sengo_Sol"
+      }
+    },
+    "post2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@1DesyDonald — injective nova crowned three agent shapes: risk-enforced perp trading, commerce booking, and physical-desk terminals",
+        "href": "https://x.com/1DesyDonald/status/2086961320763469886",
+        "source": "@1DesyDonald"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP as distribution layer",
+        "level": "h2"
+      }
+    },
+    "post3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@shupeiman — MCP-served claude skills replace zip redistribution: live updates, per-user URL revocation, logged usage, zero token overhead",
+        "href": "https://x.com/shupeiman/status/2086965586295431632",
+        "source": "@shupeiman"
+      }
+    },
+    "post4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@KirkDBorne — packt book codifies MCP + A2A as the default python multi-agent stack",
+        "href": "https://x.com/KirkDBorne/status/2086847632115139050",
+        "source": "@KirkDBorne"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading3": {
+      "type": "Heading",
+      "props": {
+        "text": "agents in the wild",
+        "level": "h2"
+      }
+    },
+    "post5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@the_dennis_ren — neuron industries agent one-shot upgraded a 1991 siemens PLC after ingesting 300 pages of docs (brownfield industrial)",
+        "href": "https://x.com/the_dennis_ren/status/2086960597116342736",
+        "source": "@the_dennis_ren"
+      }
+    },
+    "post6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@0x0SojalSec — cloudflare: agent traffic now tops human; chinese ops already run 50–100 social accounts 24/7",
+        "href": "https://x.com/0x0SojalSec/status/2086959269589774463",
+        "source": "@0x0SojalSec"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 10 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}
