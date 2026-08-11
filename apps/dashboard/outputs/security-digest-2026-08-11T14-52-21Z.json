@@ -1,0 +1,421 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-11",
+        "description": "Threat summary & remediation checklist"
+      },
+      "children": [
+        "alert_verdict",
+        "sep1",
+        "section_patch",
+        "sep2",
+        "section_kev",
+        "sep3",
+        "section_reviewed",
+        "sep4",
+        "section_monitor"
+      ]
+    },
+    "alert_verdict": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "Verdict",
+        "message": "Nothing urgent for our stack. 4th consecutive malware-only day. DeFi-brand PyPI wave is the headline. Sources: KEV, GH Advisory, EPSS"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_patch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_patch",
+        "stat_malware_count",
+        "text_clean",
+        "heading_defi_cluster",
+        "stack_defi_packages",
+        "text_defi_context",
+        "heading_sqlite",
+        "stack_sqlite",
+        "heading_npm_risk",
+        "stack_npm_risk",
+        "heading_action",
+        "text_action"
+      ]
+    },
+    "heading_patch": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY — malware macro",
+        "level": "h2"
+      }
+    },
+    "stat_malware_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Fresh malicious packages (8-10 20Z → 8-11 14Z)",
+        "value": "19",
+        "delta": "13 npm, 6 pip"
+      }
+    },
+    "text_clean": {
+      "type": "Text",
+      "props": {
+        "text": "All outside tracked deps. Aeon-fleet clean vs security surface (d12).",
+        "variant": "body"
+      }
+    },
+    "heading_defi_cluster": {
+      "type": "Heading",
+      "props": {
+        "text": "Headline cluster: DeFi-protocol-brand pip typosquats (~15h window)",
+        "level": "h3"
+      }
+    },
+    "stack_defi_packages": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_euler",
+        "badge_morpho",
+        "badge_dlmm",
+        "badge_dlmm_sdk",
+        "badge_joule",
+        "badge_plp",
+        "badge_neutrl_core",
+        "badge_neutrl_contracts"
+      ]
+    },
+    "badge_euler": {
+      "type": "Badge",
+      "props": {
+        "text": "euler-sdk",
+        "variant": "destructive"
+      }
+    },
+    "badge_morpho": {
+      "type": "Badge",
+      "props": {
+        "text": "morpho-sdk",
+        "variant": "destructive"
+      }
+    },
+    "badge_dlmm": {
+      "type": "Badge",
+      "props": {
+        "text": "dlmm",
+        "variant": "destructive"
+      }
+    },
+    "badge_dlmm_sdk": {
+      "type": "Badge",
+      "props": {
+        "text": "dlmm-sdk",
+        "variant": "destructive"
+      }
+    },
+    "badge_joule": {
+      "type": "Badge",
+      "props": {
+        "text": "joule-btp-extension",
+        "variant": "destructive"
+      }
+    },
+    "badge_plp": {
+      "type": "Badge",
+      "props": {
+        "text": "plp-contract",
+        "variant": "destructive"
+      }
+    },
+    "badge_neutrl_core": {
+      "type": "Badge",
+      "props": {
+        "text": "neutrl-core",
+        "variant": "destructive"
+      }
+    },
+    "badge_neutrl_contracts": {
+      "type": "Badge",
+      "props": {
+        "text": "neutrl-contracts",
+        "variant": "destructive"
+      }
+    },
+    "text_defi_context": {
+      "type": "Text",
+      "props": {
+        "text": "Named for: euler / morpho / meteora-dlmm / joule / neutrl. First PyPI cluster explicitly targeting DeFi-dev pip surface in memory-window.",
+        "variant": "caption"
+      }
+    },
+    "heading_sqlite": {
+      "type": "Heading",
+      "props": {
+        "text": "SQLite brand: 3rd scope typosquat pattern",
+        "level": "h3"
+      }
+    },
+    "stack_sqlite": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_sqlite_current",
+        "text_sqlite_pattern"
+      ]
+    },
+    "text_sqlite_current": {
+      "type": "Text",
+      "props": {
+        "text": "@sqlite-labs/nodesql, @sqlite-labs/createsql (today) + @sqlite-prime/*, @sqlite-table/* (yesterday) = same-attacker 3-scope pattern.",
+        "variant": "body"
+      }
+    },
+    "text_sqlite_pattern": {
+      "type": "Text",
+      "props": {
+        "text": "Coordinated typosquat campaign across multiple namespace variations.",
+        "variant": "caption"
+      }
+    },
+    "heading_npm_risk": {
+      "type": "Heading",
+      "props": {
+        "text": "npm namespace-typo risk",
+        "level": "h3"
+      }
+    },
+    "stack_npm_risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stack_npm_badges",
+        "text_npm_context"
+      ]
+    },
+    "stack_npm_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_commonjs_assert",
+        "badge_commonjs_assertion",
+        "badge_fetch_runtime",
+        "badge_lines_columns",
+        "badge_newtun"
+      ]
+    },
+    "badge_commonjs_assert": {
+      "type": "Badge",
+      "props": {
+        "text": "commonjs-assert",
+        "variant": "outline"
+      }
+    },
+    "badge_commonjs_assertion": {
+      "type": "Badge",
+      "props": {
+        "text": "commonjs-assertion",
+        "variant": "outline"
+      }
+    },
+    "badge_fetch_runtime": {
+      "type": "Badge",
+      "props": {
+        "text": "fetch-runtime",
+        "variant": "outline"
+      }
+    },
+    "badge_lines_columns": {
+      "type": "Badge",
+      "props": {
+        "text": "lines-columns",
+        "variant": "outline"
+      }
+    },
+    "badge_newtun": {
+      "type": "Badge",
+      "props": {
+        "text": "newtun",
+        "variant": "outline"
+      }
+    },
+    "text_npm_context": {
+      "type": "Text",
+      "props": {
+        "text": "commonjs-* shadow node builtins. fetch-runtime, lines-columns, newtun blend with dev tooling names.",
+        "variant": "caption"
+      }
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "ACTION ITEM",
+        "level": "h3"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "If any dev on the team touched PyPI for euler / morpho / meteora / joule / neutrl SDKs in the last 24h: rotate anything the shell touched and check ~/.pypi_history. Otherwise, nothing to install.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_kev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_kev",
+        "stat_kev",
+        "text_kev"
+      ]
+    },
+    "heading_kev": {
+      "type": "Heading",
+      "props": {
+        "text": "KEV (this week)",
+        "level": "h2"
+      }
+    },
+    "stat_kev": {
+      "type": "Stat",
+      "props": {
+        "label": "Net-new since 8-07 (loadmaster)",
+        "value": "0"
+      }
+    },
+    "text_kev": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet-baseline extends to 4 consecutive UTC days.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_reviewed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_reviewed",
+        "stat_reviewed",
+        "text_reviewed_critical",
+        "text_reviewed_high",
+        "text_reviewed_pipeline"
+      ]
+    },
+    "heading_reviewed": {
+      "type": "Heading",
+      "props": {
+        "text": "Reviewed critical / high (48h)",
+        "level": "h2"
+      }
+    },
+    "stat_reviewed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fresh in tracked ecosystem",
+        "value": "0"
+      }
+    },
+    "text_reviewed_critical": {
+      "type": "Text",
+      "props": {
+        "text": "Latest reviewed critical: 8-07 crypto-js (GHSA-rg76)",
+        "variant": "body"
+      }
+    },
+    "text_reviewed_high": {
+      "type": "Text",
+      "props": {
+        "text": "Latest reviewed high: 8-07 pymdown-extensions (GHSA-gm37)",
+        "variant": "body"
+      }
+    },
+    "text_reviewed_pipeline": {
+      "type": "Text",
+      "props": {
+        "text": "Reviewed pipeline stayed dark 4 days running while malware pipeline shipped 100+ items.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_monitor",
+        "stat_monitor",
+        "text_monitor"
+      ]
+    },
+    "heading_monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "stat_monitor": {
+      "type": "Stat",
+      "props": {
+        "label": "Open items",
+        "value": "0"
+      }
+    },
+    "text_monitor": {
+      "type": "Text",
+      "props": {
+        "text": "No unpatched-in-tracked-stack items today.",
+        "variant": "body"
+      }
+    }
+  }
+}
