@@ -1,0 +1,216 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-11"
+      },
+      "children": [
+        "intro-text",
+        "sep1",
+        "researchers-heading",
+        "tweets-container",
+        "sep2",
+        "metadata-footer"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "DeFi list quiet — one clear standout (Fluid DEX shipping to Solana on Jupiter Lend v2). Rest is single-digit likes; DeFiMinty extends AI-paper axis 2nd day running.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "researchers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi researchers",
+        "level": "h2"
+      }
+    },
+    "tweets-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1-item",
+        "tweet2-item",
+        "tweet3-item",
+        "tweet4-item"
+      ]
+    },
+    "tweet1-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1-card",
+        "tweet1-replies",
+        "tweet1-link"
+      ]
+    },
+    "tweet1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFi_Made_Here",
+        "handle": "DeFi_Made_Here",
+        "text": "Fluid DEX now on Solana via Jupiter Lend v2. Pitched as capital-efficient stablecoin venue vs propAMM incumbents; USDT-USDC volume on ETH still 50% higher than Solana, so the real test is whether that gap closes in a month. First serious non-Solana-native DEX-design landing on the chain's stablecoin flow.",
+        "likes": 54,
+        "retweets": 5
+      }
+    },
+    "tweet1-replies": {
+      "type": "Text",
+      "props": {
+        "text": "replies: 8",
+        "variant": "caption"
+      }
+    },
+    "tweet1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFi_Made_Here/status/2086931256969662895"
+      }
+    },
+    "tweet2-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2-card",
+        "tweet2-replies",
+        "tweet2-link"
+      ]
+    },
+    "tweet2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "Trace Inversion paper: hiding a model's chain of thought does NOT prevent reasoning capabilities from being copied. Erodes CoT-hiding as a moat for frontier labs — inference-time trace reconstruction still leaks. Second-consecutive-day paper-tier print on this list (extends `memory-primitive-paper` axis).",
+        "likes": 9,
+        "retweets": 0
+      }
+    },
+    "tweet2-replies": {
+      "type": "Text",
+      "props": {
+        "text": "replies: 6",
+        "variant": "caption"
+      }
+    },
+    "tweet2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2086924222618566664"
+      }
+    },
+    "tweet3-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3-card",
+        "tweet3-replies",
+        "tweet3-link"
+      ]
+    },
+    "tweet3-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFi_Made_Here",
+        "handle": "DeFi_Made_Here",
+        "text": "Solana memecoin projects now DDoSing each other and nuking rival token charts. Adversarial-launchpad primitive emerging: on-chain projects weaponize off-chain infra + chart manipulation against competitors. Bear-case signal for the current trench meta.",
+        "likes": 10,
+        "retweets": 0
+      }
+    },
+    "tweet3-replies": {
+      "type": "Text",
+      "props": {
+        "text": "replies: 2",
+        "variant": "caption"
+      }
+    },
+    "tweet3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFi_Made_Here/status/2086942658421747970"
+      }
+    },
+    "tweet4-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4-card",
+        "tweet4-link"
+      ]
+    },
+    "tweet4-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "\"enjoy being exit liquidity, anon\" quote-tweeting FOMO app results. Top-of-list curator's snark verdict on the current retail-launchpad meta — DefiIgnas rarely posts sub-arithmetic dismissals, so worth reading as sentiment print.",
+        "likes": 10,
+        "retweets": 0
+      }
+    },
+    "tweet4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DefiIgnas/status/2086950728816357844"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metadata-footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-sources",
+        "footer-status"
+      ]
+    },
+    "footer-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: DeFi=ok(5)",
+        "variant": "caption"
+      }
+    },
+    "footer-status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
