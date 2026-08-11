@@ -1,0 +1,331 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Status Report",
+        "description": "System health and task queue status"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "stack_main_metrics",
+        "sep2",
+        "stack_details"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "Status Page",
+        "message": "🔴 Degraded",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_main_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "grid_metrics"
+      ]
+    },
+    "grid_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_time",
+        "stat_cost_report",
+        "stat_consec"
+      ]
+    },
+    "stat_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Report Time",
+        "value": "14:46Z"
+      }
+    },
+    "stat_cost_report": {
+      "type": "Stat",
+      "props": {
+        "label": "Cost Report",
+        "value": "14:14Z"
+      }
+    },
+    "stat_consec": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failures",
+        "value": "33"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stack_sr",
+        "section_sdk",
+        "section_issues",
+        "section_fork",
+        "section_scheduled",
+        "section_cleared",
+        "section_queue"
+      ]
+    },
+    "stack_sr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "progress_sr"
+      ]
+    },
+    "progress_sr": {
+      "type": "Progress",
+      "props": {
+        "value": 7,
+        "max": 100,
+        "label": "Success Rate"
+      }
+    },
+    "section_sdk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_sdk",
+        "text_sdk"
+      ]
+    },
+    "heading_sdk": {
+      "type": "Heading",
+      "props": {
+        "text": "SDK Opt-In Required",
+        "level": "h3"
+      }
+    },
+    "text_sdk": {
+      "type": "Text",
+      "props": {
+        "text": "n=3 instances in past 18 hours: 8-10 20:32Z, 8-11 08:19Z, 8-11 14:14Z"
+      }
+    },
+    "section_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_issues",
+        "alert_iss030"
+      ]
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      }
+    },
+    "alert_iss030": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-030",
+        "message": "Cluster deepens",
+        "type": "warning"
+      }
+    },
+    "section_fork": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_fork",
+        "text_fork_time",
+        "text_fork_deadline"
+      ]
+    },
+    "heading_fork": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork Cohort Status",
+        "level": "h3"
+      }
+    },
+    "text_fork_time": {
+      "type": "Text",
+      "props": {
+        "text": "~4.3 hours from 48-hour stuck threshold"
+      }
+    },
+    "text_fork_deadline": {
+      "type": "Text",
+      "props": {
+        "text": "Deadline: 19:05Z tonight"
+      }
+    },
+    "section_scheduled": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_scheduled",
+        "text_scheduled_note",
+        "badges_scheduled"
+      ]
+    },
+    "heading_scheduled": {
+      "type": "Heading",
+      "props": {
+        "text": "Monday-Scheduled Carryovers",
+        "level": "h3"
+      }
+    },
+    "text_scheduled_note": {
+      "type": "Text",
+      "props": {
+        "text": "4 tasks holding through week (Today = Tuesday)"
+      }
+    },
+    "badges_scheduled": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_search",
+        "badge_deal",
+        "badge_unlock",
+        "badge_security"
+      ]
+    },
+    "badge_search": {
+      "type": "Badge",
+      "props": {
+        "text": "search-skill",
+        "variant": "outline"
+      }
+    },
+    "badge_deal": {
+      "type": "Badge",
+      "props": {
+        "text": "deal-flow",
+        "variant": "outline"
+      }
+    },
+    "badge_unlock": {
+      "type": "Badge",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "outline"
+      }
+    },
+    "badge_security": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-security-scan",
+        "variant": "outline"
+      }
+    },
+    "section_cleared": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_cleared",
+        "badges_cleared"
+      ]
+    },
+    "heading_cleared": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-Cleared",
+        "level": "h3"
+      }
+    },
+    "badges_cleared": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_trending",
+        "badge_token"
+      ]
+    },
+    "badge_trending": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "secondary"
+      }
+    },
+    "badge_token": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "secondary"
+      }
+    },
+    "section_queue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_queue",
+        "text_queue"
+      ]
+    },
+    "heading_queue": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Queue",
+        "level": "h3"
+      }
+    },
+    "text_queue": {
+      "type": "Text",
+      "props": {
+        "text": "3 PRs (dedup)"
+      }
+    }
+  }
+}
