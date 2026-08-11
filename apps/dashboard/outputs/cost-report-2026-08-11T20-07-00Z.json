@@ -1,0 +1,203 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Cost Report",
+        "description": "2026-08-11 (last 7 days)"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "grid_stats",
+        "sep1",
+        "heading_top3",
+        "table_top3",
+        "sep2",
+        "text_optimization",
+        "sep3",
+        "alert_anomalies",
+        "table_anomalies",
+        "sep4",
+        "heading_projection",
+        "text_projection",
+        "sep5",
+        "link_full_report"
+      ]
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_spent",
+        "stat_wow",
+        "stat_anomalies",
+        "stat_projected"
+      ]
+    },
+    "stat_spent": {
+      "type": "Stat",
+      "props": {
+        "label": "7-day spend",
+        "value": "$379.49",
+        "delta": "+23.9%",
+        "trend": "up"
+      }
+    },
+    "stat_wow": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "79"
+      }
+    },
+    "stat_anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies flagged",
+        "value": "5"
+      }
+    },
+    "stat_projected": {
+      "type": "Stat",
+      "props": {
+        "label": "Projected monthly",
+        "value": "$1,626.39"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_top3": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 by cost",
+        "level": "h3"
+      }
+    },
+    "table_top3": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Cost",
+          "Runs"
+        ],
+        "rows": [
+          [
+            "security-digest",
+            "$69.27",
+            "6"
+          ],
+          [
+            "heartbeat",
+            "$50.92",
+            "6"
+          ],
+          [
+            "github-trending",
+            "$45.05",
+            "6"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_optimization": {
+      "type": "Text",
+      "props": {
+        "text": "No optimization levers found this week (all high-cost skills are output-heavy; cache already utilized).",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "alert_anomalies": {
+      "type": "Alert",
+      "props": {
+        "title": "5 anomalies flagged",
+        "type": "warning"
+      }
+    },
+    "table_anomalies": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Details"
+        ],
+        "rows": [
+          [
+            "token-alert (2026-08-08)",
+            "$7.55 vs µ=$4.15 (2× output, 1.5× cache_read)"
+          ],
+          [
+            "btc-levels (2026-08-08)",
+            "$0.52 vs µ=$0.33 (2.5× cache_read)"
+          ],
+          [
+            "vuln-scanner",
+            "4.5× WoW ($29.54 vs $6.53 prior) — 14.4M cache_read single run"
+          ],
+          [
+            "skill-freshness",
+            "4.1× WoW ($6.49 vs $1.57 prior) — 4× more runs this window"
+          ],
+          [
+            "list-digest",
+            "3.1× WoW ($13.60 vs $4.32 prior) — 3× more runs this window"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_projection": {
+      "type": "Heading",
+      "props": {
+        "text": "30-day projection",
+        "level": "h3"
+      }
+    },
+    "text_projection": {
+      "type": "Text",
+      "props": {
+        "text": "$1,626.39 (Opus cache_read dominates at 52.6% of spend)",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link_full_report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "articles/cost-report-2026-08-11.md",
+        "source": "articles"
+      }
+    }
+  }
+}
