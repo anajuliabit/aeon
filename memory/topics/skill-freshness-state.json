@@ -1,11 +1,9 @@
 {
-  "last_run_at": "2026-08-10T08:08:00Z",
-  "last_verdict": "FRESHNESS_STALE",
-  "last_flagged_fingerprint": "4774f3475673deec0e4da911d37853d32691fa32",
+  "last_run_at": "2026-08-11T09:00:00Z",
+  "last_verdict": "FRESHNESS_OK",
+  "last_flagged_fingerprint": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
   "consumer_count": 43,
-  "dependency_count": 8,
-  "flagged_count": 1,
-  "first_seen_at": {
-    "skill-security-scan:articles/workflow-security-audit-2026-04-11.md": "2026-07-25T08:53:42Z"
-  }
+  "dependency_count": 9,
+  "flagged_count": 0,
+  "first_seen_at": {}
 }
