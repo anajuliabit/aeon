@@ -1,0 +1,420 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health · 2026-08-11"
+      },
+      "children": [
+        "alert-critical",
+        "separator-1",
+        "heading-overview",
+        "stats-overview",
+        "separator-2",
+        "heading-critical",
+        "stack-critical",
+        "separator-3",
+        "heading-degraded",
+        "stack-degraded",
+        "separator-4",
+        "heading-nodata",
+        "text-nodata",
+        "separator-5",
+        "heading-healthy",
+        "stat-healthy-section",
+        "separator-6",
+        "heading-fleet",
+        "stack-fleet",
+        "separator-7",
+        "heading-summary",
+        "stack-summary"
+      ]
+    },
+    "alert-critical": {
+      "type": "Alert",
+      "props": {
+        "title": "CRITICAL(4)",
+        "message": "Systemic: usepod 402 stale carryover — 3 skills",
+        "type": "error"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-overview": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Overview",
+        "level": "h3"
+      }
+    },
+    "stats-overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-critical-count",
+        "stat-degraded-count",
+        "stat-nodata-count",
+        "stat-healthy-count"
+      ]
+    },
+    "stat-critical-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Critical",
+        "value": "4",
+        "trend": "up"
+      }
+    },
+    "stat-degraded-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded",
+        "value": "17"
+      }
+    },
+    "stat-nodata-count": {
+      "type": "Stat",
+      "props": {
+        "label": "No Data",
+        "value": "3"
+      }
+    },
+    "stat-healthy-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "6"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-critical": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL Failures (4)",
+        "level": "h3"
+      }
+    },
+    "stack-critical": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "card-cost-report",
+        "card-unlock-monitor",
+        "card-deal-flow",
+        "card-skill-security"
+      ]
+    },
+    "card-cost-report": {
+      "type": "Card",
+      "props": {
+        "title": "cost-report",
+        "description": "37 fails, 7d down · sdk_opt_in_required (ISS-030 driver)"
+      }
+    },
+    "card-unlock-monitor": {
+      "type": "Card",
+      "props": {
+        "title": "unlock-monitor",
+        "description": "7 fails, 8d down · usepod 402 stale → ISS-031 (next dispatch 10:00Z)"
+      }
+    },
+    "card-deal-flow": {
+      "type": "Card",
+      "props": {
+        "title": "deal-flow",
+        "description": "6 fails, 8d down · usepod 402 stale → ISS-031 (next 14:00Z)"
+      }
+    },
+    "card-skill-security": {
+      "type": "Card",
+      "props": {
+        "title": "skill-security-scan",
+        "description": "3 fails, 8d down · usepod 402 stale → ISS-031 (next 16:00Z)"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED Failures (17 total)",
+        "level": "h3"
+      }
+    },
+    "stack-degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prog-skill-analytics",
+        "prog-reg-monitor",
+        "prog-vuln-scanner",
+        "prog-market-context",
+        "prog-narrative-tracker",
+        "link-degraded-more"
+      ]
+    },
+    "prog-skill-analytics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "label-skill-analytics",
+        "progress-skill-analytics"
+      ]
+    },
+    "label-skill-analytics": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "body"
+      }
+    },
+    "progress-skill-analytics": {
+      "type": "Progress",
+      "props": {
+        "value": 21,
+        "max": 100,
+        "label": "21%"
+      }
+    },
+    "prog-reg-monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "label-reg-monitor",
+        "progress-reg-monitor"
+      ]
+    },
+    "label-reg-monitor": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "body"
+      }
+    },
+    "progress-reg-monitor": {
+      "type": "Progress",
+      "props": {
+        "value": 21,
+        "max": 100,
+        "label": "21%"
+      }
+    },
+    "prog-vuln-scanner": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "label-vuln-scanner",
+        "progress-vuln-scanner"
+      ]
+    },
+    "label-vuln-scanner": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "body"
+      }
+    },
+    "progress-vuln-scanner": {
+      "type": "Progress",
+      "props": {
+        "value": 25,
+        "max": 100,
+        "label": "25%"
+      }
+    },
+    "prog-market-context": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "label-market-context",
+        "progress-market-context"
+      ]
+    },
+    "label-market-context": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh",
+        "variant": "body"
+      }
+    },
+    "progress-market-context": {
+      "type": "Progress",
+      "props": {
+        "value": 32,
+        "max": 100,
+        "label": "32%"
+      }
+    },
+    "prog-narrative-tracker": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "label-narrative-tracker",
+        "progress-narrative-tracker"
+      ]
+    },
+    "label-narrative-tracker": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "body"
+      }
+    },
+    "progress-narrative-tracker": {
+      "type": "Progress",
+      "props": {
+        "value": 33,
+        "max": 100,
+        "label": "33%"
+      }
+    },
+    "link-degraded-more": {
+      "type": "Link",
+      "props": {
+        "label": "+12 more — see memory/issues/INDEX.md",
+        "href": "#memory/issues/INDEX.md"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "text-nodata": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch · operator-scorecard · fork-skill-gap",
+        "variant": "body"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "stat-healthy-section": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "6"
+      }
+    },
+    "separator-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h3"
+      }
+    },
+    "stack-fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-fleet-recovering",
+        "text-token-alert"
+      ]
+    },
+    "text-fleet-recovering": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet recovering — 16→4 CRITICAL post-usepod self-heal, 11+ post-burst clean-fires",
+        "variant": "body"
+      }
+    },
+    "text-token-alert": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert cleared from ISS-031",
+        "variant": "body"
+      }
+    },
+    "separator-7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "stack-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-open-issues",
+        "stat-resolved-issues"
+      ]
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "stat-resolved-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}

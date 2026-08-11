@@ -1,21 +1,18 @@
-*skill health — 2026-08-10*
-HEALTH: CRITICAL(16) [systemic: api.usepod.ai 402 — 21 skills, ISS-029 recurrence]
+*skill health · 2026-08-11*
+HEALTH: CRITICAL(4)  [systemic: usepod 402 stale carryover — 3 skills]
 
-🔴 CRITICAL (16) — top 5 by severity
-- weekly-shiplog — 12 fails, 21d down — WAIT-API (usepod 402) → ISS-031
-- cost-report — 15 fails, 6d down — WAIT-API (usepod 402) → ISS-031
-- btc-levels — 17 fails, <1d down — WAIT-API (usepod 402) → ISS-031
-- daily-routine — 14 fails, 1.5d down — WAIT-API (usepod 402) → ISS-031
-- thought-review — 15 fails, <1d down — WAIT-API (usepod 402) → ISS-031
-+11 more (heartbeat/skill-freshness/security-digest/morning-brief/github-trending/unlock-monitor/token-alert/deal-flow/goal-tracker/list-digest/skill-security-scan) — same signature — see memory/issues/INDEX.md
+🔴 CRITICAL
+- cost-report — 37 fails, 7d down · sdk_opt_in_required (ISS-030 driver)
+- unlock-monitor — 7 fails, 8d down · usepod 402 stale → ISS-031 (next dispatch 10:00Z)
+- deal-flow — 6 fails, 8d down · usepod 402 stale → ISS-031 (next 14:00Z)
+- skill-security-scan — 3 fails, 8d down · usepod 402 stale → ISS-031 (next 16:00Z)
 
-🟡 DEGRADED (13): action-converter, aixbt-pulse, defi-monitor, market-context-refresh, narrative-tracker, reflect, reg-monitor, search-skill, self-improve, skill-analytics, skill-evals, skill-health, vuln-scanner
+🟡 DEGRADED (17)
+- skill-analytics 21% · reg-monitor 21% · vuln-scanner 25% · market-context-refresh 32% · narrative-tracker 33%
++12 more — see memory/issues/INDEX.md
 
-⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
-🟢 HEALTHY: 5
+⚪ NO DATA (3): autoresearch · operator-scorecard · fork-skill-gap
+🟢 HEALTHY: 6
 
-composition shock from 8-09 (0→16 CRITICAL in 24h) — every failing skill lands identical usepod 402 payload, same byte-for-byte as ISS-029. self-improve exit-gate re-engages by ISS-031 severity, not queue depth.
-
-fix ownership: operator. either top up usepod, or flip aeon.yml gateway.provider from direct → bankr/virtuals. aeon cannot self-repair — the failure surface is the LLM proxy aeon runs on.
-
-open issues: 15 · resolved this run: 0 · filed this run: 1 (ISS-031)
+fleet recovering — 16→4 CRITICAL post-usepod self-heal, 11+ post-burst clean-fires. token-alert cleared from ISS-031.
+open issues: 15 · resolved this run: 0

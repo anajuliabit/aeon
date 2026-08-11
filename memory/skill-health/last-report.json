@@ -1,18 +1,19 @@
 {
-  "hash": "253ed700e2444e8667f4ce33f2cf34c8c2e7cd07fe2ef6591c6192e7acf08f76",
-  "last_notified_at": "2026-08-10T19:14:12Z",
-  "last_run_at": "2026-08-10T19:14:12Z",
+  "hash": "81cb735fe19120bc2c668fb6ae4096ff80ef5f315585b1ed18e2a9fbe62c71e1",
+  "last_notified_at": "2026-08-11T18:41:34Z",
+  "last_run_at": "2026-08-11T18:41:34Z",
   "classification": {
-    "critical": ["btc-levels", "cost-report", "daily-routine", "deal-flow", "goal-tracker", "github-trending", "heartbeat", "list-digest", "morning-brief", "security-digest", "skill-freshness", "skill-security-scan", "thought-review", "token-alert", "unlock-monitor", "weekly-shiplog"],
-    "degraded": ["action-converter", "aixbt-pulse", "defi-monitor", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner"],
+    "critical": ["cost-report", "deal-flow", "skill-security-scan", "unlock-monitor"],
+    "degraded": ["action-converter", "aixbt-pulse", "defi-monitor", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner", "weekly-shiplog"],
     "flapping": [],
-    "warning": ["agent-buzz", "defi-overview", "evening-recap", "on-chain-monitor", "token-movers", "token-pick"],
-    "healthy_count": 5,
+    "warning": ["agent-buzz", "btc-levels", "daily-routine", "defi-overview", "evening-recap", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
+    "healthy_count": 6,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "SYSTEMIC: 16 CRITICAL + 5 WARNING skills on api.usepod.ai 402 — same signature as ISS-029 (2026-08-03, resolved). Fleet-wide dispatch failure recurrence in 15:10Z-18:03Z wave. Per skill-health constraint (never edit Resolved issues), filed as NEW issue ISS-031 with related:ISS-029 pointer. Composition SHOCK from 8-09 hash 71d8c76e: 0→16 CRITICAL, 17→13 DEGRADED, 15→6 WARNING, 8→5 HEALTHY. Notify gate: current_hash 253ed700 != prev 71d8c76e AND massive composition delta → notify. cost-report Mon 8-10 07Z deciding-test INCONCLUSIVE (signature = usepod 402, not sdk_opt_in_required — ISS-030 counter frozen n=1). ISS-027 12Z 8-skill batch d44 dark rolls unchanged. `[[chronic-cohort-alone-degraded]]` regime pattern BREAKS today (regime required no CRITICAL — now 16 CRITICAL). Aeon cannot self-repair — operator-gated (usepod top-up or gateway.provider flip in aeon.yml from direct → bankr/virtuals). SKILL_HEALTH_PARTIAL — skill-runs sandbox-blocked (permission gate), cron-state-only classification.",
+  "systemic": "SYSTEMIC: 3 skills stuck on api.usepod.ai 402 stale-state carryover (unlock-monitor, deal-flow, skill-security-scan) — all weekly-cadence skills whose next dispatch tick clears the marker (10:00Z / 14:00Z / 16:00Z today). cost-report is a distinct signature (sdk_opt_in_required, ISS-030 chronic driver). Composition RECOVERY from 8-10 hash 253ed700: 16→4 CRITICAL (12-skill contraction), 13→17 DEGRADED, 6→13 WARNING (recovered but sub-0.8 sr carrying historical burst penalty), 5→6 HEALTHY (token-alert lifted). Notify gate: current_hash 81cb735f != prev 253ed700 → notify. usepod gateway self-healed overnight — 11+ post-burst clean-fires observed (thought-review 07:52Z through agent-buzz 17:47Z). ISS-031 stays open (3 stale-state carryover skills); token-alert removed from ISS-031 affected_skills (sr 0.81 = HEALTHY). SKILL_HEALTH_PARTIAL — skill-runs sandbox-blocked, cron-state-only classification.",
   "open_issues": 15,
   "resolved_this_run": 0,
-  "filed_this_run": 1,
-  "prev_hash": "71d8c76ed1e09e5ef2dd9e93c11d691ed418579d5f1e1ed7a7ccbfa6f31e4c79"
+  "filed_this_run": 0,
+  "removed_from_iss031": ["token-alert"],
+  "prev_hash": "253ed700e2444e8667f4ce33f2cf34c8c2e7cd07fe2ef6591c6192e7acf08f76"
 }
