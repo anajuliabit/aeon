@@ -1,0 +1,71 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading",
+        "details",
+        "benefit",
+        "separator",
+        "pr_link",
+        "timestamp"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Token Alert Vol Baseline Clarified",
+        "level": "h3"
+      }
+    },
+    "details": {
+      "type": "Text",
+      "props": {
+        "text": "Baseline clarified as daily-granular (5 daily prints, not 5 logged runs)."
+      }
+    },
+    "benefit": {
+      "type": "Text",
+      "props": {
+        "text": "This cuts intraday-re-check drift risk.",
+        "variant": "body"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #179",
+        "href": "https://github.com/anajuliabit/aeon/pull/179",
+        "source": "github.com/anajuliabit/aeon"
+      }
+    },
+    "timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "Flagged 2026-08-11 13:44Z — hygiene note",
+        "variant": "caption"
+      }
+    }
+  }
+}

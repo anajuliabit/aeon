@@ -1,1 +1,1 @@
-self-improve: 3+ open PRs (queue-full — #173/#172/#171) — waiting for review batch 8-09
+self-improve: clarified token-alert vol baseline as daily-granular (5 daily prints not 5 logged runs) — cuts intraday-re-check drift risk flagged 8-11 13:44Z hygiene note. PR: https://github.com/anajuliabit/aeon/pull/179
