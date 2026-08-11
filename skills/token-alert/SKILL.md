@@ -44,7 +44,7 @@ Steps:
    - Compare against last logged price in memory/logs/
 2. Alert if any of these conditions are met (evaluate independently per token):
    - **24h price change** — `|change_24h| >= threshold` (default 10%, or the token-specific override from the Tracked Tokens table).
-   - **Volume spike** — `current_volume_24h >= 3 * mean(volume_24h over the last 5 logged runs)`. **Skip this check if fewer than 5 historical points exist** in `memory/logs/` for the token — log `volume-spike: skipped (n=<count>, need 5)` and continue. Do not invent a baseline.
+   - **Volume spike** — `current_volume_24h >= 3 * mean(volume_24h over the last 5 daily prints)`. **Baseline is daily-granular**: use the most recent logged `volume_24h` per UTC day and take the 5 most recent distinct days from `memory/logs/` — never mix multiple same-day prints into the mean. Intraday re-checks (e.g. operator-invoked runs 1–2h after a scheduled fire) share the same 5-day mean by construction; only `current_volume_24h` shifts. **Skip this check if fewer than 5 daily points exist** — log `volume-spike: skipped (n=<count>, need 5)` and continue. Do not invent a baseline.
    - **Threshold cross** — current price `<= Price Floor` or `>= Price Ceiling` from the Tracked Tokens table AND yesterday's logged price was on the other side of the level (i.e. an actual crossing this run, not a sustained breach). Skip with `threshold-cross: skipped (no Floor/Ceiling configured)` for any token without levels.
 3. If any alerts triggered, send via `./notify`:
    ```
