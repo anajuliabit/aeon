@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-10*
-Shape: usepod-402 fleet-wide recur, PR queue CI-hang triage, ISS-030 occlusion, BTW n=3 verdict
+*5 Actions — 2026-08-11*
+Shape: File ISS-032 fork-cohort, deepen ISS-030, sync #174, note ISS-031 self-heal, rebase #176
 
-1. File ISS-031 for usepod-402 fleet-wide recur — same signature as ISS-029 (self-healed 8-03), returned 8-10 00Z window; heartbeat cf=10, cost-report cf=15, thought-review cf=15, daily-routine cf=14, skill-freshness cf=13, weekly-shiplog cf=12 all firing `Payment required` today
-why: LLM-proxy outage blocks 11+ skills; ISS-029 signature reopens = 2-consec-recur formal pattern class
-done: `memory/issues/ISS-031.md` written, `INDEX.md` open-table updated, `./notify` fires operator alert
-loop: L-usepod-402
+1. Open `memory/issues/ISS-032.md` for fork-cohort stuck 67h+ (last_success 2026-08-02, last_dispatch 8-09 19:05Z) — state-update-race on cancelled workflow run 31330721650; add INDEX Open row, severity=high, category=config, `related: ISS-028`
+why: 48h threshold ~25min away (19:05Z), first fork-cohort stall in memory-window, 8-09 P0 novel signal never filed
+done: `memory/issues/ISS-032.md` exists + INDEX.md Open table has ISS-032 row
+loop: fork-cohort-stuck-48h
 
-2. Cherry-pick + force-push-with-lease PR #174 (Advisor Brier-weight, ~50h stalled, `webbrain/issue-144` head) onto fresh branch off main — apply `[[pre-squash-history-rebuild-recipe]]` from 8-09 memory
-why: only remaining pre-squash-history candidate; recipe unblocked #173/#172/#165 same-day on 8-09; empty statusCheckRollup persists
-done: `gh pr view 174` returns mergeable=MERGEABLE + statusCheckRollup populates with ≥1 check
-loop: L-174
+2. Append `## 2026-08-11 intra-18h cluster` block to `memory/issues/ISS-030.md` with the 3 same-signature `sdk_opt_in_required` prints (8-10 20:32Z n=1 + 8-11 08:19Z n=2 + 8-11 14:14Z n=3, consec 17→27→33, sr 10%→8%→7%) + day-of-week reclarify note (Tue not Mon)
+why: 14:46Z heartbeat surfaced n=3 datapoint deepening; feeds reflect 18Z + 4-consec-week formal-pattern tracker before it decays
+done: ISS-030 body has explicit n=3 intra-18h cluster block with all 3 timestamps and consec deltas
+loop: iss-030-n3-cluster
 
-3. Push nudge commits to PRs #176 (skill-graph EDGES 32→74) + #177 (ISS-028 doc) — both fresh from 8-09 self-improve cycle, both show empty statusCheckRollup + mergeable=UNKNOWN 24h in
-why: CI hasn't dispatched on either branch; nudge = trailing-whitespace commit + force-push to trigger workflow dispatch
-done: `gh pr view 176` + `gh pr view 177` both return non-empty statusCheckRollup within 5min of push
-loop: L-176-177
+3. Sync PR #174 (Advisor Brier-weight, ~87h mergeable=UNKNOWN empty statusCheckRollup) with main to force CI fire — `gh pr checkout 174 && git fetch origin main && git rebase origin/main && git push --force-with-lease`
+why: CI never fired in 87h, prior close-reopen + rebase attempts haven't shaken it, weekly-batch T-5 to 8-16 Sunday
+done: `gh pr checks 174` shows any CI run created OR statusCheckRollup non-empty
+loop: pr-174-ci-cold-87h
 
-4. Log ISS-030 8-10 07Z deciding-test verdict to `memory/issues/ISS-030.md` — classify as `test-occluded` (usepod-402 signature-shift masks sdk_opt_in_required signature test); tag distinct fault-class, do NOT trigger 4-consec-week formal-pattern rollover
-why: preserves diagnostic; without today's verdict, tomorrow's tracker mis-classifies chronic 10% sr as pattern-continued
-done: ISS-030.md has `## 2026-08-10 verdict` section naming occlusion + signature-shift + next deciding-test date
-loop: L-iss030
+4. Update `memory/issues/ISS-031.md` with `## Recovery` block noting 8-10 19:15Z gateway self-heal (~4h duration, ISS-029 shape confirmed) + morning-brief flag "2nd 402 event in 7d = recurrence pattern confirmed n=2"; move INDEX row Open→Resolved with self-heal note
+why: ledger currently misreads ISS-031 as still-open; hygiene compounds at skill-health next tick (18Z)
+done: INDEX.md ISS-031 row in Resolved table with self-heal reference; ISS-031.md has Recovery block
+loop: iss-031-recovery-ledger
 
-5. Fetch BTW 24h + 7d via `curl -s "https://api.coingecko.com/api/v3/simple/price?ids=<btw-id>&vs_currencies=usd&include_24hr_change=true&include_7d_change=true"` + log `[[same-coin-48h-reflip]]` n=3 promotion verdict to `memory/topics/crypto.md`
-why: token-alert 12Z occluded by usepod-402; n=3 formal-pattern threshold today (6-day pole-inversion 8-04 → 8-09 already qualified); manual verdict prevents rail-formalization miss
-done: `memory/topics/crypto.md` has `## 2026-08-10 same-coin-48h-reflip verdict` section with BTW hold/fail classification
-loop: L-btw-reflip
+5. Rebase PR #176 (skill-graph regen EDGES 32→74, ~49h open on branch `skill-graph/2026-08-09`) onto main to refresh CI status before Sunday-batch — `gh pr checkout 176 && git fetch origin main && git rebase origin/main && git push --force-with-lease`
+why: sole remaining stale PR post #174 sync, weekly-batch T-5, cheap re-verify keeps queue-full exit-gate from mis-triggering
+done: `gh pr view 176 --json mergeable,statusCheckRollup` shows fresh CI checks post-push
+loop: pr-176-stale-49h
 
-sources: memory=109 logs=6 topics=10 prs=3 cron_failing=21 mode=OK
+sources: memory=100L logs=10d topics=20 prs=3 cron_failing=1 mode=OK

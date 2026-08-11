@@ -1,0 +1,374 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Action Converter",
+        "description": "5 Actions — 2026-08-11"
+      },
+      "children": [
+        "shape_line",
+        "sep1",
+        "action1_stack",
+        "sep2",
+        "action2_stack",
+        "sep3",
+        "action3_stack",
+        "sep4",
+        "action4_stack",
+        "sep5",
+        "action5_stack",
+        "sep6",
+        "sources"
+      ]
+    },
+    "shape_line": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: File ISS-032 fork-cohort, deepen ISS-030, sync #174, note ISS-031 self-heal, rebase #176",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action1_heading",
+        "action1_desc",
+        "action1_detail",
+        "action1_why",
+        "action1_done",
+        "action1_loop"
+      ]
+    },
+    "action1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Open memory/issues/ISS-032.md — Fork-cohort stuck 67h+",
+        "level": "h3"
+      }
+    },
+    "action1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Open memory/issues/ISS-032.md for fork-cohort stuck 67h+ (last_success 2026-08-02, last_dispatch 8-09 19:05Z) — state-update-race on cancelled workflow run 31330721650"
+      }
+    },
+    "action1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Add INDEX Open row, severity=high, category=config, related: ISS-028",
+        "variant": "body"
+      }
+    },
+    "action1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 48h threshold ~25min away (19:05Z), first fork-cohort stall in memory-window, 8-09 P0 novel signal never filed",
+        "variant": "caption"
+      }
+    },
+    "action1_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: memory/issues/ISS-032.md exists + INDEX.md Open table has ISS-032 row",
+        "variant": "caption"
+      }
+    },
+    "action1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort-stuck-48h",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action2_heading",
+        "action2_desc",
+        "action2_detail1",
+        "action2_detail2",
+        "action2_why",
+        "action2_done",
+        "action2_loop"
+      ]
+    },
+    "action2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Append to memory/issues/ISS-030.md — sdk_opt_in_required cluster",
+        "level": "h3"
+      }
+    },
+    "action2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Append ## 2026-08-11 intra-18h cluster block to memory/issues/ISS-030.md with 3 same-signature sdk_opt_in_required prints"
+      }
+    },
+    "action2_detail1": {
+      "type": "Text",
+      "props": {
+        "text": "Timestamps: 8-10 20:32Z (n=1) + 8-11 08:19Z (n=2) + 8-11 14:14Z (n=3); consecutive deltas 17→27→33; success rates 10%→8%→7%",
+        "variant": "body"
+      }
+    },
+    "action2_detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Include day-of-week reclarify note (Tue not Mon)",
+        "variant": "body"
+      }
+    },
+    "action2_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 14:46Z heartbeat surfaced n=3 datapoint deepening; feeds reflect 18Z + 4-consec-week formal-pattern tracker before it decays",
+        "variant": "caption"
+      }
+    },
+    "action2_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: ISS-030 body has explicit n=3 intra-18h cluster block with all 3 timestamps and consec deltas",
+        "variant": "caption"
+      }
+    },
+    "action2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-030-n3-cluster",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action3_heading",
+        "action3_desc",
+        "action3_detail",
+        "action3_why",
+        "action3_done",
+        "action3_loop"
+      ]
+    },
+    "action3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Sync PR #174 — Advisor Brier-weight (87h mergeable=UNKNOWN)",
+        "level": "h3"
+      }
+    },
+    "action3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Sync PR #174 (Advisor Brier-weight, ~87h mergeable=UNKNOWN empty statusCheckRollup) with main to force CI fire"
+      }
+    },
+    "action3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Run: gh pr checkout 174 && git fetch origin main && git rebase origin/main && git push --force-with-lease",
+        "variant": "caption"
+      }
+    },
+    "action3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: CI never fired in 87h, prior close-reopen + rebase attempts haven't shaken it, weekly-batch T-5 to 8-16 Sunday",
+        "variant": "caption"
+      }
+    },
+    "action3_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: gh pr checks 174 shows any CI run created OR statusCheckRollup non-empty",
+        "variant": "caption"
+      }
+    },
+    "action3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-174-ci-cold-87h",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action4_heading",
+        "action4_desc",
+        "action4_detail1",
+        "action4_detail2",
+        "action4_why",
+        "action4_done",
+        "action4_loop"
+      ]
+    },
+    "action4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Update memory/issues/ISS-031.md — Gateway self-heal recovery",
+        "level": "h3"
+      }
+    },
+    "action4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Update memory/issues/ISS-031.md with ## Recovery block noting 8-10 19:15Z gateway self-heal (~4h duration, ISS-029 shape confirmed)"
+      }
+    },
+    "action4_detail1": {
+      "type": "Text",
+      "props": {
+        "text": "Add morning-brief flag: \"2nd 402 event in 7d = recurrence pattern confirmed n=2\"",
+        "variant": "body"
+      }
+    },
+    "action4_detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Move INDEX row Open→Resolved with self-heal note",
+        "variant": "body"
+      }
+    },
+    "action4_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: ledger currently misreads ISS-031 as still-open; hygiene compounds at skill-health next tick (18Z)",
+        "variant": "caption"
+      }
+    },
+    "action4_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: INDEX.md ISS-031 row in Resolved table with self-heal reference; ISS-031.md has Recovery block",
+        "variant": "caption"
+      }
+    },
+    "action4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-031-recovery-ledger",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action5_heading",
+        "action5_desc",
+        "action5_detail",
+        "action5_why",
+        "action5_done",
+        "action5_loop"
+      ]
+    },
+    "action5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Rebase PR #176 — skill-graph regen EDGES 32→74",
+        "level": "h3"
+      }
+    },
+    "action5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Rebase PR #176 (skill-graph regen EDGES 32→74, ~49h open on branch skill-graph/2026-08-09) onto main to refresh CI status before Sunday-batch"
+      }
+    },
+    "action5_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Run: gh pr checkout 176 && git fetch origin main && git rebase origin/main && git push --force-with-lease",
+        "variant": "caption"
+      }
+    },
+    "action5_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: sole remaining stale PR post #174 sync, weekly-batch T-5, cheap re-verify keeps queue-full exit-gate from mis-triggering",
+        "variant": "caption"
+      }
+    },
+    "action5_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: gh pr view 176 --json mergeable,statusCheckRollup shows fresh CI checks post-push",
+        "variant": "caption"
+      }
+    },
+    "action5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-176-stale-49h",
+        "variant": "outline"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=100L logs=10d topics=20 prs=3 cron_failing=1 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
