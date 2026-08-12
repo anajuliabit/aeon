@@ -1,0 +1,308 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-12"
+      },
+      "children": [
+        "intro",
+        "sep1",
+        "heading",
+        "tweets_container",
+        "sep2",
+        "footer"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "quiet defi-curator day — only 0xTindorr's pendle PT-loop breakdown carries substance; rest is CT chatter.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi researchers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweets_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3"
+      ]
+    },
+    "tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1_header",
+        "tweet1_text",
+        "tweet1_engagement"
+      ]
+    },
+    "tweet1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_author",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_author": {
+      "type": "Text",
+      "props": {
+        "text": "0xTindorr",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/0xTindorr/status/2087288698446749919"
+      },
+      "children": []
+    },
+    "tweet1_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 PT-loop yields published w/ APY table on pendle; retail-visible now so the edge decays fast"
+      },
+      "children": []
+    },
+    "tweet1_engagement": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_likes",
+        "tweet1_retweets"
+      ]
+    },
+    "tweet1_likes": {
+      "type": "Stat",
+      "props": {
+        "value": "97",
+        "label": "Likes"
+      },
+      "children": []
+    },
+    "tweet1_retweets": {
+      "type": "Stat",
+      "props": {
+        "value": "10",
+        "label": "Retweets"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2_header",
+        "tweet2_text",
+        "tweet2_engagement"
+      ]
+    },
+    "tweet2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_author",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_author": {
+      "type": "Text",
+      "props": {
+        "text": "DefiIgnas",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DefiIgnas/status/2087291392091361752"
+      },
+      "children": []
+    },
+    "tweet2_text": {
+      "type": "Text",
+      "props": {
+        "text": "correction: polymarket still runs on polygon PoS, not a proper L2; constrains custody + settlement takes on it"
+      },
+      "children": []
+    },
+    "tweet2_engagement": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_likes",
+        "tweet2_retweets"
+      ]
+    },
+    "tweet2_likes": {
+      "type": "Stat",
+      "props": {
+        "value": "55",
+        "label": "Likes"
+      },
+      "children": []
+    },
+    "tweet2_retweets": {
+      "type": "Stat",
+      "props": {
+        "value": "3",
+        "label": "Retweets"
+      },
+      "children": []
+    },
+    "tweet3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3_header",
+        "tweet3_text",
+        "tweet3_engagement"
+      ]
+    },
+    "tweet3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3_author",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_author": {
+      "type": "Text",
+      "props": {
+        "text": "Flowslikeosmo",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2087298040210305362"
+      },
+      "children": []
+    },
+    "tweet3_text": {
+      "type": "Text",
+      "props": {
+        "text": "bullish tag on $CARDS + $SEALED via coindesk pokémon-tokenization piece; first ticker-level print on collectible-tokenization axis"
+      },
+      "children": []
+    },
+    "tweet3_engagement": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3_likes",
+        "tweet3_retweets"
+      ]
+    },
+    "tweet3_likes": {
+      "type": "Stat",
+      "props": {
+        "value": "20",
+        "label": "Likes"
+      },
+      "children": []
+    },
+    "tweet3_retweets": {
+      "type": "Stat",
+      "props": {
+        "value": "4",
+        "label": "Retweets"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_sources",
+        "footer_status"
+      ]
+    },
+    "footer_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(3)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "footer_status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
