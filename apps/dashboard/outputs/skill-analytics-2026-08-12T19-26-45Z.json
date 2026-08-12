@@ -1,0 +1,386 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics — 2026-08-12",
+        "description": "10 scheduled skills didn't run this window — token-movers (ISS-027 12Z-batch dark d46)"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "window_stats_section",
+        "separator_1",
+        "critical_section",
+        "separator_2",
+        "degraded_section",
+        "separator_3",
+        "top_runs_section",
+        "separator_4",
+        "report_section"
+      ]
+    },
+    "window_stats_section": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat_window",
+        "stat_runs",
+        "stat_skills",
+        "stat_success",
+        "stat_anomalies"
+      ]
+    },
+    "stat_window": {
+      "type": "Stat",
+      "props": {
+        "label": "Window",
+        "value": "last 7d"
+      }
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "290"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "32"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Success",
+        "value": "58%"
+      }
+    },
+    "stat_anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "26"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_critical",
+        "critical_alert_1",
+        "critical_alert_2",
+        "critical_alert_3",
+        "critical_alert_4",
+        "critical_alert_5",
+        "critical_alert_6"
+      ]
+    },
+    "heading_critical": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Critical (14 anomalies)",
+        "level": "h2"
+      }
+    },
+    "critical_alert_1": {
+      "type": "Alert",
+      "props": {
+        "title": "token-movers / on-chain-monitor / defi-monitor / defi-overview / token-pick / market-context-refresh / narrative-tracker / aixbt-pulse",
+        "message": "SILENT (ISS-027 12Z-batch dark d46, 8-skill cluster silent since 2026-06-28)",
+        "type": "error"
+      }
+    },
+    "critical_alert_2": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-skill-gap / operator-scorecard",
+        "message": "SILENT (weekly slots missed, no cron-state entry)",
+        "type": "error"
+      }
+    },
+    "critical_alert_3": {
+      "type": "Alert",
+      "props": {
+        "title": "unlock-monitor",
+        "message": "ALL_FAIL: 5/5 failed (consec=7, usepod payment-required)",
+        "type": "error"
+      }
+    },
+    "critical_alert_4": {
+      "type": "Alert",
+      "props": {
+        "title": "deal-flow",
+        "message": "ALL_FAIL: 4/4 failed (consec=6)",
+        "type": "error"
+      }
+    },
+    "critical_alert_5": {
+      "type": "Alert",
+      "props": {
+        "title": "search-skill",
+        "message": "ALL_FAIL: 2/2 failed",
+        "type": "error"
+      }
+    },
+    "critical_alert_6": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-security-scan",
+        "message": "ALL_FAIL: 2/2 failed (consec=3)",
+        "type": "error"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_degraded",
+        "degraded_alert_1",
+        "degraded_alert_2",
+        "degraded_alert_3",
+        "degraded_alert_4",
+        "degraded_alert_5"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 Degraded (12 anomalies, top 5)",
+        "level": "h2"
+      }
+    },
+    "degraded_alert_1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "3% (1/34); ISS-030 organic recovery 8-11, 8-17 next deciding-test",
+        "type": "warning"
+      }
+    },
+    "degraded_alert_2": {
+      "type": "Alert",
+      "props": {
+        "title": "weekly-shiplog",
+        "message": "10% (1/10)",
+        "type": "warning"
+      }
+    },
+    "degraded_alert_3": {
+      "type": "Alert",
+      "props": {
+        "title": "daily-routine",
+        "message": "38% (6/16)",
+        "type": "warning"
+      }
+    },
+    "degraded_alert_4": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-freshness",
+        "message": "44% (7/16)",
+        "type": "warning"
+      }
+    },
+    "degraded_alert_5": {
+      "type": "Alert",
+      "props": {
+        "title": "github-trending",
+        "message": "50% (6/12)",
+        "type": "warning"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top_runs_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_runs",
+        "top_runs_grid"
+      ]
+    },
+    "heading_top_runs": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by runs",
+        "level": "h2"
+      }
+    },
+    "top_runs_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "top_run_1",
+        "top_run_2",
+        "top_run_3"
+      ]
+    },
+    "top_run_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_btc_name",
+        "text_btc_runs",
+        "progress_btc"
+      ]
+    },
+    "text_btc_name": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels",
+        "variant": "lead"
+      }
+    },
+    "text_btc_runs": {
+      "type": "Text",
+      "props": {
+        "text": "43 runs",
+        "variant": "body"
+      }
+    },
+    "progress_btc": {
+      "type": "Progress",
+      "props": {
+        "value": 74,
+        "label": "74% success"
+      }
+    },
+    "top_run_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_cost_name",
+        "text_cost_runs",
+        "progress_cost"
+      ]
+    },
+    "text_cost_name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "text_cost_runs": {
+      "type": "Text",
+      "props": {
+        "text": "34 runs",
+        "variant": "body"
+      }
+    },
+    "progress_cost": {
+      "type": "Progress",
+      "props": {
+        "value": 3,
+        "label": "3% success"
+      }
+    },
+    "top_run_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_heartbeat_name",
+        "text_heartbeat_runs",
+        "progress_heartbeat"
+      ]
+    },
+    "text_heartbeat_name": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat",
+        "variant": "lead"
+      }
+    },
+    "text_heartbeat_runs": {
+      "type": "Text",
+      "props": {
+        "text": "27 runs",
+        "variant": "body"
+      }
+    },
+    "progress_heartbeat": {
+      "type": "Progress",
+      "props": {
+        "value": 67,
+        "label": "67% success"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "report_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_full_label",
+        "link_full_report"
+      ]
+    },
+    "text_full_label": {
+      "type": "Text",
+      "props": {
+        "text": "Full report:",
+        "variant": "muted"
+      }
+    },
+    "link_full_report": {
+      "type": "Link",
+      "props": {
+        "label": "articles/skill-analytics-2026-08-12.md",
+        "href": "articles/skill-analytics-2026-08-12.md"
+      }
+    }
+  }
+}

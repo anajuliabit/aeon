@@ -1,54 +1,33 @@
 {
   "version": "1",
-  "generated_at": "2026-08-05T19:47:00Z",
+  "generated_at": "2026-08-12T19:20:00Z",
   "skill": "skill-analytics",
-  "title": "Skill Analytics — 2026-08-05",
+  "title": "Skill Analytics — 2026-08-12",
   "spec": {
     "type": "Stack",
     "props": {"direction": "vertical", "gap": "md"},
     "children": [
-      {"type": "Alert", "props": {"variant": "destructive", "children": "24 anomaly flag(s) raised — 10 SILENT + 14 LOW_SUCCESS — see Anomalies section"}},
-      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-08-05"}},
-      {"type": "Text", "props": {"variant": "muted", "children": "10 scheduled skills didn't run this window — token-movers"}},
+      {"type": "Alert", "props": {"variant": "destructive", "children": "26 anomaly flag(s) raised — see Anomalies section"}},
+      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-08-12"}},
+      {"type": "Text", "props": {"variant": "muted", "children": "10 scheduled skill(s) didn't run this window — token-movers (ISS-027 12Z-batch dark d46, 8-skill cluster silent since 2026-06-28)"}},
       {"type": "Grid", "props": {"columns": 4, "gap": "sm"}, "children": [
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Total runs"}},
-          {"type": "Heading", "props": {"level": 3, "children": "246"}}
+          {"type": "Heading", "props": {"level": 3, "children": "290"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Active skills"}},
-          {"type": "Heading", "props": {"level": 3, "children": "31"}}
+          {"type": "Heading", "props": {"level": 3, "children": "32"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Success rate"}},
-          {"type": "Heading", "props": {"level": 3, "children": "75.2%"}}
+          {"type": "Heading", "props": {"level": 3, "children": "58%"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Anomalies"}},
-          {"type": "Heading", "props": {"level": 3, "children": "24"}}
+          {"type": "Heading", "props": {"level": 3, "children": "26"}}
         ]}}
       ]},
-      {"type": "Heading", "props": {"level": 3, "children": "Silent scheduled skills (10)"}},
-      {"type": "Table", "props": {
-        "columns": [
-          {"key": "flag", "header": "Flag"},
-          {"key": "skill", "header": "Skill"},
-          {"key": "schedule", "header": "Schedule"},
-          {"key": "action", "header": "Action"}
-        ],
-        "rows": [
-          {"flag": "🔴 SILENT", "skill": "token-movers", "schedule": "10 12 * * *", "action": "ISS-027 batch-dark d39+"},
-          {"flag": "🔴 SILENT", "skill": "on-chain-monitor", "schedule": "20 12 * * *", "action": "ISS-027 batch-dark"},
-          {"flag": "🔴 SILENT", "skill": "defi-monitor", "schedule": "40 12 * * *", "action": "ISS-027 batch-dark"},
-          {"flag": "🔴 SILENT", "skill": "defi-overview", "schedule": "0 12 * * *", "action": "ISS-027 batch-dark"},
-          {"flag": "🔴 SILENT", "skill": "market-context-refresh", "schedule": "0 13 * * *", "action": "ISS-027 batch-dark"},
-          {"flag": "🔴 SILENT", "skill": "narrative-tracker", "schedule": "30 13 * * *", "action": "ISS-027 batch-dark"},
-          {"flag": "🔴 SILENT", "skill": "aixbt-pulse", "schedule": "0 9,21 * * *", "action": "ISS-027 batch-dark"},
-          {"flag": "🔴 SILENT", "skill": "weekly-shiplog", "schedule": "0 9 * * 1", "action": "ISS-029 Mon slot miss — next 8-10"},
-          {"flag": "🔴 SILENT", "skill": "operator-scorecard", "schedule": "30 10 * * 1", "action": "ISS-029 Mon slot miss — never run"},
-          {"flag": "🔴 SILENT", "skill": "fork-skill-gap", "schedule": "0 21 * * 0", "action": "Check scheduler dispatch"}
-        ]
-      }},
       {"type": "Heading", "props": {"level": 3, "children": "Top runners"}},
       {"type": "Table", "props": {
         "columns": [
@@ -59,42 +38,40 @@
           {"key": "exit", "header": "Dominant exit"}
         ],
         "rows": [
-          {"rank": "1", "skill": "btc-levels", "runs": "39", "success": "89.7%", "exit": "ok"},
-          {"rank": "2", "skill": "heartbeat", "runs": "21", "success": "81.0%", "exit": "ok"},
-          {"rank": "3", "skill": "cost-report", "runs": "19", "success": "5.3%", "exit": "error"},
-          {"rank": "4", "skill": "thought-review", "runs": "19", "success": "73.7%", "exit": "ok"},
-          {"rank": "5", "skill": "daily-routine", "runs": "12", "success": "58.3%", "exit": "ok"},
-          {"rank": "6", "skill": "security-digest", "runs": "11", "success": "72.7%", "exit": "ok"},
-          {"rank": "7", "skill": "action-converter", "runs": "9", "success": "77.8%", "exit": "ok"},
-          {"rank": "8", "skill": "agent-buzz", "runs": "9", "success": "88.9%", "exit": "ok"},
-          {"rank": "9", "skill": "goal-tracker", "runs": "9", "success": "77.8%", "exit": "ok"},
-          {"rank": "10", "skill": "list-digest", "runs": "9", "success": "88.9%", "exit": "ok"},
-          {"rank": "11", "skill": "reflect", "runs": "9", "success": "77.8%", "exit": "ok"},
-          {"rank": "12", "skill": "skill-freshness", "runs": "9", "success": "44.4%", "exit": "error"},
-          {"rank": "13", "skill": "skill-health", "runs": "9", "success": "77.8%", "exit": "ok"},
-          {"rank": "14", "skill": "morning-brief", "runs": "8", "success": "75.0%", "exit": "ok"},
-          {"rank": "15", "skill": "evening-recap", "runs": "7", "success": "100%", "exit": "ok"}
+          {"rank": "1", "skill": "btc-levels", "runs": "43", "success": "74%", "exit": "ok"},
+          {"rank": "2", "skill": "cost-report", "runs": "34", "success": "3%", "exit": "uncategorized"},
+          {"rank": "3", "skill": "heartbeat", "runs": "27", "success": "67%", "exit": "ok"},
+          {"rank": "4", "skill": "thought-review", "runs": "22", "success": "55%", "exit": "ok"},
+          {"rank": "5", "skill": "daily-routine", "runs": "16", "success": "38%", "exit": "ok"},
+          {"rank": "6", "skill": "skill-freshness", "runs": "16", "success": "44%", "exit": "ok"},
+          {"rank": "7", "skill": "github-trending", "runs": "12", "success": "50%", "exit": "ok"},
+          {"rank": "8", "skill": "security-digest", "runs": "11", "success": "55%", "exit": "ok"},
+          {"rank": "9", "skill": "token-alert", "runs": "11", "success": "64%", "exit": "ok"},
+          {"rank": "10", "skill": "weekly-shiplog", "runs": "10", "success": "10%", "exit": "uncategorized"}
         ]
       }},
-      {"type": "Heading", "props": {"level": 3, "children": "Degraded skills (LOW_SUCCESS, top 10)"}},
+      {"type": "Heading", "props": {"level": 3, "children": "Critical anomalies"}},
       {"type": "Table", "props": {
         "columns": [
+          {"key": "flag", "header": "Flag"},
           {"key": "skill", "header": "Skill"},
-          {"key": "runs", "header": "Runs"},
-          {"key": "rate", "header": "Success rate"},
-          {"key": "note", "header": "Note"}
+          {"key": "detail", "header": "Detail"}
         ],
         "rows": [
-          {"skill": "cost-report", "runs": "19", "rate": "5.3%", "note": "ISS-030 sdk_opt_in_required"},
-          {"skill": "unlock-monitor", "runs": "5", "rate": "20.0%", "note": "ISS-029 cascade"},
-          {"skill": "deal-flow", "runs": "4", "rate": "25.0%", "note": "ISS-029 cascade"},
-          {"skill": "search-skill", "runs": "4", "rate": "25.0%", "note": "ISS-029 cascade"},
-          {"skill": "skill-security-scan", "runs": "3", "rate": "33.3%", "note": "ISS-029 cascade"},
-          {"skill": "skill-freshness", "runs": "9", "rate": "44.4%", "note": "ISS-029 + 08Z slot miss"},
-          {"skill": "daily-routine", "runs": "12", "rate": "58.3%", "note": "ISS-029; clean post-recovery"},
-          {"skill": "security-digest", "runs": "11", "rate": "72.7%", "note": "ISS-029; clean post-recovery"},
-          {"skill": "thought-review", "runs": "19", "rate": "73.7%", "note": "ISS-029; dual-fire inflates count"},
-          {"skill": "morning-brief", "runs": "8", "rate": "75.0%", "note": "ISS-029; clean post-recovery"}
+          {"flag": "🔴 SILENT", "skill": "token-movers", "detail": "daily 12:10Z — ISS-027 dark d46"},
+          {"flag": "🔴 SILENT", "skill": "on-chain-monitor", "detail": "daily 12:20Z — ISS-027 dark d46"},
+          {"flag": "🔴 SILENT", "skill": "defi-monitor", "detail": "daily 12:40Z — ISS-027 dark d46"},
+          {"flag": "🔴 SILENT", "skill": "defi-overview", "detail": "daily 12:00Z — ISS-027 dark d46"},
+          {"flag": "🔴 SILENT", "skill": "token-pick", "detail": "daily 12:00Z — ISS-027 dark d46"},
+          {"flag": "🔴 SILENT", "skill": "market-context-refresh", "detail": "daily 13:00Z — ISS-027 dark d46"},
+          {"flag": "🔴 SILENT", "skill": "narrative-tracker", "detail": "daily 13:30Z — ISS-027 dark d46"},
+          {"flag": "🔴 SILENT", "skill": "aixbt-pulse", "detail": "2x daily 09Z/21Z — ISS-027 dark d46"},
+          {"flag": "🔴 SILENT", "skill": "fork-skill-gap", "detail": "weekly Sun 21Z — no cron-state entry"},
+          {"flag": "🔴 SILENT", "skill": "operator-scorecard", "detail": "weekly Mon 10:30Z — missed 8-11 slot"},
+          {"flag": "🔴 ALL_FAIL", "skill": "unlock-monitor", "detail": "5/5 failed — consec=7"},
+          {"flag": "🔴 ALL_FAIL", "skill": "deal-flow", "detail": "4/4 failed — consec=6"},
+          {"flag": "🔴 ALL_FAIL", "skill": "search-skill", "detail": "2/2 failed — consec=2"},
+          {"flag": "🔴 ALL_FAIL", "skill": "skill-security-scan", "detail": "2/2 failed — consec=3"}
         ]
       }}
     ]
