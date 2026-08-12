@@ -355,8 +355,8 @@
     "last_error": "cca4a2d\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-analytics": {
-    "last_dispatch": "2026-08-05T19:47:28Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-12T19:17:27Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-05T20:04:56Z",
     "total_runs": 53,
     "total_successes": 11,
