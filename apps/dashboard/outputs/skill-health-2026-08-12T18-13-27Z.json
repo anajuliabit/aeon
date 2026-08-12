@@ -1,0 +1,393 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-08-12"
+      },
+      "children": [
+        "health_status",
+        "health_metrics",
+        "sep1",
+        "critical_section",
+        "sep2",
+        "degraded_section",
+        "sep3",
+        "no_data_section",
+        "sep4",
+        "healthy_section",
+        "sep5",
+        "notes_section",
+        "sep6",
+        "issues_summary"
+      ]
+    },
+    "health_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "status_badge",
+        "systemic_info"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HEALTH: CRITICAL(3)",
+        "variant": "destructive"
+      }
+    },
+    "systemic_info": {
+      "type": "Text",
+      "props": {
+        "text": "2 systemic: ISS-031 usepod 402 stale-state (3 mon-cadence) · ISS-027 12Z batch dark d46 (4 skills)",
+        "variant": "body"
+      }
+    },
+    "health_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_critical",
+        "stat_degraded",
+        "stat_no_data",
+        "stat_healthy"
+      ]
+    },
+    "stat_critical": {
+      "type": "Stat",
+      "props": {
+        "label": "Critical",
+        "value": "3"
+      }
+    },
+    "stat_degraded": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded",
+        "value": "18"
+      }
+    },
+    "stat_no_data": {
+      "type": "Stat",
+      "props": {
+        "label": "No Data",
+        "value": "3"
+      }
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "6"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical_heading",
+        "critical_item1",
+        "critical_item2",
+        "critical_item3"
+      ]
+    },
+    "critical_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Critical Failures",
+        "level": "h3"
+      }
+    },
+    "critical_item1": {
+      "type": "Alert",
+      "props": {
+        "title": "unlock-monitor",
+        "message": "7 fails, 9d down — WAIT-API (ISS-031 stale-state, next mon 10Z)",
+        "type": "error"
+      }
+    },
+    "critical_item2": {
+      "type": "Alert",
+      "props": {
+        "title": "deal-flow",
+        "message": "6 fails, 9d down — WAIT-API (ISS-031 stale-state, next mon 14Z)",
+        "type": "error"
+      }
+    },
+    "critical_item3": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-security-scan",
+        "message": "3 fails, 9d down — WAIT-API (ISS-031 stale-state, next mon 16Z)",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_list",
+        "degraded_more"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 Degraded Skills (18)",
+        "level": "h3"
+      }
+    },
+    "degraded_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg1",
+        "deg2",
+        "deg3",
+        "deg4",
+        "deg5"
+      ]
+    },
+    "deg1": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse — 47% sr, 44d cold — DISPATCH-SKILL (ISS-027 12Z batch)",
+        "variant": "body"
+      }
+    },
+    "deg2": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor — 53% sr, 44d cold — DISPATCH-SKILL (ISS-027 12Z batch)",
+        "variant": "body"
+      }
+    },
+    "deg3": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — 32% sr, 44d cold — DISPATCH-SKILL (ISS-027 12Z batch)",
+        "variant": "body"
+      }
+    },
+    "deg4": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — 33% sr, 44d cold — DISPATCH-SKILL (ISS-027 12Z batch)",
+        "variant": "body"
+      }
+    },
+    "deg5": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill — 37% sr, 9d cold — WAIT-API (ISS-031 stale-state, next mon 14Z)",
+        "variant": "body"
+      }
+    },
+    "degraded_more": {
+      "type": "Link",
+      "props": {
+        "label": "+13 more — see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no_data_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no_data_heading",
+        "no_data_items"
+      ]
+    },
+    "no_data_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ No Data (3)",
+        "level": "h3"
+      }
+    },
+    "no_data_items": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy_heading",
+        "healthy_stat"
+      ]
+    },
+    "healthy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 Healthy Skills",
+        "level": "h3"
+      }
+    },
+    "healthy_stat": {
+      "type": "Text",
+      "props": {
+        "text": "6 healthy",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notes_heading",
+        "note_positive",
+        "note_special"
+      ]
+    },
+    "notes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable Items",
+        "level": "h3"
+      }
+    },
+    "note_positive": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_positive",
+        "text_positive"
+      ]
+    },
+    "badge_positive": {
+      "type": "Badge",
+      "props": {
+        "text": "positive",
+        "variant": "default"
+      }
+    },
+    "text_positive": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report broke 33+ consec chronic-fail 8-11 20:08Z. 2nd organic-recovery precedent (after 8-04 21:48Z), ISS-030 driver.",
+        "variant": "body"
+      }
+    },
+    "note_special": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_special",
+        "text_special"
+      ]
+    },
+    "badge_special": {
+      "type": "Badge",
+      "props": {
+        "text": "special",
+        "variant": "outline"
+      }
+    },
+    "text_special": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort stuck ~85h dispatched (last_success 8-02) — consec=0/sr=1 masks stuck state; ISS-032 filing owed.",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "issues_open",
+        "issues_resolved"
+      ]
+    },
+    "issues_open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "issues_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}

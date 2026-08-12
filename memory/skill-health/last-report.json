@@ -1,19 +1,24 @@
 {
-  "hash": "81cb735fe19120bc2c668fb6ae4096ff80ef5f315585b1ed18e2a9fbe62c71e1",
-  "last_notified_at": "2026-08-11T18:41:34Z",
-  "last_run_at": "2026-08-11T18:41:34Z",
+  "hash": "81040fe38cb481c032eb55752a3bb5ea48fad60d89ee4cd1b030784ea7a0b3fd",
+  "last_notified_at": "2026-08-12T18:10:00Z",
+  "last_run_at": "2026-08-12T18:10:00Z",
   "classification": {
-    "critical": ["cost-report", "deal-flow", "skill-security-scan", "unlock-monitor"],
-    "degraded": ["action-converter", "aixbt-pulse", "defi-monitor", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner", "weekly-shiplog"],
+    "critical": ["unlock-monitor", "deal-flow", "skill-security-scan"],
+    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner", "weekly-shiplog"],
     "flapping": [],
     "warning": ["agent-buzz", "btc-levels", "daily-routine", "defi-overview", "evening-recap", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
     "healthy_count": 6,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "SYSTEMIC: 3 skills stuck on api.usepod.ai 402 stale-state carryover (unlock-monitor, deal-flow, skill-security-scan) — all weekly-cadence skills whose next dispatch tick clears the marker (10:00Z / 14:00Z / 16:00Z today). cost-report is a distinct signature (sdk_opt_in_required, ISS-030 chronic driver). Composition RECOVERY from 8-10 hash 253ed700: 16→4 CRITICAL (12-skill contraction), 13→17 DEGRADED, 6→13 WARNING (recovered but sub-0.8 sr carrying historical burst penalty), 5→6 HEALTHY (token-alert lifted). Notify gate: current_hash 81cb735f != prev 253ed700 → notify. usepod gateway self-healed overnight — 11+ post-burst clean-fires observed (thought-review 07:52Z through agent-buzz 17:47Z). ISS-031 stays open (3 stale-state carryover skills); token-alert removed from ISS-031 affected_skills (sr 0.81 = HEALTHY). SKILL_HEALTH_PARTIAL — skill-runs sandbox-blocked, cron-state-only classification.",
+  "systemic": [
+    "SYSTEMIC: 3 skills stuck on api.usepod.ai 402 stale-state carryover (unlock-monitor / deal-flow / skill-security-scan) — all mon-cadence weekly skills whose next dispatch tick clears the marker (10Z / 14Z / 16Z next mon 8-17). ISS-031 driver.",
+    "SYSTEMIC: 4 skills 44d cold in 12Z batch dark (aixbt-pulse / defi-monitor / market-context-refresh / narrative-tracker) — scheduler-side gap frozen since 2026-06-28. ISS-027 driver."
+  ],
   "open_issues": 15,
   "resolved_this_run": 0,
   "filed_this_run": 0,
-  "removed_from_iss031": ["token-alert"],
-  "prev_hash": "253ed700e2444e8667f4ce33f2cf34c8c2e7cd07fe2ef6591c6192e7acf08f76"
+  "prev_hash": "81cb735fe19120bc2c668fb6ae4096ff80ef5f315585b1ed18e2a9fbe62c71e1",
+  "composition_delta_vs_prev": "cost-report CRITICAL→DEGRADED (fresh 8-11 20:08Z success broke 33+ consec chronic-fail streak, 2nd organic-recovery precedent per ISS-030). Systemic callouts add ISS-027 (12Z batch dark) alongside ISS-031 (usepod 402 stale-state). No new ISS filings, no ISS resolutions this run. Notify gate: current_hash 81040fe3 != prev 81cb735f → notify fired.",
+  "classification_gap_flag": "fork-cohort STUCK ~85h dispatched (last_success 2026-08-02T19:52Z, last_dispatch 2026-08-09T19:05Z) classifies as HEALTHY under strict rules (consec=0, sr=1.0, status='dispatched' not 'failed') — spec gap. Per MEMORY.md this is a P0 novel signal; ISS-032 filing owed by action-converter/reflect 18Z fires. Surfaced in notify body 'special' line.",
+  "notify_hash": "7fcddb29cb7aa6ec1fafd233d2c66bbd4b84d9cb5f2c5673e486c4f9b1ee26bb"
 }
