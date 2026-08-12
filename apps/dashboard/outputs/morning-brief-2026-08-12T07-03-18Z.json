@@ -1,0 +1,240 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-12"
+      },
+      "children": [
+        "focus_section",
+        "sep1",
+        "updates_section",
+        "sep2",
+        "running_section"
+      ]
+    },
+    "focus_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_heading",
+        "focus_items"
+      ]
+    },
+    "focus_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_1",
+        "focus_2",
+        "focus_3"
+      ]
+    },
+    "focus_1": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-032 (fork-cohort state-update-race) — why now: ~84h stuck, 32h+ past 48h threshold, action-converter proposed 8-11 18:40Z but never filed",
+        "variant": "body"
+      }
+    },
+    "focus_2": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/detect-usepod-402.sh operator-page gate — why now: 2026-08-13 deadline is tomorrow, only 1 workday left",
+        "variant": "body"
+      }
+    },
+    "focus_3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert 12Z triple deciding-test — why now: CYS day-5 continuation, BEAT day-3 continuation, REPPO direction pick all today",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "updates_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updates_heading",
+        "updates_items"
+      ]
+    },
+    "updates_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "updates_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "update_1",
+        "update_2",
+        "update_3",
+        "update_4",
+        "update_5"
+      ]
+    },
+    "update_1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report 20:08Z BREAKS 33+ consec chronic-fail streak — 2nd organic-recovery precedent after 8-04 21:48Z",
+        "variant": "body"
+      }
+    },
+    "update_2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-030 intra-24h same-sig cluster deepens to n=5 immediately before the recovery — reflect/action-converter owe ISS-030 body update",
+        "variant": "body"
+      }
+    },
+    "update_3": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health 16→4 CRITICAL post-usepod self-heal — deepest recovery print in memory-window",
+        "variant": "body"
+      }
+    },
+    "update_4": {
+      "type": "Text",
+      "props": {
+        "text": "PR queue 3→4: NEW #179 fix(token-alert) volume-spike baseline daily-granular, opened 8-11 18:42Z by self-improve",
+        "variant": "body"
+      }
+    },
+    "update_5": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort crossed 48h threshold 8-11 19:05Z as predicted; ISS-032 filing still unowned",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running_heading",
+        "running_items"
+      ]
+    },
+    "running_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "task_1",
+        "task_2",
+        "task_3",
+        "task_4",
+        "task_5",
+        "task_6",
+        "task_7",
+        "task_8"
+      ]
+    },
+    "task_1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine @ 07:50 UTC",
+        "variant": "body"
+      }
+    },
+    "task_2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness + github-trending @ 09:00 UTC",
+        "variant": "body"
+      }
+    },
+    "task_3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00 UTC",
+        "variant": "body"
+      }
+    },
+    "task_4": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08/14/20:00 UTC",
+        "variant": "body"
+      }
+    },
+    "task_5": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00 UTC",
+        "variant": "body"
+      }
+    },
+    "task_6": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz + list-digest @ 17:00 UTC",
+        "variant": "body"
+      }
+    },
+    "task_7": {
+      "type": "Text",
+      "props": {
+        "text": "reflect + skill-health + self-improve + action-converter + goal-tracker @ 18:00 UTC",
+        "variant": "body"
+      }
+    },
+    "task_8": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review @ 21:00 UTC",
+        "variant": "body"
+      }
+    }
+  }
+}
