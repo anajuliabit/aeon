@@ -1,14 +1,12 @@
+Token-alert fire complete. 0/4 alerts, no notify sent (silent-success path per SKILL.md step 3). Logged to `memory/logs/2026-08-12.md`.
+
 ## Summary
 
-Executed `skills/token-alert/SKILL.md` as operator-invoked re-check at 13:44 UTC (91 min after the scheduled 12:13Z fire).
-
-- **Files modified:** `memory/logs/2026-08-11.md` — appended `## Token Alert — 13:44 UTC` block + summary.
-- **Actions:** read SKILL.md + MEMORY.md Tracked Tokens (WELL/MAMO/REPPO/GITLAWB, thresholds 10/15/15/15%, no Floor/Ceiling); one unauth CoinGecko `simple/price` call (HTTP 200, 4/4 clean); computed 24h % + 5-run vol baseline + threshold-cross per SKILL.md step 2.
-- **Output:** `TOKEN_ALERT_OK` — **0/4 fires**.
-  - WELL $0.00297476 · **+0.17%** · 0.89× baseline (**intraday flip-to-positive**, 3rd distinct 24h print today)
-  - MAMO $0.00885303 · −3.68% · 1.06×
-  - REPPO $0.01246334 · −7.68% · 0.63× (12:13Z −9.56% → +1.88pp bounce, vol still compressing)
-  - GITLAWB $0.00002005 · −5.33% · 0.95×
-- **No `./notify` invocation** (silent-success path per SKILL.md step 3).
-- **Fresh datapoints:** REPPO `[[vol-flush-price-bounce]]` intraday sub-shape n=1 candidate now competes with the 12:13Z `[[price-fade-on-collapsing-vol]]` frame (8-12 direction picks the winner); WELL 1st positive 24h since 8-09; CG d50 intraday-durability confirmed on 2nd call.
-- **Follow-up:** all 12:13Z follow-ups stand + (viii) 8-12 REPPO 2-candidate deciding-test; (ix) WELL flip-to-positive durability; (x) intraday-re-check vol-baseline hygiene note.
+- **Files modified:** `memory/logs/2026-08-12.md` (appended token-alert 12:30 UTC entry).
+- **Output:** `TOKEN_ALERT_OK · 0/4 fires` — all 4 tracked tokens sub-threshold on 24h % and sub-3× on vol; no Floor/Ceiling configured → threshold-cross skipped × 4.
+  - WELL: −0.87% / vol $52K = **0.06× baseline** (memory-window-deepest sub-baseline print — new `[[vol-vacuum-price-flat]]` n=1 candidate)
+  - MAMO: −1.83% / 1.04× (3rd-consec above-baseline print — new `[[MAMO-3-consec-above-baseline-vol]]` n=1)
+  - REPPO: −5.99% / 1.32× (8-11 intraday 2-competing-candidate deciding-test resolves via healthy-flush read — both `[[price-fade-on-collapsing-vol]]` and `[[vol-flush-price-bounce]]` rail-abandoned at n=1)
+  - GITLAWB: −6.50% / 0.74× (6-consec sub-baseline vol on continued negative price — `[[vol-compression-on-price-decay]]` n=1 → n=2 extends)
+- **Fresh rails/records:** CG clean-day d50 → **d51** memory-window record; token-alert 5-consec → **6-consec clean-fire streak** (8-07 → 8-12); `[[12Z-slot-dark-immunity-per-skill]]` 5-consec → **6-consec** while ISS-027 12Z-batch dark d46.
+- **Follow-up (for 8-13 fire / reflect 18Z):** WELL vol-rebuild-or-vacuum deciding-test; GITLAWB 7-consec + rail-promotion candidacy; MAMO 4-consec above-baseline; REPPO healthy-flush-continuation; reflect absorption; MEMORY.md Tracked Tokens Recent Activity update.
