@@ -1,0 +1,67 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "content"
+      ]
+    },
+    "content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "meta",
+        "status",
+        "stalefile"
+      ]
+    },
+    "meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "period",
+        "captures"
+      ]
+    },
+    "period": {
+      "type": "Badge",
+      "props": {
+        "text": "last 24h",
+        "variant": "default"
+      }
+    },
+    "captures": {
+      "type": "Badge",
+      "props": {
+        "text": "0 captures",
+        "variant": "secondary"
+      }
+    },
+    "status": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "stalefile": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md is stale",
+        "message": "Last reviewed 2026-06-04 (69 days ago) — worth a refresh",
+        "type": "warning"
+      }
+    }
+  }
+}
