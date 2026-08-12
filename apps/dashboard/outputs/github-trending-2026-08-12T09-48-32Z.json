@@ -1,0 +1,339 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-12"
+      },
+      "children": [
+        "topick_section",
+        "sep1",
+        "devtools_heading",
+        "devtools_repos",
+        "sep2",
+        "aiml_heading",
+        "aiml_repos",
+        "sep3",
+        "footer_text"
+      ]
+    },
+    "topick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "topick_label",
+        "topick_link",
+        "topick_desc"
+      ]
+    },
+    "topick_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      }
+    },
+    "topick_link": {
+      "type": "Link",
+      "props": {
+        "label": "cathrynlavery/diagram-design",
+        "href": "https://github.com/cathrynlavery/diagram-design"
+      }
+    },
+    "topick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "biggest star spike on today's page — the first curated answer to \"why do all claude-code diagrams look terrible.\""
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "devtools_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "repo_diagram_design",
+        "repo_orca"
+      ]
+    },
+    "repo_diagram_design": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rd_header",
+        "rd_desc"
+      ]
+    },
+    "rd_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "rd_link",
+        "rd_stats",
+        "rd_lang",
+        "rd_status"
+      ]
+    },
+    "rd_link": {
+      "type": "Link",
+      "props": {
+        "label": "cathrynlavery/diagram-design",
+        "href": "https://github.com/cathrynlavery/diagram-design"
+      }
+    },
+    "rd_stats": {
+      "type": "Stat",
+      "props": {
+        "value": "1.6k",
+        "label": "today",
+        "delta": "7.9k total"
+      }
+    },
+    "rd_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "HTML"
+      }
+    },
+    "rd_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "rd_desc": {
+      "type": "Text",
+      "props": {
+        "text": "29 editorial html+svg diagram types. no mermaid runtime, no auto-layout slop, drop into any llm-coding output."
+      }
+    },
+    "repo_orca": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ro_header",
+        "ro_desc"
+      ]
+    },
+    "ro_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ro_link",
+        "ro_stats",
+        "ro_lang",
+        "ro_status"
+      ]
+    },
+    "ro_link": {
+      "type": "Link",
+      "props": {
+        "label": "stablyai/orca",
+        "href": "https://github.com/stablyai/orca"
+      }
+    },
+    "ro_stats": {
+      "type": "Stat",
+      "props": {
+        "value": "875",
+        "label": "today",
+        "delta": "43k total"
+      }
+    },
+    "ro_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "ro_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "ro_desc": {
+      "type": "Text",
+      "props": {
+        "text": "ade for parallel coding-agent fleets. bring-your-own-subscription across desktop, mobile, vps."
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "aiml_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "repo_skills",
+        "repo_deeptutor"
+      ]
+    },
+    "repo_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rs_header",
+        "rs_desc"
+      ]
+    },
+    "rs_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "rs_link",
+        "rs_stats",
+        "rs_lang",
+        "rs_status"
+      ]
+    },
+    "rs_link": {
+      "type": "Link",
+      "props": {
+        "label": "anthropics/skills",
+        "href": "https://github.com/anthropics/skills"
+      }
+    },
+    "rs_stats": {
+      "type": "Stat",
+      "props": {
+        "value": "485",
+        "label": "today",
+        "delta": "168k total"
+      }
+    },
+    "rs_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "rs_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "rs_desc": {
+      "type": "Text",
+      "props": {
+        "text": "official anthropic agent-skills spec. canonical source for the addy/matt/google forks that ran the trending arc 8-06 → 8-09."
+      }
+    },
+    "repo_deeptutor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dt_header",
+        "dt_desc"
+      ]
+    },
+    "dt_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "dt_link",
+        "dt_stats",
+        "dt_lang",
+        "dt_status"
+      ]
+    },
+    "dt_link": {
+      "type": "Link",
+      "props": {
+        "label": "HKUDS/DeepTutor",
+        "href": "https://github.com/HKUDS/DeepTutor"
+      }
+    },
+    "dt_stats": {
+      "type": "Stat",
+      "props": {
+        "value": "812",
+        "label": "today",
+        "delta": "35k total"
+      }
+    },
+    "dt_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "dt_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "dt_desc": {
+      "type": "Text",
+      "props": {
+        "text": "lifelong personalized tutoring — memory-primitive framing over one-shot rag. hku-ds lab."
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/18",
+        "variant": "caption"
+      }
+    }
+  }
+}
