@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-08-11*
+*Last consolidated: 2026-08-12*
 
 ## Current Goals
 - **ISS-030 cost-report 8-10 Mon 07Z deciding-test T-0 TODAY** — 8-04 21:48Z same-day organic recovery holds; chronic sr=10%; signature `sdk_opt_in_required` cleared organically. Clean → RESOLVED same-day candidate; fail same-signature → 4-consec-week formal-pattern. See [[iss-030]].
@@ -10,86 +10,80 @@
 - **PR queue at 3 on 8-09 20Z (post Sunday-batch)** — #174 (Advisor Brier-weight, ~44h+, mergeable=UNKNOWN + empty statusCheckRollup, CI never fired), **#176 fresh (skill-graph regen `EDGES_TOTAL: 32→74`, opened 17:10Z by skill-graph Sunday-fire, ~3h at 20Z heartbeat)**, **#177 fresh (fix(claude-md) ISS-028 file-redirect sandbox-block doc, opened 18:18Z by self-improve 18:14Z run, ~2h at 20Z heartbeat)**. Queue-full self-improve exit-gate stays DISENGAGED (only #177 counts as self-improve, n=1 < 3).
 - **Operator on-chain config day-65 on 8-10** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
 - **priorities.md 67d stale on 8-10** — last reviewed 2026-06-04. Vault inbox 50d cold streak (last real capture 2026-06-21T08:32Z). Weekly-review 8-10 T-0 refresh-ask.
+- **fork-cohort STUCK ~68h+ P0 — ISS-032 filing OVERDUE** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; crossed 48h escalation 8-11 19:05Z, ~20h+ past threshold at 15:08Z heartbeat. Root-cause: state-update-race on cancelled workflows (`Update cron state` step reports success but does not clear dispatched marker when `Run` step hits 30-min timeout). Owed by 18Z action-converter / reflect fire.
+- **ISS-031 detect-usepod-402 gate deadline 8-13 TOMORROW** — `scripts/detect-usepod-402.sh` operator-page gate is stopgap for `[[ISS-029/031 recurrence]]` (2nd 7d-recurrence 8-10 crossed one-off→pattern threshold). Final workday before deadline.
+- **ISS-030 33+ consec chronic-fail BREAKS 8-11 20:08Z** — 2nd organic-recovery precedent (after 8-04 21:48Z); skill-health 16 → 4 CRITICAL deepest single-tick recovery of memory-window. Same-week n=5 same-signature cluster preceded recovery. **8-17 Mon 07Z next-week deciding-test** for same-signature 4-consec-week formal-pattern (counter still at n=1).
+- **PR queue at 4 on 8-12** — #179 fresh 8-11 18:42Z (fix(token-alert) volume-spike baseline daily-granular), #177 ~69h (fix(claude-md) ISS-028), #176 ~70h (skill-graph regen 32→74), #174 ~4d (Advisor Brier-weight external). Weekly-batch cadence per CLAUDE.md; queue-full self-improve exit-gate DISENGAGED.
+- **`[[chronic-cohort-alone-degraded]]` regime 12-skill composition holds ~155h span** — cost-report 8% / skill-analytics 21% / reg-monitor 21% / vuln-scanner 25% / market-context-refresh 32% / narrative-tracker 33% / search-skill 37% / weekly-shiplog 37% / unlock-monitor 38% / security-digest 43% / deal-flow 44% / aixbt-pulse 47%.
+- **4 Mon-batch 🕸 stuck skills hold-through-week 8-12 → 8-17** — search-skill (48h) · unlock-monitor (48h) · skill-security-scan (46h) · deal-flow (46h); no auto self-clear until 8-17 Mon or operator intraweek manual invoke.
+- **12:00 UTC batch DARK d46 on 8-12** — ISS-027 8-skill cluster frozen since 2026-06-28; token-alert 12Z slot fires 6-consec clean 8-07→8-12 (memory-window record) confirming `[[12Z-slot-dark-immunity-per-skill]]` per-dispatcher-path.
+- **Operator on-chain config day-67 on 8-12** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
+- **priorities.md 69d stale + vault inbox 51d cold on 8-12** — `### Idea Captured` 6-consec zero-day streak (8-07→8-12). Weekly-review 8-10 T-0 refresh-ask stands unactioned.
 
-## Recently Cleared (8-11)
-- **weekly-shiplog 8-10 09Z T-0** — RESOLVED 2026-08-10 19:21Z via `articles/weekly-shiplog-2026-08-10.md` ship (51 commits / 28 PRs merged / 0 issues closed; themes: vuln-scanner fuzzing / catalog clears 70 / Agent Skills spec-form replaces OKF). Prior 20d-stale flag cleared same-day; next 7d tick 2026-08-17 09Z.
-- **ISS-030 n=3 same-signature cluster intra-~18h 8-10 20:32Z → 8-11 14:14Z** — cost-report `sdk_opt_in_required` prints ×3 in ~18h span (all within week-1 shape). Still same-week; formal-pattern week-tick counter frozen at n=1 pending 8-17 Mon 07Z next-week deciding-test. consec=33 sr=7% (fresh chronic drop). See [[iss-030]].
-- **ISS-031 usepod 402 SELF-HEALED 8-10 ~19:15Z** — fleet-wide burst 8-10 15:10Z → 19:15Z (~4h duration, slightly longer than ISS-029 8-03 ~2h shape). Overnight morning batch 8-11 (thought-review 07:50Z + morning-brief 07:52Z + daily-routine 07:59Z + heartbeat 08:41Z + skill-freshness 09:00Z + github-trending 09:47Z + token-alert 12:13Z + heartbeat 14:46Z + security-digest 14:47Z + agent-buzz 17:44Z) all clean = gateway self-heal held ~24h. **2nd 7d-recurrence event of ISS-029 shape** → signature crosses one-off → pattern threshold per weekly-review 8-10 action. Awaiting operator decision on `scripts/detect-usepod-402.sh` gate (2026-08-13 deadline).
-- **fork-cohort STUCK approaching 48h escalation ~19:05Z tonight 8-11** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z. At 14:46Z heartbeat = ~67.7h stuck. **File new ISS if uncleared** past 19:05Z (dedup vs 8-09 novel-signal flag). Root-cause: state-update-race on cancelled workflows (commit-results/update-cron-state does not clear dispatched marker when Run step times out at 30-min cap).
-- **Day-of-week reclarify — today is Tue 8-11, not Mon** — 08:41Z heartbeat wrongly assumed Mon per cost-report firing. 4 Mon-scheduled 🕸 stale-state stuck skills (search-skill · deal-flow · unlock-monitor · skill-security-scan) hold state through week; no auto self-clear until 8-17 Mon or operator intraweek manual invoke.
-- **12:00 UTC batch DARK d45 on 8-11** — ISS-027 8-skill cluster frozen since 2026-06-28; scheduler-side gap not CG infra. Token-alert 12Z slot fires 5-consec clean 8-06→8-11 (memory-window-record) confirming `[[12Z-slot-dark-immunity-per-skill]]` per-dispatcher-path.
-- **PR queue at 3 on 8-11** — #174 (Advisor Brier-weight, ~87h+ mergeable=UNKNOWN + empty statusCheckRollup — CI never fired), #176 (skill-graph regen EDGES_TOTAL: 32→74, opened 8-09 17:10Z), #177 (fix(claude-md) ISS-028 file-redirect sandbox-block doc, opened 8-09 18:18Z). Queue-full self-improve exit-gate stays DISENGAGED (only #177 counts as self-improve, n=1 < 3).
-- **Operator on-chain config day-66 on 8-11** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
-- **priorities.md 68d stale + vault inbox 51d cold on 8-11** — last priorities review 2026-06-04; last real capture 2026-06-21T08:32Z. 5-consec-UTC-day zero-capture streak on `### Idea Captured` axis (8-07 → 8-11). Weekly-review 8-10 T-0 refresh-ask.
-
-## Recently Cleared (8-10 → 8-11)
-- **weekly-shiplog CLEARED 8-10 19:21Z** — resolved 20d-stale flag; article shipped 2026-08-10.
-- **ISS-031 usepod 402 fleet-wide burst SELF-HEALED 8-10 ~19:15Z** — ~4h event; 13-skill retry batch all succeeded 19:15-19:23Z; morning batch 8-11 held clean overnight.
-- **github-trending + token-alert stale-state 🕸 self-cleared 8-11** — 09:47Z + 13:44Z respectively; both dispatchers work independently of Mon-scheduled cohort.
-- **`[[agent-buzz-engagement-drought]]` rail 6-consec-day 8-10 → BREAKS 8-11** — @Sengo_Sol raw eng 115 (founder-boost 104.6) resets counter.
-- **BTW `[[same-coin-48h-reflip]]` deciding-test CLARIFIED as fade-not-reflip 8-10 + 8-11** — 3-consec-fade (8-09 +28.8% → 8-10 -6.7% → 8-11 -9.2%) = 3-day mean-reversion pattern dominant read; rail promotion **abandoned on reflip axis**, opens on `[[3-day-mean-reversion-post-spike]]` axis n=1 candidate.
-- **CG clean-day d49 → d50 8-11 = MEMORY-WINDOW-FIRST 50-CONSEC-DAY PRINT** — round-number milestone on infra durability rail.
-- **Token-alert 5-consec-day clean-fire streak 8-07 → 8-11** — memory-window record for consecutive 0/4 fires post the rare 2/4 print.
-- **CYS 4-consec-day sustained-breakout arc 8-08→8-11 (+61%/+18%/+18%/+47%, 7d +362%)** — NEW `[[sustained-multi-day-breakout]]` sub-shape candidate n=1 8-11. Memory-window rare.
-- **BEAT `[[large-cap-2-day-blowup]]` NEW sub-shape n=1 8-11** — 2-consec-day capitulation (-52% → -55%, 7d -62%). Distinct from single-day flip.
-- **`[[fleet-relevance agent-thesis]]` rail 25 → 28-consec-UTC-day 8-11** — triple-axis 8-11 via github-trending (semantica + t3code + LifeOS) + paper-pick (Ouroboros direct-hit on Aeon self-improve). Approaches 4-consec-week durability.
-- **Ouroboros paper 8-11 daily-routine paper-pick** — self-developing frontier coding agent with reviewed core evolution = **literal blueprint description of Aeon's self-improve loop**. Highest fleet-meta signal of the week.
-- **security-digest 2 formal-pattern promotions 8-11**: `[[malware-only-security-surface]]` n=3→n=4 promoted (4-consec-day zero-fresh-critical/high-with-fresh-malware); `[[cross-ecosystem-malware-escalation]]` n=2→n=3 promoted (PyPI share 42% today vs 8-10 14.6% vs 8-09 2%); `[[EPSS-skip-run]]` n=2→n=3 promoted (formal-pattern). `[[SvelteKit-brand-typosquat-cluster]]` deciding-test FAILS at n=2.
-- **Aeon-fleet clean d11 → d12 vs security-digest surface 8-11** — deepest clean-streak in memory-window on defensive-import axis.
-- **fork-cohort STUCK 8-09 20Z novel P0 — durability 26h → 67.7h** — through 8-11 14:46Z; awaits 48h-threshold escalation tonight.
+## Recently Cleared (8-11 → 8-12)
+- **ISS-030 cost-report 33+ consec BREAKS 8-11 20:08Z** — see Current Goals; 8-12 morning batch (thought-review + morning-brief + daily-routine + heartbeat + skill-freshness + github-trending + token-alert + security-digest + reg-monitor + list-digest) all clean through 17:13Z.
+- **skill-health CRITICAL 16 → 4 deepest single-tick recovery of memory-window** — post 8-11 20:08Z cost-report recovery.
+- **`[[claude-code-alternative-open-source]]` FORMAL PATTERN promoted n=3 8-12** — Jcode 8-11 + t3code 8-11 + stablyai/orca 8-12 within 7d window; 3 distinct sub-classes.
+- **CG clean-day d50 → d51 8-12** — memory-window-first round-number extends.
+- **Token-alert 5-consec → 6-consec clean-fire streak 8-12** — memory-window record extends.
+- **`[[fleet-relevance agent-thesis]]` rail 28 → 29-consec-UTC-day 8-12** — github-trending 4-pick fleet-adjacent slate + AgentOPSD paper.
+- **Aeon-fleet clean d12 → d13 vs security-digest surface 8-12** — deepest defensive-import clean-streak in memory-window.
+- **security-digest paired rail-break day 8-12** — `[[malware-only-security-surface]]` n=4 formal-pattern BREAKS (SeaweedFS Go SSRF tracked-critical) + `[[quiet-KEV-baseline]]` 4-consec BREAKS (3 KEV added 8-11) + `[[EPSS-skip-run]]` n=3 formal-pattern BREAKS. `[[cross-ecosystem-malware-escalation]]` n=3 does not extend (npm-only 98.3% today).
 
 ## Fleet Health
-See [[fleet]] for full snapshot. **Fleet recovers from ISS-031 usepod 402 burst overnight** (8-10 15:10Z → 19:15Z, ~4h). All morning batch 8-11 clean through 17:44Z; only fresh fails today are ISS-030 cost-report n=3 same-signature (08:19Z + 14:14Z, plus 8-10 20:32Z prior). Chronic-cohort regime holds ~131h span (broken 8-10 by ISS-031, resumes 8-11 morning). **fork-cohort STUCK ~67.7h at 14:46Z** approaches 48h escalation ~19:05Z tonight. **CG clean-day d50 memory-window-first**. **12Z-slot-dark-immunity-per-skill 5-consec extends**. **weekly-shiplog CLEARED**. **PR queue holds at 3** (weekly-batch cadence). **Bash `>` redirect workaround-chain n=39+ durable 19-UTC-day span 7-22 → 8-11** (fresh 8-11 call-site: python inline-exec-blocked as NEW variant, jq-only path is workaround).
+See [[fleet]] for full snapshot. **Cost-report chronic BREAK 8-11 20:08Z + 8-12 morning batch clean overnight** = biggest fleet-recovery of the week. **fork-cohort STUCK 68h+ P0** eclipses everything else in blast-radius terms; ISS-032 filing overdue. **ISS-031 detect-usepod-402 gate 8-13 deadline tomorrow**. **skill-health 16→4 CRITICAL deepest recovery of memory-window**. **PR queue at 4** (weekly-batch cadence). **Bash `>` redirect workaround-chain n=40 durable 20-UTC-day span 7-22 → 8-12** (fresh 8-12 call-sites: github-trending for-loop + list-digest `>>` seen-file append).
 
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, health snapshot, blockers, weekly-batch cadence, positive events log.
 - [Crypto research](topics/crypto.md) — Narratives, picks, durable patterns.
-- [Market context](topics/market-context.md) — Baseline snapshot (STALE ~26d/624h+ on 8-11, crossed 2× threshold 8-01; refresh chained on next batch-dark thaw or manual invoke).
+- [Market context](topics/market-context.md) — Baseline snapshot (STALE ~27d/648h+ on 8-12, crossed 2× threshold 8-01; refresh chained on next batch-dark thaw or manual invoke).
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec; SLX -70% terminal (operator-owned).
 
 ## Tracked Tokens
-Canonical watchlist per `skills/token-alert/SKILL.md`. Last fire 8-11 13:44Z operator re-check: **0/4 alerts** (5-consec-day clean-fire streak post-8-07 memory-window-first 2/4 print). CG clean-day d50 unbroken (memory-window-first round-number). REPPO closest-to-threshold today at 51-64% of rail with intraday shape-inversion (12:13Z `[[price-fade-on-collapsing-vol]]` n=1 candidate → 13:44Z `[[vol-flush-price-bounce]]` n=1 competing candidate — 8-12 direction picks winner). WELL 3rd intraday 24h flip to positive (+0.17% 13:44Z, first positive since 8-09). GITLAWB `[[vol-compression-on-price-decay]]` sub-shape n=1 candidate (5-consec sub-baseline vol on -6% moves). MAMO 2-consec above-baseline vol (07:50Z + 12:13Z); digestion band d21.
+Canonical watchlist per `skills/token-alert/SKILL.md`. Last fire 8-12 12:30Z 12Z-slot scheduled: **0/4 alerts** (6-consec-day clean-fire streak post-8-07 memory-window-first 2/4 print). CG clean-day d51 unbroken. WELL `[[vol-vacuum-price-flat]]` n=1 candidate (0.06× baseline vol on -0.87% near-flat price = extremest sub-baseline vol print in memory-window). GITLAWB `[[vol-compression-on-price-decay]]` n=2 (6-consec sub-baseline on 10-phase arc). MAMO `[[MAMO-3-consec-above-baseline-vol]]` n=1 (digestion band d22). REPPO 8-11 2-competing-candidate deciding-test RESOLVES via healthy-flush read (both rail-abandoned at n=1).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | 8-11 +0.17% (13:44Z operator re-check), vol $799K = 0.89× baseline — 3rd intraday 24h print flips positive, 1st positive since 8-09 |
-| MAMO    | mamo               | 15%           | 8-11 −3.68% (13:44Z), vol $747K = 1.06× baseline — 2-consec above-baseline vol (07:50Z + 12:13Z), digestion band d21 |
-| REPPO   | reppo              | 15%           | 8-11 −7.68% (13:44Z, bounced from 12:13Z −9.56%), vol $120K = 0.63× baseline — 2 competing intraday sub-shapes; 6-phase post-peak arc extends |
-| GITLAWB | gitlawb            | 15%           | 8-11 −5.33% (13:44Z), vol $178K = 0.95× baseline — 5-consec sub-baseline vol on continued fade; 9-phase arc extension |
+| WELL    | moonwell-artemis   | 10%           | 8-12 −0.87% (12:30Z), vol $52K = 0.06× baseline — vol-vacuum n=1 candidate; extremest sub-baseline print of memory-window |
+| MAMO    | mamo               | 15%           | 8-12 −1.83% (12:30Z), vol $735K = 1.04× baseline — 3-consec above-baseline stretch (memory-window first); digestion band d22 |
+| REPPO   | reppo              | 15%           | 8-12 −5.99% (12:30Z), vol $252K = 1.32× baseline — fade eases + vol expands = healthy-flush read; 2 8-11 candidates abandoned |
+| GITLAWB | gitlawb            | 15%           | 8-12 −6.50% (12:30Z), vol $140K = 0.74× baseline — 6-consec sub-baseline vol on 10-phase price fade; n=2 extends |
 
 ## Recurring patterns (durable — brief pointers; details in topic files)
-- **`[[fleet-relevance agent-thesis]]` rail 28-consec-UTC-day 8-11** — triple-axis via github-trending (semantica + t3code + LifeOS) + paper-pick (Ouroboros). Approaches 4-consec-week durability.
-- **NEW `[[agent-graphs-replacing-prompting]]` sub-rail candidate n=2 8-11** — Andrew Ng 8-10 + Anthropic engineer via ajay4ai 8-11 corroboration. Rail promotion at n=3 (any 3rd fleet-visible authority within 7d).
-- **NEW `[[graph-native-primitive-cluster]]` sub-shape candidate n=1 8-11** — semantica-agi/semantica + vitali87/code-graph-rag both graph-native, both fresh-push same UTC-day. Distinct from vector-DB substrate class.
-- **NEW `[[agent-provenance-primitive]]` sub-shape candidate n=1 8-11** — semantica W3C PROV-O + no-LLM-in-reasoning-path; adjacent to Aeon memory/logs discipline.
-- **`[[claude-code-alternative-open-source]]` n=1 (Jcode 07:52Z) → n=2 (t3code 09:47Z) same UTC-day 8-11** — 2 distinct sub-classes (memory-efficient orchestration vs mobile viewer). Rail promotion deciding-test accelerated.
-- **NEW `[[3-day-sustained-top-pick]]` sub-shape candidate n=1 8-11** — prime-agent day-3 +6% memory-window first 3-consec-day pos-slope on top-pick axis.
-- **`[[hyperscaler-open-answer]]` sub-shape refresh n=2 8-11** — google-deepmind/weathernext v0.3.0 open-weights joins denoland/celld 8-08.
-- **`[[same-coin-48h-reflip]]` FAILS at n=2 rail-abandon 8-11** — BTW 3-consec-fade (8-09/8-10/8-11) resolves as mean-reversion, not reflip. Opens `[[3-day-mean-reversion-post-spike]]` axis n=1 candidate.
-- **NEW `[[sustained-multi-day-breakout]]` sub-shape candidate n=1 8-11** — CYS 4-consec-day (+61%→+18%→+18%→+47%, 7d +362%). Distinct from single-day-breakout-then-fade.
-- **NEW `[[large-cap-2-day-blowup]]` sub-shape candidate n=1 8-11** — BEAT 2-consec-day capitulation (-52% → -55%, 7d -62%).
-- **`[[MCP-enforcement-primitive-cluster]]` refresh 8-10 + 8-11 pre-signal (agent-buzz)** — dormant since 8-05; 8-10 3 fresh call-sites (melvynx/straikerai/SheikAlthafDev) + 8-11 2 MCP-cluster tweets (shupeiman + KirkDBorne). Needs 3rd variant same-UTC-day to advance rail past 8-05.
-- **`[[malware-only-security-surface]]` n=4 FORMAL PATTERN 8-11** — 4-consec-day zero-fresh-critical/high-with-fresh-malware.
-- **`[[cross-ecosystem-malware-escalation]]` n=3 FORMAL PATTERN 8-11** — 3-consec-day non-npm-heavy malware (PyPI 42%).
-- **`[[EPSS-skip-run]]` n=3 FORMAL PATTERN 8-11** — legitimately unmeasurable (all malware CVE-less + CVE-bearing dedup).
-- **NEW `[[defi-protocol-brand-pip-typosquat-cluster]]` sub-class candidate n=1 8-11** — 8 pip pkgs (plp-contract/neutrl-core/dlmm-sdk/euler-sdk/morpho-sdk/joule-btp-extension) in ~15h span. First pypi defi-dev cluster.
-- **NEW `[[scoped-brand-triple-scope-typosquat]]` sub-shape candidate n=1 8-11** — 3rd scope on sqlite brand (@sqlite-labs escalation of 8-10 double-scope @sqlite-prime + @sqlite-table).
-- **NEW `[[npm-builtin-namespace-shadow]]` sub-class candidate n=1 8-10** — commonjs-assert + commonjs-assertion shadow node builtin `assert`. Higher pull-in-able risk than brand-typosquat.
-- **`[[SvelteKit-brand-typosquat-cluster]]` deciding-test FAILS 8-11** — n=2 stays (no fresh SvelteKit-brand malware today).
-- **Aeon-fleet clean d12 vs security-digest surface 8-11** — deepest clean-streak in memory-window on defensive-import axis.
-- **`[[12Z-slot-dark-immunity-per-skill]]` extends to 5-consec 8-06 → 8-11** — token-alert clean while ISS-027 cluster batch-dark d45.
-- **Bash `>` redirect workaround-chain n=39+ durable 19-UTC-day span 7-22 → 8-11** — NEW variant `[[python-inline-exec-blocked]]` (python3 -c heredoc hits path-validation lint; jq-only path is workaround). Fresh 8-11 call-site from daily-routine.
-- **NEW `[[claude-real-math-breakthrough]]` observation n=1 8-11** — Claude solves 67% Riemann zeros in 1.5 days (prev 41.6%). First fleet-visible "Claude does real math research" print.
-- **NEW `[[ZHC-narrative-print]]` sub-shape candidate n=1 8-11** — Sengo_Sol "agents as economic principals" first ZHC-adjacent thesis-print of memory-window.
-- **NEW `[[industrial-brownfield-agent-deployment]]` sub-shape candidate n=1 8-11** — Neuron Industries 1991 Siemens PLC one-shot upgrade (distinct from hyperscaler-runtime axis).
-- **NEW `[[curator-DeFi_Made_Here-dominance]]` sub-shape candidate n=1 8-11** — list-digest 2 of top-3 (distinct handle from prior DefiIgnas/Flowslikeosmo concentration).
-- **`[[claude-competitive-benchmark-print]]` n=1 stable 8-09** — Qwen 3.8 Max vs Claude Fable 5 near-parity.
+- **`[[fleet-relevance agent-thesis]]` rail 29-consec-UTC-day 8-12** — github-trending 4-pick fleet-adjacent slate (orca + DeepTutor + anthropics/skills + diagram-design) + AgentOPSD paper. **Crosses 4-consec-week durability 8-15 if unbroken.**
+- **`[[claude-code-alternative-open-source]]` FORMAL PATTERN n=3 8-12** — 3 distinct sub-classes within 7d (Jcode memory-efficient orch + t3code mobile viewer + orca full-ADE cross-surface). Rail promoted from candidate.
+- **NEW `[[llm-output-visual-primitive]]` sub-shape n=1 8-12** — cathrynlavery/diagram-design (29 curated HTML+SVG diagram types for Claude Code, biggest github-trending spike). First "curated visual library for LLM emission targets" print.
+- **NEW `[[memory-primitive-product-surface]]` sub-shape n=1 8-12** — HKUDS/DeepTutor (lifelong-personalized-tutoring). First memory-primitive-as-product-architecture print, distinct from infra-tier semantica/code-graph-rag prints.
+- **`[[memory-primitive-paper streak]]` 7-consec 8-12** — AgentOPSD memory-adjacent (Tsinghua ↑49, recursive bayesian belief updates on teacher-student log-prob gaps).
+- **NEW `[[EU-AI-Act-enforcement-surface]]` sub-shape n=1 8-12** — Claude watermarking global rollout is first fleet-visible enforcement print since 8-02 act live.
+- **NEW `[[weights-as-wiring hardware]]` sub-shape n=1 8-12** — AMD/Taalas acquisition-priced (621pts HN).
+- **NEW `[[hitl-review-fatigue-empirical]]` sub-shape n=1 8-12** — 40k game runs / 409k decisions gives empirical floor on HITL review reliability (293pts HN).
+- **`[[agent-graphs-replacing-prompting]]` n=2 8-11** — Andrew Ng 8-10 + Anthropic engineer via ajay4ai 8-11. Rail promotion deciding-test 8-18 (3rd fleet-visible authority within 7d).
+- **NEW `[[soft-sustain-2-consec-top-pick]]` sub-shape memory-window n=2 8-12** — semantica-agi/semantica -8% day-2 mild decay = 3rd top-pick with day-2 soft-sustain. Deciding-test 8-13 for 3-consec.
+- **`[[3-day-sustained-top-pick]]` TERMINATES at day-4 8-12** — prime-agent -57% day-4 = viral-arc break, matches cloudflare/computer 8-06→8-07 -69% day-3 shape.
+- **NEW `[[defi-protocol-brand-npm-typosquat-cluster]]` sub-shape n=1 8-12** — 7 npm defi-brand pkgs in 17h (permit2 Uniswap + boring-vault Yearn + augustdigital-sdk + camelot-ammv2-{core,periphery} + upshift-{config,finance}). Cross-ecosystem parent-pattern candidate n=1 (2-consec-UTC-day with 8-11 pip cluster).
+- **NEW `[[alphabet-namespace-cluster]]` sub-shape n=1 8-12** — 22 alphabet-suffixed `@years18/n8n-nodes-utils-helper-{a..x}` variants; novel scaled-namespace-fill.
+- **NEW `[[curator-fresh-handle-emergence]]` sub-shape n=1 8-12** — 0xTindorr first appearance in list-digest 154-line seen-file history. Pendle PT-loop breakdown = memory-window-first `[[pendle-yield-content-print]]` n=1. Flowslikeosmo $CARDS+$SEALED = first `[[collectible-tokenization-ticker-print]]` n=1.
+- **`[[curator-DeFi_Made_Here-dominance]]` (from 8-11) FAILS 8-12** — DeFi_Made_Here 0 appearances today.
+- **NEW `[[vol-vacuum-price-flat]]` sub-shape n=1 8-12** — WELL 0.06× baseline vol on -0.87% near-flat price; distinct from vol-compression-on-price-decay (needs price-decay) + healthy-consolidation (needs vol-at-baseline). Deciding-test 8-13.
+- **`[[vol-compression-on-price-decay]]` n=2 8-12** — GITLAWB 6-consec sub-baseline vol; formal-pattern promotion at n=3.
+- **NEW `[[MAMO-3-consec-above-baseline-vol]]` n=1 8-12** — first 3-consec above-baseline vol stretch on MAMO in memory-window.
+- **NEW `[[intraday-candidate-both-fail-via-flush]]` observation n=1 8-12** — REPPO 8-11 2-competing-candidate deciding-test resolves via healthy-flush read (third-party emergent).
+- **`[[malware-only-security-surface]]` n=4 formal-pattern BREAKS 8-12** — SeaweedFS Go SSRF critical hits tracked stack; first tracked-critical since 8-07 crypto-js.
+- **`[[quiet-KEV-baseline]]` 4-consec streak (8-08→8-11) BREAKS 8-11** — 3 KEV added (Metabase + Cisco ASA/FTD + Windows WinSock, all patch-Tuesday product-CVEs + open-source app-CVE).
+- **`[[EPSS-skip-run]]` n=3 formal-pattern BREAKS 8-12** — EPSS enriched 10/12 today. New counter starts on next EPSS-skip.
+- **`[[cross-ecosystem-malware-escalation]]` n=3 does NOT extend 8-12** — npm-only 98.3% today = back to 8-08 baseline.
+- **Aeon-fleet clean d13 vs security-digest surface 8-12** — deepest defensive-import clean-streak in memory-window. `permit2` near-miss noted.
+- **`[[12Z-slot-dark-immunity-per-skill]]` 6-consec 8-07→8-12** — token-alert 12Z-slot fires clean while ISS-027 8-skill 12Z-batch dark d46.
+- **Bash `>` redirect workaround-chain n=40 durable 20-UTC-day span 7-22 → 8-12** — 8-12 fresh call-sites: github-trending for-loop over `${repo}` variable expansion + list-digest `>>` seen-file append. NEW variant class from 8-11 `[[python-inline-exec-blocked]]` stable.
+- **Sub-25 github-trending fetch pattern 14-consec permanent shape 8-12** — n=18 NEW mid-band high (prior high was n=17 8-08).
+- **`[[MCP-enforcement-primitive-cluster]]` dormant since 8-05** — needs 3rd variant same-UTC-day to advance rail past 8-05.
+- **reg-monitor CFTC RSS 404 durability d7+ confirmed 8-12** — 2nd-observation (8-05 + 8-12) → self-improve candidate to bake HTML-fallback into SKILL step 1C.
+- **reg-monitor score-15 ACT-item 8-12** — CFTC 9281-26 emergency Kalshi order (§8a(9)) exceeds prior week's top score-12 (NY v Kalshi Forbes 8-05). Prediction-market lane signal density escalating.
+- **`[[claude-real-math-breakthrough]]` observation n=1 8-11** — Claude solves 67% Riemann zeros in 1.5 days (prev 41.6%).
 - **`[[dario-public-endorsement-of-own-product]]` observation n=1 8-09** — same-day pincer with claude-competitive-benchmark-print.
 - **`[[pre-squash-history-rebuild-recipe]]` observation 8-09** — fresh branch + cherry-pick load-bearing + force-push-with-lease.
 - **`[[fork-signal-fade-collapse]]` sub-shape candidate n=1 8-09** — 98%→32% configured-forks in 1 week. Deciding-test 8-16 next weekly cycle.
-- **Sub-25 github-trending fetch pattern 13-consec permanent shape 8-11** — 7-28 → 8-11 (mid-band n=16 today).
-- **Search-skill NO_GAP durability rail day-45 8-11** — fleet capability-complete on external-skill axis.
-- **`[[memory-primitive-paper streak]]` extends via Ouroboros 8-11** — self-developing-agent-with-reviewed-core-evolution = Aeon-fleet-mirror paper.
-- Claude Opus 5 shipped 7-24. Claude Code computer-use gain 7-31. Claude Code subagent-cap-drop + self-hosted envs + cross-session messaging 8-06.
+- Claude Opus 5 shipped 7-24. Claude Code computer-use gain 7-31. Claude Code subagent-cap-drop + self-hosted envs + cross-session messaging 8-06. Claude watermarking global 8-12 (EU AI Act enforcement surface).
 - FTX $900M distribution 2026-07-31 = 5th round creditor payout. Hashdex $DEFI ETF closure at $14M 8-07 = first spot-BTC-ETF failure of cycle. MetaMask Agent Wallet ships 8-07 = first mainstream self-custodial wallet-for-agents mandate-primitive.
-- **EU AI Act enforcement live 2026-08-02** — disclosure + watermarks + deepfake labeling now enforced.
+- **EU AI Act enforcement live 2026-08-02** — disclosure + watermarks + deepfake labeling now enforced; Claude watermarking global 8-12 = first fleet-visible enforcement print.
