@@ -1,0 +1,287 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Reg Monitor — 2026-08-12",
+        "description": "CFTC week — emergency order shields kalshi from ny + $397M crypto ponzi charged + american-odds pricing warning, all inside 5 days."
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-act-heading",
+        "act-item-1",
+        "act-item-2",
+        "separator-1",
+        "section-watch-heading",
+        "watch-item-1",
+        "watch-item-2",
+        "separator-2",
+        "section-context-heading",
+        "context-item-1",
+        "separator-3",
+        "metadata-section"
+      ]
+    },
+    "section-act-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h2"
+      }
+    },
+    "act-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act-1-link",
+        "act-1-details",
+        "act-1-metadata"
+      ]
+    },
+    "act-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC exercises emergency authority to keep KalshiEX operating",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9281-26",
+        "source": "US federal",
+        "score": "active enforcement (2026-08-11)"
+      }
+    },
+    "act-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "section 8a(9) order compels KalshiEX to continue nationwide despite NY AG's TRO bid; chair Selig frames state gaming law as preempted for interstate derivatives markets. affects: KalshiEX + all federally-registered event-contract DCMs + NY AG $36B suit posture.",
+        "variant": "body"
+      }
+    },
+    "act-1-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act-1-timing",
+        "act-1-impact"
+      ]
+    },
+    "act-1-timing": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ NY hearing pending; CFTC has parallel suits against 9 states (AZ, CT, IL, KY, MN, NM, NY, RI, WI)",
+        "variant": "caption"
+      }
+    },
+    "act-1-impact": {
+      "type": "Text",
+      "props": {
+        "text": "📊 prediction market angle: direct — resolves near-term shutdown risk, hardens preemption posture, sets template for polymarket state fights.",
+        "variant": "caption"
+      }
+    },
+    "act-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act-2-link",
+        "act-2-details",
+        "act-2-metadata"
+      ]
+    },
+    "act-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC charges Goliath Ventures + CEO Christopher Delgado in $397M crypto ponzi",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9280-26",
+        "source": "US federal",
+        "score": "active enforcement (2026-08-11)"
+      }
+    },
+    "act-2-details": {
+      "type": "Text",
+      "props": {
+        "text": "~1,600 customers, bitcoin/ether trading fraud, fictitious profits + falsified statements; CFTC pursuing restitution, disgorgement, monetary penalties, permanent trading + registration ban. parallel SEC civil action same day; criminal guilty plea already entered june 2026.",
+        "variant": "body"
+      }
+    },
+    "act-2-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act-2-timing",
+        "act-2-impact"
+      ]
+    },
+    "act-2-timing": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ civil relief now sought post-plea",
+        "variant": "caption"
+      }
+    },
+    "act-2-impact": {
+      "type": "Text",
+      "props": {
+        "text": "📊 prediction market angle: none — pure crypto commodity-fraud lane.",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h2"
+      }
+    },
+    "watch-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-1-link",
+        "watch-1-details"
+      ]
+    },
+    "watch-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC \"Conflicts and Affiliations\" NPRM",
+        "href": "https://www.federalregister.gov/documents/2026/08/06/2026-15948/conflicts-and-affiliations",
+        "source": "US federal",
+        "score": "proposed rule, comment open"
+      }
+    },
+    "watch-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "new affiliate-relationship safeguards on staffing / tech / office-space sharing + non-public-info restrictions across FCMs, SEFs, DCMs, DCOs. hits kalshi + polymarket structure at the DCM layer. comments due 2026-10-05.",
+        "variant": "body"
+      }
+    },
+    "watch-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-2-link",
+        "watch-2-details"
+      ]
+    },
+    "watch-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC advisory: no american-odds pricing on event contracts",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9278-26",
+        "source": "US federal",
+        "score": "staff advisory (2026-08-07)"
+      }
+    },
+    "watch-2-details": {
+      "type": "Text",
+      "props": {
+        "text": "casino-style american-odds pricing \"likely to mislead\"; letter references manipulative-devices statute. no explicit deadline but sets ground for enforcement if polymarket/kalshi don't reformat display.",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-context-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CONTEXT",
+        "level": "h2"
+      }
+    },
+    "context-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context-1-link",
+        "context-1-details"
+      ]
+    },
+    "context-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC Innovation Advisory Committee inaugural meeting Aug 20 DC",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9279-26",
+        "source": "US federal"
+      }
+    },
+    "context-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "agenda: crypto assets, AI, prediction markets. first IAC session under chair Selig.",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "metadata-sources",
+        "metadata-score"
+      ]
+    },
+    "metadata-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: federal-register=ok · sec=ok · cftc=ok(html-fallback, rss 404) · websearch=ok · congress=skip",
+        "variant": "caption"
+      }
+    },
+    "metadata-score": {
+      "type": "Text",
+      "props": {
+        "text": "5 developments scored, 2 act / 2 watch / 1 context",
+        "variant": "caption"
+      }
+    }
+  }
+}

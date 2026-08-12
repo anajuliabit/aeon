@@ -51,3 +51,8 @@ https://www.federalregister.gov/documents/2026/07/27/2026-15088
 https://www.federalregister.gov/documents/2026/07/24/2026-14979
 https://www.forbes.com/sites/zennonkapron/2026/08/04/new-york-wants-36-billion-from-kalshi-a-federal-judge-next-door-just-shielded-it/
 https://www.ropesgray.com/en/insights/alerts/2026/06/rewriting-the-rulebook-cftc-proposes-rule-changes-for-prediction-market-contracts
+https://www.cftc.gov/PressRoom/PressReleases/9281-26
+https://www.cftc.gov/PressRoom/PressReleases/9280-26
+https://www.federalregister.gov/documents/2026/08/06/2026-15948/conflicts-and-affiliations
+https://www.cftc.gov/PressRoom/PressReleases/9278-26
+https://www.cftc.gov/PressRoom/PressReleases/9279-26
