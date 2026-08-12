@@ -1,22 +1,18 @@
-*Agent Buzz — 2026-08-11*
-_three threads today: agents wired into money rails, MCP settling as the default skill/framework distribution layer, and deployment receipts from industrial + social._
+*Agent Buzz — 2026-08-12*
+_two threads today — MCP hardens from directory into production plumbing, and agent-mandate primitives (IBA, x402, mission tracking) get concrete names._
 
-**agents as economic actors**
-• @Sengo_Sol — crypto rails let agents act as economic principals: money is API, no KYC or approver in the loop
-  https://x.com/Sengo_Sol/status/2086958485061706014
-• @1DesyDonald — injective nova crowned three agent shapes: risk-enforced perp trading, commerce booking, and physical-desk terminals
-  https://x.com/1DesyDonald/status/2086961320763469886
+**MCP moves to production plumbing**
+• @zanbuilds — Cardinal filters MCP registries by fresh liveness + Agent Card safety evidence, not by listings alone.
+  https://x.com/zanbuilds/status/2087327286823354537
+• @joshdailey — after weeks running Operator + MCP for chat agents, chat feels more native than traditional UX.
+  https://x.com/joshdailey/status/2087327407644836118
 
-**MCP as distribution layer**
-• @shupeiman — MCP-served claude skills replace zip redistribution: live updates, per-user URL revocation, logged usage, zero token overhead
-  https://x.com/shupeiman/status/2086965586295431632
-• @KirkDBorne — packt book codifies MCP + A2A as the default python multi-agent stack
-  https://x.com/KirkDBorne/status/2086847632115139050
+**agent-mandate stack takes shape**
+• @MainNkem — Aether: submitting agent transactions is easy, knowing what happened across a mission of irreversibles is the gap.
+  https://x.com/MainNkem/status/2087327587915731293
+• @Grokilactica — Intent-Bound Authorization: human signs a certificate declaring intent, agent executes only within that signed scope.
+  https://x.com/Grokilactica/status/2087327756615127355
+• @sebastrosen — x402 lets APIs charge agents per call — but every payment on a transparent chain reveals who paid.
+  https://x.com/sebastrosen/status/2087327141151055898
 
-**agents in the wild**
-• @the_dennis_ren — neuron industries agent one-shot upgraded a 1991 siemens PLC after ingesting 300 pages of docs (brownfield industrial)
-  https://x.com/the_dennis_ren/status/2086960597116342736
-• @0x0SojalSec — cloudflare: agent traffic now tops human; chinese ops already run 50–100 social accounts 24/7
-  https://x.com/0x0SojalSec/status/2086959269589774463
-
-<!-- _src: xai-cache · candidates: 10 → kept: 6 -->
+<!-- _src: xai-cache · candidates: 13 → kept: 5_ -->

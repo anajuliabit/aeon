@@ -1,0 +1,223 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-08-12",
+        "description": "two threads today — MCP hardens from directory into production plumbing, and agent-mandate primitives (IBA, x402, mission tracking) get concrete names."
+      },
+      "children": [
+        "section1",
+        "separator1",
+        "section2",
+        "separator2",
+        "footer"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "tweet1_container",
+        "tweet2_container"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP moves to production plumbing",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "zanbuilds",
+        "handle": "@zanbuilds",
+        "text": "Cardinal filters MCP registries by fresh liveness + Agent Card safety evidence, not by listings alone."
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/zanbuilds/status/2087327286823354537"
+      },
+      "children": []
+    },
+    "tweet2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joshdailey",
+        "handle": "@joshdailey",
+        "text": "after weeks running Operator + MCP for chat agents, chat feels more native than traditional UX."
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/joshdailey/status/2087327407644836118"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "tweet3_container",
+        "tweet4_container",
+        "tweet5_container"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-mandate stack takes shape",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet3_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MainNkem",
+        "handle": "@MainNkem",
+        "text": "Aether: submitting agent transactions is easy, knowing what happened across a mission of irreversibles is the gap."
+      },
+      "children": []
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/MainNkem/status/2087327587915731293"
+      },
+      "children": []
+    },
+    "tweet4_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Grokilactica",
+        "handle": "@Grokilactica",
+        "text": "Intent-Bound Authorization: human signs a certificate declaring intent, agent executes only within that signed scope."
+      },
+      "children": []
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Grokilactica/status/2087327756615127355"
+      },
+      "children": []
+    },
+    "tweet5_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5",
+        "link5"
+      ]
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "sebastrosen",
+        "handle": "@sebastrosen",
+        "text": "x402 lets APIs charge agents per call — but every payment on a transparent chain reveals who paid."
+      },
+      "children": []
+    },
+    "link5": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/sebastrosen/status/2087327141151055898"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai-cache · candidates: 13 → kept: 5_",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
