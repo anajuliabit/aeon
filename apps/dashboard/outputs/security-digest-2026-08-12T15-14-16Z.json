@@ -1,0 +1,301 @@
+{
+  "root": "card_security_digest",
+  "state": {},
+  "elements": {
+    "card_security_digest": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-12"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_verdict",
+        "text_verdict",
+        "sep_1",
+        "heading_patch_today",
+        "stack_patch_today_items",
+        "sep_2",
+        "heading_patch_week",
+        "stack_patch_week_items"
+      ]
+    },
+    "heading_verdict": {
+      "type": "Heading",
+      "props": {
+        "text": "Verdict",
+        "level": "h2"
+      }
+    },
+    "text_verdict": {
+      "type": "Text",
+      "props": {
+        "text": "3 actively exploited, 1 to schedule, 113+2 fresh malware packages. Sources: KEV, GH Advisory, EPSS",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_patch_today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "stack_patch_today_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_cve_metabase",
+        "stack_cve_cisco",
+        "stack_cve_windows",
+        "stack_malware"
+      ]
+    },
+    "stack_cve_metabase": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_cve_metabase",
+        "text_cve_metabase_vuln",
+        "text_cve_metabase_remediation"
+      ]
+    },
+    "storylink_cve_metabase": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-72898 — Metabase",
+        "href": "https://www.cve.org/CVERecord?id=CVE-2026-72898",
+        "source": "KEV added 2026-08-11",
+        "score": "CVSS 10.0 · EPSS 0.011"
+      }
+    },
+    "text_cve_metabase_vuln": {
+      "type": "Text",
+      "props": {
+        "text": "Unauthenticated SQL injection → admin, connected-DB credential theft, arbitrary data export.",
+        "variant": "body"
+      }
+    },
+    "text_cve_metabase_remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade Metabase to the vendor-fixed version today; rotate any DB credentials Metabase stored.",
+        "variant": "muted"
+      }
+    },
+    "stack_cve_cisco": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_cve_cisco",
+        "text_cve_cisco_vuln",
+        "text_cve_cisco_remediation"
+      ]
+    },
+    "storylink_cve_cisco": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-20349 — Cisco Secure Firewall ASA / FTD",
+        "href": "https://www.cve.org/CVERecord?id=CVE-2026-20349",
+        "source": "KEV added 2026-08-11",
+        "score": "CVSS 8.6 · EPSS 0.010"
+      }
+    },
+    "text_cve_cisco_vuln": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth remote heap-inspection DoS, device reload loop.",
+        "variant": "body"
+      }
+    },
+    "text_cve_cisco_remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ Patch ASA/FTD firmware per Cisco advisory today.",
+        "variant": "muted"
+      }
+    },
+    "stack_cve_windows": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_cve_windows",
+        "text_cve_windows_vuln",
+        "text_cve_windows_remediation"
+      ]
+    },
+    "storylink_cve_windows": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-68820 — Windows Ancillary Function Driver for WinSock",
+        "href": "https://www.cve.org/CVERecord?id=CVE-2026-68820",
+        "source": "KEV added 2026-08-11",
+        "score": "CVSS 7.0 · EPSS 0.004"
+      }
+    },
+    "text_cve_windows_vuln": {
+      "type": "Text",
+      "props": {
+        "text": "Local use-after-free → privilege escalation, patch-Tuesday driver bug.",
+        "variant": "body"
+      }
+    },
+    "text_cve_windows_remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ Install August 2026 Windows cumulative update today.",
+        "variant": "muted"
+      }
+    },
+    "stack_malware": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_malware",
+        "stat_malware_count",
+        "text_malware_defi",
+        "text_malware_namespace",
+        "text_malware_sub",
+        "text_malware_remediation"
+      ]
+    },
+    "heading_malware": {
+      "type": "Heading",
+      "props": {
+        "text": "Malware wave (npm + pip)",
+        "level": "h3"
+      }
+    },
+    "stat_malware_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Fresh in 17h",
+        "value": "115",
+        "delta": "113 npm + 2 pip"
+      }
+    },
+    "text_malware_defi": {
+      "type": "Text",
+      "props": {
+        "text": "DeFi-brand cluster: permit2, boring-vault, augustdigital-sdk, camelot-ammv2-core, camelot-ammv2-periphery, upshift-config, upshift-finance",
+        "variant": "body"
+      }
+    },
+    "text_malware_namespace": {
+      "type": "Text",
+      "props": {
+        "text": "Namespace cluster: @years18/n8n-nodes-utils-helper-{a..x} (22 variants targeting n8n)",
+        "variant": "body"
+      }
+    },
+    "text_malware_sub": {
+      "type": "Text",
+      "props": {
+        "text": "Sub-clusters: @bikli/*, base65-*",
+        "variant": "body"
+      }
+    },
+    "text_malware_remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ If any of these were installed, uninstall + rotate any secrets exposed to the install host.",
+        "variant": "muted"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_patch_week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "stack_patch_week_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_seaweedfs"
+      ]
+    },
+    "stack_seaweedfs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_seaweedfs",
+        "text_seaweedfs_vuln",
+        "text_seaweedfs_note",
+        "text_seaweedfs_remediation"
+      ]
+    },
+    "storylink_seaweedfs": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-87fv-vqqr-m4jr — SeaweedFS (Go)",
+        "href": "https://github.com/advisories/GHSA-87fv-vqqr-m4jr",
+        "source": "GitHub Advisory",
+        "score": "CVSS 9.3 · EPSS 0.004"
+      }
+    },
+    "text_seaweedfs_vuln": {
+      "type": "Text",
+      "props": {
+        "text": "Unauthenticated SSRF with response read-back on volume-server gRPC — leaks cloud IMDS + IAM credentials on default deploys.",
+        "variant": "body"
+      }
+    },
+    "text_seaweedfs_note": {
+      "type": "Text",
+      "props": {
+        "text": "No public PoC available.",
+        "variant": "caption"
+      }
+    },
+    "text_seaweedfs_remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade github.com/seaweedfs/seaweedfs to ≥ 4.24 (fix commit 69da20bdaec9).",
+        "variant": "muted"
+      }
+    }
+  }
+}

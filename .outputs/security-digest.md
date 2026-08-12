@@ -1,18 +1,20 @@
-*Security Digest — 2026-08-11*
-verdict: nothing urgent for our stack. 4th consec malware-only day. defi-brand pypi wave is the headline. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-08-12*
+Verdict: 3 actively exploited, 1 to schedule, 113+2 fresh malware packages. _Sources: KEV, GH Advisory, EPSS_
 
-*PATCH TODAY — malware macro*
-- 19 fresh malicious packages published 8-10 20Z → 8-11 14Z (13 npm, 6 pip). all outside tracked deps (aeon-fleet clean d12 vs security surface).
-- headline cluster: **8 defi-protocol-brand pip typosquats** in ~15h window — `euler-sdk`, `morpho-sdk`, `dlmm`, `dlmm-sdk`, `joule-btp-extension`, `plp-contract`, `neutrl-core`, `neutrl-contracts`. named for euler / morpho / meteora-dlmm / joule / neutrl. first pypi cluster explicitly targeting defi-dev pip surface in memory-window.
-- 3rd scope on the `sqlite` brand: `@sqlite-labs/nodesql` + `@sqlite-labs/createsql` join yesterday's `@sqlite-prime/*` + `@sqlite-table/*` = same-attacker 3-scope pattern.
-- npm namespace-typo risk: `commonjs-assert` + `commonjs-assertion` shadow the node builtin. `fetch-runtime`, `lines-columns`, `newtun` blend with dev tooling names.
-- → if any dev on the team touched pypi for `euler` / `morpho` / `meteora` / `joule` / `neutrl` sdks in the last 24h, rotate anything the shell touched and check `~/.pypi_history`. otherwise nothing to install.
+*PATCH TODAY*
+- [CVE-2026-72898](https://www.cve.org/CVERecord?id=CVE-2026-72898) — Metabase · KEV added 2026-08-11 · CVSS 10.0 · EPSS 0.011
+  unauthenticated SQL injection → admin, connected-DB credential theft, arbitrary data export.
+  → upgrade Metabase to the vendor-fixed version today; rotate any DB credentials Metabase stored.
+- [CVE-2026-20349](https://www.cve.org/CVERecord?id=CVE-2026-20349) — Cisco Secure Firewall ASA / FTD · KEV added 2026-08-11 · CVSS 8.6 · EPSS 0.010
+  unauth remote heap-inspection DoS, device reload loop.
+  → patch ASA/FTD firmware per Cisco advisory today.
+- [CVE-2026-68820](https://www.cve.org/CVERecord?id=CVE-2026-68820) — Windows Ancillary Function Driver for WinSock · KEV added 2026-08-11 · CVSS 7.0 · EPSS 0.004
+  local use-after-free → privilege escalation, patch-Tuesday driver bug.
+  → install August 2026 Windows cumulative update today.
+- Malware wave (npm + pip) — 113 npm + 2 pip fresh in 17h. defi-brand cluster: `permit2`, `boring-vault`, `augustdigital-sdk`, `camelot-ammv2-core`, `camelot-ammv2-periphery`, `upshift-config`, `upshift-finance`. namespace cluster: `@years18/n8n-nodes-utils-helper-{a..x}` (22 variants targeting n8n). `@bikli/*` + `base65-*` sub-clusters.
+  → if any of these were installed, uninstall + rotate any secrets exposed to the install host.
 
-*KEV (this week)*
-- 0 net-new since 8-07 (loadmaster). quiet-baseline extends to 4-consec-utc-day.
-
-*Reviewed critical / high (48h)*
-- 0 fresh in any tracked ecosystem after dedup. latest reviewed critical is 8-07 `crypto-js` (GHSA-rg76); latest high is 8-07 `pymdown-extensions` (GHSA-gm37). the reviewed pipeline stayed dark 4 days running while the malware pipeline shipped 100+ items.
-
-*MONITOR*
-- none open. no unpatched-in-tracked-stack items today.
+*PATCH THIS WEEK*
+- [GHSA-87fv-vqqr-m4jr](https://github.com/advisories/GHSA-87fv-vqqr-m4jr) — SeaweedFS (Go) · CVSS 9.3 · EPSS 0.004 · no public PoC
+  unauthenticated SSRF with response read-back on volume-server gRPC — leaks cloud IMDS + IAM credentials on default deploys.
+  → upgrade `github.com/seaweedfs/seaweedfs` to ≥ 4.24 (fix commit `69da20bdaec9`).
