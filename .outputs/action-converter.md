@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-11*
-Shape: File ISS-032 fork-cohort, deepen ISS-030, sync #174, note ISS-031 self-heal, rebase #176
+*5 Actions — 2026-08-12*
+Shape: file iss-032, ship usepod-402 gate, audit workflow race, open reg-monitor fix, nudge #174
 
-1. Open `memory/issues/ISS-032.md` for fork-cohort stuck 67h+ (last_success 2026-08-02, last_dispatch 8-09 19:05Z) — state-update-race on cancelled workflow run 31330721650; add INDEX Open row, severity=high, category=config, `related: ISS-028`
-why: 48h threshold ~25min away (19:05Z), first fork-cohort stall in memory-window, 8-09 P0 novel signal never filed
-done: `memory/issues/ISS-032.md` exists + INDEX.md Open table has ISS-032 row
-loop: fork-cohort-stuck-48h
+1. file `memory/issues/ISS-032.md` for fork-cohort state-update-race — run 31330721650 cancelled 8-09 19:35:47Z, cron-state marker never cleared, ~93h stuck since 8-09 19:05Z dispatch
+why: 45h past 48h escalation threshold, action-converter proposed 8-11 18:40Z but never filed; blocks fork-cohort restart
+done: `memory/issues/ISS-032.md` exists + `INDEX.md` Open table row added with severity=high category=config
+loop: fork-cohort-stuck-93h
 
-2. Append `## 2026-08-11 intra-18h cluster` block to `memory/issues/ISS-030.md` with the 3 same-signature `sdk_opt_in_required` prints (8-10 20:32Z n=1 + 8-11 08:19Z n=2 + 8-11 14:14Z n=3, consec 17→27→33, sr 10%→8%→7%) + day-of-week reclarify note (Tue not Mon)
-why: 14:46Z heartbeat surfaced n=3 datapoint deepening; feeds reflect 18Z + 4-consec-week formal-pattern tracker before it decays
-done: ISS-030 body has explicit n=3 intra-18h cluster block with all 3 timestamps and consec deltas
-loop: iss-030-n3-cluster
+2. ship `scripts/detect-usepod-402.sh` operator-page gate for ISS-031 signature — 8-13 deadline is tomorrow, only 1 workday left
+why: 2nd 7d-recurrence of ISS-029 shape crosses signature threshold; stopgap fix per weekly-review 8-10 owned action
+done: script exists + executable + calls `./notify` on 402 signature detection + wired into `.github/workflows/chain-runner.yml` postprocess path
+loop: iss-031-detect-usepod-gate
 
-3. Sync PR #174 (Advisor Brier-weight, ~87h mergeable=UNKNOWN empty statusCheckRollup) with main to force CI fire — `gh pr checkout 174 && git fetch origin main && git rebase origin/main && git push --force-with-lease`
-why: CI never fired in 87h, prior close-reopen + rebase attempts haven't shaken it, weekly-batch T-5 to 8-16 Sunday
-done: `gh pr checks 174` shows any CI run created OR statusCheckRollup non-empty
-loop: pr-174-ci-cold-87h
+3. audit `.github/workflows/aeon.yml` commit-results + update-cron-state steps for Run-step cancellation-handling — root cause of ISS-032
+why: fix at workflow-layer prevents next fork-cohort stall recurrence next Mon 8-17 dispatch; investigation-heavy but concrete
+done: log block in `memory/logs/2026-08-12.md` naming exact line ranges in aeon.yml + verdict on whether steps clear dispatched marker on cancellation + proposed patch shape
+loop: fork-cohort-workflow-audit
 
-4. Update `memory/issues/ISS-031.md` with `## Recovery` block noting 8-10 19:15Z gateway self-heal (~4h duration, ISS-029 shape confirmed) + morning-brief flag "2nd 402 event in 7d = recurrence pattern confirmed n=2"; move INDEX row Open→Resolved with self-heal note
-why: ledger currently misreads ISS-031 as still-open; hygiene compounds at skill-health next tick (18Z)
-done: INDEX.md ISS-031 row in Resolved table with self-heal reference; ISS-031.md has Recovery block
-loop: iss-031-recovery-ledger
+4. open reg-monitor self-improve PR baking CFTC HTML-fallback into `skills/reg-monitor/SKILL.md` step 1C — 2-consec-observation 8-05 + 8-12 confirms endpoint 404 durable
+why: today's fire needed runtime pivot to HTML path; PR removes the pivot from every future Wed-cycle fire
+done: PR opened via `gh pr create` on branch `fix/reg-monitor-cftc-html-fallback` naming CFTC RSS endpoint + fallback URL + step 1C edit
+loop: reg-monitor-cftc-rss-404-durable
 
-5. Rebase PR #176 (skill-graph regen EDGES 32→74, ~49h open on branch `skill-graph/2026-08-09`) onto main to refresh CI status before Sunday-batch — `gh pr checkout 176 && git fetch origin main && git rebase origin/main && git push --force-with-lease`
-why: sole remaining stale PR post #174 sync, weekly-batch T-5, cheap re-verify keeps queue-full exit-gate from mis-triggering
-done: `gh pr view 176 --json mergeable,statusCheckRollup` shows fresh CI checks post-push
-loop: pr-176-stale-49h
+5. nudge PR #174 (Advisor Brier-weight) CI kick via close-reopen or empty-commit push — 4d+ CI-cold, mergeable=UNKNOWN, empty statusCheckRollup, weekly-batch T-4 to 8-16
+why: external webbrain-one contributor blocked by unfiring CI; queue-full self-improve exit-gate stays disengaged until this clears
+done: `gh pr view 174 --json statusCheckRollup` returns non-empty array
+loop: pr-174-ci-cold-4d
 
-sources: memory=100L logs=10d topics=20 prs=3 cron_failing=1 mode=OK
+sources: memory=95 logs=13 topics=20 prs=4 cron_failing=3 mode=OK

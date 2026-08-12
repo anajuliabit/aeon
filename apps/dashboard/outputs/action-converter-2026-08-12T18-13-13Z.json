@@ -1,0 +1,392 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-12"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shape-text",
+        "sep-intro",
+        "action-1-heading",
+        "action-1-stack",
+        "sep-1",
+        "action-2-heading",
+        "action-2-stack",
+        "sep-2",
+        "action-3-heading",
+        "action-3-stack",
+        "sep-3",
+        "action-4-heading",
+        "action-4-stack",
+        "sep-4",
+        "action-5-heading",
+        "action-5-stack",
+        "sep-5",
+        "footer-stack"
+      ]
+    },
+    "shape-text": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: file iss-032, ship usepod-402 gate, audit workflow race, open reg-monitor fix, nudge #174",
+        "variant": "muted"
+      }
+    },
+    "sep-intro": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. file `memory/issues/ISS-032.md` for fork-cohort state-update-race",
+        "level": "h3"
+      }
+    },
+    "action-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-run",
+        "action-1-why",
+        "action-1-done",
+        "action-1-loop"
+      ]
+    },
+    "action-1-run": {
+      "type": "Text",
+      "props": {
+        "text": "Run 31330721650 cancelled 8-09 19:35:47Z, cron-state marker never cleared, ~93h stuck since 8-09 19:05Z dispatch"
+      }
+    },
+    "action-1-why": {
+      "type": "Alert",
+      "props": {
+        "title": "Why",
+        "message": "45h past 48h escalation threshold, action-converter proposed 8-11 18:40Z but never filed; blocks fork-cohort restart",
+        "type": "warning"
+      }
+    },
+    "action-1-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `memory/issues/ISS-032.md` exists + `INDEX.md` Open table row added with severity=high category=config",
+        "variant": "body"
+      }
+    },
+    "action-1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: fork-cohort-stuck-93h",
+        "variant": "outline"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. ship `scripts/detect-usepod-402.sh` operator-page gate for ISS-031 signature",
+        "level": "h3"
+      }
+    },
+    "action-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-deadline",
+        "action-2-why",
+        "action-2-done",
+        "action-2-loop"
+      ]
+    },
+    "action-2-deadline": {
+      "type": "Alert",
+      "props": {
+        "title": "Deadline",
+        "message": "8-13 deadline is tomorrow, only 1 workday left",
+        "type": "warning"
+      }
+    },
+    "action-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 2nd 7d-recurrence of ISS-029 shape crosses signature threshold; stopgap fix per weekly-review 8-10 owned action"
+      }
+    },
+    "action-2-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: script exists + executable + calls `./notify` on 402 signature detection + wired into `.github/workflows/chain-runner.yml` postprocess path"
+      }
+    },
+    "action-2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-031-detect-usepod-gate",
+        "variant": "outline"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. audit `.github/workflows/aeon.yml` commit-results + update-cron-state steps for Run-step cancellation-handling",
+        "level": "h3"
+      }
+    },
+    "action-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-note",
+        "action-3-why",
+        "action-3-done",
+        "action-3-loop"
+      ]
+    },
+    "action-3-note": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause of ISS-032",
+        "variant": "lead"
+      }
+    },
+    "action-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: fix at workflow-layer prevents next fork-cohort stall recurrence next Mon 8-17 dispatch; investigation-heavy but concrete"
+      }
+    },
+    "action-3-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: log block in `memory/logs/2026-08-12.md` naming exact line ranges in aeon.yml + verdict on whether steps clear dispatched marker on cancellation + proposed patch shape"
+      }
+    },
+    "action-3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: fork-cohort-workflow-audit",
+        "variant": "outline"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. open reg-monitor self-improve PR baking CFTC HTML-fallback into `skills/reg-monitor/SKILL.md` step 1C",
+        "level": "h3"
+      }
+    },
+    "action-4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-4-context",
+        "action-4-why",
+        "action-4-done",
+        "action-4-loop"
+      ]
+    },
+    "action-4-context": {
+      "type": "Text",
+      "props": {
+        "text": "2-consec-observation 8-05 + 8-12 confirms endpoint 404 durable"
+      }
+    },
+    "action-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: today's fire needed runtime pivot to HTML path; PR removes the pivot from every future Wed-cycle fire"
+      }
+    },
+    "action-4-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: PR opened via `gh pr create` on branch `fix/reg-monitor-cftc-html-fallback` naming CFTC RSS endpoint + fallback URL + step 1C edit"
+      }
+    },
+    "action-4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: reg-monitor-cftc-rss-404-durable",
+        "variant": "outline"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. nudge PR #174 (Advisor Brier-weight) CI kick via close-reopen or empty-commit push",
+        "level": "h3"
+      }
+    },
+    "action-5-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-5-status",
+        "action-5-why",
+        "action-5-done",
+        "action-5-loop"
+      ]
+    },
+    "action-5-status": {
+      "type": "Text",
+      "props": {
+        "text": "4d+ CI-cold, mergeable=UNKNOWN, empty statusCheckRollup, weekly-batch T-4 to 8-16",
+        "variant": "lead"
+      }
+    },
+    "action-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: external webbrain-one contributor blocked by unfiring CI; queue-full self-improve exit-gate stays disengaged until this clears"
+      }
+    },
+    "action-5-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `gh pr view 174 --json statusCheckRollup` returns non-empty array"
+      }
+    },
+    "action-5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-174-ci-cold-4d",
+        "variant": "outline"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "footer-heading",
+        "footer-grid",
+        "footer-mode"
+      ]
+    },
+    "footer-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "footer-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat-memory",
+        "stat-logs",
+        "stat-topics",
+        "stat-prs",
+        "stat-cron"
+      ]
+    },
+    "stat-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "95"
+      }
+    },
+    "stat-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "13"
+      }
+    },
+    "stat-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "20"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "4"
+      }
+    },
+    "stat-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Failing",
+        "value": "3"
+      }
+    },
+    "footer-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "mode: OK",
+        "variant": "secondary"
+      }
+    }
+  }
+}
