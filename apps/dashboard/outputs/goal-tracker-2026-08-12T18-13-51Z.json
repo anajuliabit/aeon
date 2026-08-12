@@ -1,0 +1,576 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-12"
+      },
+      "children": [
+        "summary-section",
+        "sep-1",
+        "blocked-section",
+        "sep-2",
+        "on-track-section",
+        "sep-3",
+        "sources-section"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-heading",
+        "summary-text",
+        "stats-grid",
+        "trend-info"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "8 goals — 0 at risk, 0 needs attention, 3 on track, 5 blocked, 0 done"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-at-risk",
+        "stat-needs-attention",
+        "stat-on-track",
+        "stat-blocked"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "8"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-needs-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "3"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "5"
+      }
+    },
+    "trend-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-label",
+        "trend-flat-badge",
+        "trend-detail"
+      ]
+    },
+    "trend-label": {
+      "type": "Text",
+      "props": {
+        "text": "Overall trend:",
+        "variant": "muted"
+      }
+    },
+    "trend-flat-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "flat",
+        "variant": "default"
+      }
+    },
+    "trend-detail": {
+      "type": "Text",
+      "props": {
+        "text": "1 improving + 1 degrading (net-zero)",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-1",
+        "blocked-2",
+        "blocked-3",
+        "blocked-4",
+        "blocked-5"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-1-title",
+        "blocked-1-desc",
+        "blocked-1-action"
+      ]
+    },
+    "blocked-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "fork-cohort stuck ~95h",
+        "level": "h4"
+      }
+    },
+    "blocked-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on ISS-032 file-op since 8-11 18:40Z; past 48h threshold, was ON TRACK ↓"
+      }
+    },
+    "blocked-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: file ISS-032 documenting state-update-race on cancelled workflows in 18Z action-converter fire",
+        "variant": "caption"
+      }
+    },
+    "blocked-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-2-title",
+        "blocked-2-desc",
+        "blocked-2-prs",
+        "blocked-2-action"
+      ]
+    },
+    "blocked-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-028 workaround-chain n=40+",
+        "level": "h4"
+      }
+    },
+    "blocked-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator batch-review of PRs since 8-09; 20-UTC-day span 7-22 → 8-12"
+      }
+    },
+    "blocked-2-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-2-pr-label",
+        "blocked-2-pr-167",
+        "blocked-2-pr-177"
+      ]
+    },
+    "blocked-2-pr-label": {
+      "type": "Text",
+      "props": {
+        "text": "PRs:",
+        "variant": "muted"
+      }
+    },
+    "blocked-2-pr-167": {
+      "type": "Link",
+      "props": {
+        "label": "#167",
+        "href": "https://github.com/aeon/aeon/pull/167"
+      }
+    },
+    "blocked-2-pr-177": {
+      "type": "Link",
+      "props": {
+        "label": "#177",
+        "href": "https://github.com/aeon/aeon/pull/177"
+      }
+    },
+    "blocked-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: flag PRs in next weekly-review as ready-to-merge",
+        "variant": "caption"
+      }
+    },
+    "blocked-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-3-title",
+        "blocked-3-desc",
+        "blocked-3-action"
+      ]
+    },
+    "blocked-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-027 12z batch dark d46",
+        "level": "h4"
+      }
+    },
+    "blocked-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on scheduler-side gap fix since 6-28; operator-gated"
+      }
+    },
+    "blocked-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: surface fix candidacy in weekly-review 8-17",
+        "variant": "caption"
+      }
+    },
+    "blocked-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-4-title",
+        "blocked-4-desc",
+        "blocked-4-action"
+      ]
+    },
+    "blocked-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "operator on-chain config d67",
+        "level": "h4"
+      }
+    },
+    "blocked-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on memory/on-chain-watches.yml + ALCHEMY_API_KEY + ETHERSCAN_API_KEY since 6-08"
+      }
+    },
+    "blocked-4-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator provides YAML + 2 secrets",
+        "variant": "caption"
+      }
+    },
+    "blocked-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-5-title",
+        "blocked-5-desc",
+        "blocked-5-action"
+      ]
+    },
+    "blocked-5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "priorities.md 69d stale",
+        "level": "h4"
+      }
+    },
+    "blocked-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator refresh since 6-04; vault inbox 51d cold"
+      }
+    },
+    "blocked-5-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator edits priorities.md — refresh top-3 focus",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-1",
+        "on-track-2",
+        "on-track-3"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on-track-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-1-title",
+        "on-track-1-idle",
+        "on-track-1-activity",
+        "on-track-1-trend",
+        "on-track-1-context"
+      ]
+    },
+    "on-track-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-030 cost-report 4-consec-week formal-pattern",
+        "level": "h4"
+      }
+    },
+    "on-track-1-idle": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle",
+        "variant": "muted"
+      }
+    },
+    "on-track-1-activity": {
+      "type": "Text",
+      "props": {
+        "text": "15 activity/14d"
+      }
+    },
+    "on-track-1-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ improving",
+        "variant": "default"
+      }
+    },
+    "on-track-1-context": {
+      "type": "Text",
+      "props": {
+        "text": "8-11 20:08Z organic recovery breaks 33+ consec chronic-fail, 2nd precedent after 8-04",
+        "variant": "caption"
+      }
+    },
+    "on-track-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-2-title",
+        "on-track-2-idle",
+        "on-track-2-activity",
+        "on-track-2-trend",
+        "on-track-2-context"
+      ]
+    },
+    "on-track-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime",
+        "level": "h4"
+      }
+    },
+    "on-track-2-idle": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle",
+        "variant": "muted"
+      }
+    },
+    "on-track-2-activity": {
+      "type": "Text",
+      "props": {
+        "text": "11 activity/14d"
+      }
+    },
+    "on-track-2-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "→ flat",
+        "variant": "default"
+      }
+    },
+    "on-track-2-context": {
+      "type": "Text",
+      "props": {
+        "text": "12-skill composition holds ~155h span",
+        "variant": "caption"
+      }
+    },
+    "on-track-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-3-title",
+        "on-track-3-idle",
+        "on-track-3-activity",
+        "on-track-3-trend",
+        "on-track-3-context"
+      ]
+    },
+    "on-track-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "pr queue at 4",
+        "level": "h4"
+      }
+    },
+    "on-track-3-idle": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle",
+        "variant": "muted"
+      }
+    },
+    "on-track-3-activity": {
+      "type": "Text",
+      "props": {
+        "text": "14 activity/14d"
+      }
+    },
+    "on-track-3-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "→ flat",
+        "variant": "default"
+      }
+    },
+    "on-track-3-context": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-3-context-text",
+        "on-track-3-pr-179"
+      ]
+    },
+    "on-track-3-context-text": {
+      "type": "Text",
+      "props": {
+        "text": "Grew 3→4 with PR",
+        "variant": "caption"
+      }
+    },
+    "on-track-3-pr-179": {
+      "type": "Link",
+      "props": {
+        "label": "#179",
+        "href": "https://github.com/aeon/aeon/pull/179"
+      }
+    },
+    "on-track-3-context-addl": {
+      "type": "Text",
+      "props": {
+        "text": "fresh 8-11 18:42Z, within weekly-batch cadence",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok"
+      }
+    }
+  }
+}
