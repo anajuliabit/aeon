@@ -1,13 +1,8 @@
-💓 heartbeat 20:29Z
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
 
-🟢 cost-report BREAKS 33-consec chronic-fail streak — fresh success 20:08Z (9/117 all-time, 2nd organic-recovery precedent after 8-04 21:48Z). ISS-030 datapoint.
+## Summary
 
-🔴 cost-report 19:07Z n=5 same-sig sdk_opt_in_required fail intra-24h (8-10 20:32Z + 8-11 08:19Z + 14:14Z + 18:11Z + 19:07Z) before the 19:44Z→20:08Z recovery. Extends ISS-030 intra-24h cluster.
-
-🕸 fork-cohort past 48h stuck threshold — ~49.4h since last_dispatch 8-09 19:05Z. Novel ISS candidate (action-converter 18:40Z proposed ISS-032; not yet filed).
-
-🟡 PR queue 3→4: NEW #179 fix(token-alert) volume-spike baseline daily-granular, opened 18:42Z by self-improve 18:36Z. All 4 mergeable=UNKNOWN.
-
-🕸 4 Mon-scheduled stuck (search-skill, unlock-monitor, deal-flow, skill-security-scan) hold state through week — no self-clear until Mon 8-17.
-
-status: 🔴 DEGRADED · 15 open issues · next: evening-recap 21Z
+- **Files modified:** `docs/status.md` (overwritten with fresh 2026-08-12 08:27 UTC snapshot), `memory/logs/2026-08-12.md` (heartbeat entry appended).
+- **P0/P1/P2/P3 pass:** all findings surfaced in the last 48h logs (fork-cohort STUCK ~85h, 4 Mon-batch 🕸 stuck, 3 consec≥3, 12 chronic sub-50%, PR queue at 4, MEMORY.md flags) — deduped, no notification sent.
+- **Status page verdict:** 🔴 DEGRADED (P0 flags fire); 15 open issues; next scheduled run = github-trending 09:00 UTC.
+- **Follow-up (not owned by heartbeat):** ISS-032 fork-cohort state-update-race filing still owed to 18Z action-converter/reflect; ISS-031 `scripts/detect-usepod-402.sh` operator-page gate deadline 8-13 (tomorrow).
