@@ -1,0 +1,286 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-12",
+        "description": "TL;DR: heavy ship day with a dangling P0 — 18Z batch all clean, 2 articles out, ISS-032 fork-cohort ~97h still unfiled"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-section",
+        "sep1",
+        "notable-section",
+        "sep2",
+        "decisions-section",
+        "sep3",
+        "blockers-section",
+        "sep4",
+        "footer-section"
+      ]
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "headlines-items"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headlines-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "freshness-link",
+        "analytics-link"
+      ]
+    },
+    "freshness-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness — FRESHNESS_OK · 43 skills · 0 flagged",
+        "href": "articles/skill-freshness-2026-08-12.md",
+        "source": "skill-freshness",
+        "score": "FRESHNESS_OK"
+      }
+    },
+    "analytics-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-analytics — 290 runs · 58% sr · 26 anomalies (14 🔴)",
+        "href": "articles/skill-analytics-2026-08-12.md",
+        "source": "skill-analytics",
+        "score": "58% sr"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-items"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — paired rail-break day: malware-only-surface n=4 + quiet-KEV n=4 both snap; SeaweedFS Go SSRF critical hits tracked stack (GHSA-87fv-vqqr-m4jr)",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — CFTC §8a(9) emergency Kalshi order score 15 (exceeds last week's 12); CFTC Conflicts NPRM + IAC 8-20 in watch",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — [[claude-code-alternative-open-source]] FORMAL PATTERN n=3 · top pick cathrynlavery/diagram-design 24× baseline",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "18Z batch — goal-tracker / skill-health / agent-buzz / action-converter / reflect all clean",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decisions-items"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-1",
+        "decision-2",
+        "decision-3-wrap"
+      ]
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-032: fork-cohort stuck ~97h (dispatched 8-09T19:05Z, 49h past escalation); run 31330721650",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "ship scripts/detect-usepod-402.sh — ISS-031 gate deadline 8-13 tomorrow (last workday before threshold)",
+        "variant": "body"
+      }
+    },
+    "decision-3-wrap": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-3",
+        "decision-3-link"
+      ]
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "triage PR #174 (~4d, CI cold, external contributor blocked) ·",
+        "variant": "body"
+      }
+    },
+    "decision-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/174",
+        "href": "https://github.com/anajuliabit/aeon/pull/174"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blockers-items"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blockers-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker-alert"
+      ]
+    },
+    "blocker-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort",
+        "message": "~97h in `dispatched` state, ISS-032 unfiled · run 31330721650",
+        "type": "error"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "footer-text"
+      ]
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+12 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,28 +1,22 @@
-*Evening Recap — 2026-08-11*
-_TL;DR: cost-report breaks 33-fail streak, skill-health sheds 12 CRITICAL slots — recovery day, but fork-cohort at 49h stuck and ISS-032 unfiled._
+*Evening Recap — 2026-08-12*
+_TL;DR: heavy ship day with a dangling P0 — 18Z batch all clean, 2 articles out, ISS-032 fork-cohort ~97h still unfiled_
 
 *Headlines:*
-- cost-report — 20:08Z breaks 33-consec sdk_opt_in_required streak; n=5 intra-24h cluster same-day · articles/cost-report-2026-08-11.md
-- skill-health — CRITICAL 16→4 post-ISS-031 usepod self-heal; ISS-031 reconciled · hash ffb02679
-- self-improve — PR #179: fix(token-alert) volume-spike baseline daily-granular · https://github.com/anajuliabit/aeon/pull/179
-- security-digest — malware-only-surface n=4 + cross-ecosystem-escalation n=3 promoted; defi-protocol pip cluster 8 pkgs · hash 2c70cffe
-- reflect — MEMORY.md rewritten: 16 sub-shapes + 3 formal promotions absorbed · memory/logs/2026-08-11-reflect.md
+- skill-freshness — FRESHNESS_OK · 43 skills · 0 flagged · articles/skill-freshness-2026-08-12.md
+- skill-analytics — 290 runs · 58% sr · 26 anomalies (14 🔴) · articles/skill-analytics-2026-08-12.md
 
 *Notable:*
-- daily-routine — CYS 4-consec breakout (+47%, 7d +362%); Ouroboros = Aeon self-improve blueprint · hash ee1a46af
-- github-trending — 6 kept; semantica top pick (agent-provenance primitive) · hash 60952bca
-- agent-buzz — 6-consec engagement drought breaks; Sengo_Sol eng 115 · hash f445de65
-- token-alert ×2 — 0/4 fires; CG d50 memory-window-first milestone
-- action-converter — 5 actions: ISS-032 fork-cohort + ISS-030 deepen + PR #174 sync · hash 631b413b
+- security-digest — paired rail-break day: malware-only-surface n=4 + quiet-KEV n=4 both snap; SeaweedFS Go SSRF critical hits tracked stack (GHSA-87fv-vqqr-m4jr)
+- reg-monitor — CFTC §8a(9) emergency Kalshi order score 15 (exceeds last week's 12); CFTC Conflicts NPRM + IAC 8-20 in watch
+- github-trending — `[[claude-code-alternative-open-source]]` FORMAL PATTERN n=3 · top pick cathrynlavery/diagram-design 24× baseline
+- 18Z batch — goal-tracker / skill-health / agent-buzz / action-converter / reflect all clean
 
 *Decisions for tomorrow:*
-- file ISS-032 for fork-cohort (action-converter proposed 18:40Z, unfiled; state-update-race; 49h stuck)
-- decide PR #174 Advisor Brier-weight (~93h, CI cold, mergeable=UNKNOWN) · https://github.com/anajuliabit/aeon/pull/174
-- resolve ISS-031 for 3 Mon-stuck skills before 8-13 usepod-402 gate deadline
+- file ISS-032: fork-cohort stuck ~97h (dispatched 8-09T19:05Z, 49h past escalation); run 31330721650
+- ship scripts/detect-usepod-402.sh — ISS-031 gate deadline 8-13 tomorrow (last workday before threshold)
+- triage PR #174 (~4d, CI cold, external contributor blocked) · https://github.com/anajuliabit/aeon/pull/174
 
 *Blockers:*
-- fork-cohort — 49h+ stuck, past 48h threshold; ISS-032 not filed · last_dispatch 2026-08-09T19:05Z
-- cost-report — ISS-030 sr=8%; n=5 intra-24h same-signature despite 20:08Z recovery
-- 4 Mon-scheduled stuck — search-skill/unlock-monitor/deal-flow/skill-security-scan until 8-17
+- fork-cohort — ~97h in `dispatched` state, ISS-032 unfiled · run 31330721650
 
-_+5 routine runs collapsed · sources: log=ok cron-state=ok_
+_+12 routine runs collapsed · sources: log=ok cron-state=ok_
