@@ -5,6 +5,49 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-08-13 evening, T-0 to 8-14)
+
+- **fork-cohort ISS-032 STILL UNFILED — 6th+ owed cycle P0 ~117h stuck at 15:42Z 8-13** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 69h past 48h escalation. Filing owed since 8-11 18:40Z across 6 owed cycles (morning-brief 8-13 07:03Z + heartbeat 08:58Z + heartbeat 15:42Z + goal-tracker 8-12 18:11Z + action-converter 8-12 18:10Z + reflect 8-12 18Z). skill-health `classification_gap_flag` in last-report.json corroborates: `status='dispatched' AND days_since_last_dispatch>=3` branch missing from skill-health classification. Pattern-signature not accident at 6th cadence. Owed by tonight's 18Z action-converter + reflect self-fire.
+- **ISS-031 detect-usepod-402 gate 8-13 deadline TODAY — unshipped as of 17:44Z agent-buzz** — `scripts/detect-usepod-402.sh` operator-page gate for 2nd 7d-recurrence of ISS-029/031 signature. Morning-brief #2 focus. Self-improve 18Z is natural author path (also carries CFTC HTML-fallback + fork-cohort skill-health rule-gap + GH-API `published=` syntax candidates).
+- **PR queue at 4 on 8-13** — #179 (fix(token-alert) volume-spike ~45h), #177 (fix(claude-md) ISS-028 ~93h), #176 (skill-graph EDGES 32→74 ~94h), #174 (Advisor Brier-weight external ~4d 14h). Weekly-batch cadence per CLAUDE.md; queue-full self-improve exit-gate DISENGAGED (#177+#179 self-improve-shaped n=2 < 3).
+- **4 🕸 Mon-batch stuck skills hold-through-week 8-13 → 8-17** — search-skill (72h) · unlock-monitor (72h) · skill-security-scan (70h) · deal-flow (70h); ISS-031 usepod-402 aftermath, self-clears 8-17 Mon or operator intraweek manual invoke. All 4 at consec≥3 sr<0.5.
+- **`[[chronic-cohort-alone-degraded]]` composition holds 12-skill at 15:42Z heartbeat** — cost-report 8% / skill-analytics 22% / reg-monitor 22% / vuln-scanner 25% / market-context-refresh 32% / narrative-tracker 33% / weekly-shiplog 37% / search-skill 37% / unlock-monitor 38% / security-digest 44% / deal-flow 44% / aixbt-pulse 47%. Regime ~175h+ span from 8-04 14:45Z inception; composition-locked print.
+- **Bash `>` redirect workaround-chain n=41+ durable 21-UTC-day span 7-22 → 8-13** — fresh 8-13 call-sites: github-trending for-loop over `${r}` variable expansion (per-repo unrolled 8 separate Bash calls = workaround) + list-digest `>>` seen-file append (Read+Edit = workaround) + NEW sibling variant `[[gh-api-date-range-syntax-workaround]]` (security-digest 14:46Z — plain `..` on `published=DATE..` rejected HTTP 422, URL-encoded `%3E` prefix accepted).
+- **12:00 UTC batch DARK d47 on 8-13** — ISS-027 8-skill cluster frozen since 2026-06-28. Token-alert 12Z-slot fires 7-consec clean 8-07 → 8-13 (memory-window record extends) confirming `[[12Z-slot-dark-immunity-per-skill]]` per-dispatcher-path.
+- **CG clean-day d52 8-13** — memory-window record extends unbroken; 52-consec-day CG infra durability.
+- **Token-alert 7-consec-day clean-fire streak 8-07 → 8-13** — extends memory-window record from 6-consec.
+- **`[[fleet-relevance agent-thesis]]` rail 29 → 30-consec-UTC-day 8-13** — github-trending 4-pick fleet-adjacent slate (Switchyard LLM router + needle edge-inference + macro team-collab + diagram-design LLM visual primitive). **Crosses 4-consec-week durability 8-15 if unbroken.**
+- **Aeon-fleet clean d13 → d14 vs security-digest 8-13** — 0/89 fresh malware advisories (70 first-fire + 19 delta) impact tracked deps across 2 same-UTC-day security fires. Deepest defensive-import clean-streak in memory-window extends.
+
+### Rail promotions / deprecations 8-13
+- **`[[memory-primitive-product-surface]]` FORMAL PATTERN n=3** — DeepTutor 8-12 (tutoring) + StatewaveAI 8-13 daily-routine (agent-runtime Apache 2.0) + macro-inc/macro 8-13 github-trending (team-collab AGPL-3.0) within 48h; 3 distinct sub-axes. **Biggest analytical delta of 8-13.**
+- **`[[alphabet-namespace-cluster]]` FORMAL PATTERN promoted** — 8-12 22-variant single-handle candidate → 8-13 53-variant 4-handle @years17/18/19/20 (a→y coverage). Compound `[[multi-handle-namespace-fill]]` n=1 extends to 9-handle same-UTC-day via 15:42Z delta (@easy-entry + @demica + @frostnode + @shell-landing/@shell-cabinet).
+- **`[[soft-sustain-2-consec-top-pick]]` RESOLVES POSITIVE 3-consec via semantica-agi/semantica** — -6% day-3 mild-decay-sustain. Memory-window-first 3-consec soft-decay top-pick sustain (prior candidates all broke by day-3).
+- **`[[vol-vacuum-price-flat]]` 8-12 candidate DEPRECATES via WELL partial-rebuild** — vol 0.06× → 0.24× (4× rebuild sub-0.5× threshold) + drift-toward-flat intensifies (−0.87% → −0.27%). Fresh `[[vol-vacuum-partial-rebuild-on-flatter-price]]` observation n=1.
+- **`[[vol-compression-on-price-decay]]` n=2 DEPRECATES via GITLAWB inversion** — 10-phase fade arc TERMINATES via +3.63% flip; vol crosses back above baseline. Deepest continuous-fade arc in memory-window on tracked tokens ends.
+- **`[[xai-mode-top-not-enforced]]` regression CLEARS at n=2** — grok returned 6 named candidates with follower_count populated (first fully-populated return in memory-window); engagement figures also non-trivially spread. If tomorrow reverts to null, re-open as intermittent.
+- **NEW `[[fleet-adjacent-typosquat-cluster]]` n=1 → 7-hit intraday 8-13** — cc-skills-helper (Claude Code) + mcp-util-helpers (MCP) + nolimit-agent (agent-tooling) + passkeys-react (react) at 14:46Z; ai-analyzer (AI-tooling) + ac_semantic-ui_ts + ac_calendar_ts (react-ecosystem) at 15:42Z. Dev-tooling-brand focus distinct from defi-brand cluster.
+- **NEW `[[top-pick-day-2-accelerating]]` n=1 8-13** — cathrynlavery/diagram-design +77% day-2 (1,616 → 2,855) = memory-window-first day-2-ACCELERATING top-pick shape.
+- **NEW `[[same-day-cohort-day-2-both-accelerating]]` observation n=1 8-13** — diagram-design (top) + stablyai/orca (2nd) 8-12 both extend day-2 accelerating.
+- **NEW `[[llm-router-vendor-tier]]` n=1 8-13** — NVIDIA-NeMo/Switchyard first vendor-tier LLM router.
+- **NEW `[[commodity-sensor-inference-primitive]]` n=1 8-13** — cactus-compute/needle 14MB weights = commodity-sensor RAM tier.
+- **NEW `[[chain-output-header-date-drift]]` n=2 candidate 8-13** — chain sub-skill outputs all headered 2026-08-07 (6-day-old drift, up from 5-day 8-12). Rail-promotion at n=3.
+- **NEW `[[gh-api-date-range-syntax-workaround]]` n=1 8-13** — URL-encoded `%3E` prefix required for `published=`. Sibling to ISS-028 workaround-chain; self-improve candidate to bake into `skills/security-digest/SKILL.md` step 2.
+- **NEW `[[mcp-as-game-server-interface]]` n=1 8-13** — Cursor+poker + Glory arena same-UTC-day; product-surface axis distinct from `[[mcp-plumbing-transition]]` protocol-adoption.
+- **`[[mcp-plumbing-transition]]` extends 2-consec-UTC-day 8-13** — 8-12 zanbuilds/joshdailey + 8-13 4-of-4 agent-buzz tweets. Rail-promotion deciding-test 8-14.
+- **`[[list-digest-skew-left-window]]` n=2 candidate 8-13** — all top-4 tweets dated prior UTC-day; rail-promotion 8-14.
+- **`[[curator-fresh-handle-emergence]]` n=2 8-13** — arndxt_xo joins 0xTindorr; rail-promotion 8-14.
+- **NEW `[[defi-curator-cross-domain-drift]]` n=1 8-13** — list-digest 4 items span 4 distinct domains (<25% pure-DeFi).
+- **NEW `[[polymarket-intern-cycle-top-meme]]` n=1 8-13** — DefiIgnas "lol" QT. Corroborates `[[reg-monitor prediction-market lane escalating]]`.
+- **NEW `[[uniswap-v4-hook-exit-tax]]` n=1 8-13** — $OLY arndxt game-theory; novel mechanism-design print.
+- **NEW `[[full-bandwidth-transformer]]` n=1 8-13** — Microsoft AI latent-feedback paper; data-wall workaround adjacent to `[[memory-primitive-paper streak]]` 7-consec.
+- **NEW `[[REPPO-healthy-flush-confirmed]]` n=1 8-13** — 3-day arc resolves: fade → fade-eases+vol-expand → bounce+vol-expand (+5.87% on 2.32× baseline).
+- **`[[MAMO-3-consec-above-baseline-vol]]` extends to 4-consec 8-13** — memory-window-first 4-consec above-baseline stretch on MAMO.
+- **Sub-25 github-trending 15-consec permanent shape 8-13** — n=17 mid-band normal.
+- **SeaweedFS 2-consec-day high advisory 8-12 → 8-13** — SSRF + path-traversal in same Go repo within 24h. Not a rail yet (single project).
+- **`[[quiet-KEV-baseline]]` new counter n=1 8-13** — post 8-11 3-fresh burst, 8-12 + 8-13 both 0-fresh-KEV; new baseline building.
+- **PATCH THIS WEEK security-digest 8-13:** stata-mcp pip GHSA-49m4-vp58-wgc9 CVSS 8.4 no fix (ISS-018-adjacent MCP-vulnerability).
+
 ## Current health snapshot (2026-08-12 evening, T-0 to 8-13)
 
 - **ISS-030 chronic-fail streak BREAKS 8-11 20:08Z after 33+ consec** — 2nd organic-recovery precedent (after 8-04 21:48Z). ISS-030 intra-24h same-sig deepened to n=5 immediately before recovery. **skill-health 16 → 4 CRITICAL = deepest single-tick recovery in memory-window**. Next same-signature deciding-test 8-17 Mon 07Z (same-week within-window; formal-pattern week-tick counter frozen at n=1).
