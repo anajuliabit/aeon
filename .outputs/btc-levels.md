@@ -1,15 +1,12 @@
-Committed clean. 
-
 ## Summary
 
-**BTC Levels Monitor — 2026-08-13T13:40Z**
+**btc-levels run — 2026-08-13 16:38Z**
 
-- **Spot:** $63,654 | **Close (2026-08-12):** $63,409
-- **Leverage-review (≤$45k):** clear — spot well above band
-- **Breakdown (close < $60,500):** clear — close $63,409 ≥ $60,500
-- **Reclaim $63,500:** already alerted (flag true), no repeat
-- **Reclaim $65,900:** not reached
-
-**Alerts fired: 0. No notification sent.**
-
-Files updated: `memory/btc-levels-state.json` (close date advanced to 2026-08-12 per new CG 00:00 UTC snapshot), `memory/logs/2026-08-13.md`. Committed to main.
+- **Spot:** $63,348 | **Previous daily close (2026-08-12):** $63,409
+- **Level checks:** all clear
+  - Leverage-review (≤$45k): No
+  - Breakdown (close < $60,500): No — close $63,409
+  - Reclaim $63,500: flag already set from prior run; re-arm condition (spot < $60,500) not met
+  - Reclaim $65,900: not reached
+- **Alerts fired:** 0 — quiet run, no `./notify` sent
+- **Files committed:** `memory/btc-levels-state.json` (spot updated $63,654 → $63,348), `memory/logs/2026-08-13.md` (log entry appended)
