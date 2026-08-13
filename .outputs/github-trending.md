@@ -1,21 +1,21 @@
-*GitHub Trending — 2026-08-12*
+*GitHub Trending — 2026-08-13*
 
-*Top pick* — [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design)
-biggest star spike on today's page — the first curated answer to "why do all claude-code diagrams look terrible."
-
-*Devtools*
-• [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) — ★ 1.6k today (7.9k total) · HTML · [ACCELERATING]
-29 editorial html+svg diagram types. no mermaid runtime, no auto-layout slop, drop into any llm-coding output.
-
-• [stablyai/orca](https://github.com/stablyai/orca) — ★ 875 today (43k total) · TypeScript · [ACCELERATING]
-ade for parallel coding-agent fleets. bring-your-own-subscription across desktop, mobile, vps.
+*Top pick* — [NVIDIA-NeMo/Switchyard](https://github.com/NVIDIA-NeMo/Switchyard)
+NVIDIA shipping a Rust proxy that treats OpenAI and Anthropic as swappable backends — provider portability moves to the infra layer.
 
 *AI/ML*
-• [anthropics/skills](https://github.com/anthropics/skills) — ★ 485 today (168k total) · Python · [ACCELERATING]
-official anthropic agent-skills spec. canonical source for the addy/matt/google forks that ran the trending arc 8-06 → 8-09.
+• [NVIDIA-NeMo/Switchyard](https://github.com/NVIDIA-NeMo/Switchyard) — ★ 421 today (990 total) · Rust · [ACCELERATING]
+translates OpenAI ↔ Anthropic API formats + routes to vLLM/NIM/Ollama — one binary, no per-agent rewrites.
 
-• [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) — ★ 812 today (35k total) · Python · [ACCELERATING]
-lifelong personalized tutoring — memory-primitive framing over one-shot rag. hku-ds lab.
+• [cactus-compute/needle](https://github.com/cactus-compute/needle) — ★ 315 today (4,569 total) · Python · [ACCELERATING]
+14MB foundation-model weights — inference on phones and wearables at commodity-sensor RAM budgets.
+
+*Devtools*
+• [macro-inc/macro](https://github.com/macro-inc/macro) — ★ 227 today (2,328 total) · Rust · [ACCELERATING]
+team suite (email/chat/docs/tasks/CRM) with agents as first-class users on shared @-linked memory. AGPL-3.0.
+
+• [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) — ★ 2,855 today (12.4k total) · HTML · [HOLDOVER]
+yesterday's top pick +77% intraday — 29 curated HTML+SVG diagram types purpose-built for Claude Code output.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/18
+sources: trending=ok · gh_api=ok · kept 4/17

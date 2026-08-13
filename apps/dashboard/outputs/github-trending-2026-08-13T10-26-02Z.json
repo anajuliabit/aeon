@@ -1,0 +1,393 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending"
+      },
+      "children": [
+        "subtitle",
+        "top-pick-section",
+        "sep1",
+        "aiml-section",
+        "devtools-section",
+        "sep2",
+        "footer"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "2026-08-13",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-heading",
+        "top-pick-item"
+      ]
+    },
+    "top-pick-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "top-pick-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top-pick-link",
+        "top-pick-desc"
+      ]
+    },
+    "top-pick-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NVIDIA-NeMo/Switchyard",
+        "href": "https://github.com/NVIDIA-NeMo/Switchyard"
+      },
+      "children": []
+    },
+    "top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "NVIDIA shipping a Rust proxy that treats OpenAI and Anthropic as swappable backends — provider portability moves to the infra layer.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "aiml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml-heading",
+        "aiml-item-1",
+        "aiml-item-2"
+      ]
+    },
+    "aiml-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "aiml-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-1-link",
+        "aiml-1-meta",
+        "aiml-1-desc"
+      ]
+    },
+    "aiml-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NVIDIA-NeMo/Switchyard",
+        "href": "https://github.com/NVIDIA-NeMo/Switchyard"
+      },
+      "children": []
+    },
+    "aiml-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-1-stars",
+        "aiml-1-lang",
+        "aiml-1-status"
+      ]
+    },
+    "aiml-1-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 421 today (990 total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "aiml-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "translates OpenAI ↔ Anthropic API formats + routes to vLLM/NIM/Ollama — one binary, no per-agent rewrites.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aiml-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-2-link",
+        "aiml-2-meta",
+        "aiml-2-desc"
+      ]
+    },
+    "aiml-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cactus-compute/needle",
+        "href": "https://github.com/cactus-compute/needle"
+      },
+      "children": []
+    },
+    "aiml-2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-2-stars",
+        "aiml-2-lang",
+        "aiml-2-status"
+      ]
+    },
+    "aiml-2-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 315 today (4,569 total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml-2-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "aiml-2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "14MB foundation-model weights — inference on phones and wearables at commodity-sensor RAM budgets.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-heading",
+        "devtools-item-1",
+        "devtools-item-2"
+      ]
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "devtools-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-1-link",
+        "devtools-1-meta",
+        "devtools-1-desc"
+      ]
+    },
+    "devtools-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "macro-inc/macro",
+        "href": "https://github.com/macro-inc/macro"
+      },
+      "children": []
+    },
+    "devtools-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-1-stars",
+        "devtools-1-lang",
+        "devtools-1-status"
+      ]
+    },
+    "devtools-1-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 227 today (2,328 total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "devtools-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "devtools-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "devtools-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "team suite (email/chat/docs/tasks/CRM) with agents as first-class users on shared @-linked memory. AGPL-3.0.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "devtools-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-2-link",
+        "devtools-2-meta",
+        "devtools-2-desc"
+      ]
+    },
+    "devtools-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cathrynlavery/diagram-design",
+        "href": "https://github.com/cathrynlavery/diagram-design"
+      },
+      "children": []
+    },
+    "devtools-2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-2-stars",
+        "devtools-2-lang",
+        "devtools-2-status"
+      ]
+    },
+    "devtools-2-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 2,855 today (12.4k total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "devtools-2-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "HTML",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "devtools-2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "devtools-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "yesterday's top pick +77% intraday — 29 curated HTML+SVG diagram types purpose-built for Claude Code output.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/17",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
