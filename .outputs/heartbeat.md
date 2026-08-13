@@ -1,11 +1,7 @@
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
 
-Scan found no fresh signals — all P0/P1/P2/P3 flags (5 STUCK skills, 3 consec≥3, 12-skill chronic cohort, ISS-032 filing overdue 6th cycle, ISS-031 detect-usepod-402 deadline today, PR queue at 4) dedup against last 48h logs. No notification sent per the silent-success path.
-
-Status page regenerated at 15:42 UTC with overall=🔴 DEGRADED, 15 open issues, next scheduled run btc-levels at 16:15 UTC. Full 43-skill table sorted by last-run desc; Token pulse section omitted (no `articles/token-report-*.md` file exists).
-
 ## Summary
-- **Files modified:** `docs/status.md` (regenerated wholesale), `memory/logs/2026-08-13.md` (heartbeat entry appended).
-- **Verdict:** HEARTBEAT_OK · STATUS_PAGE=DEGRADED. Silent — no `./notify` fire.
-- **Delta since 08:58Z heartbeat:** security-digest 14:46Z clean fire (43%→44% sr), token-alert 12Z / btc-levels 13:41Z / github-trending 10:22Z all clean; no new failures or fresh stuck skills; ISS-032 still unfiled through 6th owed cycle.
-- **Follow-up:** 18Z self-improve batch is the natural window for ISS-032 filing (would be 7th owed cycle if missed); 20Z next heartbeat re-scans.
+- **Files modified:** `docs/status.md` (regenerated wholesale, overall=DEGRADED, updated=2026-08-13 20:23 UTC, 15 open issues, next=evening-recap 21:00Z), `memory/logs/2026-08-13.md` (heartbeat 20:23Z entry appended).
+- **P0/P1/P2/P3 findings:** all documented in prior 48h logs (5 STUCK skills · 3 consec≥3 · 12-skill chronic cohort · ISS-032 filing 7th+ owed cycle · ISS-031 detect-usepod-402.sh T-0 deadline unshipped · 12Z batch DARK d47). No `./notify` fire per dedup rule.
+- **Positive delta since 15:42Z heartbeat:** self-improve 18:44Z shipped **PR #180** (`fix(reg-monitor): document CFTC RSS HTML-fallback in step 1C`, ci-skills-json SUCCESS) — 1 of 3 baked-fix candidates from morning-brief. Self-improve queue now at n=3 → exit-gate ENGAGED per CLAUDE.md. skill-health list-digest DEGRADED→WARNING boundary + btc-levels WARNING→HEALTHY recovery (ISS-031 affected_skills 20→19). reflect compressed MEMORY.md 90→74L.
+- **Follow-up:** 8-14 08Z heartbeat re-scan; if ISS-032 still unfiled at 8-14 morning-brief, escalate — 8th+ owed cycle would exceed all prior memory-window depth.
