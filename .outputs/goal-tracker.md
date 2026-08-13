@@ -1,22 +1,28 @@
-*Goal Tracker — 2026-08-12*
+*Goal Tracker — 2026-08-13*
 
-Summary: 8 goals — 0 at risk, 0 needs attention, 3 on track, 5 blocked, 0 done (overall → flat; 1 improving + 1 degrading net-zero)
+Summary: 10 goals — 0 at risk, 1 needs attention, 3 on track, 6 blocked, 0 done (overall → flat, fork-cohort ↓ degrading)
+
+NEEDS ATTENTION
+• iss-031 detect-usepod-402 gate — 0d idle, 5 activity/14d (new); deadline TODAY, script not shipped
+  → ship `scripts/detect-usepod-402.sh` in 18Z self-improve window
 
 BLOCKED
-• fork-cohort stuck ~95h — waiting on ISS-032 file-op since 8-11 18:40Z; past 48h threshold, was ON TRACK ↓
-  → Action: file ISS-032 documenting state-update-race on cancelled workflows in 18Z action-converter fire
-• iss-028 workaround-chain n=40+ — waiting on operator batch-review of PRs #167 + #177 since 8-09; 20-UTC-day span 7-22 → 8-12
-  → Action: flag PRs #167 + #177 in next weekly-review as ready-to-merge
-• iss-027 12z batch dark d46 — waiting on scheduler-side gap fix since 6-28; operator-gated
-  → Action: surface fix candidacy in weekly-review 8-17
-• operator on-chain config d67 — waiting on `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY since 6-08
-  → Action: operator provides YAML + 2 secrets
-• priorities.md 69d stale — waiting on operator refresh since 6-04; vault inbox 51d cold
-  → Action: operator edits `priorities.md` — refresh top-3 focus
+• fork-cohort P0 stuck ~110h — waiting on ISS-032 file-op since 8-11 18:40Z, ~5 owed cycles unfiled (↓ degrading)
+  → file ISS-032 manually if 8-13 18Z action-converter punts a 6th time
+• iss-028 workaround-chain n=41+ — waiting on operator batch-review of PR #177 (~4d) + PR #167 (flat)
+  → merge PR #177 in weekly batch
+• iss-027 12Z batch dark d47 — scheduler-side gap since 2026-06-28 (flat)
+  → operator dispatcher-path fix or manual re-enable
+• operator on-chain config day-68 — waiting on `memory/on-chain-watches.yml` + ALCHEMY/ETHERSCAN keys since 6-08 (flat)
+  → operator adds YAML + API keys
+• priorities.md 70d stale + vault inbox 52d cold — 7-consec zero-capture streak; refresh-ask 3d unactioned (flat)
+  → operator refreshes priorities.md
+• 4 Mon-batch stuck skills — search-skill / unlock-monitor / skill-security-scan / deal-flow, self-clear 8-17 (new)
+  → wait for 8-17 Mon auto-clear or operator intraweek manual invoke
 
 ON TRACK
-• iss-030 cost-report 4-consec-week formal-pattern — 0d idle, 15 activity/14d (↑ improving; 8-11 20:08Z organic recovery breaks 33+ consec chronic-fail, 2nd precedent after 8-04)
-• chronic-cohort-alone-degraded regime — 0d idle, 11 activity/14d (→ flat; 12-skill composition holds ~155h span)
-• pr queue at 4 — 0d idle, 14 activity/14d (→ flat; grew 3→4 with #179 fresh 8-11 18:42Z, within weekly-batch cadence)
+• iss-030 cost-report 4-consec-week formal-pattern — 0d idle, 16 activity/14d; 8-11 20:08Z organic recovery = 2nd precedent, 8-17 Mon next deciding-test (flat)
+• chronic-cohort-alone-degraded regime — 0d idle, 12 activity/14d; 13-skill composition holds ~180h span (flat)
+• pr queue at 4 — 0d idle, 14 activity/14d; #179 (~44h) + #177 (~4d) + #176 (~4d) + #174 (~5d), all within weekly-batch cadence (flat)
 
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
+Sources: logs=ok, git=ok(shallow), gh_pr=ok, gh_issue=ok, cron-state=ok

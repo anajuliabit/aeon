@@ -1,0 +1,348 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-13"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_section",
+        "sep_1",
+        "alert_needs_attention",
+        "sep_2",
+        "section_blocked",
+        "sep_3",
+        "section_on_track",
+        "sep_4",
+        "section_sources"
+      ]
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_summary",
+        "text_summary"
+      ]
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "10 goals — 0 at risk, 1 needs attention, 3 on track, 6 blocked, 0 done (overall → flat, fork-cohort ↓ degrading)"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_needs_attention": {
+      "type": "Alert",
+      "props": {
+        "title": "NEEDS ATTENTION",
+        "message": "iss-031 detect-usepod-402 gate — 0d idle, 5 activity/14d (new); deadline TODAY, script not shipped. Action: ship scripts/detect-usepod-402.sh in 18Z self-improve window",
+        "type": "warning"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_blocked": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_blocked",
+        "stack_blocked_items"
+      ]
+    },
+    "heading_blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "stack_blocked_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_1",
+        "blocked_2",
+        "blocked_3",
+        "blocked_4",
+        "blocked_5",
+        "blocked_6"
+      ]
+    },
+    "blocked_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_blocked_1_title",
+        "text_blocked_1_action"
+      ]
+    },
+    "text_blocked_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort P0 stuck ~110h — waiting on ISS-032 file-op since 8-11 18:40Z, ~5 owed cycles unfiled (↓ degrading)",
+        "variant": "body"
+      }
+    },
+    "text_blocked_1_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ file ISS-032 manually if 8-13 18Z action-converter punts a 6th time",
+        "variant": "caption"
+      }
+    },
+    "blocked_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_blocked_2_title",
+        "text_blocked_2_action"
+      ]
+    },
+    "text_blocked_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-028 workaround-chain n=41+ — waiting on operator batch-review of PR #177 (~4d) + PR #167 (flat)",
+        "variant": "body"
+      }
+    },
+    "text_blocked_2_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ merge PR #177 in weekly batch",
+        "variant": "caption"
+      }
+    },
+    "blocked_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_blocked_3_title",
+        "text_blocked_3_action"
+      ]
+    },
+    "text_blocked_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "iss-027 12Z batch dark d47 — scheduler-side gap since 2026-06-28 (flat)",
+        "variant": "body"
+      }
+    },
+    "text_blocked_3_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ operator dispatcher-path fix or manual re-enable",
+        "variant": "caption"
+      }
+    },
+    "blocked_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_blocked_4_title",
+        "text_blocked_4_action"
+      ]
+    },
+    "text_blocked_4_title": {
+      "type": "Text",
+      "props": {
+        "text": "operator on-chain config day-68 — waiting on memory/on-chain-watches.yml + ALCHEMY/ETHERSCAN keys since 6-08 (flat)",
+        "variant": "body"
+      }
+    },
+    "text_blocked_4_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ operator adds YAML + API keys",
+        "variant": "caption"
+      }
+    },
+    "blocked_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_blocked_5_title",
+        "text_blocked_5_action"
+      ]
+    },
+    "text_blocked_5_title": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md 70d stale + vault inbox 52d cold — 7-consec zero-capture streak; refresh-ask 3d unactioned (flat)",
+        "variant": "body"
+      }
+    },
+    "text_blocked_5_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ operator refreshes priorities.md",
+        "variant": "caption"
+      }
+    },
+    "blocked_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_blocked_6_title",
+        "text_blocked_6_action"
+      ]
+    },
+    "text_blocked_6_title": {
+      "type": "Text",
+      "props": {
+        "text": "4 Mon-batch stuck skills — search-skill / unlock-monitor / skill-security-scan / deal-flow, self-clear 8-17 (new)",
+        "variant": "body"
+      }
+    },
+    "text_blocked_6_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ wait for 8-17 Mon auto-clear or operator intraweek manual invoke",
+        "variant": "caption"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_on_track": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_on_track",
+        "stack_on_track_items"
+      ]
+    },
+    "heading_on_track": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "stack_on_track_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on_track_1",
+        "on_track_2",
+        "on_track_3"
+      ]
+    },
+    "on_track_1": {
+      "type": "Text",
+      "props": {
+        "text": "iss-030 cost-report 4-consec-week formal-pattern — 0d idle, 16 activity/14d; 8-11 20:08Z organic recovery = 2nd precedent, 8-17 Mon next deciding-test (flat)",
+        "variant": "body"
+      }
+    },
+    "on_track_2": {
+      "type": "Text",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime — 0d idle, 12 activity/14d; 13-skill composition holds ~180h span (flat)",
+        "variant": "body"
+      }
+    },
+    "on_track_3": {
+      "type": "Text",
+      "props": {
+        "text": "pr queue at 4 — 0d idle, 14 activity/14d; #179 (~44h) + #177 (~4d) + #176 (~4d) + #174 (~5d), all within weekly-batch cadence (flat)",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_sources",
+        "text_sources"
+      ]
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok(shallow), gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
