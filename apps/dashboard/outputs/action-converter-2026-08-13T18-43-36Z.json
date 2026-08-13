@@ -1,0 +1,314 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-08-13"
+      },
+      "children": [
+        "heading_intro",
+        "separator1",
+        "actions_stack",
+        "separator2",
+        "footer"
+      ]
+    },
+    "heading_intro": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape: file iss-032, ship usepod-402 gate, land 2 self-improve PRs, add switchyard watched-repo",
+        "level": "h3"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "actions_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action1",
+        "action2",
+        "action3",
+        "action4",
+        "action5"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action1_title",
+        "action1_details"
+      ]
+    },
+    "action1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. write memory/issues/ISS-032.md with YAML frontmatter + root-cause on state-update-race + fix-target, then add INDEX Open row for fork-cohort workflow-race",
+        "level": "h4"
+      }
+    },
+    "action1_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_why",
+        "action1_done",
+        "action1_loop"
+      ]
+    },
+    "action1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 7th+ owed cycle since 8-11 18:40Z; 8-12 file+ISS-032 action never landed; fork-cohort ~120h stuck, run 31330721650 cancelled with dispatched marker never cleared",
+        "variant": "body"
+      }
+    },
+    "action1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/issues/ISS-032.md exists, INDEX.md Open row added, commit pushed to main",
+        "variant": "body"
+      }
+    },
+    "action1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort-stuck-120h",
+        "variant": "outline"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action2_title",
+        "action2_details"
+      ]
+    },
+    "action2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. wire scripts/detect-usepod-402.sh operator-page gate before 20Z heartbeat",
+        "level": "h4"
+      }
+    },
+    "action2_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_why",
+        "action2_done",
+        "action2_loop"
+      ]
+    },
+    "action2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 8-13 today is final workday deadline per ISS-031; stopgap for 2nd 7d-recurrence signature that crossed one-off→pattern 8-10",
+        "variant": "body"
+      }
+    },
+    "action2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: script exists + executable, wired into prefetch path or workflow step, commit on main",
+        "variant": "body"
+      }
+    },
+    "action2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-031-detect-usepod-gate",
+        "variant": "outline"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action3_title",
+        "action3_details"
+      ]
+    },
+    "action3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. patch skills/skill-health/SKILL.md step 2 rule table with stuck-in-flight branch (status='dispatched' AND days_since_last_dispatch >= 3)",
+        "level": "h4"
+      }
+    },
+    "action3_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_why",
+        "action3_done",
+        "action3_loop"
+      ]
+    },
+    "action3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: today's 18Z self-improve window is the natural slot; classification-rule-gap surfaced by 8-12 skill-health run — fork-cohort classifies HEALTHY under current rules despite ~120h stuck",
+        "variant": "body"
+      }
+    },
+    "action3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened against main with the rule-table edit",
+        "variant": "body"
+      }
+    },
+    "action3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort-workflow-audit",
+        "variant": "outline"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action4_title",
+        "action4_details"
+      ]
+    },
+    "action4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. bake CFTC HTML-fallback into skills/reg-monitor/SKILL.md step 1C",
+        "level": "h4"
+      }
+    },
+    "action4_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_why",
+        "action4_done",
+        "action4_loop"
+      ]
+    },
+    "action4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 2-consec CFTC RSS 404 observation (8-05 + 8-12) crosses self-improve threshold; removes runtime pivot from every future wed cycle; second baked-fix ready for 18Z window",
+        "variant": "body"
+      }
+    },
+    "action4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened with SKILL.md edit + HTML-parser fallback URL wired",
+        "variant": "body"
+      }
+    },
+    "action4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "reg-monitor-cftc-rss-404-durable",
+        "variant": "outline"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action5_title",
+        "action5_details"
+      ]
+    },
+    "action5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. add NVIDIA-NeMo/Switchyard to memory/watched-repos.md",
+        "level": "h4"
+      }
+    },
+    "action5_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_why",
+        "action5_done",
+        "action5_loop"
+      ]
+    },
+    "action5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: today's github-trending top pick (37× baseline) is first fleet-visible vendor-tier LLM router — mandate-portability primitive for anthropic-anchored fleet",
+        "variant": "body"
+      }
+    },
+    "action5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/watched-repos.md carries the new line, commit pushed",
+        "variant": "body"
+      }
+    },
+    "action5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "track-vendor-tier-llm-router",
+        "variant": "outline"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=90 logs=7d topics=20 prs=4 cron_failing=3 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

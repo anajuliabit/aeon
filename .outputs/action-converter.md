@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-12*
-Shape: file iss-032, ship usepod-402 gate, audit workflow race, open reg-monitor fix, nudge #174
+*5 Actions — 2026-08-13*
+Shape: file iss-032, ship usepod-402 gate, land 2 self-improve PRs, add switchyard watched-repo
 
-1. file `memory/issues/ISS-032.md` for fork-cohort state-update-race — run 31330721650 cancelled 8-09 19:35:47Z, cron-state marker never cleared, ~93h stuck since 8-09 19:05Z dispatch
-why: 45h past 48h escalation threshold, action-converter proposed 8-11 18:40Z but never filed; blocks fork-cohort restart
-done: `memory/issues/ISS-032.md` exists + `INDEX.md` Open table row added with severity=high category=config
-loop: fork-cohort-stuck-93h
+1. write memory/issues/ISS-032.md with YAML frontmatter + root-cause on state-update-race + fix-target, then add INDEX Open row for fork-cohort workflow-race
+why: 7th+ owed cycle since 8-11 18:40Z; 8-12 file+ISS-032 action never landed; fork-cohort ~120h stuck, run 31330721650 cancelled with dispatched marker never cleared
+done: memory/issues/ISS-032.md exists, INDEX.md Open row added, commit pushed to main
+loop: fork-cohort-stuck-120h
 
-2. ship `scripts/detect-usepod-402.sh` operator-page gate for ISS-031 signature — 8-13 deadline is tomorrow, only 1 workday left
-why: 2nd 7d-recurrence of ISS-029 shape crosses signature threshold; stopgap fix per weekly-review 8-10 owned action
-done: script exists + executable + calls `./notify` on 402 signature detection + wired into `.github/workflows/chain-runner.yml` postprocess path
+2. wire scripts/detect-usepod-402.sh operator-page gate before 20Z heartbeat
+why: 8-13 today is final workday deadline per ISS-031; stopgap for 2nd 7d-recurrence signature that crossed one-off→pattern 8-10
+done: script exists + executable, wired into prefetch path or workflow step, commit on main
 loop: iss-031-detect-usepod-gate
 
-3. audit `.github/workflows/aeon.yml` commit-results + update-cron-state steps for Run-step cancellation-handling — root cause of ISS-032
-why: fix at workflow-layer prevents next fork-cohort stall recurrence next Mon 8-17 dispatch; investigation-heavy but concrete
-done: log block in `memory/logs/2026-08-12.md` naming exact line ranges in aeon.yml + verdict on whether steps clear dispatched marker on cancellation + proposed patch shape
+3. patch skills/skill-health/SKILL.md step 2 rule table with stuck-in-flight branch (status='dispatched' AND days_since_last_dispatch >= 3)
+why: today's 18Z self-improve window is the natural slot; classification-rule-gap surfaced by 8-12 skill-health run — fork-cohort classifies HEALTHY under current rules despite ~120h stuck
+done: PR opened against main with the rule-table edit
 loop: fork-cohort-workflow-audit
 
-4. open reg-monitor self-improve PR baking CFTC HTML-fallback into `skills/reg-monitor/SKILL.md` step 1C — 2-consec-observation 8-05 + 8-12 confirms endpoint 404 durable
-why: today's fire needed runtime pivot to HTML path; PR removes the pivot from every future Wed-cycle fire
-done: PR opened via `gh pr create` on branch `fix/reg-monitor-cftc-html-fallback` naming CFTC RSS endpoint + fallback URL + step 1C edit
+4. bake CFTC HTML-fallback into skills/reg-monitor/SKILL.md step 1C
+why: 2-consec CFTC RSS 404 observation (8-05 + 8-12) crosses self-improve threshold; removes runtime pivot from every future wed cycle; second baked-fix ready for 18Z window
+done: PR opened with SKILL.md edit + HTML-parser fallback URL wired
 loop: reg-monitor-cftc-rss-404-durable
 
-5. nudge PR #174 (Advisor Brier-weight) CI kick via close-reopen or empty-commit push — 4d+ CI-cold, mergeable=UNKNOWN, empty statusCheckRollup, weekly-batch T-4 to 8-16
-why: external webbrain-one contributor blocked by unfiring CI; queue-full self-improve exit-gate stays disengaged until this clears
-done: `gh pr view 174 --json statusCheckRollup` returns non-empty array
-loop: pr-174-ci-cold-4d
+5. add NVIDIA-NeMo/Switchyard to memory/watched-repos.md
+why: today's github-trending top pick (37× baseline) is first fleet-visible vendor-tier LLM router — mandate-portability primitive for anthropic-anchored fleet
+done: memory/watched-repos.md carries the new line, commit pushed
+loop: track-vendor-tier-llm-router
 
-sources: memory=95 logs=13 topics=20 prs=4 cron_failing=3 mode=OK
+sources: memory=90 logs=7d topics=20 prs=4 cron_failing=3 mode=OK
