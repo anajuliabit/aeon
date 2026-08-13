@@ -1,0 +1,179 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-13"
+      },
+      "children": [
+        "focus-section",
+        "sep1",
+        "since-yesterday-section",
+        "sep2",
+        "running-today-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-032 fork-cohort — why now: 105h stuck, 4+ owed cycles unfiled since 8-11 18:40Z",
+        "variant": "body"
+      }
+    },
+    "focus-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "ship scripts/detect-usepod-402.sh — why now: 8-13 operator-page gate deadline is today, no buffer",
+        "variant": "body"
+      }
+    },
+    "focus-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve 18Z window — why now: 2 baked-fix candidates ready (CFTC html-fallback + fork-cohort skill-health rule), self-improve fires today",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-yesterday-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-yesterday-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "since-yesterday-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report failure",
+        "message": "33+ consecutive chronic-fail at 8-11 20:08Z — 2nd organic recovery, skill-health 16→4 CRITICAL",
+        "type": "error"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort ISS-032 stayed unfiled through morning-brief + 2 heartbeats + goal-tracker + action-converter + reflect (all owed)",
+        "variant": "body"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending: stablyai/orca promoted [[claude-code-alternative-open-source]] to formal pattern n=3",
+        "variant": "body"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest paired rail-break — malware-only n=4 + quiet-KEV 4-consec + EPSS-skip n=3 all snap; SeaweedFS Go SSRF is first tracked critical since 8-07",
+        "variant": "body"
+      }
+    },
+    "since-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending top-pick cathrynlavery/diagram-design 24× baseline — new [[llm-output-visual-primitive]] n=1",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-line-1",
+        "running-line-2",
+        "running-line-3",
+        "running-line-4"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-line-1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness 08Z · heartbeat 08/14/20Z · github-trending 09Z · token-alert 12Z",
+        "variant": "body"
+      }
+    },
+    "running-line-2": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest 14Z · list-digest 17Z · agent-buzz 17:30Z",
+        "variant": "body"
+      }
+    },
+    "running-line-3": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker + skill-health + self-improve + reflect + action-converter 18Z",
+        "variant": "body"
+      }
+    },
+    "running-line-4": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review 21Z",
+        "variant": "body"
+      }
+    }
+  }
+}

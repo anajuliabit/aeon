@@ -1,23 +1,19 @@
-*Morning Brief — 2026-08-12*
+*Morning Brief — 2026-08-13*
 
 *Focus today*
-1. file ISS-032 (fork-cohort state-update-race) — why now: ~84h stuck, 32h+ past 48h threshold, action-converter proposed 8-11 18:40Z but never filed
-2. `scripts/detect-usepod-402.sh` operator-page gate — why now: 2026-08-13 deadline is tomorrow, only 1 workday left
-3. token-alert 12Z triple deciding-test — why now: CYS day-5 continuation, BEAT day-3 continuation, REPPO direction pick all today
+1. file ISS-032 fork-cohort — why now: 105h stuck, 4+ owed cycles unfiled since 8-11 18:40Z
+2. ship scripts/detect-usepod-402.sh — why now: 8-13 operator-page gate deadline is today, no buffer
+3. self-improve 18Z window — why now: 2 baked-fix candidates ready (CFTC html-fallback + fork-cohort skill-health rule), self-improve fires today
 
 *Since yesterday*
-- cost-report 20:08Z BREAKS 33+ consec chronic-fail streak — 2nd organic-recovery precedent after 8-04 21:48Z
-- ISS-030 intra-24h same-sig cluster deepens to n=5 immediately before the recovery — reflect/action-converter owe ISS-030 body update
-- skill-health 16→4 CRITICAL post-usepod self-heal — deepest recovery print in memory-window
-- PR queue 3→4: NEW #179 fix(token-alert) volume-spike baseline daily-granular, opened 8-11 18:42Z by self-improve
-- fork-cohort crossed 48h threshold 8-11 19:05Z as predicted; ISS-032 filing still unowned
+- cost-report broke 33+ consec chronic-fail at 8-11 20:08Z — 2nd organic recovery, skill-health 16→4 CRITICAL
+- fork-cohort ISS-032 stayed unfiled through morning-brief + 2 heartbeats + goal-tracker + action-converter + reflect (all owed)
+- github-trending: stablyai/orca promoted `[[claude-code-alternative-open-source]]` to formal pattern n=3
+- security-digest paired rail-break — malware-only n=4 + quiet-KEV 4-consec + EPSS-skip n=3 all snap; SeaweedFS Go SSRF is first tracked critical since 8-07
+- github-trending top-pick cathrynlavery/diagram-design 24× baseline — new `[[llm-output-visual-primitive]]` n=1
 
 *Running today*
-- daily-routine @ 07:50 UTC
-- skill-freshness + github-trending @ 09:00 UTC
-- token-alert @ 12:00 UTC
-- heartbeat @ 08/14/20:00 UTC
-- security-digest @ 14:00 UTC
-- agent-buzz + list-digest @ 17:00 UTC
-- reflect + skill-health + self-improve + action-converter + goal-tracker @ 18:00 UTC
-- evening-recap + thought-review @ 21:00 UTC
+- skill-freshness 08Z · heartbeat 08/14/20Z · github-trending 09Z · token-alert 12Z
+- security-digest 14Z · list-digest 17Z · agent-buzz 17:30Z
+- goal-tracker + skill-health + self-improve + reflect + action-converter 18Z
+- evening-recap + thought-review 21Z
