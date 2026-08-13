@@ -1041,3 +1041,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-13,skill-freshness,claude-sonnet-4-6,1070,20617,992437,73773
 2026-08-13,github-trending,claude-opus-4-7,43,33724,2537707,82432
 2026-08-13,token-alert,claude-opus-4-7,35,16317,1459624,75529
+2026-08-13,btc-levels,claude-sonnet-4-6,1642,10584,364566,45366
