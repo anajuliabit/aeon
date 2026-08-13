@@ -1,12 +1,11 @@
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
 
+Scan found no fresh signals — all P0/P1/P2/P3 flags (5 STUCK skills, 3 consec≥3, 12-skill chronic cohort, ISS-032 filing overdue 6th cycle, ISS-031 detect-usepod-402 deadline today, PR queue at 4) dedup against last 48h logs. No notification sent per the silent-success path.
+
+Status page regenerated at 15:42 UTC with overall=🔴 DEGRADED, 15 open issues, next scheduled run btc-levels at 16:15 UTC. Full 43-skill table sorted by last-run desc; Token pulse section omitted (no `articles/token-report-*.md` file exists).
+
 ## Summary
-- **Files modified:** `docs/status.md` (regenerated wholesale, overall = 🔴 DEGRADED, updated 2026-08-13 08:58 UTC, 15 open issues, next run token-alert at 12:00 UTC, 43-skill table); `memory/logs/2026-08-13.md` (heartbeat entry appended).
-- **Findings (all deduped against prior 48h logs — no notification fired):**
-  - **P0 STUCK:** fork-cohort ~110h (ISS-032 owed), search-skill / unlock-monitor ~66h, skill-security-scan / deal-flow ~64h (all Mon-scheduled, self-clear 8-17).
-  - **P0 API degradation (consec≥3):** unlock-monitor=7, deal-flow=6, skill-security-scan=3 (all ISS-031 usepod-402 aftermath).
-  - **P0 chronic (sr<0.5):** 13-skill cohort per MEMORY.md (cost-report 8%, skill-analytics/reg-monitor 22%, …).
-  - **P1:** 4 PRs open (weekly-batch cadence per CLAUDE.md, not stalled); 0 urgent issues.
-  - **Self-check:** heartbeat last_success 12h48m ago (well under 36h).
-- **Token pulse:** section omitted — no `articles/token-report-*.md` file exists (skill rule).
-- **Follow-up:** ISS-032 filing overdue is 5th+ owed cycle — 14Z heartbeat is next escalation point; ISS-031 detect-usepod-402 gate deadline is today.
+- **Files modified:** `docs/status.md` (regenerated wholesale), `memory/logs/2026-08-13.md` (heartbeat entry appended).
+- **Verdict:** HEARTBEAT_OK · STATUS_PAGE=DEGRADED. Silent — no `./notify` fire.
+- **Delta since 08:58Z heartbeat:** security-digest 14:46Z clean fire (43%→44% sr), token-alert 12Z / btc-levels 13:41Z / github-trending 10:22Z all clean; no new failures or fresh stuck skills; ISS-032 still unfiled through 6th owed cycle.
+- **Follow-up:** 18Z self-improve batch is the natural window for ISS-032 filing (would be 7th owed cycle if missed); 20Z next heartbeat re-scans.
