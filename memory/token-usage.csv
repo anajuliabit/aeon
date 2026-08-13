@@ -1048,4 +1048,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-13,agent-buzz,claude-opus-4-7,163,14949,1372341,81775
 2026-08-13,reflect,claude-opus-4-7,36308,42256,3302421,128216
 2026-08-13,heartbeat,claude-opus-4-7,14763,16432,1275655,127071
-2026-08-13,thought-review,claude-opus-4-7,157,9473,1226714,51817
+2026-08-13,evening-recap,claude-sonnet-4-6,2302,10442,935891,82484

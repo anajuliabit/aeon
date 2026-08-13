@@ -1,22 +1,23 @@
-*Evening Recap — 2026-08-12*
-_TL;DR: heavy ship day with a dangling P0 — 18Z batch all clean, 2 articles out, ISS-032 fork-cohort ~97h still unfiled_
+*Evening Recap — 2026-08-13*
+_TL;DR: one self-improve PR shipped, two formal-pattern promotions via reflect — but ISS-032 unfiled through 7th cycle and detect-usepod-402.sh missed its 8-13 deadline_
 
 *Headlines:*
-- skill-freshness — FRESHNESS_OK · 43 skills · 0 flagged · articles/skill-freshness-2026-08-12.md
-- skill-analytics — 290 runs · 58% sr · 26 anomalies (14 🔴) · articles/skill-analytics-2026-08-12.md
+- self-improve — reg-monitor CFTC RSS HTML-fallback baked into step 1C, 18:41Z · https://github.com/anajuliabit/aeon/pull/180
 
 *Notable:*
-- security-digest — paired rail-break day: malware-only-surface n=4 + quiet-KEV n=4 both snap; SeaweedFS Go SSRF critical hits tracked stack (GHSA-87fv-vqqr-m4jr)
-- reg-monitor — CFTC §8a(9) emergency Kalshi order score 15 (exceeds last week's 12); CFTC Conflicts NPRM + IAC 8-20 in watch
-- github-trending — `[[claude-code-alternative-open-source]]` FORMAL PATTERN n=3 · top pick cathrynlavery/diagram-design 24× baseline
-- 18Z batch — goal-tracker / skill-health / agent-buzz / action-converter / reflect all clean
+- reflect — MEMORY.md 90→74L; memory-primitive-product-surface n=3 + alphabet-namespace-cluster both promoted formal-pattern; vol-vacuum + vol-compression-on-price-decay deprecated; fleet.md + crypto.md snapshots appended
+- security-digest ×2 — 89 fresh npm malware; 53-variant multi-handle alphabet-namespace cluster; 7-hit fleet-adjacent-typosquat cluster (cc-skills-helper / mcp-util-helpers / ai-analyzer +4); Aeon-fleet clean d14
+- github-trending — NVIDIA-NeMo/Switchyard top pick (37× baseline, vendor-tier LLM router); memory-primitive-product-surface rail crossed n=3 via macro-inc/macro
+- skill-health — CRITICAL(3) carry; btc-levels WARNING→HEALTHY (sr 0.79→0.80); ISS-031 20→19 affected skills; self-improve queue n=3 → exit-gate ENGAGED
+- skill-freshness — FRESHNESS_OK · articles/skill-freshness-2026-08-13.md
 
 *Decisions for tomorrow:*
-- file ISS-032: fork-cohort stuck ~97h (dispatched 8-09T19:05Z, 49h past escalation); run 31330721650
-- ship scripts/detect-usepod-402.sh — ISS-031 gate deadline 8-13 tomorrow (last workday before threshold)
-- triage PR #174 (~4d, CI cold, external contributor blocked) · https://github.com/anajuliabit/aeon/pull/174
+- file ISS-032 for fork-cohort — 7th owed cycle, 120h+ stuck since 8-09 dispatch, pattern-signature not accident
+- ship scripts/detect-usepod-402.sh — ISS-031 recurrence stopgap, 8-13 deadline passed unshipped
+- merge PR #180 + triage queue: #179 (45h), #177 (93h), #176 (94h), #174 (5d+)
 
 *Blockers:*
-- fork-cohort — ~97h in `dispatched` state, ISS-032 unfiled · run 31330721650
+- fork-cohort — dispatched 8-09T19:05Z, ISS-032 unfiled, 7th+ owed cycle
+- unlock-monitor / deal-flow / skill-security-scan / search-skill — usepod-402 aftermath, Mon-batch self-clears 8-17
 
-_+12 routine runs collapsed · sources: log=ok cron-state=ok_
+_+18 routine runs collapsed (btc-levels ×5, heartbeat ×3, morning-brief, daily-routine, thought-review, token-alert, list-digest, agent-buzz, action-converter, goal-tracker) · sources: log=ok cron-state=ok_

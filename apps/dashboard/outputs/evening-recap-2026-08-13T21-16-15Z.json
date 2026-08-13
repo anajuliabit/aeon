@@ -1,0 +1,211 @@
+{
+  "root": "card_evening_recap",
+  "state": {},
+  "elements": {
+    "card_evening_recap": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-13",
+        "description": "one self-improve PR shipped, two formal-pattern promotions via reflect — but ISS-032 unfiled through 7th cycle and detect-usepod-402.sh missed its 8-13 deadline"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_headlines",
+        "pr_180_link",
+        "sep_1",
+        "heading_notable",
+        "stack_notable",
+        "sep_2",
+        "heading_decisions",
+        "stack_decisions",
+        "sep_3",
+        "heading_blockers",
+        "stack_blockers",
+        "sep_4",
+        "text_footer"
+      ]
+    },
+    "heading_headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "pr_180_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — reg-monitor CFTC RSS HTML-fallback baked into step 1C, 18:41Z",
+        "href": "https://github.com/anajuliabit/aeon/pull/180"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_reflect",
+        "text_security",
+        "text_trending",
+        "text_skill_health",
+        "text_freshness"
+      ]
+    },
+    "text_reflect": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY.md 90→74L; memory-primitive-product-surface n=3 + alphabet-namespace-cluster both promoted formal-pattern; vol-vacuum + vol-compression-on-price-decay deprecated; fleet.md + crypto.md snapshots appended",
+        "variant": "body"
+      }
+    },
+    "text_security": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest ×2 — 89 fresh npm malware; 53-variant multi-handle alphabet-namespace cluster; 7-hit fleet-adjacent-typosquat cluster (cc-skills-helper / mcp-util-helpers / ai-analyzer +4); Aeon-fleet clean d14",
+        "variant": "body"
+      }
+    },
+    "text_trending": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — NVIDIA-NeMo/Switchyard top pick (37× baseline, vendor-tier LLM router); memory-primitive-product-surface rail crossed n=3 via macro-inc/macro",
+        "variant": "body"
+      }
+    },
+    "text_skill_health": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — CRITICAL(3) carry; btc-levels WARNING→HEALTHY (sr 0.79→0.80); ISS-031 20→19 affected skills; self-improve queue n=3 → exit-gate ENGAGED",
+        "variant": "body"
+      }
+    },
+    "text_freshness": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness — FRESHNESS_OK · articles/skill-freshness-2026-08-13.md",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "stack_decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_decision_1",
+        "text_decision_2",
+        "text_decision_3"
+      ]
+    },
+    "text_decision_1": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-032 for fork-cohort — 7th owed cycle, 120h+ stuck since 8-09 dispatch, pattern-signature not accident",
+        "variant": "body"
+      }
+    },
+    "text_decision_2": {
+      "type": "Text",
+      "props": {
+        "text": "ship scripts/detect-usepod-402.sh — ISS-031 recurrence stopgap, 8-13 deadline passed unshipped",
+        "variant": "body"
+      }
+    },
+    "text_decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #180 + triage queue: #179 (45h), #177 (93h), #176 (94h), #174 (5d+)",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "stack_blockers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_blocker_1",
+        "text_blocker_2"
+      ]
+    },
+    "text_blocker_1": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort — dispatched 8-09T19:05Z, ISS-032 unfiled, 7th+ owed cycle",
+        "variant": "body"
+      }
+    },
+    "text_blocker_2": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor / deal-flow / skill-security-scan / search-skill — usepod-402 aftermath, Mon-batch self-clears 8-17",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "+18 routine runs collapsed (btc-levels ×5, heartbeat ×3, morning-brief, daily-routine, thought-review, token-alert, list-digest, agent-buzz, action-converter, goal-tracker) · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
