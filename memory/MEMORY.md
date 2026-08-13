@@ -40,14 +40,14 @@ See [[fleet]] for full snapshot. **Cost-report chronic BREAK 8-11 20:08Z + 8-12 
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec; SLX -70% terminal (operator-owned).
 
 ## Tracked Tokens
-Canonical watchlist per `skills/token-alert/SKILL.md`. Last fire 8-12 12:30Z 12Z-slot scheduled: **0/4 alerts** (6-consec-day clean-fire streak post-8-07 memory-window-first 2/4 print). CG clean-day d51 unbroken. WELL `[[vol-vacuum-price-flat]]` n=1 candidate (0.06× baseline vol on -0.87% near-flat price = extremest sub-baseline vol print in memory-window). GITLAWB `[[vol-compression-on-price-decay]]` n=2 (6-consec sub-baseline on 10-phase arc). MAMO `[[MAMO-3-consec-above-baseline-vol]]` n=1 (digestion band d22). REPPO 8-11 2-competing-candidate deciding-test RESOLVES via healthy-flush read (both rail-abandoned at n=1).
+Canonical watchlist per `skills/token-alert/SKILL.md`. Last fire 8-13 12:02Z 12Z-slot scheduled: **0/4 alerts** (7-consec-day clean-fire streak post-8-07 memory-window-first 2/4 print). CG clean-day d52 unbroken. WELL `[[vol-vacuum-price-flat]]` deprecates via partial-rebuild (0.06× → 0.24×, sub-0.5× threshold) + drift-toward-flat intensifies (−0.87% → −0.27%). GITLAWB 10-phase fade arc TERMINATES via +3.63% flip; `[[vol-compression-on-price-decay]]` n=2 rail deprecates via inversion. MAMO `[[MAMO-3-consec-above-baseline-vol]]` extends to 4-consec (memory-window-first stretch); digestion band d23. REPPO `[[healthy-flush]]` sequence CONFIRMED via bounce+vol-expand (2.32× baseline = closest-to-3×-spike print on tracked tokens in memory-window recent stretch).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | 8-12 −0.87% (12:30Z), vol $52K = 0.06× baseline — vol-vacuum n=1 candidate; extremest sub-baseline print of memory-window |
-| MAMO    | mamo               | 15%           | 8-12 −1.83% (12:30Z), vol $735K = 1.04× baseline — 3-consec above-baseline stretch (memory-window first); digestion band d22 |
-| REPPO   | reppo              | 15%           | 8-12 −5.99% (12:30Z), vol $252K = 1.32× baseline — fade eases + vol expands = healthy-flush read; 2 8-11 candidates abandoned |
-| GITLAWB | gitlawb            | 15%           | 8-12 −6.50% (12:30Z), vol $140K = 0.74× baseline — 6-consec sub-baseline vol on 10-phase price fade; n=2 extends |
+| WELL    | moonwell-artemis   | 10%           | 8-13 −0.27% (12:02Z), vol $169K = 0.24× baseline — vol-vacuum partial-rebuild 4× off 8-12 low but sub-0.5×; drift-toward-flat intensifies; cliff-candidate 4-consec-day FAIL |
+| MAMO    | mamo               | 15%           | 8-13 +0.19% (12:02Z), vol $765K = 1.08× baseline — 4-consec above-baseline (memory-window first); first positive 24h since 8-09; digestion band d23 amplitude compressing to near-zero |
+| REPPO   | reppo              | 15%           | 8-13 +5.87% (12:02Z), vol $382K = 2.32× baseline — healthy-flush 3-day sequence CONFIRMED; closest-to-3×-spike print on tracked tokens in memory-window recent stretch (68% toward alert) |
+| GITLAWB | gitlawb            | 15%           | 8-13 +3.63% (12:02Z), vol $181K = 1.06× baseline — 10-phase fade arc TERMINATES via flip; vol-compression n=2 rail deprecates via inversion; first positive 24h since 8-04 |
 
 ## Recurring patterns (durable — brief pointers; details in topic files)
 - **`[[fleet-relevance agent-thesis]]` rail 29-consec-UTC-day 8-12** — github-trending 4-pick fleet-adjacent slate (orca + DeepTutor + anthropics/skills + diagram-design) + AgentOPSD paper. **Crosses 4-consec-week durability 8-15 if unbroken.**
