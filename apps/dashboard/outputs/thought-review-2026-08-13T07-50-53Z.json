@@ -1,0 +1,71 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought-review"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary",
+        "separator",
+        "stale_alert"
+      ]
+    },
+    "summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "time_text",
+        "captures_badge",
+        "status_text"
+      ]
+    },
+    "time_text": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h"
+      }
+    },
+    "captures_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "0 captures"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stale_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md 70d stale",
+        "message": "Last reviewed 2026-06-04 — worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}
