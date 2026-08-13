@@ -36,11 +36,17 @@ WebFetch: https://www.sec.gov/news/pressreleases.rss
 ```
 Keep only items published on/after `${since}`. Match titles against keywords: crypto, digital asset, stablecoin, token, DeFi, prediction, event contract, AI.
 
-**C. CFTC press releases (RSS)** — authoritative prediction market + derivatives actions:
+**C. CFTC press releases (RSS with HTML fallback)** — authoritative prediction market + derivatives actions:
 ```
 WebFetch: https://www.cftc.gov/RSS/RSSPR/rsspr.xml
 ```
 Keep items on/after `${since}`. CFTC runs prediction-market rulemaking — all CFTC items are in-scope by default.
+
+The RSS endpoint has been intermittently returning HTTP 404 across weekly fires (observed 7-15, 8-05, 8-12). On 404, fall back to the HTML press-release index and parse:
+```
+WebFetch: https://www.cftc.gov/PressRoom/PressReleases
+```
+Extract the release-number + title + date rows (each release links to `/PressRoom/PressReleases/{9NNN}-{YY}`); keep entries dated on/after `${since}`. Record which path was used for the source-status footer: `cftc=ok` if RSS worked, `cftc=ok(html-fallback, rss 404)` if RSS 404'd and HTML worked, `cftc=fail` if both failed.
 
 **D. WebSearch (gap-filler for state bills, court rulings, international)** — run these with the current year injected:
 - `"prediction market" (bill OR legislation OR ban OR ruling) ${year}`
