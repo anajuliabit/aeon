@@ -1,0 +1,118 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-13",
+        "description": "defi curator list drifts off-lane — pumpfun revenue arc, latent-feedback llm research, $oly hook-tax game theory, polymarket meta-chatter. only flowslikeosmo carries substance."
+      },
+      "children": [
+        "heading-curators",
+        "tweets-stack",
+        "sep-1",
+        "metadata-stack"
+      ]
+    },
+    "heading-curators": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi researchers curator list",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "tweet-4"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "pumpfun's revenue share went 1→23% of all crypto apps in 24 months while $PUMP still trades like the trenches are dead",
+        "likes": 54,
+        "retweets": 6
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "polymarket intern-hiring rounds is being treated as cycle-top meme; 65 likes on a one-word qt",
+        "likes": 65,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "full-bandwidth transformer: 1b-param model with latent-state feedback hits 400b-token accuracy at ~256b compute — data-wall workaround without new tokens",
+        "likes": 20,
+        "retweets": 2
+      },
+      "children": []
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "arndxt_xo",
+        "handle": "arndxt_xo",
+        "text": "$oly uses uniswap v4 hooks to charge exit-tax in eth (not emissions) — first attempt to rewrite first-seller-wins at the hook layer",
+        "likes": 5,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "metadata-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "sources-text",
+        "status-badge"
+      ]
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(4)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      },
+      "children": []
+    }
+  }
+}

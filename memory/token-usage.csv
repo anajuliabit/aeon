@@ -1045,3 +1045,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-13,security-digest,claude-opus-4-7,36,23343,2746363,86413
 2026-08-13,security-digest,claude-opus-4-7,42,16339,2871698,86763
 2026-08-13,btc-levels,claude-sonnet-4-6,8,3415,283417,42983
+2026-08-13,list-digest,claude-opus-4-7,21,13492,1142566,59954
