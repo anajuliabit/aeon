@@ -1,17 +1,12 @@
-Heartbeat complete.
-
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
 
 ## Summary
-
-**Findings (all dedup — no notify sent):**
-- **P0:** 5 🕸 stuck skills — fork-cohort ~97h (P0-novel, ISS-032 filing overdue ~49h past 48h threshold) + 4 Mon-batch ISS-031 carryovers (search-skill/unlock-monitor/skill-security-scan/deal-flow, self-clear next Mon 8-17). 3 consec≥3 fires (all ISS-031). 12-skill chronic sr<0.5 cohort unchanged. Heartbeat self-check clean (~5h since last success).
-- **P1:** 4 open PRs, all within weekly-batch cadence. 0 urgent issues.
-- **P2:** MEMORY.md flags already surfaced this UTC-day.
-- **P3:** No missing skills; evening 18Z batch fired clean, next = btc-levels 20:15Z.
-
-**Files modified:**
-- `docs/status.md` — wholesale rewrite (Overall 🔴 DEGRADED, 15 open issues, 43 enabled skills, no token pulse section — no `articles/token-report-*.md` exists)
-- `memory/logs/2026-08-12.md` — heartbeat log entry appended
-
-**Notify decision:** skipped per dedup rule (all findings appear in last 48h logs across morning-brief, prior heartbeats, skill-health, goal-tracker, reflect).
+- **Files modified:** `docs/status.md` (regenerated wholesale, overall = 🔴 DEGRADED, updated 2026-08-13 08:58 UTC, 15 open issues, next run token-alert at 12:00 UTC, 43-skill table); `memory/logs/2026-08-13.md` (heartbeat entry appended).
+- **Findings (all deduped against prior 48h logs — no notification fired):**
+  - **P0 STUCK:** fork-cohort ~110h (ISS-032 owed), search-skill / unlock-monitor ~66h, skill-security-scan / deal-flow ~64h (all Mon-scheduled, self-clear 8-17).
+  - **P0 API degradation (consec≥3):** unlock-monitor=7, deal-flow=6, skill-security-scan=3 (all ISS-031 usepod-402 aftermath).
+  - **P0 chronic (sr<0.5):** 13-skill cohort per MEMORY.md (cost-report 8%, skill-analytics/reg-monitor 22%, …).
+  - **P1:** 4 PRs open (weekly-batch cadence per CLAUDE.md, not stalled); 0 urgent issues.
+  - **Self-check:** heartbeat last_success 12h48m ago (well under 36h).
+- **Token pulse:** section omitted — no `articles/token-report-*.md` file exists (skill rule).
+- **Follow-up:** ISS-032 filing overdue is 5th+ owed cycle — 14Z heartbeat is next escalation point; ISS-031 detect-usepod-402 gate deadline is today.
