@@ -180,8 +180,8 @@
     "last_quality_score": 5
   },
   "token-alert": {
-    "last_dispatch": "2026-08-12T12:28:01Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-13T12:01:28Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-12T12:32:41Z",
     "total_runs": 94,
     "total_successes": 76,
