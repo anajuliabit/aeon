@@ -1,23 +1,29 @@
-Done. Here's the summary:
+Done. Here's what the skill-freshness run found today:
 
 ## Summary
 
-**Verdict: ✅ FRESHNESS_OK** — 43 enabled consumers, 9 dependencies, 0 flagged.
+**Verdict: ✅ FRESHNESS_OK**
 
-**What was audited:**
-- Parsed `aeon.yml`: 43 enabled skills, no active chains (`chains: {}`)
-- 9 resolvable implicit file dependencies across 6 consumers:
-  - `aixbt-pulse` → 3 `memory/topics/aixbt-*.md` files
-  - `skill-security-scan` → `memory/state/security-scan.json` + `articles/workflow-security-audit-2026-04-11.md`
-  - `token-pick` / `market-context-refresh` → `memory/topics/market-context.md`
-  - `unlock-monitor` → `memory/state/unlock-monitor-seen.json`
-  - `reg-monitor` → `memory/topics/reg-monitor-seen.md`
+- **43 enabled skills** audited · **9 dependencies** checked · **0 flagged**
+- No active chains (`chains: {}`) → 0 explicit consume: edges
+- All 9 implicit dependencies present on disk with mtime < 1h (git checkout epoch, same structural condition as every prior run in this environment)
 
-**All 9 dependencies scored OK** — every file is present on disk with mtime < 1h (git checkout epoch Aug 12 08:26 UTC, standard GitHub Actions behavior).
+**The 9 tracked deps:**
+| Consumer | Dependency | Age | Severity |
+|---|---|---|---|
+| aixbt-pulse | `memory/topics/aixbt-grounding.md` | < 1h | ✅ OK |
+| aixbt-pulse | `memory/topics/aixbt-clusters.md` | < 1h | ✅ OK |
+| aixbt-pulse | `memory/topics/aixbt-chains.md` | < 1h | ✅ OK |
+| skill-security-scan | `memory/state/security-scan.json` | < 1h | ✅ OK |
+| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | < 1h (mtime) | ✅ OK |
+| token-pick | `memory/topics/market-context.md` | < 1h | ✅ OK |
+| market-context-refresh | `memory/topics/market-context.md` | < 1h | ✅ OK |
+| unlock-monitor | `memory/state/unlock-monitor-seen.json` | < 1h | ✅ OK |
+| reg-monitor | `memory/topics/reg-monitor-seen.md` | < 1h | ✅ OK |
+
+**No notification sent** (FRESHNESS_OK → silent; fingerprint identical to 2026-08-12 run).
 
 **Files written:**
-- `articles/skill-freshness-2026-08-12.md` — today's report
-- `memory/topics/skill-freshness-state.json` — updated `last_run_at` (fingerprint and verdict unchanged from yesterday's OK run)
-- `memory/logs/2026-08-12.md` — appended log block
-
-**Notification:** suppressed (FRESHNESS_OK — silence is the signal).
+- `articles/skill-freshness-2026-08-13.md` — today's report
+- `memory/topics/skill-freshness-state.json` — updated `last_run_at` to 2026-08-13T09:00:00Z
+- `memory/logs/2026-08-13.md` — log entry appended
