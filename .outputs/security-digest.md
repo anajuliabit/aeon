@@ -1,20 +1,18 @@
-*Security Digest — 2026-08-12*
-Verdict: 3 actively exploited, 1 to schedule, 113+2 fresh malware packages. _Sources: KEV, GH Advisory, EPSS_
+*security digest — 2026-08-13*
+verdict: 0 fresh KEV · 70 fresh malware pkgs (53 alphabet-namespace) · 1 to schedule · 3 to monitor. _sources: KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- [CVE-2026-72898](https://www.cve.org/CVERecord?id=CVE-2026-72898) — Metabase · KEV added 2026-08-11 · CVSS 10.0 · EPSS 0.011
-  unauthenticated SQL injection → admin, connected-DB credential theft, arbitrary data export.
-  → upgrade Metabase to the vendor-fixed version today; rotate any DB credentials Metabase stored.
-- [CVE-2026-20349](https://www.cve.org/CVERecord?id=CVE-2026-20349) — Cisco Secure Firewall ASA / FTD · KEV added 2026-08-11 · CVSS 8.6 · EPSS 0.010
-  unauth remote heap-inspection DoS, device reload loop.
-  → patch ASA/FTD firmware per Cisco advisory today.
-- [CVE-2026-68820](https://www.cve.org/CVERecord?id=CVE-2026-68820) — Windows Ancillary Function Driver for WinSock · KEV added 2026-08-11 · CVSS 7.0 · EPSS 0.004
-  local use-after-free → privilege escalation, patch-Tuesday driver bug.
-  → install August 2026 Windows cumulative update today.
-- Malware wave (npm + pip) — 113 npm + 2 pip fresh in 17h. defi-brand cluster: `permit2`, `boring-vault`, `augustdigital-sdk`, `camelot-ammv2-core`, `camelot-ammv2-periphery`, `upshift-config`, `upshift-finance`. namespace cluster: `@years18/n8n-nodes-utils-helper-{a..x}` (22 variants targeting n8n). `@bikli/*` + `base65-*` sub-clusters.
-  → if any of these were installed, uninstall + rotate any secrets exposed to the install host.
+- **70 fresh npm malware pkgs** (post-8-12 15:12Z cutoff, all npm) — `@years17/18/19/20/n8n-nodes-utils-helper-*` alphabet-namespace explodes 53 variants (a→y across 4 handles, extends 8-12 n=1 candidate); fleet-adjacent typosquats: `cc-skills-helper`, `mcp-util-helpers`, `passkeys-react`, `nolimit-agent` (+ linux-x64/win32-x64), `@dreamguyxeon/libsignal-node`.
+  → block installs from `@years17/18/19/20/*` scopes and `*-agent`/`*-helper` unknown-publisher pkgs; rotate any tokens exposed to installs from these handles.
 
 *PATCH THIS WEEK*
-- [GHSA-87fv-vqqr-m4jr](https://github.com/advisories/GHSA-87fv-vqqr-m4jr) — SeaweedFS (Go) · CVSS 9.3 · EPSS 0.004 · no public PoC
-  unauthenticated SSRF with response read-back on volume-server gRPC — leaks cloud IMDS + IAM credentials on default deploys.
-  → upgrade `github.com/seaweedfs/seaweedfs` to ≥ 4.24 (fix commit `69da20bdaec9`).
+- [GHSA-49m4-vp58-wgc9](https://github.com/advisories/GHSA-49m4-vp58-wgc9) — stata-mcp (pip) · CVSS 8.4 · EPSS n/a · no fix yet
+  MCP server for Stata: unsanitized `package` arg in `ado_package_install` = shell command injection. → pin/exclude `stata-mcp` <1.19.0 until a patched release ships.
+
+*MONITOR*
+- [GHSA-w62w-66v9-vvgv](https://github.com/advisories/GHSA-w62w-66v9-vvgv) — seaweedfs (Go) · CVE-2026-54917 · EPSS 0.004 · no fix
+  path traversal in S3 and Iceberg REST gateways = cross-bucket access. 2nd SeaweedFS high in 48h (8-12 SSRF GHSA-87fv). → watch for a fix; do not expose S3 gateway publicly.
+- [GHSA-48p8-g2fx-3wwm](https://github.com/advisories/GHSA-48p8-g2fx-3wwm) — argo-workflows (Go) · CVE-2026-54526 · EPSS 0.004 · no fix
+  ArtifactGC.PodSpecPatch bypasses Strict/Secure template allow-list (incomplete fix for CVE-2026-31892). → audit ArtifactGC usage on production Argo installs; watch for release.
+- [GHSA-3763-qp59-59vf](https://github.com/advisories/GHSA-3763-qp59-59vf) — nimiq-blockchain (rust) · CVE-2026-46369 · CVSS 7.5 · EPSS n/a · no fix
+  validity store off-by-one. → track for patched crate release.

@@ -1,0 +1,481 @@
+{
+  "root": "security-digest",
+  "state": {},
+  "elements": {
+    "security-digest": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-13",
+        "description": "Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "verdict-text",
+        "sep-1",
+        "patch-today-stack",
+        "sep-2",
+        "patch-week-stack",
+        "sep-3",
+        "monitor-stack"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "0 fresh KEV · 70 fresh malware pkgs (53 alphabet-namespace) · 1 to schedule · 3 to monitor",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-today-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-today-heading",
+        "patch-today-alert",
+        "patch-today-packages",
+        "patch-today-typosquats",
+        "patch-today-recommendations"
+      ]
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h3"
+      }
+    },
+    "patch-today-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "70 fresh npm malware packages detected",
+        "message": "Post-8-12 15:12Z cutoff, all npm packages",
+        "type": "error"
+      }
+    },
+    "patch-today-packages": {
+      "type": "Text",
+      "props": {
+        "text": "Alphabet-namespace explodes with 53 variants: @years17/18/19/20/n8n-nodes-utils-helper-* (a→y across 4 handles, extends 8-12 n=1 candidate)",
+        "variant": "body"
+      }
+    },
+    "patch-today-typosquats": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet-adjacent typosquats: cc-skills-helper, mcp-util-helpers, passkeys-react, nolimit-agent (+ linux-x64/win32-x64), @dreamguyxeon/libsignal-node",
+        "variant": "body"
+      }
+    },
+    "patch-today-recommendations": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Block installs from @years17/18/19/20/* scopes and *-agent/*-helper unknown-publisher pkgs; rotate any tokens exposed to installs from these handles.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-week-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-week-heading",
+        "patch-week-vuln-stack"
+      ]
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h3"
+      }
+    },
+    "patch-week-vuln-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-week-link",
+        "patch-week-details-stack"
+      ]
+    },
+    "patch-week-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-49m4-vp58-wgc9 — stata-mcp (pip)",
+        "href": "https://github.com/advisories/GHSA-49m4-vp58-wgc9",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch-week-details-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-week-badges-stack",
+        "patch-week-desc",
+        "patch-week-action"
+      ]
+    },
+    "patch-week-badges-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "patch-week-cvss",
+        "patch-week-epss",
+        "patch-week-nofix"
+      ]
+    },
+    "patch-week-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.4",
+        "variant": "destructive"
+      }
+    },
+    "patch-week-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "secondary"
+      }
+    },
+    "patch-week-nofix": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix yet",
+        "variant": "outline"
+      }
+    },
+    "patch-week-desc": {
+      "type": "Text",
+      "props": {
+        "text": "MCP server for Stata: unsanitized package arg in ado_package_install = shell command injection.",
+        "variant": "body"
+      }
+    },
+    "patch-week-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Pin/exclude stata-mcp <1.19.0 until a patched release ships.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-heading",
+        "monitor-vuln1-stack",
+        "monitor-vuln2-stack",
+        "monitor-vuln3-stack"
+      ]
+    },
+    "monitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h3"
+      }
+    },
+    "monitor-vuln1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-vuln1-link",
+        "monitor-vuln1-details"
+      ]
+    },
+    "monitor-vuln1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-w62w-66v9-vvgv — seaweedfs (Go)",
+        "href": "https://github.com/advisories/GHSA-w62w-66v9-vvgv",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor-vuln1-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-vuln1-badges",
+        "monitor-vuln1-desc",
+        "monitor-vuln1-context",
+        "monitor-vuln1-action"
+      ]
+    },
+    "monitor-vuln1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-vuln1-cve",
+        "monitor-vuln1-epss",
+        "monitor-vuln1-nofix"
+      ]
+    },
+    "monitor-vuln1-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-54917",
+        "variant": "secondary"
+      }
+    },
+    "monitor-vuln1-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.004",
+        "variant": "secondary"
+      }
+    },
+    "monitor-vuln1-nofix": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix",
+        "variant": "outline"
+      }
+    },
+    "monitor-vuln1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Path traversal in S3 and Iceberg REST gateways = cross-bucket access.",
+        "variant": "body"
+      }
+    },
+    "monitor-vuln1-context": {
+      "type": "Text",
+      "props": {
+        "text": "2nd SeaweedFS high in 48h (8-12 SSRF GHSA-87fv).",
+        "variant": "caption"
+      }
+    },
+    "monitor-vuln1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Watch for a fix; do not expose S3 gateway publicly.",
+        "variant": "body"
+      }
+    },
+    "monitor-vuln2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-vuln2-link",
+        "monitor-vuln2-details"
+      ]
+    },
+    "monitor-vuln2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-48p8-g2fx-3wwm — argo-workflows (Go)",
+        "href": "https://github.com/advisories/GHSA-48p8-g2fx-3wwm",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor-vuln2-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-vuln2-badges",
+        "monitor-vuln2-desc",
+        "monitor-vuln2-context",
+        "monitor-vuln2-action"
+      ]
+    },
+    "monitor-vuln2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-vuln2-cve",
+        "monitor-vuln2-epss",
+        "monitor-vuln2-nofix"
+      ]
+    },
+    "monitor-vuln2-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-54526",
+        "variant": "secondary"
+      }
+    },
+    "monitor-vuln2-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.004",
+        "variant": "secondary"
+      }
+    },
+    "monitor-vuln2-nofix": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix",
+        "variant": "outline"
+      }
+    },
+    "monitor-vuln2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "ArtifactGC.PodSpecPatch bypasses Strict/Secure template allow-list (incomplete fix for CVE-2026-31892).",
+        "variant": "body"
+      }
+    },
+    "monitor-vuln2-context": {
+      "type": "Text",
+      "props": {
+        "text": "Incomplete fix for prior vulnerability.",
+        "variant": "caption"
+      }
+    },
+    "monitor-vuln2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Audit ArtifactGC usage on production Argo installs; watch for release.",
+        "variant": "body"
+      }
+    },
+    "monitor-vuln3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-vuln3-link",
+        "monitor-vuln3-details"
+      ]
+    },
+    "monitor-vuln3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-3763-qp59-59vf — nimiq-blockchain (rust)",
+        "href": "https://github.com/advisories/GHSA-3763-qp59-59vf",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor-vuln3-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-vuln3-badges",
+        "monitor-vuln3-desc",
+        "monitor-vuln3-action"
+      ]
+    },
+    "monitor-vuln3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-vuln3-cve",
+        "monitor-vuln3-cvss",
+        "monitor-vuln3-epss",
+        "monitor-vuln3-nofix"
+      ]
+    },
+    "monitor-vuln3-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-46369",
+        "variant": "secondary"
+      }
+    },
+    "monitor-vuln3-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5",
+        "variant": "secondary"
+      }
+    },
+    "monitor-vuln3-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "secondary"
+      }
+    },
+    "monitor-vuln3-nofix": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix",
+        "variant": "outline"
+      }
+    },
+    "monitor-vuln3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Validity store off-by-one bug.",
+        "variant": "body"
+      }
+    },
+    "monitor-vuln3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Track for patched crate release.",
+        "variant": "body"
+      }
+    }
+  }
+}
