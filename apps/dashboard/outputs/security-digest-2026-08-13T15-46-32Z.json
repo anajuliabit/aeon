@@ -1,0 +1,226 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-13 15:42Z",
+        "description": "delta since 14:46Z"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_verdict",
+        "stack_stats",
+        "text_sources",
+        "separator_1",
+        "heading_patch",
+        "text_timeline",
+        "heading_fleet_adjacent",
+        "stack_fleet_packages",
+        "text_other_packages",
+        "text_impact",
+        "separator_2",
+        "alert_actions"
+      ]
+    },
+    "alert_verdict": {
+      "type": "Alert",
+      "props": {
+        "message": "Nothing urgent since prior digest. Aeon-fleet clean d14 holds.",
+        "type": "success"
+      }
+    },
+    "stack_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_npm",
+        "stat_kev",
+        "stat_critical"
+      ]
+    },
+    "stat_npm": {
+      "type": "Stat",
+      "props": {
+        "label": "Fresh npm malware pkgs (100%)",
+        "value": "19"
+      }
+    },
+    "stat_kev": {
+      "type": "Stat",
+      "props": {
+        "label": "Fresh KEV",
+        "value": "0"
+      }
+    },
+    "stat_critical": {
+      "type": "Stat",
+      "props": {
+        "label": "Fresh critical/high",
+        "value": "0"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "caption"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_patch": {
+      "type": "Heading",
+      "props": {
+        "text": "Patch Today",
+        "level": "h2"
+      }
+    },
+    "text_timeline": {
+      "type": "Text",
+      "props": {
+        "text": "19 npm malware advisories 15:04Z→15:36Z",
+        "variant": "lead"
+      }
+    },
+    "heading_fleet_adjacent": {
+      "type": "Heading",
+      "props": {
+        "text": "3 fleet-adjacent packages",
+        "level": "h3"
+      }
+    },
+    "stack_fleet_packages": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pkg_1",
+        "pkg_2",
+        "pkg_3"
+      ]
+    },
+    "pkg_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_pkg_1",
+        "badge_type_1"
+      ]
+    },
+    "link_pkg_1": {
+      "type": "Link",
+      "props": {
+        "label": "ai-analyzer (GHSA-v54f-w8mv-c6xf)",
+        "href": "https://github.com/advisories/GHSA-v54f-w8mv-c6xf"
+      }
+    },
+    "badge_type_1": {
+      "type": "Badge",
+      "props": {
+        "text": "ai-tooling typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_pkg_2",
+        "badge_type_2"
+      ]
+    },
+    "link_pkg_2": {
+      "type": "Link",
+      "props": {
+        "label": "ac_semantic-ui_ts (GHSA-hjh8-hv66-6mwc)",
+        "href": "https://github.com/advisories/GHSA-hjh8-hv66-6mwc"
+      }
+    },
+    "badge_type_2": {
+      "type": "Badge",
+      "props": {
+        "text": "react-ecosystem typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_pkg_3",
+        "badge_type_3"
+      ]
+    },
+    "link_pkg_3": {
+      "type": "Link",
+      "props": {
+        "label": "ac_calendar_ts (GHSA-xgwp-29j2-jxj3)",
+        "href": "https://github.com/advisories/GHSA-xgwp-29j2-jxj3"
+      }
+    },
+    "badge_type_3": {
+      "type": "Badge",
+      "props": {
+        "text": "react-ecosystem typosquat",
+        "variant": "destructive"
+      }
+    },
+    "text_other_packages": {
+      "type": "Text",
+      "props": {
+        "text": "Other packages: @easy-entry/* (x3), @demica/* (x3), @frostnode/* (x2), @shell-*/routes (x2), @open-banking/cabinet-providers, @chunklab/hexparse, @bytemend/mfebus, @briskforge/envcheck, datetime-format-xutil, datetime-fmt-xutil",
+        "variant": "body"
+      }
+    },
+    "text_impact": {
+      "type": "Text",
+      "props": {
+        "text": "0/19 impact on tracked dependencies",
+        "variant": "muted"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_actions": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "Remove any ai-analyzer, ac_semantic-ui_ts, or ac_calendar_ts installations. Rotate npm credentials if any were consumed.",
+        "type": "warning"
+      }
+    }
+  }
+}
