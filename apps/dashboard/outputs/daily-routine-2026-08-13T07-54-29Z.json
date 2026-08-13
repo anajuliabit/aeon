@@ -1,0 +1,564 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-13"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_winners",
+        "table_winners",
+        "sep_1",
+        "heading_losers",
+        "table_losers",
+        "sep_2",
+        "heading_notable",
+        "text_notable",
+        "sep_3",
+        "heading_tweets",
+        "heading_crypto",
+        "stack_crypto",
+        "sep_4",
+        "heading_ai",
+        "stack_ai",
+        "sep_5",
+        "heading_dev",
+        "stack_dev",
+        "sep_6",
+        "heading_paper",
+        "text_paper",
+        "link_paper",
+        "sep_7",
+        "heading_github",
+        "text_github",
+        "sep_8",
+        "heading_hn",
+        "stack_hn1",
+        "stack_hn2",
+        "stack_hn3",
+        "stack_hn4"
+      ]
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h Change"
+        ],
+        "rows": [
+          [
+            "XPIN",
+            "$0.001749",
+            "+12.5%"
+          ],
+          [
+            "BEAT",
+            "$2.15",
+            "+12.0%"
+          ],
+          [
+            "LIT",
+            "$2.36",
+            "+8.9%"
+          ],
+          [
+            "BTW",
+            "$0.1893",
+            "+7.6%"
+          ],
+          [
+            "EDGE",
+            "$0.3919",
+            "+7.3%"
+          ],
+          [
+            "ADA",
+            "$0.2016",
+            "+7.1%"
+          ],
+          [
+            "BinanceLife",
+            "$0.5397",
+            "+6.8%"
+          ],
+          [
+            "CFX",
+            "$0.04033",
+            "+6.5%"
+          ],
+          [
+            "Q",
+            "$0.02286",
+            "+6.1%"
+          ],
+          [
+            "XEC",
+            "$0.000006620",
+            "+6.1%"
+          ]
+        ]
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h Change"
+        ],
+        "rows": [
+          [
+            "CC",
+            "$0.08814",
+            "−13.5%"
+          ],
+          [
+            "BONK",
+            "$0.00000255",
+            "−8.7%"
+          ],
+          [
+            "VELVET",
+            "$0.4488",
+            "−8.0%"
+          ],
+          [
+            "TEL",
+            "$0.001450",
+            "−6.8%"
+          ],
+          [
+            "ONDO",
+            "$0.3497",
+            "−6.4%"
+          ],
+          [
+            "CARDS",
+            "$0.1517",
+            "−6.1%"
+          ],
+          [
+            "META",
+            "$4.96",
+            "−6.1%"
+          ],
+          [
+            "FET",
+            "$0.1315",
+            "−5.8%"
+          ],
+          [
+            "US",
+            "$0.05217",
+            "−5.4%"
+          ],
+          [
+            "UB",
+            "$0.1334",
+            "−4.9%"
+          ]
+        ]
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "text_notable": {
+      "type": "Text",
+      "props": {
+        "text": "ADA +7.1% is the only major top-25 print green; CC Canton −13.5% is the day's largest large-cap bleed but vol/mcap 0.005 = no capitulation. BTW +136.6% 7d intact at #107. ACE Fusionist #876 +113% on trending = PUMP-RISK microcap.",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "stack_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_crypto",
+        "link_base",
+        "link_rules"
+      ]
+    },
+    "text_crypto": {
+      "type": "Text",
+      "props": {
+        "text": "@base flexes trillions-monthly on-chain volume chart (marketing-shell but numbers real). @RippleXrpie flags SEC \"large-scale crypto rules by Friday\" claim — treat as claim, watch for receipt.",
+        "variant": "body"
+      }
+    },
+    "link_base": {
+      "type": "Link",
+      "props": {
+        "label": "base",
+        "href": "https://x.com/base/status/2087551766028066842"
+      }
+    },
+    "link_rules": {
+      "type": "Link",
+      "props": {
+        "label": "rules",
+        "href": "https://x.com/RippleXrpie/status/2087518287718433129"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_ai": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "stack_ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_ai",
+        "link_graph",
+        "link_statewave"
+      ]
+    },
+    "text_ai": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic engineer (via @AnatoliKopadze) again: put the model in a graph → parallel-tasks + self-check + failure-recovery. 3rd fleet-visible authority citation of the graph-over-prompting shape within 7d (Ng 8-10, ajay4ai 8-11, now 8-12). @anujcodes_21 ships StatewaveAI — durable memory runtime with provenance + health-scoring for prod agents (Apache 2.0, Postgres-backed).",
+        "variant": "body"
+      }
+    },
+    "link_graph": {
+      "type": "Link",
+      "props": {
+        "label": "graph",
+        "href": "https://x.com/AnatoliKopadze/status/2087532787590922325"
+      }
+    },
+    "link_statewave": {
+      "type": "Link",
+      "props": {
+        "label": "statewave",
+        "href": "https://x.com/anujcodes_21/status/2087458938329653312"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_dev": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "stack_dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_dev",
+        "link_mpturbo",
+        "link_pdfcn",
+        "link_kimi"
+      ]
+    },
+    "text_dev": {
+      "type": "Text",
+      "props": {
+        "text": "@xiathis surfaces moneyprinterturbo (13k stars) — single-repo full short-form-video pipeline (script → voice → subs → visuals → edit). @alaymanguy ships pdfcn via shadcn labs — zero-config shadcn/ui PDF components, 10+ themes. @Av1dlive on FareedKhan-dev/kimi-k3-in-c — frontier Kimi K3 running locally on any laptop in 2 min (5k stars).",
+        "variant": "body"
+      }
+    },
+    "link_mpturbo": {
+      "type": "Link",
+      "props": {
+        "label": "mpturbo",
+        "href": "https://x.com/xiathis/status/2087653159334539637"
+      }
+    },
+    "link_pdfcn": {
+      "type": "Link",
+      "props": {
+        "label": "pdfcn",
+        "href": "https://x.com/alaymanguy/status/2087656088124719304"
+      }
+    },
+    "link_kimi": {
+      "type": "Link",
+      "props": {
+        "label": "kimi-c",
+        "href": "https://x.com/Av1dlive/status/2087513648243597554"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "text_paper": {
+      "type": "Text",
+      "props": {
+        "text": "\"AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning\" — Tsinghua, ↑49. Turn-level credit for long-horizon agent RL via recursive bayesian belief updates on teacher-student log-prob gaps. No critic, no extra rollouts, 89.1% ALFWorld with Qwen2.5-7B. Extends `memory-primitive-paper` streak to 7-consec.",
+        "variant": "body"
+      }
+    },
+    "link_paper": {
+      "type": "Link",
+      "props": {
+        "label": "arxiv",
+        "href": "https://arxiv.org/abs/2608.05987"
+      }
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_github": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "text_github": {
+      "type": "Text",
+      "props": {
+        "text": "0 new on `user:anajuliabit` 24h window. Clean-day streak holds.",
+        "variant": "body"
+      }
+    },
+    "sep_8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "stack_hn1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_hn1_title",
+        "text_hn1_meta",
+        "link_hn1_discuss"
+      ]
+    },
+    "link_hn1_title": {
+      "type": "Link",
+      "props": {
+        "label": "AMD acquires Taalas — compute-in-memory silicon",
+        "href": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344"
+      }
+    },
+    "text_hn1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "621pts — weights-as-wiring moves from lab-curiosity to acquisition-priced.",
+        "variant": "caption"
+      }
+    },
+    "link_hn1_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49201970"
+      }
+    },
+    "stack_hn2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_hn2_title",
+        "text_hn2_meta",
+        "link_hn2_discuss"
+      ]
+    },
+    "link_hn2_title": {
+      "type": "Link",
+      "props": {
+        "label": "GitHub Actions + Pages degraded",
+        "href": "https://www.githubstatus.com/incidents/qcvjkzcs7j74"
+      }
+    },
+    "text_hn2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "391pts — another us-hours ci outage; thread turns to forge migration + self-hosting math.",
+        "variant": "caption"
+      }
+    },
+    "link_hn2_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49198302"
+      }
+    },
+    "stack_hn3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_hn3_title",
+        "text_hn3_meta",
+        "link_hn3_discuss"
+      ]
+    },
+    "link_hn3_title": {
+      "type": "Link",
+      "props": {
+        "label": "Humans miss 1-in-3 threats on ai-agent commands (40k runs, 409k decisions)",
+        "href": "https://scalex.dev/blog/ai-agent-permissions-stats/"
+      }
+    },
+    "text_hn3_meta": {
+      "type": "Text",
+      "props": {
+        "text": "293pts — empirical floor on hitl review fatigue. sandboxing over hitl.",
+        "variant": "caption"
+      }
+    },
+    "link_hn3_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49195468"
+      }
+    },
+    "stack_hn4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_hn4_title",
+        "text_hn4_meta",
+        "link_hn4_discuss"
+      ]
+    },
+    "link_hn4_title": {
+      "type": "Link",
+      "props": {
+        "label": "Mario Meets Pareto",
+        "href": "https://www.mayerowitz.io/blog/mario-meets-pareto"
+      }
+    },
+    "text_hn4_meta": {
+      "type": "Text",
+      "props": {
+        "text": "1027pts — pareto frontier via mario kart stat curves; day's top-vote story.",
+        "variant": "caption"
+      }
+    },
+    "link_hn4_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49195231"
+      }
+    }
+  }
+}
