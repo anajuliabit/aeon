@@ -1,0 +1,621 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill health",
+        "description": "2026-08-13 18Z"
+      },
+      "children": [
+        "alert-critical",
+        "sep1",
+        "systemic-section",
+        "sep2",
+        "critical-section",
+        "sep3",
+        "degraded-section",
+        "sep4",
+        "nodata-section",
+        "sep5",
+        "healthy-section",
+        "sep6",
+        "specgap-section",
+        "sep7",
+        "stats-section"
+      ]
+    },
+    "alert-critical": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: CRITICAL",
+        "message": "3 critical issues requiring immediate attention",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "systemic-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "systemic-heading",
+        "systemic-issue-1",
+        "systemic-issue-2"
+      ]
+    },
+    "systemic-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Systemic Issues",
+        "level": "h3"
+      }
+    },
+    "systemic-issue-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sys1-title",
+        "sys1-skills",
+        "sys1-cadence",
+        "sys1-issue"
+      ]
+    },
+    "sys1-title": {
+      "type": "Text",
+      "props": {
+        "text": "3 skills stuck on api.usepod.ai 402 stale-state",
+        "variant": "lead"
+      }
+    },
+    "sys1-skills": {
+      "type": "Text",
+      "props": {
+        "text": "Skills: unlock-monitor, deal-flow, skill-security-scan",
+        "variant": "body"
+      }
+    },
+    "sys1-cadence": {
+      "type": "Text",
+      "props": {
+        "text": "Mon-cadence: next dispatch tick clears marker (10Z/14Z/16Z mon 8-17)",
+        "variant": "body"
+      }
+    },
+    "sys1-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-031",
+        "variant": "secondary"
+      }
+    },
+    "systemic-issue-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sys2-title",
+        "sys2-skills",
+        "sys2-status",
+        "sys2-issue"
+      ]
+    },
+    "sys2-title": {
+      "type": "Text",
+      "props": {
+        "text": "4 skills 47d cold in 12Z batch dark",
+        "variant": "lead"
+      }
+    },
+    "sys2-skills": {
+      "type": "Text",
+      "props": {
+        "text": "Skills: aixbt-pulse, defi-monitor, market-context-refresh, narrative-tracker",
+        "variant": "body"
+      }
+    },
+    "sys2-status": {
+      "type": "Text",
+      "props": {
+        "text": "Scheduler-side gap frozen since 6-28",
+        "variant": "body"
+      }
+    },
+    "sys2-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-027",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crit-header",
+        "crit-item-1",
+        "crit-item-2",
+        "crit-item-3"
+      ]
+    },
+    "crit-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "crit-heading",
+        "crit-badge"
+      ]
+    },
+    "crit-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL",
+        "level": "h3"
+      }
+    },
+    "crit-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "3 issues — All ISS-031",
+        "variant": "destructive"
+      }
+    },
+    "crit-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crit1-name",
+        "crit1-detail"
+      ]
+    },
+    "crit1-name": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "lead"
+      }
+    },
+    "crit1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "7 fails, 10d down — wait-api (usepod-402)",
+        "variant": "body"
+      }
+    },
+    "crit-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crit2-name",
+        "crit2-detail"
+      ]
+    },
+    "crit2-name": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow",
+        "variant": "lead"
+      }
+    },
+    "crit2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "6 fails, 10d down — wait-api (usepod-402)",
+        "variant": "body"
+      }
+    },
+    "crit-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crit3-name",
+        "crit3-detail"
+      ]
+    },
+    "crit3-name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan",
+        "variant": "lead"
+      }
+    },
+    "crit3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "3 fails, 10d down — wait-api (usepod-402)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deg-header",
+        "deg-item-1",
+        "deg-item-2",
+        "deg-item-3",
+        "deg-item-4",
+        "deg-item-5",
+        "deg-more"
+      ]
+    },
+    "deg-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg-heading",
+        "deg-badge"
+      ]
+    },
+    "deg-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED",
+        "level": "h3"
+      }
+    },
+    "deg-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "17 issues (top 5 shown)",
+        "variant": "secondary"
+      }
+    },
+    "deg-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg1-name",
+        "deg1-detail"
+      ]
+    },
+    "deg1-name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "deg1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "8% sr, sdk_opt_in_required chronic — investigate → ISS-030",
+        "variant": "body"
+      }
+    },
+    "deg-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg2-name",
+        "deg2-detail"
+      ]
+    },
+    "deg2-name": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "lead"
+      }
+    },
+    "deg2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "22% sr chronic — investigate",
+        "variant": "body"
+      }
+    },
+    "deg-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg3-name",
+        "deg3-detail"
+      ]
+    },
+    "deg3-name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "lead"
+      }
+    },
+    "deg3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "22% sr chronic — investigate",
+        "variant": "body"
+      }
+    },
+    "deg-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg4-name",
+        "deg4-detail"
+      ]
+    },
+    "deg4-name": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "lead"
+      }
+    },
+    "deg4-detail": {
+      "type": "Text",
+      "props": {
+        "text": "25% sr chronic — investigate",
+        "variant": "body"
+      }
+    },
+    "deg-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg5-name",
+        "deg5-detail"
+      ]
+    },
+    "deg5-name": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "lead"
+      }
+    },
+    "deg5-detail": {
+      "type": "Text",
+      "props": {
+        "text": "44% sr chronic — investigate",
+        "variant": "body"
+      }
+    },
+    "deg-more": {
+      "type": "Text",
+      "props": {
+        "text": "+12 more issues — see memory/issues/INDEX.md",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "nodata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata-header",
+        "nodata-list"
+      ]
+    },
+    "nodata-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "nodata-heading",
+        "nodata-badge"
+      ]
+    },
+    "nodata-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA",
+        "level": "h3"
+      }
+    },
+    "nodata-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "3 skills",
+        "variant": "outline"
+      }
+    },
+    "nodata-list": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — dispatch-skill",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-header",
+        "healthy-note"
+      ]
+    },
+    "healthy-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-badge"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "7 skills",
+        "variant": "default"
+      }
+    },
+    "healthy-note": {
+      "type": "Text",
+      "props": {
+        "text": "+1 vs 8-12; btc-levels recovered, removed from ISS-031 affected_skills 20→19",
+        "variant": "muted"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "specgap-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "specgap-heading",
+        "specgap-line1",
+        "specgap-line2",
+        "specgap-line3"
+      ]
+    },
+    "specgap-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "spec-gap",
+        "level": "h3"
+      }
+    },
+    "specgap-line1": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort ~117h stuck (last_success 8-02T19:52Z, last_dispatch 8-09T19:05Z)",
+        "variant": "body"
+      }
+    },
+    "specgap-line2": {
+      "type": "Text",
+      "props": {
+        "text": "Still classifies HEALTHY under strict rules. ISS-032 filing 6th+ owed cycle.",
+        "variant": "body"
+      }
+    },
+    "specgap-line3": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve 18Z candidate: bake `status='dispatched' AND days_since_last_dispatch>=3` branch into step 2",
+        "variant": "muted"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-open",
+        "stat-resolved",
+        "stat-filed",
+        "stat-modified"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed",
+        "value": "0"
+      }
+    },
+    "stat-modified": {
+      "type": "Stat",
+      "props": {
+        "label": "Modified",
+        "value": "1 (ISS-031)"
+      }
+    }
+  }
+}
