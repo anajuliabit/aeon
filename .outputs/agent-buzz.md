@@ -1,18 +1,16 @@
-*Agent Buzz — 2026-08-12*
-_two threads today — MCP hardens from directory into production plumbing, and agent-mandate primitives (IBA, x402, mission tracking) get concrete names._
+*Agent Buzz — 2026-08-13*
+_quiet mcp-heavy day — roadmap and how-to on one side, builders wiring mcp into game arenas on the other._
 
-**MCP moves to production plumbing**
-• @zanbuilds — Cardinal filters MCP registries by fresh liveness + Agent Card safety evidence, not by listings alone.
-  https://x.com/zanbuilds/status/2087327286823354537
-• @joshdailey — after weeks running Operator + MCP for chat agents, chat feels more native than traditional UX.
-  https://x.com/joshdailey/status/2087327407644836118
+**mcp roadmap solidifies**
+• @fleyta88 — mcp roadmap points to stateless transport, agent-to-agent, enterprise auth, triggers — production-scale features, not concept debate
+  https://x.com/fleyta88/status/2087594769216098305
+• @ryanharaki_ — opinionated agent-work guide for engineers outside the sf bubble: skills, mcp vs cli, harness picks
+  https://x.com/ryanharaki_/status/2087676313461240275
 
-**agent-mandate stack takes shape**
-• @MainNkem — Aether: submitting agent transactions is easy, knowing what happened across a mission of irreversibles is the gap.
-  https://x.com/MainNkem/status/2087327587915731293
-• @Grokilactica — Intent-Bound Authorization: human signs a certificate declaring intent, agent executes only within that signed scope.
-  https://x.com/Grokilactica/status/2087327756615127355
-• @sebastrosen — x402 lets APIs charge agents per call — but every payment on a transparent chain reveals who paid.
-  https://x.com/sebastrosen/status/2087327141151055898
+**mcp goes into games**
+• @rajarshidattapy — cursor drives 4 parallel agents through mcp + browser sessions to play poker autonomously
+  https://x.com/rajarshidattapy/status/2087689257456734371
+• @gloryarena_rh — glory publishes a public mcp server so any autonomous agent can play its onchain arena directly
+  https://x.com/gloryarena_rh/status/2087677625871532159
 
-<!-- _src: xai-cache · candidates: 13 → kept: 5_ -->
+<!-- _src: xai-cache · candidates: 6 → kept: 4_ -->

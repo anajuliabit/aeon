@@ -1,0 +1,119 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "quiet mcp-heavy day — roadmap and how-to on one side, builders wiring mcp into game arenas on the other."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_section1",
+        "stack_section1",
+        "separator1",
+        "heading_section2",
+        "stack_section2",
+        "separator2",
+        "text_metadata"
+      ]
+    },
+    "heading_section1": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp roadmap solidifies",
+        "level": "h3"
+      }
+    },
+    "stack_section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story1",
+        "story2"
+      ]
+    },
+    "story1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@fleyta88 — mcp roadmap points to stateless transport, agent-to-agent, enterprise auth, triggers — production-scale features, not concept debate",
+        "href": "https://x.com/fleyta88/status/2087594769216098305",
+        "source": "fleyta88"
+      }
+    },
+    "story2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@ryanharaki_ — opinionated agent-work guide for engineers outside the sf bubble: skills, mcp vs cli, harness picks",
+        "href": "https://x.com/ryanharaki_/status/2087676313461240275",
+        "source": "ryanharaki_"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_section2": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp goes into games",
+        "level": "h3"
+      }
+    },
+    "stack_section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story3",
+        "story4"
+      ]
+    },
+    "story3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@rajarshidattapy — cursor drives 4 parallel agents through mcp + browser sessions to play poker autonomously",
+        "href": "https://x.com/rajarshidattapy/status/2087689257456734371",
+        "source": "rajarshidattapy"
+      }
+    },
+    "story4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@gloryarena_rh — glory publishes a public mcp server so any autonomous agent can play its onchain arena directly",
+        "href": "https://x.com/gloryarena_rh/status/2087677625871532159",
+        "source": "gloryarena_rh"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_metadata": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 6 → kept: 4",
+        "variant": "caption"
+      }
+    }
+  }
+}
