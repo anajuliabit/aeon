@@ -629,8 +629,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-08-14T09:17:19Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-14T13:35:45Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-14T09:19:39Z",
     "total_runs": 413,
     "total_successes": 330,
