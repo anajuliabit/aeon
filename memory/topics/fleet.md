@@ -5,6 +5,61 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-08-14 evening, T-0 to 8-15)
+
+- **fork-cohort ISS-032 STILL UNFILED — 9th+ owed cycle P0 ~135h stuck at 14:37Z heartbeat 8-14** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 87h past 48h escalation. Owed since 8-11 18:40Z across 9 owed cycles now (all 5 evening 18Z self-fires 8-13 completed without filing + morning-brief 8-14 07:03Z + heartbeat 08:05Z + heartbeat 14:37Z). skill-health `classification_gap_flag` persists (`status='dispatched' AND days_since_last_dispatch>=3` branch missing). Self-improve queue-full exit-gate ENGAGED at n=3 (#177+#179+#180 all self-improve-shaped) blocked new baked-fix authoring — fork-cohort skill-health rule-gap did NOT ship 8-13 18Z alongside PR #180 (CFTC HTML-fallback shipped, 2 baked-fix candidates owed carry forward). Operator manual-file is only remaining path.
+- **ISS-031 detect-usepod-402 gate +1d overdue on 8-14** — `scripts/detect-usepod-402.sh` still absent per morning-brief 07:03Z bash file-check + heartbeat 14:37Z re-confirm. 8-13 deadline MISSED.
+- **PR queue at 5 on 8-14** — #180 fresh (reg-monitor CFTC HTML-fallback 8-13 18:41Z ~20h at 14:37Z), #179 (fix(token-alert) ~68h), #177 (fix(claude-md) ISS-028 ~116h), #176 (skill-graph regen ~117h), #174 (Advisor Brier-weight ~6d 14h). Weekly-batch cadence per CLAUDE.md; self-improve exit-gate ENGAGED at n=3 (crossed threshold 8-13 18:41Z via PR #180 landing).
+- **4 🕸 Mon-batch stuck skills hold-through-week 8-14 → 8-17** — search-skill (95h) · unlock-monitor (95h) · skill-security-scan (93h) · deal-flow (93h); ISS-031 usepod-402 aftermath, self-clears 8-17 Mon or operator intraweek manual invoke.
+- **`[[chronic-cohort-alone-degraded]]` composition holds 13-skill at 14:37Z heartbeat** — cost-report 8% / skill-analytics 22% / reg-monitor 22% / vuln-scanner 25% / market-context-refresh 32% / narrative-tracker 33% / weekly-shiplog 37% / search-skill 37% / unlock-monitor 38% / fleet-control 40% (disabled) / security-digest 44% / deal-flow 44% / aixbt-pulse 47%. Regime ~192h+ span from 8-04 14:45Z inception; composition-locked print.
+- **Bash `>` redirect workaround-chain n=42+ durable 22-UTC-day span 7-22 → 8-14** — 8-14 fresh call-sites: github-trending per-repo unrolled 8 separate calls (for-loop `${r}` blocked) + log-append `>>` blocked (Edit workaround) + list-digest seen-file append `>>` blocked (Read+Edit workaround, 161 → 164 line append).
+- **12:00 UTC batch DARK d48 on 8-14** — ISS-027 8-skill cluster frozen since 2026-06-28. Token-alert 12Z-slot fires 8-consec clean 8-07 → 8-14 (memory-window record extends) confirming `[[12Z-slot-dark-immunity-per-skill]]` per-dispatcher-path.
+- **CG clean-day d53 8-14** — memory-window record extends unbroken; 53-consec-day CG infra durability.
+- **Token-alert 8-consec-day clean-fire streak 8-07 → 8-14** — extends memory-window record from 7-consec.
+- **Aeon-fleet clean d15 vs security-digest 8-14** — 0/5,173 fresh malware advisories impact tracked deps despite 25× baseline surge (memory-window record). Deepest defensive-import clean-streak extends via 21h npm-malware flood.
+
+### Rail promotions / deprecations 8-14
+- **`[[chain-output-header-date-drift]]` FORMAL PATTERN promoted n=3 8-14** — 4 chain sub-outputs (token-movers, paper-pick, github-issues, hn-digest) all headered 2026-08-07 despite fresh mtime 08:04:10Z. Crosses n=3 8-13 → 8-14 rail-promotion. Self-improve baked-fix candidate (sub-skill `$today` var shared-stale root-cause).
+- **`[[top-pick-3-consec-accelerating]]` sub-shape n=1 MEMORY-WINDOW-FIRST 8-14** — cathrynlavery/diagram-design 1,616→2,855→4,475 = 3-consec-day accelerating HOLDOVER. Every prior HOLDOVER peer broke by day-3 (semantica -6% day-3 mild-decay, prime-agent -57% day-4, cloudflare/computer -69% day-3).
+- **`[[memory-primitive-product-surface]]` FORMAL PATTERN day-2 validated 8-14** — macro-inc/macro (yesterday's rail-promotion driver) spikes 5.4× day-2; first day-2 validation of an 8-13 formal-pattern promotion.
+- **`[[claude-code-alternative-open-source]]` FORMAL PATTERN extends n=3 → n=4 8-14** — holaboss-ai/holaOS joins Jcode + t3code + stablyai/orca as 4th distinct sub-class within 96h. Workspace-shell axis (100+ tool integrations + shared memory) distinct from prior IDE/mobile/ADE axes.
+- **NEW `[[skill-pack-vertical-fork]]` sub-shape n=1 8-14** — kepano/obsidian-skills = first vertical-target print in `[[skill-pack-primitive-rail]]` (Obsidian vertical); rail was previously all cohort-forks + canonical.
+- **`[[fleet-adjacent-typosquat-cluster]]` FORMAL PATTERN crosses n=3 8-14** — 3 MCP brand-jacks same-UTC-day (@zapier/mcp-integration + xrblocks-mcp + @kolbo/mcp). Rail same-axis crosses via MCP brand-jack focus.
+- **`[[curator-fresh-handle-emergence]]` FORMAL PATTERN crosses n=3 8-14** — 3-consec-day fresh handles: 0xTindorr (8-12) + arndxt_xo (8-13) + chilla_ct/DeFiMinty (8-14).
+- **`[[defi-curator-cross-domain-drift]]` extends n=2 8-14** — 3 signal items span 3 distinct off-lane domains (memecoin-trader-pnl DefiIgnas + LLM continual-learning research DeFiMinty + meta-commentary-on-drift chilla_ct); 1 item is itself meta-comment on drift.
+- **`[[quiet-KEV-baseline]]` extends 2-consec-UTC-day 8-13 → 8-14** (rail-promotion crossing 8-15 if unbroken; prior peak was 4-consec 8-08→8-11 broken by burst).
+- **`[[same-day-cohort-day-2-both-accelerating]]` extends n=2 8-14** — 8-13 slate 3-repo simultaneous acceleration (macro 5.4× + diagram-design 1.57× day-3 + needle 2.4× day-2). 3 of 4 kept picks day-2 accelerating.
+- **NEW `[[npm-malware-mass-registration-flood]]` n=1 8-14** — @zalastax/nolb-* single-namespace 4,363 pkgs in 21h = pollution-tier vs supply-chain-tier signal; distinct from `[[alphabet-namespace-cluster]]` (multi-namespace) because same namespace and same actor.
+- **NEW `[[crypto-lib-brand-jack-cluster]]` n=1 8-14** — 7-pkg crypto-brand focus (@ethers-js/contracts + @solana-js/web3 + @zzzgenesis00/{etherjs,solana-*} + bs58-{15,33,77}) distinct from AI/dev-tooling cluster.
+- **NEW `[[explicit-rce-labeled-npm]]` n=1 8-14** — redux-{init,saga-channel-end,saga-task-cancel}-rce = attackers self-labeling payload with `-rce` suffix. Novel taxonomy shape.
+- **NEW `[[baileys-brand-jack-double]]` n=1 8-14** — @hanssoft/baileys + @vyzensockets/baileys same-UTC-day 2 distinct actors squatting WhatsApp bot lib.
+- **`[[malware-only-security-surface]]` extends 5-consec-UTC-day 8-14** — most extreme composition of streak: zero-fresh-critical + 5,173-malware print.
+- **NEW `[[pumpfun-kol-pnl-transparency]]` n=1 8-14** — DefiIgnas 130-like standalone-signal for on-chain trader-record transparency; entry-mcap band deterministic.
+- **NEW `[[reflect-thin-list-digest-window]]` observation n=1 8-14** — Grok returned 5 qualifying tweets (vs 10 on 8-12/13); 8-15 disambiguates one-off vs pattern.
+- **`[[MAMO-3-consec-above-baseline-vol]]` extends 5-consec 8-14** — memory-window-first 5-consec above-baseline stretch; digestion band d24 amplitude compressed at +0.22% (tightest 2-consec near-zero).
+- **NEW `[[gitlawb-flip-acceleration-after-N-phase-fade]]` n=1 8-14** — 10-phase fade → flip 8-13 (+3.63%) → acceleration 8-14 (+6.72%). Post-multi-phase-fade acceleration is fresh sub-shape.
+- **NEW `[[gitlawb-light-vol-upside-acceleration]]` n=1 8-14** — +6.72% on 1.06× baseline vol = move without meaningful vol expansion; candidate low-liquidity single-buyer print vs conviction move.
+- **`[[REPPO-healthy-flush-confirmed]]` 2-consec sustain 8-14** — bounce (+5.87% → +4.87%) with vol cool-down (2.32× → 1.26×) = classic post-flush cool-down.
+- **`[[vol-vacuum-partial-rebuild-on-flatter-price]]` 8-13 candidate DEPRECATES 8-14** — WELL vol full-rebuild (0.24× → 0.95×) with price MORE decay (−0.27% → −3.05%), not flatter. Inversion resolves to conventional "vol arrives with the move".
+- **`[[list-digest-skew-left-window]]` 8-13 candidate DEPRECATES 8-14** — today's snowflakes all resolve 8-14 UTC (not skewed prior-day).
+- **PATCH THIS WEEK security-digest 8-14:** Trigger.dev `@trigger.dev/core` npm CVSS 8.5 patch v4.5.6 (prototype-pollution DoS) + nltk pip CVSS 7.5 patch 3.10.0 (percent-encoded path traversal). Aeon-fleet grep: 0 hits.
+- **Sub-25 github-trending 16-consec permanent shape 8-14** — n=17 today mid-band.
+- **`[[fleet-relevance agent-thesis]]` rail 30-consec-UTC-day 8-13** — 4-consec-week durability crosses 8-15 if unbroken (8-14 github-trending 4-pick fleet-adjacent slate holds: macro devtool + diagram-design LLM-viz + holaOS workspace-shell + obsidian-skills skill-pack).
+
+## Positive events 8-13 evening → 8-14 evening
+
+- **PR #180 shipped 8-13 18:41Z** — reg-monitor CFTC HTML-fallback (first of 3 self-improve baked-fix candidates landed); operator merge would drop queue below n=3 and disengage exit-gate.
+- **`[[top-pick-3-consec-accelerating]]` memory-window-first 8-14** — diagram-design 3-consec accelerating shape; every prior HOLDOVER broke by day-3.
+- **`[[memory-primitive-product-surface]]` FORMAL PATTERN day-2 validation via macro spike** — first day-2 validation of any 8-13 formal-pattern promotion.
+- **`[[claude-code-alternative-open-source]]` extends 4 sub-classes in 96h** — holaOS workspace-shell axis.
+- **CG clean-day d52 → d53 8-14** — memory-window record extends unbroken.
+- **Token-alert 7-consec → 8-consec 8-14** — memory-window record extends.
+- **Aeon-fleet clean d14 → d15 8-14** — 0/5,173 malware surge impact tracked deps.
+- **`[[fleet-adjacent-typosquat-cluster]]` rail crosses n=3 formal-pattern 8-14** — MCP brand-jack focus.
+- **`[[curator-fresh-handle-emergence]]` rail crosses n=3 formal-pattern 8-14** — 3-consec-day fresh handles.
+- **`[[chain-output-header-date-drift]]` rail crosses n=3 formal-pattern 8-14** — self-improve baked-fix candidate.
+- **NEW `[[skill-pack-vertical-fork]]` n=1 sub-shape 8-14** — obsidian-skills vertical-target print.
+
 ## Current health snapshot (2026-08-13 evening, T-0 to 8-14)
 
 - **fork-cohort ISS-032 STILL UNFILED — 6th+ owed cycle P0 ~117h stuck at 15:42Z 8-13** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 69h past 48h escalation. Filing owed since 8-11 18:40Z across 6 owed cycles (morning-brief 8-13 07:03Z + heartbeat 08:58Z + heartbeat 15:42Z + goal-tracker 8-12 18:11Z + action-converter 8-12 18:10Z + reflect 8-12 18Z). skill-health `classification_gap_flag` in last-report.json corroborates: `status='dispatched' AND days_since_last_dispatch>=3` branch missing from skill-health classification. Pattern-signature not accident at 6th cadence. Owed by tonight's 18Z action-converter + reflect self-fire.

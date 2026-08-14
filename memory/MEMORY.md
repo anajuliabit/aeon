@@ -1,74 +1,77 @@
 # Long-term Memory
-*Last consolidated: 2026-08-13*
+*Last consolidated: 2026-08-14*
 
 ## Current Goals
-- **fork-cohort ISS-032 STILL UNFILED — 6th+ owed cycle P0 ~117h stuck at 15:42Z** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 69h past 48h escalation. Filing owed since 8-11 18:40Z across 6 owed cycles (morning-brief 8-13 07:03Z + heartbeat 08:58Z + heartbeat 15:42Z + goal-tracker 8-12 18:11Z + action-converter 8-12 18:10Z + reflect 8-12 18Z). skill-health `classification_gap_flag` corroborates: `status='dispatched' AND days_since_last_dispatch>=3` branch missing. Pattern-signature not accident at 6th cadence. Owed by tonight's 18Z fires.
-- **ISS-031 detect-usepod-402 gate 8-13 deadline TODAY — unshipped as of 17:44Z** — `scripts/detect-usepod-402.sh` operator-page gate for 2nd 7d-recurrence of ISS-029/031 signature. Morning-brief #2 focus. Self-improve 18Z is natural author path (also carries CFTC HTML-fallback + fork-cohort skill-health rule-gap + GH-API `published=` syntax candidates).
-- **`[[chronic-cohort-alone-degraded]]` regime holds ~175h+ span** — 12-skill composition per heartbeat 15:42Z: cost-report 8% / skill-analytics 22% / reg-monitor 22% / vuln-scanner 25% / market-context-refresh 32% / narrative-tracker 33% / weekly-shiplog 37% / search-skill 37% / unlock-monitor 38% / security-digest 44% / deal-flow 44% / aixbt-pulse 47%. Deepest composition-locked print in memory-window.
-- **4 Mon-batch 🕸 stuck skills hold-through-week 8-13 → 8-17** — search-skill (72h) · unlock-monitor (72h) · skill-security-scan (70h) · deal-flow (70h); ISS-031 usepod-402 aftermath, self-clears 8-17 Mon or operator intraweek invoke.
-- **12:00 UTC batch DARK d47 on 8-13** — ISS-027 8-skill cluster frozen since 2026-06-28; token-alert 12Z slot fires 7-consec clean 8-07 → 8-13 (memory-window record extends) confirming `[[12Z-slot-dark-immunity-per-skill]]` per-dispatcher-path independence.
-- **PR queue at 4 on 8-13** — #179 (fix(token-alert) volume-spike ~45h), #177 (fix(claude-md) ISS-028 ~93h), #176 (skill-graph regen 32→74 ~94h), #174 (Advisor Brier-weight ~4d 14h). Weekly-batch cadence per CLAUDE.md; queue-full self-improve exit-gate DISENGAGED (#177+#179 self-improve-shaped n=2 < 3).
-- **Operator on-chain config day-68 on 8-13** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
-- **priorities.md 70d stale + vault inbox 52d cold + 7-consec zero-capture-day (8-07→8-13)** — weekly-review 8-10 T-0 refresh-ask still unactioned d3.
+- **fork-cohort ISS-032 STILL UNFILED — 9th+ owed cycle P0 ~135h stuck at heartbeat 14:37Z** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 87h past 48h escalation. Filing owed since 8-11 18:40Z across 9 owed cycles now (all 5 evening 18Z self-fires 8-13 completed without filing + morning-brief 8-14 07:03Z + heartbeat 08:05Z + heartbeat 14:37Z). skill-health `classification_gap_flag` corroborates rule-gap; PR #180 shipped CFTC HTML-fallback 8-13 18:41Z but fork-cohort skill-health rule-gap candidate NOT authored (self-improve queue-full exit-gate ENGAGED at n=3). Operator manual-file is the only path left.
+- **ISS-031 detect-usepod-402 gate +1d overdue on 8-14** — `scripts/detect-usepod-402.sh` still absent per morning-brief 07:03Z bash file-check. 8-13 deadline MISSED; carries forward.
+- **Self-improve PR queue exit-gate ENGAGED n=3** — #177 + #179 + #180 all self-improve-shaped. Blocks new authoring until operator clears queue per SKILL step 1 primitive.
+- **PR queue at 5 on 8-14** — #180 (reg-monitor CFTC HTML-fallback ~20h fresh), #179 (fix(token-alert) ~68h), #177 (fix(claude-md) ISS-028 ~116h), #176 (skill-graph regen ~117h), #174 (Advisor Brier-weight ~6d 14h). Weekly-batch cadence per CLAUDE.md.
+- **`[[chronic-cohort-alone-degraded]]` regime ~192h+ span holds** — 13-skill composition at 14:37Z: cost-report 8% / skill-analytics 22% / reg-monitor 22% / vuln-scanner 25% / market-context-refresh 32% / narrative-tracker 33% / weekly-shiplog 37% / search-skill 37% / unlock-monitor 38% / fleet-control 40% (disabled) / security-digest 44% / deal-flow 44% / aixbt-pulse 47%.
+- **4 Mon-batch 🕸 stuck skills hold-through-week 8-14 → 8-17** — search-skill (95h) · unlock-monitor (95h) · skill-security-scan (93h) · deal-flow (93h); ISS-031 aftermath, self-clears 8-17 Mon.
+- **12:00 UTC batch DARK d48 on 8-14** — ISS-027 8-skill cluster frozen since 2026-06-28.
+- **Operator on-chain config day-69 on 8-14** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY.
+- **priorities.md 70d stale + vault inbox 53d cold + 8-consec zero-capture-day (8-07→8-14)** — weekly-review 8-10 T-0 refresh-ask now d4 unactioned.
 
-## Recently Cleared (8-12 → 8-13)
-- **`[[memory-primitive-product-surface]]` FORMAL PATTERN promoted n=3 8-13** — DeepTutor 8-12 (tutoring) + StatewaveAI 8-13 (agent-runtime) + macro-inc/macro 8-13 (team-collab) within 48h; 3 distinct sub-axes.
-- **`[[alphabet-namespace-cluster]]` FORMAL PATTERN promoted 8-13** — 8-12 candidate 22-variant single-handle → 8-13 53-variant 4-handle @years17/18/19/20 scale-up. Compound `[[multi-handle-namespace-fill]]` extends to 9-handle same-UTC-day via 15:42Z delta.
-- **`[[soft-sustain-2-consec-top-pick]]` RESOLVES POSITIVE 3-consec via semantica 8-13** — memory-window-first 3-consec soft-decay top-pick sustain; prior candidates all broke by day-3.
-- **`[[vol-vacuum-price-flat]]` 8-12 candidate DEPRECATES via WELL partial-rebuild 8-13** — vol 0.06× → 0.24× (4× rebuild sub-0.5× threshold) + drift-toward-flat intensifies (−0.87% → −0.27%).
-- **`[[vol-compression-on-price-decay]]` n=2 DEPRECATES via GITLAWB inversion 8-13** — 10-phase fade arc TERMINATES via +3.63% flip; vol crosses back above baseline.
-- **`[[xai-mode-top-not-enforced]]` regression CLEARS at n=2 (was 8-11 + 8-12) via agent-buzz populated follower_count metadata 8-13**.
-- **CG clean-day d51 → d52 8-13** — 52-consec-day CG infra durability extends.
-- **Token-alert 6-consec → 7-consec clean-fire streak 8-13** — memory-window record extends.
-- **`[[fleet-relevance agent-thesis]]` rail 29 → 30-consec-UTC-day 8-13** — github-trending 4-pick fleet-adjacent slate. **Crosses 4-consec-week durability 8-15 if unbroken.**
-- **Aeon-fleet clean d13 → d14 vs security-digest 8-13** — 0/89 fresh malware advisories impact tracked deps despite 2 same-UTC-day security fires.
+## Recently Cleared (8-13 → 8-14)
+- **PR #180 shipped 8-13 18:41Z** — reg-monitor CFTC HTML-fallback (first of 3 self-improve baked-fix candidates); fork-cohort skill-health rule-gap + GH-API `published=` syntax candidates NOT authored due to subsequent queue-full block.
+- **`[[chain-output-header-date-drift]]` FORMAL PATTERN promoted 8-14 via daily-routine 08:07Z** — 4 chain sub-outputs stamped 2026-08-07 despite fresh mtime; n=2 → n=3 rail-promotion crosses. Self-improve baked-fix candidate.
+- **`[[top-pick-3-consec-accelerating]]` sub-shape n=1 MEMORY-WINDOW-FIRST 8-14** — diagram-design 1,616 → 2,855 → 4,475 = 3-consec-day accelerating HOLDOVER; every prior HOLDOVER broke by day-3 (semantica -6% day-3, prime-agent -57% day-4, cloudflare/computer -69% day-3).
+- **`[[memory-primitive-product-surface]]` FORMAL PATTERN day-2 VALIDATED 8-14** — macro-inc/macro spikes 5.4× day-2 (yesterday's rail-promotion driver); first day-2 validation of a formal-pattern promotion.
+- **`[[claude-code-alternative-open-source]]` FORMAL PATTERN extends n=3 → n=4 8-14** — holaboss-ai/holaOS joins Jcode + t3code + stablyai/orca as 4th distinct sub-class within 96h; workspace-shell axis distinct.
+- **`[[fleet-adjacent-typosquat-cluster]]` rail-promotion crosses n=3 8-14** — 3 MCP brand-jacks same-UTC-day (@zapier/mcp-integration + xrblocks-mcp + @kolbo/mcp).
+- **`[[curator-fresh-handle-emergence]]` rail-promotion crosses n=3 8-14** — chilla_ct + DeFiMinty fresh handles; 3-consec-day (0xTindorr + arndxt_xo + chilla_ct/DeFiMinty).
+- **`[[MAMO-3-consec-above-baseline-vol]]` extends to 5-consec 8-14** — memory-window-first 5-consec above-baseline stretch; digestion band d24 amplitude tightest 2-consec near-zero at +0.22%.
+- **`[[vol-vacuum-partial-rebuild-on-flatter-price]]` 8-13 candidate DEPRECATES via WELL inversion 8-14** — vol full-rebuild (0.24× → 0.95×) with price MORE decay (−0.27% → −3.05%), not flatter.
+- **Token-alert 7 → 8-consec clean-fire streak 8-14** — memory-window record extends (8-07 → 8-14).
+- **CG clean-day d52 → d53 8-14** — memory-window record extends unbroken.
+- **Aeon-fleet clean d14 → d15 vs security-digest 8-14** — 0/5,173 fresh advisories impact tracked deps despite npm-malware 25× surge.
 
 ## Fleet Health
-See [[fleet]] for full snapshot. **fork-cohort ISS-032 6th+ owed cycle eclipses everything** in blast-radius terms; filing overdue by tonight's 18Z self-fires. **ISS-031 detect-usepod-402 gate deadline TODAY unshipped**. **memory-primitive-product-surface FORMAL PATTERN promotion** biggest analytical delta. **PR queue at 4** (weekly-batch cadence). **Bash `>` redirect workaround-chain n=41+ durable 21-UTC-day span 7-22 → 8-13** (8-13 fresh call-sites: github-trending for-loop `${r}` + list-digest `>>` seen-file append + security-digest `published=` GH-API URL-encoded `%3E` prefix new sibling variant).
+See [[fleet]] for full snapshot. **fork-cohort ISS-032 9th+ owed cycle eclipses everything** in blast-radius terms; operator manual-file only remaining path. **PR queue at 5, self-improve exit-gate ENGAGED n=3**. **`[[top-pick-3-consec-accelerating]]` memory-window-first via diagram-design + `[[chain-output-header-date-drift]]` FORMAL PATTERN promotion + `[[curator-fresh-handle-emergence]]` rail-promotion n=3** biggest analytical deltas. **Bash `>` redirect workaround-chain n=42+ durable 22-UTC-day span 7-22 → 8-14** (8-14 fresh call-sites: github-trending per-repo unrolled + log-append `>>` + list-digest seen-file append).
 
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, health snapshot, blockers, weekly-batch cadence, positive events log.
 - [Crypto research](topics/crypto.md) — Narratives, picks, durable patterns.
-- [Market context](topics/market-context.md) — Baseline snapshot (STALE ~28d/676h+ on 8-13, crossed 2× threshold 8-01; refresh chained on next batch-dark thaw or manual invoke).
+- [Market context](topics/market-context.md) — Baseline snapshot (STALE ~29d/700h+ on 8-14, crossed 2× threshold 8-01; refresh chained on next batch-dark thaw or manual invoke).
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec; SLX -70% terminal (operator-owned).
 
 ## Tracked Tokens
-Canonical watchlist per `skills/token-alert/SKILL.md`. Last fire 8-14 12:05Z 12Z-slot scheduled: **0/4 alerts** (8-consec-day clean-fire streak post-8-07 = memory-window record extends). CG clean-day d53 unbroken. WELL vol FULL-REBUILDS to baseline (0.24× → 0.95×) as price decay resurges (−0.27% → −3.05%); `[[vol-vacuum-partial-rebuild-on-flatter-price]]` DEPRECATES via inversion (price NOT flatter but MORE decay). GITLAWB post-flip ACCELERATES (+3.63% → +6.72%) on flat vol (1.06×) — new `[[gitlawb-flip-acceleration-after-N-phase-fade]]` + `[[gitlawb-light-vol-upside-acceleration]]` n=1 candidates. MAMO `[[MAMO-3-consec-above-baseline-vol]]` extends to 5-consec (memory-window record); digestion band d24 amplitude at +0.22% (0.03pp delta = tightest 2-consec near-zero). REPPO `[[REPPO-healthy-flush-confirmed]]` 2-consec positive extension (+4.87%) with vol cool-down (2.32× → 1.26×).
+Canonical watchlist per `skills/token-alert/SKILL.md`. Last fire 8-14 12:05Z: **0/4 alerts** (8-consec-day clean-fire streak = memory-window record extends). WELL vol FULL-REBUILDS to baseline (0.24× → 0.95×) as price decay resurges (−0.27% → −3.05%) = `[[vol-vacuum-partial-rebuild-on-flatter-price]]` DEPRECATES via inversion. GITLAWB post-flip ACCELERATES (+3.63% → +6.72%) on flat vol (1.06×) — new `[[gitlawb-flip-acceleration-after-N-phase-fade]]` + `[[gitlawb-light-vol-upside-acceleration]]` n=1 candidates. MAMO `[[MAMO-3-consec-above-baseline-vol]]` extends to 5-consec (memory-window record). REPPO `[[REPPO-healthy-flush-confirmed]]` 2-consec positive extension (+4.87%) with vol cool-down (2.32× → 1.26×).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | 8-14 −3.05% (12:05Z), vol $675K = 0.95× baseline — vol FULL-REBUILDS 4× off 8-13 low back to baseline; price decay RESURGES (deepest single-day in memory-window recent stretch); cliff-candidate 5-consec-day FAIL; `[[vol-vacuum-partial-rebuild-on-flatter-price]]` DEPRECATES via inversion |
-| MAMO    | mamo               | 15%           | 8-14 +0.22% (12:05Z), vol $748K = 1.03× baseline — 5-consec above-baseline (memory-window record extends from 4-consec); 2nd-consec positive; digestion band d24 amplitude compressed at +0.22% (tightest 2-consec near-zero) |
-| REPPO   | reppo              | 15%           | 8-14 +4.87% (12:05Z), vol $279K = 1.26× baseline — 2nd-consec positive post-flush; bounce sustains while vol participation COOLS (2.32× → 1.26×) = classic post-flush cool-down |
-| GITLAWB | gitlawb            | 15%           | 8-14 +6.72% (12:05Z), vol $181K = 1.06× baseline — 2nd-consec positive ACCELERATES post-10-phase-fade (+3.63% → +6.72%); vol flat = light-vol upside acceleration candidate; `[[gitlawb-flip-acceleration-after-N-phase-fade]]` + `[[gitlawb-light-vol-upside-acceleration]]` n=1 |
+| WELL    | moonwell-artemis   | 10%           | 8-14 −3.05% (12:05Z), vol $675K = 0.95× baseline — full-rebuild 4× off 8-13 low, price decay RESURGES (deepest in memory-window recent stretch); `[[vol-vacuum-partial-rebuild-on-flatter-price]]` DEPRECATES via inversion |
+| MAMO    | mamo               | 15%           | 8-14 +0.22% (12:05Z), vol $748K = 1.03× baseline — 5-consec above-baseline (memory-window record); digestion band d24 tightest 2-consec near-zero |
+| REPPO   | reppo              | 15%           | 8-14 +4.87% (12:05Z), vol $279K = 1.26× baseline — 2nd-consec positive post-flush; vol COOLS (2.32× → 1.26×) = classic post-flush cool-down |
+| GITLAWB | gitlawb            | 15%           | 8-14 +6.72% (12:05Z), vol $181K = 1.06× baseline — 2nd-consec positive ACCELERATES post-10-phase-fade; vol flat = light-vol upside acceleration candidate |
 
 ## Recurring patterns (durable — brief pointers; details in topic files)
-- **`[[fleet-relevance agent-thesis]]` rail 30-consec-UTC-day 8-13** — 4-consec-week durability crossing 8-15 if unbroken.
-- **`[[memory-primitive-product-surface]]` FORMAL PATTERN n=3 8-13** — DeepTutor + StatewaveAI + macro-inc/macro within 48h; 3 distinct sub-axes (tutoring-product / agent-runtime / team-collab-substrate).
-- **`[[claude-code-alternative-open-source]]` FORMAL PATTERN n=3 (8-12 holds through day-2 sustain 8-13)** — Jcode + t3code + stablyai/orca (orca +41% day-2 accelerates via github-trending 8-13).
-- **`[[alphabet-namespace-cluster]]` FORMAL PATTERN 8-13** — 4-handle @years17/18/19/20 53-variant scale-up. Compound `[[multi-handle-namespace-fill]]` n=1 9-handle same-UTC-day via 15:42Z delta; rail-promotion deciding-test 8-14.
-- **`[[fleet-adjacent-typosquat-cluster]]` NEW n=1 → 7-hit intraday 8-13** — cc-skills-helper / mcp-util-helpers / nolimit-agent / passkeys-react / ai-analyzer / ac_semantic-ui_ts / ac_calendar_ts. Dev-tooling-brand focus (distinct from defi-brand cluster).
-- **NEW `[[llm-router-vendor-tier]]` n=1 8-13** — NVIDIA-NeMo/Switchyard first vendor-tier LLM router (distinct from community LiteLLM + SaaS OpenRouter).
-- **NEW `[[commodity-sensor-inference-primitive]]` n=1 8-13** — cactus-compute/needle 14MB weights = commodity-sensor RAM budget tier; extends `[[edge-inference-primitive]]` from daily-routine kimi-k3-in-c to 2-sub-classes-within-24h.
-- **NEW `[[top-pick-day-2-accelerating]]` n=1 8-13** — diagram-design +77% day-2 = memory-window-first day-2-ACCELERATING top-pick shape.
-- **NEW `[[same-day-cohort-day-2-both-accelerating]]` observation n=1 8-13** — diagram-design (top) + stablyai/orca (2nd) 8-12 both extend day-2 accelerating.
-- **`[[agent-graphs-replacing-prompting]]` n=2 → 3-messenger-candidate 8-13** — Andrew Ng 8-10 + ajay4ai 8-11 + AnatoliKopadze 8-12. Distinct-authority verification 8-18 deadline.
-- **`[[mcp-plumbing-transition]]` extends 2-consec-UTC-day 8-13** — rail-promotion deciding-test 8-14 on 3rd distinct MCP-plumbing tweet.
-- **NEW `[[mcp-as-game-server-interface]]` n=1 8-13** — Cursor+poker + Glory arena same-UTC-day; product-surface axis distinct from protocol-adoption.
-- **NEW `[[chain-output-header-date-drift]]` n=2 candidate 8-13** — 6-day-old header 2026-08-07 stamp on all 4 chain sub-skill outputs; rail-promotion at n=3.
-- **NEW `[[list-digest-skew-left-window]]` n=2 candidate 8-13** — all top-4 tweets dated prior UTC-day; rail-promotion 8-14.
-- **`[[curator-fresh-handle-emergence]]` n=2 8-13** — arndxt_xo joins 0xTindorr; rail-promotion 8-14 pending distinct 3rd handle.
-- **NEW `[[defi-curator-cross-domain-drift]]` n=1 8-13** — list-digest 4 items span 4 distinct domains (<25% pure-DeFi).
-- **NEW `[[polymarket-intern-cycle-top-meme]]` n=1 8-13** — DefiIgnas "lol" QT. Corroborates `[[reg-monitor prediction-market lane escalating]]`.
-- **NEW `[[uniswap-v4-hook-exit-tax]]` n=1 8-13** — $OLY arndxt game-theory; novel mechanism-design.
-- **NEW `[[full-bandwidth-transformer]]` n=1 8-13** — Microsoft AI latent-feedback paper; data-wall workaround adjacent to `[[memory-primitive-paper streak]]`.
-- **NEW `[[gh-api-date-range-syntax-workaround]]` n=1 8-13** — URL-encoded `%3E` prefix required for `published=`; ISS-028 sibling.
-- **NEW `[[vol-vacuum-partial-rebuild-on-flatter-price]]` observation n=1 8-13** — WELL vol +4× while price MORE flat.
-- **NEW `[[REPPO-healthy-flush-confirmed]]` n=1 8-13** — 3-day arc: fade → fade-eases+vol-expand → bounce+vol-expand.
-- **Sub-25 github-trending 15-consec permanent shape 8-13** — n=17 today mid-band.
-- **`[[12Z-slot-dark-immunity-per-skill]]` 7-consec 8-07→8-13** — token-alert clean while ISS-027 batch dark d47.
-- **Bash `>` redirect workaround-chain n=41+ durable 21-UTC-day span 7-22 → 8-13** — 8-13 fresh call-sites: for-loop `${r}` + `>>` seen-file append + GH-API `published=` URL-encoded prefix.
-- **reg-monitor CFTC RSS 404 durability d7+ confirmed 8-12** — 2-consec-observation → self-improve candidate 18Z tonight to bake HTML-fallback.
+- **`[[fleet-relevance agent-thesis]]` rail 30-consec-UTC-day 8-13** — 4-consec-week durability crossing 8-15 if unbroken (8-14 github-trending 4-pick fleet-adjacent slate holds: macro devtool + diagram-design LLM-viz + holaOS workspace-shell + obsidian-skills skill-pack).
+- **`[[chain-output-header-date-drift]]` FORMAL PATTERN 8-14** — 3-consec-day 6-day-stale header on 4 chain sub-skill outputs same-run; self-improve baked-fix candidate for sub-skill `$today` var refresh.
+- **`[[memory-primitive-product-surface]]` FORMAL PATTERN n=3 + day-2 validated 8-14** — DeepTutor 8-12 + StatewaveAI 8-13 + macro-inc/macro 8-13 (5.4× day-2 spike 8-14).
+- **`[[claude-code-alternative-open-source]]` FORMAL PATTERN n=4 8-14** — Jcode + t3code + stablyai/orca + holaboss-ai/holaOS within 96h.
+- **`[[alphabet-namespace-cluster]]` FORMAL PATTERN 8-13** — 4-handle @years17/18/19/20 53-variant scale-up. Compound `[[multi-handle-namespace-fill]]` extends to 9-handle same-UTC-day.
+- **`[[fleet-adjacent-typosquat-cluster]]` FORMAL PATTERN n=3 8-14** — 3 MCP brand-jacks same-UTC-day (rail crossed n=3 same axis).
+- **`[[curator-fresh-handle-emergence]]` FORMAL PATTERN n=3 8-14** — chilla_ct + DeFiMinty 3-consec-day fresh handles (0xTindorr + arndxt_xo + chilla_ct/DeFiMinty).
+- **`[[top-pick-3-consec-accelerating]]` sub-shape n=1 memory-window-first 8-14** — diagram-design 1,616→2,855→4,475 3-consec accelerating HOLDOVER; every prior HOLDOVER broke by day-3.
+- **`[[same-day-cohort-day-2-both-accelerating]]` extends n=2 8-14** — 8-13 slate 3-repo simultaneous acceleration (macro 5.4× + diagram-design 1.57× day-3 + needle 2.4× day-2).
+- **NEW `[[skill-pack-vertical-fork]]` sub-shape n=1 8-14** — kepano/obsidian-skills first vertical-target in `[[skill-pack-primitive-rail]]`.
+- **`[[defi-curator-cross-domain-drift]]` extends n=2 8-14** — 3 signal items span 3 distinct off-lane domains; 1 item is meta-comment on drift (chilla_ct "onchain ≠ defi"). Rail-promotion 8-15.
+- **`[[quiet-KEV-baseline]]` extends 2-consec-UTC-day 8-13→8-14** — rail-promotion crossing 8-15 if unbroken.
+- **`[[malware-only-security-surface]]` extends 5-consec-UTC-day 8-14** — most extreme composition: zero-fresh-critical + 5,173-malware print.
+- **NEW `[[npm-malware-mass-registration-flood]]` n=1 8-14** — @zalastax/nolb-* single-namespace 4,363 pkgs in 21h; pollution-tier vs supply-chain-tier signal.
+- **NEW `[[crypto-lib-brand-jack-cluster]]` n=1 8-14** — 7-pkg crypto-brand focus (@ethers-js + @solana-js + bs58-{15,33,77}).
+- **NEW `[[explicit-rce-labeled-npm]]` n=1 8-14** — redux-{init,saga-channel-end,saga-task-cancel}-rce (attackers self-label payload).
+- **NEW `[[baileys-brand-jack-double]]` n=1 8-14** — 2 distinct actors squat WhatsApp bot lib.
+- **NEW `[[pumpfun-kol-pnl-transparency]]` n=1 8-14** — DefiIgnas standalone-signal for on-chain trader-record transparency.
+- **NEW `[[gitlawb-flip-acceleration-after-N-phase-fade]]` n=1 8-14** — post-10-phase-fade acceleration +3.63% → +6.72%.
+- **NEW `[[gitlawb-light-vol-upside-acceleration]]` n=1 8-14** — +6.72% on 1.06× baseline vol = single-buyer/low-liquidity print candidate.
+- **NEW `[[reflect-thin-list-digest-window]]` observation n=1 8-14** — Grok returned 5 qualifying tweets (vs 10 on 8-12/13); 8-15 disambiguates.
+- **`[[REPPO-healthy-flush-confirmed]]` 2-consec sustain 8-14** — bounce (+5.87% → +4.87%) with vol cool-down (2.32× → 1.26×).
+- **`[[full-bandwidth-transformer]]` sibling extends via @ethantsliu sparse-memory FT paper 8-14** — 2nd LLM continual-learning research on DeFi list in 48h.
+- **`[[list-digest-skew-left-window]]` 8-13 candidate DEPRECATES 8-14** — today's snowflakes all resolve 8-14 UTC.
+- **`[[12Z-slot-dark-immunity-per-skill]]` 8-consec 8-07→8-14** — token-alert clean while ISS-027 12Z-batch dark d48.
+- **Sub-25 github-trending 16-consec permanent shape 8-14** — n=17 today mid-band.
+- **Bash `>` redirect workaround-chain n=42+ durable 22-UTC-day span 7-22 → 8-14** — 8-14 fresh call-sites: github-trending per-repo unrolled + log-append `>>` + list-digest seen-file append.
 - **Claude Opus 5 shipped 7-24. Claude Code computer-use gain 7-31. Claude Code subagent-cap-drop + self-hosted envs + cross-session messaging 8-06. Claude watermarking global 8-12 (EU AI Act enforcement surface).**
-- **FTX $900M distribution 2026-07-31 = 5th round creditor payout. Hashdex $DEFI ETF closure at $14M 8-07 = first spot-BTC-ETF failure of cycle. MetaMask Agent Wallet ships 8-07 = first mainstream self-custodial wallet-for-agents mandate-primitive.**
-- **EU AI Act enforcement live 2026-08-02** — disclosure + watermarks + deepfake labeling enforced; Claude watermarking global 8-12 = first fleet-visible enforcement print.
+- **FTX $900M distribution 2026-07-31 = 5th round creditor payout. Hashdex $DEFI ETF closure at $14M 8-07. MetaMask Agent Wallet ships 8-07. EU AI Act enforcement live 2026-08-02.**
