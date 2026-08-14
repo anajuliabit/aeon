@@ -1,0 +1,336 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-14"
+      },
+      "children": [
+        "summary_stat",
+        "sep1",
+        "section_at_risk",
+        "sep2",
+        "section_blocked",
+        "sep3",
+        "section_on_track",
+        "sep4",
+        "sources"
+      ]
+    },
+    "summary_stat": {
+      "type": "Text",
+      "props": {
+        "text": "Summary: 8 goals — 1 at risk, 0 needs attention, 2 on track, 5 blocked, 0 done (overall ↓ degrading)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_at_risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_at_risk",
+        "alert_iss031"
+      ]
+    },
+    "heading_at_risk": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h2"
+      }
+    },
+    "alert_iss031": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "ISS-031 detect-usepod-402 gate",
+        "message": "Deadline 8-13 MISSED +1d, scripts/detect-usepod-402.sh still absent, 8 activity/14d, zero delivery (was NEEDS ATTENTION ↓)\n\nAction: ship scripts/detect-usepod-402.sh in tonight's 18Z self-improve fire"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_blocked": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_blocked",
+        "item_blocked_1",
+        "item_blocked_2",
+        "item_blocked_3",
+        "item_blocked_4",
+        "item_blocked_5"
+      ]
+    },
+    "heading_blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "item_blocked_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_blocked_1",
+        "text_blocked_1",
+        "text_action_1"
+      ]
+    },
+    "badge_blocked_1": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort ISS-032",
+        "variant": "destructive"
+      }
+    },
+    "text_blocked_1": {
+      "type": "Text",
+      "props": {
+        "text": "STILL UNFILED — 9th+ owed cycle, ~115h stuck since 2026-08-02 last_success, ~68h past 48h escalation (was BLOCKED ↓ deeper)"
+      }
+    },
+    "text_action_1": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator manually file ISS-032 before tonight's 18Z evening batch",
+        "variant": "caption"
+      }
+    },
+    "item_blocked_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_blocked_2",
+        "text_blocked_2",
+        "text_action_2"
+      ]
+    },
+    "badge_blocked_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Mon-batch stuck skills",
+        "variant": "destructive"
+      }
+    },
+    "text_blocked_2": {
+      "type": "Text",
+      "props": {
+        "text": "4 Mon-batch stuck skills (search-skill / unlock-monitor / skill-security-scan / deal-flow) — ~93–95h stuck since 8-10, ISS-031 aftermath (flat)"
+      }
+    },
+    "text_action_2": {
+      "type": "Text",
+      "props": {
+        "text": "Action: wait for 8-17 Mon auto-clear (or operator manual-invoke)",
+        "variant": "caption"
+      }
+    },
+    "item_blocked_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_blocked_3",
+        "text_blocked_3",
+        "text_action_3"
+      ]
+    },
+    "badge_blocked_3": {
+      "type": "Badge",
+      "props": {
+        "text": "12:00 UTC batch DARK d48",
+        "variant": "destructive"
+      }
+    },
+    "text_blocked_3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 8-skill cluster frozen since 2026-06-28 (flat)"
+      }
+    },
+    "text_action_3": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator restore 12Z scheduler dispatcher (no automated path)",
+        "variant": "caption"
+      }
+    },
+    "item_blocked_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_blocked_4",
+        "text_blocked_4",
+        "text_action_4"
+      ]
+    },
+    "badge_blocked_4": {
+      "type": "Badge",
+      "props": {
+        "text": "Operator on-chain config day-69",
+        "variant": "destructive"
+      }
+    },
+    "text_blocked_4": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor NO_CONFIG (flat, ageing)"
+      }
+    },
+    "text_action_4": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator provide memory/on-chain-watches.yml + ALCHEMY_API_KEY + ETHERSCAN_API_KEY",
+        "variant": "caption"
+      }
+    },
+    "item_blocked_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_blocked_5",
+        "text_blocked_5",
+        "text_action_5"
+      ]
+    },
+    "badge_blocked_5": {
+      "type": "Badge",
+      "props": {
+        "text": "priorities.md 71d stale",
+        "variant": "destructive"
+      }
+    },
+    "text_blocked_5": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md 71d stale + vault inbox 53d cold + 8-consec zero-capture (8-07 → 8-14) — weekly-review 8-10 T-0 refresh-ask d4 unactioned (flat, ageing)"
+      }
+    },
+    "text_action_5": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator refresh vault/priorities.md",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_on_track": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_on_track",
+        "item_on_track_1",
+        "item_on_track_2"
+      ]
+    },
+    "heading_on_track": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "item_on_track_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_on_track_1",
+        "text_on_track_1"
+      ]
+    },
+    "badge_on_track_1": {
+      "type": "Badge",
+      "props": {
+        "text": "chronic-cohort-alone-degraded regime",
+        "variant": "secondary"
+      }
+    },
+    "text_on_track_1": {
+      "type": "Text",
+      "props": {
+        "text": "~198h span, 12-skill composition holds, 22 activity/14d (flat)"
+      }
+    },
+    "item_on_track_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_on_track_2",
+        "text_on_track_2"
+      ]
+    },
+    "badge_on_track_2": {
+      "type": "Badge",
+      "props": {
+        "text": "PR queue at 5 open",
+        "variant": "secondary"
+      }
+    },
+    "text_on_track_2": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-batch cadence, self-improve exit-gate ENGAGED at n=3 (#177+#179+#180), 25 activity/14d (flat)"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=shallow(1-commit-clone), gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
