@@ -1,0 +1,591 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-14"
+      },
+      "children": [
+        "metadata",
+        "sep1",
+        "winners_section",
+        "losers_section",
+        "commentary",
+        "sep2",
+        "tweets_section",
+        "sep3",
+        "paper_section",
+        "sep4",
+        "github_section",
+        "sep5",
+        "hn_section"
+      ]
+    },
+    "metadata": {
+      "type": "Text",
+      "props": {
+        "text": "chain sub-outputs stamped 8-07 (header-drift n=3+); xai-cache fresh 8-13→8-14",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change"
+        ],
+        "rows": [
+          [
+            "XPIN",
+            "$0.001749",
+            "+12.5%"
+          ],
+          [
+            "BEAT",
+            "$2.15",
+            "+12.0%"
+          ],
+          [
+            "LIT",
+            "$2.36",
+            "+8.9%"
+          ],
+          [
+            "BTW",
+            "$0.1893",
+            "+7.6%"
+          ],
+          [
+            "EDGE",
+            "$0.3919",
+            "+7.3%"
+          ],
+          [
+            "ADA",
+            "$0.2016",
+            "+7.1%"
+          ],
+          [
+            "BinanceLife",
+            "$0.5397",
+            "+6.8%"
+          ],
+          [
+            "CFX",
+            "$0.04033",
+            "+6.5%"
+          ],
+          [
+            "Q",
+            "$0.02286",
+            "+6.1%"
+          ],
+          [
+            "XEC",
+            "$0.00000662",
+            "+6.1%"
+          ]
+        ]
+      }
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change"
+        ],
+        "rows": [
+          [
+            "CC",
+            "$0.08814",
+            "−13.5%"
+          ],
+          [
+            "BONK",
+            "$0.00000255",
+            "−8.7%"
+          ],
+          [
+            "VELVET",
+            "$0.4488",
+            "−8.0%"
+          ],
+          [
+            "TEL",
+            "$0.001450",
+            "−6.8%"
+          ],
+          [
+            "ONDO",
+            "$0.3497",
+            "−6.4%"
+          ],
+          [
+            "CARDS",
+            "$0.1517",
+            "−6.1%"
+          ],
+          [
+            "META",
+            "$4.96",
+            "−6.1%"
+          ],
+          [
+            "FET",
+            "$0.1315",
+            "−5.8%"
+          ],
+          [
+            "US",
+            "$0.05217",
+            "−5.4%"
+          ],
+          [
+            "UB",
+            "$0.1334",
+            "−4.9%"
+          ]
+        ]
+      }
+    },
+    "commentary": {
+      "type": "Text",
+      "props": {
+        "text": "movers likely stale (8-07 window); ADA the only major green, CC −13.5% biggest large-cap bleed w/ no capitulation vol.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_heading",
+        "tweets_crypto_section",
+        "tweets_ai_section",
+        "tweets_dev_section"
+      ]
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup (8-13→8-14, xai cache HIT)",
+        "level": "h2"
+      }
+    },
+    "tweets_crypto_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_crypto_heading",
+        "tweet_amadeus"
+      ]
+    },
+    "tweets_crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "tweet_amadeus": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@ama_protocol pushes Amadeus — confidential L1 for agentic finance, 0-fee open beta, uPoW compute. Otherwise thin: memecoin ethics and Bitcoin-philosophy shitposts.",
+        "href": "https://x.com/ama_protocol/status/2087932191938379856",
+        "source": "X"
+      }
+    },
+    "tweets_ai_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_ai_heading",
+        "tweets_ai_items"
+      ]
+    },
+    "tweets_ai_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "tweets_ai_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_cerebras",
+        "tweet_teknium",
+        "tweet_oneiric"
+      ]
+    },
+    "tweet_cerebras": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@cerebras previews Ultrafast for OpenAI GPT-5.6 Sol → 750 tok/s, Humanity's Last Exam in 11h11m",
+        "href": "https://x.com/cerebras/status/2087948820906950719",
+        "source": "X"
+      }
+    },
+    "tweet_teknium": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@Teknium ships live steer/end/read for Hermes subagents (agent-graph shape extending)",
+        "href": "https://x.com/Teknium/status/2087986084592709814",
+        "source": "X"
+      }
+    },
+    "tweet_oneiric": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@higgsfield_ai open-sources ONEIRIC — 20-min 100% AI drama for the $1M Cinema Studio 4 festival",
+        "href": "https://x.com/higgsfield_ai/status/2087886790070087836",
+        "source": "X"
+      }
+    },
+    "tweets_dev_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_dev_heading",
+        "tweets_dev_items"
+      ]
+    },
+    "tweets_dev_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "tweets_dev_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_vendo",
+        "tweet_hugeicons"
+      ]
+    },
+    "tweet_vendo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@yousefhll ships Vendo (YC S26) — one-command open-source full-stack agentic interface w/ permissioning + tool guards",
+        "href": "https://x.com/yousefhll/status/2087971662084079840",
+        "source": "X"
+      }
+    },
+    "tweet_hugeicons": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@abdushbag surfaces animated hugeicons, shadcn-CLI-installable",
+        "href": "https://x.com/abdushbag/status/2087826418075939036",
+        "source": "X"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_item",
+        "paper_desc"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper_item": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AgentOPSD: Recursive Self-Distillation for Agentic RL",
+        "href": "https://arxiv.org/abs/2608.05987",
+        "source": "arXiv"
+      }
+    },
+    "paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Tsinghua, ↑49. Turn-level credit via recursive Bayesian belief updates on teacher-student log-prob gaps. No critic, no extra rollouts. 89.1% ALFWorld / Qwen2.5-7B. Extends memory-primitive-paper streak to 7-consec.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github_heading",
+        "github_text"
+      ]
+    },
+    "github_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github_text": {
+      "type": "Text",
+      "props": {
+        "text": "0 new on user:anajuliabit 24h window. Clean-day streak holds.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn_items"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_1",
+        "hn_2",
+        "hn_3",
+        "hn_4"
+      ]
+    },
+    "hn_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_1_link",
+        "hn_1_article",
+        "hn_1_desc",
+        "hn_1_score"
+      ]
+    },
+    "hn_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AMD acquires Taalas — compute-in-memory silicon",
+        "href": "https://news.ycombinator.com/item?id=49201970",
+        "source": "Hacker News"
+      }
+    },
+    "hn_1_article": {
+      "type": "Link",
+      "props": {
+        "label": "Original article",
+        "href": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344"
+      }
+    },
+    "hn_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "weights-as-wiring, acquisition-priced",
+        "variant": "caption"
+      }
+    },
+    "hn_1_score": {
+      "type": "Badge",
+      "props": {
+        "text": "621 pts"
+      }
+    },
+    "hn_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_2_link",
+        "hn_2_desc",
+        "hn_2_score"
+      ]
+    },
+    "hn_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GH Actions + Pages degraded",
+        "href": "https://news.ycombinator.com/item?id=49198302",
+        "source": "Hacker News"
+      }
+    },
+    "hn_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "another us-hours ci outage; forge-migration talk resurfaces",
+        "variant": "caption"
+      }
+    },
+    "hn_2_score": {
+      "type": "Badge",
+      "props": {
+        "text": "391 pts"
+      }
+    },
+    "hn_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_3_link",
+        "hn_3_desc",
+        "hn_3_score"
+      ]
+    },
+    "hn_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Humans miss 1-in-3 threats on ai-agent commands (40k runs)",
+        "href": "https://news.ycombinator.com/item?id=49195468",
+        "source": "Hacker News"
+      }
+    },
+    "hn_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "empirical floor on hitl fatigue",
+        "variant": "caption"
+      }
+    },
+    "hn_3_score": {
+      "type": "Badge",
+      "props": {
+        "text": "293 pts"
+      }
+    },
+    "hn_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_4_link",
+        "hn_4_desc",
+        "hn_4_score"
+      ]
+    },
+    "hn_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Mario Meets Pareto",
+        "href": "https://news.ycombinator.com/item?id=49195231",
+        "source": "Hacker News"
+      }
+    },
+    "hn_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "pareto frontier via kart-stat scrollytelling; day's top vote",
+        "variant": "caption"
+      }
+    },
+    "hn_4_score": {
+      "type": "Badge",
+      "props": {
+        "text": "1027 pts"
+      }
+    }
+  }
+}
