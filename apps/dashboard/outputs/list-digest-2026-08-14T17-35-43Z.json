@@ -1,0 +1,163 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-14",
+        "description": "DeFi curator list drift extends 2-consec-day — pumpfun kol pnl leads, off-lane llm continual-learning 2nd, chilla_ct with the meta-line \"onchain ≠ defi\". rail-promotion at n=3 8-15."
+      },
+      "children": [
+        "section_heading",
+        "items_stack",
+        "separator_1",
+        "footer_stack"
+      ]
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Researchers curator list",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ]
+    },
+    "item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "pumpfun kol trade record: winners buy at $3k–$13k mcap, losers at $300k–$1.4m, median hold times 0m/1m = sniping/insider. entry-band is the whole variable, not conviction.",
+        "likes": 130,
+        "retweets": 9
+      },
+      "children": []
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DefiIgnas/status/2088002609500041521"
+      },
+      "children": []
+    },
+    "item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "link_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "qt of @ethantsliu paper: sparse-memory finetuning caps continual-learning interference at 11% vs 89% full-finetune, 71% lora. online-learning for agents becomes tractable, not a rag bolt-on.",
+        "likes": 13,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2088000687443448211"
+      },
+      "children": []
+    },
+    "item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3",
+        "link_3"
+      ]
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "chilla_ct",
+        "handle": "chilla_ct",
+        "text": "just because it's onchain it doesn't mean it's defi — one-liner from inside the curator list itself; corroborates day-2 of off-lane content.",
+        "likes": 2,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/chilla_ct/status/2088035458794050022"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_text",
+        "status_badge"
+      ]
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(3 signal / 5 candidates; 2 flowslikeosmo replies dropped <2.0)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      },
+      "children": []
+    }
+  }
+}
