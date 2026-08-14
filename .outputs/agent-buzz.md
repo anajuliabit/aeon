@@ -1,16 +1,10 @@
-*Agent Buzz — 2026-08-13*
-_quiet mcp-heavy day — roadmap and how-to on one side, builders wiring mcp into game arenas on the other._
+*Agent Buzz — 2026-08-14*
+_quiet day. two independent surveys landed with the same thesis — capability has moved out of model weights into the runtime around them — and little else broke through._
 
-**mcp roadmap solidifies**
-• @fleyta88 — mcp roadmap points to stateless transport, agent-to-agent, enterprise auth, triggers — production-scale features, not concept debate
-  https://x.com/fleyta88/status/2087594769216098305
-• @ryanharaki_ — opinionated agent-work guide for engineers outside the sf bubble: skills, mcp vs cli, harness picks
-  https://x.com/ryanharaki_/status/2087676313461240275
+**runtime, not weights**
+• @monokern — IEEE/CAA survey unifies classical multi-agent and foundation-model architectures into 5 modules: perception, planning, memory, roles, execution.
+  https://x.com/monokern/status/2087881237457240525
+• @0xbobaaa — 54-page paper, 21 authors: agent progress stopped coming from the model weights; memory, skills, protocols, harness is where capability sits now.
+  https://x.com/0xbobaaa/status/2087812949452656925
 
-**mcp goes into games**
-• @rajarshidattapy — cursor drives 4 parallel agents through mcp + browser sessions to play poker autonomously
-  https://x.com/rajarshidattapy/status/2087689257456734371
-• @gloryarena_rh — glory publishes a public mcp server so any autonomous agent can play its onchain arena directly
-  https://x.com/gloryarena_rh/status/2087677625871532159
-
-<!-- _src: xai-cache · candidates: 6 → kept: 4_ -->
+<!-- _src: xai-cache · candidates: 13 → kept: 2_ -->
