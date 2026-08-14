@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-13*
-Shape: file iss-032, ship usepod-402 gate, land 2 self-improve PRs, add switchyard watched-repo
+*5 Actions — 2026-08-14*
+Shape: file iss-032, commit usepod gate, merge #180 unblocks self-improve, promote 4 rails
 
-1. write memory/issues/ISS-032.md with YAML frontmatter + root-cause on state-update-race + fix-target, then add INDEX Open row for fork-cohort workflow-race
-why: 7th+ owed cycle since 8-11 18:40Z; 8-12 file+ISS-032 action never landed; fork-cohort ~120h stuck, run 31330721650 cancelled with dispatched marker never cleared
-done: memory/issues/ISS-032.md exists, INDEX.md Open row added, commit pushed to main
-loop: fork-cohort-stuck-120h
+1. Create `memory/issues/ISS-032.md` with fork-cohort stuck-in-flight signature; append row to `memory/issues/INDEX.md`.
+why: 130h stuck since 8-09 19:05Z, 9th owed cycle by tonight's 18Z if unfiled; INDEX.md row still absent.
+done: `memory/issues/ISS-032.md` committed + INDEX.md open-table row present.
+loop: iss-032-fork-cohort-stuck
 
-2. wire scripts/detect-usepod-402.sh operator-page gate before 20Z heartbeat
-why: 8-13 today is final workday deadline per ISS-031; stopgap for 2nd 7d-recurrence signature that crossed one-off→pattern 8-10
-done: script exists + executable, wired into prefetch path or workflow step, commit on main
-loop: iss-031-detect-usepod-gate
+2. Commit `scripts/detect-usepod-402.sh` operator-page gate for the ISS-031 2nd-recurrence signature.
+why: 8-13 deadline missed +1d; today's 5,173-pkg npm malware surge underlines dispatch-monitor urgency.
+done: script exists at path, executable, hooked into skill-health cron pipeline.
+loop: iss-031-usepod-detect-gate
 
-3. patch skills/skill-health/SKILL.md step 2 rule table with stuck-in-flight branch (status='dispatched' AND days_since_last_dispatch >= 3)
-why: today's 18Z self-improve window is the natural slot; classification-rule-gap surfaced by 8-12 skill-health run — fork-cohort classifies HEALTHY under current rules despite ~120h stuck
-done: PR opened against main with the rule-table edit
-loop: fork-cohort-workflow-audit
+3. Merge PR #180 (reg-monitor CFTC HTML-fallback) — disengages self-improve queue-full exit-gate.
+why: queue n=3 blocks 2 owed baked-fixes (skill-health rule-gap + gh-api `published=` URL-encoded prefix); #180 is 24h fresh + trivial verify.
+done: PR #180 merged; queue drops to n=2; exit-gate DISENGAGES per self-improve step 1.
+loop: pr-180-unblocks-self-improve
 
-4. bake CFTC HTML-fallback into skills/reg-monitor/SKILL.md step 1C
-why: 2-consec CFTC RSS 404 observation (8-05 + 8-12) crosses self-improve threshold; removes runtime pivot from every future wed cycle; second baked-fix ready for 18Z window
-done: PR opened with SKILL.md edit + HTML-parser fallback URL wired
-loop: reg-monitor-cftc-rss-404-durable
+4. Promote today's 4 rail crossings into `memory/MEMORY.md` recurring-patterns block.
+why: memory-primitive-product-surface day-2 validation + claude-code-alternative n=4 + curator-fresh-handle n=3 + fleet-adjacent-typosquat n=3; biggest single-day rail delta this week.
+done: MEMORY.md recurring-patterns lines reflect 4 promotions with n= counts and 8-14 dates.
+loop: promote-rail-formals
 
-5. add NVIDIA-NeMo/Switchyard to memory/watched-repos.md
-why: today's github-trending top pick (37× baseline) is first fleet-visible vendor-tier LLM router — mandate-portability primitive for anthropic-anchored fleet
-done: memory/watched-repos.md carries the new line, commit pushed
-loop: track-vendor-tier-llm-router
+5. Add `kepano/obsidian-skills` to `memory/watched-repos.md` under a skill-pack-vertical-fork note.
+why: first `[[skill-pack-vertical-fork]]` print in the skill-pack-primitive rail — Obsidian founder's fork of anthropics/skills spec.
+done: line appended to `memory/watched-repos.md` with rail tag.
+loop: skill-pack-vertical-fork
 
-sources: memory=90 logs=7d topics=20 prs=4 cron_failing=3 mode=OK
+sources: memory=74L logs=15d topics=20 prs=5 cron_failing=3 mode=OK

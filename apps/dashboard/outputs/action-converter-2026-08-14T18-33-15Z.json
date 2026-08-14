@@ -1,0 +1,291 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Action Converter",
+        "description": "5 Actions — 2026-08-14"
+      },
+      "children": [
+        "heading-main",
+        "sep-1",
+        "action-1",
+        "sep-2",
+        "action-2",
+        "sep-3",
+        "action-3",
+        "sep-4",
+        "action-4",
+        "sep-5",
+        "action-5",
+        "sep-6",
+        "sources-text"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape: file iss-032, commit usepod gate, merge #180 unblocks self-improve, promote 4 rails",
+        "level": "h3"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-a1",
+        "text-a1-1",
+        "text-a1-2",
+        "text-a1-3",
+        "badge-a1"
+      ]
+    },
+    "h-a1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Create memory/issues/ISS-032.md with fork-cohort stuck-in-flight signature; append row to memory/issues/INDEX.md",
+        "level": "h2"
+      }
+    },
+    "text-a1-1": {
+      "type": "Text",
+      "props": {
+        "text": "why: 130h stuck since 8-09 19:05Z, 9th owed cycle by tonight's 18Z if unfiled; INDEX.md row still absent.",
+        "variant": "body"
+      }
+    },
+    "text-a1-2": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/issues/ISS-032.md committed + INDEX.md open-table row present.",
+        "variant": "body"
+      }
+    },
+    "text-a1-3": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-032-fork-cohort-stuck",
+        "variant": "secondary"
+      }
+    },
+    "badge-a1": {
+      "type": "Text",
+      "props": {
+        "text": "loop: iss-032-fork-cohort-stuck",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-a2",
+        "text-a2-1",
+        "text-a2-2",
+        "text-a2-3"
+      ]
+    },
+    "h-a2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Commit scripts/detect-usepod-402.sh operator-page gate for the ISS-031 2nd-recurrence signature",
+        "level": "h2"
+      }
+    },
+    "text-a2-1": {
+      "type": "Text",
+      "props": {
+        "text": "why: 8-13 deadline missed +1d; today's 5,173-pkg npm malware surge underlines dispatch-monitor urgency.",
+        "variant": "body"
+      }
+    },
+    "text-a2-2": {
+      "type": "Text",
+      "props": {
+        "text": "done: script exists at path, executable, hooked into skill-health cron pipeline.",
+        "variant": "body"
+      }
+    },
+    "text-a2-3": {
+      "type": "Text",
+      "props": {
+        "text": "loop: iss-031-usepod-detect-gate",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-a3",
+        "text-a3-1",
+        "text-a3-2",
+        "text-a3-3"
+      ]
+    },
+    "h-a3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Merge PR #180 (reg-monitor CFTC HTML-fallback) — disengages self-improve queue-full exit-gate",
+        "level": "h2"
+      }
+    },
+    "text-a3-1": {
+      "type": "Text",
+      "props": {
+        "text": "why: queue n=3 blocks 2 owed baked-fixes (skill-health rule-gap + gh-api `published=` URL-encoded prefix); #180 is 24h fresh + trivial verify.",
+        "variant": "body"
+      }
+    },
+    "text-a3-2": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #180 merged; queue drops to n=2; exit-gate DISENGAGES per self-improve step 1.",
+        "variant": "body"
+      }
+    },
+    "text-a3-3": {
+      "type": "Text",
+      "props": {
+        "text": "loop: pr-180-unblocks-self-improve",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-a4",
+        "text-a4-1",
+        "text-a4-2",
+        "text-a4-3"
+      ]
+    },
+    "h-a4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Promote today's 4 rail crossings into memory/MEMORY.md recurring-patterns block",
+        "level": "h2"
+      }
+    },
+    "text-a4-1": {
+      "type": "Text",
+      "props": {
+        "text": "why: memory-primitive-product-surface day-2 validation + claude-code-alternative n=4 + curator-fresh-handle n=3 + fleet-adjacent-typosquat n=3; biggest single-day rail delta this week.",
+        "variant": "body"
+      }
+    },
+    "text-a4-2": {
+      "type": "Text",
+      "props": {
+        "text": "done: MEMORY.md recurring-patterns lines reflect 4 promotions with n= counts and 8-14 dates.",
+        "variant": "body"
+      }
+    },
+    "text-a4-3": {
+      "type": "Text",
+      "props": {
+        "text": "loop: promote-rail-formals",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-a5",
+        "text-a5-1",
+        "text-a5-2",
+        "text-a5-3"
+      ]
+    },
+    "h-a5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Add kepano/obsidian-skills to memory/watched-repos.md under a skill-pack-vertical-fork note",
+        "level": "h2"
+      }
+    },
+    "text-a5-1": {
+      "type": "Text",
+      "props": {
+        "text": "why: first `[[skill-pack-vertical-fork]]` print in the skill-pack-primitive rail — Obsidian founder's fork of anthropics/skills spec.",
+        "variant": "body"
+      }
+    },
+    "text-a5-2": {
+      "type": "Text",
+      "props": {
+        "text": "done: line appended to memory/watched-repos.md with rail tag.",
+        "variant": "body"
+      }
+    },
+    "text-a5-3": {
+      "type": "Text",
+      "props": {
+        "text": "loop: skill-pack-vertical-fork",
+        "variant": "caption"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=74L logs=15d topics=20 prs=5 cron_failing=3 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
