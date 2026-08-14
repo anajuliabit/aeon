@@ -1,0 +1,98 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "captures_section",
+        "sep1",
+        "staleness_section",
+        "sep2",
+        "refresh_prompt"
+      ]
+    },
+    "captures_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "period_text",
+        "captures_stat",
+        "streak_text"
+      ]
+    },
+    "period_text": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h"
+      }
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "streak_text": {
+      "type": "Text",
+      "props": {
+        "text": "8 consecutive zero-capture UTC days (Aug 7 → Aug 14)"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "staleness_section": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "priorities_stat",
+        "vault_stat"
+      ]
+    },
+    "priorities_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md",
+        "value": "70d stale"
+      }
+    },
+    "vault_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "vault inbox",
+        "value": "53d cold"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "refresh_prompt": {
+      "type": "Alert",
+      "props": {
+        "message": "Worth a refresh?",
+        "type": "info"
+      }
+    }
+  }
+}
