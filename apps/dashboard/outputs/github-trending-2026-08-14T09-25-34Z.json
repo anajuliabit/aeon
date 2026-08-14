@@ -1,0 +1,393 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-14"
+      },
+      "children": [
+        "top_pick_section",
+        "sep1",
+        "devtools_section",
+        "sep2",
+        "aiml_section",
+        "sep3",
+        "footer_section"
+      ]
+    },
+    "top_pick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_pick_heading",
+        "top_pick_content"
+      ]
+    },
+    "top_pick_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "top_pick_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top_pick_link",
+        "top_pick_desc"
+      ]
+    },
+    "top_pick_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "macro-inc/macro",
+        "href": "https://github.com/macro-inc/macro"
+      }
+    },
+    "top_pick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "yesterday's rail-promotion driver just spiked 5.4× on day 2 — 227 → 1,239 stars in 24h, the biggest single-day multiplier on today's page and the first day-2 validation of the memory-primitive-as-product-surface rail.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools_heading",
+        "devtools_items"
+      ]
+    },
+    "devtools_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools_item_1",
+        "devtools_item_2",
+        "devtools_item_3"
+      ]
+    },
+    "devtools_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_1_header",
+        "devtools_1_desc"
+      ]
+    },
+    "devtools_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_1_link",
+        "devtools_1_stats",
+        "devtools_1_lang",
+        "devtools_1_badge"
+      ]
+    },
+    "devtools_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "macro-inc/macro",
+        "href": "https://github.com/macro-inc/macro"
+      }
+    },
+    "devtools_1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "1,239 today (2.8k total)",
+        "variant": "caption"
+      }
+    },
+    "devtools_1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "secondary"
+      }
+    },
+    "devtools_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "devtools_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "team workspace with @-linked shared AI memory across email/chat/docs/tasks/CRM — AGPL-3.0.",
+        "variant": "body"
+      }
+    },
+    "devtools_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_2_header",
+        "devtools_2_desc"
+      ]
+    },
+    "devtools_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_2_link",
+        "devtools_2_stats",
+        "devtools_2_lang",
+        "devtools_2_badge"
+      ]
+    },
+    "devtools_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cathrynlavery/diagram-design",
+        "href": "https://github.com/cathrynlavery/diagram-design"
+      }
+    },
+    "devtools_2_stats": {
+      "type": "Text",
+      "props": {
+        "text": "4,475 today (16k total)",
+        "variant": "caption"
+      }
+    },
+    "devtools_2_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "HTML",
+        "variant": "secondary"
+      }
+    },
+    "devtools_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "devtools_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "day-3 and still accelerating — first HOLDOVER in memory-window to hold day-3 without breaking; every prior peer broke -50%+ by day 3.",
+        "variant": "body"
+      }
+    },
+    "devtools_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_3_header",
+        "devtools_3_desc"
+      ]
+    },
+    "devtools_3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_3_link",
+        "devtools_3_stats",
+        "devtools_3_lang",
+        "devtools_3_badge"
+      ]
+    },
+    "devtools_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "holaboss-ai/holaOS",
+        "href": "https://github.com/holaboss-ai/holaOS"
+      }
+    },
+    "devtools_3_stats": {
+      "type": "Text",
+      "props": {
+        "text": "241 today (6.9k total)",
+        "variant": "caption"
+      }
+    },
+    "devtools_3_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "devtools_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "devtools_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "workspace shell that runs Claude Code or Codex across 100+ integrations and MCP with shared memory — extends the claude-code-alternative cohort.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aiml_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_heading",
+        "aiml_items"
+      ]
+    },
+    "aiml_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_item_1"
+      ]
+    },
+    "aiml_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml_1_header",
+        "aiml_1_desc"
+      ]
+    },
+    "aiml_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml_1_link",
+        "aiml_1_stats",
+        "aiml_1_lang",
+        "aiml_1_badge"
+      ]
+    },
+    "aiml_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kepano/obsidian-skills",
+        "href": "https://github.com/kepano/obsidian-skills"
+      }
+    },
+    "aiml_1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "292 today (46k total)",
+        "variant": "caption"
+      }
+    },
+    "aiml_1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Markdown",
+        "variant": "secondary"
+      }
+    },
+    "aiml_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      }
+    },
+    "aiml_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Obsidian founder's agent-skills spec teaching agents to drive Obsidian CLI and JSON Canvas — vertical fork of anthropics/skills.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_text"
+      ]
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/17",
+        "variant": "muted"
+      }
+    }
+  }
+}
