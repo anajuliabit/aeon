@@ -1,0 +1,256 @@
+{
+  "root": "card-morning-brief",
+  "state": {},
+  "elements": {
+    "card-morning-brief": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-14"
+      },
+      "children": [
+        "focus-section",
+        "sep-1",
+        "since-section",
+        "sep-2",
+        "running-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-reason"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. file iss-032 fork-cohort manually",
+        "variant": "lead"
+      }
+    },
+    "focus-1-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 7th owed cycle at 130h, no self-fire will emit it",
+        "variant": "muted"
+      }
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-reason"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. ship scripts/detect-usepod-402.sh",
+        "variant": "lead"
+      }
+    },
+    "focus-2-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 8-13 gate deadline passed, overdue 24h",
+        "variant": "muted"
+      }
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-reason"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. clear self-improve pr queue (n=3)",
+        "variant": "lead"
+      }
+    },
+    "focus-3-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: exit-gate engaged, blocks new self-improve authoring",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "pr #180 shipped 18:41z: reg-monitor cftc html-fallback (1st of 3 self-improve baked-fixes landed; skill-health rule-gap + gh-api published= syntax still owed)",
+        "variant": "body"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve queue n=2→3: exit-gate engaged per CLAUDE.md, no new self-improve authoring until operator clears",
+        "variant": "body"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "iss-032 6th→7th owed cycle: all 5 evening 18z skills fired (self-improve + action-converter + goal-tracker + skill-health + reflect), none filed it",
+        "variant": "body"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "reflect formal-pattern promotions: [[memory-primitive-product-surface]] n=3 (deeptutor 8-12 + statewaveai 8-13 + macro-inc/macro 8-13) + [[alphabet-namespace-cluster]] 53-variant 4-handle scale-up",
+        "variant": "body"
+      }
+    },
+    "since-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "rail-continuations: token-alert 7-consec clean-fire, cg d52, aeon-fleet clean d14 vs security-digest, [[fleet-relevance agent-thesis]] 30-consec (4-consec-week durability crossing 8-15 if unbroken)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3",
+        "running-item-4",
+        "running-item-5",
+        "running-item-6",
+        "running-item-7"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief + daily-routine @ 07:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert + token-movers cluster @ 12:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 15:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest + agent-buzz @ 17:40 UTC",
+        "variant": "body"
+      }
+    },
+    "running-item-6": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve + action-converter + goal-tracker + skill-health + reflect @ 18:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running-item-7": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review @ 21:00 UTC",
+        "variant": "body"
+      }
+    }
+  }
+}
