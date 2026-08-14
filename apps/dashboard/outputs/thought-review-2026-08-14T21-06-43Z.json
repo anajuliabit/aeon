@@ -1,0 +1,66 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-section",
+        "priority-alert"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "period-text",
+        "captures-stat",
+        "status-text"
+      ]
+    },
+    "period-text": {
+      "type": "Text",
+      "props": {
+        "text": "Last 24h"
+      }
+    },
+    "captures-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "priority-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md stale",
+        "message": "71 days since last review (2026-06-04) — worth a refresh",
+        "type": "warning"
+      }
+    }
+  }
+}
