@@ -1,0 +1,589 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-14",
+        "description": "Pattern-rich cron day — 4 rail promotions (2 formal patterns), zero PRs shipped, ISS-032 still unfiled at 9th+ owed cycle"
+      },
+      "children": [
+        "tldr_section",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "blockers_section",
+        "sep5",
+        "footer"
+      ]
+    },
+    "tldr_section": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: pattern-rich cron day — 4 rail promotions (2 formal patterns), zero PRs shipped, ISS-032 still unfiled at 9th+ owed cycle",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_title",
+        "headline1",
+        "headline2",
+        "headline3",
+        "headline4"
+      ]
+    },
+    "headlines_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1_title",
+        "h1_stat",
+        "h1_pattern",
+        "h1_link"
+      ]
+    },
+    "h1_title": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "body"
+      }
+    },
+    "h1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Malware packages (21h)",
+        "value": "5,173",
+        "delta": "25× memory-window record surge"
+      }
+    },
+    "h1_pattern": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-adjacent-typosquat-cluster (n=3 formal)",
+        "variant": "secondary"
+      }
+    },
+    "h1_link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "headline2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2_title",
+        "h2_pattern",
+        "h2_content",
+        "h2_link"
+      ]
+    },
+    "h2_title": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest",
+        "variant": "body"
+      }
+    },
+    "h2_pattern": {
+      "type": "Badge",
+      "props": {
+        "text": "curator-fresh-handle-emergence (n=3 formal)",
+        "variant": "secondary"
+      }
+    },
+    "h2_content": {
+      "type": "Text",
+      "props": {
+        "text": "3 consecutive fresh DeFi handles",
+        "variant": "body"
+      }
+    },
+    "h2_link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/list-digest/msg.md",
+        "href": ".tmp/list-digest/msg.md"
+      }
+    },
+    "headline3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3_title",
+        "h3_pattern",
+        "h3_content",
+        "h3_link"
+      ]
+    },
+    "h3_title": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending",
+        "variant": "body"
+      }
+    },
+    "h3_pattern": {
+      "type": "Badge",
+      "props": {
+        "text": "top-pick-3-consec-accelerating (memory-window-first)",
+        "variant": "secondary"
+      }
+    },
+    "h3_content": {
+      "type": "Text",
+      "props": {
+        "text": "diagram-design 4,475 day-3 HOLDOVER (+57%); macro day-2 validation (5.4×)",
+        "variant": "body"
+      }
+    },
+    "h3_link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/github-trending/msg.md",
+        "href": ".tmp/github-trending/msg.md"
+      }
+    },
+    "headline4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4_title",
+        "h4_pattern",
+        "h4_content",
+        "h4_link"
+      ]
+    },
+    "h4_title": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "body"
+      }
+    },
+    "h4_pattern": {
+      "type": "Badge",
+      "props": {
+        "text": "runtime-not-weights",
+        "variant": "secondary"
+      }
+    },
+    "h4_content": {
+      "type": "Text",
+      "props": {
+        "text": "n=1 (2 independent surveys, same UTC-day) + xai metadata regression",
+        "variant": "body"
+      }
+    },
+    "h4_link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/agent-buzz/msg.md",
+        "href": ".tmp/agent-buzz/msg.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_title",
+        "notable1",
+        "notable2",
+        "notable3",
+        "notable4",
+        "notable5"
+      ]
+    },
+    "notable_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n1_title",
+        "n1_text"
+      ]
+    },
+    "n1_title": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief",
+        "variant": "body"
+      }
+    },
+    "n1_text": {
+      "type": "Text",
+      "props": {
+        "text": "focus: ISS-032 manual-file owed + detect-usepod-402.sh +1d overdue + self-improve exit-gate n=3",
+        "variant": "body"
+      }
+    },
+    "notable2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2_title",
+        "n2_badge",
+        "n2_text"
+      ]
+    },
+    "n2_title": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker",
+        "variant": "body"
+      }
+    },
+    "n2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "detect-usepod-402 AT_RISK",
+        "variant": "destructive"
+      }
+    },
+    "n2_text": {
+      "type": "Text",
+      "props": {
+        "text": "+1d past 8-13 deadline, zero delivery",
+        "variant": "body"
+      }
+    },
+    "notable3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n3_title",
+        "n3_pattern",
+        "n3_text",
+        "n3_link"
+      ]
+    },
+    "n3_title": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine",
+        "variant": "body"
+      }
+    },
+    "n3_pattern": {
+      "type": "Badge",
+      "props": {
+        "text": "chain-output-header-date-drift (n=3 formal)",
+        "variant": "secondary"
+      }
+    },
+    "n3_text": {
+      "type": "Text",
+      "props": {
+        "text": "4 sub-skill headers stamped 8-07 on today's mtime",
+        "variant": "body"
+      }
+    },
+    "n3_link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "notable4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4_title",
+        "n4_badge",
+        "n4_text",
+        "n4_link"
+      ]
+    },
+    "n4_title": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat × 3",
+        "variant": "body"
+      }
+    },
+    "n4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STATUS_PAGE DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "n4_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 STUCK + 3 consec≥3 + 12-skill chronic",
+        "variant": "body"
+      }
+    },
+    "n4_link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "notable5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n5_title",
+        "n5_text"
+      ]
+    },
+    "n5_title": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert",
+        "variant": "body"
+      }
+    },
+    "n5_text": {
+      "type": "Text",
+      "props": {
+        "text": "8-consec-day clean = memory-window record; CG clean d53",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_title",
+        "decision1",
+        "decision2",
+        "decision3"
+      ]
+    },
+    "decisions_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1_title",
+        "d1_text"
+      ]
+    },
+    "d1_title": {
+      "type": "Text",
+      "props": {
+        "text": "File ISS-032 manually",
+        "variant": "body"
+      }
+    },
+    "d1_text": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort ~121h STUCK, 9th+ owed cycle; memory/issues/INDEX.md ends at ISS-031; operator-only path",
+        "variant": "body"
+      }
+    },
+    "decision2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2_title",
+        "d2_text"
+      ]
+    },
+    "d2_title": {
+      "type": "Text",
+      "props": {
+        "text": "Ship scripts/detect-usepod-402.sh",
+        "variant": "body"
+      }
+    },
+    "d2_text": {
+      "type": "Text",
+      "props": {
+        "text": "+1d past 8-13 deadline; script absent; gates 2nd-recurrence detection",
+        "variant": "body"
+      }
+    },
+    "decision3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d3_title",
+        "d3_link",
+        "d3_text"
+      ]
+    },
+    "d3_title": {
+      "type": "Text",
+      "props": {
+        "text": "Merge #174",
+        "variant": "body"
+      }
+    },
+    "d3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #174",
+        "href": "https://github.com/anajuliabit/aeon/pull/174"
+      }
+    },
+    "d3_text": {
+      "type": "Text",
+      "props": {
+        "text": "~7d old, crosses weekly-batch threshold; any merge drops exit-gate below n=3 and unblocks 2 owed baked-fixes",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blockers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers_title",
+        "blocker1",
+        "blocker2"
+      ]
+    },
+    "blockers_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker1": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort",
+        "message": "STUCK ~121h; ISS-032 unfiled 9th cycle; operator-only",
+        "type": "error"
+      }
+    },
+    "blocker2": {
+      "type": "Alert",
+      "props": {
+        "title": "unlock-monitor / deal-flow / skill-security-scan / search-skill",
+        "message": "Mon-scheduled stuck (consec 7/6/3/2); auto-clear 8-17 · ISS-031",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer1",
+        "footer2"
+      ]
+    },
+    "footer1": {
+      "type": "Text",
+      "props": {
+        "text": "+11 routine runs collapsed",
+        "variant": "caption"
+      }
+    },
+    "footer2": {
+      "type": "Text",
+      "props": {
+        "text": "sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
