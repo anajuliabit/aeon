@@ -1,0 +1,157 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-14"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "verdict-badge",
+        "sep1",
+        "heading-patch-today",
+        "alert-npm-malware",
+        "text-npm-composition",
+        "text-npm-fleet-adjacent",
+        "text-npm-action",
+        "sep2",
+        "heading-patch-week",
+        "cve1-stack",
+        "cve2-stack",
+        "sep3",
+        "text-kev-status"
+      ]
+    },
+    "verdict-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "1 actively exploited (npm malware surge), 2 to schedule",
+        "variant": "destructive"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-patch-today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "alert-npm-malware": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "npm malware surge",
+        "message": "5,173 advisories since 8-13 15:04Z (25× yesterday's 208/48h count)"
+      }
+    },
+    "text-npm-composition": {
+      "type": "Text",
+      "props": {
+        "text": "Composition: 4,363 @zalastax/nolb-* mass-registration + 810 real typosquats"
+      }
+    },
+    "text-npm-fleet-adjacent": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet-adjacent brand-jacks: @zapier/mcp-integration, xrblocks-mcp, @kolbo/mcp (MCP tooling) · @ethers-js/contracts, @solana-js/web3, @zzzgenesis00/{etherjs,solana-web3,solana-spl-token,solana-wallet-adapter}, bs58-{15,33,77} (crypto libs) · @hanssoft/baileys, @vyzensockets/baileys, @hanssoft/libsignal-node (chat bot infra) · redux-{init,saga-channel-end,saga-task-cancel}-rce (attackers self-labeling RCE)"
+      }
+    },
+    "text-npm-action": {
+      "type": "Text",
+      "props": {
+        "text": "No aeon dep hits (grep on apps/*/package.json). Action: audit any npm i since 8-13 15:04Z; block-list the fleet-adjacent names above; rotate creds for any developer machine that pulled them."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-patch-week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "cve1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve1-link",
+        "cve1-details"
+      ]
+    },
+    "cve1-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-p28v-f755-9qrg / CVE-2026-73654",
+        "href": "https://github.com/advisories/GHSA-p28v-f755-9qrg"
+      }
+    },
+    "cve1-details": {
+      "type": "Text",
+      "props": {
+        "text": "@trigger.dev/core (npm) · CVSS 8.5 · EPSS 0.003 · patch v4.5.6 · public writeup. Prototype pollution via run metadata → process-wide cross-tenant DoS. Vulnerable >= 3.3.8, <= 4.5.5. Action: upgrade @trigger.dev/core to ≥4.5.6."
+      }
+    },
+    "cve2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve2-link",
+        "cve2-details"
+      ]
+    },
+    "cve2-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-m42h-3232-vpv3 / CVE-2026-12243",
+        "href": "https://github.com/advisories/GHSA-m42h-3232-vpv3"
+      }
+    },
+    "cve2-details": {
+      "type": "Text",
+      "props": {
+        "text": "nltk (pip) · CVSS 7.5 · EPSS 0.006 · patch 3.10.0 · huntr bounty + securityinfinity blog. Arbitrary file read via percent-encoded path traversal in nltk.data.load(). Vulnerable < 3.10.0. Action: upgrade nltk to ≥3.10.0."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-kev-status": {
+      "type": "Text",
+      "props": {
+        "text": "KEV: 4 in last 7d, all dedup vs 8-12/8-13 digests (Metabase, Cisco ASA, Windows WinSock, LoadMaster). 0 fresh critical reviewed. 3 fresh tracked-stack high (1 dropped to MONITOR: ansible-jailexec dedup). Sources: kev=ok, gh=ok, epss=ok.",
+        "variant": "caption"
+      }
+    }
+  }
+}
