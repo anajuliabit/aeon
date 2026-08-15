@@ -1,0 +1,145 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz"
+      },
+      "children": [
+        "subtitle",
+        "sep-1",
+        "section-1",
+        "sep-2",
+        "section-2",
+        "source-note"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "quiet 8-15, so this reads 8-14: mostly infra. MCP hardening as an internal pattern, plus A2A commitments and safety-proof scaffolding.",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-1",
+        "items-1"
+      ]
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP as production spine",
+        "level": "h2"
+      }
+    },
+    "items-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-1",
+        "item-2",
+        "item-3"
+      ]
+    },
+    "item-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@0xCodez — anthropic pattern: Loops + Graphs + MCP as the self-learning agent skeleton, closest yet to an internal standard",
+        "href": "https://x.com/0xCodez/status/2088263101158146337",
+        "source": "X"
+      }
+    },
+    "item-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@DanKornas — MCO CLI runs one task across multiple providers in parallel. model choice becomes A/B, not a bet",
+        "href": "https://x.com/DanKornas/status/2088114646167199936",
+        "source": "X"
+      }
+    },
+    "item-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@JakeSaasing — MCP serving a shared codebase graph cuts multi-agent token cost 20%+ vs each agent re-reading source",
+        "href": "https://x.com/JakeSaasing/status/2088314186442928403",
+        "source": "X"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-2",
+        "items-2"
+      ]
+    },
+    "heading-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Cross-framework A2A + safety proofs",
+        "level": "h2"
+      }
+    },
+    "items-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-4",
+        "item-5"
+      ]
+    },
+    "item-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@Serantych — google cloud CEO commits to Agent2Agent as the cross-framework coordination layer, 3–6mo horizon",
+        "href": "https://x.com/Serantych/status/2088414447496814770",
+        "source": "X"
+      }
+    },
+    "item-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@mykcaron — anthropic red team: multi-agent safety doesn't compose; IETF HDP draft aims to prove each action descends from human auth",
+        "href": "https://x.com/mykcaron/status/2088272517571948582",
+        "source": "X"
+      }
+    },
+    "source-note": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai · candidates: 13 → kept: 5_",
+        "variant": "caption"
+      }
+    }
+  }
+}

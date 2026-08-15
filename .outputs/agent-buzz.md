@@ -1,10 +1,18 @@
-*Agent Buzz — 2026-08-14*
-_quiet day. two independent surveys landed with the same thesis — capability has moved out of model weights into the runtime around them — and little else broke through._
+*Agent Buzz — 2026-08-15*
+_quiet 8-15, so this reads 8-14: mostly infra. MCP hardening as an internal pattern, plus A2A commitments and safety-proof scaffolding._
 
-**runtime, not weights**
-• @monokern — IEEE/CAA survey unifies classical multi-agent and foundation-model architectures into 5 modules: perception, planning, memory, roles, execution.
-  https://x.com/monokern/status/2087881237457240525
-• @0xbobaaa — 54-page paper, 21 authors: agent progress stopped coming from the model weights; memory, skills, protocols, harness is where capability sits now.
-  https://x.com/0xbobaaa/status/2087812949452656925
+**MCP as production spine**
+• @0xCodez — anthropic pattern: Loops + Graphs + MCP as the self-learning agent skeleton, closest yet to an internal standard
+  https://x.com/0xCodez/status/2088263101158146337
+• @DanKornas — MCO CLI runs one task across multiple providers in parallel. model choice becomes A/B, not a bet
+  https://x.com/DanKornas/status/2088114646167199936
+• @JakeSaasing — MCP serving a shared codebase graph cuts multi-agent token cost 20%+ vs each agent re-reading source
+  https://x.com/JakeSaasing/status/2088314186442928403
 
-<!-- _src: xai-cache · candidates: 13 → kept: 2_ -->
+**Cross-framework A2A + safety proofs**
+• @Serantych — google cloud CEO commits to Agent2Agent as the cross-framework coordination layer, 3–6mo horizon
+  https://x.com/Serantych/status/2088414447496814770
+• @mykcaron — anthropic red team: multi-agent safety doesn't compose; IETF HDP draft aims to prove each action descends from human auth
+  https://x.com/mykcaron/status/2088272517571948582
+
+<!-- _src: xai · candidates: 13 → kept: 5_ -->
