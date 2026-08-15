@@ -1,21 +1,22 @@
-*GitHub Trending — 2026-08-14*
+*GitHub Trending — 2026-08-15*
 
-*Top pick* — [macro-inc/macro](https://github.com/macro-inc/macro)
-yesterday's rail-promotion driver just spiked 5.4× on day 2 — 227 → 1,239 stars in 24h, the biggest single-day multiplier on today's page and the first day-2 validation of the memory-primitive-as-product-surface rail.
+*Top pick* — [github/spec-kit](https://github.com/github/spec-kit)
+github's own spec-driven-development toolkit surging back to the front page — mature 128.7k repo picking up +1.2k in a day is a release-moment signature.
 
 *Devtools*
-• [macro-inc/macro](https://github.com/macro-inc/macro) — 1,239 today (2.8k total) · Rust · [ACCELERATING]
-team workspace with @-linked shared AI memory across email/chat/docs/tasks/CRM — AGPL-3.0.
+• [github/spec-kit](https://github.com/github/spec-kit) — ★ 1.2k today (128.7k total) · Python · [RETURNING]
+official github reference for spec-first workflows: write the spec, generate the plan, agent runs the plan.
 
-• [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) — 4,475 today (16k total) · HTML · [ACCELERATING]
-day-3 and still accelerating — first HOLDOVER in memory-window to hold day-3 without breaking; every prior peer broke -50%+ by day 3.
-
-• [holaboss-ai/holaOS](https://github.com/holaboss-ai/holaOS) — 241 today (6.9k total) · TypeScript · [ACCELERATING]
-workspace shell that runs Claude Code or Codex across 100+ integrations and MCP with shared memory — extends the claude-code-alternative cohort.
+• [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) — ★ 165 today (10.5k total) · JavaScript · [ACCELERATING]
+browser purpose-built for AI agents to reuse logged-in sessions across runs — solves the biggest state-sharing pain in headless-agent stacks.
 
 *AI/ML*
-• [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) — 292 today (46k total) · Markdown · [RETURNING]
-Obsidian founder's agent-skills spec teaching agents to drive Obsidian CLI and JSON Canvas — vertical fork of anthropics/skills.
+• [holaboss-ai/holaOS](https://github.com/holaboss-ai/holaOS) — ★ 769 today (7.5k total) · TypeScript · [HOLDOVER]
+day-2 +219% acceleration on the workspace shell hosting claude code / codex across 100+ tools with shared memory. yesterday's `claude-code-alternative-open-source` pick day-2 validates.
+
+*Web/Apps*
+• [lightningpixel/modly](https://github.com/lightningpixel/modly) — ★ 579 today (6.1k total) · TypeScript · [ACCELERATING]
+local-GPU 3D asset generation from image or prompt — native desktop app, no cloud roundtrip.
 
 ---
 sources: trending=ok · gh_api=ok · kept 4/17
