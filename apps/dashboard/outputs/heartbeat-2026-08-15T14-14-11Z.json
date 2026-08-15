@@ -1,0 +1,263 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🔴 Heartbeat Status"
+      },
+      "children": [
+        "alert_stuck",
+        "sep1",
+        "stack_fleet",
+        "sep2",
+        "stack_prior",
+        "sep3",
+        "stack_issues"
+      ]
+    },
+    "alert_stuck": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "heartbeat 08Z stuck ~6h",
+        "message": "Dispatched 2026-08-15T08:16:44Z, last_status still \"dispatched\", no log entry in memory/logs/2026-08-15.md. skill-freshness (same 08:16 dispatch batch) succeeded 08:27Z. Dispatcher path clean — heartbeat crashed early or dropped the state-update step."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fleet",
+        "text_fleet",
+        "grid_clean"
+      ]
+    },
+    "heading_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Delta — Since 2026-08-14 20Z",
+        "level": "h3"
+      }
+    },
+    "text_fleet": {
+      "type": "Text",
+      "props": {
+        "text": "All skills fired clean — no new failures elsewhere",
+        "variant": "lead"
+      }
+    },
+    "grid_clean": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "sm"
+      },
+      "children": [
+        "badge_btc",
+        "badge_thought",
+        "badge_morning",
+        "badge_routine",
+        "badge_freshness",
+        "badge_trending",
+        "badge_token"
+      ]
+    },
+    "badge_btc": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels ×3",
+        "variant": "outline"
+      }
+    },
+    "badge_thought": {
+      "type": "Badge",
+      "props": {
+        "text": "thought-review",
+        "variant": "outline"
+      }
+    },
+    "badge_morning": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief",
+        "variant": "outline"
+      }
+    },
+    "badge_routine": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "outline"
+      }
+    },
+    "badge_freshness": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "outline"
+      }
+    },
+    "badge_trending": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "outline"
+      }
+    },
+    "badge_token": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_prior": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_prior",
+        "heading_stuck",
+        "table_stuck",
+        "heading_consec",
+        "table_consec",
+        "text_chronic"
+      ]
+    },
+    "heading_prior": {
+      "type": "Heading",
+      "props": {
+        "text": "From Prior Heartbeats",
+        "level": "h3"
+      }
+    },
+    "heading_stuck": {
+      "type": "Heading",
+      "props": {
+        "text": "5 Stuck Skills",
+        "level": "h4"
+      }
+    },
+    "table_stuck": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Duration"
+        ],
+        "rows": [
+          [
+            "fork-cohort",
+            "~140h"
+          ],
+          [
+            "search-skill / unlock-monitor",
+            "~119h"
+          ],
+          [
+            "skill-security-scan / deal-flow",
+            "~117h"
+          ]
+        ]
+      }
+    },
+    "heading_consec": {
+      "type": "Heading",
+      "props": {
+        "text": "Consecutive Failures ≥3",
+        "level": "h4"
+      }
+    },
+    "table_consec": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Count"
+        ],
+        "rows": [
+          [
+            "unlock",
+            "7"
+          ],
+          [
+            "deal-flow",
+            "6"
+          ],
+          [
+            "security-scan",
+            "3"
+          ]
+        ]
+      }
+    },
+    "text_chronic": {
+      "type": "Text",
+      "props": {
+        "text": "13-skill chronic cohort",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_issues",
+        "issue_032",
+        "issue_031",
+        "issue_dark"
+      ]
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Open Issues",
+        "level": "h3"
+      }
+    },
+    "issue_032": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-032 — unfiled (11th cycle)",
+        "variant": "body"
+      }
+    },
+    "issue_031": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "ISS-031 detect-usepod-402.sh",
+        "message": "Overdue +2 days"
+      }
+    },
+    "issue_dark": {
+      "type": "Text",
+      "props": {
+        "text": "12Z DARK d49",
+        "variant": "muted"
+      }
+    }
+  }
+}
