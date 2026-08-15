@@ -1,0 +1,263 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-08-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action_1",
+        "sep_1",
+        "action_2",
+        "sep_2",
+        "action_3",
+        "sep_3",
+        "action_4",
+        "sep_4",
+        "action_5",
+        "sep_footer",
+        "sources"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_title",
+        "a1_why",
+        "a1_done",
+        "a1_loop"
+      ]
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. author memory/issues/ISS-032.md + append INDEX.md row for fork-cohort stuck-in-flight",
+        "level": "h3"
+      }
+    },
+    "a1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 10th+ owed cycle at ~145h since 8-09 19:05Z dispatch, operator manual-file only path per morning-brief 07:26Z"
+      }
+    },
+    "a1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/issues/ISS-032.md exists + INDEX.md row appended",
+        "variant": "muted"
+      }
+    },
+    "a1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-032-fork-cohort-stuck",
+        "variant": "secondary"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_title",
+        "a2_why",
+        "a2_done",
+        "a2_loop"
+      ]
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. push scripts/detect-usepod-402.sh runtime gate to close ISS-031",
+        "level": "h3"
+      }
+    },
+    "a2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 8-13 gate deadline +2d overdue, morning-brief 07:03Z file-check confirms script still absent"
+      }
+    },
+    "a2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: scripts/detect-usepod-402.sh exists + executable + wired from workflow",
+        "variant": "muted"
+      }
+    },
+    "a2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-031-usepod-detect-gate",
+        "variant": "secondary"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_title",
+        "a3_why",
+        "a3_done",
+        "a3_loop"
+      ]
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. nudge PR #174 (Advisor Brier-weight) via `gh pr comment 174` on CI-cold status",
+        "level": "h3"
+      }
+    },
+    "a3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: opened 8-08 00:31Z = 7d 17h now, first crossing of CLAUDE.md ~7d escalation rule, webbrain-one contributor blocked on CI"
+      }
+    },
+    "a3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: gh pr comment on #174 posted with concrete unblock question",
+        "variant": "muted"
+      }
+    },
+    "a3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-174-crosses-7d-stall",
+        "variant": "secondary"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_title",
+        "a4_why",
+        "a4_done",
+        "a4_loop"
+      ]
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. file memory/issues/ISS-033.md documenting chain-output-header-date-drift as 4-consec formal pattern",
+        "level": "h3"
+      }
+    },
+    "a4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: rail-promoted 8-14 n=3, extends 4-consec-day 8-15 per daily-routine 10:15Z (4 chain sub-outputs 8d stale)"
+      }
+    },
+    "a4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/issues/ISS-033.md exists + INDEX.md row + category=quality-regression",
+        "variant": "muted"
+      }
+    },
+    "a4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "chain-output-header-date-drift-4-consec",
+        "variant": "secondary"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_title",
+        "a5_why",
+        "a5_done",
+        "a5_loop"
+      ]
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. add `- github/spec-kit` to memory/watched-repos.md",
+        "level": "h3"
+      }
+    },
+    "a5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 8-15 github-trending top-pick (128k GitHub-official spec-driven-dev toolkit, release-moment 3.2× baseline), direct overlap with Aeon spec/skill-first architecture"
+      }
+    },
+    "a5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/watched-repos.md line added",
+        "variant": "muted"
+      }
+    },
+    "a5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "watched-repos-add-spec-kit",
+        "variant": "secondary"
+      }
+    },
+    "sep_footer": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=77L logs=15d topics=20 prs=5 cron_failing=3 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
