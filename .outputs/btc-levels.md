@@ -1,11 +1,18 @@
 ## Summary
 
-**BTC spot:** $62,892 | **2026-08-14 daily close:** $62,984
+**BTC Levels — 2026-08-15 16:40Z**
 
-Level evaluation — no alerts fired:
-- Leverage-review (≤$45k): NO ($62,892 well above)
-- Breakdown (close < $60,500): NO ($62,984 above threshold)
-- Reclaim $63,500: NO (spot below, and flag already armed from prior cycle)
-- Reclaim $65,900: NO (spot below)
+- **Spot:** $63,037.41
+- **Previous UTC daily close (2026-08-14):** $62,984.29
 
-No notification sent. State file updated (spot refreshed, all flags unchanged), log entry appended, both committed.
+**Level evaluations:**
+| Level | Threshold | Result |
+|---|---|---|
+| Leverage-review trigger | spot ≤ $45,000 | Not triggered |
+| Breakdown | close < $60,500 | Not triggered ($62,984 above) |
+| Reclaim $63,500 | spot ≥ $63,500 (flag=true, no re-arm) | Not triggered |
+| Reclaim $65,900 | spot ≥ $65,900 (flag=false) | Not triggered ($63,037 < $65,900) |
+
+**Alerts: none.** No notification sent (quiet run is the norm).
+
+**Files committed:** `memory/btc-levels-state.json` (updated `lastSpot`, `updatedAt`) + `memory/logs/2026-08-15.md` (16:40Z entry appended).
