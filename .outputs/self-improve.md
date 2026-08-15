@@ -1,1 +1,1 @@
-self-improve: 3+ open PRs (queue-full — #173/#172/#171) — waiting for review batch 8-09
+self-improve: 3+ open PRs (#177 claude-md · #179 token-alert · #180 reg-monitor), waiting for review — exit-gate engaged, no new fix authored. baked-fix candidates hold: chain-output-header-date-drift 4-consec-day, fork-cohort rule-gap ISS-032, ISS-031 detect-usepod-402 +2d overdue.

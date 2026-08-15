@@ -1,0 +1,196 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "Queue status and pending fixes"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "section_prs",
+        "sep2",
+        "section_fixes"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "Exit-gate engaged",
+        "message": "3+ open PRs waiting for review — no new fix authored",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_prs",
+        "prs_stack"
+      ]
+    },
+    "heading_prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Open PRs",
+        "level": "h3"
+      }
+    },
+    "prs_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr_177",
+        "pr_179",
+        "pr_180"
+      ]
+    },
+    "pr_177": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #177 — claude-md",
+        "href": "https://github.com/anthropic-ai/aeon/pull/177"
+      }
+    },
+    "pr_179": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #179 — token-alert",
+        "href": "https://github.com/anthropic-ai/aeon/pull/179"
+      }
+    },
+    "pr_180": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #180 — reg-monitor",
+        "href": "https://github.com/anthropic-ai/aeon/pull/180"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_fixes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fixes",
+        "fixes_stack"
+      ]
+    },
+    "heading_fixes": {
+      "type": "Heading",
+      "props": {
+        "text": "Baked-fix candidates (on hold)",
+        "level": "h3"
+      }
+    },
+    "fixes_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fix_row_1",
+        "fix_row_2",
+        "fix_row_3"
+      ]
+    },
+    "fix_row_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fix_1_text",
+        "fix_1_badge"
+      ]
+    },
+    "fix_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "chain-output-header-date-drift",
+        "variant": "body"
+      }
+    },
+    "fix_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "4-consec-day",
+        "variant": "secondary"
+      }
+    },
+    "fix_row_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fix_2_text",
+        "fix_2_badge"
+      ]
+    },
+    "fix_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort rule-gap",
+        "variant": "body"
+      }
+    },
+    "fix_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-032",
+        "variant": "secondary"
+      }
+    },
+    "fix_row_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fix_3_text",
+        "fix_3_badge"
+      ]
+    },
+    "fix_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-031 detect-usepod-402",
+        "variant": "body"
+      }
+    },
+    "fix_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "+2d overdue",
+        "variant": "destructive"
+      }
+    }
+  }
+}
