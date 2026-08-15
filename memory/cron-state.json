@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-08-14T20:05:44Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-15T08:16:44Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-14T20:10:26Z",
     "total_runs": 318,
     "total_successes": 225,
@@ -155,8 +155,8 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-08-14T08:03:53Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-15T08:16:44Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-14T08:16:08Z",
     "total_runs": 117,
     "total_successes": 72,
@@ -629,8 +629,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-08-15T04:41:47Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-15T08:16:44Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-15T04:43:28Z",
     "total_runs": 418,
     "total_successes": 335,
