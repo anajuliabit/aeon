@@ -1,0 +1,94 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_period",
+        "stat_captures",
+        "stat_streak",
+        "separator_1",
+        "text_staleness",
+        "stat_priorities",
+        "stat_vault",
+        "separator_2",
+        "alert_question"
+      ]
+    },
+    "text_period": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "muted"
+      }
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "stat_streak": {
+      "type": "Stat",
+      "props": {
+        "label": "Zero-capture streak",
+        "value": "9 consecutive UTC days (8-07 → 8-15)"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_staleness": {
+      "type": "Text",
+      "props": {
+        "text": "Staleness metrics:",
+        "variant": "muted"
+      }
+    },
+    "stat_priorities": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md",
+        "value": "72 days stale"
+      }
+    },
+    "stat_vault": {
+      "type": "Stat",
+      "props": {
+        "label": "vault inbox",
+        "value": "54 days cold"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_question": {
+      "type": "Alert",
+      "props": {
+        "message": "Worth a refresh?",
+        "type": "info"
+      }
+    }
+  }
+}
