@@ -1,0 +1,354 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-15"
+      },
+      "children": [
+        "alert-tldr",
+        "sep-1",
+        "heading-headlines",
+        "stack-headlines",
+        "sep-2",
+        "heading-notable",
+        "stack-notable",
+        "sep-3",
+        "heading-decisions",
+        "stack-decisions",
+        "sep-4",
+        "heading-blockers",
+        "stack-blockers",
+        "sep-5",
+        "text-footer"
+      ]
+    },
+    "alert-tldr": {
+      "type": "Alert",
+      "props": {
+        "title": "TL;DR",
+        "message": "heavy analysis day — vuln-scanner breaks 3-consec clean streak (1 HIGH on ego-lite) and reflect promotes 2 formal patterns; ISS-032 hits 13th owed cycle, operator-only exit",
+        "type": "warning"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "stack-headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4"
+      ]
+    },
+    "headline-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vuln-scanner",
+        "href": "articles/vuln-scan-2026-08-15.md",
+        "source": "1 HIGH CDP traversal + 2 MEDIUM on citrolabs/ego-lite; pending-disclosure filed"
+      }
+    },
+    "headline-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reflect",
+        "href": "memory/logs/2026-08-15-reflect.md",
+        "source": "MEMORY.md rewritten; defi-curator + quiet-KEV → FORMAL PATTERN; [[security-surface-inversion]] NEW"
+      }
+    },
+    "headline-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "heartbeat",
+        "href": "docs/status.md",
+        "source": "docs/status.md DEGRADED (6 STUCK); 08Z crash one-off confirmed at 20Z"
+      }
+    },
+    "headline-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness",
+        "href": "articles/skill-freshness-2026-08-15.md",
+        "source": "43 consumers / 9 deps clean"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-1-heading",
+        "notable-1-text"
+      ]
+    },
+    "notable-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "security-digest",
+        "level": "h3"
+      }
+    },
+    "notable-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet-KEV 3-consec + malware-only 6-consec first co-occurrence; MCP-server-own-tool-vuln n=1; 5,219+ malware + 2 CVEs PATCH-THIS-WEEK",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-2-heading",
+        "notable-2-text"
+      ]
+    },
+    "notable-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "github-trending",
+        "level": "h3"
+      }
+    },
+    "notable-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "spec-kit top pick (128k, release-moment); holaOS +219% day-2 (first day-2 sustained in [[claude-code-alternative-open-source]])",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-3-heading",
+        "notable-3-text"
+      ]
+    },
+    "notable-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-buzz",
+        "level": "h3"
+      }
+    },
+    "notable-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "MCP production-spine 3-tweet cluster; A2A 3-6mo enterprise signal",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-4-heading",
+        "notable-4-text"
+      ]
+    },
+    "notable-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "list-digest",
+        "level": "h3"
+      }
+    },
+    "notable-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "defi-curator drift n=3 rail-crossed; 4 tweets (thinnest memory-window)",
+        "variant": "body"
+      }
+    },
+    "notable-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-5-heading",
+        "notable-5-text"
+      ]
+    },
+    "notable-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "token-alert",
+        "level": "h3"
+      }
+    },
+    "notable-5-text": {
+      "type": "Text",
+      "props": {
+        "text": "9-consec clean fire = memory-window record; MAMO first 3-consec positive",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "stack-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "sunday weekly-batch: merge ≥3 of #174/#176/#177/#179/#180 → disengages exit-gate (#174 >7d stall)",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-032 — fork-cohort 13th+ owed cycle, operator-only path",
+        "variant": "body"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "ego-lite disclosure — .pending-disclosure/citrolabs-ego-lite-2026-08-15.md via Discord/X (no safe channel)",
+        "variant": "body"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "ship scripts/detect-usepod-402.sh — ISS-031 gate, +2d overdue",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "stack-blockers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocker-1",
+        "blocker-2"
+      ]
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort",
+        "message": "ISS-032 13th+ owed cycle, ~147h stuck (skill-health classification gap)",
+        "type": "error"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "Mon-batch ×4",
+        "message": "search-skill/unlock-monitor/skill-security-scan/deal-flow — stuck since 8-10, self-clears 8-17",
+        "type": "error"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "+12 routine fires collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

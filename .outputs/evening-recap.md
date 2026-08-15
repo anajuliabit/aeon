@@ -1,26 +1,27 @@
-*Evening Recap — 2026-08-14*
-_TL;DR: pattern-rich cron day — 4 rail promotions (2 formal patterns), zero PRs shipped, ISS-032 still unfiled at 9th+ owed cycle_
+*Evening Recap — 2026-08-15*
+_TL;DR: heavy analysis day — vuln-scanner breaks 3-consec clean streak (1 HIGH on ego-lite) and reflect promotes 2 formal patterns; ISS-032 hits 13th owed cycle, operator-only exit_
 
 *Headlines:*
-- security-digest — 5,173 malware pkgs/21h (25× = memory-window record surge); `[[fleet-adjacent-typosquat-cluster]]` crosses formal at n=3 · `docs/status.md`
-- list-digest — `[[curator-fresh-handle-emergence]]` formal pattern promoted at n=3 (3-consec fresh DeFi handles) · `.tmp/list-digest/msg.md`
-- github-trending — `[[top-pick-3-consec-accelerating]]` memory-window-first: diagram-design 4,475 day-3 HOLDOVER (+57%); macro day-2 validation (5.4×) · `.tmp/github-trending/msg.md`
-- agent-buzz — `[[runtime-not-weights]]` n=1 (2 independent surveys, same UTC-day) + xai metadata regression · `.tmp/agent-buzz/msg.md`
+- vuln-scanner — 1 HIGH CDP traversal + 2 MEDIUM on citrolabs/ego-lite; pending-disclosure filed · articles/vuln-scan-2026-08-15.md
+- reflect — MEMORY.md rewritten; defi-curator + quiet-KEV → FORMAL PATTERN; [[security-surface-inversion]] NEW · memory/logs/2026-08-15-reflect.md
+- heartbeat — docs/status.md DEGRADED (6 STUCK); 08Z crash one-off confirmed at 20Z · docs/status.md
+- skill-freshness — 43 consumers / 9 deps clean · articles/skill-freshness-2026-08-15.md
 
 *Notable:*
-- morning-brief — focus: ISS-032 manual-file owed + detect-usepod-402.sh +1d overdue + self-improve exit-gate n=3
-- goal-tracker — detect-usepod-402 escalated NEEDS_ATTENTION → AT_RISK (+1d past 8-13 deadline, zero delivery)
-- daily-routine — `[[chain-output-header-date-drift]]` FORMAL PATTERN crosses n=3 (4 sub-skill headers stamped 8-07 on today's mtime)
-- heartbeat ×3 — STATUS_PAGE=DEGRADED; 5 STUCK + 3 consec≥3 + 12-skill chronic · `docs/status.md`
-- token-alert — 8-consec-day clean = memory-window record; CG clean d53
+- security-digest — quiet-KEV 3-consec + malware-only 6-consec first co-occurrence; MCP-server-own-tool-vuln n=1; 5,219+ malware + 2 CVEs PATCH-THIS-WEEK
+- github-trending — spec-kit top pick (128k, release-moment); holaOS +219% day-2 (first day-2 sustained in [[claude-code-alternative-open-source]])
+- agent-buzz — MCP production-spine 3-tweet cluster; A2A 3-6mo enterprise signal
+- list-digest — defi-curator drift n=3 rail-crossed; 4 tweets (thinnest memory-window)
+- token-alert — 9-consec clean fire = memory-window record; MAMO first 3-consec positive
 
 *Decisions for tomorrow:*
-- file ISS-032 manually — fork-cohort ~121h STUCK, 9th+ owed cycle; `memory/issues/INDEX.md` ends at ISS-031; operator-only path
-- ship `scripts/detect-usepod-402.sh` — +1d past 8-13 deadline; script absent; gates 2nd-recurrence detection
-- merge #174 (https://github.com/anajuliabit/aeon/pull/174) — ~7d old, crosses weekly-batch threshold; any merge drops exit-gate below n=3 and unblocks 2 owed baked-fixes
+- sunday weekly-batch: merge ≥3 of #174/#176/#177/#179/#180 → disengages exit-gate (#174 >7d stall)
+- file ISS-032 — fork-cohort 13th+ owed cycle, operator-only path
+- ego-lite disclosure — .pending-disclosure/citrolabs-ego-lite-2026-08-15.md via Discord/X (no safe channel)
+- ship scripts/detect-usepod-402.sh — ISS-031 gate, +2d overdue
 
 *Blockers:*
-- fork-cohort — STUCK ~121h; ISS-032 unfiled 9th cycle; operator-only
-- unlock-monitor / deal-flow / skill-security-scan / search-skill — Mon-scheduled stuck (consec 7/6/3/2); auto-clear 8-17 · ISS-031
+- fork-cohort — ISS-032 13th+ owed cycle, ~147h stuck (skill-health classification gap)
+- Mon-batch ×4 (search-skill/unlock-monitor/skill-security-scan/deal-flow) — stuck since 8-10, self-clears 8-17
 
-_+11 routine runs collapsed · sources: log=ok cron-state=ok_
+_+12 routine fires collapsed · sources: log=ok cron-state=ok_
