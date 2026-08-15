@@ -1,0 +1,435 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-08-15"
+      },
+      "children": [
+        "summary-section",
+        "sep1",
+        "at-risk-section",
+        "sep2",
+        "blocked-section",
+        "sep3",
+        "on-track-section",
+        "sep4",
+        "sources"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "summary-stats"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "Overall → flat, degrading on fork-cohort + iss-031",
+        "variant": "muted"
+      }
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-goals",
+        "stat-at-risk",
+        "stat-needs-attn",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-goals": {
+      "type": "Stat",
+      "props": {
+        "value": "9",
+        "label": "Total Goals"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "value": "1",
+        "label": "At Risk",
+        "trend": "down"
+      }
+    },
+    "stat-needs-attn": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "Needs Attention"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "value": "2",
+        "label": "On Track"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "value": "6",
+        "label": "Blocked"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "Done"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "at-risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "at-risk-heading",
+        "at-risk-item-1"
+      ]
+    },
+    "at-risk-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h2"
+      }
+    },
+    "at-risk-item-1": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "iss-031 detect-usepod-402 gate deadline",
+        "message": "+2d overdue, `scripts/detect-usepod-402.sh` still absent per 14:08Z heartbeat file-check (was +1d ↓ degrading)\n\nAction: ship `scripts/detect-usepod-402.sh` preflight gate once operator clears self-improve exit-gate"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3",
+        "blocked-item-4",
+        "blocked-item-5",
+        "blocked-item-6"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-1-title",
+        "blocked-1-details",
+        "blocked-1-action"
+      ]
+    },
+    "blocked-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort iss-032 unfiled",
+        "variant": "lead"
+      }
+    },
+    "blocked-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "12th+ owed cycle at ~140h stuck, memory-window unprecedented depth (was 9th+ ↓ degrading)",
+        "variant": "body"
+      }
+    },
+    "blocked-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator hand-file `memory/issues/ISS-032.md` — INDEX.md verified still ends at ISS-031",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-2-title",
+        "blocked-2-details",
+        "blocked-2-action"
+      ]
+    },
+    "blocked-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve pr queue exit-gate engaged",
+        "variant": "lead"
+      }
+    },
+    "blocked-2-details": {
+      "type": "Text",
+      "props": {
+        "text": "n=3 — #177/#179/#180 self-improve-shaped block new authoring per claude.md primitive (new goal, → flat)",
+        "variant": "body"
+      }
+    },
+    "blocked-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator merge 3+ PRs from #174/#176/#177/#179/#180 via sunday 8-16 weekly-batch",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-3-title",
+        "blocked-3-details",
+        "blocked-3-action"
+      ]
+    },
+    "blocked-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "4 mon-batch stuck skills",
+        "variant": "lead"
+      }
+    },
+    "blocked-3-details": {
+      "type": "Text",
+      "props": {
+        "text": "~119h stuck since 8-10 (search-skill / unlock-monitor / skill-security-scan / deal-flow); iss-031 usepod-402 aftermath (→ flat)",
+        "variant": "body"
+      }
+    },
+    "blocked-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: wait for 8-17 mon auto-clear or trigger manual usepod dispatcher recovery",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-4-title",
+        "blocked-4-details",
+        "blocked-4-action"
+      ]
+    },
+    "blocked-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "12z batch dark d49",
+        "variant": "lead"
+      }
+    },
+    "blocked-4-details": {
+      "type": "Text",
+      "props": {
+        "text": "iss-027 8-skill cluster frozen since 6-28 (→ flat)",
+        "variant": "body"
+      }
+    },
+    "blocked-4-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator restore 12z scheduler slot for 8-skill batch",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-5-title",
+        "blocked-5-details",
+        "blocked-5-action"
+      ]
+    },
+    "blocked-5-title": {
+      "type": "Text",
+      "props": {
+        "text": "operator on-chain config day-70",
+        "variant": "lead"
+      }
+    },
+    "blocked-5-details": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor NO_CONFIG (→ flat, ageing)",
+        "variant": "body"
+      }
+    },
+    "blocked-5-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator populate `memory/on-chain-watches.yml` + set ALCHEMY_API_KEY + ETHERSCAN_API_KEY",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-6-title",
+        "blocked-6-details",
+        "blocked-6-action"
+      ]
+    },
+    "blocked-6-title": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md 72d stale + vault inbox 54d cold + 9-consec zero-capture streak",
+        "variant": "lead"
+      }
+    },
+    "blocked-6-details": {
+      "type": "Text",
+      "props": {
+        "text": "10-day mark 8-16 = memory-window record if unbroken (→ flat, ageing)",
+        "variant": "body"
+      }
+    },
+    "blocked-6-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator refresh `vault/priorities.md` + process 2026-06-22 inbox capture",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item-1",
+        "on-track-item-2"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "on-track-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-1-title",
+        "on-track-1-details"
+      ]
+    },
+    "on-track-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "pr queue at 5 open",
+        "variant": "lead"
+      }
+    },
+    "on-track-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "#174 crosses 7d weekly-review stall band today, sunday 8-16 weekly-batch imminent (→ flat)",
+        "variant": "body"
+      }
+    },
+    "on-track-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-2-title",
+        "on-track-2-details"
+      ]
+    },
+    "on-track-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "[[chronic-cohort-alone-degraded]] regime",
+        "variant": "lead"
+      }
+    },
+    "on-track-2-details": {
+      "type": "Text",
+      "props": {
+        "text": "13-skill composition ~210h span holds unchanged (→ flat)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok(1), gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
