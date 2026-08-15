@@ -1,11 +1,11 @@
 ## Summary
 
-**BTC Levels — 2026-08-14T20:43Z**
+**btc-levels run 2026-08-15T01:47Z — quiet.**
 
-- Spot: **$62,852.96** | Prev daily close (2026-08-13): **$63,429.18**
-- All four levels clear — no notification sent:
-  - Leverage-review (≤$45k): clear
-  - Breakdown close (<$60,500): clear
-  - Reclaim $63,500: below threshold, re-arm not triggered (spot > $60,500)
-  - Reclaim $65,900: not reached
-- State and log committed to `main`.
+- **Spot:** $62,971 | **Daily close (2026-08-14):** $62,984
+- Leverage trigger (≤ $45k): clear
+- Breakdown (close < $60,500): clear ($62,984 well above)
+- Reclaim $63,500: already alerted; re-arm requires spot < $60,500 (not triggered)
+- Reclaim $65,900: not reached
+
+No notification sent. State and log committed to `main`.
