@@ -1,22 +1,21 @@
-*Morning Brief — 2026-08-14*
+*Morning Brief — 2026-08-15*
 
 *Focus today*
-1. file iss-032 fork-cohort manually — why now: 7th owed cycle at 130h, no self-fire will emit it
-2. ship scripts/detect-usepod-402.sh — why now: 8-13 gate deadline passed, overdue 24h
-3. clear self-improve pr queue (n=3) — why now: exit-gate engaged, blocks new self-improve authoring
+1. file iss-032 fork-cohort manually — 10th+ owed cycle at ~140h, exit-gate blocks the fix.
+2. sunday weekly-batch tomorrow — #174 crosses 7d stall band, 3 merges disengage the exit-gate.
+3. iss-031 detect-usepod-402.sh +2d overdue — 8-13 gate MISSED, still exit-gate-blocked.
 
 *Since yesterday*
-- pr #180 shipped 18:41z: reg-monitor cftc html-fallback (1st of 3 self-improve baked-fixes landed; skill-health rule-gap + gh-api published= syntax still owed)
-- self-improve queue n=2→3: exit-gate engaged per CLAUDE.md, no new self-improve authoring until operator clears
-- iss-032 6th→7th owed cycle: all 5 evening 18z skills fired (self-improve + action-converter + goal-tracker + skill-health + reflect), none filed it
-- reflect formal-pattern promotions: `[[memory-primitive-product-surface]]` n=3 (deeptutor 8-12 + statewaveai 8-13 + macro-inc/macro 8-13) + `[[alphabet-namespace-cluster]]` 53-variant 4-handle scale-up
-- rail-continuations: token-alert 7-consec clean-fire, cg d52, aeon-fleet clean d14 vs security-digest, `[[fleet-relevance agent-thesis]]` 30-consec (4-consec-week durability crossing 8-15 if unbroken)
+- fork-cohort 8-14 18Z 5-skill self-fire batch passed without filing — ~10th owed cycle now.
+- reflect 8-14 promoted 4 formal patterns (chain-output-header-date-drift n=3 + fleet-adjacent-typosquat n=3 + curator-fresh-handle-emergence n=3 + memory-primitive-product-surface day-2 validated).
+- security-digest 5,173 malware advisories in 21h = 25× baseline (memory-window record), 0 aeon-fleet dep hits (d15).
+- diagram-design 3-consec accelerating HOLDOVER 1,616→2,855→4,475 (memory-window-first) — day-4 test 09Z github-trending.
+- token-alert 8-consec clean + CG d53 + 12Z-slot-dark-immunity 8-consec + sub-25 rail 16-consec — 4 records extend.
 
 *Running today*
-- morning-brief + daily-routine @ 07:00 UTC
-- github-trending @ 09:00 UTC
-- token-alert + token-movers cluster @ 12:00 UTC
-- security-digest @ 15:00 UTC
-- list-digest + agent-buzz @ 17:40 UTC
-- self-improve + action-converter + goal-tracker + skill-health + reflect @ 18:00 UTC
-- evening-recap + thought-review @ 21:00 UTC
+- morning-brief + daily-routine + skill-freshness @ 07-08Z
+- github-trending + aixbt-pulse @ 09Z (diagram-design day-4 + macro day-3 tests)
+- 12Z batch DARK d49 (ISS-027 8-skill cluster since 6-28)
+- token-alert @ 12Z (MAMO 6-consec above-baseline deciding test)
+- security-digest @ 14Z (quiet-KEV n=3-consec rail cross if no adds)
+- heartbeat 08/14/20Z · btc-levels 4h · thought-review + evening-recap 21Z
