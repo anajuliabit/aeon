@@ -1,0 +1,557 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-15",
+        "description": "chain sub-outputs stamped 8-07 (drift n=4+); xai cache fresh 8-14→8-15."
+      },
+      "children": [
+        "note",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "tweets_section",
+        "sep4",
+        "paper_section",
+        "sep5",
+        "github_section",
+        "sep6",
+        "hn_section"
+      ]
+    },
+    "note": {
+      "type": "Text",
+      "props": {
+        "text": "movers 8-07 vintage — chain didn't refresh, skip if you saw yesterday's.",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change"
+        ],
+        "rows": [
+          [
+            "XPIN",
+            "$0.001749",
+            "+12.5%"
+          ],
+          [
+            "BEAT",
+            "$2.15",
+            "+12.0%"
+          ],
+          [
+            "LIT",
+            "$2.36",
+            "+8.9%"
+          ],
+          [
+            "BTW",
+            "$0.1893",
+            "+7.6%"
+          ],
+          [
+            "EDGE",
+            "$0.3919",
+            "+7.3%"
+          ],
+          [
+            "ADA",
+            "$0.2016",
+            "+7.1%"
+          ],
+          [
+            "BinanceLife",
+            "$0.5397",
+            "+6.8%"
+          ],
+          [
+            "CFX",
+            "$0.04033",
+            "+6.5%"
+          ],
+          [
+            "Q",
+            "$0.02286",
+            "+6.1%"
+          ],
+          [
+            "XEC",
+            "$0.00000662",
+            "+6.1%"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change"
+        ],
+        "rows": [
+          [
+            "CC",
+            "$0.08814",
+            "−13.5%"
+          ],
+          [
+            "BONK",
+            "$0.00000255",
+            "−8.7%"
+          ],
+          [
+            "VELVET",
+            "$0.4488",
+            "−8.0%"
+          ],
+          [
+            "TEL",
+            "$0.001450",
+            "−6.8%"
+          ],
+          [
+            "ONDO",
+            "$0.3497",
+            "−6.4%"
+          ],
+          [
+            "CARDS",
+            "$0.1517",
+            "−6.1%"
+          ],
+          [
+            "META",
+            "$4.96",
+            "−6.1%"
+          ],
+          [
+            "FET",
+            "$0.1315",
+            "−5.8%"
+          ],
+          [
+            "US",
+            "$0.05217",
+            "−5.4%"
+          ],
+          [
+            "UB",
+            "$0.1334",
+            "−4.9%"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweets_heading",
+        "crypto_subsection",
+        "ai_subsection",
+        "dev_subsection"
+      ]
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup (8-14→8-15, xai cache HIT)",
+        "level": "h3"
+      }
+    },
+    "crypto_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto_badge",
+        "crypto_text",
+        "crypto_links"
+      ]
+    },
+    "crypto_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Crypto",
+        "variant": "default"
+      }
+    },
+    "crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "@RaoulGMI thesis — everything onchain (stablecoins, RWAs, the whole system); just buy the L1s the rails run on. @cryptorover calls the pre-cycle BTC \"valley of death.\" @flourmarkets teases prediction NFTs on Robinhood.",
+        "variant": "body"
+      }
+    },
+    "crypto_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_link_1",
+        "crypto_link_2",
+        "crypto_link_3"
+      ]
+    },
+    "crypto_link_1": {
+      "type": "Link",
+      "props": {
+        "label": "raoul",
+        "href": "https://x.com/RaoulGMI/status/2088324736388657526"
+      }
+    },
+    "crypto_link_2": {
+      "type": "Link",
+      "props": {
+        "label": "rover",
+        "href": "https://x.com/cryptorover/status/2088147859246104957"
+      }
+    },
+    "crypto_link_3": {
+      "type": "Link",
+      "props": {
+        "label": "flour",
+        "href": "https://x.com/flourmarkets/status/2088264645069156581"
+      }
+    },
+    "ai_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ai_badge",
+        "ai_text",
+        "ai_links"
+      ]
+    },
+    "ai_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AI",
+        "variant": "default"
+      }
+    },
+    "ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "@AndrewYNg maps AI Engineering skills. @inherent_labs' Faraday — 27B AI Scientist, long-horizon RL, beats Opus 4.8 + GPT-5.5 on paper replication. @JiachengGu50887 ships AQuA — recursive self-improvement for quant research on GPT-5.6 Sol.",
+        "variant": "body"
+      }
+    },
+    "ai_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_link_1",
+        "ai_link_2",
+        "ai_link_3"
+      ]
+    },
+    "ai_link_1": {
+      "type": "Link",
+      "props": {
+        "label": "ng",
+        "href": "https://x.com/AndrewYNg/status/2088302050706686198"
+      }
+    },
+    "ai_link_2": {
+      "type": "Link",
+      "props": {
+        "label": "faraday",
+        "href": "https://x.com/inherent_labs/status/2088290794092298655"
+      }
+    },
+    "ai_link_3": {
+      "type": "Link",
+      "props": {
+        "label": "aqua",
+        "href": "https://x.com/JiachengGu50887/status/2088336767267283069"
+      }
+    },
+    "dev_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dev_badge",
+        "dev_text",
+        "dev_links"
+      ]
+    },
+    "dev_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Dev",
+        "variant": "default"
+      }
+    },
+    "dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "@resend ships react.email — react/ts/tailwind emails, oss, any platform. @winglee open-sources zeron — rust+gpui cross-device agent control plane.",
+        "variant": "body"
+      }
+    },
+    "dev_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "dev_link_1",
+        "dev_link_2"
+      ]
+    },
+    "dev_link_1": {
+      "type": "Link",
+      "props": {
+        "label": "resend",
+        "href": "https://x.com/resend/status/2088325797815992533"
+      }
+    },
+    "dev_link_2": {
+      "type": "Link",
+      "props": {
+        "label": "zeron",
+        "href": "https://x.com/winglee/status/2088325135422173226"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_story",
+        "paper_desc"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AgentOPSD: Recursive Self-Distillation for Agentic RL",
+        "href": "https://arxiv.org/abs/2608.05987",
+        "source": "Tsinghua",
+        "score": "↑49"
+      }
+    },
+    "paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Turn-level credit via recursive Bayesian belief updates on teacher-student log-prob gaps. No critic, no extra rollouts. 89.1% ALFWorld / Qwen2.5-7B.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github_heading",
+        "github_stat"
+      ]
+    },
+    "github_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github_stat": {
+      "type": "Text",
+      "props": {
+        "text": "0 new on user:anajuliabit 24h. Clean-day streak holds.",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "hn_heading",
+        "hn_item_1_stack",
+        "hn_item_2_stack"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn_item_1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_item_1_story",
+        "hn_item_1_desc",
+        "hn_item_1_link"
+      ]
+    },
+    "hn_item_1_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AMD acquires Taalas — compute-in-memory silicon",
+        "href": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
+        "source": "The Register",
+        "score": "621"
+      }
+    },
+    "hn_item_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "weights-as-wiring.",
+        "variant": "caption"
+      }
+    },
+    "hn_item_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "hn",
+        "href": "https://news.ycombinator.com/item?id=49201970"
+      }
+    },
+    "hn_item_2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_item_2_story",
+        "hn_item_2_desc",
+        "hn_item_2_link"
+      ]
+    },
+    "hn_item_2_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Mario Meets Pareto",
+        "href": "https://www.mayerowitz.io/blog/mario-meets-pareto",
+        "source": "Pareto",
+        "score": "1027"
+      }
+    },
+    "hn_item_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "pareto frontier via kart-stat scrollytelling.",
+        "variant": "caption"
+      }
+    },
+    "hn_item_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "hn",
+        "href": "https://news.ycombinator.com/item?id=49195231"
+      }
+    }
+  }
+}

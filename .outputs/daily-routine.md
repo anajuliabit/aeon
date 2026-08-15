@@ -1,6 +1,6 @@
-*Daily Routine — 2026-08-14*
+*Daily Routine — 2026-08-15*
 
-_chain sub-outputs stamped 8-07 (header-drift n=3+); xai-cache fresh 8-13→8-14._
+_chain sub-outputs stamped 8-07 (drift n=4+); xai cache fresh 8-14→8-15._
 
 *Top 10 Winners (24h)*
 1. XPIN: $0.001749 (+12.5%)
@@ -26,23 +26,21 @@ _chain sub-outputs stamped 8-07 (header-drift n=3+); xai-cache fresh 8-13→8-14
 9. US: $0.05217 (−5.4%)
 10. UB: $0.1334 (−4.9%)
 
-_movers likely stale (8-07 window); ADA the only major green, CC −13.5% biggest large-cap bleed w/ no capitulation vol._
+_movers 8-07 vintage — chain didn't refresh, skip if you saw yesterday's._
 
-*Tweet Roundup (8-13→8-14, xai cache HIT)*
-*Crypto:* @ama_protocol pushes Amadeus — confidential L1 for agentic finance, 0-fee open beta, uPoW compute. Otherwise thin: memecoin ethics and Bitcoin-philosophy shitposts. [amadeus](https://x.com/ama_protocol/status/2087932191938379856)
+*Tweet Roundup (8-14→8-15, xai cache HIT)*
+*Crypto:* @RaoulGMI thesis — everything onchain (stablecoins, RWAs, the whole system); just buy the L1s the rails run on. @cryptorover calls the pre-cycle BTC "valley of death." @flourmarkets teases prediction NFTs on Robinhood. [raoul](https://x.com/RaoulGMI/status/2088324736388657526) · [rover](https://x.com/cryptorover/status/2088147859246104957) · [flour](https://x.com/flourmarkets/status/2088264645069156581)
 
-*AI:* @cerebras previews Ultrafast for OpenAI GPT-5.6 Sol → 750 tok/s, Humanity's Last Exam in 11h11m. @Teknium ships live steer/end/read for Hermes subagents (agent-graph shape extending). @higgsfield_ai open-sources ONEIRIC — 20-min 100% AI drama for the $1M Cinema Studio 4 festival. [cerebras](https://x.com/cerebras/status/2087948820906950719) · [hermes](https://x.com/Teknium/status/2087986084592709814) · [oneiric](https://x.com/higgsfield_ai/status/2087886790070087836)
+*AI:* @AndrewYNg maps AI Engineering skills. @inherent_labs' Faraday — 27B AI Scientist, long-horizon RL, beats Opus 4.8 + GPT-5.5 on paper replication. @JiachengGu50887 ships AQuA — recursive self-improvement for quant research on GPT-5.6 Sol. [ng](https://x.com/AndrewYNg/status/2088302050706686198) · [faraday](https://x.com/inherent_labs/status/2088290794092298655) · [aqua](https://x.com/JiachengGu50887/status/2088336767267283069)
 
-*Dev:* @yousefhll ships Vendo (YC S26) — one-command open-source full-stack agentic interface w/ permissioning + tool guards. @abdushbag surfaces animated hugeicons, shadcn-CLI-installable. [vendo](https://x.com/yousefhll/status/2087971662084079840) · [hugeicons](https://x.com/abdushbag/status/2087826418075939036)
+*Dev:* @resend ships react.email — react/ts/tailwind emails, oss, any platform. @winglee open-sources zeron — rust+gpui cross-device agent control plane. [resend](https://x.com/resend/status/2088325797815992533) · [zeron](https://x.com/winglee/status/2088325135422173226)
 
 *Paper of the Day*
-"AgentOPSD: Recursive Self-Distillation for Agentic RL" — Tsinghua, ↑49. Turn-level credit via recursive Bayesian belief updates on teacher-student log-prob gaps. No critic, no extra rollouts. 89.1% ALFWorld / Qwen2.5-7B. Extends `memory-primitive-paper` streak to 7-consec. [arxiv](https://arxiv.org/abs/2608.05987)
+"AgentOPSD: Recursive Self-Distillation for Agentic RL" — Tsinghua, ↑49. Turn-level credit via recursive Bayesian belief updates on teacher-student log-prob gaps. No critic, no extra rollouts. 89.1% ALFWorld / Qwen2.5-7B. [arxiv](https://arxiv.org/abs/2608.05987)
 
 *GitHub Issues*
-0 new on `user:anajuliabit` 24h window. Clean-day streak holds.
+0 new on `user:anajuliabit` 24h. Clean-day streak holds.
 
 *HN Digest*
-1. [AMD acquires Taalas — compute-in-memory silicon](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344) (621pts) — weights-as-wiring, acquisition-priced. [hn](https://news.ycombinator.com/item?id=49201970)
-2. [GH Actions + Pages degraded](https://www.githubstatus.com/incidents/qcvjkzcs7j74) (391pts) — another us-hours ci outage; forge-migration talk resurfaces. [hn](https://news.ycombinator.com/item?id=49198302)
-3. [Humans miss 1-in-3 threats on ai-agent commands (40k runs)](https://scalex.dev/blog/ai-agent-permissions-stats/) (293pts) — empirical floor on hitl fatigue. [hn](https://news.ycombinator.com/item?id=49195468)
-4. [Mario Meets Pareto](https://www.mayerowitz.io/blog/mario-meets-pareto) (1027pts) — pareto frontier via kart-stat scrollytelling; day's top vote. [hn](https://news.ycombinator.com/item?id=49195231)
+1. [AMD acquires Taalas — compute-in-memory silicon](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344) (621pts) — weights-as-wiring. [hn](https://news.ycombinator.com/item?id=49201970)
+2. [Mario Meets Pareto](https://www.mayerowitz.io/blog/mario-meets-pareto) (1027pts) — pareto frontier via kart-stat scrollytelling. [hn](https://news.ycombinator.com/item?id=49195231)
