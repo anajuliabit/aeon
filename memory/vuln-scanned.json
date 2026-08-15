@@ -1,5 +1,23 @@
 [
   {
+    "repo": "citrolabs/ego-lite",
+    "scanned_at": "2026-08-15T16:20:00Z",
+    "findings": 1,
+    "channel": "pending-disclosure-no-safe-channel",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "osv-api": "ok",
+      "npm-audit": "ok",
+      "slither": "n/a",
+      "hand-audit": "ok"
+    },
+    "article": "articles/vuln-scan-2026-08-15.md",
+    "pending_disclosure": ".pending-disclosure/citrolabs-ego-lite-2026-08-15.md",
+    "notes": "citrolabs/ego-lite 10,732-star TypeScript CDP browser-automation harness — ships as the client half of ego lite (macOS app, closed-source): agents pipe JS heredocs into ego-browser CLI which drives the native Chromium via globalThis.ego bridge. Selected from .outputs/github-trending.md 2026-08-15 devtools bucket ([[agent-browser-primitive]] n=1 candidate); high-value threat model — 'share the user's real logged-in browser state with autonomous agents' collapses every session cookie/OAuth token onto trust of this harness. Scanner posture same as prior 3 runs (ISS-018 sandbox day-49): pip install + curl|sh + downloaded-binary-exec all denied → OSV.dev batch API on 7 top-level npm deps (all clean) + npm audit (0/87 vulns, only 1 prod dep acorn@8.17.0 — deliberate near-zero-dep supply-chain posture) + 3 parallel Explore agents (CDP/RCE + session/credential + traversal/SSRF) + primary read on 15+ files. Confirmed 1 HIGH via two independent read paths: page-controlled Content-Disposition suggestedFilename echoes through Page.downloadWillBegin CDP event straight into join(downloadDir, ...) with no sanitisation; downloadedPath escapes the tmp sandbox via '../../..'; subsequent saveAs()/readFile(await path()) copyFile-READS any user-accessible local file (SSH keys, ~/.aws/creds, cookie DBs). Agent-B initially DROPPED this finding claiming 'chrome sanitises the write' — correct about the write, but missed that the READ side of copyFile reads whatever downloadedPath points at, existing on disk or not; the file that IS at the traversed path (arbitrary user-readable file) is what gets returned. Agent-C caught it independently; runner primary read also caught it. Rest of codebase strong: every operator-supplied value that reaches Runtime.evaluate is JSON.stringify-serialised (verified across 11+ leaf builders in element-resolver/locator-query/pointer/keyboard); learning-file loader has textbook path-traversal guards (relative resolve + ../backslash/absolute rejection + siteRoot-prefix check); no child_process.exec, no shell:true, no Chromium launch surface, no cookie handling (parent app owns profile), update-notice does no network I/O (local bridge call); ffmpeg spawn uses fixed argv + size pre-validated as Number.isInteger. 2 MEDIUM defence-in-depth bundled into same private report: (i) screenshot/download tmp files written with default umask + pid-predictable names → local-multi-user read + symlink pre-plant clobber (macOS-only current target so single-user, matters more when Linux roadmap ships); (ii) page.goto() lacks scheme validation despite INTERNAL_URL_PREFIXES being declared — agent following page-supplied href can be steered to file:// / chrome:// / about:. Disposition: PVR endpoint disabled ({\"enabled\": false}) AND no SECURITY.md anywhere AND runner token lacks repository_advisories:write scope → no safe channel. Draft body + 14-line patch (local private/fix-download-traversal branch on fork, not pushed) written to .pending-disclosure/ for operator manual-delivery via Discord/X community links from README; body also asks maintainer to enable PVR. Article redacts file:line per skill no-zero-day rule. FIRST NON-CLEAN VERDICT in memory-window since vuln-scanner began (prior 3 = clean-audit-partial-scan)."
+  },
+  {
     "repo": "pranshuparmar/witr",
     "scanned_at": "2026-08-08T16:55:00Z",
     "findings": 0,

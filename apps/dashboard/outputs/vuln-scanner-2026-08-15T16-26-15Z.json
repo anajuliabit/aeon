@@ -1,0 +1,574 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Vuln Scanner — citrolabs/ego-lite",
+        "description": "Security vulnerability scan results"
+      },
+      "children": [
+        "project_info",
+        "sep1",
+        "findings_section",
+        "sep2",
+        "codebase_section",
+        "sep3",
+        "disclosure_section",
+        "sep4",
+        "scanner_section",
+        "sep5",
+        "memory_note"
+      ]
+    },
+    "project_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "proj_heading",
+        "proj_text",
+        "proj_premise"
+      ]
+    },
+    "proj_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Project Overview",
+        "level": "h3"
+      }
+    },
+    "proj_text": {
+      "type": "Text",
+      "props": {
+        "text": "10,732-star TypeScript CDP browser-automation harness"
+      }
+    },
+    "proj_premise": {
+      "type": "Text",
+      "props": {
+        "text": "Agents pipe JavaScript heredocs into ego-browser to drive the native ego lite chromium via globalThis.ego bridge. Premise: share your logged-in browser state with autonomous agents.",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "findings_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "findings_heading",
+        "high_alert",
+        "medium_text"
+      ]
+    },
+    "findings_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Vulnerabilities Found",
+        "level": "h3"
+      }
+    },
+    "high_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "1 HIGH: Path Traversal via Download Filename Sanitisation",
+        "message": "Page-controlled content-disposition suggestedFilename echoes through Page.downloadWillBegin straight into join(downloadDir, ...) with no sanitisation → downloadedPath escapes tmp sandbox → subsequent saveAs()/readFile(await path()) copyFile-reads any user-accessible local file including ssh keys, ~/.aws/creds, and cookie databases. Confirmed by two independent read paths."
+      }
+    },
+    "medium_text": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "medium_label",
+        "medium_detail"
+      ]
+    },
+    "medium_label": {
+      "type": "Text",
+      "props": {
+        "text": "2 MEDIUM: Defence-in-depth Mitigations",
+        "variant": "lead"
+      }
+    },
+    "medium_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Screenshot/download tmp-file umask + goto scheme validation bundled as additional controls"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "codebase_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "codebase_heading",
+        "codebase_quality",
+        "codebase_grid"
+      ]
+    },
+    "codebase_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Codebase Assessment",
+        "level": "h3"
+      }
+    },
+    "codebase_quality": {
+      "type": "Badge",
+      "props": {
+        "text": "STRONG",
+        "variant": "secondary"
+      }
+    },
+    "codebase_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "cb1",
+        "cb2",
+        "cb3",
+        "cb4",
+        "cb5",
+        "cb6"
+      ]
+    },
+    "cb1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "cb1_label",
+        "cb1_check"
+      ]
+    },
+    "cb1_label": {
+      "type": "Text",
+      "props": {
+        "text": "JSON.stringify discipline",
+        "variant": "muted"
+      }
+    },
+    "cb1_check": {
+      "type": "Text",
+      "props": {
+        "text": "On every evaluate sink"
+      }
+    },
+    "cb2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "cb2_label",
+        "cb2_check"
+      ]
+    },
+    "cb2_label": {
+      "type": "Text",
+      "props": {
+        "text": "Path-traversal guards",
+        "variant": "muted"
+      }
+    },
+    "cb2_check": {
+      "type": "Text",
+      "props": {
+        "text": "Textbook implementation on learning loader"
+      }
+    },
+    "cb3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "cb3_label",
+        "cb3_check"
+      ]
+    },
+    "cb3_label": {
+      "type": "Text",
+      "props": {
+        "text": "Process execution",
+        "variant": "muted"
+      }
+    },
+    "cb3_check": {
+      "type": "Text",
+      "props": {
+        "text": "No child_process.exec, no shell:true"
+      }
+    },
+    "cb4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "cb4_label",
+        "cb4_check"
+      ]
+    },
+    "cb4_label": {
+      "type": "Text",
+      "props": {
+        "text": "Cookie handling",
+        "variant": "muted"
+      }
+    },
+    "cb4_check": {
+      "type": "Text",
+      "props": {
+        "text": "Parent app owns profile"
+      }
+    },
+    "cb5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "cb5_label",
+        "cb5_check"
+      ]
+    },
+    "cb5_label": {
+      "type": "Text",
+      "props": {
+        "text": "Production dependencies",
+        "variant": "muted"
+      }
+    },
+    "cb5_check": {
+      "type": "Text",
+      "props": {
+        "text": "Zero prod-dep vulns, only 1 dep (acorn)"
+      }
+    },
+    "cb6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "cb6_label",
+        "cb6_check"
+      ]
+    },
+    "cb6_label": {
+      "type": "Text",
+      "props": {
+        "text": "Supply chain",
+        "variant": "muted"
+      }
+    },
+    "cb6_check": {
+      "type": "Text",
+      "props": {
+        "text": "Deliberate near-zero-dep design"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "disclosure_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "disclosure_heading",
+        "disclosure_alert",
+        "disclosure_details"
+      ]
+    },
+    "disclosure_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Disclosure Status",
+        "level": "h3"
+      }
+    },
+    "disclosure_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Pending Disclosure",
+        "message": "PVR endpoint disabled + no SECURITY.md + token lacks advisories:write scope = no safe channel found"
+      }
+    },
+    "disclosure_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "disc_path",
+        "disc_patch",
+        "disc_note"
+      ]
+    },
+    "disc_path": {
+      "type": "Text",
+      "props": {
+        "text": "Draft body + 14-line patch located at: .pending-disclosure/citrolabs-ego-lite-2026-08-15.md"
+      }
+    },
+    "disc_patch": {
+      "type": "Text",
+      "props": {
+        "text": "Awaiting operator manual delivery via Discord/X community links",
+        "variant": "body"
+      }
+    },
+    "disc_note": {
+      "type": "Badge",
+      "props": {
+        "text": "Article redacts file:line per no-zero-day rule",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "scanner_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "scanner_heading",
+        "scanner_grid"
+      ]
+    },
+    "scanner_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanner Audit Results",
+        "level": "h3"
+      }
+    },
+    "scanner_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "scan_semgrep",
+        "scan_trufflehog",
+        "scan_osv_binary",
+        "scan_osv_api",
+        "scan_npm",
+        "scan_hand"
+      ]
+    },
+    "scan_semgrep": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "scan_semgrep_name",
+        "scan_semgrep_val"
+      ]
+    },
+    "scan_semgrep_name": {
+      "type": "Text",
+      "props": {
+        "text": "Semgrep",
+        "variant": "muted"
+      }
+    },
+    "scan_semgrep_val": {
+      "type": "Badge",
+      "props": {
+        "text": "FAIL (iss-018 sandbox day-49)",
+        "variant": "destructive"
+      }
+    },
+    "scan_trufflehog": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "scan_trufflehog_name",
+        "scan_trufflehog_val"
+      ]
+    },
+    "scan_trufflehog_name": {
+      "type": "Text",
+      "props": {
+        "text": "Trufflehog",
+        "variant": "muted"
+      }
+    },
+    "scan_trufflehog_val": {
+      "type": "Badge",
+      "props": {
+        "text": "FAIL",
+        "variant": "destructive"
+      }
+    },
+    "scan_osv_binary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "scan_osv_binary_name",
+        "scan_osv_binary_val"
+      ]
+    },
+    "scan_osv_binary_name": {
+      "type": "Text",
+      "props": {
+        "text": "OSV Binary",
+        "variant": "muted"
+      }
+    },
+    "scan_osv_binary_val": {
+      "type": "Badge",
+      "props": {
+        "text": "FAIL",
+        "variant": "destructive"
+      }
+    },
+    "scan_osv_api": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "scan_osv_api_name",
+        "scan_osv_api_val"
+      ]
+    },
+    "scan_osv_api_name": {
+      "type": "Text",
+      "props": {
+        "text": "OSV API",
+        "variant": "muted"
+      }
+    },
+    "scan_osv_api_val": {
+      "type": "Badge",
+      "props": {
+        "text": "OK (7/7 clean)",
+        "variant": "secondary"
+      }
+    },
+    "scan_npm": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "scan_npm_name",
+        "scan_npm_val"
+      ]
+    },
+    "scan_npm_name": {
+      "type": "Text",
+      "props": {
+        "text": "npm-audit",
+        "variant": "muted"
+      }
+    },
+    "scan_npm_val": {
+      "type": "Badge",
+      "props": {
+        "text": "OK (0/87 vulns)",
+        "variant": "secondary"
+      }
+    },
+    "scan_hand": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "scan_hand_name",
+        "scan_hand_val"
+      ]
+    },
+    "scan_hand_name": {
+      "type": "Text",
+      "props": {
+        "text": "Hand Audit",
+        "variant": "muted"
+      }
+    },
+    "scan_hand_val": {
+      "type": "Badge",
+      "props": {
+        "text": "OK",
+        "variant": "secondary"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "memory_note": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "First Non-Clean Verdict in Memory Window",
+        "message": "Prior 3 audits in memory window: clean-audit-partial. This is the first scan to report vulnerabilities."
+      }
+    }
+  }
+}
