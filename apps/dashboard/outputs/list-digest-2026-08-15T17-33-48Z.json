@@ -1,0 +1,131 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-08-15",
+        "description": "defi curator drift extends 3-consec-day — llm formal-arch research + hooeem's own-the-thing take, no pure defi in the top pool."
+      },
+      "children": [
+        "separator_1",
+        "heading_researchers",
+        "stack_tweets",
+        "separator_2",
+        "stack_status"
+      ]
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_researchers": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi researchers",
+        "level": "h3"
+      }
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "group_1",
+        "group_2"
+      ]
+    },
+    "group_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "formal language for neural architectures makes tensor broadcasting explicit; layer below FlashAttention becomes code-generatable, the kernel-eng moat compresses",
+        "likes": 37,
+        "retweets": 5
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2088381419097620621"
+      }
+    },
+    "group_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "link_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "new-expensive owns you: $2k phone / financed car / £4k camera you protect delivers less than the battered old one you actually use; consumption-signal inversion",
+        "likes": 35,
+        "retweets": 1
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2088360159923814505"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_sources",
+        "badge_status"
+      ]
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(2 signal / 4 candidates; 2 sub-2.0 dropped)",
+        "variant": "caption"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "success"
+      }
+    }
+  }
+}

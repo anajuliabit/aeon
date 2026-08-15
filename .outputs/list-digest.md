@@ -1,12 +1,11 @@
-*List Digest — 2026-08-14*
+*List Digest — 2026-08-15*
 
-defi curator list drift extends 2-consec-day — pumpfun kol pnl leads, off-lane llm continual-learning 2nd, chilla_ct with the meta-line "onchain ≠ defi". rail-promotion at n=3 8-15.
+defi curator drift extends 3-consec-day — llm formal-arch research + hooeem's own-the-thing take, no pure defi in the top pool.
 
-*DeFi Researchers curator list*
-- x.com/DefiIgnas — pumpfun kol trade record: winners buy at $3k–$13k mcap, losers at $300k–$1.4m, median hold times 0m/1m = sniping/insider. entry-band is the whole variable, not conviction. (♥ 130, ↻ 9) — [View](https://x.com/DefiIgnas/status/2088002609500041521)
-- x.com/DeFiMinty — qt of @ethantsliu paper: sparse-memory finetuning caps continual-learning interference at 11% vs 89% full-finetune, 71% lora. online-learning for agents becomes tractable, not a rag bolt-on. (♥ 13, ↻ 0) — [View](https://x.com/DeFiMinty/status/2088000687443448211)
-- x.com/chilla_ct — "just because it's onchain it doesn't mean it's defi" — one-liner from inside the curator list itself; corroborates day-2 of off-lane content. (♥ 2, ↻ 0) — [View](https://x.com/chilla_ct/status/2088035458794050022)
+*DeFi researchers*
+- x.com/DeFiMinty — formal language for neural architectures makes tensor broadcasting explicit; layer below FlashAttention becomes code-generatable, the kernel-eng moat compresses (♥37, ↻5) — [View](https://x.com/DeFiMinty/status/2088381419097620621)
+- x.com/hooeem — new-expensive owns you: $2k phone / financed car / £4k camera you protect delivers less than the battered old one you actually use; consumption-signal inversion (♥35, ↻1) — [View](https://x.com/hooeem/status/2088360159923814505)
 
 ---
-sources: list1=ok(3 signal / 5 candidates; 2 flowslikeosmo replies dropped <2.0)
+sources: list1=ok(2 signal / 4 candidates; 2 sub-2.0 dropped)
 status: LIST_DIGEST_OK
