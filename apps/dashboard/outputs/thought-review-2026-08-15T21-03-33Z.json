@@ -1,0 +1,100 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 Thought Review"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "period-text",
+        "captures-section",
+        "separator-1",
+        "stale-section"
+      ]
+    },
+    "period-text": {
+      "type": "Text",
+      "props": {
+        "text": "Last 24h · 0 captures"
+      }
+    },
+    "captures-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-captured-alert",
+        "streak-stat"
+      ]
+    },
+    "idea-captured-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Idea Captured",
+        "message": "Zero-capture streak extends to 10 consecutive UTC days (8-07 → 8-15)",
+        "type": "warning"
+      }
+    },
+    "streak-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive zero-capture days",
+        "value": "10"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stale-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "priorities-stat",
+        "vault-stat",
+        "refresh-alert"
+      ]
+    },
+    "priorities-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md stale",
+        "value": "73 days"
+      }
+    },
+    "vault-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "vault inbox cold",
+        "value": "55 days"
+      }
+    },
+    "refresh-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Refresh Request",
+        "message": "d5 still unactioned",
+        "type": "warning"
+      }
+    }
+  }
+}
