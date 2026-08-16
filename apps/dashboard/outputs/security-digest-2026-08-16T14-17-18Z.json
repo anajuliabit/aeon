@@ -1,0 +1,361 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest"
+      },
+      "children": [
+        "heading_date",
+        "stack_verdict",
+        "separator_1",
+        "stack_sources",
+        "separator_2",
+        "heading_patch",
+        "stack_advisory",
+        "separator_3",
+        "heading_analysis",
+        "stack_analysis_all",
+        "separator_4",
+        "alert_fleet_status"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-08-16",
+        "level": "h3"
+      }
+    },
+    "stack_verdict": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alert_verdict"
+      ]
+    },
+    "alert_verdict": {
+      "type": "Alert",
+      "props": {
+        "message": "Verdict: Nothing urgent today. 0 to schedule, 0 to monitor. Malware wave collapsed 99% in 24h.",
+        "type": "success"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_sources_label",
+        "badge_kev",
+        "badge_gh_advisory",
+        "badge_epss"
+      ]
+    },
+    "text_sources_label": {
+      "type": "Text",
+      "props": {
+        "text": "Sources:",
+        "variant": "caption"
+      }
+    },
+    "badge_kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV",
+        "variant": "outline"
+      }
+    },
+    "badge_gh_advisory": {
+      "type": "Badge",
+      "props": {
+        "text": "GH Advisory",
+        "variant": "outline"
+      }
+    },
+    "badge_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS",
+        "variant": "outline"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_patch": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h3"
+      }
+    },
+    "stack_advisory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "advisory_item"
+      ]
+    },
+    "advisory_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "advisory_title_line",
+        "storylink_advisory",
+        "text_advisory_type",
+        "stack_advisory_actions"
+      ]
+    },
+    "advisory_title_line": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_advisory_name",
+        "badge_npm",
+        "badge_malware",
+        "badge_aeon_status"
+      ]
+    },
+    "text_advisory_name": {
+      "type": "Text",
+      "props": {
+        "text": "axios-fast",
+        "variant": "lead"
+      }
+    },
+    "badge_npm": {
+      "type": "Badge",
+      "props": {
+        "text": "npm",
+        "variant": "default"
+      }
+    },
+    "badge_malware": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "badge_aeon_status": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon dep-clean",
+        "variant": "secondary"
+      }
+    },
+    "storylink_advisory": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-7f9g-2m48-c7v6",
+        "href": "https://github.com/advisories/GHSA-7f9g-2m48-c7v6",
+        "source": "GitHub Advisory"
+      }
+    },
+    "text_advisory_type": {
+      "type": "Text",
+      "props": {
+        "text": "axios brand-jack supply-chain compromise",
+        "variant": "body"
+      }
+    },
+    "stack_advisory_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_action_block",
+        "text_action_rotate"
+      ]
+    },
+    "text_action_block": {
+      "type": "Text",
+      "props": {
+        "text": "→ block install",
+        "variant": "caption"
+      }
+    },
+    "text_action_rotate": {
+      "type": "Text",
+      "props": {
+        "text": "→ rotate creds if pulled in dev",
+        "variant": "caption"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_analysis": {
+      "type": "Heading",
+      "props": {
+        "text": "CVE & Threat Analysis",
+        "level": "h3"
+      }
+    },
+    "stack_analysis_all": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_tracked_cves",
+        "section_malware_wave",
+        "section_residual_clusters"
+      ]
+    },
+    "section_tracked_cves": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_tracked_header",
+        "text_tracked_new_advisories",
+        "text_tracked_kev_baseline"
+      ]
+    },
+    "text_tracked_header": {
+      "type": "Text",
+      "props": {
+        "text": "No fresh tracked-stack CVEs",
+        "variant": "lead"
+      }
+    },
+    "text_tracked_new_advisories": {
+      "type": "Text",
+      "props": {
+        "text": "3 new high advisories all outside stack: maven mchange-commons-java, maven OpenAM, composer Grav",
+        "variant": "body"
+      }
+    },
+    "text_tracked_kev_baseline": {
+      "type": "Text",
+      "props": {
+        "text": "[[quiet-KEV-baseline]] extends 3-consecutive → 4-consecutive-UTC-day (all 3 KEV adds still land on 8-11)",
+        "variant": "caption"
+      }
+    },
+    "section_malware_wave": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_malware_label",
+        "stat_malware_reduction",
+        "text_malware_impact"
+      ]
+    },
+    "text_malware_label": {
+      "type": "Text",
+      "props": {
+        "text": "Malware wave decompression",
+        "variant": "lead"
+      }
+    },
+    "stat_malware_reduction": {
+      "type": "Stat",
+      "props": {
+        "label": "Packages in 48h",
+        "value": "57",
+        "delta": "−99% (from 5,219+)",
+        "trend": "down"
+      }
+    },
+    "text_malware_impact": {
+      "type": "Text",
+      "props": {
+        "text": "Breaks [[malware-only-security-surface]] 6-consecutive streak and [[security-surface-inversion]] composite regime on day-2",
+        "variant": "caption"
+      }
+    },
+    "section_residual_clusters": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_residual_header",
+        "text_cluster_notafollower",
+        "text_cluster_alelo",
+        "text_cluster_hackerone"
+      ]
+    },
+    "text_residual_header": {
+      "type": "Text",
+      "props": {
+        "text": "Residual threat clusters:",
+        "variant": "lead"
+      }
+    },
+    "text_cluster_notafollower": {
+      "type": "Text",
+      "props": {
+        "text": "notafollower* mass-registration (3 pkgs / 28 versions)",
+        "variant": "body"
+      }
+    },
+    "text_cluster_alelo": {
+      "type": "Text",
+      "props": {
+        "text": "alelo-* brand-jack (7 pkgs = Brazilian fuel-card)",
+        "variant": "body"
+      }
+    },
+    "text_cluster_hackerone": {
+      "type": "Text",
+      "props": {
+        "text": "hackerone-poc probes (tw-pkgprobe / hunterone-build-probe / twilio-hackerone-poc = bug-bounty dep-confusion tests, benign class)",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_fleet_status": {
+      "type": "Alert",
+      "props": {
+        "message": "✓ Aeon fleet clean (d17)",
+        "type": "success"
+      }
+    }
+  }
+}
