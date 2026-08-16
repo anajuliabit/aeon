@@ -5,6 +5,69 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-08-16 evening, T-0 to 8-17)
+
+- **fork-cohort ISS-032 STILL UNFILED — 14th+ owed cycle P0 ~163h stuck at 14:10Z heartbeat 8-16** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 115h past 48h escalation. Owed across 11 cycles through 8-15 evening + morning-brief 8-16 07:26Z + heartbeat 08:29Z + heartbeat 14:10Z + this reflect fire (14th+). skill-health `classification_gap_flag` persists 12th+ cycle at 8-15 18:16Z run. **Sunday 19Z fork-cohort re-fire ~5h from 14:10Z heartbeat = today's biggest deciding-test** — first natural cycle since 8-09 stuck; clean fire resolves stuck-state organically, failure promotes ISS-032 to critical operator-action-required.
+- **Sunday weekly-batch 8-16 — 0 operator merges through 17Z + PR #181 net-adds 6th to queue** — no operator activity through Sunday-daylight; PR queue rolls +1 to 6 via skill-graph auto-generated PR #181 (`docs(skill-graph): regenerate map (ARCHITECTURE_OK)`) at 17:13Z. Queue depth: #181 fresh (~1h) · #180 ~72h · #179 ~120h · #177 ~168h · #176 ~169h · **#174 ~8d 17h (memory-window-deepest single-PR stall)**. Self-improve exit-gate ENGAGED at n=3 (#177+#179+#180 self-improve-shaped) blocks fork-cohort rule-gap + detect-usepod-402 + chain-drift baked-fix authoring. Weekly-batch window continues through Sunday evening.
+- **ISS-031 detect-usepod-402 gate +3d overdue on 8-16** — `scripts/detect-usepod-402.sh` still absent per morning-brief 07:26Z + heartbeat 08:29Z + 14:10Z file-checks.
+- **NEW confirmed one-off: heartbeat 08Z 8-15 crash** — 8-15 14:15Z + 20:20Z + 8-16 08:33Z all clean; distinct-signature crash didn't recur across 3 fires. No memory-issue-file needed.
+- **NEW: `[[chain-output-header-date-drift]]` FORMAL PATTERN 5-consec-day 8-12→8-16** — daily-routine 07:25Z; chain sub-outputs stamped 2026-08-07 (9-day content stale) for 5th consecutive UTC-day.
+- **4 🕸 Mon-batch stuck skills hold-through-week 8-16 → 8-17** — search-skill (143h) · unlock-monitor (143h) · skill-security-scan (141h) · deal-flow (141h); ISS-031 aftermath, self-clears 8-17 Mon.
+- **`[[chronic-cohort-alone-degraded]]` composition holds 13-skill at 14:10Z heartbeat** — identical to 8-15 20:15Z + 8-16 08:29Z: cost-report 8% / skill-analytics 22% / reg-monitor 22% / vuln-scanner 27% / market-context-refresh 32% / narrative-tracker 33% / weekly-shiplog 37% / search-skill 37% / unlock-monitor 38% / fleet-control 40% (disabled) / deal-flow 44% / security-digest 45% / aixbt-pulse 47%. Regime ~234h+ span from 8-04 14:45Z inception; composition-locked print.
+- **Bash `>` redirect workaround-chain n=47+ durable 25-UTC-day span 7-22 → 8-16** — 8-16 fresh call-sites: morning-brief log-append + github-trending per-repo unrolled + security-digest tmp-file redirect + agent-buzz heredoc log-append.
+- **12:00 UTC batch DARK d50 on 8-16** — ISS-027 8-skill cluster frozen since 2026-06-28 (round-number 50-day crossing). Token-alert 12Z-slot 10-consec clean 8-07→8-16 (memory-window record extends; first 10-day mark) confirming `[[12Z-slot-dark-immunity-per-skill]]`.
+- **CG clean-day d55 8-16** — memory-window record extends unbroken.
+- **Token-alert 10-consec-day clean-fire streak 8-07 → 8-16** — extends memory-window record from 9-consec (first 10-day mark).
+- **Aeon-fleet clean d17 vs security-digest 8-16** — 0/57 fresh malware advisories match tracked deps (57 pkgs in 48h = 99% decompression from 8-15's 5,219-flood; memory-window record extends via 3rd variant-test surface).
+- **`[[fleet-relevance agent-thesis]]` rail crosses 5-consec-week durability 8-16** — 3-pick fleet-adjacent slate holds: Soup (LLM-training-primitive) + ego-lite (agent-browser-primitive day-2-validated +230%) + HKUDS/CLI-Anything (agent-native-CLI-hub NEW n=1). Memory-window-longest fleet-adjacency streak.
+- **Skill-graph first `ARCHITECTURE_OK` verdict 28d hold 8-16** — 191/43 unchanged from 2026-07-19 baseline; PR #181 opened. `[[skill-graph-sandbox-degradation]]` NEW n=1 filed (5 auto-approval rejections in local `./aeon` invocation; fell through to `git hash-object` proxy fingerprint).
+
+### Rail promotions / deprecations 8-16
+- **`[[quiet-KEV-baseline]]` FORMAL PATTERN extends 3-consec → 4-consec-UTC-day 8-13→8-16** via security-digest 14:15Z — memory-window record extends by 1 day; all 3 KEV adds still land on 8-11.
+- **`[[chain-output-header-date-drift]]` FORMAL PATTERN extends 4-consec → 5-consec-day 8-12→8-16** via daily-routine 07:25Z — record depth; content 9-day stale in addition to header.
+- **`[[fleet-relevance agent-thesis]]` rail crosses 5-consec-week durability 8-16** — 8-16 slate (Soup + ego-lite + CLI-Anything) extends the 4-week durability set 8-15.
+- **`[[malware-only-security-surface]]` 6-consec streak BREAKS 8-16 via 99% volume decompression** — 5,219+ (8-15 24h) → 57 (8-16 48h); first sub-100 malware batch since streak began 8-10. Post-surge decompression not gradual fade (`@zalastax/nolb-*` 4,363 pkgs on 8-15 = 84% of that day's volume, single-actor burst).
+- **`[[security-surface-inversion]]` composite regime DISSOLVES on day-2 8-16** — malware leg collapsed while quiet-KEV leg persists; one-leg-only = composite dissolves. Rare 1-day-lived composite (unusual for satisfying 3-consec threshold on both legs).
+- **`[[MAMO-3-consec-positive-24h]]` 8-15 n=1 candidate BREAKS day-4 8-16** — −0.57% mild-fade (tightest break in memory-window; prior breaks ≥|−2%|). Simultaneously `[[MAMO-3-consec-above-baseline-vol]]` 6-consec BREAKS day-7 (0.95× baseline first sub-baseline since 8-09). Correlated price+vol compression continues.
+- **`[[soft-day-4-break-on-memory-window-first-3-consec-accel]]` 8-15 candidate DEPRECATES 8-16** — diagram-design day-5 -56% retro-characterizes day-4 SOFT-decay as decay-onset not sustain-signal.
+- **`[[agent-browser-primitive]]` 8-15 n=1 day-2-validated via ego-lite +230% 8-16** — 165→545 memory-window-first day-2 sustained-acceleration; parallels holaOS 8-15.
+- **`[[MCP-production-spine-narrative]]` extends via @monokern UW/Toronto/CMU paper 8-16** — 4th surfacing in 48h (research paper source-shape distinct from prior tweets).
+- **`[[thin-xai-window-cross-skill]]` extends 2-consec 8-15→8-16 n=2** — agent-buzz 10-cand + list-digest 0-cand same-UTC-day thin-then-collapse; n=3 crossing candidate 8-17.
+- **`[[reflect-thin-list-digest-window]]` 3-consec rail-promotion crosses via collapse-to-zero 8-16** — 5→4→0 arc; splits into `[[list-digest-window-collapse]]` NEW n=1 sub-shape.
+- **NEW `[[list-digest-window-collapse]]` n=1 8-16** — first 0-tweet fire on this list in memory-window.
+- **NEW `[[grok-x-search-list-operator-failure]]` n=1 8-16** — first Grok inability to resolve list name + retrieve any content across 6 fires 8-11→8-16.
+- **NEW `[[skill-graph-sandbox-degradation]]` n=1 8-16** — 5 auto-approval rejections; git-hash-object proxy fingerprint fallback engaged.
+- **NEW `[[BRA-corporate-brand-jack]]` n=1 8-16** — alelo-* 10-pkg cluster targeting Brazilian fuel-card company (first BRA-corporate brand-jack in memory-window vs prior tech-vendor axes).
+- **NEW `[[hackerone-dep-confusion-poc-cluster]]` n=1 8-16** — tw-pkgprobe / hunterone-build-probe / twilio-hackerone-poc benign bug-bounty PoC pattern.
+- **NEW `[[agent-labeled-malicious-pkg]]` n=1 8-16** — @guangnao/agent-proxy targeting agent-buyer-mindshare.
+- **NEW `[[runtime-not-weights]]` compound-thesis n=1 8-16** — 4 same-UTC-day surfacings across daily-routine + agent-buzz.
+- **NEW `[[fund-flip-cluster]]` n=1 8-16** — wood-gold-for-btc + vaneck-btc-dip same-day.
+- **NEW `[[shadcn-admin-kit-cluster]]` n=1 8-16** — 3 shadcn/react admin-kits same-day.
+- **NEW `[[mature-tail-release-moment-day-2-decay]]` n=1 8-16** — spec-kit -23% vs ego-lite +230% paired day-2 comparable.
+- **NEW `[[agent-native-cli-hub]]` n=1 8-16** — HKUDS/CLI-Anything shell-layer distinct from shipped-skills.
+- **NEW `[[marketing-shell-3-consec-day-repeat]]` n=1 8-16** — unslothai/unsloth same implausible-versions desc 3-consec-day auto-drop 8-14→8-16.
+- **NEW `[[vol-vacuum-partial-rebuild-on-positive-price]]` n=1 8-16** — WELL +1.31% axis distinct from 8-15 flatter-price rebuild.
+- **`[[gitlawb-flip-acceleration-after-N-phase-fade]]` + `[[gitlawb-light-vol-upside-acceleration]]` STAY DEPRECATED 8-16** — post-inversion dead-cat-bounce (+3.89% after -8.41% on 0.97× baseline vol both directions) confirms light-vol whipsaw not regime shift.
+- **`[[REPPO-healthy-flush-confirmed]]` 3-consec arc completed 8-15, day-4 bounce-resumes 8-16** — +2.71% reverses 8-15 mild-fade; drought partial-unwind (0.40× → 0.69× baseline).
+- **`[[top-pick-3-consec-accelerating]]` day-5 sharp-decay confirmed 8-16** — diagram-design 3,646 → 1,607 = -56% (from 8-15 -19% soft-break), confirms shape not sustainable past 4-day arc.
+- **`[[baileys-brand-jack-double]]` 8-14 n=1 4-day-gap no fresh** — deprecation-candidate 8-17.
+- **`[[explicit-rce-labeled-npm]]` 8-14 n=1 4-day-gap no fresh** — deprecation-candidate 8-17.
+- **`[[local-GPU-creative-desktop-app]]` 8-15 n=1 quiet 8-16** — modly absent from trending; needs n=2 recurrence.
+- **Sub-25 github-trending 18-consec permanent shape 8-16** — 13 candidates = thinnest print in memory-window (prior floor 15 on 8-13).
+
+## Positive events 8-15 evening → 8-16 evening
+
+- **CG clean-day d54 → d55 8-16** — memory-window record extends unbroken (first 55-day mark).
+- **Token-alert 9-consec → 10-consec 8-16** — memory-window record extends; first 10-day mark.
+- **Aeon-fleet clean d16 → d17 8-16** — 0/57 malware match through 99% volume decompression.
+- **`[[12Z-slot-dark-immunity-per-skill]]` 9→10-consec 8-16** — memory-window record; first 10-day mark.
+- **Sub-25 github-trending 17→18-consec permanent shape 8-16** — 13 today thinnest print in memory-window.
+- **`[[fleet-relevance agent-thesis]]` 4-consec → 5-consec-week durability 8-16** — extends record streak.
+- **Skill-graph first `ARCHITECTURE_OK` verdict 8-16 28d hold** — fleet architecture in steady-state despite active intra-content drift.
+- **`[[agent-browser-primitive]]` 8-15 n=1 day-2-validated 8-16** — ego-lite +230% memory-window-first day-2 sustained-acceleration.
+- **Heartbeat 08Z 8-15 crash confirmed one-off 8-16** — 3-consec-clean since; not a fresh recurring cliff.
+- **`[[malware-only-security-surface]]` 6-consec BREAKS via 99% volume decompression** — welcome return toward historical ~200/48h baseline.
+
 ## Current health snapshot (2026-08-15 evening, T-0 to 8-16)
 
 - **fork-cohort ISS-032 STILL UNFILED — 11th+ owed cycle P0 ~140h stuck at 14:08Z heartbeat 8-15** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 92h past 48h escalation. Owed since 8-11 18:40Z across 11 owed cycles (all 5 evening 18Z self-fires 8-13 + morning-brief/heartbeat 8-14 08:05Z/14:37Z + evening-recap/reflect 8-14 18Z + morning-brief 8-15 07:26Z + heartbeat 14:08Z; 12th cycle at 8-15 18Z reflect if unfiled). skill-health `classification_gap_flag` persists. Self-improve exit-gate ENGAGED at n=3 (#177+#179+#180 self-improve-shaped) blocks new rule-gap authoring. Operator manual-file is only remaining path.
