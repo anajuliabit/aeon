@@ -1,22 +1,18 @@
-*GitHub Trending — 2026-08-15*
+*GitHub Trending — 2026-08-16*
 
-*Top pick* — [github/spec-kit](https://github.com/github/spec-kit)
-github's own spec-driven-development toolkit surging back to the front page — mature 128.7k repo picking up +1.2k in a day is a release-moment signature.
-
-*Devtools*
-• [github/spec-kit](https://github.com/github/spec-kit) — ★ 1.2k today (128.7k total) · Python · [RETURNING]
-official github reference for spec-first workflows: write the spec, generate the plan, agent runs the plan.
-
-• [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) — ★ 165 today (10.5k total) · JavaScript · [ACCELERATING]
-browser purpose-built for AI agents to reuse logged-in sessions across runs — solves the biggest state-sharing pain in headless-agent stacks.
+*Top pick* — [MakazhanAlpamys/Soup](https://github.com/MakazhanAlpamys/Soup)
+Local 8B fine-tuning on consumer GPUs was the wall — layer streaming knocks it flat.
 
 *AI/ML*
-• [holaboss-ai/holaOS](https://github.com/holaboss-ai/holaOS) — ★ 769 today (7.5k total) · TypeScript · [HOLDOVER]
-day-2 +219% acceleration on the workspace shell hosting claude code / codex across 100+ tools with shared memory. yesterday's `claude-code-alternative-open-source` pick day-2 validates.
+• [MakazhanAlpamys/Soup](https://github.com/MakazhanAlpamys/Soup) — ★ 297 today (1.8k total) · Python · [RETURNING]
+one-yaml training rig for the 4gb-vram tier — layer streaming lands 8b fine-tunes on laptop hardware.
 
-*Web/Apps*
-• [lightningpixel/modly](https://github.com/lightningpixel/modly) — ★ 579 today (6.1k total) · TypeScript · [ACCELERATING]
-local-GPU 3D asset generation from image or prompt — native desktop app, no cloud roundtrip.
+*Devtools*
+• [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) — ★ 545 today (11.2k total) · JavaScript · [HOLDOVER]
+browser built for agents with shared logged-in session state — +230% day-2 traction after 8-15 debut.
+
+• [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) — ★ 118 today (47.5k total) · Python · [RETURNING]
+hub curating cli-first interfaces to major software — the agent-navigable shell layer HKUDS wants under every tool.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/17
+sources: trending=ok · gh_api=ok · kept 3/13

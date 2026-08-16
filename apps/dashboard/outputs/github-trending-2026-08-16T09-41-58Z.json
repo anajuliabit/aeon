@@ -1,0 +1,131 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-08-16"
+      },
+      "children": [
+        "topPickHeading",
+        "topPickLink",
+        "topPickDesc",
+        "sep1",
+        "aimlHeading",
+        "aimlItem1",
+        "aimlItem1Desc",
+        "sep2",
+        "devtoolsHeading",
+        "devtoolsItem1",
+        "devtoolsItem1Desc",
+        "devtoolsItem2",
+        "devtoolsItem2Desc",
+        "sep3",
+        "statusText"
+      ]
+    },
+    "topPickHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h2"
+      }
+    },
+    "topPickLink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MakazhanAlpamys/Soup",
+        "href": "https://github.com/MakazhanAlpamys/Soup"
+      }
+    },
+    "topPickDesc": {
+      "type": "Text",
+      "props": {
+        "text": "Local 8B fine-tuning on consumer GPUs was the wall — layer streaming knocks it flat."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aimlHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      }
+    },
+    "aimlItem1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MakazhanAlpamys/Soup",
+        "href": "https://github.com/MakazhanAlpamys/Soup",
+        "source": "★ 297 today (1.8k total) · Python · [RETURNING]"
+      }
+    },
+    "aimlItem1Desc": {
+      "type": "Text",
+      "props": {
+        "text": "one-yaml training rig for the 4gb-vram tier — layer streaming lands 8b fine-tunes on laptop hardware."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtoolsHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      }
+    },
+    "devtoolsItem1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "citrolabs/ego-lite",
+        "href": "https://github.com/citrolabs/ego-lite",
+        "source": "★ 545 today (11.2k total) · JavaScript · [HOLDOVER]"
+      }
+    },
+    "devtoolsItem1Desc": {
+      "type": "Text",
+      "props": {
+        "text": "browser built for agents with shared logged-in session state — +230% day-2 traction after 8-15 debut."
+      }
+    },
+    "devtoolsItem2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "HKUDS/CLI-Anything",
+        "href": "https://github.com/HKUDS/CLI-Anything",
+        "source": "★ 118 today (47.5k total) · Python · [RETURNING]"
+      }
+    },
+    "devtoolsItem2Desc": {
+      "type": "Text",
+      "props": {
+        "text": "hub curating cli-first interfaces to major software — the agent-navigable shell layer HKUDS wants under every tool."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "statusText": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/13",
+        "variant": "caption"
+      }
+    }
+  }
+}
