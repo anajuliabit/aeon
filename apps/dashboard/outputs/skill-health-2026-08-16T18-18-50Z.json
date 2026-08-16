@@ -1,0 +1,313 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health — 2026-08-16"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "systemic_section",
+        "sep2",
+        "critical_section",
+        "sep3",
+        "degraded_section",
+        "sep4",
+        "nodata_section",
+        "sep5",
+        "stats_section",
+        "sep6",
+        "notes_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 CRITICAL STATUS",
+        "message": "HEALTH: CRITICAL(3) — 3 skills down on WAIT-API",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "systemic_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "systemic_heading",
+        "systemic_usepod",
+        "systemic_batch"
+      ]
+    },
+    "systemic_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Systemic Issues",
+        "level": "h3"
+      }
+    },
+    "systemic_usepod": {
+      "type": "Text",
+      "props": {
+        "text": "usepod.ai 402 — 3 skills",
+        "variant": "lead"
+      }
+    },
+    "systemic_batch": {
+      "type": "Text",
+      "props": {
+        "text": "12Z batch dark d51 — 4 skills",
+        "variant": "lead"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical_heading",
+        "critical_alerts"
+      ]
+    },
+    "critical_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL (3)",
+        "level": "h3"
+      }
+    },
+    "critical_alerts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "critical_unlock",
+        "critical_dealflow",
+        "critical_security"
+      ]
+    },
+    "critical_unlock": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor — consec=7 · 13d down — WAIT-API → ISS-031",
+        "variant": "body"
+      }
+    },
+    "critical_dealflow": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow — consec=6 · 13d down — WAIT-API → ISS-031",
+        "variant": "body"
+      }
+    },
+    "critical_security": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan — consec=3 · 13d down — WAIT-API → ISS-031",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_list"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (17)",
+        "level": "h3"
+      }
+    },
+    "degraded_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "degraded_items",
+        "degraded_more"
+      ]
+    },
+    "degraded_items": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report 8% · skill-analytics 22% · reg-monitor 22% · vuln-scanner 27% · market-context-refresh 32%",
+        "variant": "body"
+      }
+    },
+    "degraded_more": {
+      "type": "Text",
+      "props": {
+        "text": "+12 more → memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "nodata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata_heading",
+        "nodata_text"
+      ]
+    },
+    "nodata_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "nodata_text": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch · fork-skill-gap · operator-scorecard",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "healthy_stat",
+        "issues_stats"
+      ]
+    },
+    "healthy_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "🟢 HEALTHY",
+        "value": "7"
+      }
+    },
+    "issues_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "open_issues_stat",
+        "resolved_stat",
+        "filed_stat"
+      ]
+    },
+    "open_issues_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "resolved_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "filed_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "0"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notes_heading",
+        "notes_content"
+      ]
+    },
+    "notes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notes",
+        "level": "h3"
+      }
+    },
+    "notes_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note1",
+        "note2",
+        "note3"
+      ]
+    },
+    "note1": {
+      "type": "Text",
+      "props": {
+        "text": "Composition identical to prev 8-15 18:16Z fire",
+        "variant": "caption"
+      }
+    },
+    "note2": {
+      "type": "Text",
+      "props": {
+        "text": "Daily-reminder cadence elapsed (47h44m > 24h)",
+        "variant": "caption"
+      }
+    },
+    "note3": {
+      "type": "Text",
+      "props": {
+        "text": "Mon 8-17 auto-clear for 4 stuck Mon-scheduled skills if usepod dispatcher recovers",
+        "variant": "caption"
+      }
+    }
+  }
+}
