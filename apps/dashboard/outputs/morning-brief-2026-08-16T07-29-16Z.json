@@ -1,0 +1,514 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "morning-brief — 2026-08-16 (sunday)"
+      },
+      "children": [
+        "focus_section",
+        "sep1",
+        "yesterday_section",
+        "sep2",
+        "cronstate_section",
+        "sep3",
+        "running_section"
+      ]
+    },
+    "focus_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_heading",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "focus_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "focus today",
+        "level": "h2"
+      }
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "f1_label",
+        "f1_desc",
+        "f1_why"
+      ]
+    },
+    "f1_label": {
+      "type": "Text",
+      "props": {
+        "text": "1. sunday weekly-batch",
+        "variant": "lead"
+      }
+    },
+    "f1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "operator merges 3+ of #174/#176/#177/#179/#180",
+        "variant": "body"
+      }
+    },
+    "f1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: sunday-only review cycle unblocks self-improve exit-gate",
+        "variant": "muted"
+      }
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "f2_label",
+        "f2_desc",
+        "f2_why"
+      ]
+    },
+    "f2_label": {
+      "type": "Text",
+      "props": {
+        "text": "2. fork-cohort 19z sunday re-fire",
+        "variant": "lead"
+      }
+    },
+    "f2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "first natural cycle since 8-09 stuck",
+        "variant": "body"
+      }
+    },
+    "f2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: today's slot is iss-032 root-cause decider",
+        "variant": "muted"
+      }
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "f3_label",
+        "f3_desc",
+        "f3_why"
+      ]
+    },
+    "f3_label": {
+      "type": "Text",
+      "props": {
+        "text": "3. iss-032 manual-file",
+        "variant": "lead"
+      }
+    },
+    "f3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "14th+ owed cycle memory-window unprecedented",
+        "variant": "body"
+      }
+    },
+    "f3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: operator-only path if 19z re-fire also stalls",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "yesterday_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yesterday_heading",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5"
+      ]
+    },
+    "yesterday_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "since yesterday",
+        "level": "h2"
+      }
+    },
+    "y1": {
+      "type": "Text",
+      "props": {
+        "text": "reflect promoted 2 formal patterns (defi-curator-cross-domain-drift + quiet-kev-baseline) + new composite regime (security-surface-inversion); 11 n=1 candidates absorbed",
+        "variant": "body"
+      }
+    },
+    "y2": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner first non-clean verdict in memory-window: 1 high (cdp suggestedfilename traversal) + 2 medium on citrolabs/ego-lite — breaks 3-consec clean streak",
+        "variant": "body"
+      }
+    },
+    "y3": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat 08z crash confirmed one-off: 14z + 20z both clean post-crash, no memory-issue-file needed",
+        "variant": "body"
+      }
+    },
+    "y4": {
+      "type": "Text",
+      "props": {
+        "text": "pr queue unchanged at 5 since 8-14 (#180 fresh · #179 ~4d · #177 ~6d · #176 ~7d · #174 ~7d 20h well past stall band); no operator merges",
+        "variant": "body"
+      }
+    },
+    "y5": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort iss-032 13th → 14th+ owed cycle across 8-15 evening batch + 20z heartbeat + this fire",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cronstate_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cron_heading",
+        "cron_items",
+        "sep4",
+        "chronic_subsection"
+      ]
+    },
+    "cron_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "cron-state flagged (consec≥2 or sr<0.5)",
+        "level": "h2"
+      }
+    },
+    "cron_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ]
+    },
+    "c1": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort last_success 8-02t19:52z (~14d stale, classifies healthy under strict rules — 19z sunday re-fire is decider)",
+        "variant": "body"
+      }
+    },
+    "c2": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor consec=7 sr=38%",
+        "variant": "body"
+      }
+    },
+    "c3": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow consec=6 sr=44%",
+        "variant": "body"
+      }
+    },
+    "c4": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan consec=3 sr=67%",
+        "variant": "body"
+      }
+    },
+    "c5": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill consec=2 sr=37% (all iss-031 aftermath, mon-batch self-clears 8-17)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chronic_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "chronic_heading",
+        "chronic_note",
+        "chronic_items"
+      ]
+    },
+    "chronic_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "chronic sr<0.5 cohort",
+        "level": "h3"
+      }
+    },
+    "chronic_note": {
+      "type": "Text",
+      "props": {
+        "text": "13-skill composition-locked ~30h span",
+        "variant": "muted"
+      }
+    },
+    "chronic_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ch1",
+        "ch2",
+        "ch3",
+        "ch4",
+        "ch5",
+        "ch6",
+        "ch7",
+        "ch8",
+        "ch9",
+        "ch10",
+        "ch11",
+        "ch12",
+        "ch13"
+      ]
+    },
+    "ch1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report 8%",
+        "variant": "body"
+      }
+    },
+    "ch2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics 22%",
+        "variant": "body"
+      }
+    },
+    "ch3": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor 22%",
+        "variant": "body"
+      }
+    },
+    "ch4": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner 27%",
+        "variant": "body"
+      }
+    },
+    "ch5": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh 32%",
+        "variant": "body"
+      }
+    },
+    "ch6": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker 33%",
+        "variant": "body"
+      }
+    },
+    "ch7": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog 37%",
+        "variant": "body"
+      }
+    },
+    "ch8": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-control 40% disabled",
+        "variant": "body"
+      }
+    },
+    "ch9": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow 44%",
+        "variant": "body"
+      }
+    },
+    "ch10": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest 45%",
+        "variant": "body"
+      }
+    },
+    "ch11": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse 47%",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running_heading",
+        "running_items"
+      ]
+    },
+    "running_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "running today (sunday)",
+        "level": "h2"
+      }
+    },
+    "running_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8",
+        "r9"
+      ]
+    },
+    "r1": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief · daily-routine · thought-review @ 07:00",
+        "variant": "body"
+      }
+    },
+    "r2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00 · heartbeat @ 08:00/14:00/20:00",
+        "variant": "body"
+      }
+    },
+    "r3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 · token-alert @ 12:00 · btc-levels every 4h",
+        "variant": "body"
+      }
+    },
+    "r4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00",
+        "variant": "body"
+      }
+    },
+    "r5": {
+      "type": "Text",
+      "props": {
+        "text": "skill-graph @ 17:00 (sunday-only) · list-digest @ 17:00 · agent-buzz @ 17:30",
+        "variant": "body"
+      }
+    },
+    "r6": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker · skill-health · reflect · action-converter @ 18:00 (self-improve skips — even day)",
+        "variant": "body"
+      }
+    },
+    "r7": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest @ 18:30 (sunday-only)",
+        "variant": "body"
+      }
+    },
+    "r8": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort · skill-update-check @ 19:00 (sunday-only)",
+        "variant": "body"
+      }
+    },
+    "r9": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap · thought-review @ 21:00",
+        "variant": "body"
+      }
+    }
+  }
+}
