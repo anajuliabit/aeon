@@ -1088,4 +1088,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-16,skill-graph,claude-opus-4-7,98,37889,9352775,138973
 2026-08-16,agent-buzz,claude-opus-4-7,24,16965,1272134,83758
 2026-08-16,reflect,claude-opus-4-7,28,45416,2437084,159556
-2026-08-16,skill-update-check,claude-sonnet-4-6,4649,2429,313689,50578
+2026-08-16,fork-cohort,claude-sonnet-4-6,55,71575,4914782,130818

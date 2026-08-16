@@ -1,0 +1,222 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Cohort — 2026-08-16 — aaronjmars/aeon"
+      },
+      "children": [
+        "alert_levelup",
+        "sep_1",
+        "heading_overview",
+        "stack_stats",
+        "sep_2",
+        "heading_distribution",
+        "stack_status",
+        "sep_3",
+        "heading_levelup",
+        "stack_levelup",
+        "sep_4",
+        "heading_stale",
+        "text_stale",
+        "sep_5",
+        "heading_new",
+        "text_new",
+        "sep_6",
+        "link_report"
+      ]
+    },
+    "alert_levelup": {
+      "type": "Alert",
+      "props": {
+        "title": "Leveled Up",
+        "message": "3 forks crossed POWER threshold",
+        "type": "success"
+      }
+    },
+    "sep_1": {
+      "type": "Separator"
+    },
+    "heading_overview": {
+      "type": "Heading",
+      "props": {
+        "text": "Overview",
+        "level": "h3"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_scanned",
+        "stat_rate"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Forks",
+        "value": "238"
+      }
+    },
+    "stat_scanned": {
+      "type": "Stat",
+      "props": {
+        "label": "Scanned (7d)",
+        "value": "35 of 80"
+      }
+    },
+    "stat_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Activity Rate",
+        "value": "44%"
+      }
+    },
+    "sep_2": {
+      "type": "Separator"
+    },
+    "heading_distribution": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Distribution",
+        "level": "h3"
+      }
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_power",
+        "stat_active",
+        "stat_stale",
+        "stat_cold"
+      ]
+    },
+    "stat_power": {
+      "type": "Stat",
+      "props": {
+        "label": "POWER",
+        "value": "25"
+      }
+    },
+    "stat_active": {
+      "type": "Stat",
+      "props": {
+        "label": "ACTIVE",
+        "value": "10"
+      }
+    },
+    "stat_stale": {
+      "type": "Stat",
+      "props": {
+        "label": "STALE",
+        "value": "7"
+      }
+    },
+    "stat_cold": {
+      "type": "Stat",
+      "props": {
+        "label": "COLD",
+        "value": "38"
+      }
+    },
+    "sep_3": {
+      "type": "Separator"
+    },
+    "heading_levelup": {
+      "type": "Heading",
+      "props": {
+        "text": "Leveled up to POWER",
+        "level": "h3"
+      }
+    },
+    "stack_levelup": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_levelup_1",
+        "text_levelup_2",
+        "text_levelup_3"
+      ]
+    },
+    "text_levelup_1": {
+      "type": "Text",
+      "props": {
+        "text": "@enuno — noesis-aeon (19 skills enabled, COLD→POWER)",
+        "variant": "body"
+      }
+    },
+    "text_levelup_2": {
+      "type": "Text",
+      "props": {
+        "text": "@belikh — aeon (21 skills enabled, new fork)",
+        "variant": "body"
+      }
+    },
+    "text_levelup_3": {
+      "type": "Text",
+      "props": {
+        "text": "@yghffhgx — aeon (5 skills enabled, new fork)",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator"
+    },
+    "heading_stale": {
+      "type": "Heading",
+      "props": {
+        "text": "Went stale (worth a check-in)",
+        "level": "h3"
+      }
+    },
+    "text_stale": {
+      "type": "Text",
+      "props": {
+        "text": "@aganoob — last run 20d ago (dropped from POWER)",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator"
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "New running forks",
+        "level": "h3"
+      }
+    },
+    "text_new": {
+      "type": "Text",
+      "props": {
+        "text": "@alexverify, @sysvhurtstop",
+        "variant": "body"
+      }
+    },
+    "sep_6": {
+      "type": "Separator"
+    },
+    "link_report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "articles/fork-cohort-2026-08-16.md",
+        "source": "Fork Cohort"
+      }
+    }
+  }
+}
