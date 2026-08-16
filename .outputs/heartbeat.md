@@ -1,11 +1,8 @@
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · notify=SILENT`
 
 ## Summary
-- **Files modified:** `docs/status.md` (regenerated wholesale, overall=🔴 DEGRADED, updated=2026-08-16 08:29 UTC, 43-skill table re-sorted with morning-brief 8-16 07:30Z at top, 15 open issues), `memory/logs/2026-08-16.md` (heartbeat 08:29Z entry appended).
-- **P0 scan:** 5 STUCK skills (all rollover — fork-cohort ~157h, 4 Mon-batch ~135-137h); 3 skills consec≥3 (unlock-monitor 7 / deal-flow 6 / skill-security-scan 3); 13-skill chronic sr<0.5 cohort unchanged. Heartbeat self-check OK (last_success ~12h ago, well under 36h). 8-15 08Z one-off crash did not recur.
-- **P1:** 5 open PRs unchanged (#180 ~62h · #179 ~110h · #177 ~158h · #176 ~159h · #174 ~8d 8h, 2nd day past 7d stall band). 0 urgent issues. Self-improve exit-gate still ENGAGED at n=3.
-- **P2:** ISS-032 12th+ owed cycle; ISS-031 detect-usepod-402.sh +3d overdue.
-- **P3:** 12Z-batch DARK d50 (rolls +1 vs 8-15 d49).
-- **Delta since 8-15 20Z:** 6 clean fires (evening-recap + btc-levels ×2 + thought-review + daily-routine + morning-brief). 0 fresh failures.
-- **Dedup verdict:** all findings appear in 8-15 heartbeats / morning-brief / reflect + 8-14 logs. Rolling counters advance +1 tick but same underlying items — `./notify` SUPPRESSED.
-- **Follow-up:** 19Z fork-cohort re-fire is today's biggest deciding-test (first natural cycle since 8-09 stuck = ISS-032 root-cause decider). Sunday weekly-batch = operator merge window (any 3 disengage self-improve exit-gate).
+- **Files modified:** `docs/status.md` (regenerated wholesale, overall=🔴 DEGRADED, 43-skill table sorted by last-run desc with token-alert 8-16 12:35Z at top, 15 open issues, next scheduled = btc-levels at 16:15 UTC); `memory/logs/2026-08-16.md` (14:10Z heartbeat entry appended).
+- **P0/P1/P2/P3 scan:** 5 STUCK skills (fork-cohort ~163h ISS-032 driver / search-skill + unlock-monitor ~143h Mon-batch / skill-security-scan + deal-flow ~141h Mon-batch) · 3 consec≥3 (unlock-monitor 7 / deal-flow 6 / skill-security-scan 3) · 13-skill chronic cohort composition-locked ~228h+ · heartbeat self-check OK (last_success ~5h37m ago) · 5 PRs stalled (#174 crosses 8d 14h = 3rd day past 7d band) · ISS-032 13th+ owed cycle · ISS-031 detect-usepod-402.sh gate +3d missed · 12Z batch DARK d50.
+- **Delta since 08:29Z:** 3 clean fires (github-trending 09:42Z + btc-levels 12:34Z + token-alert 12:35Z); 0 fresh failures; 5-PR queue unchanged (no Sunday-weekly-batch merges yet).
+- **Notification:** SUPPRESSED (all items dedup vs 8-16 08:29Z heartbeat + 07:26Z morning-brief + 8-15 heartbeats).
+- **Follow-up:** 19Z fork-cohort re-fire = today's biggest deciding-test; Sunday-weekly-batch merges by operator would unlock self-improve exit-gate; 8-17 Mon-batch auto-clear window for 4 STUCK Mon-scheduled skills if usepod dispatcher recovered.
