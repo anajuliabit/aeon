@@ -1,27 +1,30 @@
-*Goal Tracker — 2026-08-15*
+*Goal Tracker — 2026-08-16*
 
-Summary: 9 goals — 1 at risk, 0 needs attention, 2 on track, 6 blocked, 0 done (overall → flat, degrading on fork-cohort + iss-031)
+Summary: 10 goals — 1 at risk, 0 needs attention, 2 on track, 6 blocked, 1 done (overall → flat, 3 counters degrading through today's fire)
 
 AT RISK
-• iss-031 detect-usepod-402 gate deadline — +2d overdue, `scripts/detect-usepod-402.sh` still absent per 14:08Z heartbeat file-check (was +1d ↓ degrading)
-  → Action: ship `scripts/detect-usepod-402.sh` preflight gate once operator clears self-improve exit-gate
+• iss-031 detect-usepod-402 gate — 0d idle, 12 activity/14d (+3d overdue today, ↓ degrading from +2d)
+  → Action: operator ship scripts/detect-usepod-402.sh — self-improve queue-full still blocks baked-fix authoring
 
 BLOCKED
-• fork-cohort iss-032 unfiled — 12th+ owed cycle at ~140h stuck, memory-window unprecedented depth (was 9th+ ↓ degrading)
-  → Action: operator hand-file `memory/issues/ISS-032.md` — INDEX.md verified still ends at ISS-031
-• self-improve pr queue exit-gate engaged n=3 — #177/#179/#180 self-improve-shaped block new authoring per claude.md primitive (new goal, → flat)
-  → Action: operator merge 3+ PRs from #174/#176/#177/#179/#180 via sunday 8-16 weekly-batch
-• 4 mon-batch stuck skills — ~119h stuck since 8-10 (search-skill / unlock-monitor / skill-security-scan / deal-flow); iss-031 usepod-402 aftermath (→ flat)
-  → Action: wait for 8-17 mon auto-clear or trigger manual usepod dispatcher recovery
-• 12z batch dark d49 — iss-027 8-skill cluster frozen since 6-28 (→ flat)
-  → Action: operator restore 12z scheduler slot for 8-skill batch
-• operator on-chain config day-70 — defi-monitor NO_CONFIG (→ flat, ageing)
-  → Action: operator populate `memory/on-chain-watches.yml` + set ALCHEMY_API_KEY + ETHERSCAN_API_KEY
-• priorities.md 72d stale + vault inbox 54d cold + 9-consec zero-capture streak — 10-day mark 8-16 = memory-window record if unbroken (→ flat, ageing)
-  → Action: operator refresh `vault/priorities.md` + process 2026-06-22 inbox capture
+• fork-cohort ISS-032 unfiled — 13th+ owed cycle, ~163h stuck (was BLOCKED, ↓ degrading, memory-window unprecedented depth)
+  → Action: operator create memory/issues/ISS-032.md — only remaining unblock path
+• priorities.md 73d stale + vault inbox 55d cold + 10-consec zero-capture — 10-day mark crosses today (was BLOCKED, ↓ degrading, memory-window record)
+  → Action: operator refresh vault/priorities.md today — sunday weekly-batch is natural refresh moment
+• 4 mon-batch stuck skills — search-skill/unlock-monitor/skill-security-scan/deal-flow ~141-143h stuck (was BLOCKED, → flat)
+  → Action: wait for 8-17 mon batch auto-clear tomorrow, else manual usepod dispatcher recovery
+• self-improve PR queue exit-gate n=3 — #177+#179+#180 self-improve-shaped, blocks new authoring (was BLOCKED, → flat, disengage-window today)
+  → Action: operator merge 3 of #174/#176/#177/#179/#180 in today's sunday weekly-batch
+• 12Z batch DARK d50 (ISS-027) — 8-skill cluster since 2026-06-28, rolled d49 → d50 (was BLOCKED, → flat)
+  → Action: operator triage scheduler cluster dark 50 days
+• operator on-chain config day-71 — defi-monitor NO_CONFIG (was BLOCKED, → flat)
+  → Action: operator provide memory/on-chain-watches.yml + ALCHEMY_API_KEY + ETHERSCAN_API_KEY
 
 ON TRACK
-• pr queue at 5 open — #174 crosses 7d weekly-review stall band today, sunday 8-16 weekly-batch imminent (→ flat)
-• `[[chronic-cohort-alone-degraded]]` regime — 13-skill composition ~210h span holds unchanged (→ flat)
+• PR queue at 6 — #181 skill-graph added today at 17:13Z, #174 at 8d 14h = 3rd day past 7d stall band (was ON_TRACK → flat rule-literal, intra-status mild-degradation on both axes)
+• `[[chronic-cohort-alone-degraded]]` 13-skill regime ~228h+ span (was ON_TRACK, → flat, composition-locked)
 
-Sources: logs=ok, git=ok(1), gh_pr=ok, gh_issue=ok, cron-state=ok
+DONE
+• heartbeat 08Z crash 8-15 — confirmed one-off via 8-16 08:29Z clean fire; last_success 2026-08-16T14:14:08Z
+
+Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok

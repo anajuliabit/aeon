@@ -3,7 +3,6 @@
 
 ## Current Goals
 - **fork-cohort ISS-032 STILL UNFILED — 11th+ owed cycle P0 ~140h stuck at heartbeat 14:08Z 8-15** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 92h past 48h escalation. Owed since 8-11 18:40Z across 11 owed cycles (all 5 evening 18Z self-fires 8-13 + morning-brief/heartbeat 8-14 08:05Z/14:37Z + evening-recap/reflect 8-14 18Z + morning-brief 8-15 07:26Z + heartbeat 14:08Z). skill-health `classification_gap_flag` persists (`status='dispatched' AND days_since_last_dispatch>=3` branch missing). Self-improve exit-gate ENGAGED at n=3 (#177+#179+#180) blocked rule-gap authoring. Operator manual-file is only remaining path. 12th cycle 8-15 18Z reflect (this fire) if unfiled.
-- **NEW: heartbeat 08Z fresh crash 8-15** — dispatched 08:16:44Z, last_status still "dispatched" ~5h52m later at 14:08Z scan. Peer skill-freshness (same 08:16:44Z batch) succeeded 08:27:51Z; dispatcher path clean → heartbeat-specific crash on the fire immediately after 8-14 20:10:26Z success. 20Z next fire is one-off-vs-recurring-cliff decider.
 - **ISS-031 detect-usepod-402 gate +2d overdue on 8-15** — `scripts/detect-usepod-402.sh` still absent per morning-brief 07:26Z bash file-check + heartbeat 14:08Z re-confirm.
 - **Self-improve PR queue exit-gate ENGAGED n=3** — #177 + #179 + #180 all self-improve-shaped. Blocks new authoring per SKILL step 1.
 - **PR queue at 5 on 8-15** — #180 (reg-monitor CFTC HTML-fallback ~44h), #179 (fix(token-alert) ~91h), #177 (fix(claude-md) ISS-028 ~140h), #176 (skill-graph regen ~141h), **#174 (Advisor Brier-weight ~7d 14h now crosses 7d weekly-review stall band per CLAUDE.md — first PR to cross this cycle)**. Weekly-batch tomorrow (Sunday 8-16).
@@ -13,7 +12,8 @@
 - **Operator on-chain config day-70 on 8-15** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY.
 - **priorities.md 72d stale + vault inbox 54d cold + 9-consec zero-capture-day (8-07→8-15)** — weekly-review 8-10 T-0 refresh-ask now d5 unactioned.
 
-## Recently Cleared (8-14 → 8-15)
+## Recently Cleared (8-14 → 8-16)
+- **heartbeat 08Z fresh crash 8-15 RESOLVED 8-16** — deciding-test outcome one-off (not recurring-cliff); 3-consec clean fires post-crash (8-15 14:15Z + 8-15 20:20Z + 8-16 08:29Z), last_success 2026-08-16T14:14:08Z at 14Z fire; morning-brief 07:26Z verdict: "no memory-issue-file needed per 8-15 20z heartbeat deciding-test".
 - **`[[defi-curator-cross-domain-drift]]` FORMAL PATTERN promoted n=3 8-15 via list-digest 17:30Z** — 2/2 signal items off-lane (LLM formal-arch DeFiMinty + consumer-possession-mindset hooeem); rail-promotion crosses.
 - **`[[quiet-KEV-baseline]]` FORMAL PATTERN promoted n=3 8-15 via security-digest 14:20Z** — 3-consec-UTC-day 8-13→8-15 (all 3 fresh KEV adds occurred 8-11, none 8-12/8-13/8-14/8-15); rail-promotion crosses.
 - **NEW `[[security-surface-inversion]]` composite regime 8-15** — quiet-KEV 3-consec + malware-only 6-consec first co-occurrence in memory-window: real-world exploitation rotated CVE-first → registry-first.
