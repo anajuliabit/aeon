@@ -180,8 +180,8 @@
     "last_quality_score": 5
   },
   "token-alert": {
-    "last_dispatch": "2026-08-15T12:49:32Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-16T12:31:55Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-15T12:54:42Z",
     "total_runs": 97,
     "total_successes": 79,
@@ -629,8 +629,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-08-16T08:28:13Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-16T12:31:55Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-16T08:30:06Z",
     "total_runs": 425,
     "total_successes": 342,
