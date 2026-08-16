@@ -1,0 +1,42 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-failed",
+        "alert-recovered"
+      ]
+    },
+    "alert-failed": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-skill-digest",
+        "message": "20:03z (consec=2 — retry in-flight 20:09z). first fresh fleet failure since 8-10 usepod outage.",
+        "type": "error"
+      }
+    },
+    "alert-recovered": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort",
+        "message": "clean 19:30z — iss-032 15-owed-cycle collapses organically, first natural cycle since 8-09.",
+        "type": "success"
+      }
+    }
+  }
+}
