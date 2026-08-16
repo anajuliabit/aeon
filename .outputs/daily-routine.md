@@ -1,46 +1,53 @@
-*Daily Routine — 2026-08-15*
+*Daily Routine — 2026-08-16*
 
-_chain sub-outputs stamped 8-07 (drift n=4+); xai cache fresh 8-14→8-15._
+_chain sub-outputs still stamped 2026-08-07 (day-5 drift). tweet roundup is the only fresh section._
 
-*Top 10 Winners (24h)*
+*Top Winners (24h)* — vintage 8-07
 1. XPIN: $0.001749 (+12.5%)
 2. BEAT: $2.15 (+12.0%)
-3. LIT: $2.36 (+8.9%)
-4. BTW: $0.1893 (+7.6%)
-5. EDGE: $0.3919 (+7.3%)
+3. LIT (Lighter): $2.36 (+8.9%)
+4. BTW (Bitway): $0.1893 (+7.6%)
+5. EDGE (edgeX): $0.3919 (+7.3%)
 6. ADA: $0.2016 (+7.1%)
 7. BinanceLife: $0.5397 (+6.8%)
 8. CFX: $0.04033 (+6.5%)
-9. Q: $0.02286 (+6.1%)
-10. XEC: $0.00000662 (+6.1%)
+9. Q (Quack AI): $0.02286 (+6.1%)
+10. XEC: $0.000006620 (+6.1%)
 
-*Top 10 Losers (24h)*
-1. CC: $0.08814 (−13.5%)
-2. BONK: $0.00000255 (−8.7%)
+*Top Losers (24h)* — vintage 8-07
+1. CC (Canton): $0.08814 (−13.5%)
+2. BONK: $0.000002550 (−8.7%)
 3. VELVET: $0.4488 (−8.0%)
-4. TEL: $0.001450 (−6.8%)
+4. TEL (Telcoin): $0.001450 (−6.8%)
 5. ONDO: $0.3497 (−6.4%)
 6. CARDS: $0.1517 (−6.1%)
-7. META: $4.96 (−6.1%)
+7. META (MetaDAO): $4.96 (−6.1%)
 8. FET: $0.1315 (−5.8%)
-9. US: $0.05217 (−5.4%)
-10. UB: $0.1334 (−4.9%)
+9. US (Talus): $0.05217 (−5.4%)
+10. UB (Unibase): $0.1334 (−4.9%)
 
-_movers 8-07 vintage — chain didn't refresh, skip if you saw yesterday's._
+*Tweet Roundup* (fresh 8-15 → 8-16, XAI cache HIT)
+*Crypto:*
+- @Vivek4real_: cathie wood urges investors to sell gold for btc, targets $1.5M by 2030. https://x.com/Vivek4real_/status/2088490114410508595
+- @Vivek4real_: vaneck admits buying the btc dip at $60k, wants full position by october. https://x.com/Vivek4real_/status/2088759137102344417
+- @LaDoger: "learn to think in bitcoin" (video). https://x.com/LaDoger/status/2088653241647091960
 
-*Tweet Roundup (8-14→8-15, xai cache HIT)*
-*Crypto:* @RaoulGMI thesis — everything onchain (stablecoins, RWAs, the whole system); just buy the L1s the rails run on. @cryptorover calls the pre-cycle BTC "valley of death." @flourmarkets teases prediction NFTs on Robinhood. [raoul](https://x.com/RaoulGMI/status/2088324736388657526) · [rover](https://x.com/cryptorover/status/2088147859246104957) · [flour](https://x.com/flourmarkets/status/2088264645069156581)
+*AI:*
+- @eng_khairallah1: 7-claude-agent system running an $18.8k/month business — scans google maps, builds sites, sends cold outreach. https://x.com/eng_khairallah1/status/2088584005092286624
+- @milichab: 9-month progress on AI city-builder — composer 1 → grok 4.6 + /loop, full 3D/AAA. https://x.com/milichab/status/2088704783750398121
+- @RohOnChain: karpathy free 4h lecture on building LLMs like chatgpt & claude from scratch. https://x.com/RohOnChain/status/2088664413494739208
 
-*AI:* @AndrewYNg maps AI Engineering skills. @inherent_labs' Faraday — 27B AI Scientist, long-horizon RL, beats Opus 4.8 + GPT-5.5 on paper replication. @JiachengGu50887 ships AQuA — recursive self-improvement for quant research on GPT-5.6 Sol. [ng](https://x.com/AndrewYNg/status/2088302050706686198) · [faraday](https://x.com/inherent_labs/status/2088290794092298655) · [aqua](https://x.com/JiachengGu50887/status/2088336767267283069)
+*Dev:*
+- @tornikegomareli: talkify — 8.2 MB on-device macos dictation, 123 ms latency via apple speechanalyzer, OSS. https://x.com/tornikegomareli/status/2088524464224919700
+- @alaymanguy: shadergradient — figma/framer plugin + copy-paste react code for web shaders, OSS. https://x.com/alaymanguy/status/2088528410025120164
+- @TheTechDiggest: shadcndashboard react admin kit (shadcn/ui + next.js + tailwind v4). https://x.com/TheTechDiggest/status/2088671230685528441
 
-*Dev:* @resend ships react.email — react/ts/tailwind emails, oss, any platform. @winglee open-sources zeron — rust+gpui cross-device agent control plane. [resend](https://x.com/resend/status/2088325797815992533) · [zeron](https://x.com/winglee/status/2088325135422173226)
-
-*Paper of the Day*
-"AgentOPSD: Recursive Self-Distillation for Agentic RL" — Tsinghua, ↑49. Turn-level credit via recursive Bayesian belief updates on teacher-student log-prob gaps. No critic, no extra rollouts. 89.1% ALFWorld / Qwen2.5-7B. [arxiv](https://arxiv.org/abs/2608.05987)
+*Paper of the Day* — vintage 8-07
+"AgentOPSD: Recursive Self-Distillation for Agentic RL" — tsinghua, ↑49. turn-level credit via recursive bayesian belief updates on teacher-student log-prob gaps; 89.1% ALFWorld with qwen2.5-7b. https://arxiv.org/abs/2608.05987
 
 *GitHub Issues*
-0 new on `user:anajuliabit` 24h. Clean-day streak holds.
+no new issues (24h window, user:anajuliabit) — 12-consec clean-day.
 
-*HN Digest*
-1. [AMD acquires Taalas — compute-in-memory silicon](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344) (621pts) — weights-as-wiring. [hn](https://news.ycombinator.com/item?id=49201970)
-2. [Mario Meets Pareto](https://www.mayerowitz.io/blog/mario-meets-pareto) (1027pts) — pareto frontier via kart-stat scrollytelling. [hn](https://news.ycombinator.com/item?id=49195231)
+*HN Digest* — vintage 8-07
+1. amd acquires taalas to boost inference by etching models in silicon (621 pts). https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344
+2. github actions & pages degraded — us-hours ci outage, forge-migration thread (391 pts). https://www.githubstatus.com/incidents/qcvjkzcs7j74

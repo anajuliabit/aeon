@@ -1,0 +1,625 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-16"
+      },
+      "children": [
+        "note-text",
+        "sep-1",
+        "winners-section",
+        "sep-2",
+        "losers-section",
+        "sep-3",
+        "tweet-section",
+        "sep-4",
+        "paper-section",
+        "sep-5",
+        "github-section",
+        "sep-6",
+        "hn-section"
+      ]
+    },
+    "note-text": {
+      "type": "Text",
+      "props": {
+        "text": "Chain sub-outputs still stamped 2026-08-07 (day-5 drift). tweet roundup is the only fresh section.",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-note",
+        "winners-grid"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners-note": {
+      "type": "Text",
+      "props": {
+        "text": "vintage 8-07",
+        "variant": "caption"
+      }
+    },
+    "winners-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "winner-1",
+        "winner-2",
+        "winner-3",
+        "winner-4",
+        "winner-5",
+        "winner-6",
+        "winner-7",
+        "winner-8",
+        "winner-9",
+        "winner-10"
+      ]
+    },
+    "winner-1": {
+      "type": "Stat",
+      "props": {
+        "label": "XPIN",
+        "value": "$0.001749",
+        "delta": "+12.5%",
+        "trend": "up"
+      }
+    },
+    "winner-2": {
+      "type": "Stat",
+      "props": {
+        "label": "BEAT",
+        "value": "$2.15",
+        "delta": "+12.0%",
+        "trend": "up"
+      }
+    },
+    "winner-3": {
+      "type": "Stat",
+      "props": {
+        "label": "LIT (Lighter)",
+        "value": "$2.36",
+        "delta": "+8.9%",
+        "trend": "up"
+      }
+    },
+    "winner-4": {
+      "type": "Stat",
+      "props": {
+        "label": "BTW (Bitway)",
+        "value": "$0.1893",
+        "delta": "+7.6%",
+        "trend": "up"
+      }
+    },
+    "winner-5": {
+      "type": "Stat",
+      "props": {
+        "label": "EDGE (edgeX)",
+        "value": "$0.3919",
+        "delta": "+7.3%",
+        "trend": "up"
+      }
+    },
+    "winner-6": {
+      "type": "Stat",
+      "props": {
+        "label": "ADA",
+        "value": "$0.2016",
+        "delta": "+7.1%",
+        "trend": "up"
+      }
+    },
+    "winner-7": {
+      "type": "Stat",
+      "props": {
+        "label": "BinanceLife",
+        "value": "$0.5397",
+        "delta": "+6.8%",
+        "trend": "up"
+      }
+    },
+    "winner-8": {
+      "type": "Stat",
+      "props": {
+        "label": "CFX",
+        "value": "$0.04033",
+        "delta": "+6.5%",
+        "trend": "up"
+      }
+    },
+    "winner-9": {
+      "type": "Stat",
+      "props": {
+        "label": "Q (Quack AI)",
+        "value": "$0.02286",
+        "delta": "+6.1%",
+        "trend": "up"
+      }
+    },
+    "winner-10": {
+      "type": "Stat",
+      "props": {
+        "label": "XEC",
+        "value": "$0.000006620",
+        "delta": "+6.1%",
+        "trend": "up"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-note",
+        "losers-grid"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers-note": {
+      "type": "Text",
+      "props": {
+        "text": "vintage 8-07",
+        "variant": "caption"
+      }
+    },
+    "losers-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "loser-1",
+        "loser-2",
+        "loser-3",
+        "loser-4",
+        "loser-5",
+        "loser-6",
+        "loser-7",
+        "loser-8",
+        "loser-9",
+        "loser-10"
+      ]
+    },
+    "loser-1": {
+      "type": "Stat",
+      "props": {
+        "label": "CC (Canton)",
+        "value": "$0.08814",
+        "delta": "−13.5%",
+        "trend": "down"
+      }
+    },
+    "loser-2": {
+      "type": "Stat",
+      "props": {
+        "label": "BONK",
+        "value": "$0.000002550",
+        "delta": "−8.7%",
+        "trend": "down"
+      }
+    },
+    "loser-3": {
+      "type": "Stat",
+      "props": {
+        "label": "VELVET",
+        "value": "$0.4488",
+        "delta": "−8.0%",
+        "trend": "down"
+      }
+    },
+    "loser-4": {
+      "type": "Stat",
+      "props": {
+        "label": "TEL (Telcoin)",
+        "value": "$0.001450",
+        "delta": "−6.8%",
+        "trend": "down"
+      }
+    },
+    "loser-5": {
+      "type": "Stat",
+      "props": {
+        "label": "ONDO",
+        "value": "$0.3497",
+        "delta": "−6.4%",
+        "trend": "down"
+      }
+    },
+    "loser-6": {
+      "type": "Stat",
+      "props": {
+        "label": "CARDS",
+        "value": "$0.1517",
+        "delta": "−6.1%",
+        "trend": "down"
+      }
+    },
+    "loser-7": {
+      "type": "Stat",
+      "props": {
+        "label": "META (MetaDAO)",
+        "value": "$4.96",
+        "delta": "−6.1%",
+        "trend": "down"
+      }
+    },
+    "loser-8": {
+      "type": "Stat",
+      "props": {
+        "label": "FET",
+        "value": "$0.1315",
+        "delta": "−5.8%",
+        "trend": "down"
+      }
+    },
+    "loser-9": {
+      "type": "Stat",
+      "props": {
+        "label": "US (Talus)",
+        "value": "$0.05217",
+        "delta": "−5.4%",
+        "trend": "down"
+      }
+    },
+    "loser-10": {
+      "type": "Stat",
+      "props": {
+        "label": "UB (Unibase)",
+        "value": "$0.1334",
+        "delta": "−4.9%",
+        "trend": "down"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-heading",
+        "tweet-note",
+        "crypto-tweets-heading",
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "ai-tweets-heading",
+        "tweet-4",
+        "tweet-5",
+        "tweet-6",
+        "dev-tweets-heading",
+        "tweet-7",
+        "tweet-8",
+        "tweet-9"
+      ]
+    },
+    "tweet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "tweet-note": {
+      "type": "Text",
+      "props": {
+        "text": "fresh 8-15 → 8-16, XAI cache HIT",
+        "variant": "caption"
+      }
+    },
+    "crypto-tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Vivek4real",
+        "handle": "@Vivek4real_",
+        "text": "cathie wood urges investors to sell gold for btc, targets $1.5M by 2030."
+      }
+    },
+    "tweet-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/Vivek4real_/status/2088490114410508595",
+        "href": "https://x.com/Vivek4real_/status/2088490114410508595"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Vivek4real",
+        "handle": "@Vivek4real_",
+        "text": "vaneck admits buying the btc dip at $60k, wants full position by october."
+      }
+    },
+    "tweet-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/Vivek4real_/status/2088759137102344417",
+        "href": "https://x.com/Vivek4real_/status/2088759137102344417"
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "LaDoger",
+        "handle": "@LaDoger",
+        "text": "\"learn to think in bitcoin\" (video)."
+      }
+    },
+    "tweet-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/LaDoger/status/2088653241647091960",
+        "href": "https://x.com/LaDoger/status/2088653241647091960"
+      }
+    },
+    "ai-tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "eng_khairallah1",
+        "handle": "@eng_khairallah1",
+        "text": "7-claude-agent system running an $18.8k/month business — scans google maps, builds sites, sends cold outreach."
+      }
+    },
+    "tweet-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/eng_khairallah1/status/2088584005092286624",
+        "href": "https://x.com/eng_khairallah1/status/2088584005092286624"
+      }
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "milichab",
+        "handle": "@milichab",
+        "text": "9-month progress on AI city-builder — composer 1 → grok 4.6 + /loop, full 3D/AAA."
+      }
+    },
+    "tweet-5-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/milichab/status/2088704783750398121",
+        "href": "https://x.com/milichab/status/2088704783750398121"
+      }
+    },
+    "tweet-6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RohOnChain",
+        "handle": "@RohOnChain",
+        "text": "karpathy free 4h lecture on building LLMs like chatgpt & claude from scratch."
+      }
+    },
+    "tweet-6-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/RohOnChain/status/2088664413494739208",
+        "href": "https://x.com/RohOnChain/status/2088664413494739208"
+      }
+    },
+    "dev-tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "tweet-7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "tornikegomareli",
+        "handle": "@tornikegomareli",
+        "text": "talkify — 8.2 MB on-device macos dictation, 123 ms latency via apple speechanalyzer, OSS."
+      }
+    },
+    "tweet-7-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/tornikegomareli/status/2088524464224919700",
+        "href": "https://x.com/tornikegomareli/status/2088524464224919700"
+      }
+    },
+    "tweet-8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "alaymanguy",
+        "handle": "@alaymanguy",
+        "text": "shadergradient — figma/framer plugin + copy-paste react code for web shaders, OSS."
+      }
+    },
+    "tweet-8-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/alaymanguy/status/2088528410025120164",
+        "href": "https://x.com/alaymanguy/status/2088528410025120164"
+      }
+    },
+    "tweet-9": {
+      "type": "TweetCard",
+      "props": {
+        "author": "TheTechDiggest",
+        "handle": "@TheTechDiggest",
+        "text": "shadcndashboard react admin kit (shadcn/ui + next.js + tailwind v4)."
+      }
+    },
+    "tweet-9-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/TheTechDiggest/status/2088671230685528441",
+        "href": "https://x.com/TheTechDiggest/status/2088671230685528441"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-note",
+        "paper-link"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper-note": {
+      "type": "Text",
+      "props": {
+        "text": "vintage 8-07",
+        "variant": "caption"
+      }
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AgentOPSD: Recursive Self-Distillation for Agentic RL",
+        "href": "https://arxiv.org/abs/2608.05987",
+        "source": "Tsinghua",
+        "score": "↑49"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "github-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-heading",
+        "github-text"
+      ]
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (24h window, user:anajuliabit) — 12-consec clean-day."
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-note",
+        "hn-item-1",
+        "hn-item-2"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn-note": {
+      "type": "Text",
+      "props": {
+        "text": "vintage 8-07",
+        "variant": "caption"
+      }
+    },
+    "hn-item-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AMD acquires Taalas to boost inference by etching models in silicon",
+        "href": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
+        "source": "The Register",
+        "score": "621 pts"
+      }
+    },
+    "hn-item-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GitHub Actions & Pages degraded — US-hours CI outage, forge-migration thread",
+        "href": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
+        "source": "GitHub Status",
+        "score": "391 pts"
+      }
+    }
+  }
+}
