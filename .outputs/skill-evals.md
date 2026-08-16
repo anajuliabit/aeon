@@ -1,20 +1,24 @@
-Done. No notification is sent since the verdict is `SKILL_EVALS_OK` (silence = signal that no action is needed).
+Done. No notification sent — SKILL_EVALS_OK is silent per the skill's gating rule.
 
 ## Summary
 
 **Verdict: SKILL_EVALS_OK**
 
-- **Coverage:** 12/43 (28%) — unchanged from last week
-- **Diff:** 0 new fail · 0 fixed · 0 still failing · 12 stable
+Ran evals against all 12 skills in `evals.json`:
 
-**Checks run against the 12 evals.json entries:**
-- `heartbeat`, `token-alert`, `skill-health` — all PASS (patterns confirmed in today's `memory/logs/2026-08-09.md`)
-- `cost-report` — PASS (`articles/cost-report-2026-08-04.md`, 5 days old, well within 14-day staleness window)
-- `changelog` — STALE (143 days, disabled; same as prior)
-- 8 disabled skills — NO_OUTPUT (same as prior)
+| Result | Skills |
+|--------|--------|
+| PASS (4) | heartbeat, token-alert, skill-health, cost-report |
+| STALE (1) | changelog (150d old, disabled — same as prior) |
+| NO_OUTPUT (7) | repo-pulse, push-recap, fork-fleet, repo-article, repo-actions, deep-research, rss-digest (all disabled) |
 
-**No issues filed, no issues closed.**
+- **Diff vs 2026-08-09:** 0 new fail · 0 fixed · 0 still failing · 12 stable
+- **Coverage:** 12/43 (28%) — unchanged; skill-graph ARCHITECTURE_OK confirmed 43 enabled, 191 total
+- **eval-audit:** fell back to in-memory check (sandbox approval required)
+- **Issues filed/closed:** none
 
-**Action queue top item:** Add evals.json entries for the 5 highest-priority uncovered enabled skills (skill-freshness, morning-brief, security-digest, evening-recap, github-trending) — same recommendations as 2026-08-02; none were added in the interim.
+**Files created/modified:**
+- `articles/skill-evals-2026-08-16.md` — eval article
+- `memory/logs/2026-08-16.md` — appended log entry
 
-Files created/modified: `articles/skill-evals-2026-08-09.md`, `memory/logs/2026-08-09.md` (log appended).
+**Follow-up:** Top 5 Action Queue items unchanged for 2 consecutive weeks — operator pick-up needed on adding `evals.json` entries for skill-freshness, morning-brief, security-digest, evening-recap, github-trending.
