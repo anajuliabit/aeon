@@ -1,0 +1,217 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest",
+        "description": "2026-08-16"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_highlight",
+        "sep_1",
+        "stack_stats",
+        "sep_2",
+        "heading_skills",
+        "stack_skills",
+        "sep_3",
+        "heading_heartbeat",
+        "text_heartbeat",
+        "sep_4",
+        "heading_watchlist",
+        "progress_watchlist",
+        "text_watchlist_context",
+        "sep_5",
+        "heading_customizer",
+        "text_customizer",
+        "sep_6",
+        "link_report"
+      ]
+    },
+    "text_highlight": {
+      "type": "Text",
+      "props": {
+        "text": "Da6hkin shipped lead-finder — not in upstream",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_forks_scanned",
+        "stat_forks_configured"
+      ]
+    },
+    "stat_forks_scanned": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Forks Scanned",
+        "value": "71"
+      }
+    },
+    "stat_forks_configured": {
+      "type": "Stat",
+      "props": {
+        "label": "Confirmed Configured",
+        "value": "18"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "New Fork-Only Skills",
+        "level": "h3"
+      }
+    },
+    "stack_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_skill_1",
+        "badge_skill_2",
+        "badge_skill_3",
+        "badge_skill_4"
+      ]
+    },
+    "badge_skill_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Da6hkin/lead-finder",
+        "variant": "default"
+      }
+    },
+    "badge_skill_2": {
+      "type": "Badge",
+      "props": {
+        "text": "enuno/idea-forge",
+        "variant": "default"
+      }
+    },
+    "badge_skill_3": {
+      "type": "Badge",
+      "props": {
+        "text": "olanotolu/glim-mcp",
+        "variant": "default"
+      }
+    },
+    "badge_skill_4": {
+      "type": "Badge",
+      "props": {
+        "text": "olanotolu/finance-district-mcp",
+        "variant": "default"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_heartbeat": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat Schedule Overrides",
+        "level": "h3"
+      }
+    },
+    "text_heartbeat": {
+      "type": "Text",
+      "props": {
+        "text": "5 forks override to 0 8 * * * (once daily vs upstream 3x) — community v2 norm, not a flip signal.",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_watchlist": {
+      "type": "Heading",
+      "props": {
+        "text": "Watchlist Status",
+        "level": "h3"
+      }
+    },
+    "progress_watchlist": {
+      "type": "Progress",
+      "props": {
+        "value": 22,
+        "max": 100,
+        "label": "github-monitor enable-upward"
+      }
+    },
+    "text_watchlist_context": {
+      "type": "Text",
+      "props": {
+        "text": "22% enable-upward (4/18) — just below 25% EMERGING threshold; was 26% last week.",
+        "variant": "caption"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_customizer": {
+      "type": "Heading",
+      "props": {
+        "text": "Heaviest Customizer",
+        "level": "h3"
+      }
+    },
+    "text_customizer": {
+      "type": "Text",
+      "props": {
+        "text": "chxoky/aeon — 36 overrides, trading-only trim",
+        "variant": "body"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "https://github.com/aeonframework/aeon/blob/main/articles/fork-skill-digest-2026-08-16.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

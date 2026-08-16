@@ -1,18 +1,14 @@
-*Fork Skill Digest — 2026-08-09*
-bspacer shipped robinhood-mcp, aeon-doctor, seo-audit, you-web-search — not in upstream
+*Fork Skill Digest — 2026-08-16*
+Da6hkin shipped lead-finder — not in upstream
 
-Scanned 59 active forks; 19 are configured (down from 49/98% last week — fleet configured% collapsed to 32%).
+Scanned 71 active forks; 18 confirmed configured.
 
-New fork-only skills:
-- robinhood-mcp (bspacer) — Robinhood MCP trading agent
-- aeon-doctor (bspacer) — static config linter, weekly
-- seo-audit (bspacer) — daily on-page SEO + Core Web Vitals
-- you-web-search (bspacer) — You.com API search, on-demand
-- trader-memory-compact (chxoky) — bounded traders.md compaction
-- money-radar (Da6hkin) — twice-daily cross-stream money ideas
+New fork-only skills: Da6hkin/lead-finder, enuno/idea-forge, olanotolu/glim-mcp, olanotolu/finance-district-mcp
 
-Watchlist (emerging): github-monitor 26% (5/19)
+Heartbeat schedule: 5 forks override to 0 8 * * * (once daily vs upstream 3x) — community v2 norm, not a flip signal.
 
-Heaviest customizer: Aluma/aeon (~39 overrides, gpt models, vch-build stack)
+Watchlist: github-monitor at 22% enable-upward (4/18) — just below 25% EMERGING; was 26% last week.
 
-Full report: https://github.com/anajuliabit/aeon/blob/main/articles/fork-skill-digest-2026-08-09.md
+Heaviest customizer: chxoky/aeon (36 overrides, trading-only trim)
+
+Full report: https://github.com/aeonframework/aeon/blob/main/articles/fork-skill-digest-2026-08-16.md
