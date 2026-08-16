@@ -1,27 +1,24 @@
-*Evening Recap — 2026-08-15*
-_TL;DR: heavy analysis day — vuln-scanner breaks 3-consec clean streak (1 HIGH on ego-lite) and reflect promotes 2 formal patterns; ISS-032 hits 13th owed cycle, operator-only exit_
+*Evening Recap — 2026-08-16*
+_TL;DR: fork-cohort 6d stuck resolved organically at 19Z — biggest P0 exit in memory-window; 0 Sunday merges leave queue at 6 with exit-gate engaged_
 
 *Headlines:*
-- vuln-scanner — 1 HIGH CDP traversal + 2 MEDIUM on citrolabs/ego-lite; pending-disclosure filed · articles/vuln-scan-2026-08-15.md
-- reflect — MEMORY.md rewritten; defi-curator + quiet-KEV → FORMAL PATTERN; [[security-surface-inversion]] NEW · memory/logs/2026-08-15-reflect.md
-- heartbeat — docs/status.md DEGRADED (6 STUCK); 08Z crash one-off confirmed at 20Z · docs/status.md
-- skill-freshness — 43 consumers / 9 deps clean · articles/skill-freshness-2026-08-15.md
+- fork-cohort — ISS-032 14-owed-cycle P0 exits cleanly; 3 forks leveled POWER · articles/fork-cohort-2026-08-16.md
+- skill-graph — ARCHITECTURE_OK 28d hold; PR #181 auto-opened · https://github.com/anajuliabit/aeon/pull/181
+- reflect — MEMORY.md + fleet.md + crypto.md rewritten; 12 NEW n=1 candidates absorbed · memory/logs/2026-08-16-reflect.md
 
 *Notable:*
-- security-digest — quiet-KEV 3-consec + malware-only 6-consec first co-occurrence; MCP-server-own-tool-vuln n=1; 5,219+ malware + 2 CVEs PATCH-THIS-WEEK
-- github-trending — spec-kit top pick (128k, release-moment); holaOS +219% day-2 (first day-2 sustained in [[claude-code-alternative-open-source]])
-- agent-buzz — MCP production-spine 3-tweet cluster; A2A 3-6mo enterprise signal
-- list-digest — defi-curator drift n=3 rail-crossed; 4 tweets (thinnest memory-window)
-- token-alert — 9-consec clean fire = memory-window record; MAMO first 3-consec positive
+- fork-skill-digest — 3 cancelled/failed before 4th dispatch recovered 20:24Z; 6 NEW fork-only skills (lead-finder + 5 more)
+- security-digest — [[malware-only-security-surface]] 6-consec BREAKS (5,219→57 pkgs); [[quiet-KEV-baseline]] 4-consec record
+- github-trending — Soup + ego-lite +230% day-2 + CLI-Anything; [[fleet-relevance agent-thesis]] 5-consec-week
+- heartbeat ×3 — 20Z: fork-cohort drops STUCK list, fork-skill-digest fresh failure then recovered; status DEGRADED
+- thought-review — 10-consec zero-capture (memory-window record); priorities.md 73d stale
 
 *Decisions for tomorrow:*
-- sunday weekly-batch: merge ≥3 of #174/#176/#177/#179/#180 → disengages exit-gate (#174 >7d stall)
-- file ISS-032 — fork-cohort 13th+ owed cycle, operator-only path
-- ego-lite disclosure — .pending-disclosure/citrolabs-ego-lite-2026-08-15.md via Discord/X (no safe channel)
-- ship scripts/detect-usepod-402.sh — ISS-031 gate, +2d overdue
+- merge #174/#176/#177/#179/#180 — #174 at 8d+ stall; n=3 exit-gate blocks chain-drift + usepod + fork-cohort baked-fixes
+- ship scripts/detect-usepod-402.sh — ISS-031 +3d overdue; Mon 8-17 auto-clear window ~10Z
+- refresh vault/priorities.md — 73d stale, 10-consec zero-capture = memory-window record
 
 *Blockers:*
-- fork-cohort — ISS-032 13th+ owed cycle, ~147h stuck (skill-health classification gap)
-- Mon-batch ×4 (search-skill/unlock-monitor/skill-security-scan/deal-flow) — stuck since 8-10, self-clears 8-17
+- unlock-monitor · deal-flow · skill-security-scan — usepod-402 consec=7/6/3; Mon self-clear 8-17 ~10Z
 
-_+12 routine fires collapsed · sources: log=ok cron-state=ok_
+_+11 routine runs collapsed · sources: log=ok cron-state=ok_

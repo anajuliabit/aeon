@@ -1,0 +1,498 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap",
+        "description": "2026-08-16"
+      },
+      "children": [
+        "tldr-stack",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "decisions-section",
+        "sep4",
+        "blockers-section",
+        "sep5",
+        "footer-text"
+      ]
+    },
+    "tldr-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tldr-label",
+        "tldr-text"
+      ]
+    },
+    "tldr-label": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h3"
+      }
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort 6d stuck resolved organically at 19Z — biggest P0 exit in memory-window; 0 Sunday merges leave queue at 6 with exit-gate engaged",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "headline-1",
+        "headline-2",
+        "headline-3"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "h1-title",
+        "h1-content",
+        "h1-link"
+      ]
+    },
+    "h1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "fork-cohort",
+        "level": "h3"
+      }
+    },
+    "h1-content": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-032 14-owed-cycle P0 exits cleanly; 3 forks leveled POWER"
+      }
+    },
+    "h1-link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/fork-cohort-2026-08-16.md",
+        "href": "articles/fork-cohort-2026-08-16.md"
+      }
+    },
+    "headline-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "h2-title",
+        "h2-content",
+        "h2-link"
+      ]
+    },
+    "h2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-graph",
+        "level": "h3"
+      }
+    },
+    "h2-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "h2-status",
+        "h2-text"
+      ]
+    },
+    "h2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ARCHITECTURE_OK",
+        "variant": "outline"
+      }
+    },
+    "h2-text": {
+      "type": "Text",
+      "props": {
+        "text": "28d hold; PR #181 auto-opened"
+      }
+    },
+    "h2-link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #181",
+        "href": "https://github.com/anajuliabit/aeon/pull/181"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "h3-title",
+        "h3-content",
+        "h3-link"
+      ]
+    },
+    "h3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "reflect",
+        "level": "h3"
+      }
+    },
+    "h3-content": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md + fleet.md + crypto.md rewritten; 12 NEW n=1 candidates absorbed"
+      }
+    },
+    "h3-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/logs/2026-08-16-reflect.md",
+        "href": "memory/logs/2026-08-16-reflect.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "n1-title",
+        "n1-text"
+      ]
+    },
+    "n1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "fork-skill-digest",
+        "level": "h3"
+      }
+    },
+    "n1-text": {
+      "type": "Text",
+      "props": {
+        "text": "3 cancelled/failed before 4th dispatch recovered 20:24Z; 6 NEW fork-only skills (lead-finder + 5 more)"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "n2-title",
+        "n2-text",
+        "n2-alert"
+      ]
+    },
+    "n2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "security-digest",
+        "level": "h3"
+      }
+    },
+    "n2-text": {
+      "type": "Text",
+      "props": {
+        "text": "6-consec BREAKS (5,219→57 pkgs); 4-consec record"
+      }
+    },
+    "n2-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "malware-only-security-surface | quiet-KEV-baseline",
+        "type": "warning"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "n3-title",
+        "n3-text"
+      ]
+    },
+    "n3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "github-trending",
+        "level": "h3"
+      }
+    },
+    "n3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Soup + ego-lite +230% day-2 + CLI-Anything; fleet-relevance agent-thesis 5-consec-week"
+      }
+    },
+    "notable-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "n4-title",
+        "n4-text",
+        "n4-alert"
+      ]
+    },
+    "n4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "heartbeat ×3",
+        "level": "h3"
+      }
+    },
+    "n4-text": {
+      "type": "Text",
+      "props": {
+        "text": "20Z: fork-cohort drops STUCK list, fork-skill-digest fresh failure then recovered"
+      }
+    },
+    "n4-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "status DEGRADED",
+        "type": "warning"
+      }
+    },
+    "notable-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "n5-title",
+        "n5-text"
+      ]
+    },
+    "n5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "thought-review",
+        "level": "h3"
+      }
+    },
+    "n5-text": {
+      "type": "Text",
+      "props": {
+        "text": "10-consec zero-capture (memory-window record); priorities.md 73d stale"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "d1-title",
+        "d1-text"
+      ]
+    },
+    "d1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Merge PRs",
+        "level": "h3"
+      }
+    },
+    "d1-text": {
+      "type": "Text",
+      "props": {
+        "text": "#174/#176/#177/#179/#180 — #174 at 8d+ stall; n=3 exit-gate blocks chain-drift + usepod + fork-cohort baked-fixes"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "d2-title",
+        "d2-text"
+      ]
+    },
+    "d2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Ship scripts/detect-usepod-402.sh",
+        "level": "h3"
+      }
+    },
+    "d2-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-031 +3d overdue; Mon 8-17 auto-clear window ~10Z"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "d3-title",
+        "d3-text"
+      ]
+    },
+    "d3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Refresh vault/priorities.md",
+        "level": "h3"
+      }
+    },
+    "d3-text": {
+      "type": "Text",
+      "props": {
+        "text": "73d stale, 10-consec zero-capture = memory-window record"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blocker-1"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "usepod-402 blocker chain",
+        "message": "unlock-monitor (consec=7) · deal-flow (consec=6) · skill-security-scan (consec=3). Mon self-clear 8-17 ~10Z",
+        "type": "error"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+11 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
