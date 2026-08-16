@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures. zero-capture streak 10-consec-UTC-day 8-07→8-16 = memory-window record. priorities.md 73d stale (last reviewed 2026-06-04) + vault inbox 55d cold (single 2026-06-22 reppo-content note persists). sunday weekly-batch today — natural refresh moment.
+🧭 thought review · last 24h · 0 captures. streak 10-consec-UTC-day 8-07→8-16 holds through sunday close. priorities.md 73d stale + vault inbox 55d cold, weekly-batch window closed without refresh — worth a look.

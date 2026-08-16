@@ -1,0 +1,106 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "thought review",
+        "description": "last 24h"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_metrics",
+        "separator_1",
+        "stack_alerts",
+        "text_context"
+      ]
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_captures",
+        "badge_streak",
+        "text_through_sunday"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (24h)",
+        "value": "0"
+      },
+      "children": []
+    },
+    "badge_streak": {
+      "type": "Badge",
+      "props": {
+        "text": "10-consec-UTC-day 8-07→8-16"
+      },
+      "children": []
+    },
+    "text_through_sunday": {
+      "type": "Text",
+      "props": {
+        "text": "holds through sunday close",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_alerts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_priorities",
+        "alert_vault"
+      ]
+    },
+    "alert_priorities": {
+      "type": "Alert",
+      "props": {
+        "message": "priorities.md 73 days stale",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "alert_vault": {
+      "type": "Alert",
+      "props": {
+        "message": "vault inbox 55 days cold",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-batch window closed without refresh — worth a look",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
