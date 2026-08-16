@@ -1,0 +1,436 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-08-16"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1-group",
+        "sep-1",
+        "action-2-group",
+        "sep-2",
+        "action-3-group",
+        "sep-3",
+        "action-4-group",
+        "sep-4",
+        "action-5-group",
+        "sep-5",
+        "sources-group"
+      ]
+    },
+    "action-1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1-heading",
+        "action-1-task",
+        "action-1-why-heading",
+        "action-1-why-text",
+        "action-1-done-heading",
+        "action-1-done-text",
+        "action-1-loop-heading",
+        "action-1-loop-text"
+      ]
+    },
+    "action-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Write memory/issues/ISS-032.md",
+        "level": "h3"
+      }
+    },
+    "action-1-task": {
+      "type": "Text",
+      "props": {
+        "text": "Fork-cohort stuck-dispatched classification gap (skill-health step 2 missing `status='dispatched' AND days_since_last_dispatch>=3` branch)"
+      }
+    },
+    "action-1-why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "action-1-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "14th+ owed cycle today, memory-window unprecedented depth; unblocks self-improve rule-gap authoring; operator-only path per exit-gate"
+      }
+    },
+    "action-1-done-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "action-1-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/issues/ISS-032.md exists with full frontmatter, INDEX.md open-count 15→16"
+      }
+    },
+    "action-1-loop-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "action-1-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "iss-032-manual-file"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-2-heading",
+        "action-2-task",
+        "action-2-why-heading",
+        "action-2-why-text",
+        "action-2-done-heading",
+        "action-2-done-text",
+        "action-2-loop-heading",
+        "action-2-loop-text"
+      ]
+    },
+    "action-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Batch-merge 3+ of PRs #174 · #177 · #176 · #179 · #180",
+        "level": "h3"
+      }
+    },
+    "action-2-task": {
+      "type": "Text",
+      "props": {
+        "text": "In today's sunday weekly-batch window"
+      }
+    },
+    "action-2-why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "action-2-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Only weekly merge window; #174 3rd day past 7d stall band; any 3 merges disengage self-improve exit-gate (n=3→sub-3) and unblock fork-cohort rule-gap + detect-usepod-402 + chain-drift baked-fix candidates"
+      }
+    },
+    "action-2-done-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "action-2-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "gh pr list --state open shows ≤3 of the 5 stalled PRs remaining"
+      }
+    },
+    "action-2-loop-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "action-2-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "sunday-weekly-batch"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-3-heading",
+        "action-3-task",
+        "action-3-why-heading",
+        "action-3-why-text",
+        "action-3-done-heading",
+        "action-3-done-text",
+        "action-3-loop-heading",
+        "action-3-loop-text"
+      ]
+    },
+    "action-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Author scripts/detect-usepod-402.sh",
+        "level": "h3"
+      }
+    },
+    "action-3-task": {
+      "type": "Text",
+      "props": {
+        "text": "usepod-402 payment-required detector per ISS-031 gate, +3d overdue"
+      }
+    },
+    "action-3-why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "action-3-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "usepod-402 dispatcher path fired 8-10 hitting 4 skills, still no automated detection; script gates alternative-dispatcher fallback wire, was queue-blocked all week"
+      }
+    },
+    "action-3-done-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "action-3-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/detect-usepod-402.sh executable, exits 1 on synthetic {\"error\":\"Payment required\"} payload, self-test in scripts/tests/"
+      }
+    },
+    "action-3-loop-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "action-3-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "iss-031-usepod-detector"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-4-heading",
+        "action-4-task",
+        "action-4-why-heading",
+        "action-4-why-text",
+        "action-4-done-heading",
+        "action-4-done-text",
+        "action-4-loop-heading",
+        "action-4-loop-text"
+      ]
+    },
+    "action-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Reset vault/priorities.md to today's current mandate",
+        "level": "h3"
+      }
+    },
+    "action-4-task": {
+      "type": "Text",
+      "props": {
+        "text": "73d-stale, refresh-ask d6 unactioned, thought-review 10-consec zero-capture streak crossed today"
+      }
+    },
+    "action-4-why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "action-4-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Single point of coherence for weekly-review + thought-review + inbox; refresh-ask d6 (weekly-review 8-10 + thought-review 8-11/12/13/14×2/15×2/16 all surfaced); sunday is the natural weekly cadence"
+      }
+    },
+    "action-4-done-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "action-4-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "vault/priorities.md mtime = 2026-08-16 with ≤5 fresh sherwood/reppo/aeon items"
+      }
+    },
+    "action-4-loop-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "action-4-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "priorities-73d-stale"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-5-heading",
+        "action-5-task",
+        "action-5-why-heading",
+        "action-5-why-text",
+        "action-5-done-heading",
+        "action-5-done-text",
+        "action-5-loop-heading",
+        "action-5-loop-text"
+      ]
+    },
+    "action-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Populate memory/on-chain-watches.yml with sherwood + moonwell + mamo positions",
+        "level": "h3"
+      }
+    },
+    "action-5-task": {
+      "type": "Text",
+      "props": {
+        "text": "Set ALCHEMY_API_KEY + ETHERSCAN_API_KEY in GH secrets"
+      }
+    },
+    "action-5-why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "action-5-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor day-70 NO_CONFIG; sherwood + mamo agent-on-moonwell thesis wants on-chain observability the fleet can consume; single YAML + 2 secrets unblock a dormant skill"
+      }
+    },
+    "action-5-done-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "action-5-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/on-chain-watches.yml with ≥3 addresses, both keys set, next defi-monitor fire produces non-NO_CONFIG output"
+      }
+    },
+    "action-5-loop-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "action-5-loop-text": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-config-day-70"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=84 logs=7 topics=11 prs=6 cron_failing=5 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
