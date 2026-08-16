@@ -1,16 +1,15 @@
 ## Summary
 
-**btc-levels** run complete — 2026-08-16 16:44Z.
+Quiet run — no alerts fired.
 
-| | Value |
-|---|---|
-| Spot | $63,242 |
-| Previous daily close (Aug 15) | $63,031 |
+**Data fetched (CoinGecko, 2026-08-16 20:38Z):**
+- Spot: $63,053
+- Previous daily close (2026-08-15): $63,031
 
-**Level checks:**
-- Leverage-review trigger (≤$45k): clear
-- Breakdown signal (close < $60,500): clear — close $63,031 is well above
-- Reclaim $63,500: already alerted (flag=true); spot $63,242 is below the level, no re-arm until spot drops below $60,500
-- Reclaim $65,900: clear — spot $63,242 is below
+**Level evaluation:**
+- Spot $63,053 > $45,000 → no leverage-review alert
+- Close $63,031 ≥ $60,500 → no breakdown alert
+- Spot $63,053 < $63,500 → reclaim-63.5k not triggered (flag still armed from prior cycle)
+- Spot $63,053 < $65,900 → reclaim-65.9k not triggered
 
-**No alerts fired.** No notification sent. State file and log updated and committed.
+No `./notify` call (quiet run per skill rule). State and log committed.
