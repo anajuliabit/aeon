@@ -1,0 +1,178 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review",
+        "description": "Last 24 hours"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "captures_stat",
+        "sep1",
+        "streak_section",
+        "sep2",
+        "staleness_section",
+        "sep3",
+        "refresh_alert"
+      ]
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (24h)",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "streak_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "streak_heading",
+        "streak_stat",
+        "streak_badge"
+      ]
+    },
+    "streak_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Zero-capture Streak",
+        "level": "h3"
+      }
+    },
+    "streak_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive UTC days",
+        "value": "10",
+        "delta": "8-07 → 8-16"
+      }
+    },
+    "streak_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Memory-window record",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "staleness_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "staleness_heading",
+        "priorities_item",
+        "vault_item"
+      ]
+    },
+    "staleness_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Staleness Status",
+        "level": "h3"
+      }
+    },
+    "priorities_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "priorities_name",
+        "priorities_stat"
+      ]
+    },
+    "priorities_name": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md",
+        "variant": "lead"
+      }
+    },
+    "priorities_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Days stale",
+        "value": "73",
+        "delta": "Last reviewed 2026-06-04"
+      }
+    },
+    "vault_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vault_name",
+        "vault_stat",
+        "vault_note"
+      ]
+    },
+    "vault_name": {
+      "type": "Text",
+      "props": {
+        "text": "vault inbox",
+        "variant": "lead"
+      }
+    },
+    "vault_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Days cold",
+        "value": "55",
+        "delta": "Last activity 2026-06-22"
+      }
+    },
+    "vault_note": {
+      "type": "Text",
+      "props": {
+        "text": "Single repo-content note persists",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "refresh_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Weekly Refresh Opportunity",
+        "message": "Sunday weekly-batch today — natural refresh moment",
+        "type": "info"
+      }
+    }
+  }
+}
