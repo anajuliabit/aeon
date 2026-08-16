@@ -1,15 +1,15 @@
+Done. Quiet run.
+
 ## Summary
 
-**btc-levels** run complete — 2026-08-15 20:40Z.
+**BTC price (2026-08-16 ~01:49Z):** spot $63,010.79 · 2026-08-15 daily close $63,031.05
 
-**Data fetched:**
-- Spot: $63,019
-- Prev UTC daily close (2026-08-14): $62,984
+**Level evaluation:**
+| Level | Condition | Result |
+|---|---|---|
+| ≤ $45,000 leverage review | spot $63,010 >> $45k | no alert |
+| < $60,500 daily close | close $63,031 > $60.5k | no alert |
+| Reclaim $63,500 | spot $63,010 < $63,500; flag already armed | no alert |
+| Reclaim $65,900 | spot $63,010 < $65,900 | no alert |
 
-**Level checks — all clear:**
-- Leverage-review trigger (≤$45k): not in range
-- Breakdown signal (close < $60,500): $62,984 is above threshold
-- Reclaim $63,500: already alerted (true); spot below $63,500; not re-armed
-- Reclaim $65,900: spot below $65,900
-
-No notification sent (quiet run). State and log committed to `main`.
+No alerts fired → no notification sent. State and log committed (`55013cb`).
