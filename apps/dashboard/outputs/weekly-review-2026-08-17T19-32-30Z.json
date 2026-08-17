@@ -1,0 +1,247 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review — 2026-08-17"
+      },
+      "children": [
+        "sep1",
+        "top_action_section",
+        "sep2",
+        "health_section",
+        "sep3",
+        "pr_section",
+        "sep4",
+        "full_review"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top_action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_heading",
+        "top_action_text",
+        "top_action_deadline",
+        "top_action_slip"
+      ]
+    },
+    "top_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Action",
+        "level": "h3"
+      }
+    },
+    "top_action_text": {
+      "type": "Text",
+      "props": {
+        "text": "ship scripts/detect-usepod-402.sh + wire into heartbeat"
+      }
+    },
+    "top_action_deadline": {
+      "type": "Text",
+      "props": {
+        "text": "Deadline: 2026-08-20",
+        "variant": "lead"
+      }
+    },
+    "top_action_slip": {
+      "type": "Badge",
+      "props": {
+        "text": "2nd consecutive week slip",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health_heading",
+        "skills_progress",
+        "critical_issue",
+        "new_issues",
+        "recovery"
+      ]
+    },
+    "health_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h3"
+      }
+    },
+    "skills_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 31,
+        "max": 60,
+        "label": "Skills fired in window"
+      }
+    },
+    "critical_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "critical_badge",
+        "cost_report_text",
+        "iss030_link"
+      ]
+    },
+    "critical_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "1 CRITICAL",
+        "variant": "destructive"
+      }
+    },
+    "cost_report_text": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report c=14 chronic",
+        "variant": "caption"
+      }
+    },
+    "iss030_link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-030",
+        "href": "memory/issues/ISS-030.md"
+      }
+    },
+    "new_issues": {
+      "type": "Text",
+      "props": {
+        "text": "0 new issues",
+        "variant": "muted"
+      }
+    },
+    "recovery": {
+      "type": "Alert",
+      "props": {
+        "message": "4/4 stuck cohort: FULL RECOVERY 8-17 via direct-exec bypass (memory-window-first)",
+        "type": "success"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_heading",
+        "pr_counts",
+        "pr_stall",
+        "pr174"
+      ]
+    },
+    "pr_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Queue",
+        "level": "h3"
+      }
+    },
+    "pr_counts": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "open_stat",
+        "merged_stat"
+      ]
+    },
+    "open_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open",
+        "value": "6"
+      }
+    },
+    "merged_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Merged in-window",
+        "value": "0"
+      }
+    },
+    "pr_stall": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-window-deepest single-window stall",
+        "variant": "destructive"
+      }
+    },
+    "pr174": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pr174_link",
+        "pr174_duration"
+      ]
+    },
+    "pr174_link": {
+      "type": "Link",
+      "props": {
+        "label": "#174 Brier-weight",
+        "href": "pulls/174"
+      }
+    },
+    "pr174_duration": {
+      "type": "Text",
+      "props": {
+        "text": "9d 19h (deepest single-PR stall)",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full_review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Review",
+        "href": "articles/weekly-review-2026-08-17.md",
+        "source": "Weekly Report"
+      }
+    }
+  }
+}
