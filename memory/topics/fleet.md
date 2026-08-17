@@ -5,6 +5,50 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-08-17 evening, T-0 to 8-18)
+
+- **Mon-batch 4/4 stuck cohort FULL RECOVERY 8-17 via direct-exec bypass** — unlock-monitor 10:37Z (1st post-ISS-031 fire since 8-03, 168h stuck) · search-skill 14Z (WEAK 3-cand for "cost tracking", NEW `[[cost-report-proxy-gap-not-capability-gap]]` observation) · deal-flow 14:07Z (8 deals, top River AI $5B seed/A `[[user-owned-weights]]` NEW n=1) · skill-security-scan 16Z (11th sandbox-blocked scan, 4 HIGH byte-identical, 14-day cadence gap closes cleanly, `:812` 8th-consec no-drift). **Memory-window-first full-cohort natural recovery via bypass path**. ISS-031 usepod dispatcher itself still unproven; bypass path holds fleet-wide.
+- **fork-cohort organic recovery Sunday 8-16 19:30Z** — 6d 2h stuck-state cleared via natural Sunday 19Z re-fire (first natural cycle since 8-09 stuck); ISS-032 root-cause DEPRECATED; `classification_gap_flag` latent-not-active now.
+- **ISS-031 detect-usepod-402 gate +4d overdue on 8-17** — `scripts/detect-usepod-402.sh` still absent per morning-brief 07:31Z + heartbeat 08:10Z + 14:04Z file-checks. Aftermath resolved via bypass so gate itself lower-priority; only relevant if usepod re-cliffs.
+- **Sunday-into-Monday 0 operator merges + PR queue at 6 unchanged** — full queue depth: **#181 skill-graph ~21h · #180 reg-monitor ~92h · #179 token-alert ~137h ~5.7d · #177 claude-md ~189h ~7.9d · #176 skill-graph ~190h ~7.9d · #174 advisor ~214h ~8.9d** (memory-window-deepest, extends day-9.3). Self-improve exit-gate ENGAGED at n=3 (#177+#179+#180 self-improve-shaped) blocks fork-cohort rule-gap + detect-usepod-402 + chain-drift baked-fix authoring. Weekly-batch window closed Sunday evening w/o operator merges.
+- **NEW: `[[chain-output-header-date-drift]]` FORMAL PATTERN extends 5→6-consec-day 8-12→8-17** — daily-routine 07:37Z; 4 chain sub-outputs stamped 2026-08-07 (10-day content stale). Record depth extends.
+- **cost-report Monday 07Z chronic re-fire — consec=9 sr=7% via 5 retry-failures** — same ISS-030 signature (sdk_opt_in_required), not fresh regime; 8Z → 14Z heartbeat drift 1→9. NEW `[[cost-report-proxy-gap-not-capability-gap]]` observation via search-skill 14Z: external cost-tracker skills don't structurally close proxy-shape failure.
+- **2 P3 first-run misses at 14:04Z heartbeat** — fork-skill-gap 8-16 21Z (Sunday first-fire, ~17h past) + operator-scorecard 8-17 10:30Z (Monday first-fire, ~3.5h past) both never-dispatched despite crossing scheduled time. Deferred to 20Z heartbeat re-check; if still missing then, escalate to notify + memory/issues/ file (potential dispatcher bug on new-skill first-fire path).
+- **`[[chronic-cohort-alone-degraded]]` composition holds 13-skill at 14:04Z heartbeat** — cost-report 7% (drop 8→7 via 5 fresh failures) / skill-analytics 22% / reg-monitor 22% / vuln-scanner 27% / market-context-refresh 32% / narrative-tracker 33% / search-skill 37% / weekly-shiplog 40% / fleet-control 40% (disabled) / unlock-monitor 41% (recovered but sr still <0.5) / deal-flow 44% / security-digest 45% / aixbt-pulse 47%. Regime ~264h+ span holds composition-locked; unlock-monitor moves OUT of stuck-cohort but stays IN chronic-cohort.
+- **Bash `>` redirect workaround-chain n=48+ → n=49+ durable 26-UTC-day span 7-22 → 8-17** — 8-17 fresh call-sites: github-trending per-repo unrolled + security-digest `jq > kev-week.json` + deal-flow log-append + skill-security-scan log-append + morning-brief log-append.
+- **12:00 UTC batch DARK d51 on 8-17** — ISS-027 8-skill cluster frozen since 2026-06-28 (round-51 crossing). Token-alert 12Z-slot immunity 10-consec BREAKS day-11 via GITLAWB +22.63% price rail (record ends at 10).
+- **CG clean-day d55 → d56 8-17** — memory-window record extends unbroken.
+- **Aeon-fleet clean d17 → d18 vs security-digest 8-17** — 0/45 fresh malware advisories match tracked deps; memory-window record extends by 1 day.
+- **`[[fleet-relevance agent-thesis]]` rail crosses 6-consec-week durability 8-17** — 1-pick fleet-adjacent (cordis composability-framework) via github-trending 09:15Z; thinner than 8-16 3-pick slate but qualifies rail-continuation on top-pick basis.
+- **Sub-25 github-trending 19-consec-UTC-day 7-30 → 8-17 + 7-candidate memory-window-thinnest floor** — permanent-shape rail extends; 7 today = new memory-window floor (prior 13 on 8-16). Monday morning US-off-hours correlation candidate.
+- **skill-security-scan 11th consec sandbox-blocked scan 8-17** — dominant failure mode; aeon.yml `:812` holds 8th consecutive scan without line drift (56-day pinned coordinate 2026-06-22 → 2026-08-17).
+- **Heartbeat 7-consec-clean since 8-15 crash extends 8-17** — 6-consec → 7-consec (14:15z + 20:20z + 8-16 08:29z + 14:10z + 20:15z + 8-17 08:10z + 14:04z).
+
+### Rail promotions / deprecations 8-17
+- **`[[chain-output-header-date-drift]]` FORMAL PATTERN extends 5-consec → 6-consec-day 8-12→8-17** — record depth extends by 1.
+- **`[[quiet-KEV-baseline]]` FORMAL PATTERN 4-consec-UTC-day 8-13→8-16 BREAKS day-5 8-17 via CVE-2025-62593 Ray** — first fresh KEV addition since 8-11 (5-day dark window closes). Rare tracked-stack-relevant KEV: pip ecosystem + ML/ai infra category, DNS-rebinding-via-browser RCE, patch ≥2.52.0 available, nccgroup singularity PoC referenced.
+- **`[[agent-labeled-malicious-pkg]]` 8-16 n=1 PROMOTES to formal-pattern-crossing n=2+ via 5-pkg same-48h cluster 8-17** — @ai-vertical/ai-agent + agentsync-pkg + agent-bot-api + cloud-agen-bot + autoai; memory-window-first cluster of this axis.
+- **Token-alert 10-consec-day clean-fire streak 8-07→8-16 BREAKS at 10 8-17** via GITLAWB +22.63% price rail (memory-window record ends).
+- **NEW `[[gitlawb-breakout-on-elevated-vol]]` n=1 candidate 8-17** — 1.53× baseline breaks light-vol whipsaw signature; distinct from 8-14 deprecated axes (both stay deprecated).
+- **`[[vol-vacuum-partial-rebuild-on-positive-price]]` 8-16 n=1 candidate DEPRECATES 8-17** — WELL 0.28× → 0.09× on continued positive price (+1.25%) = day-2 re-collapse; new memory-window-deepest sub-baseline WELL vol at 0.09×.
+- **NEW `[[REPPO-post-bounce-drought-re-deepens]]` n=1 candidate 8-17** — 3-consec-day sub-baseline drought (0.40× → 0.69× → 0.36×) with bounce-then-fade mirror on price + vol.
+- **NEW `[[cordis-212×-baseline-spike]]` n=1 candidate 8-17** — cordiverse/cordis 720 today on 3.4/d baseline = 212× spike via inferred DeepSeek-harness catalyst; prior max Soup 28.6×.
+- **NEW `[[dhh-opinionated-shell-product]]` n=1 candidate 8-17** — basecamp/omarchy real-distro product-shape distinct from generic dotfile-dumps or generic Arch spins.
+- **NEW `[[needle-5-consec-day-HOLDOVER-record]]` n=1 candidate 8-17** — cactus-compute/needle first HOLDOVER-drop 5-consec-day; matches diagram-design record.
+- **`[[marketing-shell-3-consec-day-repeat]]` 8-16 n=1 EXTENDS to 4-consec-day 8-17** — unslothai/unsloth same implausible-versions description auto-drop 8-14→8-17; still needs n=2 distinct-repo for FORMAL PATTERN.
+- **Spike-then-fade day-2/day-3 arc confirmations 8-17** — 8-16 top pick Soup ABSENT day-2 (1-day arc extends `[[mature-tail-release-moment-day-2-decay]]` to training-primitive); 8-15/8-16 ego-lite ABSENT day-3 (2-day arc peak-then-fade); 8-16 CLI-Anything ABSENT day-2 (1-day arc, `[[agent-native-cli-hub]]` still n=1).
+- **NEW `[[anthropic-brand-jack]]` n=1 candidate 8-17** — anthropic-setup npm first Anthropic-branded typosquat in memory-window; highest fleet-adjacency of the day.
+- **`[[baileys-brand-jack-double]]` REVIVES from 4-day-gap deprecation-candidate 8-17** — @junofficial/baileys resets deprecation clock; pattern stays at n=1.
+- **`[[hackerone-dep-confusion-poc-cluster]]` 8-16 n=1 EXTENDS to n=2 candidate 8-17** — @zynkit/probe joins prior cluster.
+- **NEW `[[epic-brand-jack-cluster]]` n=1 candidate 8-17** — 3 epic-* same-batch (epic-sso + epic-common-node + epic-common all 2026-08-17T06:32Z same author).
+- **NEW `[[akamai-brand-jack-cluster]]` n=1 candidate 8-17** — 3 akamai-* same-batch (akamai-sensor + akamaijs-sensor + akamaijs-sensorv1 all 2026-08-15T18:31Z).
+- **NEW `[[ai-stack-every-layer-megaround]]` n=1 candidate 8-17** — deal-flow 4 same-week megarounds at 4 distinct infra layers (data $190B / compute $6B / neocloud $2.4B / personal-model $5B).
+- **NEW `[[2x-plus-reprice-cluster]]` n=1 candidate 8-17** — 3 sub-12mo repricings >2× in single week (Lovable 2.02× / Valar 3× / Base 3.25×).
+- **NEW `[[user-owned-weights]]` n=1 candidate via River AI 8-17** — first megaround explicitly framed around user-owned model ownership; parallels Aeon's Sherwood thesis directly.
+- **NEW `[[xai-grok-bot-product-saturation]]` n=1 candidate 8-17** — daily-routine 5/5 xai ai tweets grok-bot self-promotion; potential x_search filter-shape returning grok-native content.
+- **NEW `[[7x-post-surge-tail-week]]` n=1 candidate 8-17** — weekly-shiplog 51→7 commits, 28→7 PRs post 8-10 spec-migration surge; momentum-pattern rail candidate.
+- **NEW `[[cost-report-proxy-gap-not-capability-gap]]` n=1 observation 8-17** — search-skill can surface candidates but cannot close proxy-shape failures.
+
 ## Current health snapshot (2026-08-16 evening, T-0 to 8-17)
 
 - **fork-cohort ISS-032 STILL UNFILED — 14th+ owed cycle P0 ~163h stuck at 14:10Z heartbeat 8-16** — dispatched 8-09T19:05Z, last_success 8-02T19:52Z; 115h past 48h escalation. Owed across 11 cycles through 8-15 evening + morning-brief 8-16 07:26Z + heartbeat 08:29Z + heartbeat 14:10Z + this reflect fire (14th+). skill-health `classification_gap_flag` persists 12th+ cycle at 8-15 18:16Z run. **Sunday 19Z fork-cohort re-fire ~5h from 14:10Z heartbeat = today's biggest deciding-test** — first natural cycle since 8-09 stuck; clean fire resolves stuck-state organically, failure promotes ISS-032 to critical operator-action-required.
