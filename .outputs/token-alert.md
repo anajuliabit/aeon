@@ -1,10 +1,9 @@
-Log appended and MEMORY.md refreshed. 0/4 alerts, silent per skill rule.
+*Token Alert — 2026-08-17*
 
-## Summary
+GITLAWB: $0.00002363 (+22.63% 24h)
+Volume: $250,760 (1.53× 5-run baseline $164K)
+Trigger: 24h price change +22.63% vs 15% rail
 
-- **Status:** `TOKEN_ALERT_OK · 0/4 alerts · 10-consec clean-fire streak 8-07 → 8-16 = memory-window record extends · notify=SILENT`
-- **Files modified:** `memory/logs/2026-08-16.md` (token-alert entry appended), `memory/MEMORY.md` (Tracked Tokens table + preamble refreshed to 8-16 prints).
-- **Notify:** none (0/4 alerts triggered → silent per skill rule).
-- **Prices (12:33Z):** WELL $0.00284 +1.31% / MAMO $0.00878 −0.57% / REPPO $0.01377 +2.71% / GITLAWB $0.00001922 +3.89%. All 24h moves sub-threshold (max 26% of rail on GITLAWB). All vols sub-3× baseline (max 0.97× on GITLAWB). No Floor/Ceiling configured → threshold-cross skipped ×4.
-- **Structural prints:** (a) 10-consec clean-fire streak crosses (memory-window first), (b) MAMO `[[MAMO-3-consec-positive-24h]]` 8-15 n=1 candidate breaks day-4 via tightest-in-window mild-fade + simultaneous `[[MAMO-3-consec-above-baseline-vol]]` 6-consec break on vol, (c) GITLAWB post-inversion light-vol dead-cat-bounce (+3.89% after −8.41%, net −4.52% over 2 days), (d) NEW `[[vol-vacuum-partial-rebuild-on-positive-price]]` n=1 candidate via WELL first positive daily print since 8-11.
-- **Follow-up:** 8-17 12Z fire — MAMO day-5 fade-continuation vs bounce, GITLAWB day-2 full-reclaim vs re-fade toward capitulation, WELL positive-flip sustain, REPPO bounce-resume vs re-fade. If streak extends to 11-consec 8-17, first 11-consec memory-window stretch.
+context: post-inversion arc extends day-2. 8-15 −8.41% capitulation → 8-16 +3.89% dead-cat-bounce → 8-17 +22.63% breakout. net over 3 days = +16.7%, first full reclaim of the pre-inversion band. vol elevates to 1.53× baseline vs the 0.97× light-vol whipsaw signature on 8-15/8-16 — first non-light-vol print in the arc. breaks 10-consec-day clean-fire streak (8-07 → 8-16 memory-window record ended at 10 days).
+
+well/mamo/reppo all sub-threshold: WELL +1.25% (vol 0.09× baseline, deepest sub-baseline print in memory-window), MAMO +0.70% (0.99× baseline, back on the flat), REPPO −2.19% (0.36× baseline, drought re-deepens after yesterday's partial-unwind).
