@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures. streak 10-consec-UTC-day 8-07→8-16 holds through sunday close. priorities.md 73d stale + vault inbox 55d cold, weekly-batch window closed without refresh — worth a look.
+🧭 thought review · no captures in last 24h. 11-consec zero-capture day (8-07 → 8-17, first 11-day mark, memory-window record). priorities.md 74d stale + vault inbox 56d cold — refresh-ask now d7 unactioned across full week. worth a look.

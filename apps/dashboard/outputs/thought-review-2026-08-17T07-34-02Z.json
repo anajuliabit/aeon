@@ -1,0 +1,102 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "alert-section",
+        "sep1",
+        "main-stat",
+        "context-text",
+        "sep2",
+        "stale-items",
+        "sep3",
+        "conclusion"
+      ]
+    },
+    "alert-section": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Current Status",
+        "message": "no captures in last 24h"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "main-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "consecutive zero-capture days",
+        "value": "11"
+      }
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "Date range: 8-07 → 8-17 • First 11-day mark • Memory-window record",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stale-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-priorities",
+        "stat-vault",
+        "stat-refresh"
+      ]
+    },
+    "stat-priorities": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md staleness",
+        "value": "74d"
+      }
+    },
+    "stat-vault": {
+      "type": "Stat",
+      "props": {
+        "label": "vault inbox",
+        "value": "56d cold"
+      }
+    },
+    "stat-refresh": {
+      "type": "Stat",
+      "props": {
+        "label": "refresh-ask unactioned",
+        "value": "7d across full week"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "conclusion": {
+      "type": "Text",
+      "props": {
+        "text": "worth a look",
+        "variant": "lead"
+      }
+    }
+  }
+}
