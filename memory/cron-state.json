@@ -310,14 +310,14 @@
   },
   "cost-report": {
     "last_dispatch": "2026-08-17T16:58:40Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-08-11T20:08:14Z",
-    "total_runs": 129,
+    "total_runs": 130,
     "total_successes": 9,
-    "total_failures": 120,
-    "consecutive_failures": 12,
+    "total_failures": 121,
+    "consecutive_failures": 13,
     "success_rate": 0.07,
-    "last_failed": "2026-08-17T16:26:08Z",
+    "last_failed": "2026-08-17T17:29:06Z",
     "last_error": "ens\":32000,\"canonicalModel\":\"claude-sonnet-4-6\",\"provider\":\"firstParty\"}},\"permission_denials\":[],\"terminal_reason\":\"api_error\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required"
   },
   "skill-security-scan": {
