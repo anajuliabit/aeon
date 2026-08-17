@@ -1,0 +1,90 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-08-17"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-text",
+        "stat-tweets",
+        "sep-1",
+        "details-text",
+        "sep-2",
+        "top-section"
+      ]
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet day on the tracked list",
+        "variant": "lead"
+      }
+    },
+    "stat-tweets": {
+      "type": "Stat",
+      "props": {
+        "label": "Tweets returned",
+        "value": "10"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details-text": {
+      "type": "Text",
+      "props": {
+        "text": "All sub-8-likes replies in an osmosis pool-closure thread",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top-label",
+        "tweet-link"
+      ]
+    },
+    "top-label": {
+      "type": "Text",
+      "props": {
+        "text": "Top",
+        "variant": "caption"
+      }
+    },
+    "tweet-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Flowslikeosmo",
+        "href": "https://x.com/Flowslikeosmo",
+        "score": "4 likes"
+      }
+    }
+  }
+}
