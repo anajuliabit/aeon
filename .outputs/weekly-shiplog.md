@@ -1,11 +1,10 @@
-*Weekly Shiplog — 2026-08-10*
+*weekly shiplog — 2026-08-17*
 
-The vuln-scanner started running cargo-fuzz harnesses on repos it never wrote, the skill catalog cleared 70 with five new operator skills plus community-pack machinery, and Aeon migrated wholesale off its bespoke skill frontmatter onto the Agent Skills spec.
+a quieter week after last week's spec-form migration and catalog surge: aeon gains a delegation primitive that hands work to an external agent-worker market, and the `bin/add-skill` installer that had been quietly broken for every downstream repo since launch gets fixed.
 
-Themes:
-- Vuln-scanner starts fuzzing binaries it never wrote
-- Catalog clears 70, community-pack path becomes real
-- Agent Skills spec-form replaces OKF; traces + Buzz online
+themes:
+- aeon can now delegate to an outside agent market
+- bin/add-skill was broken for every downstream repo — now it isn't
 
-51 commits · 28 PRs · +16,617 / −2,128
-https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-10.md
+7 commits · 7 PRs · +556 / −21
+https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-17.md

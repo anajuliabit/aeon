@@ -1,0 +1,135 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "weekly shiplog — 2026-08-17",
+        "description": "A quieter week after last week's spec-form migration and catalog surge: aeon gains a delegation primitive that hands work to an external agent-worker market, and the bin/add-skill installer that had been quietly broken for every downstream repo since launch gets fixed."
+      },
+      "children": [
+        "separator_1",
+        "themes_heading",
+        "themes_stack",
+        "separator_2",
+        "metrics_heading",
+        "metrics_stack",
+        "separator_3",
+        "article_link"
+      ]
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "themes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Themes",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "themes_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme_1",
+        "theme_2"
+      ]
+    },
+    "theme_1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon can now delegate to an outside agent market",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "theme_2": {
+      "type": "Text",
+      "props": {
+        "text": "bin/add-skill was broken for every downstream repo — now it isn't",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "metrics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_commits",
+        "stat_prs",
+        "stat_additions",
+        "stat_deletions"
+      ]
+    },
+    "stat_commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "7"
+      },
+      "children": []
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "7"
+      },
+      "children": []
+    },
+    "stat_additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Additions",
+        "value": "+556"
+      },
+      "children": []
+    },
+    "stat_deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Deletions",
+        "value": "−21"
+      },
+      "children": []
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Weekly Shiplog",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-17.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
