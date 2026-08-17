@@ -1,0 +1,410 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Deal Flow — 2026-08-17"
+      },
+      "children": [
+        "intro-para",
+        "sep-1",
+        "deals-stack",
+        "sep-2",
+        "sources"
+      ]
+    },
+    "intro-para": {
+      "type": "Text",
+      "props": {
+        "text": "Read: ai stack raised at every layer this week — data $190B, compute $6B, neocloud $2.4B, personal-model $5B — with river ai's $1.1B at 2mo-old rewriting seed/A ceilings while agent-in-ops gets its first $1.2B enterprise check via happyrobot.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "deals-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "deal-1",
+        "deal-2",
+        "deal-3",
+        "deal-4",
+        "deal-5",
+        "deal-6",
+        "deal-7",
+        "deal-8"
+      ]
+    },
+    "deal-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-1-name",
+        "deal-1-desc",
+        "deal-1-funding",
+        "deal-1-why"
+      ]
+    },
+    "deal-1-name": {
+      "type": "Heading",
+      "props": {
+        "text": "1. River AI",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "deal-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "User-owned personal AI models, trainable and portable"
+      },
+      "children": []
+    },
+    "deal-1-funding": {
+      "type": "Text",
+      "props": {
+        "text": "$1.1B seed/A @ ~$5B post (UP, no prior) | Lead: General Catalyst + AMP PBC (Nvidia, AMD Ventures, YC, Temasek)"
+      },
+      "children": []
+    },
+    "deal-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: 2mo-old babuschkin (ex-xai/deepmind) resets seed/A ceiling; user-owned-weights thesis gets its ownership-of-mandate primitive.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "deal-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-2-name",
+        "deal-2-desc",
+        "deal-2-funding",
+        "deal-2-why"
+      ]
+    },
+    "deal-2-name": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Valar Atomics",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "deal-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Factory-built nuclear reactors for AI data centers"
+      },
+      "children": []
+    },
+    "deal-2-funding": {
+      "type": "Text",
+      "props": {
+        "text": "$1B Series B @ $6B post (3× UP vs $2B earlier 2026) | Lead: Sequoia"
+      },
+      "children": []
+    },
+    "deal-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: nuclear-for-ai-compute crosses $1B Series B under 9mo from Series A; sequoia sets the fission-primitive reference ceiling.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "deal-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-3-name",
+        "deal-3-desc",
+        "deal-3-funding",
+        "deal-3-why"
+      ]
+    },
+    "deal-3-name": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Lovable",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "deal-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "AI vibe-coding platform for building businesses"
+      },
+      "children": []
+    },
+    "deal-3-funding": {
+      "type": "Text",
+      "props": {
+        "text": "$400M Series C @ $13.3B post (2.02× UP vs $6.6B Dec 2025) | Lead: Menlo Ventures + EQT/Scaleup Europe"
+      },
+      "children": []
+    },
+    "deal-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: 8mo re-price >2× at ~$600M ARR = vibe-coding survives cursor/cognition compression on consumer-to-business bridge.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "deal-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-4-name",
+        "deal-4-desc",
+        "deal-4-funding",
+        "deal-4-why"
+      ]
+    },
+    "deal-4-name": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Volta Infra",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "deal-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "\"Neocloud\" for AI startups on 133MW bitdeer capacity"
+      },
+      "children": []
+    },
+    "deal-4-funding": {
+      "type": "Text",
+      "props": {
+        "text": "$300M seed+A @ $2.4B post (UP, no prior) | Lead: a16z + Altimeter (Nvidia, Dell)"
+      },
+      "children": []
+    },
+    "deal-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: launches with $10B anchor anthropic contract; a16z/nvidia carve middle-tier neocloud between hobbyist gpu and megaround anchors.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "deal-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-5-name",
+        "deal-5-desc",
+        "deal-5-funding",
+        "deal-5-why"
+      ]
+    },
+    "deal-5-name": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Databricks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "deal-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Data + AI lakehouse, 80%+ YoY growth, $7B ARR run-rate"
+      },
+      "children": []
+    },
+    "deal-5-funding": {
+      "type": "Text",
+      "props": {
+        "text": "$5B growth @ $190B post (1.42× UP vs $134B Dec 2025) | Lead: Coatue (Blackstone, MGX)"
+      },
+      "children": []
+    },
+    "deal-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: investors wanted $15B, databricks took $5B — supply-constrained megaround at $7B ARR = enterprise ai-data spend still compounding.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "deal-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-6-name",
+        "deal-6-desc",
+        "deal-6-funding",
+        "deal-6-why"
+      ]
+    },
+    "deal-6-name": {
+      "type": "Heading",
+      "props": {
+        "text": "6. Neros Technologies",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "deal-6-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Autonomous FPV + interceptor drones for US/allied military"
+      },
+      "children": []
+    },
+    "deal-6-funding": {
+      "type": "Text",
+      "props": {
+        "text": "$250M Series C @ $2.5B post (UP, n/d prior) | Lead: Sequoia + American Strategic Technology Fund"
+      },
+      "children": []
+    },
+    "deal-6-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: million-drones/year by 2028 with sequoia+thiel behind autonomous-strike category; c-uas becomes venture-scale primitive.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "deal-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-7-name",
+        "deal-7-desc",
+        "deal-7-funding",
+        "deal-7-why"
+      ]
+    },
+    "deal-7-name": {
+      "type": "Heading",
+      "props": {
+        "text": "7. HappyRobot",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "deal-7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Agentic AI for enterprise logistics, insurance, energy ops"
+      },
+      "children": []
+    },
+    "deal-7-funding": {
+      "type": "Text",
+      "props": {
+        "text": "$150M Series C @ $1.2B post (UP, n/d prior) | Lead: Prysm Capital + Eurazeo (a16z re-up, YC, Deutsche Telekom)"
+      },
+      "children": []
+    },
+    "deal-7-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: chat-to-operations pivot gets first $1.2B enterprise endorsement; 150+ customers running \"messy handoff\" agents in prod.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "deal-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal-8-name",
+        "deal-8-desc",
+        "deal-8-funding",
+        "deal-8-why"
+      ]
+    },
+    "deal-8-name": {
+      "type": "Heading",
+      "props": {
+        "text": "8. Base Power",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "deal-8-desc": {
+      "type": "Text",
+      "props": {
+        "text": "39.2 kWh home battery + residential grid-services stack"
+      },
+      "children": []
+    },
+    "deal-8-funding": {
+      "type": "Text",
+      "props": {
+        "text": "$1B Series D @ $13B post (3.25× UP vs $4B Oct 2025) | Lead: Ribbit + Addition + Valor + JPMorgan"
+      },
+      "children": []
+    },
+    "deal-8-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: residential-grid asset base compounds 3.25× in 10mo on hardware-launch day; fintech-lead on a home-energy primitive.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: crunchbase=ok, techcrunch=ok, cryptorank=ok(partial-paywall), crypto-fundraising=ok, aift=skipped | candidates=~30 → kept=8",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
