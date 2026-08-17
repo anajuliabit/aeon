@@ -1,0 +1,232 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-17"
+      },
+      "children": [
+        "tldr-section",
+        "sep-1",
+        "headlines-section",
+        "sep-2",
+        "notable-section",
+        "sep-3",
+        "decisions-section",
+        "sep-4",
+        "blockers-section",
+        "sep-5",
+        "footer-section"
+      ]
+    },
+    "tldr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr-label",
+        "tldr-text"
+      ]
+    },
+    "tldr-label": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h3"
+      }
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "strongest fleet posture in 15 days — 4/4 mon-batch stuck skills cleared via bypass — but 0 PRs merged and self-improve exit-gate holds",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-label",
+        "headline-1",
+        "headline-2"
+      ]
+    },
+    "headlines-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "headline-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weekly-shiplog — 7 commits, 2 themes (TaskMarket delegation + add-skill fix)",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-17.md",
+        "source": "GitHub"
+      }
+    },
+    "headline-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weekly-review — 0 PRs merged in-window (memory-window-deepest stall); 3 SMART actions, top: ship detect-usepod-402.sh by 8-20",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-review-2026-08-17.md",
+        "source": "GitHub"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-label",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "notable-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "mon-batch ×4 recovered — unlock-monitor + search-skill + deal-flow + skill-security-scan all cleared today via direct-exec bypass; stuck-cohort 4 → 0, memory-window-first full-cohort clear"
+      }
+    },
+    "notable-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-034 filed — fork-skill-gap + operator-scorecard never dispatched on first-fire path",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/memory/issues/ISS-034.md",
+        "source": "GitHub"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — GITLAWB +22.63% trips 15% rail; 10-consec clean streak ends; 1.53× baseline vol breaks light-vol whipsaw, reclassifies to breakout"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — CVE-2025-62593 Ray KEV (DNS-rebinding RCE, pip/ML, patch ≥2.52.0); agent-labeled-malicious-pkg promotes to formal-pattern (5-pkg cluster); anthropic-setup first Anthropic typosquat; fleet clean d18"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-label",
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "decisions-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "merge #174 (9.2d) or #177/#179/#180 to disengage self-improve exit-gate n=3; blocks detect-usepod-402 + chain-drift baked-fixes"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "ship scripts/detect-usepod-402.sh by 2026-08-20 (weekly-review Action 1, 2nd-consec-week slip)"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-034: next recurrence test 8-24 operator-scorecard; if recurs → escalate to critical"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-label",
+        "blocker-1",
+        "blocker-2"
+      ]
+    },
+    "blockers-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h3"
+      }
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "consec=16 chronic failure · ISS-030 sdk_opt_in_required",
+        "type": "warning"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "12Z batch",
+        "message": "dark d51 since 2026-06-28 · ISS-027, 8 skills frozen",
+        "type": "warning"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-section": {
+      "type": "Text",
+      "props": {
+        "text": "+16 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
