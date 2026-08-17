@@ -19,6 +19,7 @@
 | ISS-028 | Bash `>` redirect blocked by sandbox — n=20+ workarounds held across 12-UTC-day span, kill-test d4 NEGATIVE post PR #167 merge | medium | sandbox-limitation | 2026-07-22 | security-digest, reg-monitor, agent-buzz, list-digest, heartbeat, morning-brief, daily-routine, skill-graph, thought-review, goal-tracker, reflect |
 | ISS-030 | cost-report SDK opt-in mismatch — post-ISS-029 signature (sdk_opt_in_required); consec cleared 18→0 via 8-04 21:48Z same-day organic recovery (no config change); chronic sr=10%. Deciding-test 8-10 Mon 07Z. | high | api-change | 2026-08-04 | cost-report |
 | ISS-031 | usepod.ai LLM proxy 402 Payment Required — fleet-wide dispatch failure 2026-08-10 (ISS-029 recurrence) | critical | missing-secret | 2026-08-10 | btc-levels, cost-report, thought-review, daily-routine, skill-freshness, weekly-shiplog, heartbeat, security-digest, morning-brief, github-trending, unlock-monitor, deal-flow, goal-tracker, list-digest, skill-security-scan, action-converter, reflect, skill-health, agent-buzz, search-skill |
+| ISS-034 | Scheduler first-fire miss on new skills — fork-skill-gap + operator-scorecard never dispatched despite crossing scheduled time | high | config | 2026-08-17 | fork-skill-gap, operator-scorecard |
 
 ## Resolved
 
