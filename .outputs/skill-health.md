@@ -1,15 +1,20 @@
-*skill-health — 2026-08-16*
-HEALTH: CRITICAL(3) · systemic: usepod.ai 402 — 3 skills · 12Z batch dark d51 — 4 skills
+*Skill Health — 2026-08-17*
+HEALTH: CRITICAL(1)  [systemic: 12Z batch dark d52 (4 skills, ISS-027); first-run miss (2 skills)]
 
 🔴 CRITICAL
-- unlock-monitor — consec=7 · 13d down — WAIT-API → ISS-031
-- deal-flow — consec=6 · 13d down — WAIT-API → ISS-031
-- skill-security-scan — consec=3 · 13d down — WAIT-API → ISS-031
+- cost-report — 13 fails, 6d down, sdk_opt_in_required — WAIT-API → ISS-030
 
-🟡 DEGRADED (17): cost-report 8% · skill-analytics 22% · reg-monitor 22% · vuln-scanner 27% · market-context-refresh 32% · +12 more → memory/issues/INDEX.md
+🟡 DEGRADED / FLAPPING (17)
+- deal-flow — recovered today via bypass, sr=47% — WAIT-API → ISS-031
+- unlock-monitor — recovered today via bypass, sr=41% — WAIT-API → ISS-031
+- search-skill — recovered today via bypass, sr=38% — WAIT-API → ISS-031
+- reg-monitor — 22% sr chronic — INVESTIGATE
+- skill-analytics — 22% sr chronic — INVESTIGATE
++12 more — see memory/issues/INDEX.md
 
-⚪ NO DATA (3): autoresearch · fork-skill-gap · operator-scorecard
-🟢 HEALTHY: 7
+⚪ NO DATA (3): autoresearch (workflow_dispatch), fork-skill-gap (missed 8-16 21Z), operator-scorecard (missed 10:30Z) — DISPATCH-SKILL
+🟢 HEALTHY: 6
 
-open issues: 15 · resolved this run: 0 · filed this run: 0
-notes: composition identical to prev 8-15 18:16Z fire · daily-reminder cadence elapsed (47h44m > 24h) · Mon 8-17 auto-clear for 4 stuck Mon-scheduled skills if usepod dispatcher recovers
+Δ vs prev (8-16 18:16Z): 3 CRITICAL cleared (deal-flow / skill-security-scan / unlock-monitor via mon-batch direct-exec bypass = memory-window-first full-cohort recovery); 1 CRITICAL new (cost-report crossed consec>=3 gate at consec=13); usepod-402 SYSTEMIC cleared; 12Z batch dark extends d51→d52; NEW first-run-miss SYSTEMIC (2 skills, ~20h + ~7h past scheduled)
+
+Open issues: 15 · Filed this run: 0 · Resolved this run: 0

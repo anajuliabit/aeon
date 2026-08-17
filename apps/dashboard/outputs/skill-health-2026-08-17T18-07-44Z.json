@@ -1,0 +1,680 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-08-17"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "critical_section",
+        "sep2",
+        "degraded_section",
+        "sep3",
+        "nodata_section",
+        "sep4",
+        "healthy_section",
+        "sep5",
+        "delta_section",
+        "sep6",
+        "summary_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "HEALTH: CRITICAL(1)",
+        "message": "Systemic: 12Z batch dark d52 (4 skills, ISS-027); first-run miss (2 skills)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical_heading",
+        "cost_report_stack"
+      ]
+    },
+    "critical_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL",
+        "level": "h3"
+      }
+    },
+    "cost_report_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cost_report_name",
+        "cost_report_stats",
+        "cost_report_issue"
+      ]
+    },
+    "cost_report_name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "cost_report_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cost_report_fails",
+        "cost_report_down",
+        "cost_report_reason"
+      ]
+    },
+    "cost_report_fails": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures",
+        "value": "13"
+      }
+    },
+    "cost_report_down": {
+      "type": "Stat",
+      "props": {
+        "label": "Down",
+        "value": "6d"
+      }
+    },
+    "cost_report_reason": {
+      "type": "Badge",
+      "props": {
+        "text": "sdk_opt_in_required",
+        "variant": "destructive"
+      }
+    },
+    "cost_report_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cost_report_status",
+        "cost_report_link"
+      ]
+    },
+    "cost_report_status": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API",
+        "variant": "outline"
+      }
+    },
+    "cost_report_link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-030",
+        "href": "memory/issues/ISS-030.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "skill_deal_flow",
+        "skill_unlock_monitor",
+        "skill_search_skill",
+        "skill_reg_monitor",
+        "skill_analytics",
+        "more_degraded"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED / FLAPPING (17)",
+        "level": "h3"
+      }
+    },
+    "skill_deal_flow": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal_flow_name",
+        "deal_flow_details"
+      ]
+    },
+    "deal_flow_name": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow",
+        "variant": "lead"
+      }
+    },
+    "deal_flow_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deal_flow_sr",
+        "deal_flow_status_action"
+      ]
+    },
+    "deal_flow_sr": {
+      "type": "Progress",
+      "props": {
+        "value": 47,
+        "max": 100,
+        "label": "Success Rate: recovered today via bypass"
+      }
+    },
+    "deal_flow_status_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deal_flow_badge",
+        "deal_flow_link"
+      ]
+    },
+    "deal_flow_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API",
+        "variant": "outline"
+      }
+    },
+    "deal_flow_link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-031",
+        "href": "memory/issues/ISS-031.md"
+      }
+    },
+    "skill_unlock_monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "unlock_monitor_name",
+        "unlock_monitor_details"
+      ]
+    },
+    "unlock_monitor_name": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "lead"
+      }
+    },
+    "unlock_monitor_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "unlock_monitor_sr",
+        "unlock_monitor_status_action"
+      ]
+    },
+    "unlock_monitor_sr": {
+      "type": "Progress",
+      "props": {
+        "value": 41,
+        "max": 100,
+        "label": "Success Rate: recovered today via bypass"
+      }
+    },
+    "unlock_monitor_status_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "unlock_monitor_badge",
+        "unlock_monitor_link"
+      ]
+    },
+    "unlock_monitor_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API",
+        "variant": "outline"
+      }
+    },
+    "unlock_monitor_link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-031",
+        "href": "memory/issues/ISS-031.md"
+      }
+    },
+    "skill_search_skill": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "search_skill_name",
+        "search_skill_details"
+      ]
+    },
+    "search_skill_name": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill",
+        "variant": "lead"
+      }
+    },
+    "search_skill_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "search_skill_sr",
+        "search_skill_status_action"
+      ]
+    },
+    "search_skill_sr": {
+      "type": "Progress",
+      "props": {
+        "value": 38,
+        "max": 100,
+        "label": "Success Rate: recovered today via bypass"
+      }
+    },
+    "search_skill_status_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "search_skill_badge",
+        "search_skill_link"
+      ]
+    },
+    "search_skill_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API",
+        "variant": "outline"
+      }
+    },
+    "search_skill_link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-031",
+        "href": "memory/issues/ISS-031.md"
+      }
+    },
+    "skill_reg_monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reg_monitor_name",
+        "reg_monitor_details"
+      ]
+    },
+    "reg_monitor_name": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "lead"
+      }
+    },
+    "reg_monitor_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reg_monitor_sr",
+        "reg_monitor_action"
+      ]
+    },
+    "reg_monitor_sr": {
+      "type": "Progress",
+      "props": {
+        "value": 22,
+        "max": 100,
+        "label": "Success Rate: chronic"
+      }
+    },
+    "reg_monitor_action": {
+      "type": "Badge",
+      "props": {
+        "text": "INVESTIGATE",
+        "variant": "outline"
+      }
+    },
+    "skill_analytics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "analytics_name",
+        "analytics_details"
+      ]
+    },
+    "analytics_name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "lead"
+      }
+    },
+    "analytics_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "analytics_sr",
+        "analytics_action"
+      ]
+    },
+    "analytics_sr": {
+      "type": "Progress",
+      "props": {
+        "value": 22,
+        "max": 100,
+        "label": "Success Rate: chronic"
+      }
+    },
+    "analytics_action": {
+      "type": "Badge",
+      "props": {
+        "text": "INVESTIGATE",
+        "variant": "outline"
+      }
+    },
+    "more_degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "more_count",
+        "more_link"
+      ]
+    },
+    "more_count": {
+      "type": "Text",
+      "props": {
+        "text": "+12 more",
+        "variant": "muted"
+      }
+    },
+    "more_link": {
+      "type": "Link",
+      "props": {
+        "label": "see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "nodata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata_heading",
+        "skill_autoresearch",
+        "skill_fork",
+        "skill_scorecard",
+        "nodata_action"
+      ]
+    },
+    "nodata_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "skill_autoresearch": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "autoresearch_name",
+        "autoresearch_note"
+      ]
+    },
+    "autoresearch_name": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch",
+        "variant": "lead"
+      }
+    },
+    "autoresearch_note": {
+      "type": "Badge",
+      "props": {
+        "text": "workflow_dispatch",
+        "variant": "secondary"
+      }
+    },
+    "skill_fork": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fork_name",
+        "fork_note"
+      ]
+    },
+    "fork_name": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "lead"
+      }
+    },
+    "fork_note": {
+      "type": "Badge",
+      "props": {
+        "text": "missed 8-16 21Z",
+        "variant": "secondary"
+      }
+    },
+    "skill_scorecard": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "scorecard_name",
+        "scorecard_note"
+      ]
+    },
+    "scorecard_name": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "lead"
+      }
+    },
+    "scorecard_note": {
+      "type": "Badge",
+      "props": {
+        "text": "missed 10:30Z",
+        "variant": "secondary"
+      }
+    },
+    "nodata_action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy_heading",
+        "healthy_count"
+      ]
+    },
+    "healthy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "6"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "delta_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "delta_heading",
+        "delta_text"
+      ]
+    },
+    "delta_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Δ vs prev (8-16 18:16Z)",
+        "level": "h3"
+      }
+    },
+    "delta_text": {
+      "type": "Text",
+      "props": {
+        "text": "3 CRITICAL cleared (deal-flow / skill-security-scan / unlock-monitor via mon-batch direct-exec bypass = memory-window-first full-cohort recovery); 1 CRITICAL new (cost-report crossed consec≥3 gate at consec=13); usepod-402 SYSTEMIC cleared; 12Z batch dark extends d51→d52; NEW first-run-miss SYSTEMIC (2 skills, ~20h + ~7h past scheduled)",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_heading",
+        "summary_stats"
+      ]
+    },
+    "summary_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_filed",
+        "stat_resolved"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "0"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}
