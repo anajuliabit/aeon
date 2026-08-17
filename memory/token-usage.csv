@@ -1101,3 +1101,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-17,unlock-monitor,claude-opus-4-7,2110,30232,6437328,104618
 2026-08-17,token-alert,claude-opus-4-7,26,14670,1524774,88553
 2026-08-17,deal-flow,claude-opus-4-7,3938,26555,1860948,140346
+2026-08-17,btc-levels,claude-sonnet-4-6,5797,4929,754685,52600
