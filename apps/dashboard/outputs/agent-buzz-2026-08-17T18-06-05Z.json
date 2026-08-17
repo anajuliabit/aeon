@@ -1,0 +1,109 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-08-17"
+      },
+      "children": [
+        "intro-text",
+        "sep1",
+        "heading-cli",
+        "tweet-xds2000",
+        "tweet-zangjiaao",
+        "tweet-yangYcat",
+        "sep2",
+        "heading-mcp",
+        "tweet-corey",
+        "tweet-nitesh",
+        "tweet-maciek",
+        "footer-text"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "mcp is the whole conversation today, split two ways — chinese-dev cli-first skepticism, and western builders shipping infrastructure to make mcp production-safe.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-cli": {
+      "type": "Heading",
+      "props": {
+        "text": "cli-over-mcp pushback",
+        "level": "h2"
+      }
+    },
+    "tweet-xds2000": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@xds2000",
+        "text": "ripped MCP out of k8e-sandbox: CLI dispatch beat MCP tool-call overhead in practice."
+      }
+    },
+    "tweet-zangjiaao": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@zangjiaao",
+        "text": "agents should hit APIs through CLI the way humans do; MCP is a wrapper tax."
+      }
+    },
+    "tweet-yangYcat": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@YangYcat",
+        "text": "MCP only earns its cost during exploration; swap in scripts once the tool surface stabilizes."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-mcp": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp infrastructure maturing",
+        "level": "h2"
+      }
+    },
+    "tweet-corey": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@CoreyGallon",
+        "text": "Temporal's Cornelia Davis shipped client-side MCP task support the spec authors never implemented."
+      }
+    },
+    "tweet-nitesh": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@NiteshTechAI",
+        "text": "Google's MCP Toolbox exposes prebuilt DB schema tools so agents stop improvising queries on prod."
+      }
+    },
+    "tweet-maciek": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@maciekChmura",
+        "text": "AlwaysQA runs real-browser critical flows through MCP after every AI-assisted commit."
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai(cache) · candidates: 10 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}
