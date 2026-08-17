@@ -1,9 +1,23 @@
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · notify=SKIPPED (dedup)`
+Heartbeat complete. Wrote status page and log entry; no notification sent per dedup rule.
 
 ## Summary
-- **Files modified:** `docs/status.md` (rewrote wholesale — 🔴 DEGRADED verdict, 43 enabled skills, 15 open issues, next-run btc-levels 08:15Z), `memory/logs/2026-08-17.md` (appended heartbeat entry + summary).
-- **P0 findings:** 1 fresh-fail (cost-report 08:00Z — matches chronic ISS-030 sdk_opt_in_required signature) + 4 stuck mon-batch skills (search-skill/unlock-monitor/deal-flow/skill-security-scan, ISS-031 aftermath, auto-clear window today) + 3 API-degradation (unlock=7, deal=6, scan=3) + 10-skill chronic cohort holds. Heartbeat self-check clean (12h since last success; 6-consec-clean streak post 8-15 crash).
-- **P1:** PR queue at 6 unchanged; #174/#176/#177 all cross 7d weekly-review stall band; self-improve exit-gate ENGAGED n=3. No urgent issues.
-- **P2/P3:** All flagged items in MEMORY.md (11-consec zero-capture, on-chain config d72, ISS-031 detect-script overdue). 12Z batch DARK d51 (round-51 crossing).
-- **Notification:** SKIPPED — every finding appears in the morning-brief 07:31Z (40 min ago) or MEMORY.md per SKILL.md dedup rule.
-- **Follow-up:** 10Z unlock-monitor / 14Z search-skill+deal-flow / 16Z skill-security-scan mon-batch auto-clear tests are today's ISS-031 recovery decider; 10:30Z operator-scorecard first-ever fire; 14Z next heartbeat re-evaluates.
+
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED · notify=SKIPPED (dedup)`
+
+**Files created/modified:**
+- `docs/status.md` — regenerated with 🔴 DEGRADED verdict, 43 enabled skills, 15 open issues, next-run `skill-security-scan at 16:00 UTC`
+- `memory/logs/2026-08-17.md` — appended full heartbeat entry with P0/P1/P2/P3 findings + dedup outcome
+
+**P0/P1/P2 findings (all dedup vs morning-brief 07:31Z + heartbeat 08:10Z — no notify):**
+- cost-report fresh fail 13:58Z, consec 1→9 (5 retries same ISS-030 signature), sr 8%→7%
+- **unlock-monitor RECOVERED 10:37Z** via mon-batch direct-exec bypass — stuck cohort 4→3
+- 3 stuck remain (search-skill/skill-security-scan/deal-flow) — 14z + 16z auto-clear tests pending
+- 13-skill chronic sub-0.5 cohort holds
+- PR queue 6 unchanged (#174 crosses day-9.3, memory-window-deepest)
+- 15 open issues unchanged
+
+**P3 structurally-new (deferred to 20Z re-check):**
+- fork-skill-gap 8-16 21Z first-fire MISSED (~17h past)
+- operator-scorecard 8-17 10:30Z first-fire MISSED (~3.5h past)
+
+**Follow-up:** 14z/16z mon-batch auto-clear tests, 20Z heartbeat will re-check P3 first-run misses — if still missing, escalate to notify + issue file (potential dispatcher bug on new-skill first-fire path).
