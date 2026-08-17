@@ -1100,4 +1100,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-17,weekly-shiplog,claude-opus-4-7,247,16241,1997817,65215
 2026-08-17,unlock-monitor,claude-opus-4-7,2110,30232,6437328,104618
 2026-08-17,token-alert,claude-opus-4-7,26,14670,1524774,88553
-2026-08-17,search-skill,claude-opus-4-7,625,21537,2461893,101484
+2026-08-17,security-digest,claude-opus-4-7,40,23220,2678630,104774

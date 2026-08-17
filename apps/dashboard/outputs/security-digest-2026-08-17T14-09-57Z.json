@@ -1,0 +1,338 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-08-17 · verdict: 1 actively exploited, 0 to schedule, 3 to monitor"
+      },
+      "children": [
+        "sources_badge",
+        "separator_1",
+        "patch_section",
+        "separator_2",
+        "monitor_section"
+      ]
+    },
+    "sources_badge": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: kev, gh advisory, epss",
+        "variant": "caption"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch_heading",
+        "patch_item_1",
+        "patch_item_2",
+        "patch_item_3"
+      ]
+    },
+    "patch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_1_story",
+        "patch_1_meta",
+        "patch_1_desc",
+        "patch_1_action"
+      ]
+    },
+    "patch_1_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2025-62593",
+        "href": "https://github.com/advisories/GHSA-q279-jhrf-cc6v",
+        "source": "ray (pip)"
+      }
+    },
+    "patch_1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-08-18 · EPSS 0.004 · CVSS n/a",
+        "variant": "caption"
+      }
+    },
+    "patch_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "RCE via DNS rebinding through Firefox/Safari against the dashboard HTTP server; NCCGroup Singularity PoC referenced in advisory.",
+        "variant": "body"
+      }
+    },
+    "patch_1_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Upgrade ray to ≥2.52.0 today",
+        "type": "error"
+      }
+    },
+    "patch_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_2_story",
+        "patch_2_meta",
+        "patch_2_desc",
+        "patch_2_action"
+      ]
+    },
+    "patch_2_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-6mwf-mqp4-2f69",
+        "href": "https://github.com/advisories/GHSA-6mwf-mqp4-2f69",
+        "source": "anthropic-setup (npm)"
+      }
+    },
+    "patch_2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "Malware · brand-jack on anthropic namespace",
+        "variant": "caption"
+      }
+    },
+    "patch_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "First anthropic-branded typosquat in memory-window; fleet-adjacent since Aeon runs on Claude SDK.",
+        "variant": "body"
+      }
+    },
+    "patch_2_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Block anthropic-setup in every install path; rotate creds if any pipeline resolved it",
+        "type": "error"
+      }
+    },
+    "patch_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_3_heading",
+        "patch_3_meta",
+        "patch_3_packages",
+        "patch_3_desc",
+        "patch_3_action"
+      ]
+    },
+    "patch_3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent-labeled npm malware cluster",
+        "level": "h3"
+      }
+    },
+    "patch_3_meta": {
+      "type": "Text",
+      "props": {
+        "text": "5 packages (same 48h) · Malware",
+        "variant": "caption"
+      }
+    },
+    "patch_3_packages": {
+      "type": "Text",
+      "props": {
+        "text": "@ai-vertical/ai-agent, agentsync-pkg, agent-bot-api, cloud-agen-bot, autoai",
+        "variant": "body"
+      }
+    },
+    "patch_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Extends agent-labeled-malicious-pkg axis from 8–16 (n=1) to n=2+.",
+        "variant": "body"
+      }
+    },
+    "patch_3_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Treat any unknown \"agent\"-labeled npm pkg as suspect until source-verified",
+        "type": "error"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "monitor_heading",
+        "monitor_item_1",
+        "monitor_item_2",
+        "monitor_item_3"
+      ]
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_1_story",
+        "monitor_1_meta",
+        "monitor_1_desc",
+        "monitor_1_action"
+      ]
+    },
+    "monitor_1_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-55158",
+        "href": "https://github.com/advisories/GHSA-2qvg-qr73-mqxp",
+        "source": "wktk/conflibot (GitHub Actions)"
+      }
+    },
+    "monitor_1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.1 · no patch · EPSS 0",
+        "variant": "caption"
+      }
+    },
+    "monitor_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Command injection via crafted PR branch names under pull_request_target.",
+        "variant": "body"
+      }
+    },
+    "monitor_1_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Don't use conflibot; watch for fix",
+        "type": "warning"
+      }
+    },
+    "monitor_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_2_story",
+        "monitor_2_meta",
+        "monitor_2_desc",
+        "monitor_2_action"
+      ]
+    },
+    "monitor_2_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-53728",
+        "href": "https://github.com/advisories/GHSA-m44r-7c5h-m6mj",
+        "source": "@medplum/core (npm)"
+      }
+    },
+    "monitor_2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.1 · no patch · EPSS 0",
+        "variant": "caption"
+      }
+    },
+    "monitor_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Redirect URI not validated in external auth callback → auth-code leakage.",
+        "variant": "body"
+      }
+    },
+    "monitor_2_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Track; audit any medplum auth flows",
+        "type": "warning"
+      }
+    },
+    "monitor_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_3_story",
+        "monitor_3_meta",
+        "monitor_3_desc",
+        "monitor_3_action"
+      ]
+    },
+    "monitor_3_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-40345",
+        "href": "https://github.com/advisories/GHSA-ggr8-5vv4-36mx",
+        "source": "deepmerge-ts (npm)"
+      }
+    },
+    "monitor_3_meta": {
+      "type": "Text",
+      "props": {
+        "text": "HIGH · no patch · EPSS 0",
+        "variant": "caption"
+      }
+    },
+    "monitor_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Stack exhaustion when merging recursive object graphs.",
+        "variant": "body"
+      }
+    },
+    "monitor_3_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Track advisory",
+        "type": "warning"
+      }
+    }
+  }
+}
