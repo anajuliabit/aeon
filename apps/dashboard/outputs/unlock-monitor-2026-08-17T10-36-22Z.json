@@ -1,0 +1,603 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "unlock monitor — week of 2026-08-17",
+        "description": "Token unlock analysis and market pressure assessment"
+      },
+      "children": [
+        "summary_section",
+        "sep_1",
+        "crisis_section",
+        "sep_2",
+        "strain_section",
+        "sep_3",
+        "digestible_section",
+        "sep_4",
+        "priced_in_section",
+        "sep_5",
+        "background_section",
+        "sep_6",
+        "supply_read_section",
+        "sep_7",
+        "sources_section"
+      ]
+    },
+    "summary_section": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Most Leveraged This Week",
+        "message": "$ZRO cliff thu 8-20 at $18.93M into $14.9M/d tape. investor recipient, 1.27× vol → CRISIS with override. tape's 7d flat-to-red, no visible flinch → market asleep."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "crisis_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crisis_heading",
+        "zro_token"
+      ]
+    },
+    "crisis_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRISIS (>2.4× daily vol, or override to)",
+        "level": "h3"
+      }
+    },
+    "zro_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "zro_header",
+        "zro_details",
+        "zro_description"
+      ]
+    },
+    "zro_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "zro_symbol",
+        "zro_crisis_badge"
+      ]
+    },
+    "zro_symbol": {
+      "type": "Text",
+      "props": {
+        "text": "$ZRO",
+        "variant": "lead"
+      }
+    },
+    "zro_crisis_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CRISIS",
+        "variant": "destructive"
+      }
+    },
+    "zro_details": {
+      "type": "Text",
+      "props": {
+        "text": "thu 8-20 · $18.93M · 6.78% mcap · cliff · investor · 1.27× vol · 7d −7% → market asleep",
+        "variant": "body"
+      }
+    },
+    "zro_description": {
+      "type": "Text",
+      "props": {
+        "text": "layerzero monthly investor cliff, known pattern — the setup where the tape doesn't move until it does. weakness usually shows ~30d before; this one's still upright.",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "strain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "strain_heading",
+        "ake_token",
+        "ta_token",
+        "sapien_token",
+        "pybobo_token"
+      ]
+    },
+    "strain_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "STRAIN (1.0×–2.4×)",
+        "level": "h3"
+      }
+    },
+    "ake_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ake_header",
+        "ake_details",
+        "ake_status",
+        "ake_description"
+      ]
+    },
+    "ake_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ake_symbol",
+        "ake_strain_badge"
+      ]
+    },
+    "ake_symbol": {
+      "type": "Text",
+      "props": {
+        "text": "$AKE (akedo)",
+        "variant": "lead"
+      }
+    },
+    "ake_strain_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STRAIN",
+        "variant": "secondary"
+      }
+    },
+    "ake_details": {
+      "type": "Text",
+      "props": {
+        "text": "fri 8-21 · $21.09M · 9.25% mcap · cliff · 0.63–1.04× vol · 7d +158%",
+        "variant": "body"
+      }
+    },
+    "ake_status": {
+      "type": "Badge",
+      "props": {
+        "text": "fade pump",
+        "variant": "outline"
+      }
+    },
+    "ake_description": {
+      "type": "Text",
+      "props": {
+        "text": "ratio understated because 7d avg vol is pump-inflated; trailing-3d vol collapsed 114M → 14M as pump matured. cliff into a rip is the textbook pre-cliff bid-then-dump shape.",
+        "variant": "caption"
+      }
+    },
+    "ta_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ta_header",
+        "ta_details",
+        "ta_description"
+      ]
+    },
+    "ta_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ta_symbol",
+        "ta_strain_badge"
+      ]
+    },
+    "ta_symbol": {
+      "type": "Text",
+      "props": {
+        "text": "$TA (trusta.ai)",
+        "variant": "lead"
+      }
+    },
+    "ta_strain_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STRAIN",
+        "variant": "secondary"
+      }
+    },
+    "ta_details": {
+      "type": "Text",
+      "props": {
+        "text": "fri 8-21 · $1.39M · 6.65% mcap · 1.85× vol · 7d −6% → market asleep",
+        "variant": "body"
+      }
+    },
+    "ta_description": {
+      "type": "Text",
+      "props": {
+        "text": "$20M cap, thin book, small unlock but ratio dominant.",
+        "variant": "caption"
+      }
+    },
+    "sapien_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sapien_header",
+        "sapien_details"
+      ]
+    },
+    "sapien_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "sapien_symbol",
+        "sapien_strain_badge"
+      ]
+    },
+    "sapien_symbol": {
+      "type": "Text",
+      "props": {
+        "text": "$SAPIEN",
+        "variant": "lead"
+      }
+    },
+    "sapien_strain_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STRAIN",
+        "variant": "secondary"
+      }
+    },
+    "sapien_details": {
+      "type": "Text",
+      "props": {
+        "text": "thu 8-20 · $2.05M · 10.55% mcap · 1.10× vol · 7d −8% → market asleep",
+        "variant": "body"
+      }
+    },
+    "pybobo_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pybobo_header",
+        "pybobo_details",
+        "pybobo_description"
+      ]
+    },
+    "pybobo_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pybobo_symbol",
+        "pybobo_strain_badge"
+      ]
+    },
+    "pybobo_symbol": {
+      "type": "Text",
+      "props": {
+        "text": "$PYBOBO",
+        "variant": "lead"
+      }
+    },
+    "pybobo_strain_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STRAIN",
+        "variant": "secondary"
+      }
+    },
+    "pybobo_details": {
+      "type": "Text",
+      "props": {
+        "text": "fri 8-21 · $5.13M · 21.20% mcap · vol=unknown (not on coingecko) → market asleep",
+        "variant": "body"
+      }
+    },
+    "pybobo_description": {
+      "type": "Text",
+      "props": {
+        "text": "week's largest supply-% shock. vol gap = conservative STRAIN placement.",
+        "variant": "caption"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "digestible_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "digestible_heading",
+        "era_token"
+      ]
+    },
+    "digestible_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DIGESTIBLE (0.3×–1.0×)",
+        "level": "h3"
+      }
+    },
+    "era_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "era_header",
+        "era_details",
+        "era_description"
+      ]
+    },
+    "era_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "era_symbol",
+        "era_digestible_badge"
+      ]
+    },
+    "era_symbol": {
+      "type": "Text",
+      "props": {
+        "text": "$ERA (caldera)",
+        "variant": "lead"
+      }
+    },
+    "era_digestible_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DIGESTIBLE",
+        "variant": "outline"
+      }
+    },
+    "era_details": {
+      "type": "Text",
+      "props": {
+        "text": "sun 8-17 · $1.44M · 16.03% mcap · 0.46× vol · 7d −12% → absorbable",
+        "variant": "body"
+      }
+    },
+    "era_description": {
+      "type": "Text",
+      "props": {
+        "text": "2nd-largest supply-% of the week on a $9M cap; watch for slippage on any real seller.",
+        "variant": "caption"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "priced_in_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "priced_heading",
+        "kaito_token"
+      ]
+    },
+    "priced_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PRICED IN (TRIVIAL by ratio, worth naming)",
+        "level": "h3"
+      }
+    },
+    "kaito_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kaito_header",
+        "kaito_details",
+        "kaito_description"
+      ]
+    },
+    "kaito_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "kaito_symbol",
+        "kaito_priced_badge"
+      ]
+    },
+    "kaito_symbol": {
+      "type": "Text",
+      "props": {
+        "text": "$KAITO",
+        "variant": "lead"
+      }
+    },
+    "kaito_priced_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PRICED IN",
+        "variant": "outline"
+      }
+    },
+    "kaito_details": {
+      "type": "Text",
+      "props": {
+        "text": "thu 8-20 · $9.09M · 10.74% mcap · 0.21× vol · 7d −49.6%",
+        "variant": "body"
+      }
+    },
+    "kaito_description": {
+      "type": "Text",
+      "props": {
+        "text": "this one already dumped. unlock day may mark a bottom.",
+        "variant": "caption"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "background_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "background_heading",
+        "background_items"
+      ]
+    },
+    "background_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BACKGROUND (TRIVIAL, no override)",
+        "level": "h3"
+      }
+    },
+    "background_items": {
+      "type": "Text",
+      "props": {
+        "text": "$PENGU 8-17 · $4.23M / 0.09× · $ZK 8-17 · $1.31M / 0.26× · $PLUME 8-21 · $3.17M / 0.04× — absorbable.",
+        "variant": "body"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "supply_read_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "supply_heading",
+        "supply_text_1",
+        "supply_text_2",
+        "supply_text_3"
+      ]
+    },
+    "supply_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Supply Read",
+        "level": "h3"
+      }
+    },
+    "supply_text_1": {
+      "type": "Text",
+      "props": {
+        "text": "Real pressure is $ZRO thu + $AKE fri, and they trade opposite ways — ZRO into a snoozing tape (asymmetric downside if buyers don't show), AKE into a 158% rip (asymmetric downside if pump exits before cliff).",
+        "variant": "body"
+      }
+    },
+    "supply_text_2": {
+      "type": "Text",
+      "props": {
+        "text": "Small caps SAPIEN/TA/PYBOBO carry ratio but tiny $. KAITO already bled the unlock in advance — the tell that pre-unlock signaling works.",
+        "variant": "body"
+      }
+    },
+    "supply_text_3": {
+      "type": "Text",
+      "props": {
+        "text": "No forced sellers this week (FTX round 5 landed 7-31, mt.gox pushed to 10-31).",
+        "variant": "body"
+      }
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Data Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "tokenomist=ok, defillama=fail, cryptorank=ok, bitcoinsistemi=ok, coingecko=ok(5/8 · rate-limited on bard/river/0g)",
+        "variant": "caption"
+      }
+    }
+  }
+}

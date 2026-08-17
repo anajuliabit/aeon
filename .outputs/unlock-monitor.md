@@ -1,22 +1,29 @@
-*unlock monitor — week of 2026-08-03*
+*unlock monitor — week of 2026-08-17*
 
-$PROVE is the whole story this week. wed aug 5, $34.7M cliff — larger than the token's own $32.8M market cap. 8.6× daily volume, into a +15.9% 30d tape. fade the pump.
+most leveraged this week: **$ZRO** cliff thu 8-20 at $18.93M into $14.9M/d tape. investor recipient, 1.27× vol → **CRISIS with override**. tape's 7d flat-to-red, no visible flinch → market asleep.
 
-**CRISIS (>2.4× daily vol)**
-- $PROVE — wed aug 5 · 312.5M tokens (~21% supply, $34.7M)
-  cliff · team · 8.6× vol · 30d +15.9% → fade the pump
-  unlock $ exceeds mcap. weakness usually starts ~30d before, vol peaks on date, recovery window 10-14d out.
+**CRISIS** (>2.4× daily vol, or override to)
+- **$ZRO** — thu 8-20 · $18.93M · 6.78% mcap · cliff · investor · 1.27× vol · 7d −7% → market asleep
+  layerzero monthly investor cliff, known pattern — the setup where the tape doesn't move until it does. weakness usually shows ~30d before; this one's still upright.
 
-**TRIVIAL — big headline, small strain**
-- $HYPE — thu aug 6 · 433K tokens ($22.74M, 0.11% supply)
-  cliff · team · 0.07× vol · 30d +21.8% → absorbable
-  tokenomist calls it structurally modest. $306M daily book swallows it.
-- $ENA — wed aug 5 · 171.88M tokens ($15.5M, team+investors)
-  cliff · team/investor · 0.11× vol · 30d +14.0% → absorbable
-  hayes reportedly accumulating, $142M daily book.
-- $STO — mon aug 3 · 20.82M ($760K, 2.1% total supply)
-  0.24× vol · 30d +23.4% → absorbable
+**STRAIN** (1.0×–2.4×)
+- **$AKE** (akedo) — fri 8-21 · $21.09M · 9.25% mcap · cliff · 0.63–1.04× vol · 7d **+158%** → **fade pump**
+  ratio understated because 7d avg vol is pump-inflated; trailing-3d vol collapsed 114M → 14M as pump matured. cliff into a rip is the textbook pre-cliff bid-then-dump shape.
+- **$TA** (trusta.ai) — fri 8-21 · $1.39M · 6.65% mcap · 1.85× vol · 7d −6% → market asleep
+  $20M cap, thin book, small unlock but ratio dominant.
+- **$SAPIEN** — thu 8-20 · $2.05M · 10.55% mcap · 1.10× vol · 7d −8% → market asleep
+- **$PYBOBO** — fri 8-21 · $5.13M · **21.20% mcap** · vol=unknown (not on coingecko) → market asleep
+  week's largest supply-% shock. vol gap = conservative STRAIN placement.
 
-*supply read:* PROVE is the only real event this week — a cliff larger than the market cap it's landing in, into a green 30d tape. that's a fade-pump setup by the book. HYPE and ENA sound big but sit on books that eat them. rest of the week is calendar noise on the absorption axis.
+**DIGESTIBLE** (0.3×–1.0×)
+- **$ERA** (caldera) — sun 8-17 · $1.44M · **16.03% mcap** · 0.46× vol · 7d −12% → absorbable but 2nd-largest supply-% of the week on a $9M cap; watch for slippage on any real seller.
 
-sources: tokenomist=ok, defillama=fail, cryptorank=ok, dropstab=fail, coingecko=ok
+**PRICED IN** (TRIVIAL by ratio, worth naming)
+- **$KAITO** — thu 8-20 · $9.09M · 10.74% mcap · 0.21× vol · 7d **−49.6%** → this one already dumped. unlock day may mark a bottom.
+
+**BACKGROUND** (TRIVIAL, no override)
+- $PENGU 8-17 · $4.23M / 0.09× · $ZK 8-17 · $1.31M / 0.26× · $PLUME 8-21 · $3.17M / 0.04× — absorbable.
+
+*supply read:* real pressure is $ZRO thu + $AKE fri, and they trade opposite ways — ZRO into a snoozing tape (asymmetric downside if buyers don't show), AKE into a 158% rip (asymmetric downside if pump exits before cliff). small caps SAPIEN/TA/PYBOBO carry ratio but tiny $. KAITO already bled the unlock in advance — the tell that pre-unlock signaling works. no forced sellers this week (FTX round 5 landed 7-31, mt.gox pushed to 10-31).
+
+sources: tokenomist=ok, defillama=fail, cryptorank=ok, bitcoinsistemi=ok, coingecko=ok(5/8 · rate-limited on bard/river/0g)
