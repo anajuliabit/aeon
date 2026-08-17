@@ -309,8 +309,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-08-17T15:55:49Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-17T16:58:40Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-11T20:08:14Z",
     "total_runs": 129,
     "total_successes": 9,
@@ -321,7 +321,7 @@
     "last_error": "ens\":32000,\"canonicalModel\":\"claude-sonnet-4-6\",\"provider\":\"firstParty\"}},\"permission_denials\":[],\"terminal_reason\":\"api_error\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required"
   },
   "skill-security-scan": {
-    "last_dispatch": "2026-08-10T17:08:01Z",
+    "last_dispatch": "2026-08-17T16:58:40Z",
     "last_status": "dispatched",
     "last_success": "2026-08-03T20:18:49Z",
     "total_runs": 15,
@@ -629,8 +629,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-08-17T12:45:06Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-17T16:58:40Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-17T12:47:32Z",
     "total_runs": 432,
     "total_successes": 349,
