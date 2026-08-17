@@ -1,0 +1,247 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-17"
+      },
+      "children": [
+        "top_pick_section",
+        "sep1",
+        "ai_ml_section",
+        "sep2",
+        "devtools_section",
+        "sep3",
+        "sources_section"
+      ]
+    },
+    "top_pick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_pick_heading",
+        "cordis_top_link",
+        "cordis_top_desc"
+      ]
+    },
+    "top_pick_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "cordis_top_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cordiverse/cordis",
+        "href": "https://github.com/cordiverse/cordis"
+      }
+    },
+    "cordis_top_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Thinnest trending page in memory-window (7 candidates). This one carries the day: an obscure 4-year-old TypeScript framework outed as DeepSeek's composability layer via their harness docs.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ai_ml_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ai_ml_heading",
+        "cordis_full_stack"
+      ]
+    },
+    "ai_ml_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "cordis_full_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cordis_full_link",
+        "cordis_full_meta",
+        "cordis_full_desc"
+      ]
+    },
+    "cordis_full_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cordiverse/cordis",
+        "href": "https://github.com/cordiverse/cordis"
+      }
+    },
+    "cordis_full_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cordis_stars",
+        "cordis_lang",
+        "cordis_status"
+      ]
+    },
+    "cordis_stars": {
+      "type": "Stat",
+      "props": {
+        "value": "720 today (5.3k total)"
+      }
+    },
+    "cordis_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "cordis_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "cordis_full_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DeepSeek's harness docs cite this framework as their spatiotemporal composability layer — 720 today on a 3-star-a-day baseline.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools_heading",
+        "omarchy_stack"
+      ]
+    },
+    "devtools_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "omarchy_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "omarchy_link",
+        "omarchy_meta",
+        "omarchy_desc"
+      ]
+    },
+    "omarchy_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "basecamp/omarchy",
+        "href": "https://github.com/basecamp/omarchy"
+      }
+    },
+    "omarchy_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "omarchy_stars",
+        "omarchy_lang",
+        "omarchy_status"
+      ]
+    },
+    "omarchy_stars": {
+      "type": "Stat",
+      "props": {
+        "value": "270 today (25.7k total)"
+      }
+    },
+    "omarchy_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell"
+      }
+    },
+    "omarchy_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "omarchy_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DHH's opinionated arch spin ships a full manual, CLI, and unified clipboard — a polished distro, not a dotfile dump.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "trending=ok · gh_api=ok · kept 2/7 (memory-window-thinnest trending page)",
+        "variant": "caption"
+      }
+    }
+  }
+}
