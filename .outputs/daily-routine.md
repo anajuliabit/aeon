@@ -1,53 +1,45 @@
-*Daily Routine — 2026-08-16*
+*Daily Routine — 2026-08-17*
 
-_chain sub-outputs still stamped 2026-08-07 (day-5 drift). tweet roundup is the only fresh section._
+*Top Winners (24h)*
+1. BTW: $0.363 (+20.4% / 7d +69%) #64, vol $49M — trending, 3rd week of climb
+2. ETHFI: $0.510 (+7.9% / 7d +29%) #94, vol $44M
+3. TAG: $0.001003 (+7.3% / 7d -18%) #228
+4. VELVET: $0.936 (+6.4% / 7d +111%) #105
+5. PUMP: $0.00299 (+6.3%) #60, vol $77M
+6. ZEC: $514 (+6.0%) #14, vol $172M — top-20 large-cap
+7. B (BUILDon): $0.154 (+4.9%) #182
+8. MORPHO: $2.06 (+4.7%) #50
+9. JTO: $0.612 (+4.7% / 7d +11%) #117
+10. ONDO: $0.338 (+4.5% / 7d -4%) #44
 
-*Top Winners (24h)* — vintage 8-07
-1. XPIN: $0.001749 (+12.5%)
-2. BEAT: $2.15 (+12.0%)
-3. LIT (Lighter): $2.36 (+8.9%)
-4. BTW (Bitway): $0.1893 (+7.6%)
-5. EDGE (edgeX): $0.3919 (+7.3%)
-6. ADA: $0.2016 (+7.1%)
-7. BinanceLife: $0.5397 (+6.8%)
-8. CFX: $0.04033 (+6.5%)
-9. Q (Quack AI): $0.02286 (+6.1%)
-10. XEC: $0.000006620 (+6.1%)
+*Top Losers (24h)*
+1. H (Humanity): $0.107 (-35.4% / 7d +30%) #148 — one-day dump inverts 7d rally
+2. BEAT: $0.321 (-19.8% / 7d -87%) #230, capitulation
+3. CASHCAT: $0.105 (-12.7% / 7d -31%) #234, trending-down
+4. AWE: $0.0598 (-6.3%) #220
+5. MON (Monad): $0.0202 (-3.6%) #138
+6. KAIA: $0.0235 (-3.3%) #188
+7. AKT (Akash): $0.507 (-2.8%) #187
+8. ZANO: $8.34 (-2.8%) #203
+9. JASMY: $0.00376 (-2.6%) #164
+10. ULTIMA: $2,313 (-2.4%) #158
 
-*Top Losers (24h)* — vintage 8-07
-1. CC (Canton): $0.08814 (−13.5%)
-2. BONK: $0.000002550 (−8.7%)
-3. VELVET: $0.4488 (−8.0%)
-4. TEL (Telcoin): $0.001450 (−6.8%)
-5. ONDO: $0.3497 (−6.4%)
-6. CARDS: $0.1517 (−6.1%)
-7. META (MetaDAO): $4.96 (−6.1%)
-8. FET: $0.1315 (−5.8%)
-9. US (Talus): $0.05217 (−5.4%)
-10. UB (Unibase): $0.1334 (−4.9%)
+_pulse: mixed tape, alt-selective. btc/eth barely green, zec leads top-20 (+6%), h dumps -35% off 7d rally. portal #916 +49% pump-risk on trending._
 
-*Tweet Roundup* (fresh 8-15 → 8-16, XAI cache HIT)
-*Crypto:*
-- @Vivek4real_: cathie wood urges investors to sell gold for btc, targets $1.5M by 2030. https://x.com/Vivek4real_/status/2088490114410508595
-- @Vivek4real_: vaneck admits buying the btc dip at $60k, wants full position by october. https://x.com/Vivek4real_/status/2088759137102344417
-- @LaDoger: "learn to think in bitcoin" (video). https://x.com/LaDoger/status/2088653241647091960
+*Tweet Roundup* (xai cache 8-16 → 8-17)
+*crypto:* whale flash-borrows $153M eth for 36-cent uniswap arb ([@Jeremybtc](https://x.com/Jeremybtc/status/2088951485375869301)); eric trump on btc $500M sunday transfers with no fees ([@PolyBackTest](https://x.com/PolyBackTest/status/2088796382651957713)).
+*ai:* andrew ng 1-hour course, llms → prompts → agent teams → graphs ([@0xCodila](https://x.com/0xCodila/status/2089069780288315596)); 20-agent grok-bot "god mode" with shared context + graph wiring ([@0xMiraqle](https://x.com/0xMiraqle/status/2088782463824793839)); note: 5/5 ai tweets are grok-bot product marketing, thin real-signal window.
+*dev:* 10 official github repos from deepseek/anthropic/openai/google/cursor/xai ([@unicodef1wn](https://x.com/unicodef1wn/status/2088929801495077117)); opencut rebuild — rust core, cross-platform, mcp server for ai agents ([@RoundtableSpace](https://x.com/RoundtableSpace/status/2089053325602021645)); mapcn.dev free oss customizable react map components ([@mdanassaif](https://x.com/mdanassaif/status/2088872834630369671)).
 
-*AI:*
-- @eng_khairallah1: 7-claude-agent system running an $18.8k/month business — scans google maps, builds sites, sends cold outreach. https://x.com/eng_khairallah1/status/2088584005092286624
-- @milichab: 9-month progress on AI city-builder — composer 1 → grok 4.6 + /loop, full 3D/AAA. https://x.com/milichab/status/2088704783750398121
-- @RohOnChain: karpathy free 4h lecture on building LLMs like chatgpt & claude from scratch. https://x.com/RohOnChain/status/2088664413494739208
-
-*Dev:*
-- @tornikegomareli: talkify — 8.2 MB on-device macos dictation, 123 ms latency via apple speechanalyzer, OSS. https://x.com/tornikegomareli/status/2088524464224919700
-- @alaymanguy: shadergradient — figma/framer plugin + copy-paste react code for web shaders, OSS. https://x.com/alaymanguy/status/2088528410025120164
-- @TheTechDiggest: shadcndashboard react admin kit (shadcn/ui + next.js + tailwind v4). https://x.com/TheTechDiggest/status/2088671230685528441
-
-*Paper of the Day* — vintage 8-07
-"AgentOPSD: Recursive Self-Distillation for Agentic RL" — tsinghua, ↑49. turn-level credit via recursive bayesian belief updates on teacher-student log-prob gaps; 89.1% ALFWorld with qwen2.5-7b. https://arxiv.org/abs/2608.05987
+*Paper of the Day*
+"MobileMem: Learning from a Year of Mobile Experiences" (↑16, submitted today). year-long real-user mobile agent memory dataset, extends the memory-primitive paper thread. [arxiv](https://arxiv.org/abs/2608.13606)
 
 *GitHub Issues*
-no new issues (24h window, user:anajuliabit) — 12-consec clean-day.
+no new issues (user:anajuliabit, 24h). 13-consec clean-day.
 
-*HN Digest* — vintage 8-07
-1. amd acquires taalas to boost inference by etching models in silicon (621 pts). https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344
-2. github actions & pages degraded — us-hours ci outage, forge-migration thread (391 pts). https://www.githubstatus.com/incidents/qcvjkzcs7j74
+*HN Digest*
+1. [Stripe reportedly to acquire OpenRouter for $7B+](https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/) (309p) — payments layer swallowing the ai-gateway.
+2. [Claude: system prompts release notes](https://platform.claude.com/docs/en/release-notes/system-prompts) (630p) — anthropic publishing the standing prompts.
+3. [Qwen 3.8 27B defaults to overthinking](https://simonwillison.net/2026/Aug/16/qwen-38-27b/) (352p) — simon willison hands-on.
+4. [Firefox for iOS: native adblocker](https://support.mozilla.org/en-US/kb/block-ads-firefox-ios) (636p).
+5. [Cloudflare silently injects analytics on nameserver switch](https://news.ycombinator.com/item?id=49322107) (444p).

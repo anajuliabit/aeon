@@ -1,0 +1,503 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-17"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table",
+        "sep1",
+        "losers-heading",
+        "losers-table",
+        "sep2",
+        "pulse-heading",
+        "pulse-text",
+        "sep3",
+        "tweets-heading",
+        "tweets-subheading-crypto",
+        "tweet1",
+        "tweet2",
+        "tweets-subheading-ai",
+        "tweet3",
+        "tweet4",
+        "tweet-ai-note",
+        "tweets-subheading-dev",
+        "tweet5",
+        "tweet6",
+        "tweet7",
+        "sep4",
+        "paper-heading",
+        "paper-stack",
+        "sep5",
+        "issues-heading",
+        "issues-alert",
+        "sep6",
+        "hn-heading",
+        "hn-stack"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h Δ",
+          "7d Δ",
+          "Rank",
+          "Volume",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "BTW",
+            "$0.363",
+            "+20.4%",
+            "+69%",
+            "#64",
+            "$49M",
+            "trending, 3rd week of climb"
+          ],
+          [
+            "ETHFI",
+            "$0.510",
+            "+7.9%",
+            "+29%",
+            "#94",
+            "$44M",
+            ""
+          ],
+          [
+            "TAG",
+            "$0.001003",
+            "+7.3%",
+            "-18%",
+            "#228",
+            "",
+            ""
+          ],
+          [
+            "VELVET",
+            "$0.936",
+            "+6.4%",
+            "+111%",
+            "#105",
+            "",
+            ""
+          ],
+          [
+            "PUMP",
+            "$0.00299",
+            "+6.3%",
+            "",
+            "#60",
+            "$77M",
+            ""
+          ],
+          [
+            "ZEC",
+            "$514",
+            "+6.0%",
+            "",
+            "#14",
+            "$172M",
+            "top-20 large-cap"
+          ],
+          [
+            "B (BUILDon)",
+            "$0.154",
+            "+4.9%",
+            "",
+            "#182",
+            "",
+            ""
+          ],
+          [
+            "MORPHO",
+            "$2.06",
+            "+4.7%",
+            "",
+            "#50",
+            "",
+            ""
+          ],
+          [
+            "JTO",
+            "$0.612",
+            "+4.7%",
+            "+11%",
+            "#117",
+            "",
+            ""
+          ],
+          [
+            "ONDO",
+            "$0.338",
+            "+4.5%",
+            "-4%",
+            "#44",
+            "",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h Δ",
+          "7d Δ",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "H (Humanity)",
+            "$0.107",
+            "-35.4%",
+            "+30%",
+            "#148",
+            "one-day dump inverts 7d rally"
+          ],
+          [
+            "BEAT",
+            "$0.321",
+            "-19.8%",
+            "-87%",
+            "#230",
+            "capitulation"
+          ],
+          [
+            "CASHCAT",
+            "$0.105",
+            "-12.7%",
+            "-31%",
+            "#234",
+            "trending-down"
+          ],
+          [
+            "AWE",
+            "$0.0598",
+            "-6.3%",
+            "",
+            "#220",
+            ""
+          ],
+          [
+            "MON (Monad)",
+            "$0.0202",
+            "-3.6%",
+            "",
+            "#138",
+            ""
+          ],
+          [
+            "KAIA",
+            "$0.0235",
+            "-3.3%",
+            "",
+            "#188",
+            ""
+          ],
+          [
+            "AKT (Akash)",
+            "$0.507",
+            "-2.8%",
+            "",
+            "#187",
+            ""
+          ],
+          [
+            "ZANO",
+            "$8.34",
+            "-2.8%",
+            "",
+            "#203",
+            ""
+          ],
+          [
+            "JASMY",
+            "$0.00376",
+            "-2.6%",
+            "",
+            "#164",
+            ""
+          ],
+          [
+            "ULTIMA",
+            "$2,313",
+            "-2.4%",
+            "",
+            "#158",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pulse-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Pulse",
+        "level": "h3"
+      }
+    },
+    "pulse-text": {
+      "type": "Text",
+      "props": {
+        "text": "mixed tape, alt-selective. btc/eth barely green, zec leads top-20 (+6%), h dumps -35% off 7d rally. portal #916 +49% pump-risk on trending.",
+        "variant": "lead"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweets-subheading-crypto": {
+      "type": "Badge",
+      "props": {
+        "text": "crypto",
+        "variant": "outline"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Jeremybtc",
+        "handle": "@Jeremybtc",
+        "text": "whale flash-borrows $153M eth for 36-cent uniswap arb"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "PolyBackTest",
+        "handle": "@PolyBackTest",
+        "text": "eric trump on btc $500M sunday transfers with no fees"
+      }
+    },
+    "tweets-subheading-ai": {
+      "type": "Badge",
+      "props": {
+        "text": "ai",
+        "variant": "outline"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xCodila",
+        "handle": "@0xCodila",
+        "text": "andrew ng 1-hour course, llms → prompts → agent teams → graphs"
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xMiraqle",
+        "handle": "@0xMiraqle",
+        "text": "20-agent grok-bot \"god mode\" with shared context + graph wiring"
+      }
+    },
+    "tweet-ai-note": {
+      "type": "Text",
+      "props": {
+        "text": "note: 5/5 ai tweets are grok-bot product marketing, thin real-signal window.",
+        "variant": "caption"
+      }
+    },
+    "tweets-subheading-dev": {
+      "type": "Badge",
+      "props": {
+        "text": "dev",
+        "variant": "outline"
+      }
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "unicodef1wn",
+        "handle": "@unicodef1wn",
+        "text": "10 official github repos from deepseek/anthropic/openai/google/cursor/xai"
+      }
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RoundtableSpace",
+        "handle": "@RoundtableSpace",
+        "text": "opencut rebuild — rust core, cross-platform, mcp server for ai agents"
+      }
+    },
+    "tweet7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "mdanassaif",
+        "handle": "@mdanassaif",
+        "text": "mapcn.dev free oss customizable react map components"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper-link",
+        "paper-description"
+      ]
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MobileMem: Learning from a Year of Mobile Experiences",
+        "source": "arxiv",
+        "score": "↑16",
+        "href": "https://arxiv.org/abs/2608.13606"
+      }
+    },
+    "paper-description": {
+      "type": "Text",
+      "props": {
+        "text": "year-long real-user mobile agent memory dataset, extends the memory-primitive paper thread. submitted today.",
+        "variant": "caption"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "issues-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "No new issues",
+        "message": "user:anajuliabit, 24h | 13-consecutive clean days",
+        "type": "success"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn1",
+        "hn2",
+        "hn3",
+        "hn4",
+        "hn5"
+      ]
+    },
+    "hn1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Stripe reportedly to acquire OpenRouter for $7B+",
+        "source": "TechCrunch",
+        "score": "309p",
+        "href": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/"
+      }
+    },
+    "hn2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Claude: system prompts release notes",
+        "source": "Anthropic Platform",
+        "score": "630p",
+        "href": "https://platform.claude.com/docs/en/release-notes/system-prompts"
+      }
+    },
+    "hn3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Qwen 3.8 27B defaults to overthinking",
+        "source": "Simon Willison",
+        "score": "352p",
+        "href": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
+      }
+    },
+    "hn4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Firefox for iOS: native adblocker",
+        "source": "Mozilla Support",
+        "score": "636p",
+        "href": "https://support.mozilla.org/en-US/kb/block-ads-firefox-ios"
+      }
+    },
+    "hn5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cloudflare silently injects analytics on nameserver switch",
+        "source": "Hacker News",
+        "score": "444p",
+        "href": "https://news.ycombinator.com/item?id=49322107"
+      }
+    }
+  }
+}
