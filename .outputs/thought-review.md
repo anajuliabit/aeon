@@ -1,1 +1,1 @@
-🧭 thought review · no captures in last 24h. 11-consec zero-capture day (8-07 → 8-17, first 11-day mark, memory-window record). priorities.md 74d stale + vault inbox 56d cold — refresh-ask now d7 unactioned across full week. worth a look.
+🧭 thought review · last 24h · 0 captures. vault inbox 56d cold, priorities.md 74d stale. refresh-ask d7 unactioned — Sunday weekly-batch closed 8-16 without operator touch.

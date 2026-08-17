@@ -1,0 +1,131 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 Thought Review"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "period_badge",
+        "captures_stat",
+        "sep1",
+        "vault_section",
+        "sep2",
+        "refresh_section",
+        "sep3",
+        "batch_alert"
+      ]
+    },
+    "period_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "last 24h",
+        "variant": "outline"
+      }
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "vault_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vault_inbox_stat",
+        "vault_inbox_badge",
+        "priorities_stat",
+        "priorities_badge"
+      ]
+    },
+    "vault_inbox_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Vault inbox",
+        "value": "56d"
+      }
+    },
+    "vault_inbox_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "cold",
+        "variant": "secondary"
+      }
+    },
+    "priorities_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md",
+        "value": "74d"
+      }
+    },
+    "priorities_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "stale",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "refresh_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "refresh_stat",
+        "refresh_badge"
+      ]
+    },
+    "refresh_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "refresh-ask",
+        "value": "7d"
+      }
+    },
+    "refresh_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "unactioned",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "batch_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Sunday weekly-batch closed 8-16 without operator touch"
+      }
+    }
+  }
+}
