@@ -1,0 +1,510 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Search Skills — 2026-08-17"
+      },
+      "children": [
+        "gap-section",
+        "sep1",
+        "candidates-section",
+        "sep2",
+        "manual-section",
+        "sep3",
+        "note-section",
+        "sep4",
+        "sources-section"
+      ]
+    },
+    "gap-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "gap-heading",
+        "gap-text",
+        "gap-stats"
+      ]
+    },
+    "gap-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Gap Identified",
+        "level": "h2"
+      }
+    },
+    "gap-text": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report chronic: aeon per-model $ cost + anomaly + burn forecast"
+      }
+    },
+    "gap-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-sr",
+        "stat-consec"
+      ]
+    },
+    "stat-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "7%",
+        "trend": "down"
+      }
+    },
+    "stat-consec": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failures",
+        "value": "9"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "candidates-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "candidates-heading",
+        "candidate-1",
+        "candidate-2",
+        "candidate-3"
+      ]
+    },
+    "candidates-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Candidates (not auto-installed)",
+        "level": "h2"
+      }
+    },
+    "candidate-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cand1-title",
+        "cand1-source",
+        "cand1-desc",
+        "cand1-badges"
+      ]
+    },
+    "cand1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "cost-tracking",
+        "level": "h3"
+      }
+    },
+    "cand1-source": {
+      "type": "Text",
+      "props": {
+        "text": "affaan-m/ecc"
+      }
+    },
+    "cand1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Reads ~/.claude/metrics/costs.jsonl written by ECC's stop hook, not aeon's own token log",
+        "variant": "caption"
+      }
+    },
+    "cand1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cand1-gapfit",
+        "badge-cand1-sum",
+        "badge-cand1-untrusted",
+        "badge-cand1-weak"
+      ]
+    },
+    "badge-cand1-gapfit": {
+      "type": "Badge",
+      "props": {
+        "text": "gap-fit 2/5"
+      }
+    },
+    "badge-cand1-sum": {
+      "type": "Badge",
+      "props": {
+        "text": "sum 12/15"
+      }
+    },
+    "badge-cand1-untrusted": {
+      "type": "Badge",
+      "props": {
+        "text": "UNTRUSTED",
+        "variant": "destructive"
+      }
+    },
+    "badge-cand1-weak": {
+      "type": "Badge",
+      "props": {
+        "text": "WEAK",
+        "variant": "destructive"
+      }
+    },
+    "candidate-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cand2-title",
+        "cand2-source",
+        "cand2-desc",
+        "cand2-badges"
+      ]
+    },
+    "cand2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "cost-track",
+        "level": "h3"
+      }
+    },
+    "cand2-source": {
+      "type": "Text",
+      "props": {
+        "text": "ruvnet/ruflo"
+      }
+    },
+    "cand2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Ruflo meta-harness plugin, 658 installs, data source unclear from listing",
+        "variant": "caption"
+      }
+    },
+    "cand2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cand2-gapfit",
+        "badge-cand2-sum",
+        "badge-cand2-untrusted",
+        "badge-cand2-weak"
+      ]
+    },
+    "badge-cand2-gapfit": {
+      "type": "Badge",
+      "props": {
+        "text": "gap-fit 2/5"
+      }
+    },
+    "badge-cand2-sum": {
+      "type": "Badge",
+      "props": {
+        "text": "sum 12/15"
+      }
+    },
+    "badge-cand2-untrusted": {
+      "type": "Badge",
+      "props": {
+        "text": "UNTRUSTED",
+        "variant": "destructive"
+      }
+    },
+    "badge-cand2-weak": {
+      "type": "Badge",
+      "props": {
+        "text": "WEAK",
+        "variant": "destructive"
+      }
+    },
+    "candidate-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cand3-title",
+        "cand3-source",
+        "cand3-desc",
+        "cand3-badges"
+      ]
+    },
+    "cand3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "cost-metering",
+        "level": "h3"
+      }
+    },
+    "cand3-source": {
+      "type": "Text",
+      "props": {
+        "text": "scientiacapital/skills"
+      }
+    },
+    "cand3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Generic API cost tracking + budget alerts + model routing",
+        "variant": "caption"
+      }
+    },
+    "cand3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cand3-gapfit",
+        "badge-cand3-sum",
+        "badge-cand3-untrusted",
+        "badge-cand3-weak"
+      ]
+    },
+    "badge-cand3-gapfit": {
+      "type": "Badge",
+      "props": {
+        "text": "gap-fit 2/5"
+      }
+    },
+    "badge-cand3-sum": {
+      "type": "Badge",
+      "props": {
+        "text": "sum 11/15"
+      }
+    },
+    "badge-cand3-untrusted": {
+      "type": "Badge",
+      "props": {
+        "text": "UNTRUSTED",
+        "variant": "destructive"
+      }
+    },
+    "badge-cand3-weak": {
+      "type": "Badge",
+      "props": {
+        "text": "WEAK",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "manual-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "manual-heading",
+        "manual-text"
+      ]
+    },
+    "manual-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Manual Installation",
+        "level": "h2"
+      }
+    },
+    "manual-text": {
+      "type": "Text",
+      "props": {
+        "text": "./add-skill affaan-m/ecc cost-tracking"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "note-section": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "Root Cause Analysis",
+        "message": "cost-report root cause is usepod-402 (ISS-030/ISS-031) not capability gap — no external skill directly replaces aeon-token-log ingestion path."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-heading",
+        "sources-grid"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Source Status",
+        "level": "h2"
+      }
+    },
+    "sources-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "source-1",
+        "source-2",
+        "source-3",
+        "source-4",
+        "source-5"
+      ]
+    },
+    "source-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source1-label",
+        "source1-badge"
+      ]
+    },
+    "source1-label": {
+      "type": "Text",
+      "props": {
+        "text": "npx"
+      }
+    },
+    "source1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ok (19)",
+        "variant": "secondary"
+      }
+    },
+    "source-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source2-label",
+        "source2-badge"
+      ]
+    },
+    "source2-label": {
+      "type": "Text",
+      "props": {
+        "text": "vercel"
+      }
+    },
+    "source2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "1 (dropped)",
+        "variant": "destructive"
+      }
+    },
+    "source-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source3-label",
+        "source3-badge"
+      ]
+    },
+    "source3-label": {
+      "type": "Text",
+      "props": {
+        "text": "anthropics"
+      }
+    },
+    "source3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "0",
+        "variant": "destructive"
+      }
+    },
+    "source-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source4-label",
+        "source4-badge"
+      ]
+    },
+    "source4-label": {
+      "type": "Text",
+      "props": {
+        "text": "bankr"
+      }
+    },
+    "source4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "0",
+        "variant": "destructive"
+      }
+    },
+    "source-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source5-label",
+        "source5-badge"
+      ]
+    },
+    "source5-label": {
+      "type": "Text",
+      "props": {
+        "text": "skills.sh"
+      }
+    },
+    "source5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "fail",
+        "variant": "destructive"
+      }
+    }
+  }
+}
