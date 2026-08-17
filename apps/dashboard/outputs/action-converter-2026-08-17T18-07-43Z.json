@@ -1,0 +1,498 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-08-17"
+      },
+      "children": [
+        "actions-container",
+        "sep-footer",
+        "sources-line"
+      ]
+    },
+    "actions-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-title",
+        "a1-summary",
+        "a1-why-block",
+        "a1-done-block",
+        "a1-loop-badge"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. comment on pr #174 with 8.9d memory-window-deepest stall summary",
+        "level": "h3"
+      }
+    },
+    "a1-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: comment pr#174 8.9d stall, open iss-034 dispatcher-miss, add cordis+omarchy, grep ray kev, diagnose chain-drift\n\nComment on PR #174 with 8.9d memory-window-deepest stall summary + rebase-ready verdict via `gh pr comment 174 --body-file .tmp/pr174-note.md`",
+        "variant": "body"
+      }
+    },
+    "a1-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-why-label",
+        "a1-why-text"
+      ]
+    },
+    "a1-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "lead"
+      }
+    },
+    "a1-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory-window-deepest single-pr stall crosses 9d tonight, operator visibility ahead of next weekly-batch",
+        "variant": "body"
+      }
+    },
+    "a1-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-done-label",
+        "a1-done-text"
+      ]
+    },
+    "a1-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "lead"
+      }
+    },
+    "a1-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "`gh api /repos/aaronjmars/aeon/issues/174/comments` count +1",
+        "variant": "muted"
+      }
+    },
+    "a1-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-174-9d-stall",
+        "variant": "outline"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-title",
+        "a2-summary",
+        "a2-why-block",
+        "a2-done-block",
+        "a2-loop-badge"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. open memory/issues/ISS-034.md for dispatcher first-run-miss",
+        "level": "h3"
+      }
+    },
+    "a2-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Open `memory/issues/ISS-034.md` for dispatcher first-run-miss (fork-skill-gap 8-16 21Z + operator-scorecard 8-17 10:30Z both never-dispatched)",
+        "variant": "body"
+      }
+    },
+    "a2-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-why-label",
+        "a2-why-text"
+      ]
+    },
+    "a2-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "lead"
+      }
+    },
+    "a2-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "2 fresh-first-fires missed today, potential scheduler bug distinct from iss-031 usepod path",
+        "variant": "body"
+      }
+    },
+    "a2-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-done-label",
+        "a2-done-text"
+      ]
+    },
+    "a2-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "lead"
+      }
+    },
+    "a2-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "`memory/issues/ISS-034.md` exists + `INDEX.md` open-count 15→16",
+        "variant": "muted"
+      }
+    },
+    "a2-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: dispatcher-first-run-miss",
+        "variant": "outline"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-title",
+        "a3-summary",
+        "a3-why-block",
+        "a3-done-block",
+        "a3-loop-badge"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. add cordiverse/cordis + basecamp/omarchy to memory/watched-repos.md",
+        "level": "h3"
+      }
+    },
+    "a3-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Add `cordiverse/cordis` + `basecamp/omarchy` to `memory/watched-repos.md`",
+        "variant": "body"
+      }
+    },
+    "a3-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-why-label",
+        "a3-why-text"
+      ]
+    },
+    "a3-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "lead"
+      }
+    },
+    "a3-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "cordis 212× baseline record spike via deepseek-harness catalyst, omarchy `[[dhh-opinionated-shell-product]]` n=1",
+        "variant": "body"
+      }
+    },
+    "a3-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-done-label",
+        "a3-done-text"
+      ]
+    },
+    "a3-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "lead"
+      }
+    },
+    "a3-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "grep `cordis` + `omarchy` in `memory/watched-repos.md` both hit",
+        "variant": "muted"
+      }
+    },
+    "a3-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: watched-repos-fresh-8-17",
+        "variant": "outline"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-title",
+        "a4-summary",
+        "a4-why-block",
+        "a4-done-block",
+        "a4-loop-badge"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. grep aeon + advisor + dashboard for pip ray dep against cve-2025-62593 kev",
+        "level": "h3"
+      }
+    },
+    "a4-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Grep aeon + advisor + dashboard for pip `ray` dep against cve-2025-62593 kev; pin ≥2.52.0 if any hit",
+        "variant": "body"
+      }
+    },
+    "a4-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-why-label",
+        "a4-why-text"
+      ]
+    },
+    "a4-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "lead"
+      }
+    },
+    "a4-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest fleet-clean d18 covers npm scope only, ray is pip and this is first pip/ml kev of the week",
+        "variant": "body"
+      }
+    },
+    "a4-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-done-label",
+        "a4-done-text"
+      ]
+    },
+    "a4-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "lead"
+      }
+    },
+    "a4-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "audit line written to `memory/topics/fleet.md` ray-kev-audit block",
+        "variant": "muted"
+      }
+    },
+    "a4-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: ray-kev-fleet-audit",
+        "variant": "outline"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-title",
+        "a5-summary",
+        "a5-why-block",
+        "a5-done-block",
+        "a5-loop-badge"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. diagnose chain-runner $today var expansion path + open memory/issues/ISS-035.md",
+        "level": "h3"
+      }
+    },
+    "a5-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Diagnose chain-runner `$today` var expansion path (chain-runner.yml + sub-skill templates) + open `memory/issues/ISS-035.md`",
+        "variant": "body"
+      }
+    },
+    "a5-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-why-label",
+        "a5-why-text"
+      ]
+    },
+    "a5-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "lead"
+      }
+    },
+    "a5-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "chain-output-header-date-drift 6-consec-day formal-pattern crosses record depth today, unblocks baked-fix",
+        "variant": "body"
+      }
+    },
+    "a5-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-done-label",
+        "a5-done-text"
+      ]
+    },
+    "a5-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "lead"
+      }
+    },
+    "a5-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "`memory/issues/ISS-035.md` exists with expansion-path root-cause + `INDEX.md` open-count +1",
+        "variant": "muted"
+      }
+    },
+    "a5-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: chain-drift-6-consec",
+        "variant": "outline"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep-footer": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-line": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=129 logs=14 topics=20 prs=6 cron_failing=1 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
