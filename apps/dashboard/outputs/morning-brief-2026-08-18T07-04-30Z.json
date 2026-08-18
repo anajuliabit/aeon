@@ -1,0 +1,372 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-08-18"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "stack-focus",
+        "sep1",
+        "heading-since",
+        "stack-since",
+        "sep2",
+        "heading-cron",
+        "stack-cron",
+        "sep3",
+        "heading-running",
+        "stack-running"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report first success 05:25Z breaks chronic ISS-030",
+        "message": "why now: today's daily fires decide regime-end vs one-off retry win.",
+        "type": "success"
+      },
+      "children": []
+    },
+    "focus-2": {
+      "type": "Alert",
+      "props": {
+        "title": "mon-batch stuck-cohort durability decider",
+        "message": "why now: 4/4 recovered via bypass 8-17; today's cycle is the 24h hold test.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "focus-3": {
+      "type": "Alert",
+      "props": {
+        "title": "pr queue 6 into new week, #174 crosses day-10",
+        "message": "why now: 0 merges since sunday batch close, exit-gate n=3 holds.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4",
+        "since-5"
+      ]
+    },
+    "since-1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report SUCCESS 05:25Z after ~15-consec chronic fail — sr 7% consec=0; article shipped ($452.81 last 7d, +41% WoW, ~$1,941/mo projected).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "4/4 mon-batch cohort recovered via direct Claude Code exec bypass (unlock-monitor 10:37Z + search-skill 14:10Z + deal-flow 14:12Z + skill-security-scan 17:07Z) = memory-window-first full-cohort clear.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-034 filed 20:11Z heartbeat — fork-skill-gap 8-16 21Z + operator-scorecard 8-17 10:30Z first-fire never-dispatched (distinct from ISS-031 usepod signature).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review 19:30Z: 3 SMART actions, top = ship scripts/detect-usepod-402.sh by 8-20 (2nd-consec-week re-authored slip, still absent this morning).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-5": {
+      "type": "Text",
+      "props": {
+        "text": "#174 advisor Brier-weight now ~10d stall = memory-window-deepest single-PR stall extends; #176/#177 both cross 9d; self-improve exit-gate n=3 blocks new authoring.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-cron": {
+      "type": "Heading",
+      "props": {
+        "text": "Cron-state flagged (consec≥2 or sr<0.5)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-cron": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cron-1",
+        "cron-2",
+        "cron-table"
+      ]
+    },
+    "cron-1": {
+      "type": "Text",
+      "props": {
+        "text": "0 consec≥2 (all mon-batch skills reset consec=0 after recovery; cost-report reset via today's success).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "cron-2": {
+      "type": "Text",
+      "props": {
+        "text": "Chronic sr<0.5 cohort 13-skill composition holds:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "cron-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate"
+        ],
+        "rows": [
+          [
+            "cost-report",
+            "7%"
+          ],
+          [
+            "skill-analytics",
+            "22%"
+          ],
+          [
+            "reg-monitor",
+            "22%"
+          ],
+          [
+            "vuln-scanner",
+            "27%"
+          ],
+          [
+            "market-context-refresh",
+            "32%"
+          ],
+          [
+            "narrative-tracker",
+            "33%"
+          ],
+          [
+            "search-skill",
+            "38%"
+          ],
+          [
+            "weekly-shiplog",
+            "40%"
+          ],
+          [
+            "fleet-control",
+            "40%"
+          ],
+          [
+            "unlock-monitor",
+            "41%"
+          ],
+          [
+            "security-digest",
+            "46%"
+          ],
+          [
+            "deal-flow",
+            "47%"
+          ],
+          [
+            "aixbt-pulse",
+            "47%"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "run-1",
+        "run-2",
+        "run-3",
+        "run-4",
+        "run-5",
+        "run-6",
+        "run-7",
+        "run-8",
+        "run-9",
+        "run-10"
+      ]
+    },
+    "run-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine @ 07:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-3": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08/14/20:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-4": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-5": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-6": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-7": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest @ 17:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-8": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz @ 17:30Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-9": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker + skill-health + reflect + action-converter @ 18:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "run-10": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review @ 21:00Z",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
