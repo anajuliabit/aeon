@@ -1,0 +1,761 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-18",
+        "description": "Verdict: 3 to patch today, 3 this week, 3 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "patch_today_section",
+        "sep1",
+        "patch_week_section",
+        "sep2",
+        "monitor_section"
+      ]
+    },
+    "patch_today_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_today_heading",
+        "item_vm2",
+        "item_checkout",
+        "item_sui"
+      ]
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "item_vm2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vm2_link",
+        "vm2_meta",
+        "vm2_desc",
+        "vm2_action"
+      ]
+    },
+    "vm2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vm2 triple sandbox escape",
+        "href": "https://github.com/advisories/GHSA-m283-3h24-438v",
+        "source": "GitHub Advisory"
+      }
+    },
+    "vm2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "vm2_pkg",
+        "vm2_cvss9_9",
+        "vm2_cvss9_8",
+        "vm2_cvss10",
+        "vm2_epss"
+      ]
+    },
+    "vm2_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "vm2 (npm)",
+        "variant": "default"
+      }
+    },
+    "vm2_cvss9_9": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.9",
+        "variant": "destructive"
+      }
+    },
+    "vm2_cvss9_8": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.8",
+        "variant": "destructive"
+      }
+    },
+    "vm2_cvss10": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 10.0",
+        "variant": "destructive"
+      }
+    },
+    "vm2_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0 (fresh)",
+        "variant": "secondary"
+      }
+    },
+    "vm2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "sandbox-escape → RCE by definition. 3 fresh critical CVEs: Error.cause bypass + host-proto mutators + NodeVM builtin:['*'] exposing os/dns. vm2 was deprecated in 2023.",
+        "variant": "body"
+      }
+    },
+    "vm2_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "upgrade vm2 to ≥3.11.6 today, or migrate off vm2",
+        "type": "error"
+      }
+    },
+    "item_checkout": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "checkout_link",
+        "checkout_meta",
+        "checkout_desc",
+        "checkout_action"
+      ]
+    },
+    "checkout_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "checkout-* + chai-* + bcc-* npm brand-jack cluster",
+        "href": "https://github.com/advisories/GHSA-cpmp-7ffm-4j7c",
+        "source": "GitHub Advisory"
+      }
+    },
+    "checkout_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "checkout_pkg",
+        "checkout_type",
+        "checkout_count"
+      ]
+    },
+    "checkout_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "npm",
+        "variant": "default"
+      }
+    },
+    "checkout_type": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "checkout_count": {
+      "type": "Badge",
+      "props": {
+        "text": "10 fresh pkgs 8-18",
+        "variant": "outline"
+      }
+    },
+    "checkout_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Coordinated PayPal-checkout + Chai + BCC-design + core-tailwindcss brand-jack burst.",
+        "variant": "body"
+      }
+    },
+    "checkout_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "remove any of: checkout-{mobile-pay-button,create-pos-order-am,common-tokens,desktop-total}, chai-{foundry,as-deployer}, bcc-design{,-icons}, core-tailwindcss-utility, cerebrum-core; rotate creds if installed",
+        "type": "error"
+      }
+    },
+    "item_sui": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sui_link",
+        "sui_meta",
+        "sui_desc",
+        "sui_action"
+      ]
+    },
+    "sui_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Sui/Mysten Labs npm brand-jack cluster",
+        "href": "https://github.com/advisories/GHSA-xgmm-vq93-f5vx",
+        "source": "GitHub Advisory"
+      }
+    },
+    "sui_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "sui_pkg",
+        "sui_type",
+        "sui_count"
+      ]
+    },
+    "sui_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "npm",
+        "variant": "default"
+      }
+    },
+    "sui_type": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "sui_count": {
+      "type": "Badge",
+      "props": {
+        "text": "5 pkgs 16:24Z 8-17",
+        "variant": "outline"
+      }
+    },
+    "sui_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Coordinated Sui-blockchain typosquat: sui-move-graphql, sui-move-rpc, sui-gql-core, bcs-core, bucket-protocol-sdk-v2.",
+        "variant": "body"
+      }
+    },
+    "sui_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "remove any installed; audit lockfiles + rotate any keys exposed",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_week_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_week_heading",
+        "item_mlflow",
+        "item_newapi",
+        "item_glances"
+      ]
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "item_mlflow": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mlflow_link",
+        "mlflow_meta",
+        "mlflow_desc",
+        "mlflow_action"
+      ]
+    },
+    "mlflow_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-64849",
+        "href": "https://github.com/advisories/GHSA-7gwp-5pfp-969j",
+        "source": "GitHub Advisory"
+      }
+    },
+    "mlflow_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mlflow_pkg",
+        "mlflow_cvss",
+        "mlflow_epss",
+        "mlflow_poc"
+      ]
+    },
+    "mlflow_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "mlflow (pip)",
+        "variant": "default"
+      }
+    },
+    "mlflow_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.3",
+        "variant": "destructive"
+      }
+    },
+    "mlflow_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0 (fresh)",
+        "variant": "secondary"
+      }
+    },
+    "mlflow_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no public PoC",
+        "variant": "outline"
+      }
+    },
+    "mlflow_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth full-read SSRF in webhook delivery via HTTP-redirect bypass of `_validate_webhook_url`.",
+        "variant": "body"
+      }
+    },
+    "mlflow_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "upgrade mlflow to ≥3.15.0",
+        "type": "warning"
+      }
+    },
+    "item_newapi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "newapi_link",
+        "newapi_meta",
+        "newapi_desc",
+        "newapi_action"
+      ]
+    },
+    "newapi_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-71479 + CVE-2026-64859",
+        "href": "https://github.com/advisories/GHSA-8r8v-xf7q-rcpr",
+        "source": "GitHub Advisory"
+      }
+    },
+    "newapi_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "newapi_pkg",
+        "newapi_cvss_a",
+        "newapi_cvss_b",
+        "newapi_epss"
+      ]
+    },
+    "newapi_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "QuantumNous/new-api (Go)",
+        "variant": "default"
+      }
+    },
+    "newapi_cvss_a": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1",
+        "variant": "destructive"
+      }
+    },
+    "newapi_cvss_b": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1",
+        "variant": "destructive"
+      }
+    },
+    "newapi_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0",
+        "variant": "secondary"
+      }
+    },
+    "newapi_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Integer-overflow self-crediting in quota billing + root user token leak in user list API. LLM-proxy pkg.",
+        "variant": "body"
+      }
+    },
+    "newapi_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "upgrade new-api to ≥1.0.0-rc.18",
+        "type": "warning"
+      }
+    },
+    "item_glances": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "glances_link",
+        "glances_meta",
+        "glances_desc",
+        "glances_action"
+      ]
+    },
+    "glances_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-62982",
+        "href": "https://github.com/advisories/GHSA-73wf-9vmv-5pv9",
+        "source": "GitHub Advisory"
+      }
+    },
+    "glances_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "glances_pkg",
+        "glances_cvss",
+        "glances_epss"
+      ]
+    },
+    "glances_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "glances (pip)",
+        "variant": "default"
+      }
+    },
+    "glances_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.8",
+        "variant": "destructive"
+      }
+    },
+    "glances_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0",
+        "variant": "secondary"
+      }
+    },
+    "glances_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Command injection bypass via nested stat values (incomplete fix of CVE-2026-32608).",
+        "variant": "body"
+      }
+    },
+    "glances_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "upgrade glances to ≥4.5.6",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_heading",
+        "item_9router",
+        "item_atomic",
+        "item_etherpad"
+      ]
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "item_9router": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "9router_link",
+        "9router_meta",
+        "9router_desc",
+        "9router_action"
+      ]
+    },
+    "9router_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-56677",
+        "href": "https://github.com/advisories/GHSA-8g4w-4ffg-8vgx",
+        "source": "GitHub Advisory"
+      }
+    },
+    "9router_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "9router_pkg",
+        "9router_cvss",
+        "9router_fix",
+        "9router_epss"
+      ]
+    },
+    "9router_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "9router (npm)",
+        "variant": "default"
+      }
+    },
+    "9router_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.6",
+        "variant": "destructive"
+      }
+    },
+    "9router_fix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "outline"
+      }
+    },
+    "9router_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0",
+        "variant": "secondary"
+      }
+    },
+    "9router_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Authenticated SSRF via OIDC provider test endpoint.",
+        "variant": "body"
+      }
+    },
+    "9router_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "track advisory; don't expose OIDC admin",
+        "type": "info"
+      }
+    },
+    "item_atomic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "atomic_link",
+        "atomic_meta",
+        "atomic_desc",
+        "atomic_action"
+      ]
+    },
+    "atomic_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-xhcr-cqfr-m3hv",
+        "href": "https://github.com/advisories/GHSA-xhcr-cqfr-m3hv",
+        "source": "GitHub Advisory"
+      }
+    },
+    "atomic_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "atomic_pkg",
+        "atomic_severity",
+        "atomic_fix"
+      ]
+    },
+    "atomic_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "atomic-agents-stack (pip)",
+        "variant": "default"
+      }
+    },
+    "atomic_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "atomic_fix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "outline"
+      }
+    },
+    "atomic_desc": {
+      "type": "Text",
+      "props": {
+        "text": "HTTP MCP catalog accepts cleartext http + spawns catalog-supplied commands = MITM→RCE. MCP-adjacent.",
+        "variant": "body"
+      }
+    },
+    "atomic_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "track advisory; implement secure catalog transport",
+        "type": "info"
+      }
+    },
+    "item_etherpad": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "etherpad_link",
+        "etherpad_meta",
+        "etherpad_desc",
+        "etherpad_action"
+      ]
+    },
+    "etherpad_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-55090",
+        "href": "https://github.com/advisories/GHSA-2jp7-wwpg-3p9w",
+        "source": "GitHub Advisory"
+      }
+    },
+    "etherpad_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "etherpad_pkg",
+        "etherpad_severity",
+        "etherpad_fix",
+        "etherpad_epss"
+      ]
+    },
+    "etherpad_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "ep_etherpad-lite (npm)",
+        "variant": "default"
+      }
+    },
+    "etherpad_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "etherpad_fix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "outline"
+      }
+    },
+    "etherpad_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0",
+        "variant": "secondary"
+      }
+    },
+    "etherpad_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Stored XSS in HTML export via unescaped attribute-pool values.",
+        "variant": "body"
+      }
+    },
+    "etherpad_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "track patch; sanitize exports",
+        "type": "info"
+      }
+    }
+  }
+}
