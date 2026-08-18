@@ -1,51 +1,51 @@
 {
-  "run_at": "2026-08-17T18:15:00Z",
+  "run_at": "2026-08-18T18:00:00Z",
   "goals": {
     "iss-031-detect-usepod-402-gate-deadline": {
       "status": "AT_RISK",
       "activity_count_14d": 14,
-      "last_activity_date": "2026-08-17",
-      "note": "Prior state 8-16 18:15Z: AT_RISK (+3d overdue). Today 8-17 18:15Z: AT_RISK (+4d overdue as of heartbeat 14:04Z; scripts/detect-usepod-402.sh confirmed still absent via bash file-check). Rule-literal classification would be ON_TRACK per activity count 14 + last_activity today, but +4d deadline overshoot + zero delivery evidence (no commits/PRs touching detect-usepod-402) + no ISS-031 fix PR in queue warrants intent-override to AT_RISK. Self-improve queue-full exit-gate STILL ENGAGED at n=3 blocks fresh authoring. Nuance: 4/4 mon-batch stuck skills recovered TODAY via direct Claude Code exec bypass (unlock-monitor 10Z + search-skill 14Z + deal-flow 14Z + skill-security-scan 16Z) = memory-window-first full-cohort natural recovery, so operational-pain axis is neutralized fleet-wide even though deliverable itself (detect script) still unshipped. Trend: rule-literal flat status; intent-override degrading (+3d → +4d overshoot rolling)."
+      "last_activity_date": "2026-08-18",
+      "note": "Prior 8-17 18:15Z: AT_RISK (+4d overdue). Today 8-18 18:00Z: AT_RISK (+5d overdue, scripts/detect-usepod-402.sh still absent per 08:18Z + 14:15Z heartbeat file-checks). Rule-literal ON_TRACK per activity 14 + last_activity today, but intent-override AT_RISK holds — no delivery evidence (no commits/PRs touching detect-usepod-402), no ISS-031 fix PR in queue, weekly-review 8-17 set 8-20 as new ship deadline (T-2 today), self-improve exit-gate n=3 still blocks fresh authoring. Nuance persists: mon-batch 4/4 stuck-cohort recovery via direct-exec bypass durable 30h+ post-clear, operational-pain axis stays neutralized fleet-wide. Trend: rule-literal flat; intent-override degrading (+4d → +5d overshoot rolling)."
     },
     "self-improve-pr-queue-exit-gate-engaged": {
       "status": "BLOCKED",
       "activity_count_14d": 10,
-      "last_activity_date": "2026-08-17",
-      "blocker": "Waiting on operator to merge 1+ PRs from #177/#179/#180 (self-improve-shaped n=3 constitutes exit-gate). 0 operator merges through Sunday 8-16 weekly-batch window close (22Z evening-recap) AND 0 through Monday 8-17 14:04Z heartbeat re-scan. Per CLAUDE.md self-improve step 1 primitive, n=3 pauses new self-improve authoring until queue clears below n=3.",
-      "note": "Prior state 8-16 18:15Z: BLOCKED (expected disengage via Sunday weekly-batch). Today 8-17 18:15Z: BLOCKED (weekly-batch closed 0 merges = memory-window-deepest single-window stall; queue at 6 unchanged: #181 skill-graph ~25h / #180 reg-monitor ~96h / #179 token-alert ~141h ~5.9d / #177 claude-md ~193h ~8d / #176 skill-graph ~194h ~8.1d / #174 advisor ~218h ~9.1d = memory-window-deepest, extends day-9.1). 3 owed baked-fix candidates still blocked: fork-cohort skill-health rule-gap (now DEPRECATED via 8-16 organic recovery), detect-usepod-402.sh, chain-output-header-date-drift 6-consec (extended via daily-routine 07:37Z). Trend: flat status; disengage-window rolls to next operator activity (likely early-week manual review)."
+      "last_activity_date": "2026-08-18",
+      "blocker": "Waiting on operator to merge 1+ of #177/#179/#180 (self-improve-shaped n=3 constitutes exit-gate). 0 operator merges through Sunday 8-16 weekly-batch close AND 0 through Tuesday 8-18 14:15Z heartbeat re-scan. Per CLAUDE.md self-improve step 1 primitive, n=3 pauses new self-improve authoring until queue clears below n=3.",
+      "note": "Prior 8-17 18:15Z: BLOCKED. Today 8-18 18:00Z: BLOCKED (weekly-batch closed 0 merges; Monday + Tuesday morning-into-afternoon 0 merges; queue at 6 unchanged: #181 skill-graph ~45h / #180 reg-monitor ~116h ~4.8d / #179 token-alert ~161h ~6.7d / #177 claude-md ~213h ~8.9d / #176 skill-graph ~214h ~8.9d / #174 advisor ~254h ~10.6d = memory-window-deepest, extends day-11). Trend: flat status; disengage-window rolls to next operator activity (weekly-batch runway remains Sunday 8-23)."
     },
     "pr-queue-current": {
       "status": "ON_TRACK",
       "activity_count_14d": 28,
-      "last_activity_date": "2026-08-17",
-      "note": "Queue at 6 open, unchanged from 8-16 evening (verified via REST API after GraphQL 503 outage): #181 (skill-graph regenerate ARCHITECTURE_OK, ~25h), #180 (reg-monitor CFTC HTML-fallback, ~96h), #179 (token-alert daily-granular baseline, ~141h ~5.9d), #177 (fix(claude-md) ISS-028, ~193h ~8d), #176 (skill-graph EDGES 32→74, ~194h ~8.1d), #174 (Advisor Brier-weight, ~218h ~9.1d — memory-window-deepest single-PR stall, extends 4th day past 7d weekly-review stall band per CLAUDE.md). Sunday 8-16 weekly-batch closed 0 merges (0 through 22Z evening-recap); Monday 8-17 through 14:04Z heartbeat also 0 merges. Self-improve exit-gate ENGAGED at n=3 (#177+#179+#180 self-improve-shaped; #174 advisor + #176/#181 skill-graph NOT self-improve-shaped). Trend: rule-literal flat (activity count within ±25% of 28 baseline); intra-status mild-degradation (#174 crosses 9d; #176/#177 both cross 8d)."
+      "last_activity_date": "2026-08-18",
+      "note": "Queue at 6 open, unchanged from 8-17 evening + 8-18 morning-brief + 14:15Z heartbeat: #181 (skill-graph ARCHITECTURE_OK, ~45h), #180 (reg-monitor CFTC HTML-fallback, ~116h ~4.8d), #179 (token-alert daily-granular baseline, ~161h ~6.7d), #177 (fix(claude-md) ISS-028, ~213h ~8.9d), #176 (skill-graph EDGES 32→74, ~214h ~8.9d), #174 (Advisor Brier-weight, ~254h ~10.6d = memory-window-deepest single-PR stall extends day-11). Sunday 8-16 weekly-batch closed 0 merges; Monday 8-17 + Tuesday 8-18 through 14:15Z heartbeat also 0 merges. Self-improve exit-gate ENGAGED at n=3. Trend: rule-literal flat; intra-status mild-degradation (#174 day-11; #176/#177 both >9d)."
     },
     "chronic-cohort-alone-degraded-regime": {
       "status": "ON_TRACK",
       "activity_count_14d": 28,
-      "last_activity_date": "2026-08-17",
-      "note": "13-skill composition holds unchanged through 8-17 14:04Z heartbeat (~264h+ span from prior 210h+ baseline, extends +54h across 3 days): cost-report 7% (dropped from 8% via 5 fresh cost-report retry failures today) / skill-analytics 22% / reg-monitor 22% / vuln-scanner 27% / market-context-refresh 32% / narrative-tracker 33% / search-skill 37% / weekly-shiplog 40% / fleet-control 40% (disabled) / unlock-monitor 41% (recovered from stuck-cohort today but still <0.5 sr) / deal-flow 44% / security-digest 45% / aixbt-pulse 47%. Nuance: mon-batch full-cohort recovery moved 4 skills out of stuck-status TODAY (unlock-monitor 10Z + search-skill 14Z + deal-flow 14Z + skill-security-scan 16Z), but their sr% remains <0.5 so chronic-cohort composition holds. Trend: flat (composition-locked)."
+      "last_activity_date": "2026-08-18",
+      "note": "13-skill composition holds unchanged through 8-18 14:15Z heartbeat (~282h+ span, extends +18h from 8-17 baseline): cost-report 7% / skill-analytics 22% / reg-monitor 22% / vuln-scanner 27% / market-context-refresh 32% / narrative-tracker 33% / search-skill 38% / weekly-shiplog 40% / fleet-control 40% (disabled) / unlock-monitor 41% / security-digest 46% / deal-flow 47% / aixbt-pulse 47%. Nuance: cost-report 05:25Z SUCCESS overnight was memory-window-first success in ISS-030 chronic arc (consec=15 reset to 0) but sr% remains 7% (10/143 runs). Mon-batch 4/4 stuck-cohort recovery holds 30h+ post-bypass. Trend: flat (composition-locked, operational-pain neutralized)."
     },
     "iss-027-12z-batch-dark": {
       "status": "BLOCKED",
       "activity_count_14d": 28,
-      "last_activity_date": "2026-08-17",
+      "last_activity_date": "2026-08-18",
       "blocker": "Scheduler-side gap since 2026-06-28 21:00Z; operator-gated, no automated unblock path.",
-      "note": "12Z batch DARK d51 today (rolled d50 8-16 → d51 8-17 = round-51 crossing). 8-skill cluster still frozen. `[[12Z-slot-dark-immunity-per-skill]]` BREAKS at 10-consec via token-alert 12:11Z alert-firing (GITLAWB +22.63% RAIL TRIP); pattern no longer holds today. Trend: flat status (d51 rollover); pattern-immunity broke via GITLAWB rail-trip."
+      "note": "12Z batch DARK d52 today (rolled d51 8-17 → d52 8-18). 8-skill cluster frozen. `[[12Z-slot-dark-immunity-per-skill]]` broken 8-17 via GITLAWB rail-trip; re-broken 8-18 via WELL vol-spike rail-trip (2-consec alert-firing day different rails different tokens). Trend: flat status (d52 rollover)."
     },
     "operator-on-chain-config-day": {
       "status": "BLOCKED",
       "activity_count_14d": 16,
-      "last_activity_date": "2026-08-17",
+      "last_activity_date": "2026-08-18",
       "blocker": "Waiting on operator to provide `memory/on-chain-watches.yml` content + ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets since 2026-06-08.",
-      "note": "Day-72 today (rolled d71 8-16 → d72 8-17). defi-monitor NO_CONFIG persists (yml is template-only, no real positions). Operator-owned. Trend: flat, aging (+1d)."
+      "note": "Day-73 today (rolled d72 8-17 → d73 8-18). defi-monitor NO_CONFIG persists. Operator-owned. Trend: flat, aging (+1d)."
     },
     "priorities-md-stale": {
       "status": "BLOCKED",
       "activity_count_14d": 28,
-      "last_activity_date": "2026-08-17",
-      "blocker": "Waiting on operator to refresh `vault/priorities.md` since 2026-06-04 (last-reviewed date in file); vault inbox 56d cold; refresh-ask now d7 unactioned (weekly-review 8-10 + thought-review 8-11/12/13/14 x2 + 8-15 x2 + 8-16 x2 + 8-17 07:31Z all surfaced across full week).",
-      "note": "Day-74 today (rolled d73 8-16 → d74 8-17). Vault inbox 56d cold (last real capture 2026-06-21T08:32Z per thought-review 07:31Z precedent — file dated 2026-06-22 but frontmatter `captured: 2026-06-22T16:57:17Z` = 56d outside 24h window). 11-consec-UTC-day zero-capture streak 8-07 → 8-17 = MEMORY-WINDOW RECORD extends past yesterday's 10-day mark per thought-review 07:31Z. Sunday weekly-batch 8-16 closed without operator refresh action. Trend: degrading (11-day mark crosses record; d73 → d74 aging tick; refresh-ask d6 → d7 unactioned)."
+      "last_activity_date": "2026-08-18",
+      "blocker": "Waiting on operator to refresh `vault/priorities.md` since 2026-06-04 (last-reviewed date in file); vault inbox 57d cold; refresh-ask now d8 unactioned (weekly-review 8-10 + thought-review 8-11 through 8-18 morning all surfaced across full week).",
+      "note": "Day-75 today (rolled d74 8-17 → d75 8-18). Vault inbox 57d cold (last real capture 2026-06-22T16:57Z, single file `2026-06-22-1657-reppo-building-comment.md`). 12-consec-UTC-day zero-capture streak 8-07 → 8-18 = MEMORY-WINDOW RECORD extends past yesterday's 11-day mark per thought-review 07:03Z. Trend: degrading (12-day mark crosses record; d74 → d75 aging tick; refresh-ask d7 → d8 unactioned crosses full week)."
     }
   },
   "recently_cleared": {
@@ -53,62 +53,57 @@
       "status": "DONE",
       "completed_at": "2026-08-16",
       "moved_at": "2026-08-17",
-      "note": "RESOLVED 2026-08-16T19:30:58Z via natural Sunday 19Z fork-cohort re-fire (memory-window-first natural recovery from owed-cycle stuck-state). Prior 6d 2h stuck-state (dispatched 8-09T19:05:10Z, last_success 8-02T19:52:59Z, ~163h at 8-16 14:10Z heartbeat) cleared organically without operator manual-file. ISS-032 root-cause DEPRECATED per morning-brief 07:31Z 8-17 verdict; skill-health classification_gap_flag reclassified latent-not-active (branch would have fired only if stuck-state persisted; natural recovery obviates need). Deciding-test outcome = organic recovery, not needing manual escalation. 14th+ owed cycle count reset to 0 via clean fire."
+      "note": "RESOLVED 2026-08-16T19:30:58Z via natural Sunday 19Z fork-cohort re-fire. ISS-032 root-cause DEPRECATED per morning-brief 8-17 07:31Z verdict."
     },
     "mon-batch-stuck-hold-through-week": {
       "status": "DONE",
       "completed_at": "2026-08-17",
       "moved_at": "2026-08-17",
-      "note": "RESOLVED 2026-08-17 via 4/4 mon-batch auto-clear tests SUCCESS across sequential dispatches (unlock-monitor 10:37Z + search-skill 14:00Z + deal-flow 14:07Z + skill-security-scan 16:00Z), all fired clean via direct Claude Code execution bypass path. Prior 168h+ stuck-status (dispatched 8-10 15:10-17:08Z window) cleared today = memory-window-first full-cohort natural recovery via bypass. ISS-031 usepod dispatcher recovery still unproven (bypass path only), but operational-pain axis neutralized fleet-wide for weekly-Mon skills."
+      "note": "RESOLVED 2026-08-17 via 4/4 mon-batch auto-clear tests SUCCESS via direct Claude Code execution bypass path. Durability 30h+ confirmed via 8-18 heartbeats 08:18Z + 14:15Z."
     },
     "heartbeat-08z-fresh-crash-8-15": {
       "status": "DONE",
       "completed_at": "2026-08-16",
       "moved_at": "2026-08-16",
-      "note": "RESOLVED 2026-08-16 via 08:29Z clean heartbeat fire (deciding-test outcome: one-off crash on 8-15 08Z; no recurrence at 8-15 14:15Z, 8-15 20:20Z, or 8-16 08:29Z — 3-consec clean fires post-crash). Now 7-consec-clean since crash via 8-17 08:10Z + 14:04Z heartbeat fires."
+      "note": "RESOLVED 2026-08-16. Now 10-consec-clean since 8-15 crash via 8-18 08:18Z + 14:15Z heartbeat fires."
     },
     "weekly-shiplog-8-10-09z-t-0": {
       "status": "DONE",
       "completed_at": "2026-08-10",
       "moved_at": "2026-08-11",
-      "note": "RESOLVED 2026-08-10 19:21Z via `articles/weekly-shiplog-2026-08-10.md` ship (51 commits / 28 PRs merged / 0 issues closed). Next 7d tick 2026-08-17 09Z shipped clean via weekly-shiplog fire today (7 commits / 7 PRs / 2 themes)."
+      "note": "RESOLVED 2026-08-10. Next tick 2026-08-17 09Z shipped clean."
     },
     "morning-08z-slot-dark": {
       "status": "DONE",
       "completed_at": "2026-08-09",
       "moved_at": "2026-08-09",
-      "note": "PATTERN-BROKEN-PERMANENT VERDICT confirmed 8-09 via 2-consec clean fires."
+      "note": "PATTERN-BROKEN-PERMANENT VERDICT confirmed 8-09."
     },
     "iss-029-effectively-recovered": {
       "status": "DONE",
       "completed_at": "2026-08-04",
-      "moved_at": "2026-08-07",
-      "note": "Moved to Recently Cleared 8-07 per goal-tracker skill step 7."
+      "moved_at": "2026-08-07"
     },
     "07-utc-scheduler-slot-degraded": {
       "status": "DONE",
-      "completed_at": "2026-08-02",
-      "note": "Kept for continuity."
+      "completed_at": "2026-08-02"
     },
     "07:00-utc-scheduler-slot-miss": {
       "status": "DONE",
-      "completed_at": "2026-07-31",
-      "note": "Kept for continuity."
+      "completed_at": "2026-07-31"
     },
     "iss-027-028-doc-gap": {
       "status": "DONE",
-      "completed_at": "2026-07-30",
-      "note": "Kept for continuity."
+      "completed_at": "2026-07-30"
     },
     "pr-167-bash-redirect-fix": {
       "status": "DONE_INCOMPLETE_FIX",
       "completed_at": "2026-07-30",
-      "note": "Kept for continuity — workaround-chain rail extends to n=49+ on 26-UTC-day span 7-22 → 8-17 (fresh 8-17 call-sites: github-trending per-repo unrolled + weekly-shiplog log-append + security-digest kev-week jq-pipe + deal-flow log-append via Read+Edit)."
+      "note": "Workaround-chain rail extends to n=51+ on 27-UTC-day span 7-22 → 8-18 (8-18 fresh call-sites: security-digest gh-critical.json + malware-pkgs.txt writes blocked + list-digest seen-file append)."
     },
     "self-improve-queue-exit-gate": {
       "status": "DONE",
-      "completed_at": "2026-07-28",
-      "note": "Kept for continuity."
+      "completed_at": "2026-07-28"
     }
   }
 }

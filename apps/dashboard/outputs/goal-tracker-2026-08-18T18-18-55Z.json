@@ -1,0 +1,297 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-08-18",
+        "description": "7 goals · 1 at risk · 2 on track · 4 blocked · 0 done"
+      },
+      "children": [
+        "summary-section",
+        "separator-1",
+        "at-risk-section",
+        "separator-2",
+        "blocked-section",
+        "separator-3",
+        "on-track-section",
+        "separator-4",
+        "sources-section"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-heading",
+        "summary-stats"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "summary-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-overall",
+        "stat-priorities"
+      ]
+    },
+    "stat-overall": {
+      "type": "Stat",
+      "props": {
+        "label": "Overall",
+        "value": "flat",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "stat-priorities": {
+      "type": "Stat",
+      "props": {
+        "label": "Priorities",
+        "value": "↓ degrading",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "at-risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "at-risk-heading",
+        "at-risk-item-1"
+      ]
+    },
+    "at-risk-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "At Risk (1)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "at-risk-item-1": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "iss-031 detect-usepod-402 gate",
+        "message": "0d idle, 14 activity/14d (rule-literal ON TRACK; intent-override AT RISK since 5d past internal ship deadline, script still absent per 08:18Z heartbeat file-check)\n\nAction: author scripts/detect-usepod-402.sh before 8-20 weekly-review deadline (T-2)"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3",
+        "blocked-item-4"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked (4)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "blocked-item-1": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "self-improve pr queue exit-gate n=3",
+        "message": "waiting on operator merge of any 1 of #177/#179/#180 since 2026-08-16 weekly-batch close (0 merges through 14:15Z heartbeat)\n\nAction: ping operator; queue-full gate blocks new self-improve authoring per claude.md primitive"
+      },
+      "children": []
+    },
+    "blocked-item-2": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "12z-slot iss-027 batch DARK d52",
+        "message": "scheduler-gated since 2026-06-28; no automated unblock path\n\nAction: escalate iss-027 to operator for 12z-slot reactivation"
+      },
+      "children": []
+    },
+    "blocked-item-3": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "operator on-chain config day-73",
+        "message": "waiting on operator since 2026-06-08 for memory/on-chain-watches.yml + ALCHEMY_API_KEY + ETHERSCAN_API_KEY\n\nAction: request the yml + 2 keys directly in next operator touch"
+      },
+      "children": []
+    },
+    "blocked-item-4": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "priorities.md 75d stale + vault inbox 57d cold + 12-consec zero-capture day",
+        "message": "↓ degrading — memory-window record extends past 11-day mark; refresh-ask d8 unactioned across full week\n\nAction: escalate refresh-ask with 12-consec record framing; sunday 8-23 batch is next natural window"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item-1",
+        "on-track-item-2"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track (2)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "on-track-item-1": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "pr queue at 6 open",
+        "message": "0d idle, 28 activity/14d (→ flat; intra-status mild-degrade — #174 advisor day-11 = memory-window-deepest single-pr stall; #176/#177 both cross 9d)"
+      },
+      "children": []
+    },
+    "on-track-item-2": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "chronic-cohort-alone-degraded ~282h+ regime",
+        "message": "0d idle, 28 activity/14d (→ flat composition-locked; operational-pain neutralized fleet-wide via mon-batch 4/4 bypass-recovery holding 30h+ post-clear)"
+      },
+      "children": []
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-heading",
+        "sources-badges"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "sources-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-logs",
+        "badge-git",
+        "badge-gh-pr",
+        "badge-gh-issue",
+        "badge-cron-state"
+      ]
+    },
+    "badge-logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-git": {
+      "type": "Badge",
+      "props": {
+        "text": "git=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-gh-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-gh-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-cron-state": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "default"
+      },
+      "children": []
+    }
+  }
+}
