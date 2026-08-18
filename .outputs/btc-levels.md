@@ -1,17 +1,13 @@
 ## Summary
 
-**btc-levels run complete — quiet run, no notification sent.**
+**btc-levels run — 2026-08-18T00:23Z. Quiet.**
 
-Data fetched from CoinGecko:
-- **Spot**: $64,341 (`.prices[-1][1]`)
-- **Daily close** (2026-08-16): $62,844 (`.prices[-2][1]`)
+| Check | Value | Result |
+|---|---|---|
+| Spot | $64,418 | Clear — above all review bands |
+| Close 2026-08-17 | $64,491 | Clear — above $60,500 breakdown level |
+| Leverage-review (≤$45k) | Not triggered | `inLeverageReviewBand` stays false |
+| Reclaim $63,500 | Already alerted | Flag stays true, re-arm not triggered |
+| Reclaim $65,900 | $64,418 < $65,900 | Not yet reached |
 
-Level evaluation:
-| Check | Result |
-|---|---|
-| Spot ≤ $45,000 (leverage trigger) | Clear — spot $64,341 |
-| Daily close < $60,500 (breakdown) | Clear — close $62,844 above threshold |
-| Reclaim $63,500 | Flag already `true` from prior cycle; spot above $63,500 but not re-arming (requires drop below $60,500 first) |
-| Reclaim $65,900 | Not triggered — spot $64,341 < $65,900 |
-
-No alerts fired → no `./notify` call. State updated (`lastSpot` $64,058 → $64,341), log entry appended, both committed.
+No alerts fired. No notification sent. State and log committed (`aa5ae88`).
