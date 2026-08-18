@@ -1,0 +1,1160 @@
+{
+  "root": "main",
+  "state": {},
+  "elements": {
+    "main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-18",
+        "description": "mixed tape — 27/77 top-100 green, top-50 median flat 0.0%."
+      },
+      "children": [
+        "winners-section",
+        "sep1",
+        "losers-section",
+        "sep2",
+        "tweets-section",
+        "sep3",
+        "paper-section",
+        "sep4",
+        "github-section",
+        "sep5",
+        "hn-section"
+      ]
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-title",
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5"
+      ]
+    },
+    "winners-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "w1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1-name",
+        "w1-row"
+      ]
+    },
+    "w1-name": {
+      "type": "Heading",
+      "props": {
+        "text": "1. ANSEM (Black Bull)",
+        "level": "h3"
+      }
+    },
+    "w1-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w1-price",
+        "w1-info",
+        "w1-badges"
+      ]
+    },
+    "w1-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.261",
+        "delta": "+13.5%",
+        "trend": "up"
+      }
+    },
+    "w1-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d +27.5% • $40M / #231",
+        "variant": "caption"
+      }
+    },
+    "w1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-trending-up-1",
+        "badge-microcap-1"
+      ]
+    },
+    "badge-trending-up-1": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP",
+        "variant": "secondary"
+      }
+    },
+    "badge-microcap-1": {
+      "type": "Badge",
+      "props": {
+        "text": "MICROCAP",
+        "variant": "secondary"
+      }
+    },
+    "w2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w2-name",
+        "w2-row"
+      ]
+    },
+    "w2-name": {
+      "type": "Heading",
+      "props": {
+        "text": "2. GPS (GoPlus Security)",
+        "level": "h3"
+      }
+    },
+    "w2-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w2-price",
+        "w2-info",
+        "w2-badges"
+      ]
+    },
+    "w2-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.017",
+        "delta": "+13.1%",
+        "trend": "up"
+      }
+    },
+    "w2-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d +80.8% • $114M / #244",
+        "variant": "caption"
+      }
+    },
+    "w2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-breakout",
+        "badge-microcap-2"
+      ]
+    },
+    "badge-breakout": {
+      "type": "Badge",
+      "props": {
+        "text": "BREAKOUT",
+        "variant": "secondary"
+      }
+    },
+    "badge-microcap-2": {
+      "type": "Badge",
+      "props": {
+        "text": "MICROCAP",
+        "variant": "secondary"
+      }
+    },
+    "w3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w3-name",
+        "w3-row"
+      ]
+    },
+    "w3-name": {
+      "type": "Heading",
+      "props": {
+        "text": "3. VVV (Venice Token)",
+        "level": "h3"
+      }
+    },
+    "w3-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w3-price",
+        "w3-info",
+        "w3-badges"
+      ]
+    },
+    "w3-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$13.71",
+        "delta": "+12.5%",
+        "trend": "up"
+      }
+    },
+    "w3-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d +16.3% • $24M / #88",
+        "variant": "caption"
+      }
+    },
+    "w3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-trending-up-3"
+      ]
+    },
+    "badge-trending-up-3": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP",
+        "variant": "secondary"
+      }
+    },
+    "w4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w4-name",
+        "w4-row"
+      ]
+    },
+    "w4-name": {
+      "type": "Heading",
+      "props": {
+        "text": "4. PIEVERSE",
+        "level": "h3"
+      }
+    },
+    "w4-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w4-price",
+        "w4-info"
+      ]
+    },
+    "w4-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.924",
+        "delta": "+8.6%",
+        "trend": "up"
+      }
+    },
+    "w4-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d +17.2% • $14M / #136",
+        "variant": "caption"
+      }
+    },
+    "w5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w5-name",
+        "w5-row"
+      ]
+    },
+    "w5-name": {
+      "type": "Heading",
+      "props": {
+        "text": "5. COMP (Compound)",
+        "level": "h3"
+      }
+    },
+    "w5-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w5-price",
+        "w5-info"
+      ]
+    },
+    "w5-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$17.39",
+        "delta": "+7.1%",
+        "trend": "up"
+      }
+    },
+    "w5-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d +6.1% • $39M / #172",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-title",
+        "l1",
+        "l2",
+        "l3",
+        "l4",
+        "l5"
+      ]
+    },
+    "losers-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "l1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l1-name",
+        "l1-row"
+      ]
+    },
+    "l1-name": {
+      "type": "Heading",
+      "props": {
+        "text": "1. VELVET",
+        "level": "h3"
+      }
+    },
+    "l1-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l1-price",
+        "l1-info",
+        "l1-badges"
+      ]
+    },
+    "l1-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.491",
+        "delta": "−49.5%",
+        "trend": "down"
+      }
+    },
+    "l1-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d +12.7% • $22M / #151",
+        "variant": "caption"
+      }
+    },
+    "l1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-capitulation"
+      ]
+    },
+    "badge-capitulation": {
+      "type": "Badge",
+      "props": {
+        "text": "CAPITULATION",
+        "variant": "destructive"
+      }
+    },
+    "l2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l2-name",
+        "l2-row"
+      ]
+    },
+    "l2-name": {
+      "type": "Heading",
+      "props": {
+        "text": "2. AKE (Akedo)",
+        "level": "h3"
+      }
+    },
+    "l2-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l2-price",
+        "l2-info",
+        "l2-badges"
+      ]
+    },
+    "l2-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.008",
+        "delta": "−18.5%",
+        "trend": "down"
+      }
+    },
+    "l2-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d +116% • $13M / #164",
+        "variant": "caption"
+      }
+    },
+    "l2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-trending-down",
+        "badge-fade-1"
+      ]
+    },
+    "badge-trending-down": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+DOWN",
+        "variant": "destructive"
+      }
+    },
+    "badge-fade-1": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "secondary"
+      }
+    },
+    "l3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l3-name",
+        "l3-row"
+      ]
+    },
+    "l3-name": {
+      "type": "Heading",
+      "props": {
+        "text": "3. WLD (Worldcoin)",
+        "level": "h3"
+      }
+    },
+    "l3-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l3-price",
+        "l3-info"
+      ]
+    },
+    "l3-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.323",
+        "delta": "−10.8%",
+        "trend": "down"
+      }
+    },
+    "l3-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d −2.8% • $161M / #61",
+        "variant": "caption"
+      }
+    },
+    "l4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l4-name",
+        "l4-row"
+      ]
+    },
+    "l4-name": {
+      "type": "Heading",
+      "props": {
+        "text": "4. TAG (TAGGER)",
+        "level": "h3"
+      }
+    },
+    "l4-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l4-price",
+        "l4-info",
+        "l4-badges"
+      ]
+    },
+    "l4-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.001",
+        "delta": "−7.6%",
+        "trend": "down"
+      }
+    },
+    "l4-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d −22.1% • $2.4M / #241",
+        "variant": "caption"
+      }
+    },
+    "l4-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-microcap-4"
+      ]
+    },
+    "badge-microcap-4": {
+      "type": "Badge",
+      "props": {
+        "text": "MICROCAP",
+        "variant": "secondary"
+      }
+    },
+    "l5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l5-name",
+        "l5-row"
+      ]
+    },
+    "l5-name": {
+      "type": "Heading",
+      "props": {
+        "text": "5. BTW (Bitway)",
+        "level": "h3"
+      }
+    },
+    "l5-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l5-price",
+        "l5-info",
+        "l5-badges"
+      ]
+    },
+    "l5-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.353",
+        "delta": "−6.1%",
+        "trend": "down"
+      }
+    },
+    "l5-info": {
+      "type": "Text",
+      "props": {
+        "text": "7d +81.9% • $29M / #68",
+        "variant": "caption"
+      }
+    },
+    "l5-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fade-2"
+      ]
+    },
+    "badge-fade-2": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-title",
+        "tweets-crypto",
+        "tweets-ai",
+        "tweets-dev"
+      ]
+    },
+    "tweets-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup (XAI cache HIT, 12 tweets)",
+        "level": "h2"
+      }
+    },
+    "tweets-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-crypto-label",
+        "tweets-crypto-text"
+      ]
+    },
+    "tweets-crypto-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "tweets-crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "peter schiff on btc's lack of sell-off, calls $65k resistance; longs mapping 65k → 67-70k clear. Tom Lee ETH thesis under pushback.",
+        "variant": "body"
+      }
+    },
+    "tweets-ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-ai-label",
+        "tweets-ai-text"
+      ]
+    },
+    "tweets-ai-label": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "tweets-ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "@BrianRoemmele — 13 words on reddit hijack ai research agents via context poisoning. Qwen3.8 27B GGUF quant tests posted. Continued grok-bot self-promotion in xAI section.",
+        "variant": "body"
+      }
+    },
+    "tweets-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-dev-label",
+        "tweets-dev-text"
+      ]
+    },
+    "tweets-dev-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "tweets-dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "github reliability day — @perrymetzger on nine-fives goal, @beginbot roasts cursor for rolling Origin during outage, forgejo/gitea recs surging.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-title",
+        "paper-header",
+        "paper-desc",
+        "paper-links"
+      ]
+    },
+    "paper-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-header": {
+      "type": "Heading",
+      "props": {
+        "text": "HarnessEval-W: Agentifying the Evaluation of Visual Worlds",
+        "level": "h3"
+      }
+    },
+    "paper-desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper-authors",
+        "paper-abstract"
+      ]
+    },
+    "paper-authors": {
+      "type": "Text",
+      "props": {
+        "text": "Chen et al · ↑33",
+        "variant": "caption"
+      }
+    },
+    "paper-abstract": {
+      "type": "Text",
+      "props": {
+        "text": "brings the llm-eval-harness paradigm to world models — parent agent decomposes each case, spawns sub-agents per subproblem, builds a verifiable evidence tree instead of a scalar score. Judgments align with humans across 18 models / 330 cases.",
+        "variant": "body"
+      }
+    },
+    "paper-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "paper-link-read",
+        "paper-link-pdf"
+      ]
+    },
+    "paper-link-read": {
+      "type": "Link",
+      "props": {
+        "label": "Read",
+        "href": "https://arxiv.org/abs/2608.16859"
+      }
+    },
+    "paper-link-pdf": {
+      "type": "Link",
+      "props": {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2608.16859"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "github-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-title",
+        "github-status"
+      ]
+    },
+    "github-title": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github-status": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "GITHUB_ISSUES_OK",
+        "message": "0 new (13-consec clean-day 7-26 → 8-18)"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-title",
+        "hn-1",
+        "hn-2",
+        "hn-3",
+        "hn-4",
+        "hn-5"
+      ]
+    },
+    "hn-title": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn1-link",
+        "hn1-score",
+        "hn1-desc",
+        "hn1-take",
+        "hn1-discuss"
+      ]
+    },
+    "hn1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AI-Generated GitHub Copilot Autofix compromised Snowflake's Jira",
+        "href": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "source": "Wiz"
+      }
+    },
+    "hn1-score": {
+      "type": "Stat",
+      "props": {
+        "label": "HN Score",
+        "value": "354pts"
+      }
+    },
+    "hn1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "wiz red agent walked into snowflake internal jira via a single-quote in a title that copilot's autofix let through.",
+        "variant": "body"
+      }
+    },
+    "hn1-take": {
+      "type": "Text",
+      "props": {
+        "text": "HN take: \"quote injection still alive and well in 2026. gawd.\" — chrisjj",
+        "variant": "caption"
+      }
+    },
+    "hn1-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49331423"
+      }
+    },
+    "hn-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn2-link",
+        "hn2-score",
+        "hn2-desc",
+        "hn2-take",
+        "hn2-discuss"
+      ]
+    },
+    "hn2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "A Preview of DuckDB v2.0",
+        "href": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
+        "source": "DuckDB"
+      }
+    },
+    "hn2-score": {
+      "type": "Stat",
+      "props": {
+        "label": "HN Score",
+        "value": "602pts"
+      }
+    },
+    "hn2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "release cements duckdb's pivot past in-process into cloud-warehouse territory.",
+        "variant": "body"
+      }
+    },
+    "hn2-take": {
+      "type": "Text",
+      "props": {
+        "text": "HN take: \"last year of duckdb enhancements feel like the shift from in-process execution engine to a foundation of a cloud data warehouse.\" — c9cf35860db4",
+        "variant": "caption"
+      }
+    },
+    "hn2-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49330781"
+      }
+    },
+    "hn-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn3-link",
+        "hn3-score",
+        "hn3-desc",
+        "hn3-take",
+        "hn3-discuss"
+      ]
+    },
+    "hn3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Ask HN: Alternatives to GitHub",
+        "href": "https://news.ycombinator.com/item?id=49331033",
+        "source": "Hacker News"
+      }
+    },
+    "hn3-score": {
+      "type": "Stat",
+      "props": {
+        "label": "HN Score",
+        "value": "568pts"
+      }
+    },
+    "hn3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "github's monday outage tipped into another migration thread. Forgejo/Codeberg the top recs.",
+        "variant": "body"
+      }
+    },
+    "hn3-take": {
+      "type": "Text",
+      "props": {
+        "text": "HN take: \"forgejo is splendid. the stack itself is light-weight to self-host, very fast to use.\" — ashton314",
+        "variant": "caption"
+      }
+    },
+    "hn3-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49331033"
+      }
+    },
+    "hn-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn4-link",
+        "hn4-score",
+        "hn4-desc",
+        "hn4-take",
+        "hn4-discuss"
+      ]
+    },
+    "hn4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AI;DR (AI; Didn't Read)",
+        "href": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+        "source": "Rick Manelius"
+      }
+    },
+    "hn4-score": {
+      "type": "Stat",
+      "props": {
+        "label": "HN Score",
+        "value": "786pts"
+      }
+    },
+    "hn4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "argument that ai summaries kill the loop of actually reading.",
+        "variant": "body"
+      }
+    },
+    "hn4-take": {
+      "type": "Text",
+      "props": {
+        "text": "HN take: \"if some text is AI-written from a much shorter prompt, publish the prompt and sources instead.\" — sega_sai",
+        "variant": "caption"
+      }
+    },
+    "hn4-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49336573"
+      }
+    },
+    "hn-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn5-link",
+        "hn5-score",
+        "hn5-desc",
+        "hn5-take",
+        "hn5-discuss"
+      ]
+    },
+    "hn5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GPT-5.6 Sol Pricing Cut 50% (OpenRouter)",
+        "href": "https://openrouter.ai/openai/gpt-5.6-sol",
+        "source": "OpenRouter"
+      }
+    },
+    "hn5-score": {
+      "type": "Stat",
+      "props": {
+        "label": "HN Score",
+        "value": "354pts"
+      }
+    },
+    "hn5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "openrouter-only cut on gpt-5.6 sol.",
+        "variant": "body"
+      }
+    },
+    "hn5-take": {
+      "type": "Text",
+      "props": {
+        "text": "HN take: \"already cheaper models with sol's intelligence — notably grok 4.6 at $6/m — makes it a tougher sell.\" — Fergusonb",
+        "variant": "caption"
+      }
+    },
+    "hn5-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49337602"
+      }
+    }
+  }
+}
