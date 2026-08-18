@@ -1,9 +1,13 @@
 {
-  "last_run_at": "2026-08-17T08:09:00Z",
-  "last_verdict": "FRESHNESS_OK",
-  "last_flagged_fingerprint": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "last_run_at": "2026-08-18T08:18:55Z",
+  "last_verdict": "FRESHNESS_STALE",
+  "last_flagged_fingerprint": "2fca33bd830f31aa53892b7f1a634b9c9520f292",
   "consumer_count": 43,
   "dependency_count": 9,
-  "flagged_count": 0,
-  "first_seen_at": {}
+  "flagged_count": 3,
+  "first_seen_at": {
+    "token-pick:memory/topics/market-context.md": "2026-08-18T08:18:55Z",
+    "skill-security-scan:articles/workflow-security-audit-2026-04-11.md": "2026-08-18T08:18:55Z",
+    "vuln-scanner:.outputs/github-trending.md": "2026-08-18T08:18:55Z"
+  }
 }

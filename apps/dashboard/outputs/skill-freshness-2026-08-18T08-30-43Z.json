@@ -1,0 +1,111 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Freshness — 2026-08-18"
+      },
+      "children": [
+        "alert-status",
+        "separator-1",
+        "heading-worst",
+        "table-worst",
+        "separator-2",
+        "heading-action",
+        "text-action",
+        "separator-3",
+        "link-full-report"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 FRESHNESS_STALE",
+        "message": "3 of 9 dependencies flagged across 3 of 43 enabled consumers",
+        "type": "error"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-worst": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst Cases",
+        "level": "h3"
+      }
+    },
+    "table-worst": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Source",
+          "Age",
+          "Class",
+          "Severity"
+        ],
+        "rows": [
+          [
+            "token-pick",
+            "memory/topics/market-context.md",
+            "~33d",
+            "memory/topics",
+            "STALE"
+          ],
+          [
+            "skill-security-scan",
+            "articles/workflow-security-audit-2026-04-11.md",
+            "~128d",
+            "articles",
+            "STALE"
+          ],
+          [
+            "vuln-scanner",
+            ".outputs/github-trending.md",
+            "~23h",
+            "outputs",
+            "STALE"
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action",
+        "level": "h3"
+      }
+    },
+    "text-action": {
+      "type": "Text",
+      "props": {
+        "text": "Verify market-context-refresh is still on schedule; if so, producer ran but did not write a new article (market-context.md stale 33d, crosses 2× threshold — token-pick reads it daily)"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-full-report": {
+      "type": "Link",
+      "props": {
+        "label": "Full Report",
+        "href": "articles/skill-freshness-2026-08-18.md"
+      }
+    }
+  }
+}
