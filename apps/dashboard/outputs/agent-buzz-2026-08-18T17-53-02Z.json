@@ -1,0 +1,286 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-08-18",
+        "description": "mcp is most of the thread today — with an RSI benchmark drop, an agent-facing API launch, and pricing pushback on the side."
+      },
+      "children": [
+        "sep0",
+        "section1-heading",
+        "section1-items",
+        "sep1",
+        "section2-heading",
+        "section2-items",
+        "sep2",
+        "section3-heading",
+        "section3-items",
+        "sep3",
+        "footer-text"
+      ]
+    },
+    "sep0": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp as plumbing default",
+        "level": "h2"
+      }
+    },
+    "section1-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1",
+        "item2",
+        "item3"
+      ]
+    },
+    "item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item1-tweet",
+        "item1-link"
+      ]
+    },
+    "item1-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xDepressionn",
+        "handle": "@0xDepressionn",
+        "text": "cites anthropic internal number: 90% of engineers building agentic harnesses use MCP."
+      }
+    },
+    "item1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xDepressionn/status/2089370082010923090"
+      }
+    },
+    "item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item2-tweet",
+        "item2-link"
+      ]
+    },
+    "item2-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "zile_cao",
+        "handle": "@zile_cao",
+        "text": "wants MCP servers to bundle workflow functions and spawn subagents, cutting harness code and response size."
+      }
+    },
+    "item2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/zile_cao/status/2089382979604722016"
+      }
+    },
+    "item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item3-tweet",
+        "item3-link"
+      ]
+    },
+    "item3-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SCR01111",
+        "handle": "@SCR01111",
+        "text": "slots MCP as agent-to-tool, A2A as agent-to-agent discovery, ACP as REST agent-to-agent, three distinct layers."
+      }
+    },
+    "item3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/SCR01111/status/2089346785500418442"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agent APIs and benchmarks",
+        "level": "h2"
+      }
+    },
+    "section2-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item4",
+        "item5"
+      ]
+    },
+    "item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item4-tweet",
+        "item4-link"
+      ]
+    },
+    "item4-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ScaleAILabs",
+        "handle": "@ScaleAILabs",
+        "text": "opens RSI Bench call for tasks measuring whether agents can advance AI R&D themselves; $2k per accepted task."
+      }
+    },
+    "item4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ScaleAILabs/status/2089498091544268853"
+      }
+    },
+    "item5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item5-tweet",
+        "item5-link"
+      ]
+    },
+    "item5-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "gdeglin",
+        "handle": "@gdeglin",
+        "text": "onesignal ships journeys API giving agents CRUD access to full journey graphs with concurrent-edit handling."
+      }
+    },
+    "item5-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/gdeglin/status/2089499496497705303"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "pricing and runtime shift",
+        "level": "h2"
+      }
+    },
+    "section3-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item6",
+        "item7"
+      ]
+    },
+    "item6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item6-tweet",
+        "item6-link"
+      ]
+    },
+    "item6-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "newStrawBerry86",
+        "handle": "@newStrawBerry86",
+        "text": "per-seat SaaS pricing breaks under agents; salesforce and hubspot already piloting per-action/per-outcome."
+      }
+    },
+    "item6-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/newStrawBerry86/status/2089497916431806736"
+      }
+    },
+    "item7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item7-tweet",
+        "item7-link"
+      ]
+    },
+    "item7-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ainewsusa",
+        "handle": "@ainewsusa",
+        "text": "agentao proposes local-first runtime splitting model-generated action proposals from host-authorized execution."
+      }
+    },
+    "item7-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ainewsusa/status/2089482232528294244"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 12 → kept: 7",
+        "variant": "caption"
+      }
+    }
+  }
+}
