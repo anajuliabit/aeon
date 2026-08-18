@@ -1,15 +1,25 @@
-*GitHub Trending — 2026-08-17*
+*GitHub Trending — 2026-08-18*
 
-*Top pick* — [cordiverse/cordis](https://github.com/cordiverse/cordis)
-thinnest trending page in memory-window (7 candidates). this one carries the day: an obscure 4-year-old ts framework outed as deepseek's composability layer via their harness docs.
+*Top pick* — [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory)
+memory-primitive built as an agent-vendor-portable layer across claude, codex, cursor — the primitive vendor-lockin cohorts won't ship themselves.
 
 *AI/ML*
-• [cordiverse/cordis](https://github.com/cordiverse/cordis) — ★ 720 today (5.3k total) · TypeScript · [RETURNING]
-deepseek's harness docs cite this framework as their spatiotemporal composability layer — 720 today on a 3-star-a-day baseline.
+• [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) — ★ 207t today (2.4k total) · Rust · [ACCELERATING]
+persists memory across coding-CLI vendors so a codex→claude handoff resumes with prior context, not from scratch.
+
+• [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) — ★ 198t today (29k total) · Python · [ACCELERATING]
+817-skill pack for pen-testing agents mapped to MITRE ATT&CK/NIST — first cross-vendor skills-standard aiming at agentskills.io namespace.
 
 *Devtools*
-• [basecamp/omarchy](https://github.com/basecamp/omarchy) — ★ 270 today (25.7k total) · Shell · [ACCELERATING]
-dhh's opinionated arch spin ships a full manual, cli, and unified clipboard — a polished distro, not a dotfile dump.
+• [usestrix/strix](https://github.com/usestrix/strix) — ★ 598t today (55k total) · Python · [ACCELERATING]
+agentic pen-tester that finds a vuln, writes a repro, then ships the patch — full loop, not scan-only.
+
+• [AlexsJones/llmfit](https://github.com/AlexsJones/llmfit) — ★ 198t today (33k total) · Rust · [ACCELERATING]
+points at your gpu/cpu, returns the hugging face models that will actually load — no oom trial-and-error rebooting.
+
+*Infra*
+• [nautechsystems/nautilus_trader](https://github.com/nautechsystems/nautilus_trader) — ★ 120t today (26k total) · Rust · [RETURNING]
+rust-native event-driven trading engine used by prop shops in production, not the usual python-notebook backtest toy.
 
 ---
-sources: trending=ok · gh_api=ok · kept 2/7 (memory-window-thinnest trending page)
+sources: trending=ok · gh_api=ok · kept 5/11
