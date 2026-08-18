@@ -1,29 +1,29 @@
-*5 Actions — 2026-08-17*
-Shape: comment pr#174 8.9d stall, open iss-034 dispatcher-miss, add cordis+omarchy, grep ray kev, diagnose chain-drift
+*5 Actions — 2026-08-18*
+Shape: usepod detector T-2, MCP-catalog audit, trigger #174 CI, defi watchlist, register 2 repos
 
-1. comment on pr #174 with 8.9d memory-window-deepest stall summary + rebase-ready verdict via `gh pr comment 174 --body-file .tmp/pr174-note.md`
-why: memory-window-deepest single-pr stall crosses 9d tonight, operator visibility ahead of next weekly-batch
-done: `gh api /repos/aaronjmars/aeon/issues/174/comments` count +1
-loop: pr-174-9d-stall
+1. write scripts/detect-usepod-402.sh + skill sandbox-note doc pointer, open PR before 8-20
+why: iss-031 gate +5d overdue, weekly-review 8-10 action-1 T-2 to 8-20 deadline; recovery bypass proved the axis
+done: PR opened with detect-usepod-402.sh + at least one skills/*/SKILL.md sandbox-note reference
+loop: iss-031-usepod-detect-gate
 
-2. open `memory/issues/ISS-034.md` for dispatcher first-run-miss (fork-skill-gap 8-16 21Z + operator-scorecard 8-17 10:30Z both never-dispatched)
-why: 2 fresh-first-fires missed today, potential scheduler bug distinct from iss-031 usepod path
-done: `memory/issues/ISS-034.md` exists + `INDEX.md` open-count 15→16
-loop: dispatcher-first-run-miss
+2. grep aeon deps for atomic-agents-stack MCP-catalog transitive (GHSA-xhcr-cqfr-m3hv MITM→RCE, no patch)
+why: security-digest 8-18 flagged MCP-catalog-cleartext-RCE; aeon runs @json-render/mcp + subagent MCP paths
+done: .tmp/mcp-audit-8-18.log with grep-result CLEAN or HIT recorded + notify posted
+loop: mcp-catalog-cleartext-rce-fleet-audit
 
-3. add `cordiverse/cordis` + `basecamp/omarchy` to `memory/watched-repos.md`
-why: cordis 212× baseline record spike via deepseek-harness catalyst, omarchy `[[dhh-opinionated-shell-product]]` n=1
-done: grep `cordis` + `omarchy` in `memory/watched-repos.md` both hit
-loop: watched-repos-fresh-8-17
+3. close-then-reopen PR #174 via gh cli to force CI trigger (day-11 memory-window-deepest single-PR stall)
+why: statusCheckRollup empty since 8-08; prior rebase/comment/sync/kick didn't fire; external contributor blocked
+done: gh pr reopen 174 produces non-empty statusCheckRollup within 15min OR ping webbrain-one on stall
+loop: pr-174-day-11-stall
 
-4. grep aeon + advisor + dashboard for pip `ray` dep against cve-2025-62593 kev; pin ≥2.52.0 if any hit
-why: security-digest fleet-clean d18 covers npm scope only, ray is pip and this is first pip/ml kev of the week
-done: audit line written to `memory/topics/fleet.md` ray-kev-audit block
-loop: ray-kev-fleet-audit
+4. scaffold memory/on-chain-watches.yml with 3 entries from memory/known-addresses.yml (defi-monitor NO_CONFIG day-73)
+why: unblocks aeon-owned side of operator-gated config; schema-file separates cleanly from ALCHEMY+ETHERSCAN key ask
+done: on-chain-watches.yml committed with 3 addresses + defi-monitor SKILL.md file-reference line
+loop: defi-monitor-on-chain-config-day-73
 
-5. diagnose chain-runner `$today` var expansion path (chain-runner.yml + sub-skill templates) + open `memory/issues/ISS-035.md`
-why: chain-output-header-date-drift 6-consec-day formal-pattern crosses record depth today, unblocks baked-fix
-done: `memory/issues/ISS-035.md` exists with expansion-path root-cause + `INDEX.md` open-count +1
-loop: chain-drift-6-consec
+5. register akitaonrails/ai-memory + usestrix/strix in memory/watched-repos.md (github-trending 8-18 fleet picks)
+why: ai-memory first fleet-CORE memory-primitive print in memory-window; strix agentic pen-tester fills sandbox-blocked security-scan gap
+done: watched-repos.md commit adds 2 entries with one-line each
+loop: watched-repos-fresh-8-18
 
-sources: memory=129 logs=14 topics=20 prs=6 cron_failing=1 mode=OK
+sources: memory=125 logs=7 topics=20 prs=6 cron_failing=0 mode=OK

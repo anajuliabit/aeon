@@ -1,0 +1,96 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Action Converter"
+      },
+      "children": [
+        "heading_main",
+        "text_shape",
+        "sep1",
+        "table_actions",
+        "sep2",
+        "text_sources"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "5 Actions — 2026-08-18",
+        "level": "h2"
+      }
+    },
+    "text_shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: usepod detector T-2, MCP-catalog audit, trigger #174 CI, defi watchlist, register 2 repos",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "table_actions": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Action",
+          "Why",
+          "Done",
+          "Loop"
+        ],
+        "rows": [
+          [
+            "1. write scripts/detect-usepod-402.sh + skill sandbox-note doc pointer, open PR before 8-20",
+            "iss-031 gate +5d overdue, weekly-review 8-10 action-1 T-2 to 8-20 deadline; recovery bypass proved the axis",
+            "PR opened with detect-usepod-402.sh + at least one skills/*/SKILL.md sandbox-note reference",
+            "iss-031-usepod-detect-gate"
+          ],
+          [
+            "2. grep aeon deps for atomic-agents-stack MCP-catalog transitive (GHSA-xhcr-cqfr-m3hv MITM→RCE, no patch)",
+            "security-digest 8-18 flagged MCP-catalog-cleartext-RCE; aeon runs @json-render/mcp + subagent MCP paths",
+            ".tmp/mcp-audit-8-18.log with grep-result CLEAN or HIT recorded + notify posted",
+            "mcp-catalog-cleartext-rce-fleet-audit"
+          ],
+          [
+            "3. close-then-reopen PR #174 via gh cli to force CI trigger (day-11 memory-window-deepest single-PR stall)",
+            "statusCheckRollup empty since 8-08; prior rebase/comment/sync/kick didn't fire; external contributor blocked",
+            "gh pr reopen 174 produces non-empty statusCheckRollup within 15min OR ping webbrain-one on stall",
+            "pr-174-day-11-stall"
+          ],
+          [
+            "4. scaffold memory/on-chain-watches.yml with 3 entries from memory/known-addresses.yml (defi-monitor NO_CONFIG day-73)",
+            "unblocks aeon-owned side of operator-gated config; schema-file separates cleanly from ALCHEMY+ETHERSCAN key ask",
+            "on-chain-watches.yml committed with 3 addresses + defi-monitor SKILL.md file-reference line",
+            "defi-monitor-on-chain-config-day-73"
+          ],
+          [
+            "5. register akitaonrails/ai-memory + usestrix/strix in memory/watched-repos.md (github-trending 8-18 fleet picks)",
+            "ai-memory first fleet-CORE memory-primitive print in memory-window; strix agentic pen-tester fills sandbox-blocked security-scan gap",
+            "watched-repos.md commit adds 2 entries with one-line each",
+            "watched-repos-fresh-8-18"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=125 logs=7 topics=20 prs=6 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
