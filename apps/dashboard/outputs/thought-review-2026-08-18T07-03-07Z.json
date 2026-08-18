@@ -1,0 +1,65 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_no_captures",
+        "stat_streak",
+        "stat_priorities",
+        "stat_vault",
+        "stat_refresh"
+      ]
+    },
+    "text_no_captures": {
+      "type": "Text",
+      "props": {
+        "text": "no captures in last 24h",
+        "variant": "body"
+      }
+    },
+    "stat_streak": {
+      "type": "Stat",
+      "props": {
+        "label": "zero-capture streak",
+        "value": "12 days",
+        "delta": "8-07 → 8-18"
+      }
+    },
+    "stat_priorities": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md stale",
+        "value": "75 days"
+      }
+    },
+    "stat_vault": {
+      "type": "Stat",
+      "props": {
+        "label": "vault/inbox cold",
+        "value": "57 days"
+      }
+    },
+    "stat_refresh": {
+      "type": "Stat",
+      "props": {
+        "label": "refresh-ask unactioned",
+        "value": "d8"
+      }
+    }
+  }
+}

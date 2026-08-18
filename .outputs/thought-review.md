@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures. vault inbox 56d cold, priorities.md 74d stale. refresh-ask d7 unactioned — Sunday weekly-batch closed 8-16 without operator touch.
+🧭 thought review · no captures in last 24h · 12-consec-day zero-capture streak (8-07→8-18) · priorities.md 75d stale · vault/inbox 57d cold · refresh-ask d8 unactioned
