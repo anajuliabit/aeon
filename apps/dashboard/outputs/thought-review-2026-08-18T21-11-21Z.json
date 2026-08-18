@@ -1,0 +1,98 @@
+{
+  "root": "card-review",
+  "state": {},
+  "elements": {
+    "card-review": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "alert",
+        "separator1",
+        "metrics",
+        "separator2",
+        "staleness"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🧭 thought review",
+        "message": "Last 24h: 0 captures. 13-consecutive-day zero-capture streak (8-07 → 8-18)."
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-24h",
+        "stat-streak"
+      ]
+    },
+    "stat-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (24h)",
+        "value": "0",
+        "trend": "down"
+      }
+    },
+    "stat-streak": {
+      "type": "Stat",
+      "props": {
+        "label": "Zero-capture streak",
+        "value": "13 days (8-07 → 8-18)"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "staleness": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-priorities",
+        "stat-inbox",
+        "stat-refresh"
+      ]
+    },
+    "stat-priorities": {
+      "type": "Stat",
+      "props": {
+        "label": "vault/priorities.md",
+        "value": "75 days stale"
+      }
+    },
+    "stat-inbox": {
+      "type": "Stat",
+      "props": {
+        "label": "inbox",
+        "value": "57 days cold"
+      }
+    },
+    "stat-refresh": {
+      "type": "Stat",
+      "props": {
+        "label": "refresh-ask overdue",
+        "value": "9+ days (Tuesday evening)"
+      }
+    }
+  }
+}

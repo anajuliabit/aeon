@@ -1,1 +1,1 @@
-🧭 thought review · no captures in last 24h · 12-consec-day zero-capture streak (8-07→8-18) · priorities.md 75d stale · vault/inbox 57d cold · refresh-ask d8 unactioned
+🧭 thought review · last 24h · 0 captures. 13-consec-day zero-capture streak (8-07→8-18); vault/priorities.md 75d stale, inbox 57d cold. refresh-ask crosses d9 into tuesday evening.
