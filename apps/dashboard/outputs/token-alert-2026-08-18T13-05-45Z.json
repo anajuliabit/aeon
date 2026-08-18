@@ -1,0 +1,151 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-08-18"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "well-section",
+        "separator-1",
+        "others-section"
+      ]
+    },
+    "well-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-well",
+        "badge-trigger",
+        "stats-well",
+        "context-text"
+      ]
+    },
+    "heading-well": {
+      "type": "Heading",
+      "props": {
+        "text": "WELL",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "badge-trigger": {
+      "type": "Badge",
+      "props": {
+        "text": "Volume spike — 4.4x rail, ≥3x"
+      },
+      "children": []
+    },
+    "stats-well": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-volume"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00288238",
+        "delta": "+0.55%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$966,203",
+        "delta": "4.4x average (baseline $221K)"
+      },
+      "children": []
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "WELL vol vacuum snaps hard. 8-17 was 0.09x baseline ($21K) = memory-window floor; 8-18 rips to 4.4x on a +0.55% price tick — decoupled from price direction. [[vol-vacuum-then-4x-snap]] n=1 candidate — the vacuum→spike-without-price-move shape. first WELL vol-spike rail-trip in memory-window.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "others-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-others",
+        "table-others"
+      ]
+    },
+    "heading-others": {
+      "type": "Heading",
+      "props": {
+        "text": "Other Tokens",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "table-others": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price Change",
+          "Volume Baseline",
+          "Details"
+        ],
+        "rows": [
+          [
+            "MAMO",
+            "-0.29%",
+            "1.00x",
+            "digestion d28 flat both sides"
+          ],
+          [
+            "REPPO",
+            "+0.50%",
+            "0.53x",
+            "drought 4-consec-day sub-baseline, memory-window-first"
+          ],
+          [
+            "GITLAWB",
+            "-4.49%",
+            "1.24x",
+            "breakout day-2 fade, -4.49% partial-give-back after +22.63% 8-17; elevated-vol axis n=1 candidate still standing on day-2 vol-hold"
+          ]
+        ]
+      },
+      "children": []
+    }
+  }
+}

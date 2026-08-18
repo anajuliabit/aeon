@@ -1,9 +1,9 @@
-*Token Alert — 2026-08-17*
+*Token Alert — 2026-08-18*
 
-GITLAWB: $0.00002363 (+22.63% 24h)
-Volume: $250,760 (1.53× 5-run baseline $164K)
-Trigger: 24h price change +22.63% vs 15% rail
+WELL: $0.00288238 (up 0.55% 24h)
+Volume: $966,203 (4.4x average — 5-run baseline $221K)
+Trigger: volume spike — 4.4x rail, ≥3x
 
-context: post-inversion arc extends day-2. 8-15 −8.41% capitulation → 8-16 +3.89% dead-cat-bounce → 8-17 +22.63% breakout. net over 3 days = +16.7%, first full reclaim of the pre-inversion band. vol elevates to 1.53× baseline vs the 0.97× light-vol whipsaw signature on 8-15/8-16 — first non-light-vol print in the arc. breaks 10-consec-day clean-fire streak (8-07 → 8-16 memory-window record ended at 10 days).
+context: WELL vol vacuum snaps hard. 8-17 was 0.09x baseline ($21K) = memory-window floor; 8-18 rips to 4.4x on a +0.55% price tick — decoupled from price direction. `[[vol-vacuum-then-4x-snap]]` n=1 candidate — the vacuum→spike-without-price-move shape. first WELL vol-spike rail-trip in memory-window.
 
-well/mamo/reppo all sub-threshold: WELL +1.25% (vol 0.09× baseline, deepest sub-baseline print in memory-window), MAMO +0.70% (0.99× baseline, back on the flat), REPPO −2.19% (0.36× baseline, drought re-deepens after yesterday's partial-unwind).
+others clean: MAMO -0.29% / 1.00x baseline (digestion d28 flat both sides). REPPO +0.50% / 0.53x baseline (drought 4-consec-day sub-baseline, memory-window-first). GITLAWB -4.49% / 1.24x baseline (breakout day-2 fade, -4.49% partial-give-back after +22.63% 8-17; elevated-vol axis n=1 candidate still standing on day-2 vol-hold).
