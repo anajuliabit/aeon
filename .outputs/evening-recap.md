@@ -1,23 +1,22 @@
-*Evening Recap — 2026-08-17*
-_TL;DR: strongest fleet posture in 15 days — 4/4 mon-batch stuck skills cleared via bypass — but 0 PRs merged and self-improve exit-gate holds_
+*Evening Recap — 2026-08-18*
+_TL;DR: memory-window-first cost-report success breaks a 15-fail chronic arc — 2 articles shipped, 0 blockers, but 6 stalled PRs need Sunday-batch attention_
 
 *Headlines:*
-- weekly-shiplog — 7 commits, 2 themes (TaskMarket delegation + add-skill fix) · https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-08-17.md
-- weekly-review — 0 PRs merged in-window (memory-window-deepest stall); 3 SMART actions, top: ship detect-usepod-402.sh by 8-20 · https://github.com/anajuliabit/aeon/blob/main/articles/weekly-review-2026-08-17.md
+- cost-report — ISS-030 chronic arc reset; $452.81/7d +41% WoW; burn ~$1,940/mo ⚠ · articles/cost-report-2026-08-18.md
+- skill-freshness — FRESHNESS_STALE; 3 staleness hits (prev: 0 flagged) · articles/skill-freshness-2026-08-18.md
+- reflect — 18 new n=1 candidates; MEMORY.md + fleet.md + crypto.md refreshed · memory/logs/2026-08-18-reflect.md
 
 *Notable:*
-- mon-batch ×4 recovered — unlock-monitor + search-skill + deal-flow + skill-security-scan all cleared today via direct-exec bypass; stuck-cohort 4 → 0, memory-window-first full-cohort clear
-- ISS-034 filed — fork-skill-gap + operator-scorecard never dispatched on first-fire path · memory/issues/ISS-034.md
-- token-alert — GITLAWB +22.63% trips 15% rail; 10-consec clean streak ends; 1.53× baseline vol breaks light-vol whipsaw, reclassifies to breakout
-- security-digest — CVE-2025-62593 Ray KEV (DNS-rebinding RCE, pip/ML, patch ≥2.52.0); agent-labeled-malicious-pkg promotes to formal-pattern (5-pkg cluster); anthropic-setup first Anthropic typosquat; fleet clean d18
+- security-digest — vm2 triple critical CVE (9.9/9.8/10.0) + MCP-catalog cleartext RCE (no patch); fleet clean d19
+- token-alert — WELL vol 4.39× baseline (memory-window-first rail-trip); 2-consec alert-day different rail/token
+- github-trending — 5 picks; ai-memory first fleet-CORE print; sub-25 rail 20-consec extends
+- agent-buzz — MCP-production-spine 5-consec-day span; RSI Bench self-improvement benchmark drop; per-seat SaaS collapse thesis surfaced
+- skill-health — first CRITICAL=0 run since 8-10 usepod arc; DEGRADED cohort holds at 18 skills
 
 *Decisions for tomorrow:*
-- merge #174 (9.2d) or #177/#179/#180 to disengage self-improve exit-gate n=3; blocks detect-usepod-402 + chain-drift baked-fixes
-- ship scripts/detect-usepod-402.sh by 2026-08-20 (weekly-review Action 1, 2nd-consec-week slip)
-- ISS-034: next recurrence test 8-24 operator-scorecard; if recurs → escalate to critical
+- merge #177/#179/#180 (self-improve; 6.5–8.9d) to disengage exit-gate n=3 and unblock authoring
+- merge #174 (Advisor Brier-weight; 10.6d = memory-window-deepest stall) · https://github.com/anajuliabit/aeon/pull/174
+- write scripts/detect-usepod-402.sh before 8-20 (ISS-031 action-1 T-0 Thursday)
+- check vault/priorities.md — 75d stale; 12-consec zero-capture-day; refresh-ask 8d unactioned
 
-*Blockers:*
-- cost-report — consec=16 chronic failure · ISS-030 sdk_opt_in_required
-- 12Z batch — dark d51 since 2026-06-28 · ISS-027, 8 skills frozen
-
-_+16 routine runs collapsed · sources: log=ok cron-state=ok_
+_+14 routine runs collapsed · sources: log=ok cron-state=ok_

@@ -1,0 +1,288 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-08-18"
+      },
+      "children": [
+        "tldr-section",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "decisions-section",
+        "sep4",
+        "footer-section"
+      ]
+    },
+    "tldr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr-heading",
+        "tldr-text"
+      ]
+    },
+    "tldr-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h3"
+      }
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory-window-first cost-report success breaks a 15-fail chronic arc — 2 articles shipped, 0 blockers, but 6 stalled PRs need Sunday-batch attention",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "h1-stack",
+        "h2-stack",
+        "h3-stack"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "h1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-text",
+        "h1-link"
+      ]
+    },
+    "h1-text": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report — ISS-030 chronic arc reset; $452.81/7d +41% WoW; burn ~$1,940/mo ⚠"
+      }
+    },
+    "h1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/cost-report-2026-08-18.md",
+        "href": "articles/cost-report-2026-08-18.md"
+      }
+    },
+    "h2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-text",
+        "h2-link"
+      ]
+    },
+    "h2-text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness — FRESHNESS_STALE; 3 staleness hits (prev: 0 flagged)"
+      }
+    },
+    "h2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/skill-freshness-2026-08-18.md",
+        "href": "articles/skill-freshness-2026-08-18.md"
+      }
+    },
+    "h3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-text",
+        "h3-link"
+      ]
+    },
+    "h3-text": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — 18 new n=1 candidates; MEMORY.md + fleet.md + crypto.md refreshed"
+      }
+    },
+    "h3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "memory/logs/2026-08-18-reflect.md",
+        "href": "memory/logs/2026-08-18-reflect.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "n1": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — vm2 triple critical CVE (9.9/9.8/10.0) + MCP-catalog cleartext RCE (no patch); fleet clean d19"
+      }
+    },
+    "n2": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — WELL vol 4.39× baseline (memory-window-first rail-trip); 2-consec alert-day different rail/token"
+      }
+    },
+    "n3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — 5 picks; ai-memory first fleet-CORE print; sub-25 rail 20-consec extends"
+      }
+    },
+    "n4": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — MCP-production-spine 5-consec-day span; RSI Bench self-improvement benchmark drop; per-seat SaaS collapse thesis surfaced"
+      }
+    },
+    "n5": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — first CRITICAL=0 run since 8-10 usepod arc; DEGRADED cohort holds at 18 skills"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "d1",
+        "d2",
+        "d3",
+        "d4"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "d1": {
+      "type": "Text",
+      "props": {
+        "text": "merge #177/#179/#180 (self-improve; 6.5–8.9d) to disengage exit-gate n=3 and unblock authoring"
+      }
+    },
+    "d2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2-text",
+        "d2-link"
+      ]
+    },
+    "d2-text": {
+      "type": "Text",
+      "props": {
+        "text": "merge #174 (Advisor Brier-weight; 10.6d = memory-window-deepest stall)"
+      }
+    },
+    "d2-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/174",
+        "href": "https://github.com/anajuliabit/aeon/pull/174"
+      }
+    },
+    "d3": {
+      "type": "Text",
+      "props": {
+        "text": "write scripts/detect-usepod-402.sh before 8-20 (ISS-031 action-1 T-0 Thursday)"
+      }
+    },
+    "d4": {
+      "type": "Text",
+      "props": {
+        "text": "check vault/priorities.md — 75d stale; 12-consec zero-capture-day; refresh-ask 8d unactioned"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-text"
+      ]
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+14 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
