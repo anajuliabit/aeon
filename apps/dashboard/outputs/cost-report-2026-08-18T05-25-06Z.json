@@ -1,0 +1,206 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Cost Report — 2026-08-18 (last 7 days)",
+        "description": "Weekly cost analysis and optimization actions"
+      },
+      "children": [
+        "metrics_row",
+        "anomalies_badge",
+        "separator_1",
+        "top_3_section",
+        "separator_2",
+        "actions_section",
+        "separator_3",
+        "projection_section",
+        "separator_4",
+        "full_report_link"
+      ]
+    },
+    "metrics_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_spent",
+        "stat_runs",
+        "stat_wow",
+        "stat_prior_week"
+      ]
+    },
+    "stat_spent": {
+      "type": "Stat",
+      "props": {
+        "label": "Spent (7d)",
+        "value": "$452.81"
+      }
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "98"
+      }
+    },
+    "stat_wow": {
+      "type": "Stat",
+      "props": {
+        "label": "WoW Change",
+        "value": "41.0%",
+        "delta": "+41.0%",
+        "trend": "up"
+      }
+    },
+    "stat_prior_week": {
+      "type": "Stat",
+      "props": {
+        "label": "Prior Week",
+        "value": "$321.19"
+      }
+    },
+    "anomalies_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "0 anomalies flagged",
+        "variant": "secondary"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top_3_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_3_heading",
+        "top_1_item",
+        "top_2_item",
+        "top_3_item"
+      ]
+    },
+    "top_3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 by cost",
+        "level": "h3"
+      }
+    },
+    "top_1_item": {
+      "type": "Text",
+      "props": {
+        "text": "1. reflect — $63.97 (6 runs)",
+        "variant": "body"
+      }
+    },
+    "top_2_item": {
+      "type": "Text",
+      "props": {
+        "text": "2. security-digest — $46.84 (6 runs)",
+        "variant": "body"
+      }
+    },
+    "top_3_item": {
+      "type": "Text",
+      "props": {
+        "text": "3. heartbeat — $45.50 (6 runs)",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "actions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions_heading",
+        "action_1_text",
+        "action_2_text",
+        "action_3_text"
+      ]
+    },
+    "actions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions this week",
+        "level": "h3"
+      }
+    },
+    "action_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner → shift to bi-weekly cadence (~$15/wk saved; single run $30.85, 70% cache_read cost)",
+        "variant": "body"
+      }
+    },
+    "action_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "reflect → every-other-day instead of daily (~$32/wk saved)",
+        "variant": "body"
+      }
+    },
+    "action_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-graph → bi-weekly or on-demand (~$10–15/wk saved)",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "projection_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "projection_alert"
+      ]
+    },
+    "projection_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "30-day projection",
+        "message": "~$1,940.70 monthly burn rate (⚠ burn-rate watch)",
+        "type": "warning"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full_report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/cost-report-2026-08-18.md"
+      }
+    }
+  }
+}
