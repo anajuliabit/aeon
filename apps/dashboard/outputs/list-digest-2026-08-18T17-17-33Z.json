@@ -1,0 +1,115 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-08-18"
+      },
+      "children": [
+        "intro",
+        "sep1",
+        "section_heading",
+        "tweet_stack",
+        "other_tweets_summary",
+        "sep2",
+        "footer"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "pools closed list is x.com/Flowslikeosmo solo again — 1 substantive launchpad jab, rest is filler in the pool-closure meme chain."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Pools Closed",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "main_tweet",
+        "tweet_link"
+      ]
+    },
+    "main_tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "A launchpad vamping the coin on its own pad instead of routing liquidity to the millions of users it was pitched to—'pools closed' here is a specific call-out at a specific launchpad decision, not generic osmosis meme",
+        "likes": 71,
+        "retweets": 5
+      },
+      "children": []
+    },
+    "tweet_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2089476120999551447"
+      },
+      "children": []
+    },
+    "other_tweets_summary": {
+      "type": "Text",
+      "props": {
+        "text": "otherwise 9/10 tweets sub-12 likes: 8× Flowslikeosmo pool-closure one-liners + 1× x.com/jake_pahor \"retirement money\" reply at 0 engagement."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_text",
+        "status_badge"
+      ]
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(10)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      },
+      "children": []
+    }
+  }
+}
