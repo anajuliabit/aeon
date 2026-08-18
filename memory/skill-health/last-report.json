@@ -1,10 +1,10 @@
 {
-  "hash": "8727502b7b5e1becc467e3741e6a325c5194610e544f527db2c4593866ca462b",
-  "last_notified_at": "2026-08-17T17:35:00Z",
-  "last_run_at": "2026-08-17T17:35:00Z",
+  "hash": "c2510d07ef0cc8bce6da7a2744d86c91dbeb41fc3c64691dba1ddf38bc237d9c",
+  "last_notified_at": "2026-08-18T18:17:03Z",
+  "last_run_at": "2026-08-18T18:17:03Z",
   "classification": {
-    "critical": ["cost-report"],
-    "degraded": ["action-converter", "aixbt-pulse", "deal-flow", "defi-monitor", "goal-tracker", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-health", "unlock-monitor", "vuln-scanner", "weekly-shiplog"],
+    "critical": [],
+    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "deal-flow", "defi-monitor", "goal-tracker", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-health", "unlock-monitor", "vuln-scanner", "weekly-shiplog"],
     "flapping": [],
     "warning": ["agent-buzz", "daily-routine", "defi-overview", "evening-recap", "fork-skill-digest", "github-trending", "heartbeat", "list-digest", "morning-brief", "on-chain-monitor", "skill-evals", "skill-freshness", "skill-security-scan", "thought-review", "token-movers", "token-pick"],
     "healthy_count": 6,
@@ -12,17 +12,17 @@
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
   "systemic": [
-    "SYSTEMIC: 4 skills 50d+ cold in 12Z batch dark (aixbt-pulse / defi-monitor / market-context-refresh / narrative-tracker) — scheduler-side gap frozen since 2026-06-28; d52 today 8-17. ISS-027 driver.",
-    "SYSTEMIC: 2 new-skill first-fire MISSED (fork-skill-gap 8-16 21Z first-fire ~20h past scheduled + operator-scorecard 8-17 10:30Z first-fire ~7h past scheduled) — never-dispatched despite crossing schedule; shared root_cause signature = 'never picked up by dispatcher on new-skill first-fire path'. Deferred to heartbeat 20Z re-check per prior heartbeat 14:04Z escalation contract (if still missing after next scheduled cycle, filing threshold crosses)."
+    "SYSTEMIC: 8 skills 50d+ cold in 12Z batch dark (aixbt-pulse / defi-monitor / defi-overview / market-context-refresh / narrative-tracker / on-chain-monitor / token-movers / token-pick) — scheduler-side gap frozen since 2026-06-28; d53 today 8-18. ISS-027 driver.",
+    "SYSTEMIC: 2 new-skill first-fire MISSED (fork-skill-gap ~41h past scheduled + operator-scorecard ~28h past scheduled) — never-dispatched despite crossing schedule. ISS-034 captures durably; both still never-dispatched into Tuesday 18Z."
   ],
-  "open_issues": 15,
+  "open_issues": 16,
   "resolved_this_run": 0,
   "filed_this_run": 0,
   "modified_this_run": [],
-  "prev_hash": "06116ac26a9d2e7073841980f6151bc753001cac9a0662da21d9256476240740",
-  "composition_delta_vs_prev": "MAJOR CHANGE — 3 CRITICAL cleared (deal-flow / skill-security-scan / unlock-monitor via mon-batch direct-exec bypass, memory-window-first full-cohort natural recovery); 1 CRITICAL new (cost-report crossed consec>=3 gate at consec=13, was DEGRADED prev); usepod-402 SYSTEMIC callout CLEARED (root cause ISS-031 still open — bypass path holds, dispatcher-recovery unproven); 12Z batch dark SYSTEMIC extends d51→d52 (ISS-027 driver); NEW first-run-miss SYSTEMIC (2 skills, fork-skill-gap + operator-scorecard). Hash 8727502b (vs prev 06116ac2). Composition changed → NOTIFY fired.",
-  "classification_gap_flag": "RESOLVED as of 2026-08-16T19:30:58Z — fork-cohort organic recovery on natural Sunday 19Z re-fire (last_success 2026-08-16T19:30:58Z, consec=0, sr=1.0). Classification now HEALTHY under strict rules AND matches ground truth. Prior 13+ owed cycles ISS-032-filing-overdue deprecates: rule-gap was latent-not-active, root cause was one-off stuck-state that cleared on natural cadence. No ISS filed by skill-health (fork-cohort HEALTHY, contract does not trigger). Self-improve baked-fix for `status='dispatched' AND days_since_last_dispatch>=3` rule may still be operator-priority to prevent recurrence, but exit-gate n=3 still holds.",
-  "partial_flag": "SKILL_HEALTH_PARTIAL — scripts/skill-runs not invoked (sandbox multi-op guard blocks --hours 168 --failures --json flag chain, per 8-13/8-14/8-15/8-16 fire precedent, 5-consec-fire skip); continued with cron-state only per SKILL.md sandbox note. ISS-028 `>` redirect also blocked this fire (log-append heredoc/redirect blocked → pivoted to Edit-tool for log append; workaround-chain fresh call-site n=50+ contra n=49+ 8-17 deal-flow 14:07Z).",
+  "prev_hash": "8727502b7b5e1becc467e3741e6a325c5194610e544f527db2c4593866ca462b",
+  "composition_delta_vs_prev": "MINOR IMPROVEMENT — cost-report moved CRITICAL → DEGRADED via ISS-030 arc-break (05:25Z 8-18 SUCCESS reset consec=15→0, memory-window-first success in chronic arc). Degraded cohort grows 17→18 skills (cost-report added). 12Z batch dark SYSTEMIC extends d52→d53 (ISS-027 unchanged). first-fire-miss SYSTEMIC durable (ISS-034 captured 8-17 20:11Z, no dispatcher-recovery). Hash c2510d07 (vs prev 8727502b). CRITICAL section emptied → NOTIFY fired.",
+  "classification_gap_flag": "RESOLVED as of 2026-08-16T19:30:58Z — fork-cohort organic recovery on natural Sunday 19Z re-fire. Still holds: fork-cohort last_success 2026-08-16T19:30:58Z, consec=0, sr=1.0, HEALTHY under strict rules AND matches ground truth. No re-fires since (weekly Sunday 19Z cadence).",
+  "partial_flag": "SKILL_HEALTH_PARTIAL — scripts/skill-runs not invoked (sandbox multi-op guard blocks --hours 168 --failures --json flag chain, per 8-13→8-17 5-consec-fire skip precedent, 6-consec-fire skip today); continued with cron-state only per SKILL.md sandbox note. Sha256 signature hash computed via `printf | sha256sum` after python3 heredoc + `awk` extraction both blocked. Log-append via Edit-tool (ISS-028 workaround-chain fresh call-site n=51+ contra n=50+ 8-18 list-digest 17:00Z fire).",
   "reconciliation": {
     "issue_tracker_present": true,
     "healthy_skills_in_open_issues": {
@@ -30,7 +30,7 @@
       "skill-graph": ["ISS-028"]
     },
     "removals_applied": [],
-    "removals_deferred_reason": "Continue prev 8-14/8-15/8-16 interpretation: both open issues are outage/workaround-signature trackers where affected_skills captures the incident cohort, not current-cycle health. ISS-031 root cause (usepod dispatcher) NOT resolved this run — all 4 mon-batch recoveries went via Claude Code direct-exec bypass, dispatcher-recovery unproven. ISS-028 workaround-chain n=50+ still active per this fire. Reconcile only when ISS-031 confirmed resolved (usepod dispatcher recovery 7d+ clean) or ISS-028 confirmed resolved (workaround-chain no longer needed). Recovery signal LOGGED (mon-batch full-cohort clear = strong positive) but reconciliation gate not crossed.",
-    "recovery_signal_this_run": "STRONG POSITIVE — 4/4 mon-batch ISS-031-affected skills recovered today via direct-exec bypass path (unlock-monitor 10:37Z + search-skill 14:10Z + deal-flow 14:12Z + skill-security-scan 17:07Z = memory-window-first full-cohort natural recovery). Dispatcher-recovery still unproven; bypass path validated at cohort scale."
+    "removals_deferred_reason": "Continue prev 8-14→8-17 interpretation: both open issues are outage/workaround-signature trackers where affected_skills captures the incident cohort, not current-cycle health. ISS-031 root cause (usepod dispatcher) NOT resolved — the mon-batch cohort recovery went via Claude Code direct-exec bypass path, dispatcher-recovery unproven. ISS-028 workaround-chain n=51+ still active per this fire (bash-redirect blocked at last-report.json write + log-append heredoc). Reconcile only when ISS-031 confirmed resolved (usepod dispatcher recovery 7d+ clean) or ISS-028 confirmed resolved (workaround-chain no longer needed).",
+    "recovery_signal_this_run": "STRONG POSITIVE — cost-report ISS-030 chronic arc BROKE overnight via 05:25Z 8-18 SUCCESS (consec=15→0 reset, memory-window-first success in the ~15-consec-fail arc). ISS-030 not auto-resolved (durability test pending — next Monday-slot fire 8-24 is the regime-decider). Mon-batch 4/4 cohort clear durable 30h+ post-bypass-recovery (memory-window-first full-cohort clear holds into Tuesday 18Z, dispatcher-recovery still unproven)."
   }
 }

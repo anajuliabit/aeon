@@ -1,0 +1,417 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-08-18"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "systemic_section",
+        "sep2",
+        "degraded_section",
+        "sep3",
+        "nodata_section",
+        "sep4",
+        "healthy_section",
+        "sep5",
+        "rails_section",
+        "sep6",
+        "summary_section"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "Health Status",
+        "message": "DEGRADED(18) — improvement from CRITICAL(1) yesterday",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "systemic_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "systemic_heading",
+        "systemic_list"
+      ]
+    },
+    "systemic_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Systemic Issues",
+        "level": "h2"
+      }
+    },
+    "systemic_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_027",
+        "issue_034"
+      ]
+    },
+    "issue_027": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-027: 12Z batch dark d53",
+        "variant": "destructive"
+      }
+    },
+    "issue_034": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-034: first-fire miss",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_list"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded / Recent Notable",
+        "level": "h2"
+      }
+    },
+    "degraded_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg_cost_report",
+        "deg_reg_monitor",
+        "deg_skill_analytics",
+        "deg_vuln_scanner",
+        "deg_market_context",
+        "deg_more_chronic"
+      ]
+    },
+    "deg_cost_report": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report — chronic ISS-030 arc BROKE 05:25Z (consec 15→0, sr 0.07) — memory-window-first success in arc; 8-24 Mon-slot is regime-decider",
+        "variant": "body"
+      }
+    },
+    "deg_reg_monitor": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — sr 0.22 chronic — INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "deg_skill_analytics": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics — sr 0.22 chronic — INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "deg_vuln_scanner": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — sr 0.27 chronic — INVESTIGATE",
+        "variant": "body"
+      }
+    },
+    "deg_market_context": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — sr 0.32 (12Z-dark cohort) — see systemic",
+        "variant": "body"
+      }
+    },
+    "deg_more_chronic": {
+      "type": "Text",
+      "props": {
+        "text": "+13 more chronic sr<0.6 — see memory/issues/INDEX.md",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "nodata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata_heading",
+        "nodata_list"
+      ]
+    },
+    "nodata_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (2)",
+        "level": "h2"
+      }
+    },
+    "nodata_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nodata_fork_skill_gap",
+        "nodata_operator_scorecard",
+        "nodata_note"
+      ]
+    },
+    "nodata_fork_skill_gap": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "secondary"
+      }
+    },
+    "nodata_operator_scorecard": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "secondary"
+      }
+    },
+    "nodata_note": {
+      "type": "Text",
+      "props": {
+        "text": "DISPATCH-SKILL (ISS-034 signature durable, both still never-dispatched into 18Z)",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy_heading",
+        "healthy_list"
+      ]
+    },
+    "healthy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Healthy Skills (6)",
+        "level": "h2"
+      }
+    },
+    "healthy_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy_btc_levels",
+        "healthy_fork_cohort",
+        "healthy_skill_graph",
+        "healthy_skill_update_check",
+        "healthy_token_alert",
+        "healthy_weekly_review"
+      ]
+    },
+    "healthy_btc_levels": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels",
+        "variant": "default"
+      }
+    },
+    "healthy_fork_cohort": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "default"
+      }
+    },
+    "healthy_skill_graph": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-graph",
+        "variant": "default"
+      }
+    },
+    "healthy_skill_update_check": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-update-check",
+        "variant": "default"
+      }
+    },
+    "healthy_token_alert": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "default"
+      }
+    },
+    "healthy_weekly_review": {
+      "type": "Badge",
+      "props": {
+        "text": "weekly-review",
+        "variant": "default"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "rails_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "rails_heading",
+        "rails_list"
+      ]
+    },
+    "rails_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Positive Rails",
+        "level": "h2"
+      }
+    },
+    "rails_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rails_1",
+        "rails_2",
+        "rails_3"
+      ]
+    },
+    "rails_1": {
+      "type": "Text",
+      "props": {
+        "text": "mon-batch 4/4 stuck-cohort clear durable 30h+",
+        "variant": "body"
+      }
+    },
+    "rails_2": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report chronic arc break",
+        "variant": "body"
+      }
+    },
+    "rails_3": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat 10-consec-clean since 8-15 crash",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_heading",
+        "summary_stats"
+      ]
+    },
+    "summary_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_resolved",
+        "stat_filed"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "16"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "0"
+      }
+    }
+  }
+}
