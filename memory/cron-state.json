@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-08-19T08:18:27Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-19T14:30:12Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-19T08:22:32Z",
     "total_runs": 330,
     "total_successes": 237,
@@ -451,8 +451,8 @@
     "success_rate": 1
   },
   "security-digest": {
-    "last_dispatch": "2026-08-18T14:24:13Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-19T14:30:12Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-18T14:34:35Z",
     "total_runs": 150,
     "total_successes": 69,
@@ -495,8 +495,8 @@
     "success_rate": 1
   },
   "reg-monitor": {
-    "last_dispatch": "2026-08-12T15:06:48Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-19T14:30:12Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-12T15:16:42Z",
     "total_runs": 49,
     "total_successes": 11,
