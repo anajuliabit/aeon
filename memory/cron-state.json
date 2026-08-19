@@ -556,8 +556,8 @@
     "last_error": "f7d7e6f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "list-digest": {
-    "last_dispatch": "2026-08-18T17:12:48Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-19T17:12:35Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-18T17:18:41Z",
     "total_runs": 112,
     "total_successes": 69,
