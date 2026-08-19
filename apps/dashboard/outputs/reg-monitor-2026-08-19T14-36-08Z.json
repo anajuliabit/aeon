@@ -1,0 +1,273 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reg Monitor",
+        "description": "2026-08-19 · 5 items — 1 needs a call this week (Alameda/Wang closeout), 3 open NPRMs to watch"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sep1",
+        "act_heading",
+        "act_stack",
+        "sep2",
+        "watch_heading",
+        "nprm_stack",
+        "sep3",
+        "context_heading",
+        "context_stack",
+        "sep4",
+        "metadata"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "act_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h2"
+      }
+    },
+    "act_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cftc_case",
+        "cftc_details",
+        "cftc_status",
+        "cftc_context"
+      ]
+    },
+    "cftc_case": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC v. Ellison & Wang — resolution",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9285-26",
+        "source": "US federal · enforcement close-out"
+      }
+    },
+    "cftc_details": {
+      "type": "Text",
+      "props": {
+        "text": "No fine, no disgorgement. 5-yr trading ban + 10-yr registration ban (Ellison), 5-yr trading + 8-yr registration (Wang); consent orders backdated to 2022-12-23. Cooperation clause holds.",
+        "variant": "body"
+      }
+    },
+    "cftc_status": {
+      "type": "Badge",
+      "props": {
+        "text": "⏰ effective now",
+        "variant": "default"
+      }
+    },
+    "cftc_context": {
+      "type": "Alert",
+      "props": {
+        "title": "FTX/Alameda enforcement arc closes",
+        "message": "Any Polymarket contracts tied to fresh SBF-adjacent charges should settle NO on this leg.",
+        "type": "info"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h2"
+      }
+    },
+    "nprm_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nprm1_section",
+        "nprm2_section",
+        "nprm3_section"
+      ]
+    },
+    "nprm1_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nprm1",
+        "nprm1_desc",
+        "nprm1_deadline"
+      ]
+    },
+    "nprm1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Treasury — GENIUS Act Payment Stablecoin NPRM",
+        "href": "https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale",
+        "source": "US federal · proposed rule"
+      }
+    },
+    "nprm1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Implements GENIUS §3 prohibitions and limits on payment stablecoin issuance, offer, and sale in the US.",
+        "variant": "body"
+      }
+    },
+    "nprm1_deadline": {
+      "type": "Badge",
+      "props": {
+        "text": "⏰ comments close 2026-10-19",
+        "variant": "outline"
+      }
+    },
+    "nprm2_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nprm2",
+        "nprm2_desc"
+      ]
+    },
+    "nprm2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SEC — Regulation Crypto Assets NPRM",
+        "href": "https://www.sec.gov/newsroom/press-releases/2026-76-sec-proposes-new-regulation-crypto-assets",
+        "source": "US federal · proposed rule"
+      }
+    },
+    "nprm2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "New SEC framework proposed for crypto assets; press release out 8-18, full docket text not yet in Federal Register.",
+        "variant": "body"
+      }
+    },
+    "nprm3_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nprm3",
+        "nprm3_desc"
+      ]
+    },
+    "nprm3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC — Advisory on Incentive Programs for Prediction Markets",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9282-26",
+        "source": "US federal · staff advisory"
+      }
+    },
+    "nprm3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DCM self-certifications for market-maker/liquidity/incentive programs on event contracts must show adequate notice and demonstrate Reg 40.5/40.6 compliance. Non-binding but sets the audit standard Kalshi/Polymarket incentive designs will be measured against.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "context_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CONTEXT",
+        "level": "h2"
+      }
+    },
+    "context_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nyc_probe",
+        "nyc_note"
+      ]
+    },
+    "nyc_probe": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NYC Council probes Kalshi, Polymarket, Gemini Titan, Coinbase",
+        "href": "https://www.cbsnews.com/news/nyc-investigates-polymarket-kalshi-prediction-markets/",
+        "source": "US state · investigation"
+      }
+    },
+    "nyc_note": {
+      "type": "Text",
+      "props": {
+        "text": "Speaker Menin opens deceptive-marketing probe 2026-08-12; info requests only, no hearing date.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources",
+        "scoring"
+      ]
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: federal-register=ok · sec=ok · cftc=ok(rss 404, html fallback) · websearch=ok · congress=skip",
+        "variant": "caption"
+      }
+    },
+    "scoring": {
+      "type": "Text",
+      "props": {
+        "text": "5 developments scored, 1 act / 3 watch / 1 context",
+        "variant": "caption"
+      }
+    }
+  }
+}

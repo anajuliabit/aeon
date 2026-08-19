@@ -56,3 +56,8 @@ https://www.cftc.gov/PressRoom/PressReleases/9280-26
 https://www.federalregister.gov/documents/2026/08/06/2026-15948/conflicts-and-affiliations
 https://www.cftc.gov/PressRoom/PressReleases/9278-26
 https://www.cftc.gov/PressRoom/PressReleases/9279-26
+https://www.cftc.gov/PressRoom/PressReleases/9285-26
+https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale
+https://www.sec.gov/newsroom/press-releases/2026-76-sec-proposes-new-regulation-crypto-assets
+https://www.cftc.gov/PressRoom/PressReleases/9282-26
+https://www.cbsnews.com/news/nyc-investigates-polymarket-kalshi-prediction-markets/
