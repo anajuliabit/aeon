@@ -1,0 +1,209 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-08-19"
+      },
+      "children": [
+        "intro_text",
+        "sep1",
+        "pools_heading",
+        "tweets_stack",
+        "sep2",
+        "footer"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "monoculture cracks day-3: cyrilXBT + DeFi_Made_Here take top scores, flowslikeosmo drops to 6/12 with tradepools shutdown as the news anchor.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pools_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Pools Closed",
+        "level": "h2"
+      }
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_group1",
+        "tweet_group2",
+        "tweet_group3",
+        "tweet_group4",
+        "tweet_group5"
+      ]
+    },
+    "tweet_group1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1_link"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFi_Made_Here",
+        "handle": "DeFi_Made_Here",
+        "text": "amms as options-selling venues, not etf-shape; composability + smart-collateral bootstraps hundreds of millions in liquidity from a fraction of tvl, \"mms hate amms\" is the actual bull thesis",
+        "likes": 130,
+        "retweets": 11,
+        "comments": 16
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFi_Made_Here/status/2089844178377412864"
+      }
+    },
+    "tweet_group2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2_link"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "merge.ai routes tasks to per-va model + scope by group, kills default-max-model burn on formatting work; team output without team bill",
+        "likes": 72,
+        "retweets": 13,
+        "comments": 13
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2089778641307832362"
+      }
+    },
+    "tweet_group3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "tweet3_link"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "soniox tts v2 collapses expressive+multilingual+accurate+low-latency+cheap into one model at $0.70/hr; perplexity/samsung/lg in production",
+        "likes": 90,
+        "retweets": 11,
+        "comments": 9
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2089775032721662332"
+      }
+    },
+    "tweet_group4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "tweet4_link"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "tradepools flagged closed with image = the news anchor behind today's pools-closed meme extension; on-chain amm-launchpad category quietly consolidating",
+        "likes": 47,
+        "retweets": 6,
+        "comments": 14
+      }
+    },
+    "tweet4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2089842214067159384"
+      }
+    },
+    "tweet_group5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5",
+        "tweet5_link"
+      ]
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "moving mobile trading to pumpfun app, still holding $Closed +2500%, $PUMP thesis on floor valuation",
+        "likes": 46,
+        "retweets": 4,
+        "comments": 20
+      }
+    },
+    "tweet5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2089775925650981136"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(12) | status: LIST_DIGEST_OK",
+        "variant": "muted"
+      }
+    }
+  }
+}

@@ -1,11 +1,14 @@
-*List Digest — 2026-08-18*
+*List Digest — 2026-08-19*
 
-pools closed list is x.com/Flowslikeosmo solo again — 1 substantive launchpad jab, rest is filler in the pool-closure meme chain.
+monoculture cracks day-3: cyrilXBT + DeFi\_Made\_Here take top scores, flowslikeosmo drops to 6/12 with tradepools shutdown as the news anchor.
 
 *Pools Closed*
-- x.com/Flowslikeosmo — a launchpad vamping the coin on its own pad instead of routing liquidity to the millions of users it was pitched to = "pools closed" here is a specific call-out at a specific launchpad decision, not generic osmosis meme (♥ 71, ↻ 5, 💬 17) — [View](https://x.com/Flowslikeosmo/status/2089476120999551447)
-- otherwise 9/10 tweets sub-12 likes: 8× Flowslikeosmo pool-closure one-liners + 1× x.com/jake_pahor "retirement money" reply at 0 engagement.
+- x.com/DeFi\_Made\_Here — amms as options-selling venues, not etf-shape; composability + smart-collateral bootstraps hundreds of millions in liquidity from a fraction of tvl, "mms hate amms" is the actual bull thesis (♥ 130, ↻ 11, 💬 16) — [View](https://x.com/DeFi_Made_Here/status/2089844178377412864)
+- x.com/cyrilXBT — merge.ai routes tasks to per-va model + scope by group, kills default-max-model burn on formatting work; team output without team bill (♥ 72, ↻ 13, 💬 13) — [View](https://x.com/cyrilXBT/status/2089778641307832362)
+- x.com/cyrilXBT — soniox tts v2 collapses expressive+multilingual+accurate+low-latency+cheap into one model at $0.70/hr; perplexity/samsung/lg in production (♥ 90, ↻ 11, 💬 9) — [View](https://x.com/cyrilXBT/status/2089775032721662332)
+- x.com/Flowslikeosmo — tradepools flagged closed with image = the news anchor behind today's pools-closed meme extension; on-chain amm-launchpad category quietly consolidating (♥ 47, ↻ 6, 💬 14) — [View](https://x.com/Flowslikeosmo/status/2089842214067159384)
+- x.com/Flowslikeosmo — moving mobile trading to pumpfun app, still holding $Closed +2500%, $PUMP thesis on floor valuation (♥ 46, ↻ 4, 💬 20) — [View](https://x.com/Flowslikeosmo/status/2089775925650981136)
 
 ---
-sources: 1642770456720683008=ok(10)
+sources: 1642770456720683008=ok(12)
 status: LIST_DIGEST_OK
