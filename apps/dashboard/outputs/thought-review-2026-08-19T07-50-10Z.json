@@ -1,0 +1,112 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "period-info",
+        "streak-section",
+        "staleness-section",
+        "refresh-alert"
+      ]
+    },
+    "period-info": {
+      "type": "Text",
+      "props": {
+        "text": "24h period: 0 captures",
+        "variant": "lead"
+      }
+    },
+    "streak-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "streak-stat",
+        "streak-dates"
+      ]
+    },
+    "streak-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Zero-capture streak",
+        "value": "13 consecutive days"
+      }
+    },
+    "streak-dates": {
+      "type": "Text",
+      "props": {
+        "text": "8-07 → 8-19",
+        "variant": "muted"
+      }
+    },
+    "staleness-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "staleness-title",
+        "staleness-grid"
+      ]
+    },
+    "staleness-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Staleness",
+        "level": "h4"
+      }
+    },
+    "staleness-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "priorities-stat",
+        "inbox-stat"
+      ]
+    },
+    "priorities-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "priorities.md",
+        "value": "76 days",
+        "delta": "stale"
+      }
+    },
+    "inbox-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "inbox",
+        "value": "58 days",
+        "delta": "cold"
+      }
+    },
+    "refresh-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Worth a refresh"
+      }
+    }
+  }
+}
