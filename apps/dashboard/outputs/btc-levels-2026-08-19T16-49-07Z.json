@@ -1,0 +1,160 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC Levels"
+      },
+      "children": [
+        "stat_spot",
+        "separator1",
+        "section_reclaim",
+        "separator2",
+        "section_daily",
+        "separator3",
+        "section_leverage",
+        "separator4",
+        "alert_disclaimer"
+      ]
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$68,571"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_reclaim": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_reclaim",
+        "stat_reclaim_level",
+        "text_reclaim"
+      ]
+    },
+    "badge_reclaim": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ Reclaim",
+        "variant": "default"
+      }
+    },
+    "stat_reclaim_level": {
+      "type": "Stat",
+      "props": {
+        "label": "Reclaim Level",
+        "value": "$65,900"
+      }
+    },
+    "text_reclaim": {
+      "type": "Text",
+      "props": {
+        "text": "Stabilization confirmed per 2026-06-09 advisor levels",
+        "variant": "caption"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_daily": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_daily_close",
+        "text_threshold",
+        "stat_threshold"
+      ]
+    },
+    "stat_daily_close": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Close (8-18)",
+        "value": "$64,686"
+      }
+    },
+    "text_threshold": {
+      "type": "Text",
+      "props": {
+        "text": "Above breakdown threshold",
+        "variant": "caption"
+      }
+    },
+    "stat_threshold": {
+      "type": "Stat",
+      "props": {
+        "label": "Breakdown Threshold",
+        "value": "$60,500"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_leverage": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_leverage_band",
+        "stat_leverage_level",
+        "badge_leverage_status"
+      ]
+    },
+    "text_leverage_band": {
+      "type": "Text",
+      "props": {
+        "text": "Leverage-review band"
+      }
+    },
+    "stat_leverage_level": {
+      "type": "Stat",
+      "props": {
+        "label": "Leverage Band",
+        "value": "≤$45,000"
+      }
+    },
+    "badge_leverage_status": {
+      "type": "Badge",
+      "props": {
+        "text": "Clear",
+        "variant": "secondary"
+      }
+    },
+    "separator4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "title": "Leveraged cbBTC Position",
+        "message": "Advisory only — not financial advice",
+        "type": "info"
+      }
+    }
+  }
+}
