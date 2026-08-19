@@ -1,0 +1,825 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-08-19"
+      },
+      "children": [
+        "verdict-stack",
+        "sep1",
+        "patch-today-section",
+        "sep2",
+        "patch-week-section",
+        "sep3",
+        "monitor-section"
+      ]
+    },
+    "verdict-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "verdict-text",
+        "verdict-sources"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 5 actively exploited (KEV batch 8-18 breaks quiet-KEV day-1) · 5 to schedule · 3 to monitor",
+        "variant": "lead"
+      }
+    },
+    "verdict-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-today-heading",
+        "cve-33824",
+        "kev-batch-group",
+        "npm-malware-group"
+      ]
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve-33824": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-33824",
+        "text-33824-meta",
+        "text-33824-desc",
+        "alert-33824"
+      ]
+    },
+    "link-33824": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-33824 — MS IKE Service Extensions",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-33824"
+      }
+    },
+    "text-33824-meta": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-08-18 · EPSS 0.779 (99.5%ile) · due 2026-08-21",
+        "variant": "caption"
+      }
+    },
+    "text-33824-desc": {
+      "type": "Text",
+      "props": {
+        "text": "double-free → RCE. memory-window-first same-day KEV add with EPSS >0.75.",
+        "variant": "body"
+      }
+    },
+    "alert-33824": {
+      "type": "Alert",
+      "props": {
+        "message": "apply august 2026 patch tuesday now",
+        "type": "error"
+      }
+    },
+    "kev-batch-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "kev-batch-label",
+        "kev-batch-cves",
+        "alert-kev-batch"
+      ]
+    },
+    "kev-batch-label": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV batch 2026-08-18",
+        "variant": "outline"
+      }
+    },
+    "kev-batch-cves": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-59310",
+        "cve-55040",
+        "cve-65400"
+      ]
+    },
+    "cve-59310": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-59310",
+        "text-59310"
+      ]
+    },
+    "link-59310": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-59310",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-59310"
+      }
+    },
+    "text-59310": {
+      "type": "Text",
+      "props": {
+        "text": "VMware vCenter path-traversal → RCE (EPSS 0.024)",
+        "variant": "body"
+      }
+    },
+    "cve-55040": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-55040",
+        "text-55040"
+      ]
+    },
+    "link-55040": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-55040",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-55040"
+      }
+    },
+    "text-55040": {
+      "type": "Text",
+      "props": {
+        "text": "MS SharePoint weak auth bypass (EPSS 0.055, 92%ile)",
+        "variant": "body"
+      }
+    },
+    "cve-65400": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-65400",
+        "text-65400"
+      ]
+    },
+    "link-65400": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-65400",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-65400"
+      }
+    },
+    "text-65400": {
+      "type": "Text",
+      "props": {
+        "text": "Apple macOS Screen Sharing auth bypass. all due 2026-08-21.",
+        "variant": "body"
+      }
+    },
+    "alert-kev-batch": {
+      "type": "Alert",
+      "props": {
+        "message": "patch each per vendor before 8-21 deadline",
+        "type": "warning"
+      }
+    },
+    "npm-malware-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "npm-label",
+        "npm-stat",
+        "npm-pkgs",
+        "alert-npm"
+      ]
+    },
+    "npm-label": {
+      "type": "Badge",
+      "props": {
+        "text": "NPM malware wave 8-19",
+        "variant": "destructive"
+      }
+    },
+    "npm-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fresh malicious packages since 09:31Z",
+        "value": "179"
+      }
+    },
+    "npm-pkgs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-item-wizloft",
+        "npm-item-mcp",
+        "npm-item-crypto"
+      ]
+    },
+    "npm-item-wizloft": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-wizloft",
+        "badge-fleet"
+      ]
+    },
+    "link-wizloft": {
+      "type": "Link",
+      "props": {
+        "label": "@wizloft/harness-* (5-pkg family)",
+        "href": "https://github.com/advisories/GHSA-jjpx-9cx9-ww85"
+      }
+    },
+    "badge-fleet": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-adjacent",
+        "variant": "outline"
+      }
+    },
+    "npm-item-mcp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-mcp",
+        "text-mcp"
+      ]
+    },
+    "link-mcp": {
+      "type": "Link",
+      "props": {
+        "label": "mcp-dev-toolkit + 3 mcp-* pkgs",
+        "href": "https://github.com/advisories/GHSA-rpcr-qj6g-5gw3"
+      }
+    },
+    "text-mcp": {
+      "type": "Badge",
+      "props": {
+        "text": "MCP-adjacent",
+        "variant": "outline"
+      }
+    },
+    "npm-item-crypto": {
+      "type": "Text",
+      "props": {
+        "text": "crypto cluster: eth-react-provider · evm-validation · layer2-sdk · eth-batcher",
+        "variant": "body"
+      }
+    },
+    "alert-npm": {
+      "type": "Alert",
+      "props": {
+        "message": "block via `npm ci --ignore-scripts` · audit deps · rotate creds if any hit",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-week-heading",
+        "ghsa-conflibot",
+        "ghsa-moby",
+        "ghsa-monai",
+        "ghsa-surfio",
+        "ghsa-swig"
+      ]
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "ghsa-conflibot": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-conflibot",
+        "text-conflibot-risk",
+        "text-conflibot-detail",
+        "alert-conflibot"
+      ]
+    },
+    "link-conflibot": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-2qvg-qr73-mqxp — wktk/conflibot (actions) · CVSS 9.1 · no PoC",
+        "href": "https://github.com/advisories/GHSA-2qvg-qr73-mqxp"
+      }
+    },
+    "text-conflibot-risk": {
+      "type": "Text",
+      "props": {
+        "text": "command injection via crafted PR branch names under pull_request_target",
+        "variant": "body"
+      }
+    },
+    "text-conflibot-detail": {
+      "type": "Text",
+      "props": {
+        "text": "direct GHA-fleet-primitive risk",
+        "variant": "muted"
+      }
+    },
+    "alert-conflibot": {
+      "type": "Alert",
+      "props": {
+        "message": "upgrade wktk/conflibot to ≥1.2.1 in workflows",
+        "type": "warning"
+      }
+    },
+    "ghsa-moby": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-moby",
+        "text-moby-vuln",
+        "text-moby-context",
+        "alert-moby"
+      ]
+    },
+    "link-moby": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-hfg8-hc9c-6c3h — moby/go-archive (Go) · CVSS n/a · EPSS 0.002",
+        "href": "https://github.com/advisories/GHSA-hfg8-hc9c-6c3h"
+      }
+    },
+    "text-moby-vuln": {
+      "type": "Text",
+      "props": {
+        "text": "tar path-traversal write outside extraction dir",
+        "variant": "body"
+      }
+    },
+    "text-moby-context": {
+      "type": "Text",
+      "props": {
+        "text": "docker's archive lib = widely-installed transitive",
+        "variant": "muted"
+      }
+    },
+    "alert-moby": {
+      "type": "Alert",
+      "props": {
+        "message": "upgrade github.com/moby/go-archive to ≥0.3.0",
+        "type": "warning"
+      }
+    },
+    "ghsa-monai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "label-monai",
+        "monai-cves",
+        "text-monai-context",
+        "alert-monai"
+      ]
+    },
+    "label-monai": {
+      "type": "Badge",
+      "props": {
+        "text": "MONAI pip 3-CVE cluster",
+        "variant": "outline"
+      }
+    },
+    "monai-cves": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monai-cve1",
+        "monai-cve2",
+        "monai-cve3"
+      ]
+    },
+    "monai-cve1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-monai1",
+        "text-monai1"
+      ]
+    },
+    "link-monai1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-wg9g-w2j2-8pgr",
+        "href": "https://github.com/advisories/GHSA-wg9g-w2j2-8pgr"
+      }
+    },
+    "text-monai1": {
+      "type": "Text",
+      "props": {
+        "text": "unsafe NumpyReader → RCE (CVSS 7.8)",
+        "variant": "body"
+      }
+    },
+    "monai-cve2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-monai2",
+        "text-monai2"
+      ]
+    },
+    "link-monai2": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-rghg-q7wp-9767",
+        "href": "https://github.com/advisories/GHSA-rghg-q7wp-9767"
+      }
+    },
+    "text-monai2": {
+      "type": "Text",
+      "props": {
+        "text": "OS command injection",
+        "variant": "body"
+      }
+    },
+    "monai-cve3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-monai3",
+        "text-monai3"
+      ]
+    },
+    "link-monai3": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-qxq5-qhx6-94qw",
+        "href": "https://github.com/advisories/GHSA-qxq5-qhx6-94qw"
+      }
+    },
+    "text-monai3": {
+      "type": "Text",
+      "props": {
+        "text": "incomplete-fix pickle.loads() RCE (CVSS 7.8)",
+        "variant": "body"
+      }
+    },
+    "text-monai-context": {
+      "type": "Text",
+      "props": {
+        "text": "second deprecated-lib CVE storm after vm2 8-17",
+        "variant": "muted"
+      }
+    },
+    "alert-monai": {
+      "type": "Alert",
+      "props": {
+        "message": "upgrade monai to ≥1.6.0",
+        "type": "warning"
+      }
+    },
+    "ghsa-surfio": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-surfio",
+        "text-surfio",
+        "alert-surfio"
+      ]
+    },
+    "link-surfio": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-rcr2-hggw-43wm — surfio (pip) · CVSS 9.8 · EPSS 0.005",
+        "href": "https://github.com/advisories/GHSA-rcr2-hggw-43wm"
+      }
+    },
+    "text-surfio": {
+      "type": "Text",
+      "props": {
+        "text": "out-of-bounds read",
+        "variant": "body"
+      }
+    },
+    "alert-surfio": {
+      "type": "Alert",
+      "props": {
+        "message": "upgrade surfio to ≥0.0.19",
+        "type": "warning"
+      }
+    },
+    "ghsa-swig": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-swig",
+        "text-swig-vuln",
+        "text-swig-family",
+        "alert-swig"
+      ]
+    },
+    "link-swig": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-2mf3-mr2r-r4vf — @rhinostone/swig family (npm) · CVSS 7.5 · no PoC",
+        "href": "https://github.com/advisories/GHSA-2mf3-mr2r-r4vf"
+      }
+    },
+    "text-swig-vuln": {
+      "type": "Text",
+      "props": {
+        "text": "path-traversal via include/extends in template engine",
+        "variant": "body"
+      }
+    },
+    "text-swig-family": {
+      "type": "Text",
+      "props": {
+        "text": "5-pkg family: swig · swig-core · swig-twig · swig-jinja2 · swig-django",
+        "variant": "caption"
+      }
+    },
+    "alert-swig": {
+      "type": "Alert",
+      "props": {
+        "message": "upgrade family to ≥2.7.1",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-heading",
+        "monitor-lemur",
+        "monitor-resdata",
+        "monitor-atomic"
+      ]
+    },
+    "monitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor-lemur": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "label-lemur",
+        "lemur-cves",
+        "text-lemur-meta",
+        "text-lemur-risk",
+        "alert-lemur"
+      ]
+    },
+    "label-lemur": {
+      "type": "Badge",
+      "props": {
+        "text": "Lemur pip 5-CVE cluster",
+        "variant": "outline"
+      }
+    },
+    "lemur-cves": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "link-lemur1",
+        "link-lemur2",
+        "link-lemur3",
+        "link-lemur4",
+        "link-lemur5"
+      ]
+    },
+    "link-lemur1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-pxmc-2ffp-8j67",
+        "href": "https://github.com/advisories/GHSA-pxmc-2ffp-8j67"
+      }
+    },
+    "link-lemur2": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-cfh6-pv5c-38jv",
+        "href": "https://github.com/advisories/GHSA-cfh6-pv5c-38jv"
+      }
+    },
+    "link-lemur3": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-6c8m-q6g9-vrw3",
+        "href": "https://github.com/advisories/GHSA-6c8m-q6g9-vrw3"
+      }
+    },
+    "link-lemur4": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-v5rc-cpwc-cfpr",
+        "href": "https://github.com/advisories/GHSA-v5rc-cpwc-cfpr"
+      }
+    },
+    "link-lemur5": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-xpmj-wjcp-6pww",
+        "href": "https://github.com/advisories/GHSA-xpmj-wjcp-6pww"
+      }
+    },
+    "text-lemur-meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.3-8.1 · most no full patch",
+        "variant": "caption"
+      }
+    },
+    "text-lemur-risk": {
+      "type": "Text",
+      "props": {
+        "text": "cert-authority mismanagement + SSRF via ACME URL rewrite",
+        "variant": "body"
+      }
+    },
+    "alert-lemur": {
+      "type": "Alert",
+      "props": {
+        "message": "track; if using netflix/lemur, restrict admin API to trusted IPs",
+        "type": "info"
+      }
+    },
+    "monitor-resdata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-resdata",
+        "text-resdata",
+        "alert-resdata"
+      ]
+    },
+    "link-resdata": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-pr85-w493-9w3x — resdata (pip) · CVSS 9.8 · patched-null · EPSS n/a",
+        "href": "https://github.com/advisories/GHSA-pr85-w493-9w3x"
+      }
+    },
+    "text-resdata": {
+      "type": "Text",
+      "props": {
+        "text": "buffer overflow + null-deref + OOB read",
+        "variant": "body"
+      }
+    },
+    "alert-resdata": {
+      "type": "Alert",
+      "props": {
+        "message": "track; upgrade when 6.2.9 fully lands",
+        "type": "info"
+      }
+    },
+    "monitor-atomic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-atomic",
+        "text-atomic-risk",
+        "text-atomic-context",
+        "alert-atomic"
+      ]
+    },
+    "link-atomic": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-j659-8xh6-5pq5 — atomic-agents-stack (pip) · CVSS n/a · no patch",
+        "href": "https://github.com/advisories/GHSA-j659-8xh6-5pq5"
+      }
+    },
+    "text-atomic-risk": {
+      "type": "Text",
+      "props": {
+        "text": "parallel fan-out bypasses cost-cap when model pricing missing = 2nd atomic-agents-stack CVE this week after 8-18 MCP-catalog",
+        "variant": "body"
+      }
+    },
+    "text-atomic-context": {
+      "type": "Badge",
+      "props": {
+        "text": "MCP-adjacent",
+        "variant": "outline"
+      }
+    },
+    "alert-atomic": {
+      "type": "Alert",
+      "props": {
+        "message": "track; avoid this stack",
+        "type": "info"
+      }
+    }
+  }
+}
