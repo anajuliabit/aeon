@@ -1,24 +1,18 @@
-*Agent Buzz — 2026-08-18*
-_mcp is most of the thread today — with an RSI benchmark drop, an agent-facing API launch, and pricing pushback on the side._
+*Agent Buzz — 2026-08-19*
+_mostly protocol-plumbing debate — a2a joining aaif, gap analysis across five agent standards — with two concrete launches on the side._
 
-**mcp as plumbing default**
-• @0xDepressionn — cites anthropic internal number: 90% of engineers building agentic harnesses use MCP.
-  https://x.com/0xDepressionn/status/2089370082010923090
-• @zile_cao — wants MCP servers to bundle workflow functions and spawn subagents, cutting harness code and response size.
-  https://x.com/zile_cao/status/2089382979604722016
-• @SCR01111 — slots MCP as agent-to-tool, A2A as agent-to-agent discovery, ACP as REST agent-to-agent, three distinct layers.
-  https://x.com/SCR01111/status/2089346785500418442
+**MCP/A2A plumbing consolidates**
+• @rxmllc — a2a officially joined the agentic ai foundation alongside mcp; protocol stack consolidating under one governance body.
+  https://x.com/rxmllc/status/2089767600075002323
+• @bally_kehal — gap analysis across mcp, a2a, acp, anp, erc-8004: governance is the layer nobody's built yet.
+  https://x.com/bally_kehal/status/2089749214020730969
+• @seofixup — argues mcp-scaled agents need typed sub-millisecond execution boundaries, not rest endpoints.
+  https://x.com/seofixup/status/2089716947818860715
 
-**agent APIs and benchmarks**
-• @ScaleAILabs — opens RSI Bench call for tasks measuring whether agents can advance AI R&D themselves; $2k per accepted task.
-  https://x.com/ScaleAILabs/status/2089498091544268853
-• @gdeglin — onesignal ships journeys API giving agents CRUD access to full journey graphs with concurrent-edit handling.
-  https://x.com/gdeglin/status/2089499496497705303
+**Agents shipping concrete workloads**
+• @SciTechera — claude reportedly orchestrated multiple protein-design models to autonomously produce 354 candidate binders.
+  https://x.com/SciTechera/status/2089864314303979719
+• @XVerseLayer — okx shipped a protocol letting autonomous agents pay and transact on-exchange — cex agent-native rails.
+  https://x.com/XVerseLayer/status/2089864038578790511
 
-**pricing and runtime shift**
-• @newStrawBerry86 — per-seat SaaS pricing breaks under agents; salesforce and hubspot already piloting per-action/per-outcome.
-  https://x.com/newStrawBerry86/status/2089497916431806736
-• @ainewsusa — agentao proposes local-first runtime splitting model-generated action proposals from host-authorized execution.
-  https://x.com/ainewsusa/status/2089482232528294244
-
-<!-- _src: xai · candidates: 12 → kept: 7_ -->
+<!-- _src: xai-cache · candidates: 27 → kept: 5_ -->

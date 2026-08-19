@@ -1,0 +1,225 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-08-19",
+        "description": "mostly protocol-plumbing debate — a2a joining aaif, gap analysis across five agent standards — with two concrete launches on the side."
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-section-1",
+        "stack-section-1-items",
+        "separator-1",
+        "heading-section-2",
+        "stack-section-2-items",
+        "text-metadata"
+      ]
+    },
+    "heading-section-1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP/A2A plumbing consolidates",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-section-1-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-1-stack",
+        "item-2-stack",
+        "item-3-stack"
+      ]
+    },
+    "item-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "rxmllc",
+        "handle": "rxmllc",
+        "text": "a2a officially joined the agentic ai foundation alongside mcp; protocol stack consolidating under one governance body."
+      },
+      "children": []
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View Tweet",
+        "href": "https://x.com/rxmllc/status/2089767600075002323"
+      },
+      "children": []
+    },
+    "item-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "bally_kehal",
+        "handle": "bally_kehal",
+        "text": "gap analysis across mcp, a2a, acp, anp, erc-8004: governance is the layer nobody's built yet."
+      },
+      "children": []
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View Tweet",
+        "href": "https://x.com/bally_kehal/status/2089749214020730969"
+      },
+      "children": []
+    },
+    "item-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "seofixup",
+        "handle": "seofixup",
+        "text": "argues mcp-scaled agents need typed sub-millisecond execution boundaries, not rest endpoints."
+      },
+      "children": []
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View Tweet",
+        "href": "https://x.com/seofixup/status/2089716947818860715"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-section-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Agents shipping concrete workloads",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-section-2-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-4-stack",
+        "item-5-stack"
+      ]
+    },
+    "item-4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4",
+        "link-4"
+      ]
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SciTechera",
+        "handle": "SciTechera",
+        "text": "claude reportedly orchestrated multiple protein-design models to autonomously produce 354 candidate binders."
+      },
+      "children": []
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View Tweet",
+        "href": "https://x.com/SciTechera/status/2089864314303979719"
+      },
+      "children": []
+    },
+    "item-5-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-5",
+        "link-5"
+      ]
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "XVerseLayer",
+        "handle": "XVerseLayer",
+        "text": "okx shipped a protocol letting autonomous agents pay and transact on-exchange — cex agent-native rails."
+      },
+      "children": []
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View Tweet",
+        "href": "https://x.com/XVerseLayer/status/2089864038578790511"
+      },
+      "children": []
+    },
+    "text-metadata": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 27 → kept: 5",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
