@@ -1,51 +1,47 @@
-*Daily Routine — 2026-08-18*
+*Daily Routine — 2026-08-19*
 
-_mixed tape — 27/77 top-100 green, top-50 median flat 0.0%._
+*Top 10 Winners (24h)*
+1. BTW (Bitway) $0.638 +68.9% / 7d +179.1% • $157M / #47 [BREAKOUT]
+2. PUMP $0.00298 +6.9% / 7d +10.3% • $98M / #63
+3. CAKE $1.54 +5.4% • $34M / #97
+4. OKB $101.4 +4.1% • $22M / #40
+5. ENA $0.0854 +3.7% • $65M / #76
+6. DOT $0.760 +3.6% • $59M / #58
+7. POL $0.0821 +3.6% • $48M / #74
+8. HBAR $0.0675 +2.8% • $43M / #30
+9. VVV $13.87 +2.8% / 7d +15.1% • $27M / #87
+10. LINK $9.67 +2.6% / 7d +11.0% • $247M / #17
 
-*Top Winners (24h)*
-1. ANSEM (Black Bull) — $0.261 +13.5% / 7d +27.5% • $40M / #231 [TRENDING+UP][MICROCAP]
-2. GPS (GoPlus Security) — $0.017 +13.1% / 7d +80.8% • $114M / #244 [BREAKOUT][MICROCAP]
-3. VVV (Venice Token) — $13.71 +12.5% / 7d +16.3% • $24M / #88 [TRENDING+UP]
-4. PIEVERSE — $0.924 +8.6% / 7d +17.2% • $14M / #136
-5. COMP (Compound) — $17.39 +7.1% / 7d +6.1% • $39M / #172
+*Top 10 Losers (24h)*
+1. HTX $0.00000171 −3.5% • $39M / #51
+2. MORPHO $2.04 −3.2% • $16M / #54
+3. ICP $2.21 −2.4% • $28M / #60
+4. M $1.13 −1.9% • $6M / #37
+5. NEAR $1.61 −1.6% • $118M / #41
+6. BDX $0.0819 −1.6% • $10M / #89
+7. MNT $0.434 −1.5% • $22M / #52
+8. CC $0.0899 −1.4% • $7M / #26
+9. ONDO $0.325 −1.2% • $56M / #49
+10. HYPE $58.25 −1.0% / 7d +7.0% • $255M / #10 [TRENDING−]
 
-*Top Losers (24h)*
-1. VELVET — $0.491 −49.5% / 7d +12.7% • $22M / #151 [CAPITULATION]
-2. AKE (Akedo) — $0.008 −18.5% / 7d +116% • $13M / #164 [TRENDING+DOWN][FADE]
-3. WLD (Worldcoin) — $0.323 −10.8% / 7d −2.8% • $161M / #61
-4. TAG (TAGGER) — $0.001 −7.6% / 7d −22.1% • $2.4M / #241 [MICROCAP]
-5. BTW (Bitway) — $0.353 −6.1% / 7d +81.9% • $29M / #68 [FADE]
+_mixed drift-up, 40/74 top-100 green, top-50 median +0.2%. BTW rips memory-window reversal — yesterday's fade (−6.1%, "sustained-climb cracking") snaps to +68.9% on $157M, 7d +179.1% = new 7d record. Losers all shallow._
 
-*Tweet Roundup* _(XAI cache HIT, 12 tweets)_
-*Crypto:* peter schiff on btc's lack of sell-off, calls $65k resistance; longs mapping 65k → 67-70k clear. Tom Lee ETH thesis under pushback.
-*AI:* @BrianRoemmele — 13 words on reddit hijack ai research agents via context poisoning. Qwen3.8 27B GGUF quant tests posted. Continued grok-bot self-promotion in xAI section.
-*Dev:* github reliability day — @perrymetzger on nine-fives goal, @beginbot roasts cursor for rolling Origin during outage, forgejo/gitea recs surging.
+*Tweet Roundup* _(XAI cache HIT, 9 tweets)_
+*Crypto:* @Shinpei3350 — Metaplanet using accumulated BTC as M&A currency to acquire a Nasdaq-listed US BTC treasury platform. @Excellion reframes BTC as the largest computation ever performed.
+*AI:* @ClaudeDevs — Claude Desktop ~2× launch by killing background-tab throttling. @SciTechera — Claude autonomously designed 354 functional protein binders (22–40% hit rate) validated by Adaptyv Bio + Twist. @pdhsu clarifies: orchestration of RFdiffusion/BoltzGen, not LLM-native design.
+*Dev:* @Tran_Thai_Hoa — Pi Network v27 protocol uploaded to GitHub, mainnet-upgrade-ready. @surfcoderepeat — upcoming launch research tools shipping open-source as on-chain Etherscan links.
 
 *Paper of the Day*
-"HarnessEval-W: Agentifying the Evaluation of Visual Worlds" — Chen et al · ↑33
-brings the llm-eval-harness paradigm to world models — parent agent decomposes each case, spawns sub-agents per subproblem, builds a verifiable evidence tree instead of a scalar score. Judgments align with humans across 18 models / 330 cases.
-[Read](https://arxiv.org/abs/2608.16859) | [PDF](https://arxiv.org/pdf/2608.16859)
+"Harness the Memory: A Holistic Evaluation of Memory Substrates in Memory Agents" — Yang et al (UIC/UW/McGill/MBZUAI/UCLA) · ↑10
+harness eval of 8 memory substrates × 3 backbones × 4 benchmarks × 26 metrics — no single substrate dominates, argues substrate routing must become a first-class primitive. Direct fleet-CORE parallel to aeon's own memory/ architecture. Memory-primitive-paper streak 6→7-consec.
+[arxiv 2608.15008](https://arxiv.org/abs/2608.15008)
 
 *GitHub Issues*
-GITHUB_ISSUES_OK — 0 new (13-consec clean-day 7-26 → 8-18)
+GITHUB_ISSUES_OK — 0 new (14-consec clean 7-26 → 8-19, memory-window record extends)
 
 *HN Digest*
-1. [AI-Generated GitHub Copilot Autofix compromised Snowflake's Jira](https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug) (354pts) — wiz red agent walked into snowflake internal jira via a single-quote in a title that copilot's autofix let through.
-   HN take: _"quote injection still alive and well in 2026. gawd."_ — chrisjj
-   [Discuss](https://news.ycombinator.com/item?id=49331423)
-
-2. [A Preview of DuckDB v2.0](https://duckdb.org/2026/08/17/duckdb-20-highlights) (602pts) — release cements duckdb's pivot past in-process into cloud-warehouse territory.
-   HN take: _"last year of duckdb enhancements feel like the shift from in-process execution engine to a foundation of a cloud data warehouse."_ — c9cf35860db4
-   [Discuss](https://news.ycombinator.com/item?id=49330781)
-
-3. [Ask HN: Alternatives to GitHub](https://news.ycombinator.com/item?id=49331033) (568pts) — github's monday outage tipped into another migration thread. Forgejo/Codeberg the top recs.
-   HN take: _"forgejo is splendid. the stack itself is light-weight to self-host, very fast to use."_ — ashton314
-   [Discuss](https://news.ycombinator.com/item?id=49331033)
-
-4. [AI;DR (AI; Didn't Read)](https://www.rickmanelius.com/p/aidr-ai-didnt-read) (786pts) — argument that ai summaries kill the loop of actually reading.
-   HN take: _"if some text is AI-written from a much shorter prompt, publish the prompt and sources instead."_ — sega_sai
-   [Discuss](https://news.ycombinator.com/item?id=49336573)
-
-5. [GPT-5.6 Sol Pricing Cut 50% (OpenRouter)](https://openrouter.ai/openai/gpt-5.6-sol) (354pts) — openrouter-only cut on gpt-5.6 sol.
-   HN take: _"already cheaper models with sol's intelligence — notably grok 4.6 at $6/m — makes it a tougher sell."_ — Fergusonb
-   [Discuss](https://news.ycombinator.com/item?id=49337602)
+1. [The Amazon tax](https://seths.blog/2026/08/the-amazon-tax/) (1132pts) — Godin: Amazon knows the best product; sponsored-ad tier exists to steer you off it. [Discuss](https://news.ycombinator.com/item?id=49345263)
+2. [Cursor launches Origin, GitHub alternative](https://cursor.com/changelog/origin-code-hosting) (562pts) — agent-first Git host, first real GitHub challenger since MSFT bought it. [Discuss](https://news.ycombinator.com/item?id=49334209)
+3. [Cerebras CS-4](https://www.cerebras.ai/cs4) (239pts) — claims >1,000 tok/s on 10T-param models single wafer, inference-only Nvidia moat chip. [Discuss](https://news.ycombinator.com/item?id=49354949)
+4. [Meta trial draws big-tobacco parallels](https://www.economist.com/business/2026/08/18/metas-blockbuster-trial-draws-parallels-to-big-tobacco) (206pts) — tobacco-master-settlement template applied to infinite scroll. [Discuss](https://news.ycombinator.com/item?id=49355825)
+5. [Child lung recovery in ULEZ](https://www.bbc.com/news/articles/c1l1r1zne1ro) (194pts) — measurable lung-capacity rebounds within 2yrs of NO2 drops. [Discuss](https://news.ycombinator.com/item?id=49355105)

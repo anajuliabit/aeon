@@ -1,33 +1,28 @@
-*HN Digest — 2026-08-07*
+*HN Digest — 2026-08-19*
 
-_amd buys taalas to etch models into silicon. github actions eats a us workday. 1-in-3 ai-agent commands get waved through by human reviewers._
+_Heavy business/policy day — Amazon's ads-vs-buyer conflict tops the page and Meta's blockbuster trial draws big-tobacco parallels; Cursor's GitHub challenger, a Cerebras CS-4 inference push, and a clean-air-zone childhood-lung study round it out._
 
-1. **[AI & agents]** [AMD acquires Taalas to boost inference by etching models in silicon](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344) — 621 pts · 467 comments
-   Why it matters: hyperscaler-cpu vendor pays up for a compute-in-memory play. moves the "weights are the wiring" thesis from lab-curiosity to acquisition-priced.
-   HN take: "it's a true compute-in-memory architecture where weights are stored in the connections between transistors that perform the matrix multiply. sram needs too many transistors, dram needs an incompatible process, phase-change memories aren't ready." — _Legend2440_
-   [Discussion](https://news.ycombinator.com/item?id=49201970)
+1. **[Business & funding]** [The Amazon tax](https://seths.blog/2026/08/the-amazon-tax/) — 1132 pts · 616 comments
+   Why it matters: Seth Godin argues Amazon already knows the best-reviewed, best-priced product for any query — the whole point of the sponsored-ad tier is to steer you away from it, a hidden tax on every purchase.
+   HN take: "Amazon is almost completely unusable for search — perhaps 3/4 of the results are sponsored ads. Trying to find a good deal, even if you know precisely what you're looking for, is a real headache." — _automatic6131_
+   [Discussion](https://news.ycombinator.com/item?id=49345263)
 
-2. **[Infra & devtools]** [GitHub Actions and Pages experiencing degraded availability](https://www.githubstatus.com/incidents/qcvjkzcs7j74) — 391 pts · 310 comments
-   Why it matters: another us-hours ci outage on the platform half the industry ships on. thread turns to forge migration and self-hosting math.
-   HN take: "today it exploded jobs with 'failed' and 'The job was not acquired by Runner of type hosted even after multiple attempts'. should say 'timed out, no runner available, try again later or pay $$ here for priority'." — _dboreham_
-   [Discussion](https://news.ycombinator.com/item?id=49198302)
+2. **[Infra & devtools]** [Cursor launches Origin, GitHub alternative](https://cursor.com/changelog/origin-code-hosting) — 562 pts · 408 comments
+   Why it matters: Cursor takes its agent-native IDE downstream into code hosting — an agent-first Git host aimed at teams already living inside the Cursor sidebar, the first real challenger to GitHub since Microsoft bought it.
+   HN take: "I wonder if calling this 'Origin' will result in semantic misinterpretations by LLMs — 'hey can you push to origin main?' now has two meanings. A thin line between genius-growth-move and domain typosquatting." — _jjcm_
+   [Discussion](https://news.ycombinator.com/item?id=49334209)
 
-3. **[AI & agents]** [Humans missed 1 in 3 threats approving AI agent commands across 40k game runs](https://scalex.dev/blog/ai-agent-permissions-stats/) — 293 pts · 207 comments
-   Why it matters: 40k plays / 409k decisions gives an empirical floor for human-in-the-loop review fatigue. history-log context is largely ignored.
-   HN take: "fatigue causes people to jump to bypasses. we need to raise awareness of the new threat types. sandboxing and permission isolation from tooling need to be easier — hitl is not an acceptable alternative." — _Wirbelwind (author)_
-   [Discussion](https://news.ycombinator.com/item?id=49195468)
+3. **[AI & agents]** [Cerebras CS-4](https://www.cerebras.ai/cs4) — 239 pts · 157 comments
+   Why it matters: Cerebras claims >1,000 tok/s on 10T-parameter models on a single wafer-scale system — an inference-only pitch that keeps chipping away at Nvidia's serving-side moat while leaving training to H100/B200.
+   HN take: "Five years from now, I don't know why anyone will still be using Nvidia for inference. Cerebras is for inference only, not training — Nvidia may still have a role for training." — _OutOfHere_
+   [Discussion](https://news.ycombinator.com/item?id=49354949)
 
-4. **[Security & policy]** [New Mexico court orders Meta to pay $567m over child mental health harms](https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta) — 204 pts · 132 comments
-   Why it matters: not just a fine. the order forces meta to hide likes for under-18s, kill night notifications, cap use at 90h/mo.
-   HN take: "for under-18s, meta will eliminate push notifications 10pm-7am daily and 8am-3pm on school days; usage capped at 90 hours per month. tbh these restrictions will just push kids to snapchat." — _tristanj_
-   [Discussion](https://news.ycombinator.com/item?id=49204352)
+4. **[Security & policy]** [Meta's blockbuster trial draws parallels to big tobacco](https://www.economist.com/business/2026/08/18/metas-blockbuster-trial-draws-parallels-to-big-tobacco) — 206 pts · 154 comments
+   Why it matters: Plaintiffs want to prove Meta's own internal research showed engagement mechanics harmed teen users and shipped anyway — the tobacco-master-settlement template applied to infinite scroll.
+   HN take: "Meta spent 20 years paying engineers vast sums to Increase Engagement, and it worked. Was the intent to addict people? It doesn't have to be, to create a system people have become addicted to." — _throwyawayyyy_
+   [Discussion](https://news.ycombinator.com/item?id=49355825)
 
-5. **[Culture]** [Taste Is All That's Left](https://notashelf.dev/posts/taste-is-all-thats-left) — 390 pts · 283 comments
-   Why it matters: post-ai-slop version of the "diff can't see the difference" argument. market timing has commoditized the surface, taste is the residual moat.
-   HN take: "taste was all that was left when product design peaked in 2010-12. figma/sketch and design systems automated the job away — any cmu grad could be a top tier designer. same thing basically happening here." — _purplemoonx_
-   [Discussion](https://news.ycombinator.com/item?id=49199346)
-
-6. **[Science & pedagogy]** [Mario Meets Pareto](https://www.mayerowitz.io/blog/mario-meets-pareto) — 1027 pts · 156 comments
-   Why it matters: interactive scrollytelling explainer that teaches the pareto frontier through mario kart stat curves. day's top-vote story on hn.
-   HN take: "extremely accessible when you teach as concrete scenarios in simple language with useful visualizations instead of abstract x, y foos and bars with an unfamiliar jargon term every 3rd word." — _applfanboysbgon_
-   [Discussion](https://news.ycombinator.com/item?id=49195231)
+5. **[Science & culture]** [Scientists stunned by children's lung recovery in ultra low emission zone](https://www.bbc.com/news/articles/c1l1r1zne1ro) — 194 pts · 136 comments
+   Why it matters: London ULEZ data shows measurable rebounds in child lung capacity within a couple of years of NO2 drops — the cleanest natural experiment yet that traffic-emission zones deliver child-health returns fast.
+   HN take: "Living close to a busy highway, my young daughter was wheezing when she had a cold — nebulizer meds. When we moved out to the country, far from major roads, these issues disappeared within a couple months." — _ecshafer_
+   [Discussion](https://news.ycombinator.com/item?id=49355105)

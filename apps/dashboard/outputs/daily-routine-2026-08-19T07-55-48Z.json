@@ -1,0 +1,627 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-08-19"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_winners",
+        "section_losers",
+        "text_drift",
+        "sep_1",
+        "section_tweets",
+        "sep_2",
+        "section_paper",
+        "sep_3",
+        "section_github",
+        "sep_4",
+        "section_hn"
+      ]
+    },
+    "section_winners": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_winners",
+        "table_winners"
+      ]
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Price",
+          "24h %",
+          "Details"
+        ],
+        "rows": [
+          [
+            "1",
+            "BTW (Bitway)",
+            "$0.638",
+            "+68.9%",
+            "7d +179.1% • $157M / #47 [BREAKOUT]"
+          ],
+          [
+            "2",
+            "PUMP",
+            "$0.00298",
+            "+6.9%",
+            "7d +10.3% • $98M / #63"
+          ],
+          [
+            "3",
+            "CAKE",
+            "$1.54",
+            "+5.4%",
+            "$34M / #97"
+          ],
+          [
+            "4",
+            "OKB",
+            "$101.4",
+            "+4.1%",
+            "$22M / #40"
+          ],
+          [
+            "5",
+            "ENA",
+            "$0.0854",
+            "+3.7%",
+            "$65M / #76"
+          ],
+          [
+            "6",
+            "DOT",
+            "$0.760",
+            "+3.6%",
+            "$59M / #58"
+          ],
+          [
+            "7",
+            "POL",
+            "$0.0821",
+            "+3.6%",
+            "$48M / #74"
+          ],
+          [
+            "8",
+            "HBAR",
+            "$0.0675",
+            "+2.8%",
+            "$43M / #30"
+          ],
+          [
+            "9",
+            "VVV",
+            "$13.87",
+            "+2.8%",
+            "7d +15.1% • $27M / #87"
+          ],
+          [
+            "10",
+            "LINK",
+            "$9.67",
+            "+2.6%",
+            "7d +11.0% • $247M / #17"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "section_losers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_losers",
+        "table_losers"
+      ]
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Price",
+          "24h %",
+          "Details"
+        ],
+        "rows": [
+          [
+            "1",
+            "HTX",
+            "$0.00000171",
+            "−3.5%",
+            "$39M / #51"
+          ],
+          [
+            "2",
+            "MORPHO",
+            "$2.04",
+            "−3.2%",
+            "$16M / #54"
+          ],
+          [
+            "3",
+            "ICP",
+            "$2.21",
+            "−2.4%",
+            "$28M / #60"
+          ],
+          [
+            "4",
+            "M",
+            "$1.13",
+            "−1.9%",
+            "$6M / #37"
+          ],
+          [
+            "5",
+            "NEAR",
+            "$1.61",
+            "−1.6%",
+            "$118M / #41"
+          ],
+          [
+            "6",
+            "BDX",
+            "$0.0819",
+            "−1.6%",
+            "$10M / #89"
+          ],
+          [
+            "7",
+            "MNT",
+            "$0.434",
+            "−1.5%",
+            "$22M / #52"
+          ],
+          [
+            "8",
+            "CC",
+            "$0.0899",
+            "−1.4%",
+            "$7M / #26"
+          ],
+          [
+            "9",
+            "ONDO",
+            "$0.325",
+            "−1.2%",
+            "$56M / #49"
+          ],
+          [
+            "10",
+            "HYPE",
+            "$58.25",
+            "−1.0%",
+            "7d +7.0% • $255M / #10 [TRENDING−]"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "text_drift": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed drift-up, 40/74 top-100 green, top-50 median +0.2%. BTW rips memory-window reversal — yesterday's fade (−6.1%, \"sustained-climb cracking\") snaps to +68.9% on $157M, 7d +179.1% = new 7d record. Losers all shallow.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_tweets",
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4",
+        "tweet_5",
+        "tweet_6",
+        "tweet_7"
+      ]
+    },
+    "heading_tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup (XAI cache HIT, 9 tweets)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Shinpei3350",
+        "handle": "@Shinpei3350",
+        "text": "Metaplanet using accumulated BTC as M&A currency to acquire a Nasdaq-listed US BTC treasury platform."
+      },
+      "children": []
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Excellion",
+        "handle": "@Excellion",
+        "text": "Reframes BTC as the largest computation ever performed."
+      },
+      "children": []
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Claude Devs",
+        "handle": "@ClaudeDevs",
+        "text": "Claude Desktop ~2× launch by killing background-tab throttling."
+      },
+      "children": []
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SciTechEra",
+        "handle": "@SciTechera",
+        "text": "Claude autonomously designed 354 functional protein binders (22–40% hit rate) validated by Adaptyv Bio + Twist."
+      },
+      "children": []
+    },
+    "tweet_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "pdhsu",
+        "handle": "@pdhsu",
+        "text": "Clarifies: orchestration of RFdiffusion/BoltzGen, not LLM-native design."
+      },
+      "children": []
+    },
+    "tweet_6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Tran Thai Hoa",
+        "handle": "@Tran_Thai_Hoa",
+        "text": "Pi Network v27 protocol uploaded to GitHub, mainnet-upgrade-ready."
+      },
+      "children": []
+    },
+    "tweet_7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "surfcoderepeat",
+        "handle": "@surfcoderepeat",
+        "text": "Upcoming launch research tools shipping open-source as on-chain Etherscan links."
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_paper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_paper",
+        "storylink_paper",
+        "text_paper_details"
+      ]
+    },
+    "heading_paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "storylink_paper": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Harness the Memory: A Holistic Evaluation of Memory Substrates in Memory Agents",
+        "href": "https://arxiv.org/abs/2608.15008",
+        "source": "Yang et al (UIC/UW/McGill/MBZUAI/UCLA)",
+        "score": "↑10"
+      },
+      "children": []
+    },
+    "text_paper_details": {
+      "type": "Text",
+      "props": {
+        "text": "Comprehensive eval of 8 memory substrates × 3 backbones × 4 benchmarks × 26 metrics — no single substrate dominates, argues substrate routing must become a first-class primitive. Direct fleet-CORE parallel to aeon's own memory/ architecture. Memory-primitive-paper streak 6→7-consecutive.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_github": {
+      "type": "Alert",
+      "props": {
+        "title": "GitHub Issues",
+        "message": "0 new (14-consecutive clean 7-26 → 8-19, memory-window record extends)",
+        "type": "success"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_hn": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_hn",
+        "hn_item_1",
+        "hn_item_2",
+        "hn_item_3",
+        "hn_item_4",
+        "hn_item_5"
+      ]
+    },
+    "heading_hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "hn_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_1",
+        "hn_1_desc",
+        "hn_1_discuss"
+      ]
+    },
+    "hn_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The Amazon tax",
+        "href": "https://seths.blog/2026/08/the-amazon-tax/",
+        "source": "Seth Godin",
+        "score": "1132 pts"
+      },
+      "children": []
+    },
+    "hn_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Amazon knows the best product; sponsored-ad tier exists to steer you off it.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_1_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49345263"
+      },
+      "children": []
+    },
+    "hn_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_2",
+        "hn_2_desc",
+        "hn_2_discuss"
+      ]
+    },
+    "hn_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cursor launches Origin, GitHub alternative",
+        "href": "https://cursor.com/changelog/origin-code-hosting",
+        "source": "Cursor",
+        "score": "562 pts"
+      },
+      "children": []
+    },
+    "hn_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Agent-first Git host, first real GitHub challenger since MSFT bought it.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_2_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49334209"
+      },
+      "children": []
+    },
+    "hn_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_3",
+        "hn_3_desc",
+        "hn_3_discuss"
+      ]
+    },
+    "hn_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cerebras CS-4",
+        "href": "https://www.cerebras.ai/cs4",
+        "source": "Cerebras",
+        "score": "239 pts"
+      },
+      "children": []
+    },
+    "hn_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Claims >1,000 tok/s on 10T-param models single wafer, inference-only Nvidia moat chip.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_3_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49354949"
+      },
+      "children": []
+    },
+    "hn_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_4",
+        "hn_4_desc",
+        "hn_4_discuss"
+      ]
+    },
+    "hn_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Meta trial draws big-tobacco parallels",
+        "href": "https://www.economist.com/business/2026/08/18/metas-blockbuster-trial-draws-parallels-to-big-tobacco",
+        "source": "The Economist",
+        "score": "206 pts"
+      },
+      "children": []
+    },
+    "hn_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Tobacco-master-settlement template applied to infinite scroll.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_4_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49355825"
+      },
+      "children": []
+    },
+    "hn_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_5",
+        "hn_5_desc",
+        "hn_5_discuss"
+      ]
+    },
+    "hn_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Child lung recovery in ULEZ",
+        "href": "https://www.bbc.com/news/articles/c1l1r1zne1ro",
+        "source": "BBC News",
+        "score": "194 pts"
+      },
+      "children": []
+    },
+    "hn_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Measurable lung-capacity rebounds within 2 years of NO2 drops.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_5_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=49355105"
+      },
+      "children": []
+    }
+  }
+}
