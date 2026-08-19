@@ -1,0 +1,272 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-08-19"
+      },
+      "children": [
+        "section_toppick",
+        "sep1",
+        "section_devtools",
+        "sep2",
+        "section_ai_ml",
+        "sep3",
+        "text_sources"
+      ]
+    },
+    "section_toppick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_toppick",
+        "link_jundot_top",
+        "text_jundot_top_desc"
+      ]
+    },
+    "heading_toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "link_jundot_top": {
+      "type": "Link",
+      "props": {
+        "label": "jundot/omlx",
+        "href": "https://github.com/jundot/omlx"
+      }
+    },
+    "text_jundot_top_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Apple silicon just got an openai-compatible llm server that pages weights off ssd, so the model no longer has to fit in ram.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "repo_jundot_devtools"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "repo_jundot_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_jundot_devtools",
+        "stack_jundot_stats",
+        "text_jundot_devtools_desc"
+      ]
+    },
+    "storylink_jundot_devtools": {
+      "type": "StoryLink",
+      "props": {
+        "title": "jundot/omlx",
+        "href": "https://github.com/jundot/omlx",
+        "score": "★ 370 today (19.6k total)"
+      }
+    },
+    "stack_jundot_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_python",
+        "badge_accel_1"
+      ]
+    },
+    "badge_python": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge_accel_1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "text_jundot_devtools_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Continuous batching + ssd-cached weights on mlx; run models bigger than your ram, managed from the macos menu bar.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_ai_ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_ai_ml",
+        "repo_volcengine",
+        "repo_chaitanya"
+      ]
+    },
+    "heading_ai_ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "repo_volcengine": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_volcengine",
+        "stack_volcengine_stats",
+        "text_volcengine_desc"
+      ]
+    },
+    "storylink_volcengine": {
+      "type": "StoryLink",
+      "props": {
+        "title": "volcengine/OpenViking",
+        "href": "https://github.com/volcengine/OpenViking",
+        "score": "★ 213 today (29.8k total)"
+      }
+    },
+    "stack_volcengine_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_python_2",
+        "badge_accel_2"
+      ]
+    },
+    "badge_python_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge_accel_2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "text_volcengine_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Bytedance/volcengine's agent context database — folds memory, rag, and skills into one self-evolving store instead of three services.",
+        "variant": "body"
+      }
+    },
+    "repo_chaitanya": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_chaitanya",
+        "stack_chaitanya_stats",
+        "text_chaitanya_desc"
+      ]
+    },
+    "storylink_chaitanya": {
+      "type": "StoryLink",
+      "props": {
+        "title": "chaitanyagiri/munder-difflin",
+        "href": "https://github.com/chaitanyagiri/munder-difflin",
+        "score": "★ 306 today (2.4k total)"
+      }
+    },
+    "stack_chaitanya_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_typescript",
+        "badge_accel_3"
+      ]
+    },
+    "badge_typescript": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "badge_accel_3": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "text_chaitanya_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Local multi-agent harness for claude code; topics read `agents/claude-code/harness-engineering/memory` — same shape as aeon itself.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/12",
+        "variant": "caption"
+      }
+    }
+  }
+}

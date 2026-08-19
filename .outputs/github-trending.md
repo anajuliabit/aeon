@@ -1,25 +1,18 @@
-*GitHub Trending — 2026-08-18*
+*GitHub Trending — 2026-08-19*
 
-*Top pick* — [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory)
-memory-primitive built as an agent-vendor-portable layer across claude, codex, cursor — the primitive vendor-lockin cohorts won't ship themselves.
-
-*AI/ML*
-• [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) — ★ 207t today (2.4k total) · Rust · [ACCELERATING]
-persists memory across coding-CLI vendors so a codex→claude handoff resumes with prior context, not from scratch.
-
-• [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) — ★ 198t today (29k total) · Python · [ACCELERATING]
-817-skill pack for pen-testing agents mapped to MITRE ATT&CK/NIST — first cross-vendor skills-standard aiming at agentskills.io namespace.
+*Top pick* — [jundot/omlx](https://github.com/jundot/omlx)
+apple silicon just got an openai-compatible llm server that pages weights off ssd, so the model no longer has to fit in ram.
 
 *Devtools*
-• [usestrix/strix](https://github.com/usestrix/strix) — ★ 598t today (55k total) · Python · [ACCELERATING]
-agentic pen-tester that finds a vuln, writes a repro, then ships the patch — full loop, not scan-only.
+• [jundot/omlx](https://github.com/jundot/omlx) — ★ 370 today (19.6k total) · Python · [ACCELERATING]
+continuous batching + ssd-cached weights on mlx; run models bigger than your ram, managed from the macos menu bar.
 
-• [AlexsJones/llmfit](https://github.com/AlexsJones/llmfit) — ★ 198t today (33k total) · Rust · [ACCELERATING]
-points at your gpu/cpu, returns the hugging face models that will actually load — no oom trial-and-error rebooting.
+*AI/ML*
+• [volcengine/OpenViking](https://github.com/volcengine/OpenViking) — ★ 213 today (29.8k total) · Python · [ACCELERATING]
+bytedance/volcengine's agent context database — folds memory, rag, and skills into one self-evolving store instead of three services.
 
-*Infra*
-• [nautechsystems/nautilus_trader](https://github.com/nautechsystems/nautilus_trader) — ★ 120t today (26k total) · Rust · [RETURNING]
-rust-native event-driven trading engine used by prop shops in production, not the usual python-notebook backtest toy.
+• [chaitanyagiri/munder-difflin](https://github.com/chaitanyagiri/munder-difflin) — ★ 306 today (2.4k total) · TypeScript · [ACCELERATING]
+local multi-agent harness for claude code; topics read `agents/claude-code/harness-engineering/memory` — same shape as aeon itself.
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/11
+sources: trending=ok · gh_api=ok · kept 3/12
