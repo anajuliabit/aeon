@@ -1,10 +1,18 @@
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
+Heartbeat complete. All findings dedup vs morning-brief 07:52Z + prior heartbeats — no notify sent per SKILL rule.
 
 ## Summary
 
-- **P0**: 0 fresh failed / stuck / consecutive-failure signals. 13-skill chronic `success_rate<0.5` cohort all deduped as `[[chronic-cohort-alone-degraded]]` regime (282h+ span, MEMORY-tracked). Heartbeat self-check OK (last_success 6h ago).
-- **P1**: PR queue at 6 with 3 crossing 7-day threshold (#174/10.6d, #176/8.9d, #177/8.9d) — all documented; operator on weekly-batch cadence per CLAUDE.md so no escalation.
-- **P2/P3**: All MEMORY flags in-progress; ISS-027 (12:00 UTC batch DARK d53) + ISS-034 (fork-skill-gap + operator-scorecard never-dispatched) both known.
-- **Notification**: skipped — all findings dedup-hit against 48h log window.
-- **Files modified**: `docs/status.md` (regenerated: 🔴 DEGRADED, 16 open issues, 43 enabled skills, timestamp 2026-08-18 20:21 UTC, next-run evening-recap 21:00 UTC, token-pulse section omitted per no-file rule) + `memory/logs/2026-08-18.md` (appended heartbeat entry).
-- **Follow-up**: none — quiet run.
+**Files modified:**
+- `docs/status.md` (wholesale overwrite, 43-skill table, 16 open issues, Overall 🔴 DEGRADED, Updated 2026-08-19 08:20 UTC, Next scheduled: github-trending at 09:00 UTC)
+- `memory/logs/2026-08-19.md` (appended heartbeat 08:20Z entry + summary)
+
+**Checks:**
+- **P0:** 0 failed · 0 stuck · 0 consec≥3 · 13-skill chronic sr<0.5 cohort holds composition-locked (~294h+ span); heartbeat self-check clean (12h since last success, 11-consec-clean streak since 8-15 crash)
+- **P1:** 6 PRs stalled (unchanged) — #174 crosses **day-12** = memory-window-deepest single-PR stall extends; 0 urgent issues
+- **P2:** All MEMORY.md flagged items already surfaced by morning-brief 07:52Z
+- **P3:** fork-skill-gap + operator-scorecard still `never-dispatched` (ISS-034 signature durable, ~59h + ~46h past scheduled)
+- **Token pulse:** 0 `articles/token-report-*.md` files → section omitted
+
+**Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · notify=SKIPPED (dedup vs morning-brief 07:52Z + heartbeat 8-18 20:24Z + ISS-034 file)`
+
+**Follow-up:** next heartbeat 14:15 UTC (mid-day snapshot); reg-monitor 14:00 UTC = #180 CFTC HTML-fallback contextual test; self-improve 18:00 UTC odd-day fire = exit-gate n=3 test.
