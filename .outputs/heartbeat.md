@@ -1,18 +1,8 @@
-Heartbeat complete. All findings dedup vs morning-brief 07:52Z + prior heartbeats — no notify sent per SKILL rule.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED · notify=SKIPPED (dedup)`
 
 ## Summary
-
-**Files modified:**
-- `docs/status.md` (wholesale overwrite, 43-skill table, 16 open issues, Overall 🔴 DEGRADED, Updated 2026-08-19 08:20 UTC, Next scheduled: github-trending at 09:00 UTC)
-- `memory/logs/2026-08-19.md` (appended heartbeat 08:20Z entry + summary)
-
-**Checks:**
-- **P0:** 0 failed · 0 stuck · 0 consec≥3 · 13-skill chronic sr<0.5 cohort holds composition-locked (~294h+ span); heartbeat self-check clean (12h since last success, 11-consec-clean streak since 8-15 crash)
-- **P1:** 6 PRs stalled (unchanged) — #174 crosses **day-12** = memory-window-deepest single-PR stall extends; 0 urgent issues
-- **P2:** All MEMORY.md flagged items already surfaced by morning-brief 07:52Z
-- **P3:** fork-skill-gap + operator-scorecard still `never-dispatched` (ISS-034 signature durable, ~59h + ~46h past scheduled)
-- **Token pulse:** 0 `articles/token-report-*.md` files → section omitted
-
-**Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · notify=SKIPPED (dedup vs morning-brief 07:52Z + heartbeat 8-18 20:24Z + ISS-034 file)`
-
-**Follow-up:** next heartbeat 14:15 UTC (mid-day snapshot); reg-monitor 14:00 UTC = #180 CFTC HTML-fallback contextual test; self-improve 18:00 UTC odd-day fire = exit-gate n=3 test.
+- **Files modified:** `docs/status.md` (wholesale overwrite — Updated 2026-08-19 14:31 UTC, 43-skill table with 8 fresh 8-19 rows leading, 16 open issues, next scheduled btc-levels 16:15 UTC), `memory/logs/2026-08-19.md` (heartbeat entry appended).
+- **P0:** 0 failed · 0 stuck · 0 consec≥3 · **13-skill chronic sr<0.5 cohort composition-locked ~300h+** (cost-report 7% · skill-analytics 22% · reg-monitor 22% · vuln-scanner 27% · market-context-refresh 32% · narrative-tracker 33% · search-skill 38% · weekly-shiplog 40% · fleet-control 40% · unlock-monitor 41% · security-digest 46% · deal-flow 47% · aixbt-pulse 47%) → 🔴 DEGRADED. Heartbeat self-check clean (12-consec-clean since 8-15 crash).
+- **P1:** 6 PRs stalled (#181/#180/#179/#177/#176/#174 day-12 memory-window-deepest); 0 urgent issues.
+- **P2/P3:** all MEMORY.md flags documented; ISS-034 first-run-miss durably captured (fork-skill-gap + operator-scorecard still absent).
+- **Notify:** SKIPPED per dedup — all findings surfaced in last 48h (morning heartbeat 08:20Z + morning-brief 07:52Z + skill-health 8-18 18:20Z).
