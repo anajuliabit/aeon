@@ -1,6 +1,8 @@
 {
-  "generated_at": "2026-07-19",
-  "input_fingerprint": "a48520a7806cae6dbdf35a9b40679318ba6fa461",
+  "generated_at": "2026-08-16",
+  "input_fingerprint": "5c2ddd6898faa3e623d5384c71e151dc186a99b6",
+  "input_fingerprint_algo": "git-hash-object-fallback",
+  "input_fingerprint_note": "SKILL step-1 frontmatter-only sha1 not runnable in current sandbox (blocks python, awk-glob, xargs, redirects); using git hash-object over aeon.yml + skills.json + all skills/*/SKILL.md as a stable full-content proxy. Rebaseline on next run once the algorithm gap is fixed.",
   "skills_total": 191,
   "enabled_count": 43,
   "edges": {
@@ -12,5 +14,10 @@
   "node_list_sha": "9e51c0b29db38e1a86dfd0745e0191e0e8999031",
   "edge_list_sha": "b03c7b23c22df956782e9fefc3c8fc75294c1332",
   "mode": "SKILL_GRAPH_OK",
-  "verdict": "shared_state 21→27"
+  "verdict": "ARCHITECTURE_OK",
+  "prior_run": {
+    "generated_at": "2026-07-19",
+    "input_fingerprint": "a48520a7806cae6dbdf35a9b40679318ba6fa461",
+    "verdict": "shared_state 21→27"
+  }
 }
